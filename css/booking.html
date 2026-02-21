@@ -71,7 +71,7 @@
   <!-- Booking Form Section -->
   <section class="booking-form">
     <h2>Book Your Snorkeling Trip</h2>
-    <form action="#" method="POST">
+    <form id="bookingForm">
       <label for="fullName">Full Name</label>
       <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
 
@@ -109,5 +109,35 @@
       <button type="submit">Book Now</button>
     </form>
   </section>
+
+  <script>
+    const form = document.getElementById('bookingForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const fullName = document.getElementById('fullName').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const tour = document.getElementById('tour').value;
+      const date = document.getElementById('date').value;
+      const people = document.getElementById('people').value;
+      const contactMethod = document.getElementById('contactMethod').value;
+      const notes = document.getElementById('notes').value;
+
+      // WhatsApp number with Egypt code
+      const whatsappNumber = '+201028287752';
+
+      // Prepare message
+      const message = `Hello! I want to book a snorkeling trip:\n\nName: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nTour: ${tour}\nDate: ${date}\nPeople: ${people}\nPreferred Contact: ${contactMethod}\nNotes: ${notes}`;
+
+      // Open WhatsApp
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, '_blank');
+
+      // Optional: open mailto
+      // const mailtoURL = `mailto:m47199563@gmail.com?subject=Snorkeling Booking&body=${encodeURIComponent(message)}`;
+      // window.open(mailtoURL, '_blank');
+    });
+  </script>
 </body>
 </html>
