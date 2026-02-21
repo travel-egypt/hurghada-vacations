@@ -1,1 +1,20 @@
+<div class="tour-card">
+  <video src="videos/snorkeling1.mp4" controls></video>
+  <h3>Red Sea Snorkeling Adventure</h3>
+  <p>Experience the vibrant coral reefs and colorful fish of the Red Sea.</p>
+  <div class="buttons">
+    <a href="videos/snorkeling1.mp4" target="_blank">Watch Video</a>
+    <a href="booking.html">Book Now</a>
+  </div>
+</div>
+
+<div class="tour-card">
+  <video src="videos/snorkeling2.mp4" controls></video>
+  <h3>Coral Paradise Snorkeling</h3>
+  <p>Dive into the clear waters and explore the spectacular coral gardens of Hurghada.</p>
+  <div class="buttons">
+    <a href="videos/snorkeling2.mp4" target="_blank">Watch Video</a>
+    <a href="booking.html">Book Now</a>
+  </div>
+</div>
 
