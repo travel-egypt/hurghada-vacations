@@ -5,58 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Snorkeling Tours</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f0f8ff; margin: 0; padding: 0; }
+    header nav ul { display: flex; list-style: none; justify-content: center; background: #004466; padding: 15px 0; }
+    header nav ul li { margin: 0 15px; }
+    header nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
+    .tours-container { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; gap: 20px; }
+    .tour-card { background: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 15px; width: 300px; }
+    .tour-card video { width: 100%; border-radius: 10px; }
+    .tour-card h3 { text-align: center; color: #004466; margin: 10px 0; }
+    .tour-card p { font-size: 0.95em; margin: 10px 0; }
+    .tour-card .buttons { display: flex; justify-content: space-between; margin-top: 10px; }
+    .tour-card .buttons a { padding: 8px 12px; background: #ff6600; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+    .tour-card .buttons a:hover { background: #e65500; }
+  </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="all-tours.html">Tours</a></li>
-        <li><a href="booking.html">Booking</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Tours Section -->
-  <section class="tours">
-    <h2>Our Snorkeling Tours</h2>
-    <div class="tour-cards">
-      <!-- Tour 1 -->
-      <div class="tour-card">
-        <img src="images/snorkeling1.jpg" alt="Snorkeling Trip 1">
-        <h3>Red Sea Snorkeling</h3>
-        <p>Explore the stunning coral reefs and colorful marine life in Hurghada.</p>
-        <button onclick="openVideo('videos/snorkeling1.mp4')">Watch Video</button>
-        <a href="booking.html" class="btn">Book Now</a>
-      </div>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="all-tours.html">Tours</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-      <!-- Tour 2 -->
-      <div class="tour-card">
-        <img src="images/snorkeling2.jpg" alt="Snorkeling Trip 2">
-        <h3>Marine Adventure</h3>
-        <p>Discover hidden spots and crystal clear waters during a full-day snorkeling trip.</p>
-        <button onclick="openVideo('videos/snorkeling2.mp4')">Watch Video</button>
-        <a href="booking.html" class="btn">Book Now</a>
-      </div>
-
-      <!-- Tour 3 -->
-      <div class="tour-card">
-        <img src="images/snorkeling3.jpg" alt="Snorkeling Trip 3">
-        <h3>Coral Paradise</h3>
-        <p>Experience untouched coral gardens and amazing marine biodiversity.</p>
-        <button onclick="openVideo('videos/snorkeling3.mp4')">Watch Video</button>
-        <a href="booking.html" class="btn">Book Now</a>
-      </div>
+<section class="tours-container">
+  
+  <!-- Example Tour Card -->
+  <div class="tour-card">
+    <video src="videos/snorkeling1.mp4" controls></video>
+    <h3>Red Sea Snorkeling Adventure</h3>
+    <p>Experience the vibrant coral reefs and colorful fish of the Red Sea in this unforgettable snorkeling trip.</p>
+    <div class="buttons">
+      <a href="videos/snorkeling1.mp4" target="_blank">Watch Video</a>
+      <a href="booking.html">Book Now</a>
     </div>
-  </section>
-
-  <!-- Lightbox for Video -->
-  <div id="lightbox" onclick="closeVideo()">
-    <video id="lightbox-video" controls></video>
   </div>
 
-  <script src="js/script.js"></script>
+  <div class="tour-card">
+    <video src="videos/snorkeling2.mp4" controls></video>
+    <h3>Coral Paradise Snorkeling</h3>
+    <p>Dive into the clear waters and explore the spectacular coral gardens of Hurghada.</p>
+    <div class="buttons">
+      <a href="videos/snorkeling2.mp4" target="_blank">Watch Video</a>
+      <a href="booking.html">Book Now</a>
+    </div>
+  </div>
+
+  <div class="tour-card">
+    <video src="videos/snorkeling3.mp4" controls></video>
+    <h3>Marine Adventure Tour</h3>
+    <p>Snorkel among colorful marine life and enjoy a unique adventure in the Red Sea.</p>
+    <div class="buttons">
+      <a href="videos/snorkeling3.mp4" target="_blank">Watch Video</a>
+      <a href="booking.html">Book Now</a>
+    </div>
+  </div>
+
+  <!-- تقدر تضيف أي فيديو جديد بنفس الطريقة -->
+  <!-- مثال -->
+  <!--
+  <div class="tour-card">
+    <video src="videos/snorkeling4.mp4" controls></video>
+    <h3>اسم الرحلة</h3>
+    <p>وصف الرحلة</p>
+    <div class="buttons">
+      <a href="videos/snorkeling4.mp4" target="_blank">Watch Video</a>
+      <a href="booking.html">Book Now</a>
+    </div>
+  </div>
+  -->
+
+</section>
+
 </body>
 </html>
