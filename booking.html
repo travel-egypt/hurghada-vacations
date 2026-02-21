@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Snorkeling Trip</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Form specific styling */
+    .booking-form {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .booking-form h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #004466;
+    }
+    .booking-form label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    .booking-form textarea {
+      resize: vertical;
+    }
+    .booking-form button {
+      margin-top: 20px;
+      background-color: #ff6600;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .booking-form button:hover {
+      background-color: #e65500;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="all-tours.html">Tours</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Booking Form Section -->
+  <section class="booking-form">
+    <h2>Book Your Snorkeling Trip</h2>
+    <form id="bookingForm">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+      <label for="tour">Select Tour</label>
+      <select id="tour" name="tour" required>
+        <option value="">-- Select a Tour --</option>
+        <option value="Red Sea Snorkeling">Red Sea Snorkeling</option>
+        <option value="Marine Adventure">Marine Adventure</option>
+        <option value="Coral Paradise">Coral Paradise</option>
+      </select>
+
+      <label for="date">Date of the Tour</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="people">Number of People</label>
+      <input type="number" id="people" name="people" min="1" placeholder="Number of guests" required>
+
+      <label for="contactMethod">Preferred Contact Method</label>
+      <select id="contactMethod" name="contactMethod" required>
+        <option value="">-- Select --</option>
+        <option value="Email">Email</option>
+        <option value="Phone">Phone</option>
+        <option value="WhatsApp">WhatsApp</option>
+      </select>
+
+      <label for="notes">Additional Notes / Special Requests</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Any special requests..."></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <script>
+    const form = document.getElementById('bookingForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const fullName = document.getElementById('fullName').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const tour = document.getElementById('tour').value;
+      const date = document.getElementById('date').value;
+      const people = document.getElementById('people').value;
+      const contactMethod = document.getElementById('contactMethod').value;
+      const notes = document.getElementById('notes').value;
+
+      // WhatsApp number with Egypt code
+      const whatsappNumber = '+201028287752';
+
+      // Prepare message
+      const message = `Hello! I want to book a snorkeling trip:\n\nName: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nTour: ${tour}\nDate: ${date}\nPeople: ${people}\nPreferred Contact: ${contactMethod}\nNotes: ${notes}`;
+
+      // Open WhatsApp
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, '_blank');
+
+      // Optional: open mailto
+      // const mailtoURL = `mailto:m47199563@gmail.com?subject=Snorkeling Booking&body=${encodeURIComponent(message)}`;
+      // window.open(mailtoURL, '_blank');
+    });
+  </script>
+</body>
+</html>
