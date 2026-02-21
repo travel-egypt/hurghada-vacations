@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Snorkeling Tours</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="all-tours.html">Tours</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Tours Section -->
+  <section class="tours">
+    <h2>Our Snorkeling Tours</h2>
+    <div class="tour-cards">
+      <!-- Tour 1 -->
+      <div class="tour-card">
+        <img src="images/snorkeling1.jpg" alt="Snorkeling Trip 1">
+        <h3>Red Sea Snorkeling</h3>
+        <p>Explore the stunning coral reefs and colorful marine life in Hurghada.</p>
+        <button onclick="openVideo('videos/snorkeling1.mp4')">Watch Video</button>
+        <a href="booking.html" class="btn">Book Now</a>
+      </div>
+
+      <!-- Tour 2 -->
+      <div class="tour-card">
+        <img src="images/snorkeling2.jpg" alt="Snorkeling Trip 2">
+        <h3>Marine Adventure</h3>
+        <p>Discover hidden spots and crystal clear waters during a full-day snorkeling trip.</p>
+        <button onclick="openVideo('videos/snorkeling2.mp4')">Watch Video</button>
+        <a href="booking.html" class="btn">Book Now</a>
+      </div>
+
+      <!-- Tour 3 -->
+      <div class="tour-card">
+        <img src="images/snorkeling3.jpg" alt="Snorkeling Trip 3">
+        <h3>Coral Paradise</h3>
+        <p>Experience untouched coral gardens and amazing marine biodiversity.</p>
+        <button onclick="openVideo('videos/snorkeling3.mp4')">Watch Video</button>
+        <a href="booking.html" class="btn">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox for Video -->
+  <div id="lightbox" onclick="closeVideo()">
+    <video id="lightbox-video" controls></video>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
