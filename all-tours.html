@@ -5,73 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Snorkeling Tours</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f8ff;
-      margin: 0;
-      padding: 0;
-    }
-    header nav ul {
-      display: flex;
-      list-style: none;
-      justify-content: center;
-      background: #004466;
-      padding: 15px 0;
-      margin: 0;
-    }
-    header nav ul li {
-      margin: 0 15px;
-    }
-    header nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .tours-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-      gap: 20px;
-    }
-    .tour-card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 15px;
-      width: 300px;
-    }
-    .tour-card video {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .tour-card h3 {
-      text-align: center;
-      color: #004466;
-      margin: 10px 0;
-    }
-    .tour-card p {
-      font-size: 0.95em;
-      margin: 10px 0;
-      text-align: center;
-    }
-    .tour-card .buttons {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 10px;
-    }
-    .tour-card .buttons a {
-      padding: 8px 12px;
-      background: #ff6600;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .tour-card .buttons a:hover {
-      background: #e65500;
-    }
+    body { font-family: Arial, sans-serif; background: #f0f8ff; margin: 0; padding: 0; }
+    header nav ul { display: flex; list-style: none; justify-content: center; background: #004466; padding: 15px 0; margin:0; }
+    header nav ul li { margin: 0 15px; }
+    header nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
+    .tours-container { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; gap: 20px; }
+    .tour-card { background: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 15px; width: 300px; }
+    .tour-card video { width: 100%; border-radius: 10px; }
+    .tour-card h3 { text-align: center; color: #004466; margin: 10px 0; }
+    .tour-card p { font-size: 0.95em; margin: 10px 0; text-align: center; }
+    .tour-card .buttons { display: flex; justify-content: space-between; margin-top: 10px; }
+    .tour-card .buttons a { padding: 8px 12px; background: #ff6600; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+    .tour-card .buttons a:hover { background: #e65500; }
   </style>
 </head>
 <body>
@@ -87,23 +32,33 @@
   </nav>
 </header>
 
-<section class="tours-container">
+<section class="tours-container" id="tours-container"></section>
 
-  <!-- بطاقة فيديو Geil -->
-  <div class="tour-card">
-    <video controls>
-      <source src="videos/geil.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <h3>Geil Snorkeling Adventure</h3>
-    <p>Explore the stunning underwater world with our Geil snorkeling tour. Vibrant corals and colorful marine life await you!</p>
-    <div class="buttons">
-      <a href="videos/geil.mp4" target="_blank">Watch Video</a>
-      <a href="booking.html">Book Now</a>
-    </div>
-  </div>
-
-</section>
+<script>
+  fetch('videos/videos.json')
+    .then(response => response.json())
+    .then(tours => {
+      const container = document.getElementById("tours-container");
+      tours.forEach(tour => {
+        const card = document.createElement("div");
+        card.className = "tour-card";
+        card.innerHTML = `
+          <video controls>
+            <source src="videos/${tour.file}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <h3>${tour.title}</h3>
+          <p>${tour.description}</p>
+          <div class="buttons">
+            <a href="videos/${tour.file}" target="_blank">Watch Video</a>
+            <a href="booking.html">Book Now</a>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    })
+    .catch(err => console.error("Error loading videos.json:", err));
+</script>
 
 </body>
 </html>
