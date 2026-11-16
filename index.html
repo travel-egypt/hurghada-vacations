@@ -1,69 +1,121 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hurghada Snorkeling Adventures</title>
+    <title>Hurghada Snorkeling Adventures | Red Sea Tours</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Discover amazing snorkeling trips, beautiful islands and unforgettable Red Sea adventures in Hurghada, Egypt.">
 
     <style>
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f9fc;
+        html {
+            scroll-behavior: smooth;
         }
 
+        body {
+            font-family: Arial, sans-serif;
+            color: #183344;
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        :root {
+            --navy: #003b5c;
+            --blue: #007f9e;
+            --turquoise: #00b6c9;
+            --light: #effaff;
+        }
+
+        /* NAVIGATION */
+
         header {
-            background: #003b5c;
-            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--navy);
+            padding: 15px 6%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 21px;
+            font-weight: bold;
+            text-decoration: none;
         }
 
         nav ul {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
             list-style: none;
-            margin: 0;
-            padding: 0;
+            gap: 25px;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             font-weight: bold;
+            transition: .3s;
         }
 
-        nav a:hover {
-            color: #00c5e8;
+        nav ul a:hover {
+            color: #54e5ef;
         }
+
+        /* BUTTONS */
+
+        .btn {
+            display: inline-block;
+            background: var(--turquoise);
+            color: white;
+            padding: 13px 27px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: var(--navy);
+            transform: translateY(-3px);
+        }
+
+        /* HERO VIDEO */
 
         .hero {
-            position: relative;
-            min-height: 550px;
             height: 85vh;
-            overflow: hidden;
+            min-height: 550px;
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            background: #003b5c;
+            overflow: hidden;
+            background: var(--navy);
         }
 
-        .hero-video {
+        .hero video {
             position: absolute;
-            inset: 0;
             width: 100%;
             height: 100%;
+            inset: 0;
             object-fit: cover;
         }
 
@@ -71,131 +123,300 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: rgba(0, 25, 45, 0.45);
+            background: rgba(0, 28, 48, .57);
         }
 
-        .hero-overlay {
+        .hero-content {
             position: relative;
             z-index: 2;
-            padding: 25px;
             max-width: 850px;
+            padding: 25px;
         }
 
-        .hero-overlay h1 {
-            font-size: clamp(30px, 5vw, 55px);
-            margin-bottom: 20px;
-        }
-
-        .hero-overlay p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .btn,
-        .watch-btn {
-            display: inline-block;
-            background: #00a8cc;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 6px;
-            text-decoration: none;
-            cursor: pointer;
-            margin: 8px 5px;
-            font-size: 15px;
+        .hero-content .small-title {
+            color: #63edf2;
             font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
 
-        .btn:hover,
-        .watch-btn:hover {
-            background: #007f9e;
+        .hero h1 {
+            font-size: clamp(35px, 6vw, 65px);
+            line-height: 1.15;
+            margin: 18px 0;
         }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        /* INTRO */
+
+        .intro {
+            text-align: center;
+            padding: 75px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .section-label {
+            color: var(--blue);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .intro h2,
+        .section-heading h2 {
+            color: var(--navy);
+            font-size: clamp(27px, 4vw, 38px);
+            margin: 12px 0 18px;
+        }
+
+        /* TOURS */
 
         .tours {
-            padding: 55px 20px;
+            background: var(--light);
+            padding: 75px 6%;
+        }
+
+        .section-heading {
             text-align: center;
+            margin-bottom: 40px;
         }
 
-        .tours h2 {
-            color: #003b5c;
-            font-size: 32px;
-            margin-bottom: 35px;
-        }
-
-        .tour-cards {
+        .tour-grid {
             display: grid;
-            grid-template-columns: repeat(
-                auto-fit,
-                minmax(250px, 1fr)
-            );
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 25px;
-            max-width: 1200px;
+            max-width: 1250px;
             margin: auto;
         }
 
         .tour-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
-            padding-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 45, 70, .10);
+            transition: .3s;
         }
 
-        .tour-card h3 {
-            color: #003b5c;
-            padding: 0 12px;
+        .tour-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 28px rgba(0, 45, 70, .16);
         }
 
-        .tour-card p {
-            color: #555;
-            padding: 0 15px;
-            line-height: 1.6;
-        }
-
-        .tour-card video {
+        .tour-card img {
             width: 100%;
-            height: 190px;
+            height: 220px;
             object-fit: cover;
-            background: #111;
+            display: block;
         }
 
-        footer {
-            background: #003b5c;
+        .tour-info {
+            padding: 22px;
+        }
+
+        .tour-info h3 {
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .tour-info p {
+            color: #61717c;
+            margin-bottom: 18px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 45px;
+            padding: 80px 7%;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .about img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 18px;
+        }
+
+        .about h2 {
+            color: var(--navy);
+            font-size: 35px;
+            margin: 12px 0;
+        }
+
+        .about p {
+            color: #60717b;
+            margin-bottom: 20px;
+        }
+
+        .about ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .about li {
+            margin: 10px 0;
+            color: #365363;
+        }
+
+        .about li::before {
+            content: "✓ ";
+            color: #00a8b9;
+            font-weight: bold;
+        }
+
+        /* WHY US */
+
+        .features {
+            background: var(--navy);
+            color: white;
+            padding: 70px 6%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 34px;
+            margin-bottom: 35px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .feature {
+            padding: 20px;
+        }
+
+        .feature .symbol {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            color: #65e5ef;
+        }
+
+        /* GALLERY */
+
+        .gallery {
+            padding: 75px 6%;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: .3s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.025);
+        }
+
+        /* BOOKING CTA */
+
+        .booking-cta {
+            background:
+                linear-gradient(rgba(0, 39, 62, .72), rgba(0, 39, 62, .72)),
+                url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=1600")
+                center/cover;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 90px 20px;
         }
 
-        #lightbox {
-            display: none;
-            position: fixed;
-            inset: 0;
-            z-index: 9999;
-            background: rgba(0,0,0,0.95);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+        .booking-cta h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            margin-bottom: 15px;
         }
 
-        #lightbox video {
-            width: 100%;
-            max-width: 950px;
-            max-height: 85vh;
-            background: black;
+        .booking-cta p {
+            margin-bottom: 25px;
         }
 
-        @media (max-width: 600px) {
-            .hero {
-                min-height: 500px;
-                height: 75vh;
+        /* FOOTER */
+
+        footer {
+            background: #002c45;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer p {
+            margin: 7px 0;
+        }
+
+        footer a {
+            color: #63e4ed;
+            text-decoration: none;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 750px) {
+            header {
+                padding: 15px 4%;
+            }
+
+            nav {
+                justify-content: center;
             }
 
             nav ul {
+                justify-content: center;
                 gap: 15px;
+                font-size: 14px;
             }
 
-            .tours h2 {
-                font-size: 25px;
+            .logo {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero {
+                height: 75vh;
+                min-height: 480px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                padding: 55px 6%;
+            }
+
+            .about img {
+                height: 280px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid img {
+                height: 170px;
             }
         }
     </style>
@@ -203,158 +424,251 @@
 
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="all-tours.html">Tours</a></li>
-                <li><a href="booking.html">Booking</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- NAVIGATION -->
+<header>
+    <nav>
+        <a href="index.html" class="logo">
+            HURGHADA ADVENTURES
+        </a>
 
-    <!-- Main Video -->
-    <section class="hero">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="all-tours.html">Tours</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <video class="hero-video"
-               autoplay
-               muted
-               loop
-               playsinline
-               preload="metadata">
+<!-- HERO -->
+<section class="hero">
 
-            <source
-                src="assets/videos/Abo%20Dabbab%20.mp4"
-                type="video/mp4">
+    <video autoplay muted loop playsinline preload="metadata">
+        <source src="assets/videos/Abo%20Dabbab%20.mp4" type="video/mp4">
+    </video>
 
-            Your browser does not support HTML5 video.
+    <div class="hero-content">
+        <p class="small-title">Welcome to Hurghada, Egypt</p>
 
-        </video>
+        <h1>Discover The Magic Of The Red Sea</h1>
 
-        <div class="hero-overlay">
+        <p>
+            Explore beautiful islands, swim in crystal-clear waters
+            and enjoy unforgettable snorkeling adventures.
+        </p>
 
-            <h1>Welcome to Hurghada Snorkeling Adventures</h1>
+        <a href="all-tours.html" class="btn">
+            Explore Our Tours
+        </a>
 
-            <p>
-                Discover the amazing underwater world of the Red Sea.
-                Enjoy unforgettable snorkeling adventures in Hurghada.
-            </p>
+        <a href="booking.html" class="btn">
+            Book Your Trip
+        </a>
+    </div>
 
-            <a href="all-tours.html" class="btn">
-                Explore Tours
-            </a>
+</section>
 
-        </div>
+<!-- INTRODUCTION -->
+<section class="intro">
 
-    </section>
+    <span class="section-label">Welcome to Paradise</span>
 
-    <!-- Video Collection -->
-    <section class="tours">
+    <h2>Your Red Sea Adventure Starts Here</h2>
 
-        <h2>Our Snorkeling Video Collection</h2>
+    <p>
+        Experience the beauty of Hurghada with amazing boat trips,
+        colorful coral reefs, incredible marine life and beautiful
+        island destinations. We are here to make your holiday
+        unforgettable.
+    </p>
 
-        <div class="tour-cards">
+</section>
 
-            <div class="tour-card">
+<!-- TOURS -->
+<section class="tours">
 
-                <video muted playsinline controls preload="metadata">
-                    <source
-                        src="assets/videos/Abo%20Dabbab%20.mp4"
-                        type="video/mp4">
-                </video>
+    <div class="section-heading">
+        <span class="section-label">Explore With Us</span>
+        <h2>Discover Our Popular Trips</h2>
+        <p>Choose your next unforgettable Red Sea adventure.</p>
+    </div>
 
-                <h3>Abo Dabbab Adventure</h3>
+    <div class="tour-grid">
 
-                <p>
-                    Discover the beautiful waters and marine life
-                    of Abo Dabbab.
-                </p>
-
-                <button class="watch-btn"
-                        onclick="openVideo()">
-                    Watch Video
-                </button>
-
-                <a href="booking.html" class="btn">
-                    Book Now
-                </a>
-
+        <div class="tour-card">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800"
+                 alt="Snorkeling underwater">
+            <div class="tour-info">
+                <h3>Abu Dabbab Adventure</h3>
+                <p>Discover beautiful underwater life and amazing marine experiences.</p>
+                <a href="all-tours.html" class="btn">Discover More</a>
             </div>
-
         </div>
 
-    </section>
+        <div class="tour-card">
+            <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=800"
+                 alt="Beautiful tropical beach">
+            <div class="tour-info">
+                <h3>Orange Bay Island</h3>
+                <p>Enjoy turquoise waters, sunny beaches and a relaxing island escape.</p>
+                <a href="all-tours.html" class="btn">Discover More</a>
+            </div>
+        </div>
 
-    <!-- Video Player -->
-    <div id="lightbox" onclick="closeVideo()">
+        <div class="tour-card">
+            <img src="https://images.unsplash.com/photo-1530053969600-caed2596d242?w=800"
+                 alt="Tropical underwater fish">
+            <div class="tour-info">
+                <h3>Snorkeling Experience</h3>
+                <p>Explore colorful coral reefs and discover the Red Sea marine world.</p>
+                <a href="all-tours.html" class="btn">Discover More</a>
+            </div>
+        </div>
 
-        <video id="lightbox-video"
-               controls
-               playsinline
-               preload="none"
-               onclick="event.stopPropagation()">
-        </video>
+        <div class="tour-card">
+            <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800"
+                 alt="Luxury holiday">
+            <div class="tour-info">
+                <h3>Sea & Boat Adventures</h3>
+                <p>Spend an amazing day enjoying the sunshine and the beautiful sea.</p>
+                <a href="all-tours.html" class="btn">Discover More</a>
+            </div>
+        </div>
 
     </div>
 
-    <footer>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+
+    <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=1000"
+         alt="Beautiful blue sea">
+
+    <div>
+        <span class="section-label">About Our Adventures</span>
+
+        <h2>Explore Hurghada With Us</h2>
+
         <p>
-            © 2026 Hurghada Snorkeling Adventures.
-            All Rights Reserved.
+            The Red Sea is one of the most beautiful destinations
+            in the world. Discover its hidden treasures and enjoy
+            unforgettable moments with our adventures.
         </p>
-    </footer>
 
-    <script>
+        <ul>
+            <li>Beautiful Red Sea destinations</li>
+            <li>Exciting snorkeling experiences</li>
+            <li>Unforgettable sea adventures</li>
+            <li>Friendly and professional service</li>
+        </ul>
 
-        const videoPath =
-            "assets/videos/Abo%20Dabbab%20.mp4";
+        <a href="all-tours.html" class="btn">Discover Our Tours</a>
+    </div>
 
-        function openVideo() {
+</section>
 
-            const lightbox =
-                document.getElementById("lightbox");
+<!-- WHY CHOOSE US -->
+<section class="features">
 
-            const video =
-                document.getElementById("lightbox-video");
+    <h2>Why Choose Us?</h2>
 
-            video.src = videoPath;
+    <div class="feature-grid">
 
-            lightbox.style.display = "flex";
+        <div class="feature">
+            <div class="symbol">🌊</div>
+            <h3>Amazing Sea</h3>
+            <p>Discover the natural beauty of the Red Sea.</p>
+        </div>
 
-            video.load();
+        <div class="feature">
+            <div class="symbol">🐠</div>
+            <h3>Marine Life</h3>
+            <p>Explore colorful fish and beautiful coral reefs.</p>
+        </div>
 
-            video.play().catch(function(error) {
-                console.log("Video playback:", error);
-            });
+        <div class="feature">
+            <div class="symbol">⛵</div>
+            <h3>Great Adventures</h3>
+            <p>Enjoy exciting experiences and beautiful destinations.</p>
+        </div>
 
-        }
+        <div class="feature">
+            <div class="symbol">⭐</div>
+            <h3>Great Service</h3>
+            <p>Enjoy a memorable and comfortable experience.</p>
+        </div>
 
-        function closeVideo() {
+    </div>
 
-            const lightbox =
-                document.getElementById("lightbox");
+</section>
 
-            const video =
-                document.getElementById("lightbox-video");
+<!-- GALLERY -->
+<section class="gallery">
 
-            video.pause();
-            video.removeAttribute("src");
-            video.load();
+    <div class="section-heading">
+        <span class="section-label">Our Memories</span>
+        <h2>Explore The Beauty Of The Red Sea</h2>
+        <p>A glimpse of the amazing experiences waiting for you.</p>
+    </div>
 
-            lightbox.style.display = "none";
+    <div class="gallery-grid">
 
-        }
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=700"
+             alt="Underwater adventure">
 
-        document.addEventListener("keydown", function(event) {
+        <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=700"
+             alt="Beautiful island">
 
-            if (event.key === "Escape") {
-                closeVideo();
-            }
+        <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=700"
+             alt="Blue sea">
 
-        });
+        <img src="https://images.unsplash.com/photo-1530053969600-caed2596d242?w=700"
+             alt="Marine life">
 
-    </script>
+        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=700"
+             alt="Holiday resort">
+
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700"
+             alt="Tropical beach">
+
+    </div>
+
+</section>
+
+<!-- BOOKING -->
+<section class="booking-cta">
+
+    <h2>Ready For Your Next Adventure?</h2>
+
+    <p>
+        Make your holiday in Hurghada unforgettable.
+        Book your Red Sea experience today!
+    </p>
+
+    <a href="booking.html" class="btn">
+        Book Your Trip Now
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <h3>Hurghada Snorkeling Adventures</h3>
+
+    <p>Discover the beauty of the Red Sea with us.</p>
+
+    <p>
+        <a href="index.html">Home</a> |
+        <a href="all-tours.html">Tours</a> |
+        <a href="booking.html">Booking</a> |
+        <a href="contact.html">Contact</a>
+    </p>
+
+    <p>© 2026 Hurghada Snorkeling Adventures. All Rights Reserved.</p>
+
+</footer>
 
 </body>
 </html>
