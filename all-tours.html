@@ -4,877 +4,1416 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hurghada Tours & Experiences | Explore the Red Sea and Egypt</title>
-<meta name="description" content="Discover islands, snorkeling, diving, water sports, desert safaris, Hurghada city tours and Egypt excursions. Explore experiences in Hurghada and beyond.">
+<meta name="description" content="Explore Red Sea islands, snorkeling, diving, water sports, desert safaris and Egypt sightseeing excursions with Atlantic Tours and Experiences.">
+<title>All Tours & Experiences | Atlantic Tours and Experiences</title>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
+:root{
+--navy:#092d46;--blue:#087eaa;--cyan:#19b8cf;
+--gold:#e5ad55;--light:#f3f8fa;--dark:#183344;
+--muted:#647783;--white:#fff
+}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#f7fafc;color:#203040;line-height:1.7}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);line-height:1.7;background:#fff}
 a{text-decoration:none;color:inherit}
 button{font:inherit}
-:root{--blue:#087eaa;--dark:#073b55;--gold:#e8a83e;--light:#eaf6fa}
-header{background:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 15px #00000012}
-.nav{max-width:1200px;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-size:21px;font-weight:800;color:var(--dark)}
-.logo span{color:var(--blue)}
-.navlinks{display:flex;gap:23px;align-items:center;flex-wrap:wrap}
-.navlinks a{font-size:14px;font-weight:700;color:#345}
-.navlinks a:hover{color:var(--blue)}
-.nav-cta{background:var(--blue);color:white!important;padding:10px 17px;border-radius:25px}
-.hero{min-height:490px;display:flex;align-items:center;color:white;background:linear-gradient(90deg,#052f49e8,#052f4966),url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2000&q=85') center/cover}
-.hero-inner{max-width:1200px;width:100%;margin:auto;padding:80px 24px}
-.eyebrow{color:#ffd27e;text-transform:uppercase;letter-spacing:3px;font-size:13px;font-weight:bold}
-.hero h1{font-size:clamp(38px,6vw,65px);line-height:1.1;max-width:800px;margin:18px 0}
-.hero p{font-size:18px;max-width:720px;color:#edf7fc}
-.hero-buttons{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-block;padding:13px 23px;border-radius:30px;font-weight:bold;border:2px solid transparent}
-.btn-primary{background:var(--gold);color:#182d39}
-.btn-outline{border-color:#fff;color:#fff}
-.intro{max-width:1100px;margin:55px auto;padding:0 22px;text-align:center}
-.section-label{color:var(--blue);font-weight:bold;text-transform:uppercase;letter-spacing:2px;font-size:12px}
-.intro h2,.section-heading h2{font-size:clamp(28px,4vw,39px);color:var(--dark);line-height:1.2;margin:10px 0 17px}
-.intro p{max-width:850px;margin:0 auto;color:#60717e}
-.notice{max-width:1050px;margin:25px auto 40px;padding:20px 24px;background:#fff8e9;border-left:4px solid var(--gold);border-radius:8px;color:#69542e}
-.notice strong{display:block;margin-bottom:5px;color:#4e3c1c}
-.filters-wrap{background:white;padding:25px 20px;position:sticky;top:65px;z-index:50;border-top:1px solid #edf1f4;border-bottom:1px solid #e6edf1}
-.filters{max-width:1200px;margin:auto;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.filter-btn{border:1px solid #d8e3e9;background:white;color:#3b5361;padding:10px 17px;border-radius:25px;cursor:pointer;font-weight:bold;font-size:13px}
-.filter-btn:hover,.filter-btn.active{background:var(--blue);color:white;border-color:var(--blue)}
-main{max-width:1200px;margin:45px auto;padding:0 22px}
-.category-section{margin:60px 0}
-.section-heading{text-align:center;margin-bottom:30px}
-.section-heading p{max-width:750px;margin:0 auto;color:#697d89}
-.tour-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.tour-card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 5px 22px #1231;display:flex;flex-direction:column;transition:.25s}
-.tour-card:hover{transform:translateY(-5px);box-shadow:0 12px 28px #1232}
-.tour-card.hidden{display:none}
-.tour-image{height:205px;width:100%;object-fit:cover;background:#dcebf0}
-.tour-content{padding:21px;display:flex;flex-direction:column;flex:1}
-.tag{display:inline-block;background:#e5f4f8;color:#08739a;padding:5px 10px;border-radius:20px;font-size:11px;font-weight:bold;text-transform:uppercase;align-self:flex-start}
-.tour-content h3{font-size:21px;color:var(--dark);margin:12px 0 8px;line-height:1.3}
-.tour-content>p{color:#637681;font-size:14px;margin-bottom:14px}
-.tour-details{border-top:1px solid #e8eef1;padding-top:12px;margin-top:3px}
-.tour-details summary{cursor:pointer;color:var(--blue);font-weight:bold;font-size:14px;list-style:none}
-.tour-details summary::-webkit-details-marker{display:none}
-.tour-details summary:after{content:"＋";float:right;font-size:18px}
-.tour-details[open] summary:after{content:"−"}
-.details-body{padding-top:13px;color:#536975;font-size:13px}
-.details-body p{margin-bottom:12px}
-.details-body h4{color:var(--dark);margin:12px 0 5px}
-.details-body ul{padding-left:19px;margin-bottom:12px}
-.details-body li{margin:4px 0}
-.card-actions{display:flex;gap:10px;margin-top:auto;padding-top:18px}
-.card-actions a{flex:1;text-align:center;padding:10px 8px;border-radius:7px;font-size:13px;font-weight:bold}
-.details-link{background:#e9f4f8;color:var(--blue)}
-.book-link{background:var(--blue);color:white}
-.card-actions a:hover{opacity:.85}
-.info-section{margin:75px 0;background:#eaf5f8;padding:45px 35px;border-radius:18px}
-.info-section h2{text-align:center;color:var(--dark);font-size:30px;margin-bottom:15px}
-.info-section>p{text-align:center;max-width:850px;margin:0 auto 30px;color:#607580}
-.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.info-box{background:white;padding:23px;border-radius:12px}
-.info-box h3{color:var(--dark);margin-bottom:9px;font-size:17px}
-.info-box p{font-size:14px;color:#657985}
-.city-feature{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;margin:65px 0}
-.city-feature img{width:100%;height:350px;object-fit:cover;border-radius:15px}
-.city-feature h2{font-size:32px;color:var(--dark);line-height:1.2;margin:10px 0}
-.city-feature p{color:#617581;margin-bottom:12px}
-.city-feature ul{padding-left:20px;color:#536975}
-.city-feature li{margin:6px 0}
-.disclaimer{font-size:12px;color:#73838b;max-width:1000px;margin:35px auto;text-align:center}
-.cta{background:linear-gradient(120deg,#063d58,#0788ac);color:white;text-align:center;padding:65px 22px;margin-top:65px}
-.cta h2{font-size:34px;margin-bottom:12px}
-.cta p{max-width:700px;margin:0 auto 22px;color:#e1f2f8}
-footer{background:#062d43;color:#d9e7ed;padding:45px 22px 20px}
-.footer-inner{max-width:1150px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}
-footer h3,footer h4{color:white;margin-bottom:12px}
-footer p,footer a{font-size:14px;color:#c0d3dc}
-footer a{display:block;margin:7px 0}
-footer a:hover{color:#ffd27e}
-.copyright{max-width:1150px;margin:30px auto 0;padding-top:18px;border-top:1px solid #ffffff22;text-align:center;font-size:12px;color:#9bb3bf}
-@media(max-width:900px){.tour-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.info-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:12px}.filters-wrap{top:105px}.tour-grid{grid-template-columns:1fr}.info-grid{grid-template-columns:1fr}.city-feature{grid-template-columns:1fr}.city-feature img{height:240px}.hero{min-height:420px}.footer-inner{grid-template-columns:1fr}.info-section{padding:30px 20px}}
+.container{width:min(1160px,92%);margin:auto}
+
+/* NAVIGATION */
+header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 3px 15px #0002}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:21px;font-weight:900;line-height:1.2;letter-spacing:1px;color:#fff}
+.logo span{display:block;color:var(--gold);font-size:11px;letter-spacing:3px;margin-top:5px}
+.nav-links{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:bold}
+.nav-links a{color:#fff;transition:.3s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.nav-button{background:var(--gold);color:var(--navy)!important;padding:10px 18px;border-radius:25px}
+
+/* HERO */
+.hero{
+min-height:450px;
+background:linear-gradient(90deg,rgba(3,28,47,.88),rgba(3,28,47,.30)),
+url("https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1800&q=85");
+background-size:cover;background-position:center;
+display:flex;align-items:center;color:#fff
+}
+.hero-content{max-width:760px;padding:75px 0}
+.eyebrow{color:var(--gold);text-transform:uppercase;font-size:13px;font-weight:bold;letter-spacing:3px;margin-bottom:12px}
+.hero h1{font-size:clamp(36px,6vw,62px);line-height:1.12;margin-bottom:20px}
+.hero p{max-width:680px;font-size:17px;color:#eef7fb;margin-bottom:28px}
+.main-button{display:inline-block;background:var(--gold);color:var(--navy);font-weight:bold;padding:13px 25px;border-radius:30px;transition:.3s}
+.main-button:hover{background:#fff;transform:translateY(-2px)}
+
+/* INTRO */
+.intro{padding:65px 0 35px;text-align:center}
+.section-label{color:var(--blue);font-weight:bold;text-transform:uppercase;letter-spacing:2px;font-size:12px;margin-bottom:9px}
+.section-title{color:var(--navy);font-size:clamp(27px,4vw,39px);line-height:1.2;margin-bottom:16px}
+.intro p{max-width:850px;margin:auto;color:var(--muted)}
+
+/* FILTERS */
+.filters{padding:25px 0 45px}
+.filter-list{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
+.filter-btn{border:1px solid #d5e2e8;background:#fff;color:var(--navy);padding:10px 19px;border-radius:30px;cursor:pointer;font-weight:bold;transition:.25s}
+.filter-btn:hover,.filter-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* CATEGORY */
+.category-section{padding:35px 0 65px}
+.category-heading{margin-bottom:28px;border-left:5px solid var(--gold);padding-left:17px}
+.category-heading h2{font-size:30px;color:var(--navy);line-height:1.2}
+.category-heading p{color:var(--muted);margin-top:7px;max-width:800px}
+
+/* CARDS */
+.tours-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:27px}
+.tour-card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 7px 28px #092d4610;border:1px solid #e7eef1;transition:.3s}
+.tour-card:hover{transform:translateY(-5px);box-shadow:0 13px 32px #092d4620}
+.tour-card img{width:100%;height:265px;object-fit:cover;display:block;background:#dce9ee}
+.card-content{padding:25px}
+.card-category{font-size:11px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:7px}
+.tour-card h3{font-size:24px;color:var(--navy);line-height:1.25;margin-bottom:12px}
+.tour-card p{color:var(--muted);font-size:14px;margin-bottom:13px}
+.tour-card h4{color:var(--navy);font-size:15px;margin:18px 0 7px}
+.tour-card ul{padding-left:19px;color:var(--muted);font-size:14px}
+.tour-card li{margin-bottom:6px}
+.note{margin-top:17px;padding:12px 14px;background:#f0f7fa;border-left:3px solid var(--cyan);border-radius:5px;font-size:12px;color:#526c79}
+.card-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.card-actions a{display:inline-block;padding:10px 17px;border-radius:25px;font-size:13px;font-weight:bold}
+.book-link{background:var(--gold);color:var(--navy)}
+.details-link{border:1px solid #cbdde5;color:var(--navy)}
+.hidden{display:none!important}
+
+/* INFO */
+.info-section{background:var(--light);padding:70px 0}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.info-box{background:#fff;padding:25px;border-radius:12px;border:1px solid #e4edf1}
+.info-box h3{color:var(--navy);margin-bottom:10px}
+.info-box p{color:var(--muted);font-size:14px}
+
+/* CTA */
+.cta{padding:75px 20px;text-align:center;background:linear-gradient(120deg,#092d46,#087eaa);color:#fff}
+.cta h2{font-size:clamp(27px,4vw,39px);margin-bottom:13px}
+.cta p{max-width:700px;margin:0 auto 24px;color:#e2f1f7}
+
+/* FOOTER */
+footer{background:#061f31;color:#d9e7ee;padding:45px 0 20px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}
+footer h3,footer h4{color:#fff;margin-bottom:13px}
+footer p,footer li{font-size:14px;color:#b9cbd5}
+footer ul{list-style:none}
+footer li{margin-bottom:8px}
+footer a:hover{color:var(--gold)}
+.copyright{text-align:center;border-top:1px solid #ffffff20;margin-top:35px;padding-top:18px;font-size:12px;color:#9eb3c0}
+
+/* RESPONSIVE */
+@media(max-width:850px){
+.nav{padding:14px 0;align-items:flex-start;flex-direction:column}
+.nav-links{width:100%;flex-wrap:wrap;gap:13px;font-size:13px}
+.tours-grid{grid-template-columns:1fr}
+.info-grid{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr}
+.hero{min-height:390px}
+}
+@media(max-width:480px){
+.nav-links{gap:10px}
+.nav-links a{font-size:12px}
+.tour-card img{height:220px}
+.card-content{padding:19px}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <nav class="nav">
-    <a href="index.html" class="logo">HURGHADA <span>ADVENTURES</span></a>
-    <div class="navlinks">
-      <a href="index.html">Home</a>
-      <a href="all-tours.html">All Tours</a>
-      <a href="booking.html">Booking</a>
-      <a href="contact.html">Contact</a>
-      <a href="booking.html" class="nav-cta">Explore Experiences</a>
-    </div>
-  </nav>
+<div class="container nav">
+<a href="index.html" class="logo">
+ATLANTIC
+<span>TOURS & EXPERIENCES</span>
+</a>
+<nav class="nav-links">
+<a href="index.html">Home</a>
+<a href="all-tours.html" class="active">All Tours</a>
+<a href="booking.html">Booking</a>
+<a href="contact.html">Contact</a>
+<a href="booking.html" class="nav-button">Book Your Experience</a>
+</nav>
+</div>
 </header>
 
 <section class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow">Discover the Red Sea & Beyond</div>
-    <h1>Explore Hurghada.<br>Experience Egypt.</h1>
-    <p>Discover beautiful islands, explore the underwater world, enjoy desert adventures, experience local culture and explore some of Egypt's most remarkable destinations.</p>
-    <div class="hero-buttons">
-      <a href="#all-experiences" class="btn btn-primary">Explore All Experiences</a>
-      <a href="contact.html" class="btn btn-outline">Contact Us</a>
-    </div>
-  </div>
+<div class="container">
+<div class="hero-content">
+<div class="eyebrow">Discover the Red Sea & Beyond</div>
+<h1>Explore More.<br>Experience Egypt.</h1>
+<p>
+Discover beautiful islands, crystal-clear waters, colourful coral reefs,
+desert landscapes and Egypt's extraordinary historical treasures.
+Explore a wide range of experiences with Atlantic Tours and Experiences.
+</p>
+<a href="#all-experiences" class="main-button">Explore All Experiences</a>
+</div>
+</div>
 </section>
 
-<section class="intro">
-  <div class="section-label">Your Holiday, Your Way</div>
-  <h2>Discover a World of Experiences in Hurghada</h2>
-  <p>Hurghada offers much more than beautiful beaches. From island escapes and colorful coral reefs to desert landscapes, exciting water sports, local city discoveries and journeys through ancient Egyptian history, there are many different ways to experience this destination. Explore the experiences below and discover the possibilities that may suit your interests.</p>
+<section class="intro container" id="all-experiences">
+<div class="section-label">Find Your Experience</div>
+<h2 class="section-title">All Tours & Experiences</h2>
+<p>
+From relaxing island escapes and exciting sea adventures to desert journeys
+and unforgettable cultural discoveries, explore different ways to enjoy
+Hurghada and Egypt. Each experience can be discussed and arranged according
+to the selected activity, local conditions and availability.
+</p>
 </section>
 
-<div class="notice">
-  <strong>About the Experiences Described on This Website</strong>
-  The information below is intended as a general introduction to destinations and activities. Actual arrangements, routes, locations visited, facilities, transportation, meals, equipment and included services may differ according to the selected experience, provider, weather, sea conditions, local regulations and availability. No fixed itinerary or specific service is guaranteed by these general descriptions. Please confirm the details of any selected experience before making arrangements.
+<section class="filters container">
+<div class="filter-list">
+<button class="filter-btn active" data-filter="all">All Experiences</button>
+<button class="filter-btn" data-filter="islands">Islands & Sea Trips</button>
+<button class="filter-btn" data-filter="diving">Snorkeling & Diving</button>
+<button class="filter-btn" data-filter="watersports">Water Sports</button>
+<button class="filter-btn" data-filter="desert">Desert Adventures</button>
+<button class="filter-btn" data-filter="city">City & Culture</button>
+<button class="filter-btn" data-filter="egypt">Egypt Excursions</button>
 </div>
+</section>
 
-<div class="filters-wrap" id="all-experiences">
-  <div class="filters">
-    <button class="filter-btn active" data-filter="all">All Experiences</button>
-    <button class="filter-btn" data-filter="islands">Islands & Sea Trips</button>
-    <button class="filter-btn" data-filter="diving">Diving & Snorkeling</button>
-    <button class="filter-btn" data-filter="watersports">Water Sports</button>
-    <button class="filter-btn" data-filter="desert">Desert Safari</button>
-    <button class="filter-btn" data-filter="city">Hurghada City</button>
-    <button class="filter-btn" data-filter="egypt">Egypt Excursions</button>
-    <button class="filter-btn" data-filter="family">Family & Entertainment</button>
-  </div>
-</div>
-
-<main>
+<main class="container">
 
 <!-- ISLANDS -->
-<section class="category-section" data-section="islands">
-  <div class="section-heading">
-    <div class="section-label">Sea, Sun & Island Life</div>
-    <h2>Islands & Sea Trips</h2>
-    <p>Discover the islands and coastal experiences of the Red Sea, from relaxing beach settings to boat adventures and beautiful snorkeling locations.</p>
-  </div>
+<section class="category-section" data-category-section="islands">
+<div class="category-heading">
+<h2>Islands & Sea Trips</h2>
+<p>Discover the Red Sea coastline, island beaches, clear lagoons and beautiful marine scenery. Island visits and boat routes depend on the selected trip and sea conditions.</p>
+</div>
 
-  <div class="tour-grid">
+<div class="tours-grid">
 
-    <article class="tour-card" data-category="islands">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80" alt="Mahmya Island beach">
-      <div class="tour-content">
-        <span class="tag">Island Experience</span>
-        <h3>Mahmya Island</h3>
-        <p>Discover a beautiful island escape associated with the protected Giftun Islands area, known for its clear water, sandy beach atmosphere and Red Sea scenery.</p>
-        <details class="tour-details">
-          <summary>Explore the experience</summary>
-          <div class="details-body">
-            <p>Mahmya is known for its attractive beach setting and its connection with the natural beauty of the Red Sea. Visitors can enjoy the island atmosphere, admire the surrounding sea, relax by the water and appreciate the contrast between white sand and blue sea.</p>
-            <p>The surrounding marine environment is an important part of the experience. Depending on the arrangements and conditions, visitors may have opportunities for swimming, snorkeling or simply enjoying the coastal scenery.</p>
-            <h4>What makes it special?</h4>
-            <ul><li>Beautiful beach and sea views.</li><li>Opportunities to enjoy the Red Sea environment.</li><li>A relaxing island atmosphere.</li><li>Photography and beach activities.</li></ul>
-          </div>
-        </details>
-        <div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div>
-      </div>
-    </article>
+<article class="tour-card" data-category="islands">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg" alt="Mahmya Island beach and turquoise Red Sea water" loading="lazy">
+<div class="card-content">
+<div class="card-category">Island Escape</div>
+<h3>Mahmya Island</h3>
+<p>
+Enjoy a relaxing island experience in the Giftun Islands area, known for
+its bright water, sandy shoreline and attractive Red Sea scenery.
+Mahmya is a popular choice for guests looking for a beach-focused escape
+with opportunities to enjoy the sea and relax away from the city.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Boat journey through the Red Sea.</li>
+<li>Time to enjoy the island's beach atmosphere and coastal views.</li>
+<li>Swimming and relaxing by the sea, subject to conditions.</li>
+<li>Snorkeling opportunities may be available as part of the selected arrangement.</li>
+<li>Photography, scenic views and time to enjoy the natural surroundings.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The experience generally involves travelling by boat towards the island,
+enjoying the coastal scenery and spending time on or around the beach.
+Depending on the selected arrangement, guests may have opportunities for
+swimming, snorkeling, relaxation and refreshments. Island facilities,
+access arrangements and included services should be confirmed when booking.
+</p>
+<div class="note">The exact boat route, beach access, facilities and included activities may vary according to the selected service and local operating conditions.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="islands">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=900&q=80" alt="Hula Hula Island">
-      <div class="tour-content">
-        <span class="tag">Island Experience</span>
-        <h3>Hula Hula Island</h3>
-        <p>Enjoy a tropical-style island atmosphere with beach scenery, sea views and opportunities to relax and enjoy the coastal surroundings.</p>
-        <details class="tour-details">
-          <summary>Explore the experience</summary>
-          <div class="details-body">
-            <p>Hula Hula is presented as a leisure-focused island experience for visitors who want to enjoy the sea and spend time in a beach setting. The experience can combine relaxation, swimming, photography and enjoying the island's surroundings.</p>
-            <p>Depending on the selected arrangements, visitors may also have access to marine activities or designated areas for enjoying the water. Facilities and activities can vary, so the specific arrangements should be checked before choosing an experience.</p>
-            <h4>Experience highlights</h4>
-            <ul><li>Island and beach atmosphere.</li><li>Sea views and photography opportunities.</li><li>Relaxation by the water.</li><li>Possible swimming and marine activities, subject to arrangements.</li></ul>
-          </div>
-        </details>
-        <div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div>
-      </div>
-    </article>
+<article class="tour-card" data-category="islands">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005709%20Paradise%20Island%20Makadi.jpg" alt="Paradise Island style beach scenery in the Red Sea" loading="lazy">
+<div class="card-content">
+<div class="card-category">Island Escape</div>
+<h3>Paradise Island</h3>
+<p>
+Paradise Island is a beach and sea escape for visitors who want to enjoy
+the colours of the Red Sea, soft sandy areas and a relaxed island atmosphere.
+It combines a boat outing with time to enjoy the natural coastal setting.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Boat trip across the Red Sea.</li>
+<li>Island scenery and beach relaxation.</li>
+<li>Swimming in suitable designated areas.</li>
+<li>Optional snorkeling opportunities when conditions allow.</li>
+<li>Free time for photographs and enjoying the surroundings.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The trip may include a transfer by boat, arrival at the selected island
+area and time to enjoy the beach environment. Depending on the arrangement,
+the experience may also include swimming or snorkeling stops along the way.
+Guests can enjoy the sea views, take photographs and spend time relaxing
+in the island setting.
+</p>
+<div class="note">The island access point, facilities, stops and activities depend on the selected trip and the conditions on the day.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="islands">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=900&q=80" alt="Orange Bay Island">
-      <div class="tour-content">
-        <span class="tag">Popular Island</span>
-        <h3>Orange Bay Island</h3>
-        <p>A popular island escape known for its beach setting, clear water, relaxing atmosphere and distinctive seaside photography spots.</p>
-        <details class="tour-details">
-          <summary>Explore the experience</summary>
-          <div class="details-body">
-            <p>Orange Bay is one of the recognizable island experiences associated with the Giftun Islands area. Its appeal comes from its sandy beach, shallow-looking turquoise water in suitable conditions and relaxed coastal atmosphere.</p>
-            <p>Visitors often enjoy time on the beach, swimming in designated areas, taking photographs and appreciating the surrounding sea. Some arrangements may combine the island visit with boat activities or snorkeling stops, depending on the selected package and sea conditions.</p>
-            <h4>Possible activities</h4>
-            <ul><li>Beach relaxation.</li><li>Swimming in permitted areas.</li><li>Photography and enjoying sea views.</li><li>Optional boat or snorkeling activities where arranged.</li></ul>
-          </div>
-        </details>
-        <div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div>
-      </div>
-    </article>
+<article class="tour-card" data-category="islands">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada-strand.jpg" alt="Red Sea beach and clear coastal water near Hurghada" loading="lazy">
+<div class="card-content">
+<div class="card-category">Island Escape</div>
+<h3>Orange Bay Island</h3>
+<p>
+Discover the famous island atmosphere associated with Orange Bay, with
+beautiful sea colours, wooden beach details and relaxing coastal scenery.
+This experience is suitable for guests looking for a combination of
+boat travel, beach time and memorable photographs.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Scenic boat journey in the Giftun Islands area.</li>
+<li>Time to enjoy the beach and the surrounding sea views.</li>
+<li>Swimming where permitted and conditions are suitable.</li>
+<li>Snorkeling opportunities may be included in some arrangements.</li>
+<li>Relaxation, photography and enjoying the island atmosphere.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The experience may begin with a boat journey towards the island area.
+Guests can enjoy the scenery during the crossing and spend time on the
+beach after arrival, subject to the access arrangement. Some versions
+of the trip may include additional sea stops or snorkeling opportunities.
+</p>
+<div class="note">The photograph represents Red Sea beach scenery, not a guaranteed view of a specific Orange Bay installation. Access and facilities may vary.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="islands">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Paradise Island">
-      <div class="tour-content">
-        <span class="tag">Island Experience</span>
-        <h3>Paradise Island</h3>
-        <p>Discover a beach-focused island experience with beautiful coastal scenery, opportunities to enjoy the water and a relaxed holiday atmosphere.</p>
-        <details class="tour-details">
-          <summary>Explore the experience</summary>
-          <div class="details-body">
-            <p>Paradise Island is a name associated with island leisure experiences in the Hurghada and Giftun area. It attracts visitors interested in beach scenery, sea views and enjoying a different setting away from the mainland.</p>
-            <p>The experience may involve relaxing on the beach, swimming in permitted areas and enjoying the surrounding marine environment. Boat transfers, facilities and optional activities depend on the provider and the arrangements selected.</p>
-            <h4>Experience highlights</h4>
-            <ul><li>Island beach atmosphere.</li><li>Relaxation and sea views.</li><li>Swimming where permitted.</li><li>Optional marine activities depending on arrangements.</li></ul>
-          </div>
-        </details>
-        <div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div>
-      </div>
-    </article>
+<article class="tour-card" data-category="islands">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Il%20mare%20d%27Egitto%20-%20panoramio.jpg" alt="Egyptian Red Sea island and sea scenery" loading="lazy">
+<div class="card-content">
+<div class="card-category">Island Escape</div>
+<h3>Magawish Island</h3>
+<p>
+Magawish is associated with the island and beach experiences around
+Hurghada. It is an option for guests who enjoy open sea views, sandy
+coastlines and a relaxed day by the Red Sea.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Boat journey and views of the surrounding islands.</li>
+<li>Beach time and relaxation in the selected area.</li>
+<li>Swimming in suitable conditions.</li>
+<li>Optional snorkeling depending on the arrangement.</li>
+<li>Enjoying the coastal landscape and taking photographs.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The selected experience may include a boat transfer, time around the
+island or beach area and opportunities to enjoy the sea. Depending on
+the operator's arrangement, additional swimming or snorkeling stops
+may be considered. The experience is intended to offer a flexible
+combination of relaxation and Red Sea scenery.
+</p>
+<div class="note">Island access and the exact location or route must be confirmed for the selected excursion before booking.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="islands">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=80" alt="Magawish Island">
-      <div class="tour-content">
-        <span class="tag">Island & Beach</span>
-        <h3>Magawish Island</h3>
-        <p>Explore a Red Sea island experience associated with sandy coastal areas, clear water and opportunities to enjoy the natural surroundings.</p>
-        <details class="tour-details">
-          <summary>Explore the experience</summary>
-          <div class="details-body">
-            <p>Magawish is associated with the island and coastal landscape south of Hurghada. The wider area is known for its open sea scenery, beach settings and marine environment.</p>
-            <p>An experience in this area may focus on beach relaxation, swimming, boat scenery or marine activities, depending on the selected location and arrangements. Visitors should confirm the exact island or beach location with the provider.</p>
-            <h4>Possible highlights</h4>
-            <ul><li>Coastal and island scenery.</li><li>Beach relaxation.</li><li>Sea photography.</li><li>Optional swimming or snorkeling where available.</li></ul>
-          </div>
-        </details>
-        <div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div>
-      </div>
-    </article>
+<article class="tour-card" data-category="islands">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/La%20in%20mezzo%20al%20mar...lingua%20di%20sabbia%20nel%20Mar%20rosso%20-%20panoramio.jpg" alt="Sandbank surrounded by Red Sea water" loading="lazy">
+<div class="card-content">
+<div class="card-category">Island Escape</div>
+<h3>Hula Hula Island</h3>
+<p>
+Hula Hula is promoted as a lively beach and island-style experience in
+the Hurghada area. It may appeal to guests who want to combine a boat
+outing with beach relaxation, sea views and a social atmosphere.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Boat trip and views of the Red Sea coastline.</li>
+<li>Time to enjoy the beach environment.</li>
+<li>Swimming opportunities in suitable areas.</li>
+<li>Relaxing, photography and enjoying the island atmosphere.</li>
+<li>Optional water or snorkeling activities if offered in the selected package.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The experience may involve a boat transfer to the selected beach or
+island area, followed by time to enjoy the surroundings. Activities
+and facilities depend on the particular service being offered.
+Guests can use the experience to relax, enjoy the water and explore
+the beach setting at their own pace.
+</p>
+<div class="note">The image illustrates a Red Sea sandbank landscape, not a verified photograph of Hula Hula Island itself. Facilities and activities vary.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="islands">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1498623116890-37e912163d5d?auto=format&fit=crop&w=900&q=80" alt="Utopia Island">
-      <div class="tour-content">
-        <span class="tag">Safaga Area</span>
-        <h3>Utopia Island</h3>
-        <p>Discover an island and marine experience in the Safaga area, with coastal scenery and opportunities to explore the Red Sea environment.</p>
-        <details class="tour-details">
-          <summary>Explore the experience</summary>
-          <div class="details-body">
-            <p>Utopia Island is associated with the Safaga area, south of Hurghada. The experience is often connected with the area's marine environment and opportunities to enjoy the sea.</p>
-            <p>Depending on the chosen arrangements, the experience may include boat activities, beach time, snorkeling or other marine activities. The exact location, facilities and activities should be confirmed before making arrangements.</p>
-            <h4>What visitors may enjoy</h4>
-            <ul><li>Safaga coastal scenery.</li><li>Marine life and underwater surroundings.</li><li>Beach and sea activities where offered.</li><li>Photography and relaxation.</li></ul>
-          </div>
-        </details>
-        <div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div>
-      </div>
-    </article>
+<article class="tour-card" data-category="islands">
+<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1100&q=85" alt="Turquoise sea and tropical island coastline" loading="lazy">
+<div class="card-content">
+<div class="card-category">Private Sea Experience</div>
+<h3>Private Boat & Yacht Trips</h3>
+<p>
+Enjoy a more personal way to explore the Red Sea with a private boat
+or yacht arrangement. This option is suitable for families, couples,
+friends and small groups who prefer a more individual experience.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Private boat or yacht arrangement, subject to availability.</li>
+<li>Coastal sightseeing and open-sea views.</li>
+<li>Possible swimming or snorkeling stops.</li>
+<li>Private celebrations or special occasions by arrangement.</li>
+<li>Flexible route discussion before confirmation.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The route can be discussed according to the selected boat, sea conditions
+and the group's preferences. Depending on the agreed arrangement,
+the trip may focus on cruising, swimming, snorkeling or simply enjoying
+time on the water. Any requested stops and services should be confirmed
+before the trip.
+</p>
+<div class="note">Private routes, vessel type, included services and permitted stops are subject to availability, safety rules and prior confirmation.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Request a Private Trip</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="islands">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=900&q=80" alt="Private boat trip">
-      <div class="tour-content">
-        <span class="tag">Private Experience</span>
-        <h3>Private Boat Trip</h3>
-        <p>Enjoy a more personal way to experience the Red Sea, with a boat outing that can be arranged around selected interests and preferences.</p>
-        <details class="tour-details">
-          <summary>Explore the experience</summary>
-          <div class="details-body">
-            <p>A private boat experience offers a different way to explore the coastline and surrounding waters. Depending on the boat, provider and selected arrangements, guests may enjoy scenic cruising, swimming stops, snorkeling opportunities or time to relax on board.</p>
-            <p>Routes, stopping locations, onboard facilities, equipment and any additional services are subject to the specific boat arrangement, weather, sea conditions and local requirements. The exact plan should always be agreed with the provider.</p>
-            <h4>Possible experience elements</h4>
-            <ul><li>Private or exclusive boat setting, where offered.</li><li>Coastal sightseeing.</li><li>Optional swimming or snorkeling stops.</li><li>Flexible arrangements subject to confirmation.</li></ul>
-          </div>
-        </details>
-        <div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div>
-      </div>
-    </article>
-
-    <article class="tour-card" data-category="islands">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80" alt="Dolphin House">
-      <div class="tour-content">
-        <span class="tag">Marine Wildlife</span>
-        <h3>Dolphin House Trip</h3>
-        <p>Explore a marine area known for dolphin activity and enjoy the natural beauty of the Red Sea and its wildlife.</p>
-        <details class="tour-details">
-          <summary>Explore the experience</summary>
-          <div class="details-body">
-            <p>Dolphin House is a popular name for a marine area where dolphins are known to be encountered. A boat outing in the area may provide opportunities to observe marine wildlife in its natural environment.</p>
-            <p>Wild dolphins are free-ranging animals, so sightings cannot be guaranteed. Any wildlife observation or water activity should follow local rules and responsible marine practices. Entering the water near dolphins is subject to regulations, conditions and professional guidance.</p>
-            <h4>Experience highlights</h4>
-            <ul><li>Marine wildlife observation.</li><li>Red Sea boat scenery.</li><li>Possible snorkeling opportunities where permitted.</li><li>Learning about responsible wildlife encounters.</li></ul>
-          </div>
-        </details>
-        <div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div>
-      </div>
-    </article>
-
-  </div>
+</div>
 </section>
 
-<!-- DIVING -->
-<section class="category-section" data-section="diving">
-  <div class="section-heading">
-    <div class="section-label">Discover Beneath the Surface</div>
-    <h2>Diving & Snorkeling</h2>
-    <p>Explore coral reefs, underwater landscapes and the colorful marine life of the Red Sea through different levels of water activities.</p>
-  </div>
-  <div class="tour-grid">
+<!-- SNORKELING AND DIVING -->
+<section class="category-section" data-category-section="diving">
+<div class="category-heading">
+<h2>Snorkeling & Diving Adventures</h2>
+<p>Explore coral gardens, colourful fish and the underwater world of the Red Sea. Marine life sightings and underwater conditions are natural and cannot be guaranteed.</p>
+</div>
 
-    <article class="tour-card" data-category="diving">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80" alt="Scuba diving">
-      <div class="tour-content">
-        <span class="tag">Underwater Adventure</span><h3>Scuba Diving</h3>
-        <p>Discover the underwater world of the Red Sea, with coral formations, marine life and a variety of diving environments.</p>
-        <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-          <p>The Red Sea is widely appreciated for its underwater scenery and variety of marine habitats. Scuba diving allows participants to explore beneath the surface using specialist equipment and appropriate supervision or certification arrangements.</p>
-          <p>Potential dive locations and underwater conditions vary. Site selection depends on experience level, qualification, weather, sea conditions and professional assessment. Diving should always be conducted according to applicable safety standards.</p>
-          <h4>What the experience may involve</h4><ul><li>Introduction to diving equipment and procedures.</li><li>Exploring underwater landscapes.</li><li>Observing reef fish and marine life.</li><li>Guidance appropriate to the participant's experience and qualification.</li></ul>
-        </div></details>
-        <div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div>
-      </div>
-    </article>
+<div class="tours-grid">
 
-    <article class="tour-card" data-category="diving">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=900&q=80" alt="Beginner diving">
-      <div class="tour-content">
-        <span class="tag">For Beginners</span><h3>Introductory Diving</h3>
-        <p>An introduction to scuba diving for people interested in discovering what it feels like to breathe and explore underwater.</p>
-        <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-          <p>Introductory diving is designed for people who are curious about scuba diving and may not hold a diving certification. The experience generally involves an explanation of basic equipment, communication and safety procedures, followed by an activity under the supervision of a qualified professional when appropriate.</p>
-          <p>Participation is subject to health and safety requirements, age restrictions where applicable, sea conditions and the provider's assessment. It is not a substitute for a full diving certification course.</p>
-          <h4>Possible learning elements</h4><ul><li>Getting familiar with diving equipment.</li><li>Understanding basic underwater communication.</li><li>Learning essential safety instructions.</li><li>Experiencing the underwater environment under professional supervision.</li></ul>
-        </div></details>
-        <div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div>
-      </div>
-    </article>
+<article class="tour-card" data-category="diving">
+<img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1100&q=85" alt="Snorkeling and swimming in clear Red Sea water" loading="lazy">
+<div class="card-content">
+<div class="card-category">Snorkeling</div>
+<h3>Red Sea Snorkeling Trip</h3>
+<p>
+Discover the underwater beauty of the Red Sea through a snorkeling
+experience suitable for guests who want to observe coral formations
+and marine life from the surface. Snorkeling locations are selected
+according to sea conditions and operational arrangements.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Boat journey to selected reef areas.</li>
+<li>Opportunity to observe coral formations and colourful fish.</li>
+<li>Snorkeling in designated areas under suitable conditions.</li>
+<li>Time to enjoy the sea and coastal scenery.</li>
+<li>Guidance and equipment arrangements according to the selected service.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The trip generally involves travelling by boat to one or more suitable
+reef locations. Guests receive information about the snorkeling area
+and safety guidance before entering the water. Time in the water depends
+on individual comfort, weather and sea conditions. The experience may
+also include time on the boat to relax and enjoy the surroundings.
+</p>
+<div class="note">Marine life, visibility, coral conditions and the number of snorkeling stops vary naturally. Guests should follow crew instructions and reef-protection guidance.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="diving">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=900&q=80" alt="Certified diving">
-      <div class="tour-content">
-        <span class="tag">Certified Divers</span><h3>Certified Diving</h3>
-        <p>Explore diving opportunities for qualified divers interested in discovering different underwater locations and marine environments.</p>
-        <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-          <p>Certified diving experiences are intended for divers who hold an appropriate recognized qualification. The underwater location and dive profile should be selected according to certification level, recent experience and the professional assessment of the dive team.</p>
-          <p>Different sites may offer coral gardens, reef walls, pinnacles, marine life and other underwater features. Not every site is suitable for every diver, and conditions can change.</p>
-          <h4>Important considerations</h4><ul><li>Bring relevant certification information.</li><li>Follow the dive professional's instructions.</li><li>Choose sites suitable for your training and experience.</li><li>Follow safe diving practices and local regulations.</li></ul>
-        </div></details>
-        <div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div>
-      </div>
-    </article>
+<article class="tour-card" data-category="diving">
+<img src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1100&q=85" alt="Colourful underwater coral reef" loading="lazy">
+<div class="card-content">
+<div class="card-category">Scuba Diving</div>
+<h3>Discover Scuba Diving</h3>
+<p>
+Try scuba diving with an introductory experience designed for people
+who want to discover what it feels like to breathe underwater.
+Depending on the dive centre's procedures, beginners may receive
+a briefing and practical guidance before entering the water.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Introduction to scuba equipment and basic diving concepts.</li>
+<li>Safety briefing and instructions from qualified dive professionals.</li>
+<li>Familiarisation with breathing underwater.</li>
+<li>Introductory underwater experience within permitted limits.</li>
+<li>Opportunity to observe Red Sea marine scenery.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The experience normally begins with registration and a briefing covering
+equipment, hand signals and essential safety information. Participants
+are introduced to the equipment and receive guidance before the dive.
+The dive location, depth, supervision and format depend on the dive
+centre's standards, participant suitability and sea conditions.
+</p>
+<div class="note">This is an introductory experience, not a professional certification. Medical suitability and dive-centre requirements must be checked before participation.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="diving">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=900&q=80" alt="Snorkeling">
-      <div class="tour-content">
-        <span class="tag">Sea Adventure</span><h3>Snorkeling Trips</h3>
-        <p>Enjoy the beauty of the Red Sea from the surface, discovering coral reefs and colorful fish with snorkeling equipment.</p>
-        <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-          <p>Snorkeling is a popular way to discover the marine environment without using scuba equipment. With a mask, snorkel and fins, participants can observe underwater scenery from the surface in suitable locations.</p>
-          <p>Possible snorkeling areas depend on sea conditions, local restrictions and the selected boat or coastal experience. Equipment, supervision and access to particular reef areas should be confirmed with the provider.</p>
-          <h4>What you may discover</h4><ul><li>Colorful reef fish.</li><li>Coral formations and underwater scenery.</li><li>Shallow marine habitats.</li><li>Different coastal and reef environments.</li></ul>
-        </div></details>
-        <div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div>
-      </div>
-    </article>
+<article class="tour-card" data-category="diving">
+<img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=1100&q=85" alt="Scuba diver exploring an underwater reef" loading="lazy">
+<div class="card-content">
+<div class="card-category">Certified Diving</div>
+<h3>Daily Diving for Certified Divers</h3>
+<p>
+Certified divers can explore selected Red Sea dive sites with a
+professional dive operation. The area offers a variety of underwater
+landscapes, which may include coral gardens, reef walls and different
+marine habitats.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Discussion of certification level and recent diving experience.</li>
+<li>Selection of suitable dive sites by the dive team.</li>
+<li>Guided dives according to the operator's procedures.</li>
+<li>Opportunity to observe reef structures and marine life.</li>
+<li>Equipment and additional services according to the selected arrangement.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The dive team reviews the participants' certification details and
+experience before selecting suitable dive locations. A briefing
+covers the site, conditions, entry and exit procedures and safety
+requirements. The dive plan is determined by the professional team
+according to conditions and diver qualifications.
+</p>
+<div class="note">Dive sites, depth, number of dives and marine-life encounters are not guaranteed and depend on certification, conditions and operator approval.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="diving">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=900&q=80" alt="Glass bottom boat">
-      <div class="tour-content">
-        <span class="tag">Family Friendly Option</span><h3>Glass Bottom Boat</h3>
-        <p>Enjoy views of the underwater world from a boat designed with viewing windows or a transparent viewing section.</p>
-        <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-          <p>A glass-bottom boat offers a way to observe the sea without entering the water. Depending on the vessel, visitors may be able to view coral areas, fish and underwater scenery through specially designed viewing panels.</p>
-          <p>Visibility depends on water conditions, sunlight, location and the vessel's design. The actual marine life visible during an outing cannot be guaranteed.</p>
-          <h4>Experience highlights</h4><ul><li>Underwater viewing without swimming.</li><li>Coastal and sea scenery.</li><li>An option for visitors who prefer to stay on the boat.</li><li>Suitable for different interests, subject to vessel arrangements.</li></ul>
-        </div></details>
-        <div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div>
-      </div>
-    </article>
+<article class="tour-card" data-category="diving">
+<img src="https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=1100&q=85" alt="Dolphins swimming in the sea" loading="lazy">
+<div class="card-content">
+<div class="card-category">Wildlife & Sea Trip</div>
+<h3>Dolphin House Snorkeling</h3>
+<p>
+Explore the Red Sea around the area commonly known as Dolphin House,
+a marine area associated with dolphin sightings. The experience combines
+a boat trip with the opportunity to enjoy the sea and observe marine
+wildlife from a respectful distance.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Boat journey towards the selected dolphin area.</li>
+<li>Possibility of observing dolphins in their natural environment.</li>
+<li>Snorkeling opportunities in permitted locations.</li>
+<li>Enjoying the surrounding reef and open-sea scenery.</li>
+<li>Learning about respectful wildlife observation.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The trip may include a boat journey to the selected marine area and
+time to observe the sea. If dolphins are present, observation should
+take place respectfully and according to applicable rules. Snorkeling
+may be offered at suitable permitted sites, depending on conditions
+and the operator's arrangement.
+</p>
+<div class="note">Dolphins are wild animals. Sightings, swimming opportunities and close encounters cannot be guaranteed. Wildlife must never be chased, touched or disturbed.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="diving">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Semi submarine">
-      <div class="tour-content">
-        <span class="tag">Underwater Viewing</span><h3>Semi-Submarine Experience</h3>
-        <p>Discover underwater views from a specially designed vessel with viewing areas below the waterline.</p>
-        <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-          <p>A semi-submarine experience allows visitors to see the underwater environment from a seated viewing area, without needing to swim or dive. It can be an interesting way to observe the sea and learn about the marine environment.</p>
-          <p>The vessel design, viewing arrangements, route and visibility vary according to the operator and conditions. Marine sightings are natural and cannot be promised.</p>
-          <h4>Possible highlights</h4><ul><li>Viewing underwater scenery.</li><li>Observing fish and reef environments when visible.</li><li>Enjoying the sea without entering the water.</li></ul>
-        </div></details>
-        <div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div>
-      </div>
-    </article>
+<article class="tour-card" data-category="diving">
+<img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=1100&q=85" alt="Red Sea boat and clear blue water" loading="lazy">
+<div class="card-content">
+<div class="card-category">Marine Excursion</div>
+<h3>Dolphin Watching Boat Trip</h3>
+<p>
+Enjoy a sea excursion focused on observing dolphins and appreciating
+the Red Sea environment. It is an option for guests who prefer to
+experience the sea from a boat, with wildlife observation as a possible
+part of the journey.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Boat trip through selected Red Sea areas.</li>
+<li>Opportunity to look for dolphins in their natural habitat.</li>
+<li>Scenic views of the sea and coastline.</li>
+<li>Relaxation on board and photography.</li>
+<li>Optional swimming or snorkeling if included and permitted.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The boat follows a route selected by the crew according to local
+conditions and wildlife guidance. Guests can enjoy the sea views
+and watch for marine life from the boat. Any additional water activity
+depends on the selected package and the conditions at the location.
+</p>
+<div class="note">Wildlife sightings are never guaranteed. The crew should follow local rules and responsible wildlife-watching practices.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-  </div>
+<article class="tour-card" data-category="diving">
+<img src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1100&q=85" alt="Underwater coral and marine environment" loading="lazy">
+<div class="card-content">
+<div class="card-category">Family Sea Experience</div>
+<h3>Glass-Bottom Boat & Semi-Submarine</h3>
+<p>
+Discover underwater scenery without needing to swim or dive.
+A glass-bottom boat or semi-submarine experience allows guests
+to view the marine environment through specially designed viewing
+windows, depending on the vessel used.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Boat journey along selected coastal waters.</li>
+<li>Viewing windows for observing underwater scenery.</li>
+<li>Opportunity to see coral formations and fish when visibility allows.</li>
+<li>Suitable option for guests who prefer to remain on board.</li>
+<li>Photography and enjoying the sea atmosphere.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+Guests board the selected vessel and enjoy a coastal journey.
+The underwater viewing section depends on the boat design and
+operating conditions. Visibility and marine-life observations vary
+naturally according to weather, water clarity and location.
+</p>
+<div class="note">The type of vessel, viewing arrangements and route depend on the selected operator and availability.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
+
+</div>
 </section>
 
 <!-- WATER SPORTS -->
-<section class="category-section" data-section="watersports">
-  <div class="section-heading">
-    <div class="section-label">Active on the Water</div>
-    <h2>Water Sports & Sea Activities</h2>
-    <p>Explore different ways to enjoy the Red Sea, from wind-powered sports to exciting rides and activities on the water.</p>
-  </div>
-  <div class="tour-grid">
+<section class="category-section" data-category-section="watersports">
+<div class="category-heading">
+<h2>Water Sports & Active Experiences</h2>
+<p>Enjoy action on the water, from relaxing paddle activities to exciting rides. Activities are subject to safety instructions, weather and operator availability.</p>
+</div>
 
-    <article class="tour-card" data-category="watersports">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=900&q=80" alt="Kite surfing">
-      <div class="tour-content"><span class="tag">Wind Sport</span><h3>Kite Surfing</h3><p>Experience a dynamic water sport combining a kite, board and wind power in suitable coastal conditions.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>Kite surfing combines elements of surfing, board sports and kite control. Participants use a specially designed kite to harness the wind while riding across the water on a board.</p>
-        <p>Beginners generally need professional instruction and suitable learning conditions. Wind strength, water conditions, equipment and the participant's experience all influence whether an activity can take place.</p>
-        <h4>Experience elements</h4><ul><li>Introduction to kite equipment and safety.</li><li>Understanding wind and water conditions.</li><li>Learning board and kite control where instruction is provided.</li><li>Progressing according to individual ability.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<div class="tours-grid">
 
-    <article class="tour-card" data-category="watersports">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1502933691298-84fc14542831?auto=format&fit=crop&w=900&q=80" alt="Windsurfing">
-      <div class="tour-content"><span class="tag">Wind Sport</span><h3>Windsurfing</h3><p>Combine sailing and board riding in an activity that uses a sail attached to a board.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>Windsurfing is a water sport in which participants stand on a board and control a sail to move across the water. It can be enjoyed as a beginner learning experience or as an activity for people with previous experience.</p>
-        <p>Instruction, equipment, suitable areas and activity conditions depend on the selected provider and weather. Beginners should follow professional guidance and use appropriate safety equipment.</p>
-        <h4>What you can learn</h4><ul><li>Basic equipment awareness.</li><li>Balance and board control.</li><li>Understanding wind direction.</li><li>Basic sailing movements where instruction is offered.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<article class="tour-card" data-category="watersports">
+<img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=85" alt="Parasailing over the sea" loading="lazy">
+<div class="card-content">
+<div class="card-category">Aerial Water Adventure</div>
+<h3>Parasailing</h3>
+<p>
+Enjoy a different view of the Red Sea with a parasailing experience.
+Participants are lifted above the water using a parachute connected
+to a suitable boat, offering a panoramic view of the coastline and
+surrounding sea.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Safety explanation and equipment preparation.</li>
+<li>Boat-based parasailing arrangement.</li>
+<li>Panoramic views of the coastline from above.</li>
+<li>Photo opportunities, depending on the service.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The operator explains the activity and safety procedures before
+participants use the equipment. The flight arrangement is managed
+by the specialised crew and depends on wind, visibility, equipment
+and operational conditions.
+</p>
+<div class="note">Participation requirements, passenger limits and operating conditions must be confirmed with the provider. Weather may affect availability.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="watersports">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=900&q=80" alt="Parasailing">
-      <div class="tour-content"><span class="tag">Air & Sea Adventure</span><h3>Parasailing</h3><p>Enjoy a bird's-eye view of the coastline while being lifted by a parachute connected to a boat.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>Parasailing offers a different perspective of the Red Sea and Hurghada coastline. Participants are attached to a parasail system connected to a boat and lifted above the water under controlled operating conditions.</p>
-        <p>Participation depends on weather, wind, equipment, operator procedures, safety requirements and any applicable age or health restrictions. The exact format can vary between providers.</p>
-        <h4>Experience highlights</h4><ul><li>Elevated views of the sea and coastline.</li><li>A unique aerial perspective.</li><li>Professional operation and safety procedures are essential.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<article class="tour-card" data-category="watersports">
+<img src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1100&q=85" alt="Water sports and clear sea environment" loading="lazy">
+<div class="card-content">
+<div class="card-category">Fun Water Ride</div>
+<h3>Banana Boat & Sofa Ride</h3>
+<p>
+Share a fun water activity with friends or family on an inflatable
+ride pulled by a motorboat. Banana boat and sofa rides are popular
+options for guests who enjoy a lively experience on the water.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Inflatable banana or sofa-style ride.</li>
+<li>Boat-pulled water activity.</li>
+<li>Group fun and sea views.</li>
+<li>Safety briefing and life-jacket arrangements.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+Participants receive instructions from the activity team and use
+the required safety equipment. The boat then operates the ride
+according to the selected activity and safety conditions. The
+experience is adjusted to the operator's rules and participants'
+suitability.
+</p>
+<div class="note">Ride type, participant limits and operating conditions depend on the provider. Follow all crew instructions.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="watersports">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&w=900&q=80" alt="Jet ski">
-      <div class="tour-content"><span class="tag">Motor Water Sport</span><h3>Jet Ski Adventure</h3><p>Enjoy an exciting personal watercraft experience in designated areas under the operator's safety rules.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>Jet skiing is a motorized water activity that allows participants to ride a personal watercraft across the sea. It offers an exciting way to experience open-water scenery in areas designated for this activity.</p>
-        <p>Operation is subject to local rules, age and licensing requirements where applicable, safety instructions, weather and sea conditions. Supervision, equipment and riding areas depend on the provider.</p>
-        <h4>Before participating</h4><ul><li>Follow all operator instructions.</li><li>Use the required safety equipment.</li><li>Respect designated riding areas and marine traffic.</li><li>Check eligibility requirements with the provider.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<article class="tour-card" data-category="watersports">
+<img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=85" alt="Jet ski adventure on open water" loading="lazy">
+<div class="card-content">
+<div class="card-category">Motorised Water Sport</div>
+<h3>Jet Ski Adventure</h3>
+<p>
+Experience the excitement of riding a personal watercraft in an
+approved area. Jet skiing offers a fast-paced way to enjoy the
+water while taking in views of the Red Sea coastline.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Introduction to the watercraft and controls.</li>
+<li>Safety instructions before riding.</li>
+<li>Use of an approved riding area.</li>
+<li>Coastal views and an active sea experience.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The activity normally starts with a safety briefing and instructions
+about how to operate the watercraft. The provider explains the
+permitted area and any supervision requirements. The ride takes
+place according to local rules and sea conditions.
+</p>
+<div class="note">Age limits, licence requirements, supervision, riding area and equipment conditions must be confirmed with the operator.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="watersports">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=900&q=80" alt="Banana boat">
-      <div class="tour-content"><span class="tag">Group Water Activity</span><h3>Banana Boat Ride</h3><p>A shared inflatable water ride pulled by a motorboat, offering a fun group activity on the sea.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>The banana boat is an inflatable ride designed for several participants. It is towed by a motorboat in a designated area and is often chosen by groups looking for a lively water activity.</p>
-        <p>Participant numbers, age restrictions, safety equipment and operating conditions depend on the provider. All participants should follow instructions and wear the required safety equipment.</p>
-        <h4>Experience highlights</h4><ul><li>Shared group activity.</li><li>Fun on the water.</li><li>Suitable arrangements depend on participant requirements and operator rules.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<article class="tour-card" data-category="watersports">
+<img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=85" alt="Windsurfing on the sea" loading="lazy">
+<div class="card-content">
+<div class="card-category">Wind & Water Sport</div>
+<h3>Windsurfing</h3>
+<p>
+Combine sailing and board skills in a windsurfing experience.
+The activity uses a board with a sail and can be suitable for
+beginners receiving instruction as well as more experienced riders.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Introduction to the board, sail and basic techniques.</li>
+<li>Instruction according to the participant's level.</li>
+<li>Practice in a suitable water area.</li>
+<li>Enjoying the sea and wind conditions.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The session may begin with equipment familiarisation and an explanation
+of wind direction, balance and basic movement. Beginners can receive
+guidance before practising in the water. The format depends on the
+participant's experience and the conditions.
+</p>
+<div class="note">Suitable wind conditions, equipment and instructor availability are necessary. The activity may be adjusted or postponed for safety.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="watersports">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=900&q=80" alt="Stand up paddleboarding">
-      <div class="tour-content"><span class="tag">Relaxed Water Sport</span><h3>Stand Up Paddleboarding</h3><p>Explore calm water areas while standing or kneeling on a paddleboard and moving with a paddle.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>Stand up paddleboarding, often called SUP, is an accessible water activity that combines balance, movement and exploring the water. Participants use a board and paddle to move across suitable water areas.</p>
-        <p>It may be offered as a guided activity or as equipment rental, depending on the provider. Conditions, equipment, safety support and suitable areas should be confirmed in advance.</p>
-        <h4>Possible benefits</h4><ul><li>Enjoying calm sea scenery.</li><li>Practicing balance and coordination.</li><li>Exploring the water at a relaxed pace.</li><li>A different way to enjoy the coastline.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<article class="tour-card" data-category="watersports">
+<img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=85" alt="Kitesurfing in the Red Sea" loading="lazy">
+<div class="card-content">
+<div class="card-category">Wind & Water Sport</div>
+<h3>Kitesurfing</h3>
+<p>
+Discover the combination of wind power and board riding in a
+kitesurfing experience. Hurghada and nearby coastal areas are
+known for water-sport locations where conditions may be suitable
+for different skill levels.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Introduction to kite equipment and safety systems.</li>
+<li>Beginner instruction or practice for experienced riders.</li>
+<li>Understanding wind and water conditions.</li>
+<li>Use of an approved training or riding area.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The activity can include a briefing about equipment, wind awareness
+and safety procedures. Beginners may start with introductory
+training before progressing according to their ability. Experienced
+riders can discuss suitable arrangements with the centre.
+</p>
+<div class="note">Kitesurfing depends strongly on wind conditions, instructor availability and participant ability. No specific learning outcome is guaranteed.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-  </div>
+<article class="tour-card" data-category="watersports">
+<img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=85" alt="Paddleboarding on calm water" loading="lazy">
+<div class="card-content">
+<div class="card-category">Relaxed Water Sport</div>
+<h3>Stand-Up Paddleboarding & Kayaking</h3>
+<p>
+Enjoy a calmer way to explore the water with a paddleboard or kayak.
+These activities allow guests to move at their own pace while
+appreciating the coastline and nearby scenery.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Basic equipment introduction.</li>
+<li>Paddling in a suitable designated area.</li>
+<li>Coastal views and relaxed exploration.</li>
+<li>Individual or shared activity options, subject to availability.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+Participants receive basic instructions about balance, paddling
+and safe movement on the water. The activity takes place in an
+area considered suitable by the provider. The experience can be
+adapted to the participant's comfort and ability.
+</p>
+<div class="note">Equipment, activity area and conditions vary. Participants should follow the provider's safety advice.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
+
+</div>
 </section>
 
 <!-- DESERT -->
-<section class="category-section" data-section="desert">
-  <div class="section-heading">
-    <div class="section-label">Beyond the Coast</div>
-    <h2>Desert Safari & Outdoor Adventures</h2>
-    <p>Discover a different side of the Red Sea region through desert landscapes, mountain scenery and opportunities to learn about local traditions.</p>
-  </div>
-  <div class="tour-grid">
+<section class="category-section" data-category-section="desert">
+<div class="category-heading">
+<h2>Desert Safaris & Outdoor Adventures</h2>
+<p>Discover the desert landscapes around the Red Sea through off-road activities, traditional experiences and scenic viewpoints.</p>
+</div>
 
-    <article class="tour-card" data-category="desert">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=900&q=80" alt="Quad bike safari">
-      <div class="tour-content"><span class="tag">Desert Adventure</span><h3>Quad Bike Safari</h3><p>Explore desert tracks and open landscapes on a four-wheel quad bike experience.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>A quad bike safari introduces visitors to the desert landscape surrounding Hurghada. Riding across designated desert tracks offers views of open terrain, mountains and the distinctive scenery of the Eastern Desert.</p>
-        <p>Experiences may be offered with instruction and a guide, depending on the provider. Routes, riding conditions, equipment, eligibility and safety arrangements vary. Participants should follow the guide's instructions and stay within approved areas.</p>
-        <h4>Possible highlights</h4><ul><li>Desert and mountain scenery.</li><li>Learning basic quad bike controls.</li><li>Guided riding on designated routes.</li><li>Photography stops where arranged.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<div class="tours-grid">
 
-    <article class="tour-card" data-category="desert">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80" alt="Dune buggy">
-      <div class="tour-content"><span class="tag">Off-Road Adventure</span><h3>Dune Buggy Safari</h3><p>Experience an off-road desert adventure in a buggy vehicle designed for selected desert terrain.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>Dune buggy experiences offer a different style of desert driving. Depending on the vehicle and arrangement, participants may ride as drivers or passengers while exploring approved off-road routes.</p>
-        <p>Vehicle type, driver eligibility, safety equipment, route and supervision depend on the operator. Driving is subject to local requirements and the provider's safety procedures.</p>
-        <h4>Experience elements</h4><ul><li>Off-road desert scenery.</li><li>Vehicle orientation and safety briefing where provided.</li><li>Guided routes according to the selected experience.</li><li>Opportunities for desert photography.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<article class="tour-card" data-category="desert">
+<img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1100&q=85" alt="Desert dunes and mountain landscape" loading="lazy">
+<div class="card-content">
+<div class="card-category">Desert Adventure</div>
+<h3>Quad Bike Safari</h3>
+<p>
+Explore desert tracks on a quad bike and enjoy the open landscapes
+beyond the city. This activity is designed for guests interested
+in a motorised outdoor adventure in the Eastern Desert environment.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Introduction to the quad bike and safety equipment.</li>
+<li>Guidance about riding rules and the selected route.</li>
+<li>Desert scenery and mountain views.</li>
+<li>Photo opportunities in permitted stopping areas.</li>
+<li>Optional cultural elements depending on the selected package.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The experience generally begins with registration, equipment
+preparation and a safety explanation. Participants receive
+instructions before riding along an approved desert route.
+The route and any stops are determined by the operator according
+to conditions and the group's suitability.
+</p>
+<div class="note">Riding requirements, age limits, route, equipment and supervision depend on the operator. Follow safety instructions at all times.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="desert">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" alt="Jeep safari">
-      <div class="tour-content"><span class="tag">Desert Exploration</span><h3>Jeep Safari</h3><p>Discover the desert by four-wheel-drive vehicle and enjoy the scenery of the mountains and surrounding landscape.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>A jeep safari offers a vehicle-based way to explore areas beyond the city. The landscape may include desert plains, mountain views and selected stopping points, depending on the route and local arrangements.</p>
-        <p>Some experiences may include cultural visits or other activities, but these are not universal features. The route, vehicle, guide and any additional stops should be confirmed with the selected provider.</p>
-        <h4>Possible highlights</h4><ul><li>Desert and mountain scenery.</li><li>Exploring selected off-road areas.</li><li>Photography and landscape viewing.</li><li>Optional cultural elements where included.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<article class="tour-card" data-category="desert">
+<img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=1100&q=85" alt="Desert jeep safari landscape" loading="lazy">
+<div class="card-content">
+<div class="card-category">Off-Road Adventure</div>
+<h3>Jeep Desert Safari</h3>
+<p>
+Travel through desert landscapes in a suitable off-road vehicle.
+A jeep safari offers a different perspective on the Eastern Desert,
+with open views, rocky scenery and opportunities to learn about
+the region's natural environment.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Off-road journey with an experienced driver.</li>
+<li>Desert mountain and landscape views.</li>
+<li>Photo stops where permitted.</li>
+<li>Possible visit to a local community or traditional setting.</li>
+<li>Optional refreshments or cultural activities if included.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The experience may include travel from the city towards a selected
+desert area, followed by a guided drive through approved tracks.
+Depending on the selected arrangement, guests may visit a traditional
+setting or enjoy a scenic stop. The route and activities are flexible.
+</p>
+<div class="note">The route, community visits, refreshments and any optional activities must be confirmed with the provider.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="desert">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=900&q=80" alt="Bedouin village">
-      <div class="tour-content"><span class="tag">Culture & Heritage</span><h3>Bedouin Village Experience</h3><p>Learn about aspects of desert life and traditional hospitality through a cultural visit where available.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>A Bedouin village visit may introduce visitors to aspects of traditional desert living, local hospitality and the relationship between communities and the surrounding environment.</p>
-        <p>Depending on the location and provider, cultural elements may include meeting local hosts, learning about traditional practices or tasting local refreshments. Activities and access arrangements vary, and visitors should respect local customs and community privacy.</p>
-        <h4>Possible cultural elements</h4><ul><li>Introduction to local traditions.</li><li>Learning about desert life.</li><li>Traditional hospitality where offered.</li><li>Respectful cultural exchange.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<article class="tour-card" data-category="desert">
+<img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1100&q=85" alt="Desert buggy adventure in sandy terrain" loading="lazy">
+<div class="card-content">
+<div class="card-category">Motorised Desert Adventure</div>
+<h3>Spider Buggy Safari</h3>
+<p>
+Enjoy a buggy adventure through selected desert tracks.
+A spider buggy offers a different driving experience from a
+quad bike and may be suitable for guests who prefer a shared
+vehicle arrangement.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Introduction to the buggy and safety procedures.</li>
+<li>Guided drive through an approved desert route.</li>
+<li>Views of desert mountains and open landscapes.</li>
+<li>Photo opportunities at selected safe stops.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+Participants receive an explanation of the vehicle and the
+operator's safety rules before departure. The buggy follows
+a route selected by the provider, with any stops depending
+on the conditions and the arrangement.
+</p>
+<div class="note">Driver and passenger requirements, vehicle type and route vary by provider. Confirm the exact arrangement before booking.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="desert">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80" alt="Camel riding">
-      <div class="tour-content"><span class="tag">Traditional Experience</span><h3>Camel Riding</h3><p>Discover a traditional way of experiencing desert surroundings and enjoy a different perspective of the landscape.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>Camel riding is an activity associated with desert travel and traditional ways of moving through arid landscapes. Where responsibly offered, it can provide an opportunity to experience the surroundings at a slower pace.</p>
-        <p>Animal welfare, handling practices, participant suitability and operator standards should be considered before choosing this activity. Availability and arrangements depend on the location and provider.</p>
-        <h4>Experience highlights</h4><ul><li>Traditional desert atmosphere.</li><li>Views of the surrounding landscape.</li><li>An introduction to a historic form of desert transport.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<article class="tour-card" data-category="desert">
+<img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1100&q=85" alt="Desert landscape and mountain scenery" loading="lazy">
+<div class="card-content">
+<div class="card-category">Cultural Desert Experience</div>
+<h3>Bedouin Village Experience</h3>
+<p>
+Discover elements of traditional desert life through a visit to
+a local-style Bedouin setting, where guests may learn about
+hospitality, daily customs and the relationship between people
+and the desert environment.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Introduction to the desert environment.</li>
+<li>Opportunity to learn about traditional hospitality.</li>
+<li>Tea or refreshments if included in the arrangement.</li>
+<li>Possible camel experience where offered.</li>
+<li>Photography and cultural interaction with respect for local customs.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The visit may form part of a wider desert safari. Guests can
+learn about the setting and local traditions through explanations
+and interaction, depending on the host and the selected arrangement.
+Any refreshments or additional activities should be confirmed.
+</p>
+<div class="note">The nature of the visit and included activities depend on the host community and the selected operator.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="desert">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=80" alt="Horse riding">
-      <div class="tour-content"><span class="tag">Outdoor Experience</span><h3>Horse Riding</h3><p>Enjoy a horse riding experience in selected settings, which may include desert surroundings or suitable coastal areas.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>Horse riding can offer a different way to explore outdoor scenery. Depending on the selected stable and route, the experience may take place in open landscapes, desert surroundings or other designated areas.</p>
-        <p>Rider experience, horse suitability, safety equipment, supervision and route conditions should be assessed by the provider. Animal welfare and responsible handling are important considerations.</p>
-        <h4>Possible highlights</h4><ul><li>Outdoor scenery.</li><li>Guided riding where offered.</li><li>Experiences for different ability levels, subject to assessment.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<article class="tour-card" data-category="desert">
+<img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=1100&q=85" alt="Desert sunset and mountain landscape" loading="lazy">
+<div class="card-content">
+<div class="card-category">Outdoor Experience</div>
+<h3>Desert Sunset & Stargazing</h3>
+<p>
+Enjoy the peaceful atmosphere of the desert away from bright
+city lights. Depending on weather and visibility, the experience
+may offer sunset views, open landscapes and an opportunity
+to observe the night sky.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Scenic desert viewpoints.</li>
+<li>Opportunity to enjoy changing sunset colours.</li>
+<li>Quiet surroundings away from the city.</li>
+<li>Basic sky observation when conditions are suitable.</li>
+<li>Optional refreshments depending on the arrangement.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The experience may include travel to a suitable desert viewpoint,
+time to enjoy the landscape and an opportunity to observe the
+sky after sunset. Weather, cloud cover, moonlight and visibility
+all affect what can be seen.
+</p>
+<div class="note">Sunset views and stargazing conditions depend on weather, visibility, season and location. No astronomical sighting is guaranteed.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-  </div>
+<article class="tour-card" data-category="desert">
+<img src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&w=1100&q=85" alt="Horse riding in an outdoor landscape" loading="lazy">
+<div class="card-content">
+<div class="card-category">Horse Riding</div>
+<h3>Horse Riding Experience</h3>
+<p>
+Enjoy a horse-riding experience in a suitable riding area.
+Depending on the centre and selected arrangement, the activity
+may take place in a desert setting, along a coastal area or
+within a designated riding facility.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Introduction to the horse and riding arrangements.</li>
+<li>Guidance from the riding team.</li>
+<li>Experience adapted to the participant's ability.</li>
+<li>Opportunity to enjoy the surrounding scenery.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The activity may begin with an introduction and assessment
+of the participant's experience. The riding team selects a
+suitable horse and explains basic safety instructions.
+The route and riding format depend on the centre and conditions.
+</p>
+<div class="note">Rider suitability, age requirements, route and riding conditions must be confirmed with the provider.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
+
+</div>
 </section>
 
-<!-- CITY -->
-<section class="category-section" data-section="city">
-  <div class="section-heading">
-    <div class="section-label">Discover the Local Side</div>
-    <h2>Hurghada City Tours</h2>
-    <p>Explore the character of Hurghada beyond the hotels and beaches, from its marina and traditional markets to religious landmarks and local neighborhoods.</p>
-  </div>
-  <div class="city-feature">
-    <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1000&q=85" alt="Hurghada city and Red Sea">
-    <div>
-      <div class="section-label">Local Culture & City Discovery</div>
-      <h2>Hurghada City Tour</h2>
-      <p>A city tour offers an introduction to the different sides of Hurghada. Visitors can discover the contrast between the modern marina, traditional neighborhoods, local markets, religious landmarks and the everyday life of this Red Sea city.</p>
-      <p>Depending on the selected route and access arrangements, a city discovery experience may cover several of the following places and areas.</p>
-      <ul>
-        <li>El Mina Mosque and the surrounding harbor area.</li>
-        <li>Hurghada Marina and its waterfront atmosphere.</li>
-        <li>El Dahar and traditional local streets.</li>
-        <li>Local markets and the fish market area.</li>
-        <li>Saint Shenouda Church, subject to access arrangements.</li>
-      </ul>
-    </div>
-  </div>
+<!-- HURGHADA CITY -->
+<section class="category-section" data-category-section="city">
+<div class="category-heading">
+<h2>Hurghada City & Local Culture</h2>
+<p>Discover the city's character, local markets, marina, traditional neighbourhoods and important landmarks.</p>
+</div>
 
-  <div class="tour-grid">
+<div class="tours-grid">
 
-    <article class="tour-card" data-category="city">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=900&q=80" alt="El Mina Mosque">
-      <div class="tour-content"><span class="tag">Landmark</span><h3>El Mina Mosque</h3><p>Discover one of Hurghada's most recognizable Islamic landmarks, known for its impressive architecture and prominent location near the harbor.</p>
-      <details class="tour-details"><summary>Explore the location</summary><div class="details-body">
-        <p>El Mina Mosque, also known as the Mina Mosque, is an important visual landmark in Hurghada. Its domes, minarets and architectural details make it one of the city's notable religious buildings.</p>
-        <p>The mosque is located near the marina and harbor area, making it a recognizable part of the city's waterfront landscape. Visitors can appreciate the exterior architecture and learn about its place in local life.</p>
-        <p>Any visit inside the mosque is subject to opening arrangements, religious activities and visitor rules. Modest clothing and respectful behavior are expected at religious sites.</p>
-        <h4>What to discover</h4><ul><li>Islamic architectural details.</li><li>The mosque's position within the harbor district.</li><li>Local religious and community life.</li><li>Photography from permitted public areas.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<article class="tour-card" data-category="city">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Al%20mina%20mosque%20Hurghada.jpg" alt="El Mina Mosque in Hurghada" loading="lazy">
+<div class="card-content">
+<div class="card-category">City & Culture</div>
+<h3>Hurghada City Tour</h3>
+<p>
+Discover a different side of Hurghada beyond its hotels and beaches.
+A city tour can introduce visitors to local neighbourhoods,
+religious landmarks, traditional shopping areas and the modern
+marina atmosphere.
+</p>
+<h4>Places & Possible Highlights</h4>
+<ul>
+<li><strong>El Mina Mosque:</strong> an important local landmark known for its architecture and prominent position near the marina area.</li>
+<li><strong>El Dahar:</strong> the older central area, with traditional streets, shops and everyday local life.</li>
+<li><strong>El Halaqa Fish Market:</strong> a well-known fish-market area where visitors can observe local seafood trading.</li>
+<li><strong>Hurghada Marina:</strong> a waterfront area with boats, restaurants, cafés and sea views.</li>
+<li><strong>Local shopping streets:</strong> opportunities to explore shops and traditional products.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The tour may include a drive through different parts of Hurghada,
+with selected stops for sightseeing, photography and exploring.
+Visitors may learn about the city's development, local traditions
+and everyday life. The route can be adapted to the group's interests
+and the places accessible during the visit.
+</p>
+<div class="note">Not every location is necessarily included in every city tour. Stops, access and visit arrangements are agreed according to the selected itinerary.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book City Tour</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="city">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=900&q=80" alt="Hurghada Marina">
-      <div class="tour-content"><span class="tag">Waterfront</span><h3>Hurghada Marina</h3><p>Explore a lively waterfront district with yachts, restaurants, cafés and views of the Red Sea.</p>
-      <details class="tour-details"><summary>Explore the location</summary><div class="details-body">
-        <p>Hurghada Marina is one of the city's well-known leisure areas. The waterfront setting combines moored boats and yachts with restaurants, cafés and pedestrian spaces overlooking the sea.</p>
-        <p>It offers a different atmosphere from the traditional neighborhoods and provides opportunities to enjoy the harbor scenery, observe the boats and discover the city's modern visitor facilities.</p>
-        <h4>What visitors may enjoy</h4><ul><li>Waterfront walks and sea views.</li><li>Yachts and harbor scenery.</li><li>Restaurants and cafés in the area.</li><li>Photography and relaxed sightseeing.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<article class="tour-card" data-category="city">
+<img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1100&q=85" alt="Waterfront marina and city atmosphere" loading="lazy">
+<div class="card-content">
+<div class="card-category">Coastal Lifestyle</div>
+<h3>Hurghada Marina & Waterfront</h3>
+<p>
+Explore the waterfront atmosphere of Hurghada Marina, where
+boats, restaurants, cafés and coastal views create a different
+side of the city. It is an option for visitors who enjoy walking,
+photography and discovering local leisure areas.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Marina and harbour views.</li>
+<li>Walking through the waterfront area.</li>
+<li>Photography around boats and the promenade.</li>
+<li>Optional time at cafés or restaurants independently.</li>
+<li>Opportunity to combine the visit with other city locations.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+Guests can explore the marina area on foot and enjoy the waterfront
+atmosphere. The visit may be combined with other selected locations
+around Hurghada, depending on the preferred route and arrangements.
+</p>
+<div class="note">Restaurant visits, purchases and additional services are optional unless specifically confirmed.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="city">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=80" alt="El Dahar market">
-      <div class="tour-content"><span class="tag">Traditional District</span><h3>El Dahar – Old Town</h3><p>Discover the traditional side of Hurghada through local streets, shops, cafés and everyday city life.</p>
-      <details class="tour-details"><summary>Explore the location</summary><div class="details-body">
-        <p>El Dahar is one of Hurghada's older and more traditional districts. It offers a different experience from the resort areas, with local shops, everyday services, small restaurants and a more familiar neighborhood atmosphere.</p>
-        <p>Exploring the district can help visitors understand the city's development and discover aspects of local life. The exact streets and stops depend on the chosen city route.</p>
-        <h4>What to discover</h4><ul><li>Traditional local streets.</li><li>Small shops and neighborhood businesses.</li><li>Local cafés and food culture.</li><li>Everyday life in Hurghada.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<article class="tour-card" data-category="city">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bazaar%20Street%2C%20El%20Dahar%2C%20Hurghada%2C%20Egypt%2C%20Oct%202004.jpg" alt="Traditional shopping street in El Dahar Hurghada" loading="lazy">
+<div class="card-content">
+<div class="card-category">Local Discovery</div>
+<h3>El Dahar Old Town & Local Markets</h3>
+<p>
+Explore El Dahar, one of Hurghada's traditional central areas.
+The neighbourhood offers a look at everyday local life through
+shops, cafés, streets and market activity.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Walk through traditional shopping streets.</li>
+<li>Discover local products and everyday shops.</li>
+<li>Observe the atmosphere of the older town area.</li>
+<li>Learn about local customs and the city's character.</li>
+<li>Optional shopping according to personal interest.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The visit may involve walking through selected streets and market
+areas with time to explore the surroundings. Guests can discover
+local shops and observe daily life. Any purchases are entirely
+optional and made directly by the visitor.
+</p>
+<div class="note">Market activity and access may vary. Purchases are not included unless explicitly agreed.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="city">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80" alt="Local market">
-      <div class="tour-content"><span class="tag">Local Shopping</span><h3>Hurghada Local Markets</h3><p>Explore local shops and market areas offering souvenirs, spices, household goods and products associated with Egyptian daily life.</p>
-      <details class="tour-details"><summary>Explore the location</summary><div class="details-body">
-        <p>Local markets provide an opportunity to see a more everyday side of Hurghada. Visitors may find traditional products, spices, souvenirs, clothing, accessories and locally used household items.</p>
-        <p>The character of each market differs, and the selection of shops depends on the area visited. Shopping is optional, and visitors can simply enjoy observing the atmosphere and local activity.</p>
-        <h4>Possible discoveries</h4><ul><li>Traditional souvenirs and gifts.</li><li>Spices and local products.</li><li>Small independent shops.</li><li>Local shopping culture.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<article class="tour-card" data-category="city">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/%D8%AD%D9%84%D9%82%D8%A9%20%D8%A7%D9%84%D8%B3%D9%85%D9%83%201.jpg" alt="El Halaqa fish market in Hurghada" loading="lazy">
+<div class="card-content">
+<div class="card-category">Local Food & Culture</div>
+<h3>El Halaqa Fish Market Visit</h3>
+<p>
+Discover the atmosphere of Hurghada's traditional fish market,
+known locally as El Halaqa. The area offers an opportunity
+to observe local seafood trading and learn more about the
+importance of fishing and the Red Sea to the city.
+</p>
+<h4>Experience Highlights</h4>
+<ul>
+<li>Explore the fish-market surroundings.</li>
+<li>Observe local seafood displays and trading activity.</li>
+<li>Learn about the local fishing culture.</li>
+<li>Photography where permitted and respectful.</li>
+<li>Possible combination with El Mina Mosque and nearby areas.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The visit may include an introduction to the market area and
+time to observe its activity. Guests can learn about the local
+seafood trade and how the sea contributes to daily life in
+Hurghada. Any food purchases or restaurant arrangements are
+separate unless confirmed.
+</p>
+<div class="note">Market activity, access and photography permissions depend on local conditions and regulations.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
 
-    <article class="tour-card" data-category="city">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=900&q=80" alt="Fish market">
-      <div class="tour-content"><span class="tag">Local Life</span><h3>Fish Market & Fishing Harbor Area</h3><p>Discover the connection between Hurghada and the sea through the local fishing and seafood environment.</p>
-      <details class="tour-details"><summary>Explore the location</summary><div class="details-body">
-        <p>Fishing and seafood have an important place in the identity of a Red Sea coastal city. The fish market and surrounding harbor areas can offer an insight into the relationship between local communities, fishing activity and the sea.</p>
-        <p>Market activity changes throughout the day and access can be affected by working conditions and local rules. A visit should respect vendors, workers and any restricted areas. The availability of a particular market stop depends on the route and access.</p>
-        <h4>What visitors may discover</h4><ul><li>Local seafood culture.</li><li>Fishing-related activity.</li><li>Different varieties of seafood where displayed.</li><li>The importance of the sea to local life.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
-
-    <article class="tour-card" data-category="city">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=80" alt="Church">
-      <div class="tour-content"><span class="tag">Heritage</span><h3>Saint Shenouda Church</h3><p>Learn about the Coptic Christian heritage of Egypt through a visit to a local religious landmark, where access is available.</p>
-      <details class="tour-details"><summary>Explore the location</summary><div class="details-body">
-        <p>Saint Shenouda Church is associated with the Coptic Christian community in Hurghada. A visit can provide an opportunity to learn about the presence of Christian heritage and religious life in the city.</p>
-        <p>Access to religious buildings may depend on services, opening arrangements and local visitor rules. Visitors should be respectful of worshippers and follow any instructions given at the site.</p>
-        <h4>What to discover</h4><ul><li>Local Coptic heritage.</li><li>Religious architecture and atmosphere.</li><li>Aspects of Egypt's diverse cultural history.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
-
-  </div>
+</div>
 </section>
 
 <!-- EGYPT EXCURSIONS -->
-<section class="category-section" data-section="egypt">
-  <div class="section-heading">
-    <div class="section-label">Explore More of Egypt</div>
-    <h2>Egypt Excursions & Historical Destinations</h2>
-    <p>Discover Egypt beyond the Red Sea, including ancient monuments, museums, historic cities, temples and cultural landscapes.</p>
-  </div>
-  <div class="tour-grid">
+<section class="category-section" data-category-section="egypt">
+<div class="category-heading">
+<h2>Egypt Historical & Cultural Excursions</h2>
+<p>Explore Egypt's famous archaeological sites, ancient temples, museums and historic cities. The actual itinerary depends on the selected excursion and current site access.</p>
+</div>
 
-    <article class="tour-card" data-category="egypt">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=900&q=80" alt="Cairo pyramids">
-      <div class="tour-content"><span class="tag">Ancient Egypt</span><h3>Cairo & Giza Pyramids</h3><p>Discover the capital region, the Giza Plateau, ancient monuments and some of Egypt's most recognized historical attractions.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>Cairo and Giza offer an extraordinary introduction to Egyptian history and culture. The Giza Plateau is home to the famous pyramids and the Great Sphinx, monuments that remain among the most recognizable symbols of ancient Egypt.</p>
-        <p>A broader Cairo experience may also introduce visitors to museums, historic neighborhoods, religious landmarks, traditional markets and the city's varied architecture. The actual selection of sites depends on the chosen excursion and access arrangements.</p>
-        <h4>Possible places of interest</h4><ul><li>The Great Pyramids of Giza.</li><li>The Great Sphinx.</li><li>The Grand Egyptian Museum, subject to access and arrangements.</li><li>Selected museums or historic Cairo areas.</li><li>Traditional markets and cultural districts where included.</li></ul>
-        <p>Entry tickets, guides, transport, meals and individual attractions should be checked separately with the selected provider. Not every listed location is necessarily included in every excursion.</p>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
+<div class="tours-grid">
 
-    <article class="tour-card" data-category="egypt">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=900&q=80" alt="Luxor temple">
-      <div class="tour-content"><span class="tag">Ancient Thebes</span><h3>Luxor Historical Tour</h3><p>Explore the remarkable monuments of ancient Thebes, including temples, royal tombs and historic sites on both sides of the Nile.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>Luxor is one of Egypt's most important archaeological destinations. Known in ancient times as Thebes, the city contains an exceptional collection of temples, tombs and monuments that reveal different aspects of ancient Egyptian civilization.</p>
-        <p>Possible places of interest include the Karnak Temple Complex, Luxor Temple, the Valley of the Kings, the Temple of Hatshepsut and the Colossi of Memnon. The selection of attractions depends on the excursion and the arrangements confirmed by the provider.</p>
-        <h4>Places visitors may discover</h4><ul><li>Karnak Temple Complex and its monumental columns.</li><li>Luxor Temple and its historic setting.</li><li>Valley of the Kings and selected royal tombs.</li><li>Temple of Hatshepsut at Deir el-Bahari.</li><li>Colossi of Memnon.</li></ul>
-        <p>Access to individual tombs, museums and archaeological areas may be subject to separate regulations, ticketing and conservation measures.</p>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
-
-    <article class="tour-card" data-category="egypt">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=900&q=80" alt="Aswan Nile">
-      <div class="tour-content"><span class="tag">Nile & Nubian Culture</span><h3>Aswan Discovery</h3><p>Discover the Nile landscapes, Nubian culture and important historical sites of southern Egypt.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>Aswan is known for its distinctive Nile scenery, islands, archaeological sites and Nubian cultural heritage. It offers a different atmosphere from the larger cities of northern Egypt.</p>
-        <p>Depending on the selected excursion, points of interest may include Philae Temple, the High Dam, traditional Nile boat experiences, Nubian villages and other local attractions.</p>
-        <h4>Possible places of interest</h4><ul><li>Philae Temple and its island setting.</li><li>Aswan High Dam.</li><li>Nile scenery and traditional felucca experiences where offered.</li><li>Nubian villages and cultural experiences where arranged.</li><li>Local markets and selected heritage sites.</li></ul>
-        <p>Each location has its own access requirements and conditions. The specific itinerary and any included services should be confirmed with the provider.</p>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
-
-    <article class="tour-card" data-category="egypt">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=900&q=80" alt="Alexandria citadel">
-      <div class="tour-content"><span class="tag">Mediterranean Heritage</span><h3>Alexandria City Tour</h3><p>Discover Egypt's Mediterranean city through historic landmarks, coastal scenery and cultural attractions.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>Alexandria has a distinctive identity shaped by its Mediterranean location and long history. The city offers a combination of coastal scenery, historic architecture, museums and cultural landmarks.</p>
-        <p>Depending on the selected excursion, places of interest may include the Citadel of Qaitbay, the Bibliotheca Alexandrina, the Corniche, historic districts and other attractions.</p>
-        <h4>Possible places to discover</h4><ul><li>Citadel of Qaitbay and its coastal setting.</li><li>Bibliotheca Alexandrina and its cultural role.</li><li>Alexandria Corniche and Mediterranean views.</li><li>Selected historic neighborhoods and landmarks.</li><li>Other museums or heritage sites where included.</li></ul>
-        <p>Access, opening arrangements and included attractions depend on the selected excursion and local conditions.</p>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
-
-    <article class="tour-card" data-category="egypt">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1608037521277-154cd1b89191?auto=format&fit=crop&w=900&q=80" alt="Abu Simbel">
-      <div class="tour-content"><span class="tag">Monumental Temples</span><h3>Abu Simbel Temples</h3><p>Discover one of ancient Egypt's most remarkable temple complexes, famous for its monumental rock-cut façade.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>The Abu Simbel temples are among the most impressive monuments of ancient Egypt. Built during the reign of Ramesses II, the temples are known for their colossal statues and detailed interiors.</p>
-        <p>The site is also associated with the international effort to relocate the temples during the creation of Lake Nasser. Visitors can learn about the monument's history, architecture and preservation.</p>
-        <h4>What to discover</h4><ul><li>The Great Temple of Ramesses II.</li><li>The Temple of Nefertari.</li><li>Monumental statues and carved interiors.</li><li>The history of the temple relocation project.</li></ul>
-        <p>Travel arrangements and access depend on the selected excursion and current site regulations.</p>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
-
-    <article class="tour-card" data-category="egypt">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=900&q=80" alt="Dendera Temple">
-      <div class="tour-content"><span class="tag">Temple & Archaeology</span><h3>Dendera Temple</h3><p>Explore the Temple of Hathor, one of Egypt's notable ancient temple sites, known for its decoration and architectural details.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>The Dendera Temple complex is dedicated primarily to Hathor, an important goddess in ancient Egyptian religion associated with music, joy, motherhood and other aspects of life.</p>
-        <p>The site is appreciated for its columns, reliefs, decorated ceilings and historical significance. A visit can introduce travelers to ancient religious architecture and the artistic traditions of temple decoration.</p>
-        <h4>What to discover</h4><ul><li>The Temple of Hathor.</li><li>Carved columns and reliefs.</li><li>Ancient Egyptian religious symbolism.</li><li>The history and architecture of the temple complex.</li></ul>
-        <p>Access to specific areas depends on current site rules and conservation arrangements.</p>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
-
-  </div>
-</section>
-
-<!-- FAMILY -->
-<section class="category-section" data-section="family">
-  <div class="section-heading">
-    <div class="section-label">Fun for Different Interests</div>
-    <h2>Family & Entertainment Experiences</h2>
-    <p>Discover additional activities and attractions that can add variety to a Hurghada holiday.</p>
-  </div>
-  <div class="tour-grid">
-
-    <article class="tour-card" data-category="family">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=900&q=80" alt="Water park">
-      <div class="tour-content"><span class="tag">Family Entertainment</span><h3>Water Park Experience</h3><p>Enjoy water-based entertainment with pools, slides and leisure facilities at participating attractions.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>Water parks offer a variety of aquatic attractions that may include swimming pools, water slides, splash areas and relaxation spaces. The facilities and suitability for different ages vary by venue.</p>
-        <p>Visitors should check the specific attraction's facilities, safety requirements, access conditions and any restrictions before choosing a visit.</p>
-        <h4>Possible attractions</h4><ul><li>Water slides and pools.</li><li>Family-oriented splash areas where available.</li><li>Leisure and relaxation facilities.</li><li>Different activities according to the venue.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
-
-    <article class="tour-card" data-category="family">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?auto=format&fit=crop&w=900&q=80" alt="Aquarium">
-      <div class="tour-content"><span class="tag">Marine Education</span><h3>Hurghada Grand Aquarium</h3><p>Discover marine and other wildlife exhibits in an attraction designed to introduce visitors to aquatic environments.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>An aquarium visit offers an opportunity to learn about aquatic environments and observe different species in managed exhibition settings. It can be an educational activity for visitors interested in marine life.</p>
-        <p>Exhibits, facilities, visitor routes and educational activities depend on the attraction's current operation. Visitors should check access information directly before planning their visit.</p>
-        <h4>What visitors may discover</h4><ul><li>Marine life exhibits.</li><li>Educational displays.</li><li>Different aquatic environments.</li><li>Family-oriented learning opportunities.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
-
-    <article class="tour-card" data-category="family">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80" alt="Dolphin show">
-      <div class="tour-content"><span class="tag">Entertainment</span><h3>Dolphin Show</h3><p>Discover a marine-animal presentation at a participating entertainment venue, subject to its current program and animal welfare standards.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>A dolphin show is a venue-based entertainment experience that may involve trained-animal presentations and educational information. The format, venue policies and available sessions are determined by the attraction.</p>
-        <p>Visitors interested in animal attractions may wish to review the venue's animal welfare practices, facilities and current operating information before deciding to attend.</p>
-        <h4>Before visiting</h4><ul><li>Check the venue and current presentation format.</li><li>Review visitor rules and accessibility.</li><li>Consider animal welfare and responsible tourism standards.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
-
-    <article class="tour-card" data-category="family">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="Spa and wellness">
-      <div class="tour-content"><span class="tag">Relaxation</span><h3>Spa & Wellness Experience</h3><p>Enjoy a wellness-focused experience that may include relaxation facilities or selected treatments at a participating venue.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>Spa and wellness experiences offer visitors a chance to relax and enjoy selected facilities or treatments. Depending on the venue, options may include massage services, sauna facilities, steam rooms or other wellness experiences.</p>
-        <p>Available treatments, professional qualifications, facilities, suitability and any health-related restrictions vary by provider. Visitors should discuss individual needs directly with the venue.</p>
-        <h4>Possible facilities</h4><ul><li>Relaxation areas.</li><li>Selected wellness treatments.</li><li>Steam or sauna facilities where available.</li><li>Venue-specific wellness services.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
-
-    <article class="tour-card" data-category="family">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80" alt="Go kart">
-      <div class="tour-content"><span class="tag">Activity & Fun</span><h3>Go Karting</h3><p>Enjoy a karting activity at a designated track, with arrangements depending on the venue and participant requirements.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>Go karting offers a recreational driving experience on a purpose-built track. It can appeal to visitors interested in a motor activity in a controlled environment.</p>
-        <p>Vehicle types, track rules, participant eligibility, safety equipment and supervision depend on the venue. Visitors should follow all instructions and confirm any age or height restrictions.</p>
-        <h4>Experience highlights</h4><ul><li>Driving on a designated circuit.</li><li>Basic safety and track instructions.</li><li>Recreational activity for eligible participants.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
-
-    <article class="tour-card" data-category="family">
-      <img class="tour-image" src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=900&q=80" alt="El Gouna">
-      <div class="tour-content"><span class="tag">Nearby Destination</span><h3>El Gouna Discovery</h3><p>Explore the distinctive resort town of El Gouna, known for its lagoons, marinas, architecture and waterfront atmosphere.</p>
-      <details class="tour-details"><summary>Explore the experience</summary><div class="details-body">
-        <p>El Gouna is a coastal destination north of Hurghada, recognized for its lagoons, canals, marinas and carefully planned neighborhoods. Its atmosphere differs from central Hurghada and offers a different perspective on Red Sea resort life.</p>
-        <p>A visit may focus on waterfront areas, marina scenery, architecture, cafés, restaurants or selected leisure attractions. The actual route and access depend on the selected arrangements.</p>
-        <h4>Possible highlights</h4><ul><li>Marina and lagoon scenery.</li><li>Distinctive architecture.</li><li>Waterfront cafés and public areas.</li><li>Photography and local sightseeing.</li></ul>
-      </div></details><div class="card-actions"><a class="details-link" href="#experience-notes">More Information</a><a class="book-link" href="booking.html">Enquire</a></div></div>
-    </article>
-
-  </div>
-</section>
-
-<section class="info-section" id="experience-notes">
-  <h2>Choosing an Experience</h2>
-  <p>Every visitor has different interests. Some prefer relaxing on an island, while others want to explore underwater environments, discover local culture or visit historical destinations. The following points can help you understand the general differences between the experiences.</p>
-  <div class="info-grid">
-    <div class="info-box"><h3>For Sea Lovers</h3><p>Island visits, boat trips and snorkeling experiences offer different ways to enjoy the Red Sea. The suitability of each activity depends on personal preferences and sea conditions.</p></div>
-    <div class="info-box"><h3>For Adventure Seekers</h3><p>Desert safari activities and water sports offer active experiences. Requirements, equipment, supervision and eligibility vary by activity and provider.</p></div>
-    <div class="info-box"><h3>For Culture Enthusiasts</h3><p>Hurghada city discoveries and visits to Cairo, Luxor, Aswan and Alexandria offer opportunities to learn about Egyptian culture, heritage and history.</p></div>
-    <div class="info-box"><h3>For Families</h3><p>Some attractions and boat experiences may suit families, depending on age requirements, facilities, safety arrangements and individual needs.</p></div>
-    <div class="info-box"><h3>For First-Time Visitors</h3><p>A city discovery or a general sea experience can be an introduction to Hurghada and the Red Sea region.</p></div>
-    <div class="info-box"><h3>For Returning Visitors</h3><p>Visitors who already know the main attractions may wish to explore different islands, specialized sports, diving locations or cultural destinations.</p></div>
-  </div>
-</section>
-
-<p class="disclaimer">
-  General information only. The experiences described are examples of activities and destinations that may be available in the region. Names, routes, locations, facilities and activities may differ between providers. No specific inclusion, access, wildlife sighting, transportation, meal, equipment, guide, service or itinerary is guaranteed unless it is expressly confirmed in the arrangements for a selected experience. Activities may be changed, restricted or unavailable due to weather, sea conditions, local regulations, safety requirements or other circumstances.
+<article class="tour-card" data-category="egypt">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Giza%20Pyramids.jpg" alt="The Great Pyramids of Giza" loading="lazy">
+<div class="card-content">
+<div class="card-category">Ancient Egypt</div>
+<h3>Cairo & The Pyramids of Giza</h3>
+<p>
+Discover the remarkable history of ancient Egypt with an excursion
+to Cairo and the Giza Plateau. The area is home to the Great
+Pyramids and the Great Sphinx, among the best-known archaeological
+landmarks in the world.
 </p>
+<h4>Places & Possible Highlights</h4>
+<ul>
+<li><strong>Great Pyramid of Khufu:</strong> the largest of the three main pyramids at Giza.</li>
+<li><strong>Pyramids of Khafre and Menkaure:</strong> the other major pyramid monuments on the plateau.</li>
+<li><strong>Great Sphinx:</strong> the monumental sculpture with a lion's body and human head.</li>
+<li><strong>Giza Plateau:</strong> viewpoints and archaeological surroundings.</li>
+<li><strong>Egyptian Museum or Grand Egyptian Museum:</strong> a museum visit may be part of the selected itinerary, subject to the actual tour and access arrangements.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The excursion may include travel from Hurghada to Cairo, followed
+by visits to selected historical locations. At Giza, guests can
+learn about the pyramids, the ancient royal tombs and the Sphinx.
+A museum visit or additional city sightseeing may be included
+depending on the itinerary selected and current arrangements.
+</p>
+<div class="note">The museum, entry tickets, interior pyramid access, lunch and exact sightseeing stops must be confirmed separately. Not all attractions are included in every tour.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Cairo Tour</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
+
+<article class="tour-card" data-category="egypt">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Karnak%20Temple%20%2C%20Luxor%20%2C%20Egypt.jpg" alt="Karnak Temple complex in Luxor" loading="lazy">
+<div class="card-content">
+<div class="card-category">Ancient Thebes</div>
+<h3>Luxor & The Ancient Temples</h3>
+<p>
+Discover Luxor, one of Egypt's most important historical destinations.
+The city preserves extraordinary monuments from ancient Thebes,
+including vast temple complexes, royal tombs and monumental statues.
+</p>
+<h4>Places & Possible Highlights</h4>
+<ul>
+<li><strong>Karnak Temple:</strong> an extensive religious complex famous for its monumental columns, pylons and sacred lake.</li>
+<li><strong>Luxor Temple:</strong> a historic temple in the heart of the modern city.</li>
+<li><strong>Valley of the Kings:</strong> the burial area of many New Kingdom rulers, with decorated tombs.</li>
+<li><strong>Temple of Hatshepsut:</strong> a striking terraced temple built against the cliffs at Deir el-Bahari.</li>
+<li><strong>Colossi of Memnon:</strong> two monumental statues associated with the ancient Theban necropolis.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The excursion may include travel to Luxor and visits to selected
+monuments on the east and west banks of the Nile. Guests can explore
+temple architecture, ancient inscriptions and historical landscapes.
+The actual route may focus on Karnak and other selected sites,
+with west-bank attractions depending on the chosen arrangement.
+</p>
+<div class="note">Not every listed monument is necessarily included. Valley of the Kings tomb access, special tomb tickets, transport and meals depend on the confirmed itinerary.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Luxor Tour</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
+
+<article class="tour-card" data-category="egypt">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Temple%20of%20Hatshepsut%2C%20Luxor%2C%20Egypt.jpg" alt="Temple of Hatshepsut at Deir el Bahari in Luxor" loading="lazy">
+<div class="card-content">
+<div class="card-category">West Bank of Luxor</div>
+<h3>West Bank of Luxor</h3>
+<p>
+Explore the west bank of Luxor, an area closely connected with
+ancient Egyptian royal burials and monumental funerary architecture.
+It offers a fascinating introduction to beliefs about the afterlife
+and the history of the Theban necropolis.
+</p>
+<h4>Places & Possible Highlights</h4>
+<ul>
+<li><strong>Valley of the Kings:</strong> royal tombs decorated with ancient scenes and inscriptions.</li>
+<li><strong>Temple of Hatshepsut:</strong> a terraced monument set against a dramatic cliff face.</li>
+<li><strong>Colossi of Memnon:</strong> monumental statues standing near the ancient mortuary temple area.</li>
+<li><strong>West Bank landscapes:</strong> views of the desert hills and Nile-side countryside.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The visit may focus on selected west-bank sites, with explanations
+about the pharaohs, royal tombs and funerary traditions. The route
+and number of locations depend on the chosen excursion and site
+access arrangements.
+</p>
+<div class="note">Specific tombs and interior access may require separate tickets and may be subject to conservation or visitor restrictions.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
+
+<article class="tour-card" data-category="egypt">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Philae%20Temple%20Aswan.jpg" alt="Philae Temple in Aswan" loading="lazy">
+<div class="card-content">
+<div class="card-category">Southern Egypt</div>
+<h3>Aswan & Nubian Culture</h3>
+<p>
+Discover Aswan, a city known for its Nile scenery, island temples
+and Nubian cultural heritage. The destination offers a different
+atmosphere from Egypt's northern cities, with river landscapes
+and important historical monuments.
+</p>
+<h4>Places & Possible Highlights</h4>
+<ul>
+<li><strong>Philae Temple:</strong> the beautiful island temple complex dedicated to the goddess Isis.</li>
+<li><strong>Aswan High Dam:</strong> a major modern engineering landmark.</li>
+<li><strong>Nubian areas:</strong> opportunities to learn about local traditions and architecture.</li>
+<li><strong>Nile scenery:</strong> river views and island landscapes.</li>
+<li><strong>Nubian Museum:</strong> a cultural museum that may be included in selected arrangements.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The excursion may include visits to selected Aswan landmarks,
+with opportunities to learn about the city's history and Nubian
+heritage. A boat transfer may be required for certain island
+locations. The route and included attractions depend on the
+selected travel arrangement.
+</p>
+<div class="note">Aswan is a substantial journey from Hurghada. Transport format, overnight arrangements and attraction access must be confirmed before booking.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Aswan Tour</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
+
+<article class="tour-card" data-category="egypt">
+<img src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=1100&q=85" alt="Historic Egyptian coastal city architecture" loading="lazy">
+<div class="card-content">
+<div class="card-category">Mediterranean Heritage</div>
+<h3>Alexandria City Tour</h3>
+<p>
+Discover Alexandria, the historic Mediterranean city associated
+with ancient scholarship, coastal architecture and layers of
+Egyptian, Greek and Roman history. The city offers a different
+cultural experience from the Red Sea region.
+</p>
+<h4>Places & Possible Highlights</h4>
+<ul>
+<li><strong>Bibliotheca Alexandrina:</strong> a modern cultural landmark inspired by the ancient Library of Alexandria.</li>
+<li><strong>Citadel of Qaitbay:</strong> a historic fortress overlooking the Mediterranean, subject to access.</li>
+<li><strong>Montaza area:</strong> gardens and coastal surroundings.</li>
+<li><strong>Roman and historic sites:</strong> selected archaeological attractions depending on the itinerary.</li>
+<li><strong>Alexandria waterfront:</strong> coastal views and city atmosphere.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The excursion may include travel to Alexandria and visits to
+selected cultural and historical attractions. Guests can explore
+the city's Mediterranean character, architecture and heritage.
+The exact sightseeing route depends on the chosen arrangement
+and attraction opening or access conditions.
+</p>
+<div class="note">Alexandria is a long-distance excursion from Hurghada. Transport, overnight arrangements and attraction tickets must be confirmed separately.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Alexandria Tour</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
+
+<article class="tour-card" data-category="egypt">
+<img src="https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=1100&q=85" alt="Ancient Egyptian temple columns and hieroglyphics" loading="lazy">
+<div class="card-content">
+<div class="card-category">Ancient Egyptian Temples</div>
+<h3>Dendera & Abydos Temples</h3>
+<p>
+Explore two important temple destinations connected with ancient
+Egyptian religion and royal history. Dendera and Abydos offer
+visitors the opportunity to discover detailed temple decoration,
+inscriptions and sacred architecture.
+</p>
+<h4>Places & Possible Highlights</h4>
+<ul>
+<li><strong>Dendera Temple:</strong> the temple complex dedicated to Hathor, known for its decorated halls and astronomical ceiling imagery.</li>
+<li><strong>Abydos Temple:</strong> an important religious site associated with Osiris and the worship of ancient Egyptian kings.</li>
+<li><strong>Ancient reliefs:</strong> carved scenes and hieroglyphic inscriptions.</li>
+<li><strong>Historical landscape:</strong> an opportunity to explore important sites outside the main Luxor route.</li>
+</ul>
+<h4>General Experience Program</h4>
+<p>
+The trip may include road travel to one or both temple areas,
+depending on the selected excursion. Visitors can explore the
+monuments and learn about their religious and historical importance.
+The order and number of visits depend on travel arrangements
+and access conditions.
+</p>
+<div class="note">Dendera and Abydos may be offered separately or together. Do not assume both sites are included unless the itinerary confirms this.</div>
+<div class="card-actions"><a class="book-link" href="booking.html">Ask About This Tour</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+</div>
+</article>
+
+</div>
+</section>
 
 </main>
 
+<!-- FLEXIBILITY -->
+<section class="info-section">
+<div class="container">
+<div class="section-label">Important Information</div>
+<h2 class="section-title">A Flexible Experience, Planned Around You</h2>
+<p style="color:var(--muted);max-width:850px">
+Every excursion is different. The final arrangements depend on the selected
+activity, service provider, weather, sea conditions, site access and availability.
+</p>
+
+<div class="info-grid">
+<div class="info-box">
+<h3>Flexible Routes</h3>
+<p>
+Descriptions on this page explain possible experiences and attractions.
+They are general guides, not a promise that every listed stop will be included.
+The confirmed route should be discussed before booking.
+</p>
+</div>
+<div class="info-box">
+<h3>Safety & Local Conditions</h3>
+<p>
+Sea activities, diving, desert trips and outdoor experiences depend on
+weather, safety requirements, participant suitability and the provider's
+operational decisions.
+</p>
+</div>
+<div class="info-box">
+<h3>Confirm Before Booking</h3>
+<p>
+Please ask about inclusions, transfers, tickets, equipment, meals,
+access arrangements and any optional services before confirming
+your selected experience.
+</p>
+</div>
+</div>
+</div>
+</section>
+
 <section class="cta">
-  <h2>Ready to Discover Hurghada?</h2>
-  <p>Explore the experiences that interest you and contact us to ask about available options and the arrangements for a specific activity.</p>
-  <a href="contact.html" class="btn btn-primary">Contact Us</a>
-  <a href="booking.html" class="btn btn-outline">Send an Enquiry</a>
+<h2>Your Next Adventure Starts Here</h2>
+<p>
+Tell us what kind of experience you are interested in.
+Our team can help you explore the available options and discuss
+the arrangements for your chosen trip.
+</p>
+<a href="contact.html" class="main-button">Contact Atlantic Tours</a>
 </section>
 
 <footer>
-  <div class="footer-inner">
-    <div>
-      <h3>Hurghada Adventures</h3>
-      <p>Discover the Red Sea, explore Egypt and find experiences that make your visit memorable. Explore the possibilities and ask about the arrangements that suit your interests.</p>
-    </div>
-    <div>
-      <h4>Explore</h4>
-      <a href="index.html">Home</a>
-      <a href="all-tours.html">All Experiences</a>
-      <a href="booking.html">Booking Enquiry</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
-    <div>
-      <h4>Experience Categories</h4>
-      <a href="#all-experiences">Islands & Sea Trips</a>
-      <a href="#all-experiences">Diving & Snorkeling</a>
-      <a href="#all-experiences">Water Sports</a>
-      <a href="#all-experiences">Desert Safari</a>
-      <a href="#all-experiences">Egypt Excursions</a>
-    </div>
-  </div>
-  <div class="copyright">© 2026 Hurghada Adventures. All rights reserved.</div>
+<div class="container">
+<div class="footer-grid">
+<div>
+<h3>Atlantic Tours and Experiences</h3>
+<p>
+Discover Hurghada, the Red Sea and Egypt through sea adventures,
+island escapes, cultural visits and outdoor experiences.
+Explore the possibilities and contact us to discuss your plans.
+</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="all-tours.html">All Tours</a></li>
+<li><a href="booking.html">Booking</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4>Explore Experiences</h4>
+<ul>
+<li><a href="#all-experiences">Island Trips</a></li>
+<li><a href="#all-experiences">Snorkeling & Diving</a></li>
+<li><a href="#all-experiences">Water Sports</a></li>
+<li><a href="#all-experiences">Desert Safaris</a></li>
+<li><a href="#all-experiences">Egypt Excursions</a></li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+© 2026 Atlantic Tours and Experiences. All Rights Reserved.
+</div>
+</div>
 </footer>
 
 <script>
 const filterButtons = document.querySelectorAll(".filter-btn");
 const tourCards = document.querySelectorAll(".tour-card");
-const sections = document.querySelectorAll(".category-section");
+const categorySections = document.querySelectorAll("[data-category-section]");
 
 filterButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const selected = button.dataset.filter;
+    button.addEventListener("click", () => {
+        const selectedFilter = button.dataset.filter;
 
-    filterButtons.forEach(item => item.classList.remove("active"));
-    button.classList.add("active");
+        filterButtons.forEach(item => item.classList.remove("active"));
+        button.classList.add("active");
 
-    tourCards.forEach(card => {
-      const categories = card.dataset.category.split(" ");
-      const show = selected === "all" || categories.includes(selected);
-      card.classList.toggle("hidden", !show);
+        tourCards.forEach(card => {
+            const category = card.dataset.category;
+            const shouldShow = selectedFilter === "all" || category === selectedFilter;
+            card.classList.toggle("hidden", !shouldShow);
+        });
+
+        categorySections.forEach(section => {
+            const sectionCategory = section.dataset.categorySection;
+            const shouldShow = selectedFilter === "all" || sectionCategory === selectedFilter;
+            section.classList.toggle("hidden", !shouldShow);
+        });
     });
-
-    sections.forEach(section => {
-      const visibleCards = section.querySelectorAll(".tour-card:not(.hidden)");
-      section.style.display = visibleCards.length ? "" : "none";
-    });
-
-    document.getElementById("all-experiences").scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  });
 });
 </script>
 
