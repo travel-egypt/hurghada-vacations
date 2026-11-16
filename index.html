@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,6 +40,10 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00c5e8;
         }
 
         .hero {
@@ -120,7 +124,10 @@
 
         .tour-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(250px, 1fr)
+            );
             gap: 25px;
             max-width: 1200px;
             margin: auto;
@@ -174,6 +181,7 @@
             width: 100%;
             max-width: 950px;
             max-height: 85vh;
+            background: black;
         }
 
         @media (max-width: 600px) {
@@ -195,7 +203,6 @@
 
 <body>
 
-    <!-- Navigation -->
     <header>
         <nav>
             <ul>
@@ -207,8 +214,7 @@
         </nav>
     </header>
 
-
-    <!-- Main Hero Video -->
+    <!-- Main Video -->
     <section class="hero">
 
         <video class="hero-video"
@@ -218,7 +224,11 @@
                playsinline
                preload="metadata">
 
-            <source src="videos/2026-09-27-233803504.mp4" type="video/mp4">
+            <source
+                src="assets/videos/Abo%20Dabbab%20.mp4"
+                type="video/mp4">
+
+            Your browser does not support HTML5 video.
 
         </video>
 
@@ -239,130 +249,36 @@
 
     </section>
 
-
-    <!-- Featured Tours -->
+    <!-- Video Collection -->
     <section class="tours">
 
         <h2>Our Snorkeling Video Collection</h2>
 
         <div class="tour-cards">
 
-
-            <!-- Video 1 -->
             <div class="tour-card">
 
-                <video muted playsinline preload="metadata">
-                    <source src="videos/Enjoy.mp4" type="video/mp4">
+                <video muted playsinline controls preload="metadata">
+                    <source
+                        src="assets/videos/Abo%20Dabbab%20.mp4"
+                        type="video/mp4">
                 </video>
 
-                <h3>Red Sea Adventure</h3>
+                <h3>Abo Dabbab Adventure</h3>
 
                 <p>
-                    Experience the beautiful waters and marine life
-                    of the Red Sea.
+                    Discover the beautiful waters and marine life
+                    of Abo Dabbab.
                 </p>
 
                 <button class="watch-btn"
-                        onclick="openVideo('videos/Enjoy.mp4')">
+                        onclick="openVideo()">
                     Watch Video
                 </button>
 
-                <a href="booking.html" class="btn">Book Now</a>
-
-            </div>
-
-
-            <!-- Video 2 -->
-            <div class="tour-card">
-
-                <video muted playsinline preload="metadata">
-                    <source src="videos/Geil.mp4" type="video/mp4">
-                </video>
-
-                <h3>Marine Life Experience</h3>
-
-                <p>
-                    Discover the amazing underwater world
-                    of Hurghada.
-                </p>
-
-                <button class="watch-btn"
-                        onclick="openVideo('videos/Geil.mp4')">
-                    Watch Video
-                </button>
-
-                <a href="booking.html" class="btn">Book Now</a>
-
-            </div>
-
-
-            <!-- Video 3 -->
-            <div class="tour-card">
-
-                <video muted playsinline preload="metadata">
-                    <source src="videos/amazing.mp4" type="video/mp4">
-                </video>
-
-                <h3>Amazing Snorkeling</h3>
-
-                <p>
-                    Enjoy breathtaking underwater scenery
-                    and colorful fish.
-                </p>
-
-                <button class="watch-btn"
-                        onclick="openVideo('videos/amazing.mp4')">
-                    Watch Video
-                </button>
-
-                <a href="booking.html" class="btn">Book Now</a>
-
-            </div>
-
-
-            <!-- Video 4 -->
-            <div class="tour-card">
-
-                <video muted playsinline preload="metadata">
-                    <source src="videos/beautiful.mp4" type="video/mp4">
-                </video>
-
-                <h3>Beautiful Red Sea</h3>
-
-                <p>
-                    Explore the natural beauty of the Red Sea.
-                </p>
-
-                <button class="watch-btn"
-                        onclick="openVideo('videos/beautiful.mp4')">
-                    Watch Video
-                </button>
-
-                <a href="booking.html" class="btn">Book Now</a>
-
-            </div>
-
-
-            <!-- Video 5 -->
-            <div class="tour-card">
-
-                <video muted playsinline preload="metadata">
-                    <source src="videos/lovelyday.mp4" type="video/mp4">
-                </video>
-
-                <h3>Lovely Day at Sea</h3>
-
-                <p>
-                    Spend an unforgettable day enjoying
-                    the beautiful sea.
-                </p>
-
-                <button class="watch-btn"
-                        onclick="openVideo('videos/lovelyday.mp4')">
-                    Watch Video
-                </button>
-
-                <a href="booking.html" class="btn">Book Now</a>
+                <a href="booking.html" class="btn">
+                    Book Now
+                </a>
 
             </div>
 
@@ -370,36 +286,75 @@
 
     </section>
 
-
-    <!-- Video Lightbox -->
+    <!-- Video Player -->
     <div id="lightbox" onclick="closeVideo()">
 
         <video id="lightbox-video"
                controls
                playsinline
+               preload="none"
                onclick="event.stopPropagation()">
         </video>
 
     </div>
 
-
-    <!-- Footer -->
     <footer>
-        <p>© 2026 Hurghada Snorkeling Adventures. All Rights Reserved.</p>
+        <p>
+            © 2026 Hurghada Snorkeling Adventures.
+            All Rights Reserved.
+        </p>
     </footer>
 
-
-    <!-- Video Functions -->
     <script>
 
-        function openVideo(videoPath) {
+        const videoPath =
+            "assets/videos/Abo%20Dabbab%20.mp4";
 
-            const lightbox = document.getElementById("lightbox");
-            const video = document.getElementById("lightbox-video");
+        function openVideo() {
+
+            const lightbox =
+                document.getElementById("lightbox");
+
+            const video =
+                document.getElementById("lightbox-video");
 
             video.src = videoPath;
 
             lightbox.style.display = "flex";
 
+            video.load();
+
             video.play().catch(function(error) {
-                console.log("Video playback
+                console.log("Video playback:", error);
+            });
+
+        }
+
+        function closeVideo() {
+
+            const lightbox =
+                document.getElementById("lightbox");
+
+            const video =
+                document.getElementById("lightbox-video");
+
+            video.pause();
+            video.removeAttribute("src");
+            video.load();
+
+            lightbox.style.display = "none";
+
+        }
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+                closeVideo();
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
