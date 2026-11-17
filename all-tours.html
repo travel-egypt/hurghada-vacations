@@ -119,6 +119,49 @@ footer a:hover{color:var(--gold)}
 .tour-card img{height:220px}
 .card-content{padding:19px}
 }
+
+
+/* ================= ORANGE BAY FEATURE ================= */
+.orange-bay-story{padding:55px 0 75px;background:#fff}
+.orange-bay-wrap{max-width:1080px;margin:0 auto}
+.orange-bay-hero{min-height:430px;border-radius:18px;overflow:hidden;display:flex;align-items:flex-end;background:linear-gradient(0deg,rgba(3,27,43,.86),rgba(3,27,43,.05)),url("assets/images/IMG-20261117-WA0011.jpg") center/cover no-repeat;box-shadow:0 12px 35px #092d4620}
+.orange-bay-hero-content{padding:clamp(25px,5vw,52px);max-width:800px;color:#fff}
+.orange-bay-kicker{display:inline-block;color:#f4c66f;text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:bold;margin-bottom:12px}
+.orange-bay-hero h2{font-size:clamp(42px,7vw,76px);line-height:1.02;color:#fff;margin:0 0 15px}
+.orange-bay-hero p{font-size:clamp(16px,2vw,19px);line-height:1.8;color:#f2f8fb;max-width:680px}
+.orange-bay-intro{text-align:center;max-width:850px;margin:55px auto 45px}
+.orange-bay-label{color:var(--blue);font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin-bottom:9px}
+.orange-bay-heading{font-size:clamp(27px,4vw,38px);line-height:1.2;color:var(--navy);margin:0 0 15px}
+.orange-bay-story p{color:var(--muted);line-height:1.9;margin:0 0 14px}
+.orange-bay-two-col{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;margin:42px 0}
+.orange-bay-two-col h3{font-size:27px;line-height:1.25;color:var(--navy);margin:0 0 13px}
+.orange-bay-quote{padding:27px;border-left:4px solid var(--gold);border-radius:10px;background:#f2f8fa;color:var(--navy);font-size:19px;font-style:italic;line-height:1.8}
+.orange-bay-features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:28px 0 55px}
+.orange-bay-feature{padding:23px;border:1px solid #e3edf1;border-radius:13px;background:#f8fbfc}
+.orange-bay-feature h4{color:var(--navy);font-size:17px;margin:0 0 8px}
+.orange-bay-feature p{font-size:14px;margin:0}
+.orange-bay-gallery-head{text-align:center;margin:55px 0 24px}
+.orange-bay-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.orange-bay-gallery button{display:block;border:0;padding:0;overflow:hidden;border-radius:12px;background:#e8f0f3;aspect-ratio:4/3;cursor:zoom-in}
+.orange-bay-gallery img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.orange-bay-gallery button:hover img{transform:scale(1.06)}
+.orange-bay-faq{max-width:850px;margin:55px auto}
+.orange-bay-faq details{border-bottom:1px solid #dce7ec;padding:17px 4px}
+.orange-bay-faq summary{color:var(--navy);font-weight:bold;cursor:pointer}
+.orange-bay-faq details p{margin:10px 0 0;font-size:14px}
+.orange-bay-final-quote{text-align:center;padding:42px 24px;margin:55px 0 0;border-radius:16px;background:linear-gradient(120deg,#092d46,#087eaa);color:#fff}
+.orange-bay-final-quote h3{font-size:clamp(25px,4vw,34px);color:#fff;margin:0 0 12px}
+.orange-bay-final-quote p{color:#e5f2f7;max-width:760px;margin:0 auto 20px}
+.orange-bay-final-quote a{display:inline-block;background:var(--gold);color:var(--navy);font-weight:bold;padding:12px 24px;border-radius:25px}
+.orange-bay-lightbox{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.94);align-items:center;justify-content:center;padding:55px 20px 25px}
+.orange-bay-lightbox.open{display:flex}
+.orange-bay-lightbox img{display:block;max-width:95vw;max-height:85vh;object-fit:contain;border-radius:8px}
+.orange-bay-lightbox-close{position:absolute;top:10px;right:22px;border:0;background:transparent;color:#fff;font-size:44px;line-height:1;cursor:pointer}
+.orange-bay-lightbox-caption{position:absolute;bottom:12px;left:15px;right:15px;text-align:center;color:#fff;font-size:13px}
+@media(max-width:800px){.orange-bay-two-col{grid-template-columns:1fr;gap:18px}.orange-bay-features{grid-template-columns:repeat(2,minmax(0,1fr))}.orange-bay-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.orange-bay-hero{min-height:370px}}
+@media(max-width:480px){.orange-bay-features{grid-template-columns:1fr}.orange-bay-gallery{gap:9px}.orange-bay-gallery button{border-radius:8px}.orange-bay-story{padding:35px 0 50px}}
+/* =============== END ORANGE BAY FEATURE =============== */
+
 </style>
 </head>
 
@@ -279,7 +322,7 @@ beach after arrival, subject to the access arrangement. Some versions
 of the trip may include additional sea stops or snorkeling opportunities.
 </p>
 <div class="note">The photograph represents Red Sea beach scenery, not a guaranteed view of a specific Orange Bay installation. Access and facilities may vary.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="booking.html">Ask for Details</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#orange-bay-details">Discover the Story</a></div>
 </div>
 </article>
 
@@ -378,6 +421,115 @@ before the trip.
 
 </div>
 </section>
+
+
+
+<!-- ORANGE BAY FULL STORY AND PHOTO GALLERY -->
+<section class="orange-bay-story category-section" id="orange-bay-details" data-category-section="islands">
+<div class="container orange-bay-wrap">
+
+  <div class="orange-bay-hero">
+    <div class="orange-bay-hero-content">
+      <span class="orange-bay-kicker">A Giftun Island Escape · Hurghada, Egypt</span>
+      <h2>Orange Bay</h2>
+      <p>Where the Red Sea Whispers, and Time Slows Down. A day of turquoise horizons, warm sand and moments you will wish could last a little longer.</p>
+    </div>
+  </div>
+
+  <div class="orange-bay-intro">
+    <div class="orange-bay-label">The Island Story</div>
+    <h2 class="orange-bay-heading">A Journey to a Different World</h2>
+    <p>Imagine leaving the busy streets of Hurghada behind. The sound of the city slowly fades as your boat glides across the beautiful Red Sea. The breeze touches your face, sunlight dances across the water, and somewhere ahead a bright sandy shoreline is waiting for you.</p>
+    <p>Welcome to Orange Bay, a well-known beach destination on Giftun Island, off the coast of Hurghada. Here, the sea shifts between beautiful shades of blue and turquoise, while the shoreline invites you to slow down, breathe deeply and enjoy the moment.</p>
+  </div>
+
+  <div class="orange-bay-two-col">
+    <div>
+      <div class="orange-bay-label">More Than a View</div>
+      <h3>More Than a Beautiful Photograph</h3>
+      <p>Orange Bay is more than a beautiful photograph. It is a day made of little moments that become lasting memories. Walk along the pier, look into the clear water, feel the warm sand and take in the open sea around you.</p>
+      <p>Find a quiet place to relax, enjoy the sunshine or step into the water where swimming is permitted and conditions are suitable. The simple pleasure of being beside the Red Sea is what makes an island day feel special.</p>
+    </div>
+    <div class="orange-bay-quote">“Sometimes the best journeys are not about going far away. They are about finding a place where you can slow down, breathe deeply and enjoy being there.”</div>
+  </div>
+
+  <div class="orange-bay-two-col">
+    <div>
+      <div class="orange-bay-label">Beneath the Surface</div>
+      <h3>Discover the Underwater World</h3>
+      <p>The waters around Giftun Island are part of the remarkable Red Sea marine environment. Many boat excursions include snorkeling stops, offering guests a chance to discover coral formations and observe marine life from the water's surface.</p>
+      <p>Whether it is your first snorkeling experience or one of many, take your time, use the appropriate equipment and follow the crew's safety instructions and local reef-protection guidance.</p>
+    </div>
+    <div>
+      <div class="orange-bay-label">Made for Shared Memories</div>
+      <h3>A Day for Everyone</h3>
+      <p>Come with family and enjoy a day together. Come with friends and fill the hours with laughter. Come as a couple and enjoy the sea views, or simply give yourself a little time away from everyday routines.</p>
+      <p>Take photographs, enjoy the beach, explore the water and let the rhythm of the island replace the rush of daily life. The best part is often the feeling of having nowhere else you need to be.</p>
+    </div>
+  </div>
+
+  <div class="orange-bay-gallery-head">
+    <div class="orange-bay-label">The Orange Bay Experience</div>
+    <h2 class="orange-bay-heading">Why Visit Orange Bay?</h2>
+    <p>Beautiful scenery, time by the sea and the chance to make your own island memories.</p>
+  </div>
+
+  <div class="orange-bay-features">
+    <div class="orange-bay-feature"><h4>Turquoise Sea Views</h4><p>Enjoy the changing colours of the Red Sea and the clear water around the island.</p></div>
+    <div class="orange-bay-feature"><h4>Sandy Beach Time</h4><p>Relax by the shoreline, feel the warm sand and enjoy the island atmosphere.</p></div>
+    <div class="orange-bay-feature"><h4>Snorkeling Opportunities</h4><p>Discover the underwater environment at snorkeling stops when included and conditions allow.</p></div>
+    <div class="orange-bay-feature"><h4>Photo-Worthy Moments</h4><p>Capture the sea, the beach and the little moments that make the day memorable.</p></div>
+    <div class="orange-bay-feature"><h4>Time to Unwind</h4><p>Take a break from the everyday and enjoy a slower pace beside the water.</p></div>
+    <div class="orange-bay-feature"><h4>Memories Together</h4><p>Share a special day with family, friends or someone important to you.</p></div>
+  </div>
+
+  <div class="orange-bay-gallery-head">
+    <div class="orange-bay-label">A Closer Look</div>
+    <h2 class="orange-bay-heading">Moments from Orange Bay</h2>
+    <p>Explore our photo collection. Select any image to open it in a larger view.</p>
+  </div>
+
+  <div class="orange-bay-gallery">
+    <button type="button" aria-label="Enlarge Orange Bay photo 1"><img src="assets/images/IMG-20261117-WA0011.jpg" alt="Orange Bay and Red Sea island scenery, photo 1" loading="lazy"></button>
+    <button type="button" aria-label="Enlarge Orange Bay photo 2"><img src="assets/images/IMG-20261117-WA0012.jpg" alt="Orange Bay and Red Sea island scenery, photo 2" loading="lazy"></button>
+    <button type="button" aria-label="Enlarge Orange Bay photo 3"><img src="assets/images/IMG-20261117-WA0013(1).jpg" alt="Orange Bay and Red Sea island scenery, photo 3" loading="lazy"></button>
+    <button type="button" aria-label="Enlarge Orange Bay photo 4"><img src="assets/images/IMG-20261117-WA0013.jpg" alt="Orange Bay and Red Sea island scenery, photo 4" loading="lazy"></button>
+    <button type="button" aria-label="Enlarge Orange Bay photo 5"><img src="assets/images/IMG-20261117-WA0014.jpg" alt="Orange Bay and Red Sea island scenery, photo 5" loading="lazy"></button>
+    <button type="button" aria-label="Enlarge Orange Bay photo 6"><img src="assets/images/IMG-20261117-WA0015(1).jpg" alt="Orange Bay and Red Sea island scenery, photo 6" loading="lazy"></button>
+    <button type="button" aria-label="Enlarge Orange Bay photo 7"><img src="assets/images/IMG-20261117-WA0015.jpg" alt="Orange Bay and Red Sea island scenery, photo 7" loading="lazy"></button>
+    <button type="button" aria-label="Enlarge Orange Bay photo 8"><img src="assets/images/IMG-20261117-WA0016.jpg" alt="Orange Bay and Red Sea island scenery, photo 8" loading="lazy"></button>
+    <button type="button" aria-label="Enlarge Orange Bay photo 9"><img src="assets/images/IMG-20261117-WA0017(1).jpg" alt="Orange Bay and Red Sea island scenery, photo 9" loading="lazy"></button>
+    <button type="button" aria-label="Enlarge Orange Bay photo 10"><img src="assets/images/IMG-20261117-WA0017.jpg" alt="Orange Bay and Red Sea island scenery, photo 10" loading="lazy"></button>
+    <button type="button" aria-label="Enlarge Orange Bay photo 11"><img src="assets/images/IMG-20261117-WA0018.jpg" alt="Orange Bay and Red Sea island scenery, photo 11" loading="lazy"></button>
+  </div>
+
+  <div class="orange-bay-faq">
+    <div class="orange-bay-label">Plan Your Visit</div>
+    <h2 class="orange-bay-heading">Orange Bay – Frequently Asked Questions</h2>
+    <details><summary>Where is Orange Bay located?</summary><p>Orange Bay is a popular beach destination on Giftun Island, off the coast of Hurghada in the Red Sea, Egypt.</p></details>
+    <details><summary>How do visitors get to Orange Bay?</summary><p>Visitors usually reach the island by boat from Hurghada as part of an organised sea excursion.</p></details>
+    <details><summary>Can I go snorkeling during the trip?</summary><p>Many boat excursions include snorkeling stops. The exact programme and locations depend on the selected trip, local rules and sea conditions.</p></details>
+    <details><summary>Is Orange Bay suitable for families?</summary><p>It can be an enjoyable day out for families. Children must always be supervised near the water and everyone should follow the crew's safety guidance.</p></details>
+    <details><summary>What should I bring?</summary><p>Consider bringing swimwear, a towel, sunscreen, sunglasses, a hat and a camera or phone for photographs. Check any trip-specific advice before departure.</p></details>
+    <details><summary>Is the trip programme always the same?</summary><p>No. Boat schedules, activities, snorkeling stops and time on the island can vary according to the selected excursion, weather, sea conditions and operator arrangements.</p></details>
+  </div>
+
+  <div class="orange-bay-final-quote">
+    <h3>Take the Feeling Home With You</h3>
+    <p>And when the time comes to sail back to Hurghada, you may find yourself looking over your shoulder, wishing the day could last a little longer. Orange Bay is not just a place you visit. It is a feeling you take home with you.</p>
+    <a href="booking.html">Ask About the Orange Bay Trip</a>
+  </div>
+
+</div>
+</section>
+
+<div class="orange-bay-lightbox" id="orangeBayLightbox" role="dialog" aria-modal="true" aria-label="Orange Bay photo viewer">
+  <button class="orange-bay-lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
+  <img src="" alt="">
+  <div class="orange-bay-lightbox-caption"></div>
+</div>
+<!-- END ORANGE BAY FULL STORY -->
+
 
 <!-- SNORKELING AND DIVING -->
 <section class="category-section" data-category-section="diving">
@@ -1415,6 +1567,44 @@ filterButtons.forEach(button => {
         });
     });
 });
+
+
+/* ORANGE BAY PHOTO GALLERY */
+document.addEventListener("DOMContentLoaded", function () {
+    const lightbox = document.getElementById("orangeBayLightbox");
+    if (!lightbox) return;
+
+    const largeImage = lightbox.querySelector("img");
+    const caption = lightbox.querySelector(".orange-bay-lightbox-caption");
+    const closeButton = lightbox.querySelector(".orange-bay-lightbox-close");
+
+    function closeOrangeBayImage() {
+        lightbox.classList.remove("open");
+        largeImage.src = "";
+        document.body.style.overflow = "";
+    }
+
+    document.querySelectorAll("#orange-bay-details .orange-bay-gallery button").forEach(function (button) {
+        button.addEventListener("click", function () {
+            const image = button.querySelector("img");
+            largeImage.src = image.src;
+            largeImage.alt = image.alt;
+            caption.textContent = image.alt;
+            lightbox.classList.add("open");
+            document.body.style.overflow = "hidden";
+            closeButton.focus();
+        });
+    });
+
+    closeButton.addEventListener("click", closeOrangeBayImage);
+    lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) closeOrangeBayImage();
+    });
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && lightbox.classList.contains("open")) closeOrangeBayImage();
+    });
+});
+
 </script>
 
 </body>
