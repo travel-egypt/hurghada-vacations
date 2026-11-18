@@ -1,12 +1,14 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore Red Sea islands, snorkeling, diving, water sports, desert safaris and Egypt sightseeing excursions with Atlantic Tours and Experiences.">
-<title>All Tours & Experiences | Atlantic Tours and Experiences</title>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Explore Red Sea islands, snorkeling, diving, water sports, desert safaris and Egypt sightseeing excursions with Atlantic Tours and Experiences." name="description"/>
+<title>All Tours &amp; Experiences | Atlantic Tours and Experiences</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -163,56 +165,55 @@ footer a:hover{color:var(--gold)}
 /* =============== END ORANGE BAY FEATURE =============== */
 
 
-/* Bilingual story panels */
-.tour-story[hidden]{display:none!important}
-.tour-story{margin:20px 0 14px;padding:18px 18px 16px;border:1px solid rgba(190,151,92,.32);border-left:3px solid #b89562;border-radius:12px;background:rgba(190,151,92,.07)}
-.tour-story-kicker{display:block;margin-bottom:7px;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:#a9824e;font-weight:700}
-.tour-story h4{margin:0 0 12px;font-size:1.02rem}
-.tour-story p{margin:0;line-height:1.8}
-.story-language-switch{display:flex;gap:7px;margin:0 0 11px}
-.story-language-switch button{border:1px solid rgba(160,130,90,.55);background:transparent;color:inherit;border-radius:30px;padding:5px 13px;font:inherit;font-size:.78rem;cursor:pointer}
-.story-language-switch button.active{background:#a9824e;color:#fff;border-color:#a9824e}
-.story-disclaimer{display:block;margin-top:10px;font-size:.72rem;line-height:1.5;opacity:.72}
+/* LOCAL TOUR MEDIA: images and videos stored in this repository */
+.tour-media{margin:22px 0 18px;padding:18px;border:1px solid #e3edf1;border-radius:14px;background:#f8fbfc}
+.tour-media h4{margin:0 0 12px;color:var(--navy)}
+.tour-media p{font-size:13px;color:var(--text);margin:0 0 12px}
+.tour-media-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.tour-media-grid img{width:100%;height:135px;object-fit:cover;border-radius:9px;display:block}
+.tour-video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+.tour-video-grid video,.tour-feature-video video{width:100%;display:block;border-radius:12px;background:#071e2c;max-height:360px}
+.tour-video-caption{font-size:12px;color:var(--text);margin-top:5px}
+.tour-feature-video{max-width:850px;margin:25px auto 40px}
+.tour-feature-video h3{text-align:center;margin-bottom:14px;color:var(--navy)}
+.tour-feature-video video{max-height:480px}
+@media(max-width:650px){.tour-media-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tour-video-grid{grid-template-columns:1fr}.tour-media-grid img{height:125px}}
 
 </style>
 </head>
-
 <body>
-
 <header>
 <div class="container nav">
-<a href="index.html" class="logo">
+<a class="logo" href="index.html">
 ATLANTIC
-<span>TOURS & EXPERIENCES</span>
+<span>TOURS &amp; EXPERIENCES</span>
 </a>
 <nav class="nav-links">
 <a href="index.html">Home</a>
-<a href="all-tours.html" class="active">All Tours</a>
+<a class="active" href="all-tours.html">All Tours</a>
 <a href="booking.html">Booking</a>
 <a href="contact.html">Contact</a>
-<a href="booking.html" class="nav-button">Book Your Experience</a>
+<a class="nav-button" href="booking.html">Book Your Experience</a>
 </nav>
 </div>
 </header>
-
 <section class="hero">
 <div class="container">
 <div class="hero-content">
-<div class="eyebrow">Discover the Red Sea & Beyond</div>
-<h1>Explore More.<br>Experience Egypt.</h1>
+<div class="eyebrow">Discover the Red Sea &amp; Beyond</div>
+<h1>Explore More.<br/>Experience Egypt.</h1>
 <p>
 Discover beautiful islands, crystal-clear waters, colourful coral reefs,
 desert landscapes and Egypt's extraordinary historical treasures.
 Explore a wide range of experiences with Atlantic Tours and Experiences.
 </p>
-<a href="#all-experiences" class="main-button">Explore All Experiences</a>
+<a class="main-button" href="#all-experiences">Explore All Experiences</a>
 </div>
 </div>
 </section>
-
 <section class="intro container" id="all-experiences">
 <div class="section-label">Find Your Experience</div>
-<h2 class="section-title">All Tours & Experiences</h2>
+<h2 class="section-title">All Tours &amp; Experiences</h2>
 <p>
 From relaxing island escapes and exciting sea adventures to desert journeys
 and unforgettable cultural discoveries, explore different ways to enjoy
@@ -220,32 +221,27 @@ Hurghada and Egypt. Each experience can be discussed and arranged according
 to the selected activity, local conditions and availability.
 </p>
 </section>
-
 <section class="filters container">
 <div class="filter-list">
 <button class="filter-btn active" data-filter="all">All Experiences</button>
-<button class="filter-btn" data-filter="islands">Islands & Sea Trips</button>
-<button class="filter-btn" data-filter="diving">Snorkeling & Diving</button>
+<button class="filter-btn" data-filter="islands">Islands &amp; Sea Trips</button>
+<button class="filter-btn" data-filter="diving">Snorkeling &amp; Diving</button>
 <button class="filter-btn" data-filter="watersports">Water Sports</button>
 <button class="filter-btn" data-filter="desert">Desert Adventures</button>
-<button class="filter-btn" data-filter="city">City & Culture</button>
+<button class="filter-btn" data-filter="city">City &amp; Culture</button>
 <button class="filter-btn" data-filter="egypt">Egypt Excursions</button>
 </div>
 </section>
-
 <main class="container">
-
 <!-- ISLANDS -->
 <section class="category-section" data-category-section="islands">
 <div class="category-heading">
-<h2>Islands & Sea Trips</h2>
+<h2>Islands &amp; Sea Trips</h2>
 <p>Discover the Red Sea coastline, island beaches, clear lagoons and beautiful marine scenery. Island visits and boat routes depend on the selected trip and sea conditions.</p>
 </div>
-
 <div class="tours-grid">
-
-<article class="tour-card" data-category="islands">
-<img src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg" alt="Mahmya Island beach and turquoise Red Sea water" loading="lazy">
+<article class="tour-card" data-category="islands" id="tour-mahmya-island">
+<img alt="Mahmya Island beach and turquoise Red Sea water" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg"/>
 <div class="card-content">
 <div class="card-category">Island Escape</div>
 <h3>Mahmya Island</h3>
@@ -271,25 +267,21 @@ Depending on the selected arrangement, guests may have opportunities for
 swimming, snorkeling, relaxation and refreshments. Island facilities,
 access arrangements and included services should be confirmed when booking.
 </p>
-
-<div class="tour-story" id="tour-story-mahmya-island" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">As the boat leaves Hurghada, the shoreline slowly becomes a thin line behind you. Ahead, Mahmya’s quiet beach and the changing blues of the Red Sea invite you to trade the noise of the city for a slower island day.</p>
-  <p data-story-text="de" hidden>Als das Boot Hurghada verlässt, wird die Küste hinter Ihnen langsam zu einer schmalen Linie. Vor Ihnen laden der ruhige Strand von Mahmya und die wechselnden Blautöne des Roten Meeres dazu ein, den Alltag gegen einen entspannten Inseltag einzutauschen.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">The exact boat route, beach access, facilities and included activities may vary according to the selected service and local operating conditions.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-mahmya-island">Read the Story</a></div>
+<details class="tour-media" id="media-mahmya-island">
+<summary><strong>View Mahmya Island Photos &amp; Videos</strong></summary>
+<p>Watch the four Mahmya videos uploaded for this island experience.</p>
+<div class="tour-video-grid">
+<div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/Mahmeya1.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 1</div></div>
+<div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/Mahmeya2.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 2</div></div>
+<div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/Mahmeya3.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 3</div></div>
+<div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/Mahmeya4.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 4</div></div>
+</div>
+</details><div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-mahmya-island">View Photos &amp; Videos</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="islands">
-<img src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005709%20Paradise%20Island%20Makadi.jpg" alt="Paradise Island style beach scenery in the Red Sea" loading="lazy">
+<article class="tour-card" data-category="islands" id="tour-paradise-island">
+<img alt="Paradise Island style beach scenery in the Red Sea" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005709%20Paradise%20Island%20Makadi.jpg"/>
 <div class="card-content">
 <div class="card-category">Island Escape</div>
 <h3>Paradise Island</h3>
@@ -314,25 +306,12 @@ the experience may also include swimming or snorkeling stops along the way.
 Guests can enjoy the sea views, take photographs and spend time relaxing
 in the island setting.
 </p>
-
-<div class="tour-story" id="tour-story-paradise-island" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">Picture stepping onto warm sand after a gentle boat ride, with the sea stretching out in every shade of blue. The hours are yours: swim when conditions are right, find a sunny spot and let the island set the pace.</p>
-  <p data-story-text="de" hidden>Stellen Sie sich vor, wie Sie nach einer entspannten Bootsfahrt den warmen Sand betreten und das Meer in vielen Blautönen vor sich liegt. Die Zeit gehört Ihnen: schwimmen Sie bei geeigneten Bedingungen, suchen Sie sich einen sonnigen Platz und genießen Sie den Rhythmus der Insel.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">The island access point, facilities, stops and activities depend on the selected trip and the conditions on the day.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-paradise-island">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-paradise-island">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="islands">
-<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada-strand.jpg" alt="Red Sea beach and clear coastal water near Hurghada" loading="lazy">
+<article class="tour-card" data-category="islands" id="tour-orange-bay-island">
+<img alt="Red Sea beach and clear coastal water near Hurghada" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada-strand.jpg"/>
 <div class="card-content">
 <div class="card-category">Island Escape</div>
 <h3>Orange Bay Island</h3>
@@ -357,25 +336,12 @@ Guests can enjoy the scenery during the crossing and spend time on the
 beach after arrival, subject to the access arrangement. Some versions
 of the trip may include additional sea stops or snorkeling opportunities.
 </p>
-
-<div class="tour-story" id="tour-story-orange-bay-island" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">The boat glides across the Giftun waters, sunlight flickering beside the bow. When the island comes into view, the day changes tempo: clear horizons, warm sand and time to enjoy the Red Sea without watching the clock.</p>
-  <p data-story-text="de" hidden>Das Boot gleitet über das Wasser rund um Giftun, während das Sonnenlicht neben dem Bug tanzt. Sobald die Insel auftaucht, wird der Tag ruhiger: weite Horizonte, warmer Sand und Zeit, das Rote Meer ganz ohne Blick auf die Uhr zu genießen.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">The photograph represents Red Sea beach scenery, not a guaranteed view of a specific Orange Bay installation. Access and facilities may vary.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-orange-bay-island">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#orange-bay-details">Discover the Story</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="islands">
-<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Il%20mare%20d%27Egitto%20-%20panoramio.jpg" alt="Egyptian Red Sea island and sea scenery" loading="lazy">
+<article class="tour-card" data-category="islands" id="tour-magawish-island">
+<img alt="Egyptian Red Sea island and sea scenery" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Il%20mare%20d%27Egitto%20-%20panoramio.jpg"/>
 <div class="card-content">
 <div class="card-category">Island Escape</div>
 <h3>Magawish Island</h3>
@@ -400,25 +366,12 @@ the operator's arrangement, additional swimming or snorkeling stops
 may be considered. The experience is intended to offer a flexible
 combination of relaxation and Red Sea scenery.
 </p>
-
-<div class="tour-story" id="tour-story-magawish-island" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">A day around Magawish begins with open water and the feeling of leaving the ordinary behind. Perhaps you spend the afternoon watching the light move across the waves; perhaps you step into the sea for a refreshing swim. The best moments are often the simplest.</p>
-  <p data-story-text="de" hidden>Ein Tag rund um Magawish beginnt mit weitem Meer und dem Gefühl, den Alltag hinter sich zu lassen. Vielleicht beobachten Sie am Nachmittag, wie das Licht über die Wellen wandert, vielleicht erfrischen Sie sich beim Schwimmen. Oft sind es die einfachen Augenblicke, die bleiben.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Island access and the exact location or route must be confirmed for the selected excursion before booking.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-magawish-island">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-magawish-island">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="islands">
-<img src="https://commons.wikimedia.org/wiki/Special:FilePath/La%20in%20mezzo%20al%20mar...lingua%20di%20sabbia%20nel%20Mar%20rosso%20-%20panoramio.jpg" alt="Sandbank surrounded by Red Sea water" loading="lazy">
+<article class="tour-card" data-category="islands" id="tour-hula-hula-island">
+<img alt="Hula Hula Island beach and Red Sea scenery" loading="lazy" src="assets/images/Hula.jpeg"/>
 <div class="card-content">
 <div class="card-category">Island Escape</div>
 <h3>Hula Hula Island</h3>
@@ -443,28 +396,42 @@ and facilities depend on the particular service being offered.
 Guests can use the experience to relax, enjoy the water and explore
 the beach setting at their own pace.
 </p>
-
-<div class="tour-story" id="tour-story-hula-hula-island" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">Music, sea air and a bright shoreline create the mood for a lively island escape. Between time on the beach and moments in the water, friends and families can make the day their own, following the atmosphere rather than a strict timetable.</p>
-  <p data-story-text="de" hidden>Musik, Meeresluft und eine helle Küste schaffen die Atmosphäre für einen lebhaften Insel-Ausflug. Zwischen Strand und Wasser gestalten Freunde und Familien den Tag ganz nach ihrem Geschmack – ohne sich von einem strengen Zeitplan treiben zu lassen.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">The image illustrates a Red Sea sandbank landscape, not a verified photograph of Hula Hula Island itself. Facilities and activities vary.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-hula-hula-island">Read the Story</a></div>
+<details class="tour-media" id="media-hula-hula-island">
+<summary><strong>View Hula Hula Island Photos &amp; Videos</strong></summary>
+<p>Explore the Hula Hula image collection uploaded to the Atlantic Tours and Experiences repository.</p>
+<div class="tour-media-grid">
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula.jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (2).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (3).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (4).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (5).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (6).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (7).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (8).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (9).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (10).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (11).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (12).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (13).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (14).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (15).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (16).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (17).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (18).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (19).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (20).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (21).jpeg"/>
+<img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula(2).jpeg"/>
+</div>
+</details><div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-hula-hula-island">View Photos &amp; Videos</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="islands">
-<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1100&q=85" alt="Turquoise sea and tropical island coastline" loading="lazy">
+<article class="tour-card" data-category="islands" id="tour-private-boat---yacht-trips">
+<img alt="Turquoise sea and tropical island coastline" loading="lazy" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Private Sea Experience</div>
-<h3>Private Boat & Yacht Trips</h3>
+<h3>Private Boat &amp; Yacht Trips</h3>
 <p>
 Enjoy a more personal way to explore the Red Sea with a private boat
 or yacht arrangement. This option is suitable for families, couples,
@@ -486,146 +453,114 @@ the trip may focus on cruising, swimming, snorkeling or simply enjoying
 time on the water. Any requested stops and services should be confirmed
 before the trip.
 </p>
-
-<div class="tour-story" id="tour-story-private-boat-yacht-trips" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">Your group steps aboard, the engine settles into a soft rhythm and the coastline begins to drift past. With a private arrangement, the day can be shaped around what matters to you: cruising, swimming, snorkeling or simply sharing time at sea.</p>
-  <p data-story-text="de" hidden>Ihre Gruppe geht an Bord, der Motor findet seinen ruhigen Rhythmus und die Küste zieht langsam vorbei. Bei einer privaten Tour lässt sich der Tag nach Ihren Wünschen gestalten: mit einer Fahrt entlang der Küste, Schwimmen, Schnorcheln oder einfach gemeinsamer Zeit auf dem Meer.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Private routes, vessel type, included services and permitted stops are subject to availability, safety rules and prior confirmation.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Request a Private Trip</a><a class="details-link" href="#tour-story-private-boat-yacht-trips">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Request a Private Trip</a><a class="details-link" href="#tour-private-boat---yacht-trips">View Tour Details</a></div>
 </div>
 </article>
-
 </div>
 </section>
-
-
-
 <!-- ORANGE BAY FULL STORY AND PHOTO GALLERY -->
-<section class="orange-bay-story category-section" id="orange-bay-details" data-category-section="islands">
+<section class="orange-bay-story category-section" data-category-section="islands" id="orange-bay-details">
 <div class="container orange-bay-wrap">
-
-  <div class="orange-bay-hero">
-    <div class="orange-bay-hero-content">
-      <span class="orange-bay-kicker">A Giftun Island Escape · Hurghada, Egypt</span>
-      <h2>Orange Bay</h2>
-      <p>Where the Red Sea Whispers, and Time Slows Down. A day of turquoise horizons, warm sand and moments you will wish could last a little longer.</p>
-    </div>
-  </div>
-
-  <div class="orange-bay-intro">
-    <div class="orange-bay-label">The Island Story</div>
-    <h2 class="orange-bay-heading">A Journey to a Different World</h2>
-    <p>Imagine leaving the busy streets of Hurghada behind. The sound of the city slowly fades as your boat glides across the beautiful Red Sea. The breeze touches your face, sunlight dances across the water, and somewhere ahead a bright sandy shoreline is waiting for you.</p>
-    <p>Welcome to Orange Bay, a well-known beach destination on Giftun Island, off the coast of Hurghada. Here, the sea shifts between beautiful shades of blue and turquoise, while the shoreline invites you to slow down, breathe deeply and enjoy the moment.</p>
-  </div>
-
-  <div class="orange-bay-two-col">
-    <div>
-      <div class="orange-bay-label">More Than a View</div>
-      <h3>More Than a Beautiful Photograph</h3>
-      <p>Orange Bay is more than a beautiful photograph. It is a day made of little moments that become lasting memories. Walk along the pier, look into the clear water, feel the warm sand and take in the open sea around you.</p>
-      <p>Find a quiet place to relax, enjoy the sunshine or step into the water where swimming is permitted and conditions are suitable. The simple pleasure of being beside the Red Sea is what makes an island day feel special.</p>
-    </div>
-    <div class="orange-bay-quote">“Sometimes the best journeys are not about going far away. They are about finding a place where you can slow down, breathe deeply and enjoy being there.”</div>
-  </div>
-
-  <div class="orange-bay-two-col">
-    <div>
-      <div class="orange-bay-label">Beneath the Surface</div>
-      <h3>Discover the Underwater World</h3>
-      <p>The waters around Giftun Island are part of the remarkable Red Sea marine environment. Many boat excursions include snorkeling stops, offering guests a chance to discover coral formations and observe marine life from the water's surface.</p>
-      <p>Whether it is your first snorkeling experience or one of many, take your time, use the appropriate equipment and follow the crew's safety instructions and local reef-protection guidance.</p>
-    </div>
-    <div>
-      <div class="orange-bay-label">Made for Shared Memories</div>
-      <h3>A Day for Everyone</h3>
-      <p>Come with family and enjoy a day together. Come with friends and fill the hours with laughter. Come as a couple and enjoy the sea views, or simply give yourself a little time away from everyday routines.</p>
-      <p>Take photographs, enjoy the beach, explore the water and let the rhythm of the island replace the rush of daily life. The best part is often the feeling of having nowhere else you need to be.</p>
-    </div>
-  </div>
-
-  <div class="orange-bay-gallery-head">
-    <div class="orange-bay-label">The Orange Bay Experience</div>
-    <h2 class="orange-bay-heading">Why Visit Orange Bay?</h2>
-    <p>Beautiful scenery, time by the sea and the chance to make your own island memories.</p>
-  </div>
-
-  <div class="orange-bay-features">
-    <div class="orange-bay-feature"><h4>Turquoise Sea Views</h4><p>Enjoy the changing colours of the Red Sea and the clear water around the island.</p></div>
-    <div class="orange-bay-feature"><h4>Sandy Beach Time</h4><p>Relax by the shoreline, feel the warm sand and enjoy the island atmosphere.</p></div>
-    <div class="orange-bay-feature"><h4>Snorkeling Opportunities</h4><p>Discover the underwater environment at snorkeling stops when included and conditions allow.</p></div>
-    <div class="orange-bay-feature"><h4>Photo-Worthy Moments</h4><p>Capture the sea, the beach and the little moments that make the day memorable.</p></div>
-    <div class="orange-bay-feature"><h4>Time to Unwind</h4><p>Take a break from the everyday and enjoy a slower pace beside the water.</p></div>
-    <div class="orange-bay-feature"><h4>Memories Together</h4><p>Share a special day with family, friends or someone important to you.</p></div>
-  </div>
-
-  <div class="orange-bay-gallery-head">
-    <div class="orange-bay-label">A Closer Look</div>
-    <h2 class="orange-bay-heading">Moments from Orange Bay</h2>
-    <p>Explore our photo collection. Select any image to open it in a larger view.</p>
-  </div>
-
-  <div class="orange-bay-gallery">
-    <button type="button" aria-label="Enlarge Orange Bay photo 1"><img src="assets/images/IMG-20261117-WA0011.jpg" alt="Orange Bay and Red Sea island scenery, photo 1" loading="lazy"></button>
-    <button type="button" aria-label="Enlarge Orange Bay photo 2"><img src="assets/images/IMG-20261117-WA0012.jpg" alt="Orange Bay and Red Sea island scenery, photo 2" loading="lazy"></button>
-    <button type="button" aria-label="Enlarge Orange Bay photo 3"><img src="assets/images/IMG-20261117-WA0013(1).jpg" alt="Orange Bay and Red Sea island scenery, photo 3" loading="lazy"></button>
-    <button type="button" aria-label="Enlarge Orange Bay photo 4"><img src="assets/images/IMG-20261117-WA0013.jpg" alt="Orange Bay and Red Sea island scenery, photo 4" loading="lazy"></button>
-    <button type="button" aria-label="Enlarge Orange Bay photo 5"><img src="assets/images/IMG-20261117-WA0014.jpg" alt="Orange Bay and Red Sea island scenery, photo 5" loading="lazy"></button>
-    <button type="button" aria-label="Enlarge Orange Bay photo 6"><img src="assets/images/IMG-20261117-WA0015(1).jpg" alt="Orange Bay and Red Sea island scenery, photo 6" loading="lazy"></button>
-    <button type="button" aria-label="Enlarge Orange Bay photo 7"><img src="assets/images/IMG-20261117-WA0015.jpg" alt="Orange Bay and Red Sea island scenery, photo 7" loading="lazy"></button>
-    <button type="button" aria-label="Enlarge Orange Bay photo 8"><img src="assets/images/IMG-20261117-WA0016.jpg" alt="Orange Bay and Red Sea island scenery, photo 8" loading="lazy"></button>
-    <button type="button" aria-label="Enlarge Orange Bay photo 9"><img src="assets/images/IMG-20261117-WA0017(1).jpg" alt="Orange Bay and Red Sea island scenery, photo 9" loading="lazy"></button>
-    <button type="button" aria-label="Enlarge Orange Bay photo 10"><img src="assets/images/IMG-20261117-WA0017.jpg" alt="Orange Bay and Red Sea island scenery, photo 10" loading="lazy"></button>
-    <button type="button" aria-label="Enlarge Orange Bay photo 11"><img src="assets/images/IMG-20261117-WA0018.jpg" alt="Orange Bay and Red Sea island scenery, photo 11" loading="lazy"></button>
-  </div>
-
-  <div class="orange-bay-faq">
-    <div class="orange-bay-label">Plan Your Visit</div>
-    <h2 class="orange-bay-heading">Orange Bay – Frequently Asked Questions</h2>
-    <details><summary>Where is Orange Bay located?</summary><p>Orange Bay is a popular beach destination on Giftun Island, off the coast of Hurghada in the Red Sea, Egypt.</p></details>
-    <details><summary>How do visitors get to Orange Bay?</summary><p>Visitors usually reach the island by boat from Hurghada as part of an organised sea excursion.</p></details>
-    <details><summary>Can I go snorkeling during the trip?</summary><p>Many boat excursions include snorkeling stops. The exact programme and locations depend on the selected trip, local rules and sea conditions.</p></details>
-    <details><summary>Is Orange Bay suitable for families?</summary><p>It can be an enjoyable day out for families. Children must always be supervised near the water and everyone should follow the crew's safety guidance.</p></details>
-    <details><summary>What should I bring?</summary><p>Consider bringing swimwear, a towel, sunscreen, sunglasses, a hat and a camera or phone for photographs. Check any trip-specific advice before departure.</p></details>
-    <details><summary>Is the trip programme always the same?</summary><p>No. Boat schedules, activities, snorkeling stops and time on the island can vary according to the selected excursion, weather, sea conditions and operator arrangements.</p></details>
-  </div>
-
-  <div class="orange-bay-final-quote">
-    <h3>Take the Feeling Home With You</h3>
-    <p>And when the time comes to sail back to Hurghada, you may find yourself looking over your shoulder, wishing the day could last a little longer. Orange Bay is not just a place you visit. It is a feeling you take home with you.</p>
-    <a href="booking.html">Ask About the Orange Bay Trip</a>
-  </div>
-
+<div class="orange-bay-hero">
+<div class="orange-bay-hero-content">
+<span class="orange-bay-kicker">A Giftun Island Escape · Hurghada, Egypt</span>
+<h2>Orange Bay</h2>
+<p>Where the Red Sea Whispers, and Time Slows Down. A day of turquoise horizons, warm sand and moments you will wish could last a little longer.</p>
+</div>
+</div>
+<div class="orange-bay-intro">
+<div class="orange-bay-label">The Island Story</div>
+<h2 class="orange-bay-heading">A Journey to a Different World</h2>
+<p>Imagine leaving the busy streets of Hurghada behind. The sound of the city slowly fades as your boat glides across the beautiful Red Sea. The breeze touches your face, sunlight dances across the water, and somewhere ahead a bright sandy shoreline is waiting for you.</p>
+<p>Welcome to Orange Bay, a well-known beach destination on Giftun Island, off the coast of Hurghada. Here, the sea shifts between beautiful shades of blue and turquoise, while the shoreline invites you to slow down, breathe deeply and enjoy the moment.</p>
+</div>
+<div class="orange-bay-two-col">
+<div>
+<div class="orange-bay-label">More Than a View</div>
+<h3>More Than a Beautiful Photograph</h3>
+<p>Orange Bay is more than a beautiful photograph. It is a day made of little moments that become lasting memories. Walk along the pier, look into the clear water, feel the warm sand and take in the open sea around you.</p>
+<p>Find a quiet place to relax, enjoy the sunshine or step into the water where swimming is permitted and conditions are suitable. The simple pleasure of being beside the Red Sea is what makes an island day feel special.</p>
+</div>
+<div class="orange-bay-quote">“Sometimes the best journeys are not about going far away. They are about finding a place where you can slow down, breathe deeply and enjoy being there.”</div>
+</div>
+<div class="orange-bay-two-col">
+<div>
+<div class="orange-bay-label">Beneath the Surface</div>
+<h3>Discover the Underwater World</h3>
+<p>The waters around Giftun Island are part of the remarkable Red Sea marine environment. Many boat excursions include snorkeling stops, offering guests a chance to discover coral formations and observe marine life from the water's surface.</p>
+<p>Whether it is your first snorkeling experience or one of many, take your time, use the appropriate equipment and follow the crew's safety instructions and local reef-protection guidance.</p>
+</div>
+<div>
+<div class="orange-bay-label">Made for Shared Memories</div>
+<h3>A Day for Everyone</h3>
+<p>Come with family and enjoy a day together. Come with friends and fill the hours with laughter. Come as a couple and enjoy the sea views, or simply give yourself a little time away from everyday routines.</p>
+<p>Take photographs, enjoy the beach, explore the water and let the rhythm of the island replace the rush of daily life. The best part is often the feeling of having nowhere else you need to be.</p>
+</div>
+</div>
+<div class="tour-feature-video"><h3>Orange Bay Video Experience</h3><video controls="" playsinline="" poster="assets/images/IMG-20261117-WA0011.jpg" preload="metadata"><source src="assets/videos/Orange.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><p class="tour-video-caption">A video from the Orange Bay collection.</p></div><div class="orange-bay-gallery-head">
+<div class="orange-bay-label">The Orange Bay Experience</div>
+<h2 class="orange-bay-heading">Why Visit Orange Bay?</h2>
+<p>Beautiful scenery, time by the sea and the chance to make your own island memories.</p>
+</div>
+<div class="orange-bay-features">
+<div class="orange-bay-feature"><h4>Turquoise Sea Views</h4><p>Enjoy the changing colours of the Red Sea and the clear water around the island.</p></div>
+<div class="orange-bay-feature"><h4>Sandy Beach Time</h4><p>Relax by the shoreline, feel the warm sand and enjoy the island atmosphere.</p></div>
+<div class="orange-bay-feature"><h4>Snorkeling Opportunities</h4><p>Discover the underwater environment at snorkeling stops when included and conditions allow.</p></div>
+<div class="orange-bay-feature"><h4>Photo-Worthy Moments</h4><p>Capture the sea, the beach and the little moments that make the day memorable.</p></div>
+<div class="orange-bay-feature"><h4>Time to Unwind</h4><p>Take a break from the everyday and enjoy a slower pace beside the water.</p></div>
+<div class="orange-bay-feature"><h4>Memories Together</h4><p>Share a special day with family, friends or someone important to you.</p></div>
+</div>
+<div class="orange-bay-gallery-head">
+<div class="orange-bay-label">A Closer Look</div>
+<h2 class="orange-bay-heading">Moments from Orange Bay</h2>
+<p>Explore our photo collection. Select any image to open it in a larger view.</p>
+</div>
+<div class="orange-bay-gallery">
+<button aria-label="Enlarge Orange Bay photo 1" type="button"><img alt="Orange Bay and Red Sea island scenery, photo 1" loading="lazy" src="assets/images/IMG-20261117-WA0011.jpg"/></button>
+<button aria-label="Enlarge Orange Bay photo 2" type="button"><img alt="Orange Bay and Red Sea island scenery, photo 2" loading="lazy" src="assets/images/IMG-20261117-WA0012.jpg"/></button>
+<button aria-label="Enlarge Orange Bay photo 3" type="button"><img alt="Orange Bay and Red Sea island scenery, photo 3" loading="lazy" src="assets/images/IMG-20261117-WA0013(1).jpg"/></button>
+<button aria-label="Enlarge Orange Bay photo 4" type="button"><img alt="Orange Bay and Red Sea island scenery, photo 4" loading="lazy" src="assets/images/IMG-20261117-WA0013.jpg"/></button>
+<button aria-label="Enlarge Orange Bay photo 5" type="button"><img alt="Orange Bay and Red Sea island scenery, photo 5" loading="lazy" src="assets/images/IMG-20261117-WA0014.jpg"/></button>
+<button aria-label="Enlarge Orange Bay photo 6" type="button"><img alt="Orange Bay and Red Sea island scenery, photo 6" loading="lazy" src="assets/images/IMG-20261117-WA0015(1).jpg"/></button>
+<button aria-label="Enlarge Orange Bay photo 7" type="button"><img alt="Orange Bay and Red Sea island scenery, photo 7" loading="lazy" src="assets/images/IMG-20261117-WA0015.jpg"/></button>
+<button aria-label="Enlarge Orange Bay photo 8" type="button"><img alt="Orange Bay and Red Sea island scenery, photo 8" loading="lazy" src="assets/images/IMG-20261117-WA0016.jpg"/></button>
+<button aria-label="Enlarge Orange Bay photo 9" type="button"><img alt="Orange Bay and Red Sea island scenery, photo 9" loading="lazy" src="assets/images/IMG-20261117-WA0017(1).jpg"/></button>
+<button aria-label="Enlarge Orange Bay photo 10" type="button"><img alt="Orange Bay and Red Sea island scenery, photo 10" loading="lazy" src="assets/images/IMG-20261117-WA0017.jpg"/></button>
+<button aria-label="Enlarge Orange Bay photo 11" type="button"><img alt="Orange Bay and Red Sea island scenery, photo 11" loading="lazy" src="assets/images/IMG-20261117-WA0018.jpg"/></button>
+</div>
+<div class="orange-bay-faq">
+<div class="orange-bay-label">Plan Your Visit</div>
+<h2 class="orange-bay-heading">Orange Bay – Frequently Asked Questions</h2>
+<details><summary>Where is Orange Bay located?</summary><p>Orange Bay is a popular beach destination on Giftun Island, off the coast of Hurghada in the Red Sea, Egypt.</p></details>
+<details><summary>How do visitors get to Orange Bay?</summary><p>Visitors usually reach the island by boat from Hurghada as part of an organised sea excursion.</p></details>
+<details><summary>Can I go snorkeling during the trip?</summary><p>Many boat excursions include snorkeling stops. The exact programme and locations depend on the selected trip, local rules and sea conditions.</p></details>
+<details><summary>Is Orange Bay suitable for families?</summary><p>It can be an enjoyable day out for families. Children must always be supervised near the water and everyone should follow the crew's safety guidance.</p></details>
+<details><summary>What should I bring?</summary><p>Consider bringing swimwear, a towel, sunscreen, sunglasses, a hat and a camera or phone for photographs. Check any trip-specific advice before departure.</p></details>
+<details><summary>Is the trip programme always the same?</summary><p>No. Boat schedules, activities, snorkeling stops and time on the island can vary according to the selected excursion, weather, sea conditions and operator arrangements.</p></details>
+</div>
+<div class="orange-bay-final-quote">
+<h3>Take the Feeling Home With You</h3>
+<p>And when the time comes to sail back to Hurghada, you may find yourself looking over your shoulder, wishing the day could last a little longer. Orange Bay is not just a place you visit. It is a feeling you take home with you.</p>
+<a href="booking.html">Ask About the Orange Bay Trip</a>
+</div>
 </div>
 </section>
-
-<div class="orange-bay-lightbox" id="orangeBayLightbox" role="dialog" aria-modal="true" aria-label="Orange Bay photo viewer">
-  <button class="orange-bay-lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
-  <img src="" alt="">
-  <div class="orange-bay-lightbox-caption"></div>
+<div aria-label="Orange Bay photo viewer" aria-modal="true" class="orange-bay-lightbox" id="orangeBayLightbox" role="dialog">
+<button aria-label="Close image viewer" class="orange-bay-lightbox-close" type="button">×</button>
+<img alt="" src=""/>
+<div class="orange-bay-lightbox-caption"></div>
 </div>
 <!-- END ORANGE BAY FULL STORY -->
-
-
 <!-- SNORKELING AND DIVING -->
 <section class="category-section" data-category-section="diving">
 <div class="category-heading">
-<h2>Snorkeling & Diving Adventures</h2>
+<h2>Snorkeling &amp; Diving Adventures</h2>
 <p>Explore coral gardens, colourful fish and the underwater world of the Red Sea. Marine life sightings and underwater conditions are natural and cannot be guaranteed.</p>
 </div>
-
 <div class="tours-grid">
-
-<article class="tour-card" data-category="diving">
-<img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1100&q=85" alt="Snorkeling and swimming in clear Red Sea water" loading="lazy">
+<article class="tour-card" data-category="diving" id="tour-red-sea-snorkeling-trip">
+<img alt="Snorkeling and swimming in clear Red Sea water" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Snorkeling</div>
 <h3>Red Sea Snorkeling Trip</h3>
@@ -651,25 +586,12 @@ and safety guidance before entering the water. Time in the water depends
 on individual comfort, weather and sea conditions. The experience may
 also include time on the boat to relax and enjoy the surroundings.
 </p>
-
-<div class="tour-story" id="tour-story-red-sea-snorkeling-trip" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">You float quietly above a reef, watching sunlight break into moving patterns beneath you. Small fish appear between coral shapes, and for a moment the busy world above the surface feels very far away. Every reef has its own natural character.</p>
-  <p data-story-text="de" hidden>Sie treiben ruhig über einem Riff und beobachten, wie das Sonnenlicht unter Ihnen bewegte Muster zeichnet. Kleine Fische erscheinen zwischen den Korallen, und für einen Moment scheint die geschäftige Welt weit entfernt. Jedes Riff besitzt seinen eigenen natürlichen Charakter.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Marine life, visibility, coral conditions and the number of snorkeling stops vary naturally. Guests should follow crew instructions and reef-protection guidance.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-red-sea-snorkeling-trip">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-red-sea-snorkeling-trip">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="diving">
-<img src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1100&q=85" alt="Colourful underwater coral reef" loading="lazy">
+<article class="tour-card" data-category="diving" id="tour-discover-scuba-diving">
+<img alt="Colourful underwater coral reef" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Scuba Diving</div>
 <h3>Discover Scuba Diving</h3>
@@ -695,25 +617,12 @@ are introduced to the equipment and receive guidance before the dive.
 The dive location, depth, supervision and format depend on the dive
 centre's standards, participant suitability and sea conditions.
 </p>
-
-<div class="tour-story" id="tour-story-discover-scuba-diving" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">After the briefing, you take a careful first breath through the regulator and descend with your instructor into a quieter world. The surface sounds fade, bubbles rise beside you, and the reef reveals itself one detail at a time.</p>
-  <p data-story-text="de" hidden>Nach der Einweisung atmen Sie zum ersten Mal ruhig durch den Atemregler und tauchen gemeinsam mit Ihrem Tauchlehrer in eine stillere Welt hinab. Die Geräusche der Oberfläche verklingen, Blasen steigen neben Ihnen auf und das Riff zeigt sich Schritt für Schritt.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">This is an introductory experience, not a professional certification. Medical suitability and dive-centre requirements must be checked before participation.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-discover-scuba-diving">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-discover-scuba-diving">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="diving">
-<img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=1100&q=85" alt="Scuba diver exploring an underwater reef" loading="lazy">
+<article class="tour-card" data-category="diving" id="tour-daily-diving-for-certified-divers">
+<img alt="Scuba diver exploring an underwater reef" loading="lazy" src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Certified Diving</div>
 <h3>Daily Diving for Certified Divers</h3>
@@ -739,27 +648,14 @@ covers the site, conditions, entry and exit procedures and safety
 requirements. The dive plan is determined by the professional team
 according to conditions and diver qualifications.
 </p>
-
-<div class="tour-story" id="tour-story-daily-diving-for-certified-divers" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">The boat reaches a selected dive site and the familiar pre-dive routine begins: equipment check, buddy check and a final look at the water. Then the descent opens a new chapter, with each certified diver exploring at a pace suited to the plan and conditions.</p>
-  <p data-story-text="de" hidden>Das Boot erreicht einen ausgewählten Tauchplatz und die vertraute Vorbereitung beginnt: Ausrüstung prüfen, Buddy-Check und ein letzter Blick aufs Wasser. Dann eröffnet der Abstieg ein neues Kapitel, in dem zertifizierte Taucher den Tauchgang passend zum Plan und zu den Bedingungen erleben.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Dive sites, depth, number of dives and marine-life encounters are not guaranteed and depend on certification, conditions and operator approval.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-daily-diving-for-certified-divers">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-daily-diving-for-certified-divers">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="diving">
-<img src="https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=1100&q=85" alt="Dolphins swimming in the sea" loading="lazy">
+<article class="tour-card" data-category="diving" id="tour-dolphin-house-snorkeling">
+<img alt="Dolphins swimming in the sea" loading="lazy" src="https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
-<div class="card-category">Wildlife & Sea Trip</div>
+<div class="card-category">Wildlife &amp; Sea Trip</div>
 <h3>Dolphin House Snorkeling</h3>
 <p>
 Explore the Red Sea around the area commonly known as Dolphin House,
@@ -783,25 +679,12 @@ take place respectfully and according to applicable rules. Snorkeling
 may be offered at suitable permitted sites, depending on conditions
 and the operator's arrangement.
 </p>
-
-<div class="tour-story" id="tour-story-dolphin-house-snorkeling" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">On the way to the offshore area, everyone watches the horizon with quiet excitement. Dolphins may appear in their natural environment, but they choose their own path; the real story is learning to observe respectfully and enjoying the open sea either way.</p>
-  <p data-story-text="de" hidden>Auf dem Weg zum vorgelagerten Gebiet richtet sich so mancher Blick voller Vorfreude auf den Horizont. Delfine können in ihrer natürlichen Umgebung auftauchen, doch sie bestimmen selbst ihren Weg. Das Besondere ist, sie respektvoll zu beobachten und so oder so das offene Meer zu genießen.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Dolphins are wild animals. Sightings, swimming opportunities and close encounters cannot be guaranteed. Wildlife must never be chased, touched or disturbed.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-dolphin-house-snorkeling">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-dolphin-house-snorkeling">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="diving">
-<img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=1100&q=85" alt="Red Sea boat and clear blue water" loading="lazy">
+<article class="tour-card" data-category="diving" id="tour-dolphin-watching-boat-trip">
+<img alt="Red Sea boat and clear blue water" loading="lazy" src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Marine Excursion</div>
 <h3>Dolphin Watching Boat Trip</h3>
@@ -826,28 +709,15 @@ conditions and wildlife guidance. Guests can enjoy the sea views
 and watch for marine life from the boat. Any additional water activity
 depends on the selected package and the conditions at the location.
 </p>
-
-<div class="tour-story" id="tour-story-dolphin-watching-boat-trip" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">A fin breaks the surface in the distance, then disappears as quickly as it came. The boat keeps a respectful distance while guests watch the horizon, hoping for another glimpse. Wildlife encounters are never guaranteed, which makes every sighting a gift.</p>
-  <p data-story-text="de" hidden>In der Ferne durchbricht eine Rückenflosse die Wasseroberfläche und verschwindet so schnell, wie sie gekommen ist. Das Boot hält respektvollen Abstand, während die Gäste den Horizont beobachten. Begegnungen mit Wildtieren sind nie garantiert – gerade deshalb ist jede Sichtung ein Geschenk.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Wildlife sightings are never guaranteed. The crew should follow local rules and responsible wildlife-watching practices.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-dolphin-watching-boat-trip">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-dolphin-watching-boat-trip">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="diving">
-<img src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1100&q=85" alt="Underwater coral and marine environment" loading="lazy">
+<article class="tour-card" data-category="diving" id="tour-glass-bottom-boat---semi-submarine">
+<img alt="Underwater coral and marine environment" loading="lazy" src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Family Sea Experience</div>
-<h3>Glass-Bottom Boat & Semi-Submarine</h3>
+<h3>Glass-Bottom Boat &amp; Semi-Submarine</h3>
 <p>
 Discover underwater scenery without needing to swim or dive.
 A glass-bottom boat or semi-submarine experience allows guests
@@ -869,37 +739,32 @@ The underwater viewing section depends on the boat design and
 operating conditions. Visibility and marine-life observations vary
 naturally according to weather, water clarity and location.
 </p>
-
-<div class="tour-story" id="tour-story-glass-bottom-boat-semi-submarine" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">You settle beside the viewing window as the boat moves over the reef. Without putting on a mask or entering the water, you can watch the underwater landscape pass below: coral forms, shifting light and fish moving through their natural habitat.</p>
-  <p data-story-text="de" hidden>Sie nehmen am Sichtfenster Platz, während das Boot über das Riff fährt. Ohne Maske und ohne ins Wasser zu steigen, beobachten Sie die Unterwasserlandschaft: Korallenformen, wechselndes Licht und Fische in ihrem natürlichen Lebensraum.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">The type of vessel, viewing arrangements and route depend on the selected operator and availability.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-glass-bottom-boat-semi-submarine">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-glass-bottom-boat---semi-submarine">View Tour Details</a></div>
 </div>
-</article>
-
+</article><article class="tour-card" data-category="diving" id="tour-abu-dabbab-bay">
+<img alt="Snorkeling in clear Red Sea water" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<div class="card-content">
+<div class="card-category">Snorkeling &amp; Wildlife</div>
+<h3>Abu Dabbab Bay</h3>
+<p>Discover the famous bay near Marsa Alam, known for its seagrass habitat and opportunities to observe marine life. Sightings of turtles or dugongs are never guaranteed and depend on nature and conditions.</p>
+<h4>Experience Highlights</h4>
+<ul><li>Explore a beautiful Red Sea bay and its coastal scenery.</li><li>Snorkeling in permitted areas, subject to sea conditions.</li><li>Respectful wildlife watching without touching or disturbing animals.</li></ul>
+<div class="note">Wildlife sightings cannot be promised. Follow local guides and protected-area rules.</div>
+<details class="tour-media" id="media-abu-dabbab-bay"><summary><strong>Watch the Abu Dabbab Video</strong></summary><div class="tour-video-grid"><div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/Abo%20Dabbab%20.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Abu Dabbab video</div></div></div></details>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-abu-dabbab-bay">View Photos &amp; Videos</a></div>
+</div></article>
 </div>
 </section>
-
 <!-- WATER SPORTS -->
 <section class="category-section" data-category-section="watersports">
 <div class="category-heading">
-<h2>Water Sports & Active Experiences</h2>
+<h2>Water Sports &amp; Active Experiences</h2>
 <p>Enjoy action on the water, from relaxing paddle activities to exciting rides. Activities are subject to safety instructions, weather and operator availability.</p>
 </div>
-
 <div class="tours-grid">
-
-<article class="tour-card" data-category="watersports">
-<img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=85" alt="Parasailing over the sea" loading="lazy">
+<article class="tour-card" data-category="watersports" id="tour-parasailing">
+<img alt="Parasailing over the sea" loading="lazy" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Aerial Water Adventure</div>
 <h3>Parasailing</h3>
@@ -923,28 +788,15 @@ participants use the equipment. The flight arrangement is managed
 by the specialised crew and depends on wind, visibility, equipment
 and operational conditions.
 </p>
-
-<div class="tour-story" id="tour-story-parasailing" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">The shoreline grows smaller as the parachute catches the breeze and lifts you above the water. For a few peaceful minutes, Hurghada becomes a panorama of sea, boats and coastline, seen from a perspective usually reserved for birds.</p>
-  <p data-story-text="de" hidden>Die Küste wird kleiner, als sich der Fallschirm im Wind füllt und Sie über das Wasser hebt. Für einige ruhige Minuten wird Hurghada zu einem Panorama aus Meer, Booten und Küste – aus einer Perspektive, die sonst den Vögeln vorbehalten scheint.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Participation requirements, passenger limits and operating conditions must be confirmed with the provider. Weather may affect availability.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-parasailing">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-parasailing">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="watersports">
-<img src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1100&q=85" alt="Water sports and clear sea environment" loading="lazy">
+<article class="tour-card" data-category="watersports" id="tour-banana-boat---sofa-ride">
+<img alt="Water sports and clear sea environment" loading="lazy" src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Fun Water Ride</div>
-<h3>Banana Boat & Sofa Ride</h3>
+<h3>Banana Boat &amp; Sofa Ride</h3>
 <p>
 Share a fun water activity with friends or family on an inflatable
 ride pulled by a motorboat. Banana boat and sofa rides are popular
@@ -965,25 +817,12 @@ according to the selected activity and safety conditions. The
 experience is adjusted to the operator's rules and participants'
 suitability.
 </p>
-
-<div class="tour-story" id="tour-story-banana-boat-sofa-ride" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">The boat gathers speed and the inflatable ride bounces over the small waves. Laughter travels across the water as everyone holds on and enjoys the splashy excitement. It is a short, energetic break that turns a beach day into a shared adventure.</p>
-  <p data-story-text="de" hidden>Das Boot nimmt Fahrt auf und das aufblasbare Fahrgerät hüpft über die kleinen Wellen. Lachen klingt über das Wasser, während sich alle gut festhalten und den spritzigen Spaß genießen. Ein kurzer, energiegeladener Moment, der aus einem Strandtag ein gemeinsames Abenteuer macht.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Ride type, participant limits and operating conditions depend on the provider. Follow all crew instructions.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-banana-boat-sofa-ride">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-banana-boat---sofa-ride">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="watersports">
-<img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=85" alt="Jet ski adventure on open water" loading="lazy">
+<article class="tour-card" data-category="watersports" id="tour-jet-ski-adventure">
+<img alt="Jet ski adventure on open water" loading="lazy" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Motorised Water Sport</div>
 <h3>Jet Ski Adventure</h3>
@@ -1006,27 +845,14 @@ about how to operate the watercraft. The provider explains the
 permitted area and any supervision requirements. The ride takes
 place according to local rules and sea conditions.
 </p>
-
-<div class="tour-story" id="tour-story-jet-ski-adventure" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">The engine comes alive and the open water stretches ahead. With the safety briefing complete and the permitted route clear, you feel the spray, steer across the waves and enjoy the freedom of the sea at a controlled pace.</p>
-  <p data-story-text="de" hidden>Der Motor erwacht zum Leben und vor Ihnen liegt das offene Wasser. Nach der Sicherheitseinweisung und mit klarer Route spüren Sie die Gischt, steuern über die Wellen und genießen die Freiheit des Meeres in kontrolliertem Tempo.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Age limits, licence requirements, supervision, riding area and equipment conditions must be confirmed with the operator.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-jet-ski-adventure">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-jet-ski-adventure">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="watersports">
-<img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=85" alt="Windsurfing on the sea" loading="lazy">
+<article class="tour-card" data-category="watersports" id="tour-windsurfing">
+<img alt="Windsurfing on the sea" loading="lazy" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
-<div class="card-category">Wind & Water Sport</div>
+<div class="card-category">Wind &amp; Water Sport</div>
 <h3>Windsurfing</h3>
 <p>
 Combine sailing and board skills in a windsurfing experience.
@@ -1047,27 +873,14 @@ of wind direction, balance and basic movement. Beginners can receive
 guidance before practising in the water. The format depends on the
 participant's experience and the conditions.
 </p>
-
-<div class="tour-story" id="tour-story-windsurfing" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">At first, the sail feels unfamiliar in your hands. Then the wind catches it, the board begins to glide and the balance starts to make sense. Each small improvement brings a new feeling of connection with the breeze and water.</p>
-  <p data-story-text="de" hidden>Zunächst fühlt sich das Segel in Ihren Händen ungewohnt an. Dann greift der Wind hinein, das Brett beginnt zu gleiten und das Gleichgewicht wird verständlicher. Jeder kleine Fortschritt bringt ein neues Gefühl für Wind und Wasser.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Suitable wind conditions, equipment and instructor availability are necessary. The activity may be adjusted or postponed for safety.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-windsurfing">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-windsurfing">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="watersports">
-<img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=85" alt="Kitesurfing in the Red Sea" loading="lazy">
+<article class="tour-card" data-category="watersports" id="tour-kitesurfing">
+<img alt="Kitesurfing on the Red Sea" loading="lazy" src="assets/images/Kitesurfing3.jpeg"/>
 <div class="card-content">
-<div class="card-category">Wind & Water Sport</div>
+<div class="card-category">Wind &amp; Water Sport</div>
 <h3>Kitesurfing</h3>
 <p>
 Discover the combination of wind power and board riding in a
@@ -1089,28 +902,26 @@ and safety procedures. Beginners may start with introductory
 training before progressing according to their ability. Experienced
 riders can discuss suitable arrangements with the centre.
 </p>
-
-<div class="tour-story" id="tour-story-kitesurfing" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">You watch the kite rise and feel the pull of the wind through the control bar. With instruction and suitable conditions, the first controlled movements become a conversation between kite, board and sea – a challenge that rewards patience.</p>
-  <p data-story-text="de" hidden>Sie beobachten, wie der Kite aufsteigt, und spüren den Zug des Windes an der Bar. Mit Anleitung und passenden Bedingungen werden die ersten kontrollierten Bewegungen zu einem Zusammenspiel aus Kite, Board und Meer – eine Herausforderung, die Geduld belohnt.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Kitesurfing depends strongly on wind conditions, instructor availability and participant ability. No specific learning outcome is guaranteed.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-kitesurfing">Read the Story</a></div>
+<details class="tour-media" id="media-kitesurfing">
+<summary><strong>View Kitesurfing Photos &amp; Videos</strong></summary>
+<p>Real Kitesurfing photographs and video clips uploaded for this experience.</p>
+<div class="tour-media-grid">
+<img alt="Kitesurfing photo" loading="lazy" src="assets/images/Kitesurfing3.jpeg"/>
+<img alt="Kitesurfing photo" loading="lazy" src="assets/images/Kitesurfing4.jpeg"/>
+</div>
+<div class="tour-video-grid">
+<div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/Kitesurfing1.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Kitesurfing video 1</div></div>
+<div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/Kitesurfing2.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Kitesurfing video 2</div></div>
+</div>
+</details><div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-kitesurfing">View Photos &amp; Videos</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="watersports">
-<img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=85" alt="Paddleboarding on calm water" loading="lazy">
+<article class="tour-card" data-category="watersports" id="tour-stand-up-paddleboarding---kayaking">
+<img alt="Paddleboarding on calm water" loading="lazy" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Relaxed Water Sport</div>
-<h3>Stand-Up Paddleboarding & Kayaking</h3>
+<h3>Stand-Up Paddleboarding &amp; Kayaking</h3>
 <p>
 Enjoy a calmer way to explore the water with a paddleboard or kayak.
 These activities allow guests to move at their own pace while
@@ -1130,37 +941,21 @@ and safe movement on the water. The activity takes place in an
 area considered suitable by the provider. The experience can be
 adapted to the participant's comfort and ability.
 </p>
-
-<div class="tour-story" id="tour-story-stand-up-paddleboarding-kayaking" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">The water is calm enough to reflect the sky, and your board or kayak moves with each gentle stroke. Along the coast, the view changes slowly; you notice the small sounds of the sea and discover how rewarding an unhurried journey can be.</p>
-  <p data-story-text="de" hidden>Das Wasser ist ruhig genug, um den Himmel zu spiegeln, und Ihr Board oder Kajak bewegt sich mit jedem sanften Paddelschlag. Entlang der Küste verändert sich der Blick nur langsam. Sie hören die leisen Geräusche des Meeres und entdecken den Reiz einer entschleunigten Tour.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Equipment, activity area and conditions vary. Participants should follow the provider's safety advice.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-stand-up-paddleboarding-kayaking">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-stand-up-paddleboarding---kayaking">View Tour Details</a></div>
 </div>
 </article>
-
 </div>
 </section>
-
 <!-- DESERT -->
 <section class="category-section" data-category-section="desert">
 <div class="category-heading">
-<h2>Desert Safaris & Outdoor Adventures</h2>
+<h2>Desert Safaris &amp; Outdoor Adventures</h2>
 <p>Discover the desert landscapes around the Red Sea through off-road activities, traditional experiences and scenic viewpoints.</p>
 </div>
-
 <div class="tours-grid">
-
-<article class="tour-card" data-category="desert">
-<img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1100&q=85" alt="Desert dunes and mountain landscape" loading="lazy">
+<article class="tour-card" data-category="desert" id="tour-quad-bike-safari">
+<img alt="Desert dunes and mountain landscape" loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Desert Adventure</div>
 <h3>Quad Bike Safari</h3>
@@ -1185,25 +980,12 @@ instructions before riding along an approved desert route.
 The route and any stops are determined by the operator according
 to conditions and the group's suitability.
 </p>
-
-<div class="tour-story" id="tour-story-quad-bike-safari" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">The engine starts and the desert track leads away from the resort. Dust rises behind the group as the landscape opens into rocky hills and wide horizons. Guided riding turns the journey into an introduction to the desert beyond the coast.</p>
-  <p data-story-text="de" hidden>Der Motor springt an und die Piste führt vom Urlaubsort weg in die Wüste. Hinter der Gruppe steigt Staub auf, während sich die Landschaft zu felsigen Hügeln und weiten Horizonten öffnet. Die geführte Fahrt wird zu einer Begegnung mit der Wüste jenseits der Küste.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Riding requirements, age limits, route, equipment and supervision depend on the operator. Follow safety instructions at all times.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-quad-bike-safari">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-quad-bike-safari">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="desert">
-<img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=1100&q=85" alt="Desert jeep safari landscape" loading="lazy">
+<article class="tour-card" data-category="desert" id="tour-jeep-desert-safari">
+<img alt="Desert jeep safari landscape" loading="lazy" src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Off-Road Adventure</div>
 <h3>Jeep Desert Safari</h3>
@@ -1228,25 +1010,12 @@ desert area, followed by a guided drive through approved tracks.
 Depending on the selected arrangement, guests may visit a traditional
 setting or enjoy a scenic stop. The route and activities are flexible.
 </p>
-
-<div class="tour-story" id="tour-story-jeep-desert-safari" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">The road gives way to open desert, where the jeep follows a route through rugged scenery. The changing colours of stone and sand tell a quieter story than the busy coast, and each stop offers a chance to take in the vastness around you.</p>
-  <p data-story-text="de" hidden>Die Straße geht in offene Wüstenlandschaft über, während der Jeep einer Route durch raues Gelände folgt. Die wechselnden Farben von Stein und Sand erzählen eine ruhigere Geschichte als die belebte Küste. Jeder Halt bietet Gelegenheit, die Weite auf sich wirken zu lassen.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">The route, community visits, refreshments and any optional activities must be confirmed with the provider.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-jeep-desert-safari">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-jeep-desert-safari">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="desert">
-<img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1100&q=85" alt="Desert buggy adventure in sandy terrain" loading="lazy">
+<article class="tour-card" data-category="desert" id="tour-spider-buggy-safari">
+<img alt="Desert buggy adventure in sandy terrain" loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Motorised Desert Adventure</div>
 <h3>Spider Buggy Safari</h3>
@@ -1270,25 +1039,12 @@ operator's safety rules before departure. The buggy follows
 a route selected by the provider, with any stops depending
 on the conditions and the arrangement.
 </p>
-
-<div class="tour-story" id="tour-story-spider-buggy-safari" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">You climb into the buggy, fasten your seat belt and follow the guide onto the desert track. The ride brings turns, bumps and wide views, while the group moves together through the landscape at a pace set for safety and the terrain.</p>
-  <p data-story-text="de" hidden>Sie steigen in den Buggy, legen den Sicherheitsgurt an und folgen dem Guide auf die Wüstenpiste. Die Fahrt bietet Kurven, Unebenheiten und weite Ausblicke, während die Gruppe gemeinsam und dem Gelände sowie den Sicherheitsregeln entsprechend unterwegs ist.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Driver and passenger requirements, vehicle type and route vary by provider. Confirm the exact arrangement before booking.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-spider-buggy-safari">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-spider-buggy-safari">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="desert">
-<img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1100&q=85" alt="Desert landscape and mountain scenery" loading="lazy">
+<article class="tour-card" data-category="desert" id="tour-bedouin-village-experience">
+<img alt="Desert landscape and mountain scenery" loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Cultural Desert Experience</div>
 <h3>Bedouin Village Experience</h3>
@@ -1313,28 +1069,15 @@ learn about the setting and local traditions through explanations
 and interaction, depending on the host and the selected arrangement.
 Any refreshments or additional activities should be confirmed.
 </p>
-
-<div class="tour-story" id="tour-story-bedouin-village-experience" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">As the desert journey reaches a village visit, the pace becomes gentler. Guests may learn about local traditions, share tea and hear how life is shaped by the desert environment. The most meaningful moments begin with listening and respect.</p>
-  <p data-story-text="de" hidden>Wenn die Wüstenfahrt einen Dorfbesuch erreicht, wird das Tempo ruhiger. Gäste können lokale Traditionen kennenlernen, Tee teilen und erfahren, wie das Leben von der Wüstenumgebung geprägt wird. Die schönsten Begegnungen beginnen mit Zuhören und Respekt.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">The nature of the visit and included activities depend on the host community and the selected operator.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-bedouin-village-experience">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-bedouin-village-experience">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="desert">
-<img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=1100&q=85" alt="Desert sunset and mountain landscape" loading="lazy">
+<article class="tour-card" data-category="desert" id="tour-desert-sunset---stargazing">
+<img alt="Desert sunset and mountain landscape" loading="lazy" src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Outdoor Experience</div>
-<h3>Desert Sunset & Stargazing</h3>
+<h3>Desert Sunset &amp; Stargazing</h3>
 <p>
 Enjoy the peaceful atmosphere of the desert away from bright
 city lights. Depending on weather and visibility, the experience
@@ -1356,25 +1099,12 @@ time to enjoy the landscape and an opportunity to observe the
 sky after sunset. Weather, cloud cover, moonlight and visibility
 all affect what can be seen.
 </p>
-
-<div class="tour-story" id="tour-story-desert-sunset-stargazing" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">The sun lowers behind the distant hills and the desert changes from gold to deep evening shades. As the air cools, the sky gradually reveals its stars. Away from bright city lights, even a quiet pause can feel extraordinary.</p>
-  <p data-story-text="de" hidden>Die Sonne sinkt hinter den fernen Hügeln und die Wüste wechselt von Gold zu tiefen Abendfarben. Wenn die Luft kühler wird, zeigt der Himmel nach und nach seine Sterne. Fern der hellen Stadtlichter kann schon ein stiller Moment außergewöhnlich sein.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Sunset views and stargazing conditions depend on weather, visibility, season and location. No astronomical sighting is guaranteed.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-desert-sunset-stargazing">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-desert-sunset---stargazing">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="desert">
-<img src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&w=1100&q=85" alt="Horse riding in an outdoor landscape" loading="lazy">
+<article class="tour-card" data-category="desert" id="tour-horse-riding-experience">
+<img alt="Horse riding in an outdoor landscape" loading="lazy" src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Horse Riding</div>
 <h3>Horse Riding Experience</h3>
@@ -1398,39 +1128,23 @@ of the participant's experience. The riding team selects a
 suitable horse and explains basic safety instructions.
 The route and riding format depend on the centre and conditions.
 </p>
-
-<div class="tour-story" id="tour-story-horse-riding-experience" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">You meet your horse, get comfortable in the saddle and begin at a calm pace with guidance. The route offers a different view of the landscape, where the rhythm of the ride and the open surroundings make the experience feel wonderfully unhurried.</p>
-  <p data-story-text="de" hidden>Sie lernen Ihr Pferd kennen, finden Ihren Platz im Sattel und beginnen unter Anleitung in ruhigem Tempo. Die Route eröffnet einen anderen Blick auf die Landschaft. Der Rhythmus des Ritts und die Weite ringsum machen das Erlebnis angenehm entschleunigt.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Rider suitability, age requirements, route and riding conditions must be confirmed with the provider.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-horse-riding-experience">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-horse-riding-experience">View Tour Details</a></div>
 </div>
 </article>
-
 </div>
 </section>
-
 <!-- HURGHADA CITY -->
 <section class="category-section" data-category-section="city">
 <div class="category-heading">
-<h2>Hurghada City & Local Culture</h2>
+<h2>Hurghada City &amp; Local Culture</h2>
 <p>Discover the city's character, local markets, marina, traditional neighbourhoods and important landmarks.</p>
 </div>
-
 <div class="tours-grid">
-
-<article class="tour-card" data-category="city">
-<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Al%20mina%20mosque%20Hurghada.jpg" alt="El Mina Mosque in Hurghada" loading="lazy">
+<article class="tour-card" data-category="city" id="tour-hurghada-city-tour">
+<img alt="El Mina Mosque in Hurghada" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Al%20mina%20mosque%20Hurghada.jpg"/>
 <div class="card-content">
-<div class="card-category">City & Culture</div>
+<div class="card-category">City &amp; Culture</div>
 <h3>Hurghada City Tour</h3>
 <p>
 Discover a different side of Hurghada beyond its hotels and beaches.
@@ -1438,7 +1152,7 @@ A city tour can introduce visitors to local neighbourhoods,
 religious landmarks, traditional shopping areas and the modern
 marina atmosphere.
 </p>
-<h4>Places & Possible Highlights</h4>
+<h4>Places &amp; Possible Highlights</h4>
 <ul>
 <li><strong>El Mina Mosque:</strong> an important local landmark known for its architecture and prominent position near the marina area.</li>
 <li><strong>El Dahar:</strong> the older central area, with traditional streets, shops and everyday local life.</li>
@@ -1454,28 +1168,15 @@ Visitors may learn about the city's development, local traditions
 and everyday life. The route can be adapted to the group's interests
 and the places accessible during the visit.
 </p>
-
-<div class="tour-story" id="tour-story-hurghada-city-tour" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">The day moves from the waterfront into the everyday rhythm of Hurghada. You pass lively streets, local landmarks and neighbourhood scenes, discovering a city that is more than its beaches and resorts.</p>
-  <p data-story-text="de" hidden>Der Tag führt von der Küste hinein in den Alltag von Hurghada. Sie passieren belebte Straßen, lokale Sehenswürdigkeiten und Eindrücke aus den Vierteln und entdecken eine Stadt, die mehr ist als Strände und Ferienanlagen.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Not every location is necessarily included in every city tour. Stops, access and visit arrangements are agreed according to the selected itinerary.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book City Tour</a><a class="details-link" href="#tour-story-hurghada-city-tour">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book City Tour</a><a class="details-link" href="#tour-hurghada-city-tour">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="city">
-<img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1100&q=85" alt="Waterfront marina and city atmosphere" loading="lazy">
+<article class="tour-card" data-category="city" id="tour-hurghada-marina---waterfront">
+<img alt="Waterfront marina and city atmosphere" loading="lazy" src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Coastal Lifestyle</div>
-<h3>Hurghada Marina & Waterfront</h3>
+<h3>Hurghada Marina &amp; Waterfront</h3>
 <p>
 Explore the waterfront atmosphere of Hurghada Marina, where
 boats, restaurants, cafés and coastal views create a different
@@ -1496,28 +1197,15 @@ Guests can explore the marina area on foot and enjoy the waterfront
 atmosphere. The visit may be combined with other selected locations
 around Hurghada, depending on the preferred route and arrangements.
 </p>
-
-<div class="tour-story" id="tour-story-hurghada-marina-waterfront" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">As evening approaches, the marina fills with reflections, conversation and the gentle movement of boats. A walk along the waterfront offers time to pause, enjoy the sea breeze and see another side of Hurghada after a day in the sun.</p>
-  <p data-story-text="de" hidden>Wenn der Abend näher rückt, füllt sich die Marina mit Spiegelungen, Gesprächen und der sanften Bewegung der Boote. Ein Spaziergang am Wasser bietet Zeit zum Innehalten, für die Meeresbrise und für eine andere Seite von Hurghada nach einem sonnigen Tag.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Restaurant visits, purchases and additional services are optional unless specifically confirmed.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-hurghada-marina-waterfront">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-hurghada-marina---waterfront">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="city">
-<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bazaar%20Street%2C%20El%20Dahar%2C%20Hurghada%2C%20Egypt%2C%20Oct%202004.jpg" alt="Traditional shopping street in El Dahar Hurghada" loading="lazy">
+<article class="tour-card" data-category="city" id="tour-el-dahar-old-town---local-markets">
+<img alt="Traditional shopping street in El Dahar Hurghada" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bazaar%20Street%2C%20El%20Dahar%2C%20Hurghada%2C%20Egypt%2C%20Oct%202004.jpg"/>
 <div class="card-content">
 <div class="card-category">Local Discovery</div>
-<h3>El Dahar Old Town & Local Markets</h3>
+<h3>El Dahar Old Town &amp; Local Markets</h3>
 <p>
 Explore El Dahar, one of Hurghada's traditional central areas.
 The neighbourhood offers a look at everyday local life through
@@ -1538,27 +1226,14 @@ areas with time to explore the surroundings. Guests can discover
 local shops and observe daily life. Any purchases are entirely
 optional and made directly by the visitor.
 </p>
-
-<div class="tour-story" id="tour-story-el-dahar-old-town-local-markets" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">In El Dahar, the streets invite you to slow down and look closer. Shopfronts, everyday conversations, familiar aromas and market colours create a vivid picture of local life. The best discoveries often happen between the planned stops.</p>
-  <p data-story-text="de" hidden>In El Dahar laden die Straßen dazu ein, langsamer zu gehen und genauer hinzusehen. Geschäfte, alltägliche Gespräche, vertraute Düfte und die Farben des Marktes zeichnen ein lebendiges Bild des lokalen Lebens. Die schönsten Entdeckungen liegen oft zwischen den geplanten Stopps.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Market activity and access may vary. Purchases are not included unless explicitly agreed.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-el-dahar-old-town-local-markets">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-el-dahar-old-town---local-markets">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="city">
-<img src="https://commons.wikimedia.org/wiki/Special:FilePath/%D8%AD%D9%84%D9%82%D8%A9%20%D8%A7%D9%84%D8%B3%D9%85%D9%83%201.jpg" alt="El Halaqa fish market in Hurghada" loading="lazy">
+<article class="tour-card" data-category="city" id="tour-el-halaqa-fish-market-visit">
+<img alt="El Halaqa fish market in Hurghada" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/%D8%AD%D9%84%D9%82%D8%A9%20%D8%A7%D9%84%D8%B3%D9%85%D9%83%201.jpg"/>
 <div class="card-content">
-<div class="card-category">Local Food & Culture</div>
+<div class="card-category">Local Food &amp; Culture</div>
 <h3>El Halaqa Fish Market Visit</h3>
 <p>
 Discover the atmosphere of Hurghada's traditional fish market,
@@ -1582,47 +1257,31 @@ seafood trade and how the sea contributes to daily life in
 Hurghada. Any food purchases or restaurant arrangements are
 separate unless confirmed.
 </p>
-
-<div class="tour-story" id="tour-story-el-halaqa-fish-market-visit" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">The market is already awake as the day&#x27;s catch is displayed and buyers discuss what is fresh. With a guide, the visit becomes a window into the relationship between Hurghada and the Red Sea, best enjoyed with curiosity and respect for local routines.</p>
-  <p data-story-text="de" hidden>Der Markt ist bereits lebendig, wenn der Fang des Tages präsentiert wird und Käufer über frische Ware sprechen. Mit einem Guide wird der Besuch zu einem Einblick in die Verbindung zwischen Hurghada und dem Roten Meer – am besten erlebt mit Neugier und Respekt vor den lokalen Abläufen.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Market activity, access and photography permissions depend on local conditions and regulations.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-el-halaqa-fish-market-visit">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-el-halaqa-fish-market-visit">View Tour Details</a></div>
 </div>
 </article>
-
 </div>
 </section>
-
 <!-- EGYPT EXCURSIONS -->
 <section class="category-section" data-category-section="egypt">
 <div class="category-heading">
-<h2>Egypt Historical & Cultural Excursions</h2>
+<h2>Egypt Historical &amp; Cultural Excursions</h2>
 <p>Explore Egypt's famous archaeological sites, ancient temples, museums and historic cities. The actual itinerary depends on the selected excursion and current site access.</p>
 </div>
-
 <div class="tours-grid">
-
-<article class="tour-card" data-category="egypt">
-<img src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Giza%20Pyramids.jpg" alt="The Great Pyramids of Giza" loading="lazy">
+<article class="tour-card" data-category="egypt" id="tour-cairo---the-pyramids-of-giza">
+<img alt="The Great Pyramids of Giza" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Giza%20Pyramids.jpg"/>
 <div class="card-content">
 <div class="card-category">Ancient Egypt</div>
-<h3>Cairo & The Pyramids of Giza</h3>
+<h3>Cairo &amp; The Pyramids of Giza</h3>
 <p>
 Discover the remarkable history of ancient Egypt with an excursion
 to Cairo and the Giza Plateau. The area is home to the Great
 Pyramids and the Great Sphinx, among the best-known archaeological
 landmarks in the world.
 </p>
-<h4>Places & Possible Highlights</h4>
+<h4>Places &amp; Possible Highlights</h4>
 <ul>
 <li><strong>Great Pyramid of Khufu:</strong> the largest of the three main pyramids at Giza.</li>
 <li><strong>Pyramids of Khafre and Menkaure:</strong> the other major pyramid monuments on the plateau.</li>
@@ -1638,34 +1297,21 @@ learn about the pyramids, the ancient royal tombs and the Sphinx.
 A museum visit or additional city sightseeing may be included
 depending on the itinerary selected and current arrangements.
 </p>
-
-<div class="tour-story" id="tour-story-cairo-the-pyramids-of-giza" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">The first sight of the pyramids rises beyond the modern city, turning a long-awaited journey into a moment of wonder. Standing before monuments built thousands of years ago, you feel the scale of history in a way no photograph can fully capture.</p>
-  <p data-story-text="de" hidden>Der erste Blick auf die Pyramiden erhebt sich hinter der modernen Stadt und macht eine lang ersehnte Reise zu einem Moment des Staunens. Vor Bauwerken zu stehen, die vor Tausenden von Jahren entstanden, lässt die Dimension der Geschichte spürbar werden – stärker als jedes Foto.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">The museum, entry tickets, interior pyramid access, lunch and exact sightseeing stops must be confirmed separately. Not all attractions are included in every tour.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Cairo Tour</a><a class="details-link" href="#tour-story-cairo-the-pyramids-of-giza">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Cairo Tour</a><a class="details-link" href="#tour-cairo---the-pyramids-of-giza">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="egypt">
-<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Karnak%20Temple%20%2C%20Luxor%20%2C%20Egypt.jpg" alt="Karnak Temple complex in Luxor" loading="lazy">
+<article class="tour-card" data-category="egypt" id="tour-luxor---the-ancient-temples">
+<img alt="Karnak Temple complex in Luxor" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Karnak%20Temple%20%2C%20Luxor%20%2C%20Egypt.jpg"/>
 <div class="card-content">
 <div class="card-category">Ancient Thebes</div>
-<h3>Luxor & The Ancient Temples</h3>
+<h3>Luxor &amp; The Ancient Temples</h3>
 <p>
 Discover Luxor, one of Egypt's most important historical destinations.
 The city preserves extraordinary monuments from ancient Thebes,
 including vast temple complexes, royal tombs and monumental statues.
 </p>
-<h4>Places & Possible Highlights</h4>
+<h4>Places &amp; Possible Highlights</h4>
 <ul>
 <li><strong>Karnak Temple:</strong> an extensive religious complex famous for its monumental columns, pylons and sacred lake.</li>
 <li><strong>Luxor Temple:</strong> a historic temple in the heart of the modern city.</li>
@@ -1681,25 +1327,12 @@ temple architecture, ancient inscriptions and historical landscapes.
 The actual route may focus on Karnak and other selected sites,
 with west-bank attractions depending on the chosen arrangement.
 </p>
-
-<div class="tour-story" id="tour-story-luxor-the-ancient-temples" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">As you approach Luxor, the landscape opens onto the world of ancient Thebes. Colossal columns, carved walls and temple courtyards invite you to imagine the ceremonies, rulers and daily lives that once shaped this remarkable place.</p>
-  <p data-story-text="de" hidden>Bei der Ankunft in Luxor öffnet sich die Landschaft zur Welt des antiken Theben. Gewaltige Säulen, Reliefwände und Tempelhöfe laden dazu ein, sich die Zeremonien, Herrscher und das tägliche Leben vorzustellen, die diesen besonderen Ort einst prägten.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Not every listed monument is necessarily included. Valley of the Kings tomb access, special tomb tickets, transport and meals depend on the confirmed itinerary.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Luxor Tour</a><a class="details-link" href="#tour-story-luxor-the-ancient-temples">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Luxor Tour</a><a class="details-link" href="#tour-luxor---the-ancient-temples">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="egypt">
-<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Temple%20of%20Hatshepsut%2C%20Luxor%2C%20Egypt.jpg" alt="Temple of Hatshepsut at Deir el Bahari in Luxor" loading="lazy">
+<article class="tour-card" data-category="egypt" id="tour-west-bank-of-luxor">
+<img alt="Temple of Hatshepsut at Deir el Bahari in Luxor" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Temple%20of%20Hatshepsut%2C%20Luxor%2C%20Egypt.jpg"/>
 <div class="card-content">
 <div class="card-category">West Bank of Luxor</div>
 <h3>West Bank of Luxor</h3>
@@ -1709,7 +1342,7 @@ ancient Egyptian royal burials and monumental funerary architecture.
 It offers a fascinating introduction to beliefs about the afterlife
 and the history of the Theban necropolis.
 </p>
-<h4>Places & Possible Highlights</h4>
+<h4>Places &amp; Possible Highlights</h4>
 <ul>
 <li><strong>Valley of the Kings:</strong> royal tombs decorated with ancient scenes and inscriptions.</li>
 <li><strong>Temple of Hatshepsut:</strong> a terraced monument set against a dramatic cliff face.</li>
@@ -1723,35 +1356,22 @@ about the pharaohs, royal tombs and funerary traditions. The route
 and number of locations depend on the chosen excursion and site
 access arrangements.
 </p>
-
-<div class="tour-story" id="tour-story-west-bank-of-luxor" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">Crossing to Luxor&#x27;s West Bank feels like entering a landscape shaped by memory. Valleys, tombs and monumental temples reveal how ancient Egyptians prepared for the afterlife and honoured their rulers across generations.</p>
-  <p data-story-text="de" hidden>Die Überfahrt zum Westufer von Luxor fühlt sich an wie der Eintritt in eine von Erinnerungen geprägte Landschaft. Täler, Gräber und monumentale Tempel zeigen, wie die alten Ägypter das Jenseits vorbereiteten und ihre Herrscher über Generationen ehrten.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Specific tombs and interior access may require separate tickets and may be subject to conservation or visitor restrictions.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-story-west-bank-of-luxor">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-west-bank-of-luxor">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="egypt">
-<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Philae%20Temple%20Aswan.jpg" alt="Philae Temple in Aswan" loading="lazy">
+<article class="tour-card" data-category="egypt" id="tour-aswan---nubian-culture">
+<img alt="Philae Temple in Aswan" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Philae%20Temple%20Aswan.jpg"/>
 <div class="card-content">
 <div class="card-category">Southern Egypt</div>
-<h3>Aswan & Nubian Culture</h3>
+<h3>Aswan &amp; Nubian Culture</h3>
 <p>
 Discover Aswan, a city known for its Nile scenery, island temples
 and Nubian cultural heritage. The destination offers a different
 atmosphere from Egypt's northern cities, with river landscapes
 and important historical monuments.
 </p>
-<h4>Places & Possible Highlights</h4>
+<h4>Places &amp; Possible Highlights</h4>
 <ul>
 <li><strong>Philae Temple:</strong> the beautiful island temple complex dedicated to the goddess Isis.</li>
 <li><strong>Aswan High Dam:</strong> a major modern engineering landmark.</li>
@@ -1767,25 +1387,12 @@ heritage. A boat transfer may be required for certain island
 locations. The route and included attractions depend on the
 selected travel arrangement.
 </p>
-
-<div class="tour-story" id="tour-story-aswan-nubian-culture" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">The Nile moves gently past Aswan, where islands, warm colours and Nubian heritage shape the atmosphere. A visit offers a chance to learn through architecture, stories and hospitality, while remembering that culture is lived by real communities today.</p>
-  <p data-story-text="de" hidden>Der Nil fließt ruhig an Assuan vorbei, wo Inseln, warme Farben und nubisches Erbe die Atmosphäre prägen. Ein Besuch eröffnet Einblicke durch Architektur, Erzählungen und Gastfreundschaft – und erinnert daran, dass Kultur auch heute von lebendigen Gemeinschaften getragen wird.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Aswan is a substantial journey from Hurghada. Transport format, overnight arrangements and attraction access must be confirmed before booking.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Aswan Tour</a><a class="details-link" href="#tour-story-aswan-nubian-culture">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Aswan Tour</a><a class="details-link" href="#tour-aswan---nubian-culture">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="egypt">
-<img src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=1100&q=85" alt="Historic Egyptian coastal city architecture" loading="lazy">
+<article class="tour-card" data-category="egypt" id="tour-alexandria-city-tour">
+<img alt="Historic Egyptian coastal city architecture" loading="lazy" src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Mediterranean Heritage</div>
 <h3>Alexandria City Tour</h3>
@@ -1795,7 +1402,7 @@ with ancient scholarship, coastal architecture and layers of
 Egyptian, Greek and Roman history. The city offers a different
 cultural experience from the Red Sea region.
 </p>
-<h4>Places & Possible Highlights</h4>
+<h4>Places &amp; Possible Highlights</h4>
 <ul>
 <li><strong>Bibliotheca Alexandrina:</strong> a modern cultural landmark inspired by the ancient Library of Alexandria.</li>
 <li><strong>Citadel of Qaitbay:</strong> a historic fortress overlooking the Mediterranean, subject to access.</li>
@@ -1811,35 +1418,22 @@ the city's Mediterranean character, architecture and heritage.
 The exact sightseeing route depends on the chosen arrangement
 and attraction opening or access conditions.
 </p>
-
-<div class="tour-story" id="tour-story-alexandria-city-tour" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">The Mediterranean breeze follows you through a city shaped by many centuries and cultures. From its waterfront to historic streets, Alexandria carries a distinct atmosphere where the sea, memory and modern life meet.</p>
-  <p data-story-text="de" hidden>Die Mittelmeerbrise begleitet Sie durch eine Stadt, die von vielen Jahrhunderten und Kulturen geprägt wurde. Von der Uferpromenade bis zu den historischen Straßen besitzt Alexandria eine besondere Atmosphäre, in der Meer, Erinnerung und modernes Leben aufeinandertreffen.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Alexandria is a long-distance excursion from Hurghada. Transport, overnight arrangements and attraction tickets must be confirmed separately.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Alexandria Tour</a><a class="details-link" href="#tour-story-alexandria-city-tour">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Alexandria Tour</a><a class="details-link" href="#tour-alexandria-city-tour">View Tour Details</a></div>
 </div>
 </article>
-
-<article class="tour-card" data-category="egypt">
-<img src="https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=1100&q=85" alt="Ancient Egyptian temple columns and hieroglyphics" loading="lazy">
+<article class="tour-card" data-category="egypt" id="tour-dendera---abydos-temples">
+<img alt="Ancient Egyptian temple columns and hieroglyphics" loading="lazy" src="https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
 <div class="card-content">
 <div class="card-category">Ancient Egyptian Temples</div>
-<h3>Dendera & Abydos Temples</h3>
+<h3>Dendera &amp; Abydos Temples</h3>
 <p>
 Explore two important temple destinations connected with ancient
 Egyptian religion and royal history. Dendera and Abydos offer
 visitors the opportunity to discover detailed temple decoration,
 inscriptions and sacred architecture.
 </p>
-<h4>Places & Possible Highlights</h4>
+<h4>Places &amp; Possible Highlights</h4>
 <ul>
 <li><strong>Dendera Temple:</strong> the temple complex dedicated to Hathor, known for its decorated halls and astronomical ceiling imagery.</li>
 <li><strong>Abydos Temple:</strong> an important religious site associated with Osiris and the worship of ancient Egyptian kings.</li>
@@ -1854,28 +1448,13 @@ monuments and learn about their religious and historical importance.
 The order and number of visits depend on travel arrangements
 and access conditions.
 </p>
-
-<div class="tour-story" id="tour-story-dendera-abydos-temples" hidden>
-  <span class="tour-story-kicker">A story to imagine · Eine Geschichte zum Eintauchen</span>
-  <h4>The Story Behind the Journey</h4>
-  <div class="story-language-switch" role="group" aria-label="Choose story language">
-    <button type="button" class="active" data-story-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-story-lang="de" aria-pressed="false">DE</button>
-  </div>
-  <p data-story-text="en">Beyond the familiar routes, the temples of Dendera and Abydos reveal extraordinary details in stone. Colours, inscriptions and carefully carved figures invite you to look closely and imagine the beliefs and craftsmanship of ancient Egypt.</p>
-  <p data-story-text="de" hidden>Abseits der bekannten Routen zeigen die Tempel von Dendera und Abydos außergewöhnliche Details aus Stein. Farben, Inschriften und kunstvoll gemeißelte Figuren laden dazu ein, genau hinzusehen und sich die Glaubenswelt und Handwerkskunst des alten Ägypten vorzustellen.</p>
-  <small class="story-disclaimer">A destination-inspired narrative, not a customer testimonial or a claim that a specific event took place.</small>
-</div>
 <div class="note">Dendera and Abydos may be offered separately or together. Do not assume both sites are included unless the itinerary confirms this.</div>
-<div class="card-actions"><a class="book-link" href="booking.html">Ask About This Tour</a><a class="details-link" href="#tour-story-dendera-abydos-temples">Read the Story</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Ask About This Tour</a><a class="details-link" href="#tour-dendera---abydos-temples">View Tour Details</a></div>
 </div>
 </article>
-
 </div>
 </section>
-
 </main>
-
 <!-- FLEXIBILITY -->
 <section class="info-section">
 <div class="container">
@@ -1885,7 +1464,6 @@ and access conditions.
 Every excursion is different. The final arrangements depend on the selected
 activity, service provider, weather, sea conditions, site access and availability.
 </p>
-
 <div class="info-grid">
 <div class="info-box">
 <h3>Flexible Routes</h3>
@@ -1896,7 +1474,7 @@ The confirmed route should be discussed before booking.
 </p>
 </div>
 <div class="info-box">
-<h3>Safety & Local Conditions</h3>
+<h3>Safety &amp; Local Conditions</h3>
 <p>
 Sea activities, diving, desert trips and outdoor experiences depend on
 weather, safety requirements, participant suitability and the provider's
@@ -1914,7 +1492,6 @@ your selected experience.
 </div>
 </div>
 </section>
-
 <section class="cta">
 <h2>Your Next Adventure Starts Here</h2>
 <p>
@@ -1922,10 +1499,9 @@ Tell us what kind of experience you are interested in.
 Our team can help you explore the available options and discuss
 the arrangements for your chosen trip.
 </p>
-<a href="contact.html" class="main-button">Contact Atlantic Tours</a>
+<a class="main-button" href="contact.html">Contact Atlantic Tours</a>
 </section>
-
-<footer>
+<section class="section" id="red-sea-video-highlights"><div class="container"><div class="section-heading"><span class="section-label">Video Highlights</span><h2>More Red Sea Moments</h2><p>An additional video from the media collection. Choose a trip above to explore its dedicated photos and videos.</p></div><div class="tour-feature-video"><video controls="" playsinline="" preload="metadata"><source src="assets/videos/lv_7493550543768522045_20260910224514.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><p class="tour-video-caption">Additional Red Sea video</p></div></div></section><footer>
 <div class="container">
 <div class="footer-grid">
 <div>
@@ -1949,7 +1525,7 @@ Explore the possibilities and contact us to discuss your plans.
 <h4>Explore Experiences</h4>
 <ul>
 <li><a href="#all-experiences">Island Trips</a></li>
-<li><a href="#all-experiences">Snorkeling & Diving</a></li>
+<li><a href="#all-experiences">Snorkeling &amp; Diving</a></li>
 <li><a href="#all-experiences">Water Sports</a></li>
 <li><a href="#all-experiences">Desert Safaris</a></li>
 <li><a href="#all-experiences">Egypt Excursions</a></li>
@@ -1961,7 +1537,6 @@ Explore the possibilities and contact us to discuss your plans.
 </div>
 </div>
 </footer>
-
 <script>
 const filterButtons = document.querySelectorAll(".filter-btn");
 const tourCards = document.querySelectorAll(".tour-card");
@@ -2025,42 +1600,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-/* Open the matching story when a visitor selects Read the Story */
-document.querySelectorAll('a.details-link[href^="#tour-story-"]').forEach(function (link) {
-  link.addEventListener('click', function (event) {
-    const targetId = link.getAttribute('href').slice(1);
-    const story = document.getElementById(targetId);
-    if (!story) return;
-    event.preventDefault();
-    story.hidden = false;
-    history.replaceState(null, '', '#' + targetId);
-    window.setTimeout(function () {
-      story.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 30);
-  });
-});
-
-/* Bilingual tour-story controls */
-document.querySelectorAll('.tour-story').forEach(function (story) {
-  const buttons = story.querySelectorAll('[data-story-lang]');
-  const paragraphs = story.querySelectorAll('[data-story-text]');
-  buttons.forEach(function (button) {
-    button.addEventListener('click', function () {
-      const language = button.dataset.storyLang;
-      buttons.forEach(function (item) {
-        const active = item === button;
-        item.classList.toggle('active', active);
-        item.setAttribute('aria-pressed', active ? 'true' : 'false');
-      });
-      paragraphs.forEach(function (paragraph) {
-        paragraph.hidden = paragraph.dataset.storyText !== language;
-      });
-    });
-  });
-});
-
 </script>
 
+<script>
+(function () {
+  function openLinkedDetails() {
+    if (!location.hash) return;
+    var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (target && target.tagName === 'DETAILS') target.open = true;
+  }
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('a.details-link[href^="#"]');
+    if (!link) return;
+    var target = document.getElementById(decodeURIComponent(link.getAttribute('href').slice(1)));
+    if (target && target.tagName === 'DETAILS') target.open = true;
+  });
+  window.addEventListener('hashchange', openLinkedDetails);
+  openLinkedDetails();
+})();
+</script>
 </body>
 </html>
