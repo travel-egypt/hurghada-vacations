@@ -1,91 +1,859 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#071a2c">
-<meta name="description" content="Compare live weather in your location with Hurghada, Egypt. Check Red Sea wind, waves and sea temperature.">
-<title>Hurghada Live | Atlantic Tours & Experiences</title>
+<meta name="theme-color" content="#071c2b">
+<meta name="description" content="Discover Hurghada Live. Compare your local weather with Hurghada, Egypt and explore Red Sea conditions.">
+<title>Hurghada Live | Red Sea Experience</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-/* HURGHADA LIVE — standalone feature. All styles are scoped to #hlive. */
-#hlive{--bg:#071a2c;--panel:#102b40;--panel2:#14364d;--ink:#f4f8fb;--muted:#b2c4d2;--teal:#4ed7cc;--gold:#e7b968;--line:rgba(255,255,255,.10);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:radial-gradient(ellipse at 90% 0%,rgba(36,137,158,.24),transparent 38%),linear-gradient(145deg,#061726,#0a2337 62%,#0d3043);max-width:1200px;margin:26px auto;padding:clamp(20px,4vw,48px);border-radius:24px;overflow:hidden;box-sizing:border-box}
-#hlive *{box-sizing:border-box}#hlive .h-wrap{max-width:1100px;margin:auto}#hlive .h-top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px}#hlive .h-brand{display:flex;align-items:center;gap:12px}#hlive .h-logo{width:48px;height:48px;border:1px solid rgba(78,215,204,.35);border-radius:15px;display:grid;place-items:center;background:rgba(78,215,204,.08);font-size:24px}#hlive .h-eyebrow{color:var(--gold);font-size:10px;font-weight:800;letter-spacing:2.5px;margin-bottom:4px}#hlive .h-brandname{font-size:17px;font-weight:850;letter-spacing:.7px}#hlive .h-controls{display:flex;gap:9px}#hlive button{font:inherit;cursor:pointer}#hlive .h-btn{border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.05);color:var(--ink);padding:10px 13px;font-size:12px}#hlive .h-btn:hover{background:rgba(255,255,255,.10)}#hlive .h-intro{margin-bottom:24px}#hlive .h-intro h1{font-size:clamp(27px,4.4vw,44px);letter-spacing:-1.2px;line-height:1.1;margin:0 0 10px}#hlive .h-intro p{margin:0;color:var(--muted);font-size:14px;line-height:1.7;max-width:740px}#hlive .h-compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}#hlive .h-location{border:1px solid var(--line);border-radius:20px;padding:clamp(18px,3vw,26px);background:linear-gradient(145deg,rgba(20,52,75,.94),rgba(12,34,52,.96));min-width:0}#hlive .h-location.h-home{background:linear-gradient(145deg,rgba(12,100,96,.96),rgba(10,54,66,.98));border-color:rgba(78,215,204,.24)}#hlive .h-lochead{display:flex;align-items:center;gap:9px;min-height:26px;margin-bottom:19px}#hlive .h-flag{font-size:23px}#hlive .h-city{font-size:12px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;overflow-wrap:anywhere}#hlive .h-tempRow{display:flex;align-items:center;gap:14px;margin-bottom:20px}#hlive .h-weatherIcon{font-size:48px;line-height:1}#hlive .h-temp{font-size:clamp(42px,6vw,57px);font-weight:850;letter-spacing:-3px;line-height:1}#hlive .h-condition{font-size:13px;color:#c8e5e7;margin-top:6px}#hlive .h-miniStats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}#hlive .h-stat{border:1px solid rgba(255,255,255,.06);border-radius:12px;background:rgba(255,255,255,.035);padding:12px}#hlive .h-statlabel{font-size:10px;color:var(--muted);margin-bottom:7px}#hlive .h-statvalue{font-size:18px;font-weight:750;overflow-wrap:anywhere}#hlive .h-statvalue small{font-size:11px;font-weight:500;color:var(--muted)}#hlive .h-difference{display:flex;align-items:center;justify-content:center;gap:10px;text-align:center;margin:16px 0 0;padding:15px 12px;border:1px solid rgba(231,185,104,.24);background:rgba(231,185,104,.06);border-radius:15px;flex-wrap:wrap}#hlive .h-diffnum{font-size:24px;font-weight:850;color:var(--gold)}#hlive .h-diffcaption{font-size:12px;color:var(--muted)}#hlive .h-sea{margin-top:17px;border:1px solid var(--line);border-radius:18px;padding:21px;background:rgba(255,255,255,.035)}#hlive .h-sectionlabel{font-size:11px;font-weight:800;letter-spacing:1.8px;color:var(--muted);margin-bottom:16px}#hlive .h-seaTop{display:flex;align-items:center;gap:14px;margin-bottom:18px}#hlive .h-seaIcon{font-size:42px}#hlive .h-wave{font-size:40px;font-weight:850;letter-spacing:-1.8px}#hlive .h-wave small{font-size:14px;color:var(--muted);letter-spacing:0}#hlive .h-seaNote{font-size:12px;color:var(--teal);margin-top:5px}#hlive .h-outlook{border-radius:13px;border:1px solid rgba(78,215,204,.18);background:rgba(78,215,204,.06);padding:14px;margin-top:14px}#hlive .h-outlookTitle{color:var(--teal);font-size:12px;font-weight:800;margin-bottom:6px}#hlive .h-outlookText{font-size:12px;line-height:1.65;color:var(--muted)}#hlive .h-footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:18px;font-size:11px;color:var(--muted)}#hlive .h-liveDot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 9px rgba(78,215,204,.5);margin-right:7px}#hlive .h-error{color:var(--gold)}#hlive .h-cta{margin-top:20px;border:1px solid rgba(231,185,104,.22);border-radius:16px;padding:19px;background:rgba(231,185,104,.045);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}#hlive .h-cta strong{display:block;font-size:15px;margin-bottom:5px}#hlive .h-cta p{margin:0;font-size:12px;color:var(--muted);line-height:1.6}#hlive .h-cta a{background:linear-gradient(135deg,#e8bd72,#d39c45);color:#12273a;text-decoration:none;font-size:12px;font-weight:850;padding:13px 18px;border-radius:10px;white-space:nowrap}#hlive .h-disclaimer{font-size:10px;line-height:1.7;color:var(--muted);opacity:.85;margin-top:14px}#hlive .h-loading{opacity:.75}#hlive .h-hide{display:none!important}
-@media(max-width:680px){#hlive{margin:16px 0;border-radius:18px;padding:24px 14px}#hlive .h-compare{grid-template-columns:1fr;gap:12px}#hlive .h-location{padding:19px}#hlive .h-temp{font-size:49px}#hlive .h-intro h1{font-size:30px}#hlive .h-cta{align-items:stretch}#hlive .h-cta a{width:100%;text-align:center}}
-@media(prefers-reduced-motion:reduce){#hlive *{animation:none!important;transition:none!important}}
+:root{
+  --bg:#061824;
+  --panel:#0c2838;
+  --panel2:#103749;
+  --line:rgba(190,225,235,.13);
+  --text:#f4fbfc;
+  --muted:#9bb8c4;
+  --cyan:#63e2df;
+  --gold:#f3c779;
+  --green:#91e3bd;
+  --red:#ffb5a8;
+  --radius:22px;
+  --shadow:0 22px 65px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(ellipse at 80% 0%,#17465b 0,transparent 38%),
+    linear-gradient(180deg,#071d2b,#061824 70%,#082130);
+  font-family:'DM Sans',sans-serif;
+}
+button,a{font:inherit}
+button{cursor:pointer}
+.container{width:min(1160px,calc(100% - 34px));margin:auto}
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:22px 0;border-bottom:1px solid var(--line)
+}
+.brand{display:flex;align-items:center;gap:12px;color:white;text-decoration:none}
+.brand-icon{
+  width:43px;height:43px;border-radius:14px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,#72e9df,#168b9c);
+  color:#062431;font-size:23px;
+  box-shadow:0 8px 25px #1c9ca044
+}
+.brand-name{font:800 13px Manrope,sans-serif;letter-spacing:1.5px}
+.brand-name small{
+  display:block;color:var(--cyan);font-size:9px;
+  letter-spacing:2.5px;margin-top:4px
+}
+.top-actions{display:flex;align-items:center;gap:12px}
+.live-label{
+  color:var(--green);font-size:10px;letter-spacing:1.4px;
+  border:1px solid #91e3bd55;background:#91e3bd12;
+  border-radius:30px;padding:9px 12px
+}
+.live-dot{
+  display:inline-block;width:7px;height:7px;border-radius:50%;
+  background:var(--green);margin-right:7px;
+  box-shadow:0 0 12px var(--green)
+}
+.lang-btn{
+  color:white;background:#ffffff0b;border:1px solid var(--line);
+  border-radius:30px;padding:9px 14px;font-size:12px;font-weight:700
+}
+.hero{
+  display:grid;grid-template-columns:1.2fr .8fr;
+  gap:35px;align-items:center;padding:65px 0 40px
+}
+.eyebrow{
+  color:var(--cyan);font-size:11px;font-weight:800;
+  letter-spacing:3px;text-transform:uppercase
+}
+.hero h1{
+  font:800 clamp(45px,7vw,78px)/.98 Manrope,sans-serif;
+  letter-spacing:-4px;margin:18px 0
+}
+.hero h1 span{color:var(--cyan)}
+.hero-copy{
+  color:#b8cdd4;line-height:1.8;font-size:15px;
+  max-width:630px
+}
+.hero-art{
+  height:260px;position:relative;overflow:hidden;
+  border-radius:27px;
+  background:linear-gradient(150deg,#247a83,#0b4053 60%,#082536);
+  border:1px solid #ffffff20;box-shadow:var(--shadow)
+}
+.sun{
+  position:absolute;right:55px;top:35px;
+  width:95px;height:95px;border-radius:50%;
+  background:linear-gradient(135deg,#fff1bd,#efb65b);
+  box-shadow:0 0 70px #f5d18b88
+}
+.art-sea{
+  position:absolute;left:-10%;right:-10%;bottom:-30px;height:135px;
+  background:
+  repeating-linear-gradient(177deg,transparent 0 17px,#b5f1e733 18px 20px),
+  linear-gradient(180deg,#0e9aaa,#07516d)
+}
+.art-horizon{
+  position:absolute;left:-10%;right:-10%;bottom:95px;
+  height:55px;background:#3c9ba355;transform:rotate(-3deg)
+}
+.art-bird{position:absolute;left:45px;top:65px;color:#d8f4ef;font-size:27px}
+.art-caption{
+  position:absolute;left:22px;bottom:18px;
+  color:#e1f7f3;font-size:10px;letter-spacing:2px
+}
+.section{margin-top:30px}
+.section-heading{
+  display:flex;justify-content:space-between;align-items:end;
+  gap:15px;margin-bottom:17px
+}
+.section-heading h2{
+  font:800 24px Manrope,sans-serif;margin:0;letter-spacing:-.7px
+}
+.section-heading p{color:var(--muted);font-size:12px;margin:7px 0 0}
+.updated{font-size:10px;color:var(--muted);text-align:right}
+.weather-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{
+  background:linear-gradient(145deg,#103749ee,#0a2635ee);
+  border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow)
+}
+.weather-card{padding:23px;position:relative;overflow:hidden}
+.weather-card:after{
+  content:"";position:absolute;right:-90px;top:-95px;
+  width:190px;height:190px;border-radius:50%;background:#63e2df0c
+}
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.place-label{
+  color:var(--muted);font-size:10px;letter-spacing:1.5px;
+  text-transform:uppercase;font-weight:700
+}
+.place-name{
+  display:block;color:white;font:700 20px Manrope,sans-serif;
+  margin-top:6px;letter-spacing:0;text-transform:none
+}
+.weather-icon{font-size:32px}
+.temperature-row{display:flex;align-items:center;gap:15px;margin:22px 0}
+.temperature{
+  font:800 59px/.95 Manrope,sans-serif;letter-spacing:-3px
+}
+.condition{font-size:12px;color:#c1d7dd;line-height:1.6}
+.condition strong{display:block;color:white;font-size:14px}
+.metrics{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:9px;
+  border-top:1px solid var(--line);padding-top:16px
+}
+.metric small{display:block;color:var(--muted);font-size:9px;margin-bottom:7px}
+.metric strong{font-size:13px}
+.card-status{font-size:10px;color:var(--muted);margin-top:13px;min-height:15px}
+.compare{
+  margin-top:15px;padding:17px 20px;border-radius:17px;
+  border:1px solid #63e2df40;
+  background:linear-gradient(90deg,#63e2df12,#f3c7790c);
+  display:flex;align-items:center;justify-content:space-between;gap:15px
+}
+.compare-label{font-size:11px;color:#c5d9de}
+.compare-note{display:block;color:var(--muted);font-size:10px;margin-top:5px}
+.compare-value{font:800 24px Manrope;color:var(--gold);white-space:nowrap}
+.hourly-wrap{
+  margin-top:16px;padding:20px;border-radius:20px;
+  background:#ffffff07;border:1px solid var(--line)
+}
+.hourly-title{font:700 14px Manrope;margin:0 0 15px}
+.hourly-list{
+  display:grid;grid-template-columns:repeat(6,1fr);
+  gap:8px;overflow-x:auto
+}
+.hour{
+  min-width:75px;text-align:center;padding:13px 7px;
+  border-radius:14px;background:#ffffff08
+}
+.hour small{display:block;color:var(--muted);font-size:10px}
+.hour span{display:block;font-size:22px;margin:8px 0}
+.hour strong{font-size:13px}
+.hour em{display:block;color:var(--muted);font-size:9px;font-style:normal;margin-top:5px}
+.marine-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+.marine-card{padding:23px}
+.marine-title-row{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.marine-title-row h3{font:700 19px Manrope;margin:0}
+.coast-label{font-size:10px;color:var(--cyan);letter-spacing:1.2px}
+.sea-main{display:flex;align-items:center;gap:20px;padding:24px 0}
+.sea-icon{
+  width:80px;height:80px;border-radius:23px;
+  background:#63e2df13;border:1px solid #63e2df30;
+  display:grid;place-items:center;font-size:37px
+}
+.sea-temperature{font:800 34px Manrope}
+.sea-temperature small{
+  display:block;color:var(--muted);font:500 9px 'DM Sans';
+  letter-spacing:1px;margin-top:4px
+}
+.sea-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
+.sea-stat{
+  padding:14px;border-radius:14px;background:#ffffff08;
+  border:1px solid #ffffff0c
+}
+.sea-stat small{display:block;color:var(--muted);font-size:9px;margin-bottom:8px}
+.sea-stat strong{font-size:17px}
+.disclaimer{font-size:10px;line-height:1.7;color:var(--muted);margin:16px 0 0}
+.insight{
+  padding:24px;display:flex;flex-direction:column;justify-content:space-between
+}
+.insight-tag{color:var(--gold);font-size:10px;letter-spacing:2px;font-weight:800}
+.insight h3{font:800 25px/1.2 Manrope;margin:15px 0 10px}
+.insight p{font-size:12px;line-height:1.8;color:#bad0d6;margin:0}
+.insight-bottom{
+  border-top:1px solid var(--line);padding-top:15px;
+  margin-top:22px;color:var(--muted);font-size:10px;line-height:1.7
+}
+.tips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.tip{padding:19px;border-radius:18px;background:#ffffff08;border:1px solid var(--line)}
+.tip-icon{font-size:24px}
+.tip h3{font:700 14px Manrope;margin:12px 0 7px}
+.tip p{color:var(--muted);font-size:11px;line-height:1.7;margin:0}
+.experience{
+  margin-top:38px;padding:30px;border-radius:25px;
+  background:linear-gradient(110deg,#123f4c,#0c2b3b);
+  border:1px solid #63e2df35;
+  display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center
+}
+.experience h2{font:800 27px Manrope;margin:0 0 9px}
+.experience p{color:#bad0d6;font-size:12px;line-height:1.8;margin:0;max-width:650px}
+.cta{
+  display:inline-flex;align-items:center;justify-content:center;
+  text-decoration:none;background:linear-gradient(135deg,#72e9df,#35b7b7);
+  color:#052530;padding:15px 21px;border-radius:13px;
+  font-size:11px;font-weight:800;white-space:nowrap;
+  box-shadow:0 10px 28px #36c7c344;transition:.2s
+}
+.cta:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.footer{
+  padding:28px 0 35px;margin-top:35px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:15px;
+  color:#7899a5;font-size:10px
+}
+.footer strong{color:#c3d9df;letter-spacing:1px}
+.error{color:var(--red)}
+@media(max-width:800px){
+  .hero{grid-template-columns:1fr;padding-top:43px}
+  .hero-art{height:200px}
+  .weather-grid,.marine-grid{grid-template-columns:1fr}
+  .experience{grid-template-columns:1fr}
+  .cta{width:100%}
+}
+@media(max-width:520px){
+  .container{width:calc(100% - 24px)}
+  .live-label{display:none}
+  .hero h1{letter-spacing:-2px}
+  .hero-copy{font-size:13px}
+  .weather-card,.marine-card,.insight{padding:18px}
+  .metrics{grid-template-columns:repeat(2,1fr);row-gap:15px}
+  .temperature{font-size:53px}
+  .section-heading{align-items:flex-start;flex-direction:column}
+  .updated{text-align:left}
+  .tips-grid{grid-template-columns:1fr}
+  .compare{align-items:flex-start;flex-direction:column}
+  .footer{flex-direction:column}
+}
 </style>
 </head>
+
 <body>
-<section id="hlive" aria-label="Live weather comparison">
-<div class="h-wrap">
-<header class="h-top">
-<div class="h-brand"><div class="h-logo" aria-hidden="true">🌊</div><div><div class="h-eyebrow">ATLANTIC TOURS & EXPERIENCES</div><div class="h-brandname">HURGHADA LIVE</div></div></div>
-<div class="h-controls"><button class="h-btn" id="hLang" type="button" aria-label="Switch language">DE 🇩🇪</button><button class="h-btn" id="hRefresh" type="button">↻ Refresh</button></div>
+<div class="container" id="hurghadaLive">
+
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <div class="brand-icon">✦</div>
+    <div class="brand-name">
+      TOURS & EXPERIENCES
+      <small>THE RED SEA · YOUR WAY</small>
+    </div>
+  </a>
+  <div class="top-actions">
+    <div class="live-label"><i class="live-dot"></i><span data-t="live">LIVE CONDITIONS</span></div>
+    <button class="lang-btn" id="languageButton">DE</button>
+  </div>
 </header>
-<div class="h-intro"><h1 id="hTitle">Your weather. Our sunshine.</h1><p id="hSubtitle">Compare the weather where you are with Hurghada, Egypt — and see what the Red Sea is doing today.</p></div>
-<div class="h-compare">
-<article class="h-location" id="hVisitorCard">
-<div class="h-lochead"><span class="h-flag" id="hVisitorFlag">🌍</span><span class="h-city" id="hVisitorCity">Finding your location…</span></div>
-<div class="h-tempRow"><div class="h-weatherIcon" id="hVisitorIcon">🌡️</div><div><div class="h-temp"><span id="hVisitorTemp">--</span>°C</div><div class="h-condition" id="hVisitorCondition">Loading local weather…</div></div></div>
-<div class="h-miniStats">
-<div class="h-stat"><div class="h-statlabel" id="hFeelsLabel">Feels like</div><div class="h-statvalue"><span id="hVisitorFeels">--</span>°</div></div>
-<div class="h-stat"><div class="h-statlabel" id="hWindLabel">Wind</div><div class="h-statvalue"><span id="hVisitorWind">--</span> <small>km/h</small></div></div>
-<div class="h-stat"><div class="h-statlabel" id="hHumidityLabel">Humidity</div><div class="h-statvalue"><span id="hVisitorHumidity">--</span><small>%</small></div></div>
-<div class="h-stat"><div class="h-statlabel" id="hRainLabel">Rain chance</div><div class="h-statvalue"><span id="hVisitorRain">--</span><small>%</small></div></div>
-</div></article>
-<article class="h-location h-home">
-<div class="h-lochead"><span class="h-flag">🇪🇬</span><span class="h-city">HURGHADA, EGYPT</span></div>
-<div class="h-tempRow"><div class="h-weatherIcon" id="hHurghadaIcon">☀️</div><div><div class="h-temp"><span id="hHurghadaTemp">--</span>°C</div><div class="h-condition" id="hHurghadaCondition">Loading Hurghada weather…</div></div></div>
-<div class="h-miniStats">
-<div class="h-stat"><div class="h-statlabel" id="hHFeelsLabel">Feels like</div><div class="h-statvalue"><span id="hHurghadaFeels">--</span>°</div></div>
-<div class="h-stat"><div class="h-statlabel" id="hHWindLabel">Wind</div><div class="h-statvalue"><span id="hHurghadaWind">--</span> <small>km/h</small></div></div>
-<div class="h-stat"><div class="h-statlabel" id="hHHumidityLabel">Humidity</div><div class="h-statvalue"><span id="hHurghadaHumidity">--</span><small>%</small></div></div>
-<div class="h-stat"><div class="h-statlabel" id="hHRainLabel">Rain chance</div><div class="h-statvalue"><span id="hHurghadaRain">--</span><small>%</small></div></div>
-</div></article>
+
+<main>
+
+<section class="hero">
+  <div>
+    <div class="eyebrow" data-t="eyebrow">YOUR WINDOW TO THE RED SEA</div>
+    <h1>HURGHADA<br><span>LIVE.</span></h1>
+    <p class="hero-copy" data-t="intro">
+      Wherever you are in the world, discover how your weather compares with Hurghada.
+      Explore the Red Sea conditions and let your next holiday begin here.
+    </p>
+  </div>
+  <div class="hero-art">
+    <div class="sun"></div>
+    <div class="art-bird">⌁</div>
+    <div class="art-horizon"></div>
+    <div class="art-sea"></div>
+    <div class="art-caption">RED SEA · EGYPT</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <div>
+      <h2 data-t="weatherTitle">Two places. One beautiful comparison.</h2>
+      <p data-t="weatherSubtitle">Your local weather, alongside the latest conditions in Hurghada.</p>
+    </div>
+    <div class="updated" id="updatedTime">UPDATING...</div>
+  </div>
+
+  <div class="weather-grid">
+
+    <article class="card weather-card">
+      <div class="card-top">
+        <div>
+          <div class="place-label" data-t="yourWeather">YOUR WEATHER</div>
+          <strong class="place-name" id="visitorCity">Finding your location...</strong>
+        </div>
+        <div class="weather-icon" id="visitorIcon">🌍</div>
+      </div>
+
+      <div class="temperature-row">
+        <div class="temperature" id="visitorTemp">--°</div>
+        <div class="condition">
+          <strong id="visitorCondition">Loading...</strong>
+          <span id="visitorFeels">Feels like --°</span>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric"><small data-t="wind">WIND</small><strong id="visitorWind">--</strong></div>
+        <div class="metric"><small data-t="humidity">HUMIDITY</small><strong id="visitorHumidity">--</strong></div>
+        <div class="metric"><small data-t="rain">RAIN CHANCE</small><strong id="visitorRain">--</strong></div>
+        <div class="metric"><small data-t="localTime">LOCAL TIME</small><strong id="visitorClock">--</strong></div>
+      </div>
+      <div class="card-status" id="visitorStatus" aria-live="polite"></div>
+    </article>
+
+    <article class="card weather-card">
+      <div class="card-top">
+        <div>
+          <div class="place-label" data-t="hurghadaWeather">HURGHADA, EGYPT</div>
+          <strong class="place-name">Hurghada · Red Sea</strong>
+        </div>
+        <div class="weather-icon" id="hurghadaIcon">☀️</div>
+      </div>
+
+      <div class="temperature-row">
+        <div class="temperature" id="hurghadaTemp">--°</div>
+        <div class="condition">
+          <strong id="hurghadaCondition">Loading...</strong>
+          <span id="hurghadaFeels">Feels like --°</span>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric"><small data-t="wind">WIND</small><strong id="hurghadaWind">--</strong></div>
+        <div class="metric"><small data-t="humidity">HUMIDITY</small><strong id="hurghadaHumidity">--</strong></div>
+        <div class="metric"><small data-t="rain">RAIN CHANCE</small><strong id="hurghadaRain">--</strong></div>
+        <div class="metric"><small data-t="localTime">LOCAL TIME</small><strong id="hurghadaClock">--</strong></div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="compare">
+    <div>
+      <div class="compare-label" data-t="differenceTitle">THE TEMPERATURE DIFFERENCE</div>
+      <span class="compare-note" id="comparisonMessage">Comparing both destinations...</span>
+    </div>
+    <div class="compare-value" id="temperatureDifference">--°</div>
+  </div>
+
+  <div class="hourly-wrap">
+    <h3 class="hourly-title" data-t="hourlyTitle">Hurghada · The next hours</h3>
+    <div class="hourly-list" id="hourlyForecast">
+      <div class="hour"><small>--:--</small><span>☀️</span><strong>--°</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <div>
+      <h2 data-t="marineTitle">The Red Sea, beyond the shore.</h2>
+      <p data-t="marineSubtitle">A look at the sea conditions around Hurghada.</p>
+    </div>
+  </div>
+
+  <div class="marine-grid">
+    <article class="card marine-card">
+      <div class="marine-title-row">
+        <h3 data-t="marineConditions">Marine conditions</h3>
+        <span class="coast-label">HURGHADA COAST</span>
+      </div>
+
+      <div class="sea-main">
+        <div class="sea-icon">🌊</div>
+        <div class="sea-temperature">
+          <span id="seaTemperature">--°C</span>
+          <small data-t="seaTempLabel">SEA SURFACE TEMPERATURE</small>
+        </div>
+      </div>
+
+      <div class="sea-stats">
+        <div class="sea-stat"><small data-t="waveHeight">WAVE HEIGHT</small><strong id="waveHeight">-- m</strong></div>
+        <div class="sea-stat"><small data-t="wavePeriod">WAVE PERIOD</small><strong id="wavePeriod">-- s</strong></div>
+        <div class="sea-stat"><small data-t="waveDirection">WAVE DIRECTION</small><strong id="waveDirection">--</strong></div>
+        <div class="sea-stat"><small data-t="coastalWind">COASTAL WIND</small><strong id="coastalWind">--</strong></div>
+      </div>
+
+      <p class="disclaimer" data-t="marineDisclaimer">
+        Marine values are forecast estimates, not a live safety report.
+        Conditions can vary by location and time. Always follow your captain
+        and local authorities.
+      </p>
+    </article>
+
+    <aside class="card insight">
+      <div>
+        <div class="insight-tag" data-t="redSeaMoment">A RED SEA MOMENT</div>
+        <h3 id="seaMoodTitle">Some days are made for the water.</h3>
+        <p id="seaMoodText">
+          Warm water, clear horizons and colourful reefs are waiting to be discovered.
+          Check the conditions and imagine your next Red Sea adventure.
+        </p>
+      </div>
+      <div class="insight-bottom" data-t="dataNote">
+        Forecast information is indicative and may differ from actual conditions.
+        Data refreshes when you open this page.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <div>
+      <h2 data-t="tipsTitle">A little inspiration for your day.</h2>
+      <p data-t="tipsSubtitle">Small details that make a Red Sea holiday even better.</p>
+    </div>
+  </div>
+
+  <div class="tips-grid">
+    <article class="tip">
+      <div class="tip-icon">☀️</div>
+      <h3 data-t="tip1Title">Follow the sunshine</h3>
+      <p data-t="tip1Text">Sun protection, water and a little shade make warm days more enjoyable.</p>
+    </article>
+    <article class="tip">
+      <div class="tip-icon">🐠</div>
+      <h3 data-t="tip2Title">Discover beneath the surface</h3>
+      <p data-t="tip2Text">The Red Sea is famous for its colourful marine life and beautiful coral reefs.</p>
+    </article>
+    <article class="tip">
+      <div class="tip-icon">🏝️</div>
+      <h3 data-t="tip3Title">Make time for the islands</h3>
+      <p data-t="tip3Text">A boat trip can turn an ordinary day into a memorable holiday moment.</p>
+    </article>
+  </div>
+</section>
+
+<section class="experience">
+  <div>
+    <h2 data-t="ctaTitle">Your next story could start in Hurghada.</h2>
+    <p data-t="ctaText">
+      Explore the Red Sea, discover beautiful islands and enjoy unforgettable experiences.
+      Find the trip that feels right for you.
+    </p>
+  </div>
+  <a class="cta" href="../index.html#tours" data-t="ctaButton">EXPLORE OUR EXPERIENCES ↗</a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div><strong>TOURS & EXPERIENCES</strong><br>Hurghada · Red Sea · Egypt</div>
+  <div>HURGHADA LIVE · WEATHER DATA BY OPEN-METEO</div>
+</footer>
+
 </div>
-<div class="h-difference"><div class="h-diffnum" id="hDifference">--°C</div><div class="h-diffcaption" id="hDiffCaption">Temperature difference between your location and Hurghada</div></div>
-<section class="h-sea"><div class="h-sectionlabel" id="hSeaHeading">🌊 RED SEA — HURGHADA MARINE CONDITIONS</div><div class="h-seaTop"><div class="h-seaIcon">🌊</div><div><div class="h-wave"><span id="hWave">--</span> <small>m wave height</small></div><div class="h-seaNote" id="hSeaStatus">Loading marine forecast…</div></div></div>
-<div class="h-miniStats">
-<div class="h-stat"><div class="h-statlabel" id="hSeaTempLabel">Sea surface temperature</div><div class="h-statvalue"><span id="hSeaTemp">--</span>°C</div></div>
-<div class="h-stat"><div class="h-statlabel" id="hPeriodLabel">Wave period</div><div class="h-statvalue"><span id="hWavePeriod">--</span> <small>sec</small></div></div>
-<div class="h-stat"><div class="h-statlabel" id="hSeaWindLabel">Marine wind</div><div class="h-statvalue"><span id="hSeaWind">--</span> <small>km/h</small></div></div>
-<div class="h-stat"><div class="h-statlabel" id="hDirectionLabel">Wave direction</div><div class="h-statvalue"><span id="hWaveDir">--</span></div></div>
-</div><div class="h-outlook"><div class="h-outlookTitle" id="hSnorkelTitle">🤿 SNORKELING OUTLOOK</div><div class="h-outlookText" id="hSnorkelText">Checking forecast conditions…</div></div></section>
-<div class="h-cta"><div><strong id="hCtaTitle">Trade the cold for the Red Sea.</strong><p id="hCtaDesc">Discover boat trips, snorkeling, islands and desert adventures.</p></div><a id="hToursLink" href="../index.html#tours">EXPLORE TOURS →</a></div>
-<div class="h-footer"><div><span class="h-liveDot"></span><span id="hStatus">Connecting to live weather…</span></div><div id="hUpdated">—</div></div>
-<div class="h-disclaimer" id="hDisclaimer">Location is estimated from your IP address and may be inaccurate (for example, when using a VPN). Weather and marine forecasts can change; snorkeling suitability is an informational estimate, not a safety guarantee. Follow local operators and your captain.</div>
-</div></section>
+
 <script>
 (() => {
-  'use strict';
-  const root = document.getElementById('hlive');
-  if (!root || root.dataset.initialized) return;
-  root.dataset.initialized = 'true';
-  const $ = id => document.getElementById(id);
-  const HURGHADA = {lat:27.2579, lon:33.8116, name:'Hurghada'};
-  let lang = 'en', visitor = {lat:null,lon:null,city:'Your location',country:'',countryCode:''}, lastVisitorWeather=null, lastHurghadaWeather=null, lastMarine=null, refreshTimer;
-  const text = {
-    en:{title:'Your weather. Our sunshine.',subtitle:'Compare the weather where you are with Hurghada, Egypt — and see what the Red Sea is doing today.',feels:'Feels like',wind:'Wind',humidity:'Humidity',rain:'Rain chance',loading:'Loading weather…',unknownCity:'Your location',sea:'🌊 RED SEA — HURGHADA MARINE CONDITIONS',seaTemp:'Sea surface temperature',period:'Wave period',seaWind:'Marine wind',direction:'Wave direction',snorkel:'🤿 SNORKELING OUTLOOK',calm:'Relatively calm forecast — may be favorable for snorkeling or boat trips, but confirm with your captain.',medium:'Moderate wave forecast — conditions vary by activity and boat. Check with your operator.',rough:'Higher waves forecast — trips may be uncomfortable or altered. Check with your operator.',unavailable:'Marine forecast unavailable. Please check with your local operator.',diff:'Temperature difference between your location and Hurghada',ctaTitle:'Trade the cold for the Red Sea.',ctaDesc:'Discover boat trips, snorkeling, islands and desert adventures.',cta:'EXPLORE TOURS →',updated:'Updated',connecting:'Connecting to live weather…',live:'Live weather loaded',error:'Some live data could not load. Try refresh.',refresh:'↻ Refresh',disclaimer:'Location is estimated from your IP address and may be inaccurate (for example, when using a VPN). Weather and marine forecasts can change; snorkeling suitability is an informational estimate, not a safety guarantee. Follow local operators and your captain.',clear:'Clear sky',mainly:'Mainly clear',partly:'Partly cloudy',cloudy:'Cloudy',fog:'Fog',drizzle:'Drizzle',rainy:'Rain',showers:'Rain showers',snow:'Snow',storm:'Thunderstorm',unknown:'Unavailable'},
-    de:{title:'Dein Wetter. Unser Sonnenschein.',subtitle:'Vergleiche das Wetter an deinem Standort mit Hurghada und entdecke die aktuellen Bedingungen am Roten Meer.',feels:'Gefühlt',wind:'Wind',humidity:'Luftfeuchtigkeit',rain:'Regenwahrscheinlichkeit',loading:'Wetter wird geladen…',unknownCity:'Dein Standort',sea:'🌊 ROTES MEER — MEERESBEDINGUNGEN HURGHADA',seaTemp:'Wassertemperatur',period:'Wellenperiode',seaWind:'Wind auf dem Meer',direction:'Wellenrichtung',snorkel:'🤿 SCHNORCHEL-AUSBLICK',calm:'Relativ ruhige Prognose — möglicherweise günstig zum Schnorcheln oder für Bootsausflüge. Bitte beim Kapitän bestätigen.',medium:'Mäßige Wellenprognose — Bedingungen hängen von Aktivität und Boot ab. Anbieter fragen.',rough:'Höhere Wellen erwartet — Ausflüge können unruhig sein oder angepasst werden. Anbieter fragen.',unavailable:'Meeresprognose nicht verfügbar. Bitte beim Anbieter nachfragen.',diff:'Temperaturunterschied zwischen deinem Standort und Hurghada',ctaTitle:'Tausch die Kälte gegen das Rote Meer.',ctaDesc:'Entdecke Bootsausflüge, Schnorcheln, Inseln und Wüstenerlebnisse.',cta:'TOUREN ENTDECKEN →',updated:'Aktualisiert',connecting:'Live-Wetter wird geladen…',live:'Live-Wetter geladen',error:'Einige Live-Daten konnten nicht geladen werden. Bitte erneut versuchen.',refresh:'↻ Aktualisieren',disclaimer:'Der Standort wird anhand deiner IP geschätzt und kann ungenau sein (z. B. bei VPN-Nutzung). Wetter- und Meeresprognosen können sich ändern. Die Schnorchel-Einschätzung ist keine Sicherheitsgarantie. Beachte die Anweisungen lokaler Anbieter und des Kapitäns.',clear:'Klar',mainly:'Überwiegend klar',partly:'Teilweise bewölkt',cloudy:'Bewölkt',fog:'Nebel',drizzle:'Nieselregen',rainy:'Regen',showers:'Regenschauer',snow:'Schnee',storm:'Gewitter',unknown:'Nicht verfügbar'}
-  };
-  const tr = k => text[lang][k] || text.en[k] || k;
-  const set = (id,v) => { const el=$(id); if(el) el.textContent = v==null?'—':v; };
-  function weatherText(code){const map={0:'clear',1:'mainly',2:'partly',3:'cloudy',45:'fog',48:'fog',51:'drizzle',53:'drizzle',55:'drizzle',56:'drizzle',57:'drizzle',61:'rainy',63:'rainy',65:'rainy',66:'rainy',67:'rainy',71:'snow',73:'snow',75:'snow',77:'snow',80:'showers',81:'showers',82:'showers',85:'snow',86:'snow',95:'storm',96:'storm',99:'storm'};return tr(map[code] || 'partly');}
-  function iconFor(code){if(code===0)return '☀️';if([1,2].includes(code))return '🌤️';if(code===3)return '☁️';if([45,48].includes(code))return '🌫️';if([51,53,55,56,57].includes(code))return '🌦️';if([61,63,65,66,67,80,81,82].includes(code))return '🌧️';if([71,73,75,77,85,86].includes(code))return '🌨️';if([95,96,99].includes(code))return '⛈️';return '🌤️';}
-  function flag(code){if(!code||code.length!==2)return '🌍';return String.fromCodePoint(...code.toUpperCase().split('').map(c=>127397+c.charCodeAt(0)));}
-  function nearestIndex(times){const now=Date.now();let best=0,delta=Infinity;times.forEach((t,i)=>{const d=Math.abs(new Date(t).getTime()-now);if(d<delta){delta=d;best=i;}});return best;}
-  async function fetchJson(url){const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw new Error('API status '+r.status);return r.json();}
-  async function getVisitorLocation(){try{const d=await fetchJson('https://ipwho.is/');if(d.success===false||!Number.isFinite(Number(d.latitude))||!Number.isFinite(Number(d.longitude)))throw new Error('IP geolocation unavailable');visitor={lat:Number(d.latitude),lon:Number(d.longitude),city:d.city||tr('unknownCity'),country:d.country||'',countryCode:d.country_code||''};}catch(e){visitor={lat: HURGHADA.lat,lon:HURGHADA.lon,city:tr('unknownCity'),country:'',countryCode:''};$('hVisitorCity').title='Could not identify city automatically; showing Hurghada as fallback.';} }
-  async function getWeather(place){const url='https://api.open-meteo.com/v1/forecast?latitude='+encodeURIComponent(place.lat)+'&longitude='+encodeURIComponent(place.lon)+'&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m&hourly=precipitation_probability&timezone=auto';const d=await fetchJson(url),c=d.current||{},hourly=d.hourly||{},rain=hourly.time&&hourly.precipitation_probability?hourly.precipitation_probability[nearestIndex(hourly.time)]:null;return {temp:c.temperature_2m,feels:c.apparent_temperature,wind:c.wind_speed_10m,humidity:c.relative_humidity_2m,rain,code:c.weather_code,unit:d.current_units||{}};}
-  function paintWeather(prefix,w){set(prefix+'Temp',Number.isFinite(w.temp)?Math.round(w.temp):'—');set(prefix+'Feels',Number.isFinite(w.feels)?Math.round(w.feels):'—');set(prefix+'Wind',Number.isFinite(w.wind)?Math.round(w.wind):'—');set(prefix+'Humidity',Number.isFinite(w.humidity)?Math.round(w.humidity):'—');set(prefix+'Rain',Number.isFinite(w.rain)?Math.round(w.rain):'—');set(prefix+'Condition',weatherText(w.code));set(prefix+'Icon',iconFor(w.code));}
-  async function getMarine(){const url='https://marine-api.open-meteo.com/v1/marine?latitude='+HURGHADA.lat+'&longitude='+HURGHADA.lon+'&hourly=wave_height,wave_direction,wave_period,sea_surface_temperature&timezone=Africa%2FCairo&forecast_days=3';const d=await fetchJson(url),h=d.hourly||{};if(!h.time||!h.time.length)throw new Error('Marine hourly data unavailable');const i=nearestIndex(h.time);return {wave:h.wave_height?.[i],direction:h.wave_direction?.[i],period:h.wave_period?.[i],temp:h.sea_surface_temperature?.[i]};}
-  function seaAssessment(wave){if(!Number.isFinite(wave))return tr('unavailable');if(wave<=.5)return tr('calm');if(wave<=1)return tr('medium');return tr('rough');}
-  function direction(deg){if(!Number.isFinite(deg))return tr('unknown');const dirs=lang==='de'?['N','NO','O','SO','S','SW','W','NW']:['N','NE','E','SE','S','SW','W','NW'];return dirs[Math.round(deg/45)%8]+' ('+Math.round(deg)+'°)';}
-  function paintMarine(m){set('hWave',Number.isFinite(m.wave)?m.wave.toFixed(1):'—');set('hSeaTemp',Number.isFinite(m.temp)?m.temp.toFixed(1):'—');set('hWavePeriod',Number.isFinite(m.period)?m.period.toFixed(1):'—');set('hWaveDir',direction(m.direction));set('hSeaStatus',seaAssessment(m.wave));set('hSeaWind',lastHurghadaWeather&&Number.isFinite(lastHurghadaWeather.wind)?Math.round(lastHurghadaWeather.wind):'—');set('hSnorkelText',seaAssessment(m.wave));}
-  function applyLanguage(){root.classList.toggle('hl-de',lang==='de');set('hLang',lang==='en'?'DE 🇩🇪':'EN 🇬🇧');set('hTitle',tr('title'));set('hSubtitle',tr('subtitle'));set('hFeelsLabel',tr('feels'));set('hWindLabel',tr('wind'));set('hHumidityLabel',tr('humidity'));set('hRainLabel',tr('rain'));set('hHFeelsLabel',tr('feels'));set('hHWindLabel',tr('wind'));set('hHHumidityLabel',tr('humidity'));set('hHRainLabel',tr('rain'));set('hSeaHeading',tr('sea'));set('hSeaTempLabel',tr('seaTemp'));set('hPeriodLabel',tr('period'));set('hSeaWindLabel',tr('seaWind'));set('hDirectionLabel',tr('direction'));set('hSnorkelTitle',tr('snorkel'));set('hDiffCaption',tr('diff'));set('hCtaTitle',tr('ctaTitle'));set('hCtaDesc',tr('ctaDesc'));set('hToursLink',tr('cta'));set('hRefresh',tr('refresh'));set('hDisclaimer',tr('disclaimer'));if(lastVisitorWeather)paintWeather('hVisitor',lastVisitorWeather);if(lastHurghadaWeather)paintWeather('hHurghada',lastHurghadaWeather);if(lastMarine)paintMarine(lastMarine);updateDifference();}
-  function updateDifference(){if(!lastVisitorWeather||!lastHurghadaWeather||!Number.isFinite(lastVisitorWeather.temp)||!Number.isFinite(lastHurghadaWeather.temp)){set('hDifference','—');return;}const diff=Math.round(lastHurghadaWeather.temp-lastVisitorWeather.temp);set('hDifference',(diff>0?'+':'')+diff+'°C');}
-  function updateClock(){const now=new Date();set('hUpdated',tr('updated')+': '+now.toLocaleString(lang==='de'?'de-DE':'en-GB',{timeZone:'Africa/Cairo',dateStyle:'medium',timeStyle:'short'})+' (Hurghada)');}
-  async function refreshAll(){set('hStatus',tr('connecting'));$('hStatus').classList.remove('h-error');const tasks=[];if(visitor.lat==null)tasks.push(getVisitorLocation());await Promise.all(tasks);set('hVisitorCity',(visitor.city||tr('unknownCity'))+(visitor.country?', '+visitor.country:''));set('hVisitorFlag',flag(visitor.countryCode));const results=await Promise.allSettled([getWeather(visitor),getWeather(HURGHADA),getMarine()]);if(results[0].status==='fulfilled'){lastVisitorWeather=results[0].value;paintWeather('hVisitor',lastVisitorWeather);}else console.warn('Visitor weather:',results[0].reason);if(results[1].status==='fulfilled'){lastHurghadaWeather=results[1].value;paintWeather('hHurghada',lastHurghadaWeather);}else console.warn('Hurghada weather:',results[1].reason);if(results[2].status==='fulfilled'){lastMarine=results[2].value;paintMarine(lastMarine);}else{set('hSeaStatus',tr('unavailable'));set('hSnorkelText',tr('unavailable'));console.warn('Marine:',results[2].reason);}updateDifference();updateClock();const ok=results.some(r=>r.status==='fulfilled');set('hStatus',ok?tr('live'):tr('error'));if(!ok)$('hStatus').classList.add('h-error');}
-  $('hLang').addEventListener('click',()=>{lang=lang==='en'?'de':'en';applyLanguage();updateClock();});$('hRefresh').addEventListener('click',refreshAll);applyLanguage();refreshAll();refreshTimer=setInterval(refreshAll,20*60*1000);
+"use strict";
+
+const $ = id => document.getElementById(id);
+let language = "en";
+let visitorData = null;
+let hurghadaData = null;
+let marineData = null;
+
+const text = {
+en:{
+ live:"LIVE CONDITIONS",
+ eyebrow:"YOUR WINDOW TO THE RED SEA",
+ intro:"Wherever you are in the world, discover how your weather compares with Hurghada. Explore the Red Sea conditions and let your next holiday begin here.",
+ weatherTitle:"Two places. One beautiful comparison.",
+ weatherSubtitle:"Your local weather, alongside the latest conditions in Hurghada.",
+ yourWeather:"YOUR WEATHER",
+ hurghadaWeather:"HURGHADA, EGYPT",
+ wind:"WIND",humidity:"HUMIDITY",rain:"RAIN CHANCE",localTime:"LOCAL TIME",
+ differenceTitle:"THE TEMPERATURE DIFFERENCE",
+ hourlyTitle:"Hurghada · The next hours",
+ marineTitle:"The Red Sea, beyond the shore.",
+ marineSubtitle:"A look at the sea conditions around Hurghada.",
+ marineConditions:"Marine conditions",
+ seaTempLabel:"SEA SURFACE TEMPERATURE",
+ waveHeight:"WAVE HEIGHT",wavePeriod:"WAVE PERIOD",
+ waveDirection:"WAVE DIRECTION",coastalWind:"COASTAL WIND",
+ marineDisclaimer:"Marine values are forecast estimates, not a live safety report. Conditions can vary by location and time. Always follow your captain and local authorities.",
+ redSeaMoment:"A RED SEA MOMENT",
+ dataNote:"Forecast information is indicative and may differ from actual conditions. Data refreshes when you open this page.",
+ tipsTitle:"A little inspiration for your day.",
+ tipsSubtitle:"Small details that make a Red Sea holiday even better.",
+ tip1Title:"Follow the sunshine",
+ tip1Text:"Sun protection, water and a little shade make warm days more enjoyable.",
+ tip2Title:"Discover beneath the surface",
+ tip2Text:"The Red Sea is famous for its colourful marine life and beautiful coral reefs.",
+ tip3Title:"Make time for the islands",
+ tip3Text:"A boat trip can turn an ordinary day into a memorable holiday moment.",
+ ctaTitle:"Your next story could start in Hurghada.",
+ ctaText:"Explore the Red Sea, discover beautiful islands and enjoy unforgettable experiences. Find the trip that feels right for you.",
+ ctaButton:"EXPLORE OUR EXPERIENCES ↗",
+ feels:"Feels like",loading:"Finding your location...",
+ locationFail:"Your location could not be identified automatically. Check your internet connection and reload the page.",
+ approximate:"Approximate location based on your internet connection.",
+ compareWait:"Waiting for both weather reports...",
+ warmer:"warmer",cooler:"cooler",
+ same:"The temperatures are almost the same.",
+ seaGoodTitle:"The Red Sea is calling.",
+ seaGoodText:"The latest model forecast suggests relatively gentle waves. Conditions can change, so always check locally before heading out.",
+ seaRoughTitle:"A breezier day by the sea.",
+ seaRoughText:"The forecast suggests more movement on the water. Your captain and local operators are the best source for today's decisions.",
+ seaUnknownTitle:"Discover the Red Sea.",
+ seaUnknownText:"Marine information is not available right now. Check again later for the latest model estimates.",
+ rainLow:"Low",rainMedium:"Moderate",rainHigh:"High",
+ forecastError:"Forecast temporarily unavailable."
+},
+de:{
+ live:"LIVE-BEDINGUNGEN",
+ eyebrow:"DEIN FENSTER ZUM ROTEN MEER",
+ intro:"Ganz gleich, wo auf der Welt du bist: Vergleiche dein Wetter mit Hurghada. Entdecke die Bedingungen am Roten Meer und lass deinen nächsten Urlaub hier beginnen.",
+ weatherTitle:"Zwei Orte. Ein schöner Vergleich.",
+ weatherSubtitle:"Das Wetter bei dir und die aktuellen Bedingungen in Hurghada.",
+ yourWeather:"DEIN WETTER",
+ hurghadaWeather:"HURGHADA, ÄGYPTEN",
+ wind:"WIND",humidity:"LUFTFEUCHTIGKEIT",rain:"REGENCHANCE",localTime:"ORTSZEIT",
+ differenceTitle:"DER TEMPERATURUNTERSCHIED",
+ hourlyTitle:"Hurghada · Die nächsten Stunden",
+ marineTitle:"Das Rote Meer – mehr als nur Küste.",
+ marineSubtitle:"Ein Blick auf die Meeresbedingungen rund um Hurghada.",
+ marineConditions:"Meeresbedingungen",
+ seaTempLabel:"WASSERTEMPERATUR AN DER OBERFLÄCHE",
+ waveHeight:"WELLENHÖHE",wavePeriod:"WELLENPERIODE",
+ waveDirection:"WELLENRICHTUNG",coastalWind:"KÜSTENWIND",
+ marineDisclaimer:"Die Meereswerte sind Vorhersageschätzungen und keine aktuelle Sicherheitsmeldung. Die Bedingungen können je nach Ort und Zeit variieren. Bitte beachte immer die Hinweise deines Kapitäns und der örtlichen Behörden.",
+ redSeaMoment:"EIN MOMENT AM ROTEN MEER",
+ dataNote:"Vorhersagen sind Richtwerte und können von den tatsächlichen Bedingungen abweichen. Die Daten werden beim Öffnen dieser Seite aktualisiert.",
+ tipsTitle:"Ein bisschen Inspiration für deinen Tag.",
+ tipsSubtitle:"Kleine Dinge, die deinen Urlaub am Roten Meer noch schöner machen.",
+ tip1Title:"Genieße die Sonne",
+ tip1Text:"Sonnenschutz, Wasser und etwas Schatten machen warme Tage angenehmer.",
+ tip2Title:"Entdecke die Unterwasserwelt",
+ tip2Text:"Das Rote Meer ist für seine bunte Unterwasserwelt und wunderschönen Korallenriffe bekannt.",
+ tip3Title:"Nimm dir Zeit für die Inseln",
+ tip3Text:"Ein Bootsausflug kann aus einem gewöhnlichen Tag einen unvergesslichen Urlaubsmoment machen.",
+ ctaTitle:"Deine nächste Geschichte könnte in Hurghada beginnen.",
+ ctaText:"Entdecke das Rote Meer, wunderschöne Inseln und unvergessliche Erlebnisse. Finde deinen passenden Ausflug.",
+ ctaButton:"ERLEBNISSE ENTDECKEN ↗",
+ feels:"Gefühlt",loading:"Dein Standort wird gesucht...",
+ locationFail:"Dein Standort konnte nicht automatisch erkannt werden. Prüfe deine Internetverbindung und lade die Seite erneut.",
+ approximate:"Ungefährer Standort anhand deiner Internetverbindung.",
+ compareWait:"Warte auf beide Wetterberichte...",
+ warmer:"wärmer",cooler:"kühler",
+ same:"Die Temperaturen sind fast gleich.",
+ seaGoodTitle:"Das Rote Meer ruft.",
+ seaGoodText:"Die aktuelle Modellvorhersage deutet auf relativ ruhige Wellen hin. Die Bedingungen können sich ändern – bitte informiere dich vor Ort.",
+ seaRoughTitle:"Ein windigerer Tag am Meer.",
+ seaRoughText:"Die Vorhersage deutet auf mehr Bewegung im Wasser hin. Dein Kapitän und die örtlichen Anbieter können die Lage am besten einschätzen.",
+ seaUnknownTitle:"Entdecke das Rote Meer.",
+ seaUnknownText:"Meeresdaten sind momentan nicht verfügbar. Schau später noch einmal vorbei.",
+ rainLow:"Gering",rainMedium:"Mittel",rainHigh:"Hoch",
+ forecastError:"Vorhersage vorübergehend nicht verfügbar."
+}
+};
+
+function tr(key){return text[language][key] || text.en[key] || key;}
+
+function setLanguage(lang){
+ language=lang;
+ document.documentElement.lang=lang;
+ document.querySelectorAll("[data-t]").forEach(el=>{
+   const key=el.dataset.t;
+   if(text[lang][key])el.textContent=text[lang][key];
+ });
+ $("languageButton").textContent=lang==="en"?"DE":"EN";
+ if(visitorData)paintWeather("visitor",visitorData);
+ if(hurghadaData)paintWeather("hurghada",hurghadaData);
+ if(hurghadaData)paintHourly(hurghadaData);
+ if(marineData)paintMarine(marineData);
+ updateComparison();
+}
+
+$("languageButton").addEventListener("click",()=>{
+ setLanguage(language==="en"?"de":"en");
+});
+
+async function getJSON(url){
+ const response=await fetch(url);
+ if(!response.ok)throw new Error("Network response error");
+ return response.json();
+}
+
+function weatherDescription(code){
+ const map={
+ 0:["☀️","Clear sky","Klarer Himmel"],
+ 1:["🌤️","Mainly clear","Überwiegend klar"],
+ 2:["⛅","Partly cloudy","Teilweise bewölkt"],
+ 3:["☁️","Cloudy","Bewölkt"],
+ 45:["🌫️","Fog","Nebel"],
+ 48:["🌫️","Rime fog","Reifnebel"],
+ 51:["🌦️","Light drizzle","Leichter Nieselregen"],
+ 53:["🌦️","Drizzle","Nieselregen"],
+ 55:["🌧️","Heavy drizzle","Starker Nieselregen"],
+ 61:["🌧️","Light rain","Leichter Regen"],
+ 63:["🌧️","Rain","Regen"],
+ 65:["🌧️","Heavy rain","Starker Regen"],
+ 71:["❄️","Light snow","Leichter Schneefall"],
+ 73:["❄️","Snow","Schneefall"],
+ 75:["❄️","Heavy snow","Starker Schneefall"],
+ 80:["🌦️","Rain showers","Regenschauer"],
+ 81:["🌧️","Rain showers","Regenschauer"],
+ 82:["🌧️","Heavy showers","Starke Regenschauer"],
+ 95:["⛈️","Thunderstorm","Gewitter"],
+ 96:["⛈️","Thunderstorm with hail","Gewitter mit Hagel"],
+ 99:["⛈️","Thunderstorm with hail","Gewitter mit Hagel"]
+ };
+ const item=map[code]||["🌤️","Variable","Wechselhaft"];
+ return {icon:item[0],condition:item[language==="en"?1:2]};
+}
+
+function clock(timezone){
+ try{
+  return new Intl.DateTimeFormat(language==="en"?"en-GB":"de-DE",{
+   hour:"2-digit",minute:"2-digit",timeZone:timezone
+  }).format(new Date());
+ }catch{return "--";}
+}
+
+function currentRain(data){
+ const times=data.hourly?.time||[];
+ const values=data.hourly?.precipitation_probability||[];
+ const now=Date.now();
+ let index=-1;
+ for(let i=0;i<times.length;i++){
+  if(new Date(times[i]).getTime()>=now){index=i;break;}
+ }
+ return index>=0?values[index]:null;
+}
+
+function paintWeather(prefix,data){
+ const c=data.current;
+ if(!c)return;
+ const w=weatherDescription(c.weather_code);
+ $(prefix+"Icon").textContent=w.icon;
+ $(prefix+"Temp").textContent=Math.round(c.temperature_2m)+"°";
+ $(prefix+"Condition").textContent=w.condition;
+ $(prefix+"Feels").textContent=tr("feels")+" "+Math.round(c.apparent_temperature)+"°";
+ $(prefix+"Wind").textContent=Math.round(c.wind_speed_10m)+" km/h";
+ $(prefix+"Humidity").textContent=Math.round(c.relative_humidity_2m)+"%";
+ const rain=currentRain(data);
+ $(prefix+"Rain").textContent=rain==null?"--":Math.round(rain)+"%";
+ $(prefix+"Clock").textContent=clock(data.timezone);
+}
+
+async function getForecast(lat,lon){
+ const url=
+ "https://api.open-meteo.com/v1/forecast"+
+ "?latitude="+lat+
+ "&longitude="+lon+
+ "&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m"+
+ "&hourly=temperature_2m,precipitation_probability,weather_code"+
+ "&forecast_days=2&timezone=auto";
+ return getJSON(url);
+}
+
+async function loadVisitor(){
+ $("visitorCity").textContent=tr("loading");
+ try{
+  const geo=await getJSON("https://ipwho.is/");
+  if(!geo.success || !Number.isFinite(Number(geo.latitude)) ||
+     !Number.isFinite(Number(geo.longitude)))throw new Error("Location unavailable");
+
+  const city=[geo.city,geo.region,geo.country].filter(Boolean);
+  $("visitorCity").textContent=city.length?city.join(", "):"Your location";
+
+  const data=await getForecast(geo.latitude,geo.longitude);
+  visitorData=data;
+  paintWeather("visitor",data);
+  $("visitorStatus").textContent=tr("approximate");
+  return data;
+ }catch(error){
+  $("visitorCity").textContent=language==="en"?"Location unavailable":"Standort nicht verfügbar";
+  $("visitorTemp").textContent="--°";
+  $("visitorCondition").textContent=tr("forecastError");
+  $("visitorFeels").textContent="";
+  $("visitorStatus").innerHTML='<span class="error">'+tr("locationFail")+'</span>';
+  visitorData=null;
+  return null;
+ }
+}
+
+async function loadHurghada(){
+ const data=await getForecast(27.2579,33.8116);
+ hurghadaData=data;
+ paintWeather("hurghada",data);
+ return data;
+}
+
+function paintHourly(data){
+ const times=data.hourly?.time||[];
+ const temps=data.hourly?.temperature_2m||[];
+ const codes=data.hourly?.weather_code||[];
+ const rain=data.hourly?.precipitation_probability||[];
+ const now=Date.now();
+ const upcoming=[];
+ for(let i=0;i<times.length;i++){
+  if(new Date(times[i]).getTime()>=now && upcoming.length<6)upcoming.push(i);
+ }
+ if(!upcoming.length){
+  $("hourlyForecast").textContent="--";
+  return;
+ }
+ $("hourlyForecast").innerHTML=upcoming.map(i=>{
+  const d=new Date(times[i]);
+  const time=d.toLocaleTimeString(language==="en"?"en-GB":"de-DE",{hour:"2-digit",minute:"2-digit"});
+  const w=weatherDescription(codes[i]);
+  const rainText=rain[i]==null?"--":Math.round(rain[i])+"%";
+  return `<div class="hour">
+   <small>${time}</small>
+   <span>${w.icon}</span>
+   <strong>${Math.round(temps[i])}°</strong>
+   <em>☂ ${rainText}</em>
+  </div>`;
+ }).join("");
+}
+
+async function loadMarine(){
+ const url=
+ "https://marine-api.open-meteo.com/v1/marine"+
+ "?latitude=27.2579&longitude=33.8116"+
+ "&current=wave_height,wave_period,wave_direction,sea_surface_temperature"+
+ "&hourly=wave_height,wave_period,wave_direction,sea_surface_temperature"+
+ "&forecast_days=1&timezone=Africa%2FCairo";
+ try{
+  const data=await getJSON(url);
+  marineData=data;
+  paintMarine(data);
+  return data;
+ }catch(error){
+  marineData=null;
+  ["seaTemperature","waveHeight","wavePeriod","waveDirection","coastalWind"]
+   .forEach(id=>$(id).textContent="--");
+  updateSeaMood(null);
+  return null;
+ }
+}
+
+function paintMarine(data){
+ const c=data.current||{};
+ $("seaTemperature").textContent=c.sea_surface_temperature==null
+  ?"--°C":Number(c.sea_surface_temperature).toFixed(1)+"°C";
+ $("waveHeight").textContent=c.wave_height==null
+  ?"-- m":Number(c.wave_height).toFixed(1)+" m";
+ $("wavePeriod").textContent=c.wave_period==null
+  ?"-- s":Number(c.wave_period).toFixed(1)+" s";
+ $("waveDirection").textContent=c.wave_direction==null
+  ?"--":Math.round(c.wave_direction)+"°";
+
+ // Coastal wind is taken from Hurghada's weather forecast, not marine data.
+ $("coastalWind").textContent=hurghadaData?.current?.wind_speed_10m==null
+  ?"--":Math.round(hurghadaData.current.wind_speed_10m)+" km/h";
+
+ updateSeaMood(c);
+}
+
+function updateSeaMood(marine){
+ if(!marine || marine.wave_height==null){
+  $("seaMoodTitle").textContent=tr("seaUnknownTitle");
+  $("seaMoodText").textContent=tr("seaUnknownText");
+  return;
+ }
+ if(marine.wave_height<=0.5){
+  $("seaMoodTitle").textContent=tr("seaGoodTitle");
+  $("seaMoodText").textContent=tr("seaGoodText");
+ }else{
+  $("seaMoodTitle").textContent=tr("seaRoughTitle");
+  $("seaMoodText").textContent=tr("seaRoughText");
+ }
+}
+
+function updateComparison(){
+ if(!visitorData?.current || !hurghadaData?.current){
+  $("temperatureDifference").textContent="--°";
+  $("comparisonMessage").textContent=tr("compareWait");
+  return;
+ }
+ const local=visitorData.current.temperature_2m;
+ const hurghada=hurghadaData.current.temperature_2m;
+ const difference=Math.round(hurghada-local);
+ $("temperatureDifference").textContent=Math.abs(difference)+"°";
+
+ if(Math.abs(difference)<=1){
+  $("comparisonMessage").textContent=tr("same");
+ }else{
+  const word=difference>0?tr("warmer"):tr("cooler");
+  $("comparisonMessage").textContent=
+   language==="en"
+    ? "Hurghada is "+Math.abs(difference)+"° "+word+" than your location."
+    : "In Hurghada ist es "+Math.abs(difference)+"° "+word+" als bei dir.";
+ }
+}
+
+async function init(){
+ const now=new Date();
+ $("updatedTime").textContent=
+  (language==="en"?"UPDATED ":"AKTUALISIERT ")+
+  now.toLocaleTimeString(language==="en"?"en-GB":"de-DE",{
+   hour:"2-digit",minute:"2-digit"
+  });
+
+ const results=await Promise.allSettled([
+  loadVisitor(),
+  loadHurghada(),
+  loadMarine()
+ ]);
+
+ if(results[1].status==="fulfilled" && hurghadaData){
+  paintHourly(hurghadaData);
+  if(marineData)paintMarine(marineData);
+ }
+ updateComparison();
+}
+
+init();
 })();
 </script>
 </body>
