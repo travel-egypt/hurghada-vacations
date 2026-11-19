@@ -1,0 +1,600 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071e2c">
+<meta name="description" content="Your offline-friendly Hurghada travel pocket guide by Atlantis Tours and Experiences.">
+<title>Hurghada Pocket Guide | Atlantis Tours and Experiences</title>
+<link rel="manifest" href="../manifest.webmanifest">
+<style>
+:root{
+  --navy:#071e2c;--navy2:#10384a;--teal:#087e89;
+  --aqua:#a8e9e1;--gold:#d8b77b;--paper:#f3f7f7;
+  --white:#fff;--ink:#102d3a;--muted:#71858d;
+  --line:#e2ebed;--green:#16836b;
+  --shadow:0 12px 35px rgba(7,30,44,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+button,a{font:inherit}
+a{text-decoration:none}
+button{cursor:pointer}
+.top{
+  background:var(--navy);color:white;padding:14px 5%;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.brand{display:flex;align-items:center;gap:11px;color:white}
+.brand-mark{
+  width:42px;height:42px;border:1px solid #4a7c83;
+  border-radius:14px;display:grid;place-items:center;
+  color:var(--aqua);font-size:23px;
+}
+.brand-name{font-size:12px;font-weight:800;letter-spacing:.04em}
+.brand-tag{display:block;color:#9cb9c2;font-size:9px;letter-spacing:.16em;margin-top:4px}
+.actions{display:flex;gap:8px;align-items:center}
+.lang{display:flex;gap:3px;padding:4px;border-radius:30px;background:#ffffff12}
+.lang button{
+  border:0;background:transparent;color:#c4d5da;
+  border-radius:20px;padding:8px 11px;font-size:10px;font-weight:800;
+}
+.lang button.active{background:var(--aqua);color:var(--navy)}
+.install{
+  border:1px solid #6a9399;background:#ffffff0c;color:white;
+  border-radius:24px;padding:9px 13px;font-size:10px;font-weight:800;
+}
+.install:hover{background:#ffffff20}
+.hero{
+  color:white;background:
+  linear-gradient(105deg,rgba(4,24,36,.96),rgba(6,47,59,.86)),
+  radial-gradient(circle at 85% 30%,#168b91,transparent 40%);
+  position:relative;overflow:hidden;
+}
+.hero:after{
+  content:"";position:absolute;width:340px;height:340px;
+  border:1px solid #ffffff18;border-radius:50%;
+  right:-110px;top:-160px;
+  box-shadow:0 0 0 35px #ffffff08,0 0 0 75px #ffffff06;
+}
+.hero-inner{width:min(1120px,90%);margin:auto;padding:65px 0 60px;position:relative;z-index:1}
+.eyebrow{color:var(--aqua);font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+h1{
+  max-width:720px;margin:16px 0 13px;
+  font-size:clamp(38px,6vw,66px);line-height:1.04;letter-spacing:-.05em;
+}
+h1 span{color:var(--aqua)}
+.hero p{max-width:610px;color:#d0e0e4;font-size:14px;line-height:1.8;margin:0}
+.hero-note{
+  display:inline-flex;gap:9px;align-items:center;
+  margin-top:23px;padding:10px 14px;border-radius:30px;
+  border:1px solid #ffffff30;background:#ffffff0c;
+  color:#dcebed;font-size:10px;
+}
+.container{width:min(1120px,90%);margin:auto}
+.section{padding:47px 0}
+.section-head{margin-bottom:20px}
+.kicker{color:var(--teal);font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+h2{font-size:clamp(24px,3.5vw,34px);letter-spacing:-.04em;margin:8px 0}
+.intro{color:var(--muted);font-size:12px;line-height:1.8;margin:0;max-width:680px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.card{
+  background:white;border:1px solid var(--line);border-radius:20px;
+  padding:22px;box-shadow:var(--shadow);
+}
+.card-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.card-icon{
+  width:43px;height:43px;border-radius:14px;
+  display:grid;place-items:center;background:#eaf5f4;font-size:22px;
+}
+.card h3{font-size:16px;margin:0;letter-spacing:-.02em}
+.card-sub{font-size:10px;color:var(--muted);margin-top:4px}
+.emergency-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.emergency{
+  background:#fff;border:1px solid var(--line);border-radius:16px;
+  padding:16px 10px;text-align:center;
+}
+.emergency strong{display:block;font-size:25px;color:var(--navy);letter-spacing:-.04em}
+.emergency span{display:block;font-size:10px;color:var(--muted);margin:5px 0 11px}
+.call{
+  display:inline-block;background:#e8f5f1;color:#14745f;
+  border-radius:20px;padding:7px 12px;font-size:10px;font-weight:800;
+}
+.call:hover{background:#d6eee7}
+.notice{
+  margin-top:13px;padding:13px 15px;border-radius:12px;
+  background:#fff8e9;color:#79633b;font-size:10px;line-height:1.7;
+}
+.phrases{display:grid;gap:9px}
+.phrase{
+  display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;
+  border-bottom:1px solid var(--line);padding:9px 0;
+}
+.phrase:last-child{border:0}
+.phrase-ar{font-size:19px;font-weight:800;color:var(--navy);direction:rtl;text-align:right}
+.phrase-meaning{font-size:11px;color:var(--muted);margin-top:4px}
+.copy{
+  border:1px solid var(--line);background:#f7faf9;
+  color:var(--teal);border-radius:20px;padding:8px 11px;
+  font-size:10px;font-weight:800;white-space:nowrap;
+}
+.copy:hover{background:#eaf5f4}
+.tip-list{display:grid;gap:12px}
+.tip{display:flex;gap:11px;align-items:flex-start}
+.tip-icon{font-size:19px;flex:0 0 25px}
+.tip strong{display:block;font-size:12px;margin-bottom:4px}
+.tip p{font-size:11px;line-height:1.7;color:var(--muted);margin:0}
+.quick-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+.quick-links a{
+  padding:9px 12px;border-radius:22px;
+  border:1px solid var(--line);color:var(--teal);
+  font-size:10px;font-weight:800;background:#fbfdfd;
+}
+.quick-links a:hover{background:#eaf5f4}
+.checklist{display:grid;gap:10px}
+.check{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:11px;color:#506771;line-height:1.6;
+}
+.check input{accent-color:var(--teal);margin-top:2px;width:16px;height:16px}
+.offline-banner{
+  background:linear-gradient(120deg,#0a3447,#087d85);
+  color:white;border-radius:22px;padding:25px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;box-shadow:var(--shadow);
+}
+.offline-banner h3{margin:0 0 7px;font-size:18px}
+.offline-banner p{margin:0;color:#c8e1e3;font-size:11px;line-height:1.7}
+.offline-state{font-size:10px;color:#d8f2ed;margin-top:10px}
+footer{background:#041722;color:#a9bdc4;text-align:center;padding:25px 12px;font-size:10px;line-height:1.9}
+footer strong{color:white}
+.toast{
+  position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);
+  background:#092b3b;color:white;padding:12px 18px;
+  border-radius:30px;font-size:11px;opacity:0;pointer-events:none;
+  transition:.25s;z-index:20;box-shadow:var(--shadow);
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.small-note{font-size:10px;color:var(--muted);line-height:1.7;margin-top:12px}
+@media(max-width:720px){
+  .grid{grid-template-columns:1fr}
+  .emergency-grid{grid-template-columns:repeat(2,1fr)}
+  .offline-banner{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:440px){
+  .top{padding:12px 4%}
+  .brand-name{font-size:9px}
+  .brand-tag{font-size:7px}
+  .brand-mark{width:35px;height:35px}
+  .install{padding:8px 9px;font-size:9px}
+  .lang button{padding:7px 8px}
+  .hero-inner{padding:52px 0}
+  .section{padding:35px 0}
+  .card{padding:18px}
+}
+</style>
+</head>
+
+<body>
+<header class="top">
+  <a class="brand" href="../index.html">
+    <span class="brand-mark">✦</span>
+    <span>
+      <span class="brand-name">ATLANTIS TOURS AND EXPERIENCES</span>
+      <span class="brand-tag">YOUR HURGHADA COMPANION</span>
+    </span>
+  </a>
+  <div class="actions">
+    <div class="lang">
+      <button id="enBtn" class="active" onclick="setLang('en')">EN</button>
+      <button id="deBtn" onclick="setLang('de')">DE</button>
+    </div>
+    <button class="install" id="installBtn" onclick="installApp()" data-t="install">＋ INSTALL</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow" data-t="eyebrow">YOUR POCKET GUIDE TO HURGHADA</div>
+    <h1 data-t-html="heroTitle">Explore Hurghada.<br><span>Feel at Home.</span></h1>
+    <p data-t="heroText">Useful local information, essential phrases and emergency contacts — all in one simple travel companion.</p>
+    <div class="hero-note">📱 <span data-t="heroNote">Save this guide and keep useful information close.</span></div>
+  </div>
+</section>
+
+<main class="container">
+
+<section class="section">
+  <div class="section-head">
+    <div class="kicker" data-t="emergencyKicker">IMPORTANT NUMBERS</div>
+    <h2 data-t="emergencyTitle">Emergency Contacts in Egypt</h2>
+    <p class="intro" data-t="emergencyIntro">Keep these numbers handy during your stay. Tap a number to call from your phone.</p>
+  </div>
+
+  <div class="emergency-grid">
+    <div class="emergency">
+      <strong>123</strong><span data-t="ambulance">Ambulance</span>
+      <a class="call" href="tel:123" data-t="callNow">CALL NOW</a>
+    </div>
+    <div class="emergency">
+      <strong>122</strong><span data-t="police">Police</span>
+      <a class="call" href="tel:122" data-t="callNow">CALL NOW</a>
+    </div>
+    <div class="emergency">
+      <strong>180</strong><span data-t="fire">Fire service</span>
+      <a class="call" href="tel:180" data-t="callNow">CALL NOW</a>
+    </div>
+    <div class="emergency">
+      <strong>126</strong><span data-t="touristPolice">Tourist Police</span>
+      <a class="call" href="tel:126" data-t="callNow">CALL NOW</a>
+    </div>
+  </div>
+  <div class="notice" data-t="emergencyNotice">For a serious emergency, contact the relevant local service. If you need help communicating, ask your hotel reception or tour representative to assist. Numbers are provided as a helpful reference.</div>
+  <div class="quick-links">
+    <a href="https://www.experienceegypt.eg/en/UsefulInfo" target="_blank" rel="noopener" data-t="officialInfo">Official Egypt travel information ↗</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="kicker" data-t="phrasesKicker">SPEAK LIKE A LOCAL</div>
+    <h2 data-t="phrasesTitle">A Few Useful Egyptian Arabic Phrases</h2>
+    <p class="intro" data-t="phrasesIntro">Tap the copy button to copy the Arabic phrase and show it to someone.</p>
+  </div>
+
+  <div class="card">
+    <div class="phrases">
+      <div class="phrase">
+        <div><div class="phrase-ar">أهلاً وسهلاً</div><div class="phrase-meaning" data-t="phraseWelcome">Hello / Welcome</div></div>
+        <button class="copy" onclick="copyText('أهلاً وسهلاً',this)" data-t="copy">COPY</button>
+      </div>
+      <div class="phrase">
+        <div><div class="phrase-ar">بكام ده؟</div><div class="phrase-meaning" data-t="phrasePrice">How much is this?</div></div>
+        <button class="copy" onclick="copyText('بكام ده؟',this)" data-t="copy">COPY</button>
+      </div>
+      <div class="phrase">
+        <div><div class="phrase-ar">شكراً</div><div class="phrase-meaning" data-t="phraseThanks">Thank you</div></div>
+        <button class="copy" onclick="copyText('شكراً',this)" data-t="copy">COPY</button>
+      </div>
+      <div class="phrase">
+        <div><div class="phrase-ar">من فضلك</div><div class="phrase-meaning" data-t="phrasePlease">Please</div></div>
+        <button class="copy" onclick="copyText('من فضلك',this)" data-t="copy">COPY</button>
+      </div>
+      <div class="phrase">
+        <div><div class="phrase-ar">فين ...؟</div><div class="phrase-meaning" data-t="phraseWhere">Where is ...?</div></div>
+        <button class="copy" onclick="copyText('فين ...؟',this)" data-t="copy">COPY</button>
+      </div>
+      <div class="phrase">
+        <div><div class="phrase-ar">ممكن تساعدني؟</div><div class="phrase-meaning" data-t="phraseHelp">Can you help me?</div></div>
+        <button class="copy" onclick="copyText('ممكن تساعدني؟',this)" data-t="copy">COPY</button>
+      </div>
+      <div class="phrase">
+        <div><div class="phrase-ar">لا، شكراً</div><div class="phrase-meaning" data-t="phraseNo">No, thank you</div></div>
+        <button class="copy" onclick="copyText('لا، شكراً',this)" data-t="copy">COPY</button>
+      </div>
+      <div class="phrase">
+        <div><div class="phrase-ar">الحساب من فضلك</div><div class="phrase-meaning" data-t="phraseBill">The bill, please</div></div>
+        <button class="copy" onclick="copyText('الحساب من فضلك',this)" data-t="copy">COPY</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="kicker" data-t="transportKicker">GETTING AROUND</div>
+    <h2 data-t="transportTitle">Taxis & Local Transport</h2>
+    <p class="intro" data-t="transportIntro">A few simple habits can make getting around Hurghada easier.</p>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <div class="card-top"><div class="card-icon">🚕</div><div><h3 data-t="taxiTitle">Before taking a taxi</h3><div class="card-sub" data-t="taxiSub">Agree clearly before the ride</div></div></div>
+      <div class="tip-list">
+        <div class="tip"><span class="tip-icon">✓</span><div><strong data-t="taxi1Title">Confirm the total fare</strong><p data-t="taxi1">Agree on the full price and currency before getting in, unless the meter is being used.</p></div></div>
+        <div class="tip"><span class="tip-icon">✓</span><div><strong data-t="taxi2Title">Clarify the destination</strong><p data-t="taxi2">Show the hotel or destination name on your phone, and check the route before departure.</p></div></div>
+        <div class="tip"><span class="tip-icon">✓</span><div><strong data-t="taxi3Title">Keep small notes</strong><p data-t="taxi3">Carry some smaller Egyptian-pound notes for everyday purchases and transport.</p></div></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="card-icon">💳</div><div><h3 data-t="moneyTitle">Money & Shopping</h3><div class="card-sub" data-t="moneySub">Simple ways to avoid confusion</div></div></div>
+      <div class="tip-list">
+        <div class="tip"><span class="tip-icon">✓</span><div><strong data-t="money1Title">Check the currency</strong><p data-t="money1">Confirm whether a quoted price is in Egyptian pounds, euros or another currency.</p></div></div>
+        <div class="tip"><span class="tip-icon">✓</span><div><strong data-t="money2Title">Agree before buying</strong><p data-t="money2">For market goods and services without displayed prices, agree on the price before accepting.</p></div></div>
+        <div class="tip"><span class="tip-icon">✓</span><div><strong data-t="money3Title">Use trusted exchange services</strong><p data-t="money3">Exchange money through banks or licensed exchange offices and keep your receipt.</p></div></div>
+      </div>
+    </article>
+  </div>
+  <p class="small-note" data-t="priceNote">We intentionally do not publish fixed taxi or shopping prices here because fares and prices change. Confirm the current amount before you agree.</p>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="kicker" data-t="mobileKicker">STAY CONNECTED</div>
+    <h2 data-t="mobileTitle">SIM Cards & Mobile Internet</h2>
+    <p class="intro" data-t="mobileIntro">A local SIM can be useful for maps, messaging and contacting your hotel or tour operator.</p>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <div class="card-top"><div class="card-icon">📶</div><div><h3 data-t="simTitle">Getting a local SIM</h3><div class="card-sub" data-t="simSub">Choose an official provider</div></div></div>
+      <div class="tip-list">
+        <div class="tip"><span class="tip-icon">1</span><div><strong data-t="sim1Title">Visit an official operator counter</strong><p data-t="sim1">Look for an official mobile-network shop or airport counter rather than an unverified street seller.</p></div></div>
+        <div class="tip"><span class="tip-icon">2</span><div><strong data-t="sim2Title">Bring your passport</strong><p data-t="sim2">Ask the provider which identification documents are required to register and activate your SIM.</p></div></div>
+        <div class="tip"><span class="tip-icon">3</span><div><strong data-t="sim3Title">Check the package details</strong><p data-t="sim3">Confirm the data allowance, validity period, local minutes and total price before paying.</p></div></div>
+        <div class="tip"><span class="tip-icon">4</span><div><strong data-t="sim4Title">Test before leaving</strong><p data-t="sim4">Make sure mobile data works and keep the receipt and provider details.</p></div></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-top"><div class="card-icon">📱</div><div><h3 data-t="phoneTitle">Before you use your phone</h3><div class="card-sub" data-t="phoneSub">Avoid unexpected costs</div></div></div>
+      <div class="tip-list">
+        <div class="tip"><span class="tip-icon">✓</span><div><strong data-t="phone1Title">Check roaming charges</strong><p data-t="phone1">If you keep your home SIM active, check international roaming rates with your home provider.</p></div></div>
+        <div class="tip"><span class="tip-icon">✓</span><div><strong data-t="phone2Title">Download offline maps</strong><p data-t="phone2">Save the Hurghada area in your map app before leaving Wi-Fi.</p></div></div>
+        <div class="tip"><span class="tip-icon">✓</span><div><strong data-t="phone3Title">Keep important details</strong><p data-t="phone3">Save your hotel address, travel insurance details and tour contact information offline.</p></div></div>
+      </div>
+      <div class="quick-links">
+        <a href="https://www.orange.eg/" target="_blank" rel="noopener">Orange Egypt ↗</a>
+        <a href="https://www.etisalat.eg/" target="_blank" rel="noopener">e& Egypt ↗</a>
+        <a href="https://te.eg/" target="_blank" rel="noopener">WE ↗</a>
+        <a href="https://web.vodafone.com.eg/" target="_blank" rel="noopener">Vodafone ↗</a>
+      </div>
+    </article>
+  </div>
+  <p class="small-note" data-t="simNote">SIM availability, registration rules and package prices may change. Confirm current requirements directly with the mobile operator.</p>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="kicker" data-t="seaKicker">SUN, SEA & EXCURSIONS</div>
+    <h2 data-t="seaTitle">A Few Smart Travel Habits</h2>
+    <p class="intro" data-t="seaIntro">Enjoy your time in Hurghada while keeping the essentials in mind.</p>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <div class="card-top"><div class="card-icon">☀️</div><div><h3 data-t="sunTitle">Sun & Beach</h3><div class="card-sub" data-t="sunSub">Take care in the Egyptian sun</div></div></div>
+      <div class="tip-list">
+        <div class="tip"><span class="tip-icon">✓</span><div><strong data-t="sun1Title">Stay hydrated</strong><p data-t="sun1">Carry drinking water, especially during outdoor activities and boat trips.</p></div></div>
+        <div class="tip"><span class="tip-icon">✓</span><div><strong data-t="sun2Title">Use sun protection</strong><p data-t="sun2">Wear suitable sun protection, sunglasses and a hat. Take breaks in the shade.</p></div></div>
+        <div class="tip"><span class="tip-icon">✓</span><div><strong data-t="sun3Title">Respect the reef</strong><p data-t="sun3">Do not stand on, touch or collect coral. Follow your guide's instructions in the water.</p></div></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-top"><div class="card-icon">🧳</div><div><h3 data-t="documentsTitle">Keep Your Essentials Safe</h3><div class="card-sub" data-t="documentsSub">A quick personal checklist</div></div></div>
+      <div class="checklist">
+        <label class="check"><input type="checkbox"><span data-t="check1">I have my hotel name and address saved.</span></label>
+        <label class="check"><input type="checkbox"><span data-t="check2">I have a copy of my passport stored securely.</span></label>
+        <label class="check"><input type="checkbox"><span data-t="check3">I have my travel insurance details available.</span></label>
+        <label class="check"><input type="checkbox"><span data-t="check4">I have saved my tour and transfer contact details.</span></label>
+        <label class="check"><input type="checkbox"><span data-t="check5">I have saved important information for offline use.</span></label>
+      </div>
+      <p class="small-note" data-t="privacyNote">Keep original travel documents secure. Share copies only when necessary with trusted providers.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="offline-banner">
+    <div>
+      <h3 data-t="offlineTitle">Your guide. Even without internet.</h3>
+      <p data-t="offlineText">After your first successful visit while online, this guide can be available offline on this device. Install it for easier access from your home screen.</p>
+      <div class="offline-state" id="offlineState" data-t="checkingOffline">Checking offline availability...</div>
+    </div>
+    <button class="install" onclick="installApp()" data-t="installGuide">＋ ADD TO HOME SCREEN</button>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <strong>ATLANTIS TOURS AND EXPERIENCES</strong><br>
+  <span data-t="footerText">Your Hurghada companion · Hurghada, Egypt</span><br>
+  <span data-t="footerDisclaimer">Travel information is general guidance. Always confirm current details with official providers.</span><br>
+  © <span id="year"></span> Atlantis Tours and Experiences
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const translations={
+en:{
+install:"＋ INSTALL",eyebrow:"YOUR POCKET GUIDE TO HURGHADA",
+heroTitle:'Explore Hurghada.<br><span>Feel at Home.</span>',
+heroText:"Useful local information, essential phrases and emergency contacts — all in one simple travel companion.",
+heroNote:"Save this guide and keep useful information close.",
+emergencyKicker:"IMPORTANT NUMBERS",emergencyTitle:"Emergency Contacts in Egypt",
+emergencyIntro:"Keep these numbers handy during your stay. Tap a number to call from your phone.",
+ambulance:"Ambulance",police:"Police",fire:"Fire service",touristPolice:"Tourist Police",callNow:"CALL NOW",
+emergencyNotice:"For a serious emergency, contact the relevant local service. If you need help communicating, ask your hotel reception or tour representative to assist. Numbers are provided as a helpful reference.",
+officialInfo:"Official Egypt travel information ↗",
+phrasesKicker:"SPEAK LIKE A LOCAL",phrasesTitle:"A Few Useful Egyptian Arabic Phrases",
+phrasesIntro:"Tap the copy button to copy the Arabic phrase and show it to someone.",
+phraseWelcome:"Hello / Welcome",phrasePrice:"How much is this?",phraseThanks:"Thank you",phrasePlease:"Please",phraseWhere:"Where is ...?",phraseHelp:"Can you help me?",phraseNo:"No, thank you",phraseBill:"The bill, please",copy:"COPY",
+transportKicker:"GETTING AROUND",transportTitle:"Taxis & Local Transport",transportIntro:"A few simple habits can make getting around Hurghada easier.",
+taxiTitle:"Before taking a taxi",taxiSub:"Agree clearly before the ride",
+taxi1Title:"Confirm the total fare",taxi1:"Agree on the full price and currency before getting in, unless the meter is being used.",
+taxi2Title:"Clarify the destination",taxi2:"Show the hotel or destination name on your phone, and check the route before departure.",
+taxi3Title:"Keep small notes",taxi3:"Carry some smaller Egyptian-pound notes for everyday purchases and transport.",
+moneyTitle:"Money & Shopping",moneySub:"Simple ways to avoid confusion",
+money1Title:"Check the currency",money1:"Confirm whether a quoted price is in Egyptian pounds, euros or another currency.",
+money2Title:"Agree before buying",money2:"For market goods and services without displayed prices, agree on the price before accepting.",
+money3Title:"Use trusted exchange services",money3:"Exchange money through banks or licensed exchange offices and keep your receipt.",
+priceNote:"We intentionally do not publish fixed taxi or shopping prices here because fares and prices change. Confirm the current amount before you agree.",
+mobileKicker:"STAY CONNECTED",mobileTitle:"SIM Cards & Mobile Internet",mobileIntro:"A local SIM can be useful for maps, messaging and contacting your hotel or tour operator.",
+simTitle:"Getting a local SIM",simSub:"Choose an official provider",
+sim1Title:"Visit an official operator counter",sim1:"Look for an official mobile-network shop or airport counter rather than an unverified street seller.",
+sim2Title:"Bring your passport",sim2:"Ask the provider which identification documents are required to register and activate your SIM.",
+sim3Title:"Check the package details",sim3:"Confirm the data allowance, validity period, local minutes and total price before paying.",
+sim4Title:"Test before leaving",sim4:"Make sure mobile data works and keep the receipt and provider details.",
+phoneTitle:"Before you use your phone",phoneSub:"Avoid unexpected costs",
+phone1Title:"Check roaming charges",phone1:"If you keep your home SIM active, check international roaming rates with your home provider.",
+phone2Title:"Download offline maps",phone2:"Save the Hurghada area in your map app before leaving Wi-Fi.",
+phone3Title:"Keep important details",phone3:"Save your hotel address, travel insurance details and tour contact information offline.",
+simNote:"SIM availability, registration rules and package prices may change. Confirm current requirements directly with the mobile operator.",
+seaKicker:"SUN, SEA & EXCURSIONS",seaTitle:"A Few Smart Travel Habits",seaIntro:"Enjoy your time in Hurghada while keeping the essentials in mind.",
+sunTitle:"Sun & Beach",sunSub:"Take care in the Egyptian sun",
+sun1Title:"Stay hydrated",sun1:"Carry drinking water, especially during outdoor activities and boat trips.",
+sun2Title:"Use sun protection",sun2:"Wear suitable sun protection, sunglasses and a hat. Take breaks in the shade.",
+sun3Title:"Respect the reef",sun3:"Do not stand on, touch or collect coral. Follow your guide's instructions in the water.",
+documentsTitle:"Keep Your Essentials Safe",documentsSub:"A quick personal checklist",
+check1:"I have my hotel name and address saved.",check2:"I have a copy of my passport stored securely.",check3:"I have my travel insurance details available.",check4:"I have saved my tour and transfer contact details.",check5:"I have saved important information for offline use.",
+privacyNote:"Keep original travel documents secure. Share copies only when necessary with trusted providers.",
+offlineTitle:"Your guide. Even without internet.",offlineText:"After your first successful visit while online, this guide can be available offline on this device. Install it for easier access from your home screen.",
+checkingOffline:"Checking offline availability...",installGuide:"＋ ADD TO HOME SCREEN",
+footerText:"Your Hurghada companion · Hurghada, Egypt",footerDisclaimer:"Travel information is general guidance. Always confirm current details with official providers.",
+copied:"Copied!",copyFailed:"Please copy manually.",offlineReady:"Offline support is ready on this device.",offlineNotReady:"Open this page once while online to prepare offline access.",installHelp:"Use your browser menu and choose “Add to Home Screen” or “Install app”.",
+installUnavailable:"Installation is not available in this browser right now."
+},
+de:{
+install:"＋ INSTALLIEREN",eyebrow:"IHR TASCHENREISEFÜHRER FÜR HURGHADA",
+heroTitle:'Hurghada entdecken.<br><span>Wie zu Hause fühlen.</span>',
+heroText:"Nützliche lokale Informationen, wichtige Redewendungen und Notfallnummern – alles in einem praktischen Reisebegleiter.",
+heroNote:"Speichern Sie diesen Reiseführer und haben Sie wichtige Informationen immer dabei.",
+emergencyKicker:"WICHTIGE NUMMERN",emergencyTitle:"Notfallkontakte in Ägypten",
+emergencyIntro:"Speichern Sie diese Nummern für Ihren Aufenthalt. Tippen Sie auf eine Nummer, um anzurufen.",
+ambulance:"Krankenwagen",police:"Polizei",fire:"Feuerwehr",touristPolice:"Touristenpolizei",callNow:"JETZT ANRUFEN",
+emergencyNotice:"Wenden Sie sich bei einem ernsthaften Notfall an den zuständigen lokalen Dienst. Wenn Sie Hilfe bei der Verständigung benötigen, bitten Sie die Hotelrezeption oder Ihre Reisevertretung um Unterstützung. Die Nummern dienen als hilfreiche Orientierung.",
+officialInfo:"Offizielle Reiseinformationen für Ägypten ↗",
+phrasesKicker:"SPRECHEN WIE EIN EINHEIMISCHER",phrasesTitle:"Nützliche ägyptisch-arabische Redewendungen",
+phrasesIntro:"Tippen Sie auf KOPIEREN, um den arabischen Ausdruck zu kopieren und jemandem zu zeigen.",
+phraseWelcome:"Hallo / Willkommen",phrasePrice:"Wie viel kostet das?",phraseThanks:"Danke",phrasePlease:"Bitte",phraseWhere:"Wo ist ...?",phraseHelp:"Können Sie mir helfen?",phraseNo:"Nein, danke",phraseBill:"Die Rechnung, bitte",copy:"KOPIEREN",
+transportKicker:"UNTERWEGS",transportTitle:"Taxis & Nahverkehr",transportIntro:"Ein paar einfache Gewohnheiten machen die Fortbewegung in Hurghada leichter.",
+taxiTitle:"Vor der Taxifahrt",taxiSub:"Den Preis vorher klar vereinbaren",
+taxi1Title:"Gesamtpreis bestätigen",taxi1:"Vereinbaren Sie vor dem Einsteigen den Gesamtpreis und die Währung, sofern nicht das Taxameter verwendet wird.",
+taxi2Title:"Fahrtziel klären",taxi2:"Zeigen Sie den Hotel- oder Zielnamen auf Ihrem Telefon und prüfen Sie die Route vor der Abfahrt.",
+taxi3Title:"Kleine Scheine dabeihaben",taxi3:"Halten Sie kleinere ägyptische Pfundnoten für Einkäufe und Fahrten bereit.",
+moneyTitle:"Geld & Einkaufen",moneySub:"So vermeiden Sie Missverständnisse",
+money1Title:"Währung prüfen",money1:"Klären Sie, ob ein genannter Preis in ägyptischen Pfund, Euro oder einer anderen Währung angegeben ist.",
+money2Title:"Preis vorher vereinbaren",money2:"Vereinbaren Sie bei Waren und Dienstleistungen ohne Preisschild den Preis vor dem Kauf.",
+money3Title:"Seriöse Wechselstellen nutzen",money3:"Wechseln Sie Geld bei Banken oder lizenzierten Wechselstuben und bewahren Sie den Beleg auf.",
+priceNote:"Wir nennen hier bewusst keine festen Taxi- oder Einkaufspreise, da sich diese ändern. Bestätigen Sie den aktuellen Betrag, bevor Sie zustimmen.",
+mobileKicker:"IN VERBINDUNG BLEIBEN",mobileTitle:"SIM-Karten & mobiles Internet",mobileIntro:"Eine lokale SIM-Karte ist praktisch für Karten, Nachrichten und den Kontakt mit Ihrem Hotel oder Reiseveranstalter.",
+simTitle:"Eine lokale SIM-Karte kaufen",simSub:"Einen offiziellen Anbieter wählen",
+sim1Title:"Offiziellen Anbieter aufsuchen",sim1:"Nutzen Sie einen offiziellen Mobilfunkshop oder Flughafenschalter statt eines nicht verifizierten Straßenverkäufers.",
+sim2Title:"Reisepass mitbringen",sim2:"Fragen Sie den Anbieter, welche Ausweisdokumente zur Registrierung und Aktivierung benötigt werden.",
+sim3Title:"Paketdetails prüfen",sim3:"Prüfen Sie Datenvolumen, Gültigkeit, lokale Gesprächsminuten und Gesamtpreis vor der Zahlung.",
+sim4Title:"Vor dem Verlassen testen",sim4:"Prüfen Sie, ob mobile Daten funktionieren, und bewahren Sie den Beleg sowie die Anbieterinformationen auf.",
+phoneTitle:"Bevor Sie Ihr Telefon nutzen",phoneSub:"Unerwartete Kosten vermeiden",
+phone1Title:"Roamingkosten prüfen",phone1:"Wenn Ihre heimische SIM aktiv bleibt, prüfen Sie die internationalen Roaminggebühren bei Ihrem Anbieter.",
+phone2Title:"Offline-Karten herunterladen",phone2:"Speichern Sie das Gebiet von Hurghada in Ihrer Karten-App, bevor Sie das WLAN verlassen.",
+phone3Title:"Wichtige Angaben speichern",phone3:"Speichern Sie Hoteladresse, Reiseversicherungsdaten und Kontaktdaten Ihrer Ausflüge offline.",
+simNote:"SIM-Verfügbarkeit, Registrierungsregeln und Paketpreise können sich ändern. Erkundigen Sie sich direkt beim Mobilfunkanbieter nach den aktuellen Anforderungen.",
+seaKicker:"SONNE, MEER & AUSFLÜGE",seaTitle:"Ein paar clevere Reisetipps",seaIntro:"Genießen Sie Ihre Zeit in Hurghada und behalten Sie diese wichtigen Hinweise im Blick.",
+sunTitle:"Sonne & Strand",sunSub:"Schützen Sie sich vor der ägyptischen Sonne",
+sun1Title:"Ausreichend trinken",sun1:"Nehmen Sie Trinkwasser mit, besonders bei Aktivitäten im Freien und Bootsausflügen.",
+sun2Title:"Sonnenschutz verwenden",sun2:"Verwenden Sie geeigneten Sonnenschutz, Sonnenbrille und Hut. Machen Sie Pausen im Schatten.",
+sun3Title:"Das Riff respektieren",sun3:"Treten Sie nicht auf Korallen, berühren oder sammeln Sie sie nicht. Befolgen Sie die Anweisungen Ihres Guides im Wasser.",
+documentsTitle:"Wichtige Dinge sicher aufbewahren",documentsSub:"Eine kurze persönliche Checkliste",
+check1:"Ich habe Hotelname und Adresse gespeichert.",check2:"Ich habe eine Passkopie sicher aufbewahrt.",check3:"Ich habe meine Reiseversicherungsdaten verfügbar.",check4:"Ich habe die Kontaktinformationen für Ausflüge und Transfers gespeichert.",check5:"Ich habe wichtige Informationen offline gespeichert.",
+privacyNote:"Bewahren Sie Original-Reisedokumente sicher auf. Teilen Sie Kopien nur bei Bedarf mit vertrauenswürdigen Anbietern.",
+offlineTitle:"Ihr Reiseführer. Auch ohne Internet.",offlineText:"Nach dem ersten erfolgreichen Besuch mit Internet kann dieser Reiseführer auf diesem Gerät offline verfügbar sein. Installieren Sie ihn für einen schnellen Zugriff vom Startbildschirm.",
+checkingOffline:"Offline-Verfügbarkeit wird geprüft...",installGuide:"＋ ZUM STARTBILDSCHIRM",
+footerText:"Ihr Hurghada-Begleiter · Hurghada, Ägypten",footerDisclaimer:"Reiseinformationen dienen als allgemeine Orientierung. Bestätigen Sie aktuelle Angaben immer bei offiziellen Anbietern.",
+copied:"Kopiert!",copyFailed:"Bitte manuell kopieren.",offlineReady:"Offline-Unterstützung ist auf diesem Gerät bereit.",offlineNotReady:"Öffnen Sie diese Seite einmal mit Internet, um den Offline-Zugriff vorzubereiten.",installHelp:"Öffnen Sie das Browsermenü und wählen Sie „Zum Startbildschirm hinzufügen“ oder „App installieren“.",
+installUnavailable:"Die Installation ist in diesem Browser momentan nicht verfügbar."
+}
+};
+
+let currentLang="en";
+let deferredPrompt=null;
+const toast=document.getElementById("toast");
+
+function setLang(lang){
+  currentLang=lang;
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-t]").forEach(el=>{
+    const key=el.dataset.t;
+    if(translations[lang][key]) el.textContent=translations[lang][key];
+  });
+  document.querySelectorAll("[data-t-html]").forEach(el=>{
+    const key=el.dataset.tHtml;
+    if(translations[lang][key]) el.innerHTML=translations[lang][key];
+  });
+  document.getElementById("enBtn").classList.toggle("active",lang==="en");
+  document.getElementById("deBtn").classList.toggle("active",lang==="de");
+  try{localStorage.setItem("pocketGuideLanguage",lang)}catch(e){}
+}
+
+function showToast(message){
+  toast.textContent=message;
+  toast.classList.add("show");
+  clearTimeout(showToast.timer);
+  showToast.timer=setTimeout(()=>toast.classList.remove("show"),2200);
+}
+
+async function copyText(text){
+  try{
+    if(navigator.clipboard && window.isSecureContext){
+      await navigator.clipboard.writeText(text);
+    }else{
+      const field=document.createElement("textarea");
+      field.value=text;
+      field.style.position="fixed";
+      field.style.opacity="0";
+      document.body.appendChild(field);
+      field.select();
+      const ok=document.execCommand("copy");
+      field.remove();
+      if(!ok) throw new Error("Copy failed");
+    }
+    showToast(translations[currentLang].copied);
+  }catch(e){
+    showToast(translations[currentLang].copyFailed);
+  }
+}
+
+window.addEventListener("beforeinstallprompt",event=>{
+  event.preventDefault();
+  deferredPrompt=event;
+  document.getElementById("installBtn").hidden=false;
+});
+
+async function installApp(){
+  if(deferredPrompt){
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt=null;
+    return;
+  }
+  if(window.matchMedia("(display-mode: standalone)").matches){
+    showToast(translations[currentLang].offlineReady);
+  }else{
+    showToast(translations[currentLang].installHelp);
+  }
+}
+
+function updateOfflineStatus(){
+  const el=document.getElementById("offlineState");
+  if("serviceWorker" in navigator && navigator.serviceWorker.controller){
+    el.textContent=translations[currentLang].offlineReady;
+  }else{
+    el.textContent=translations[currentLang].offlineNotReady;
+  }
+}
+
+if("serviceWorker" in navigator){
+  window.addEventListener("load",async()=>{
+    try{
+      await navigator.serviceWorker.register("../service-worker.js");
+    }catch(error){
+      console.warn("Offline registration unavailable:",error);
+    }
+    updateOfflineStatus();
+  });
+}else{
+  document.getElementById("offlineState").textContent=
+    translations[currentLang].offlineNotReady;
+}
+
+try{
+  const saved=localStorage.getItem("pocketGuideLanguage");
+  if(saved==="de") setLang("de");
+}catch(e){}
+
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
