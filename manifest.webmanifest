@@ -1,0 +1,22 @@
+
+{
+  "id": "./features/pocket-guide.html",
+  "name": "Hurghada Pocket Guide | Atlantis Tours and Experiences",
+  "short_name": "Hurghada Guide",
+  "description": "Your offline-friendly travel companion for Hurghada, Egypt.",
+  "lang": "en",
+  "start_url": "./features/pocket-guide.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f3f7f7",
+  "theme_color": "#071e2c",
+  "icons": [
+    {
+      "src": "./pocket-guide-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
