@@ -1,0 +1,1214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#061d2b">
+<meta name="description" content="Explore live Red Sea marine conditions in Hurghada: wave height, sea temperature, wind and marine forecasts. Atlantis Tours and Experiences.">
+<title>Red Sea Live | Atlantis Tours and Experiences</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#061d2b;
+  --navy2:#0b3044;
+  --blue:#087f9b;
+  --cyan:#53d5df;
+  --aqua:#b1f2ed;
+  --gold:#e6bd7d;
+  --white:#fff;
+  --muted:#78909d;
+  --bg:#f3f8fa;
+  --line:#e3edf0;
+  --green:#168b70;
+  --orange:#c27b26;
+  --red:#bd594c;
+  --radius:23px;
+  --shadow:0 16px 48px rgba(6,29,43,.09);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--navy);
+  font-family:"DM Sans",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+button,a{font:inherit}
+a{text-decoration:none}
+button{cursor:pointer}
+
+.topbar{
+  background:var(--navy);
+  color:white;
+  padding:15px 5.5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  position:relative;
+  z-index:5;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  color:white;
+}
+.brand-icon{
+  width:43px;height:43px;
+  border:1px solid rgba(177,242,237,.45);
+  border-radius:14px;
+  display:grid;place-items:center;
+  color:var(--aqua);
+  font-size:23px;
+}
+.brand-name{
+  display:block;
+  font-family:Manrope,sans-serif;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.035em;
+}
+.brand-sub{
+  display:block;
+  margin-top:3px;
+  color:#9ab5c2;
+  font-size:9px;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+}
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.live-indicator{
+  display:flex;align-items:center;gap:8px;
+  color:#c3d7df;font-size:11px;
+}
+.live-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:#56dfaa;
+  box-shadow:0 0 0 5px rgba(86,223,170,.12);
+}
+.language{
+  display:flex;gap:4px;padding:4px;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:30px;
+  background:rgba(255,255,255,.06);
+}
+.language button{
+  border:0;border-radius:22px;
+  background:transparent;color:#b8cbd4;
+  padding:7px 11px;font-size:10px;font-weight:800;
+}
+.language button.active{
+  background:var(--aqua);color:var(--navy);
+}
+
+.hero{
+  min-height:440px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  color:white;
+  background:
+    linear-gradient(90deg,rgba(3,22,34,.94),rgba(4,35,51,.74) 53%,rgba(4,35,51,.12)),
+    url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2000&q=90")
+    center 52%/cover;
+}
+.hero-content{
+  width:min(1150px,89%);
+  margin:auto;
+  padding:75px 0 85px;
+  position:relative;z-index:1;
+}
+.eyebrow{
+  display:flex;align-items:center;gap:10px;
+  color:var(--aqua);
+  font-size:10px;font-weight:800;
+  letter-spacing:.2em;text-transform:uppercase;
+  margin-bottom:18px;
+}
+.eyebrow:before{
+  content:"";width:27px;height:1px;background:var(--gold);
+}
+.hero h1{
+  max-width:780px;
+  margin:0;
+  font-family:Manrope,sans-serif;
+  font-size:clamp(39px,6vw,70px);
+  line-height:1.06;
+  letter-spacing:-.055em;
+  font-weight:800;
+}
+.hero h1 span{color:var(--aqua)}
+.hero-copy{
+  max-width:570px;
+  color:#d1e3e9;
+  font-size:14px;
+  line-height:1.85;
+  margin:22px 0 27px;
+}
+.hero-pills{display:flex;flex-wrap:wrap;gap:10px}
+.hero-pills span{
+  padding:9px 13px;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:30px;
+  background:rgba(255,255,255,.08);
+  color:#e2eff2;font-size:11px;
+  backdrop-filter:blur(8px);
+}
+
+.container{width:min(1150px,89%);margin:auto}
+.section{padding:62px 0}
+.section-head{margin-bottom:25px}
+.kicker{
+  color:var(--blue);
+  font-size:10px;font-weight:800;
+  letter-spacing:.2em;text-transform:uppercase;
+  margin-bottom:10px;
+}
+.section h2{
+  margin:0;
+  font-family:Manrope,sans-serif;
+  font-size:clamp(26px,3.5vw,39px);
+  letter-spacing:-.045em;
+}
+.section-intro{
+  margin:10px 0 0;
+  color:var(--muted);
+  font-size:13px;line-height:1.75;
+  max-width:680px;
+}
+
+.status-panel{
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:25px;
+  padding:29px;
+  color:white;
+  border-radius:var(--radius);
+  background:linear-gradient(125deg,#082b40,#08758a);
+  box-shadow:var(--shadow);
+}
+.status-panel:after{
+  content:"";
+  position:absolute;
+  width:290px;height:290px;
+  right:-105px;top:-145px;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:50%;
+  box-shadow:0 0 0 28px rgba(255,255,255,.025),
+             0 0 0 60px rgba(255,255,255,.025);
+  pointer-events:none;
+}
+.status-left,.status-right{position:relative;z-index:1}
+.status-small{
+  color:#b7e5e8;font-size:10px;
+  font-weight:800;letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.status-main{
+  display:flex;align-items:center;gap:15px;
+  margin:18px 0 8px;
+}
+.status-emoji{font-size:45px}
+.status-name{
+  font-family:Manrope,sans-serif;
+  font-size:clamp(25px,3vw,36px);
+  font-weight:800;letter-spacing:-.04em;
+}
+.status-description{
+  color:#d2e8ec;font-size:12px;line-height:1.7;
+  max-width:450px;
+}
+.status-time{
+  color:#b9d6df;font-size:10px;margin-top:18px;
+}
+.status-right{
+  display:grid;align-content:center;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.metric{
+  min-height:103px;
+  padding:17px;
+  border:1px solid rgba(255,255,255,.17);
+  border-radius:17px;
+  background:rgba(255,255,255,.075);
+  backdrop-filter:blur(7px);
+}
+.metric-label{color:#c3dce3;font-size:10px}
+.metric-value{
+  margin-top:8px;
+  font-family:Manrope,sans-serif;
+  font-size:27px;font-weight:800;
+  letter-spacing:-.04em;
+}
+.metric-unit{font-size:11px;font-weight:600;color:#c4e3e7}
+.metric-note{color:#b4d2da;font-size:9px;margin-top:4px}
+
+.toolbar{
+  display:flex;align-items:center;
+  justify-content:space-between;
+  gap:12px;flex-wrap:wrap;
+  margin:17px 0 0;
+}
+.refresh-button{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:11px 16px;
+  color:white;background:var(--navy2);
+  border:0;border-radius:30px;
+  font-size:11px;font-weight:800;
+  transition:.2s;
+}
+.refresh-button:hover{background:var(--blue);transform:translateY(-2px)}
+.refresh-button:disabled{opacity:.6;cursor:wait;transform:none}
+.data-stamp{color:var(--muted);font-size:10px}
+
+.activities{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+.activity{
+  padding:22px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:19px;
+  box-shadow:0 8px 25px rgba(6,29,43,.035);
+}
+.activity-icon{font-size:27px;margin-bottom:15px}
+.activity h3{
+  margin:0;font-family:Manrope,sans-serif;
+  font-size:16px;font-weight:800;
+}
+.activity p{
+  margin:8px 0 14px;
+  color:var(--muted);font-size:11px;line-height:1.7;
+}
+.activity-status{
+  display:inline-flex;align-items:center;gap:7px;
+  border-radius:30px;padding:7px 10px;
+  background:#eaf6f2;color:#167a61;
+  font-size:10px;font-weight:800;
+}
+.activity-status.moderate{background:#fff4e5;color:#a56a1d}
+.activity-status.rough{background:#fceeed;color:#a84e43}
+
+.wind-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:14px;margin-top:19px;
+}
+.wind-card{
+  padding:21px;background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+}
+.wind-icon{font-size:22px;margin-bottom:12px}
+.wind-label{color:var(--muted);font-size:11px}
+.wind-value{
+  margin-top:7px;
+  font-family:Manrope,sans-serif;
+  font-size:25px;font-weight:800;
+}
+.wind-note{color:#8a9da7;font-size:10px;margin-top:5px}
+
+.forecast-section{background:white}
+.forecast-grid{
+  display:grid;
+  grid-template-columns:repeat(8,minmax(0,1fr));
+  gap:10px;
+}
+.forecast-card{
+  padding:16px 7px;
+  text-align:center;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fbfdfe;
+}
+.forecast-time{color:var(--muted);font-size:10px;font-weight:700}
+.forecast-icon{font-size:23px;margin:12px 0}
+.forecast-wave{
+  font-family:Manrope,sans-serif;
+  font-size:17px;font-weight:800;
+}
+.forecast-label{color:var(--muted);font-size:9px;margin-top:4px}
+.forecast-wind{
+  margin-top:10px;padding-top:9px;
+  border-top:1px solid var(--line);
+  color:#287d91;font-size:10px;
+}
+.loading-message{
+  grid-column:1/-1;
+  padding:25px;text-align:center;
+  color:var(--muted);font-size:12px;
+  background:white;border-radius:16px;
+}
+
+.info-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:17px;
+}
+.info-card{
+  padding:23px;
+  border:1px solid var(--line);
+  border-radius:19px;background:white;
+}
+.info-card h3{
+  margin:0 0 10px;
+  font-family:Manrope,sans-serif;font-size:15px;
+}
+.info-card p{
+  margin:0;color:var(--muted);
+  font-size:11px;line-height:1.8;
+}
+.direction-compass{
+  display:flex;align-items:center;gap:15px;
+  margin-top:15px;
+}
+.compass{
+  width:52px;height:52px;
+  display:grid;place-items:center;
+  border:1px solid #d8e9ec;border-radius:50%;
+  background:#f3fafb;font-size:25px;
+}
+.direction-text{font-size:12px;font-weight:800}
+.direction-sub{font-size:10px;color:var(--muted);margin-top:4px}
+
+.disclaimer{
+  margin-top:20px;
+  padding:17px 19px;
+  border-left:3px solid var(--gold);
+  border-radius:10px;
+  background:#fffaf1;
+  color:#75664e;
+  font-size:10px;line-height:1.8;
+}
+
+.error-box{
+  display:none;
+  margin-top:15px;padding:13px 15px;
+  color:#99493e;background:#fff0ed;
+  border-radius:12px;font-size:11px;
+}
+.error-box.show{display:block}
+
+.cta{
+  padding:68px 0;text-align:center;
+  color:white;background:var(--navy);
+}
+.cta .kicker{color:var(--aqua)}
+.cta h2{
+  max-width:700px;margin:0 auto;
+  font-family:Manrope,sans-serif;
+  font-size:clamp(27px,4vw,43px);
+  letter-spacing:-.045em;
+}
+.cta p{
+  max-width:570px;margin:15px auto 24px;
+  color:#b8cbd4;font-size:13px;line-height:1.8;
+}
+.cta-button{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 23px;border-radius:30px;
+  background:var(--aqua);color:var(--navy);
+  font-size:11px;font-weight:800;
+  transition:.2s;
+}
+.cta-button:hover{
+  background:white;transform:translateY(-3px);
+}
+footer{
+  padding:24px 5%;
+  background:#04131e;color:#9db4bf;
+  text-align:center;font-size:10px;line-height:1.9;
+}
+footer strong{color:white}
+.source-link{color:#9ee5e6;text-decoration:underline}
+
+@media(max-width:850px){
+  .forecast-grid{grid-template-columns:repeat(4,1fr)}
+  .status-panel{grid-template-columns:1fr}
+  .activities{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .topbar{padding:12px 4%}
+  .brand{gap:7px}
+  .brand-name{font-size:10px}
+  .brand-sub{font-size:8px}
+  .brand-icon{width:36px;height:36px}
+  .live-indicator{display:none}
+  .hero{min-height:410px}
+  .hero-content{padding:60px 0}
+  .section{padding:48px 0}
+  .status-panel{padding:21px}
+  .status-right{gap:8px}
+  .metric{padding:14px;min-height:93px}
+  .metric-value{font-size:23px}
+  .activities{grid-template-columns:1fr}
+  .wind-grid{grid-template-columns:1fr 1fr}
+  .forecast-grid{grid-template-columns:repeat(4,1fr)}
+  .info-grid{grid-template-columns:1fr}
+}
+@media(max-width:370px){
+  .brand-name{font-size:9px}
+  .language button{padding:7px 8px}
+  .forecast-grid{gap:6px}
+  .forecast-card{padding:13px 4px}
+  .wind-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <span class="brand-icon">✦</span>
+    <span>
+      <span class="brand-name">ATLANTIS TOURS AND EXPERIENCES</span>
+      <span class="brand-sub">DISCOVER THE EXTRAORDINARY</span>
+    </span>
+  </a>
+
+  <div class="header-actions">
+    <div class="live-indicator">
+      <span class="live-dot"></span>
+      <span data-i18n="liveLabel">LIVE SEA REPORT</span>
+    </div>
+    <div class="language">
+      <button type="button" id="enBtn" class="active" onclick="setLanguage('en')">EN</button>
+      <button type="button" id="deBtn" onclick="setLanguage('de')">DE</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="eyebrow" data-i18n="eyebrow">THE RED SEA, IN REAL TIME</div>
+    <h1 data-i18n="heroTitle">Discover the <span>Sea Before You Go.</span></h1>
+    <p class="hero-copy" data-i18n="heroCopy">
+      Check the latest marine forecast for Hurghada.
+      Explore waves, water temperature and wind conditions before planning your next Red Sea experience.
+    </p>
+    <div class="hero-pills">
+      <span>🌊 <span data-i18n="pillWaves">Wave forecast</span></span>
+      <span>🌡️ <span data-i18n="pillWater">Water temperature</span></span>
+      <span>🧭 <span data-i18n="pillWind">Wind conditions</span></span>
+    </div>
+  </div>
+</section>
+
+<main>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker" data-i18n="overviewKicker">TODAY'S MARINE OVERVIEW</div>
+      <h2 data-i18n="overviewTitle">Hurghada Sea Conditions</h2>
+      <p class="section-intro" data-i18n="overviewCopy">
+        A quick overview of the latest available marine forecast for the Red Sea near Hurghada.
+      </p>
+    </div>
+
+    <div class="status-panel">
+      <div class="status-left">
+        <div class="status-small" data-i18n="seaOutlook">CURRENT SEA OUTLOOK</div>
+        <div class="status-main">
+          <div class="status-emoji" id="statusEmoji">🌊</div>
+          <div class="status-name" id="statusName">Loading...</div>
+        </div>
+        <div class="status-description" id="statusDescription">
+          Fetching the latest marine conditions...
+        </div>
+        <div class="status-time" id="conditionTime">--</div>
+      </div>
+
+      <div class="status-right">
+        <div class="metric">
+          <div class="metric-label" data-i18n="waveHeight">Wave height</div>
+          <div class="metric-value"><span id="waveHeight">--</span> <span class="metric-unit">m</span></div>
+          <div class="metric-note" data-i18n="significantWaves">Significant waves</div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-label" data-i18n="waterTemp">Water temperature</div>
+          <div class="metric-value"><span id="waterTemp">--</span><span class="metric-unit"> °C</span></div>
+          <div class="metric-note" data-i18n="surfaceWater">Sea surface</div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-label" data-i18n="windSpeed">Wind speed</div>
+          <div class="metric-value"><span id="windSpeed">--</span> <span class="metric-unit">km/h</span></div>
+          <div class="metric-note" data-i18n="currentWind">Current coastal forecast</div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-label" data-i18n="wavePeriod">Wave period</div>
+          <div class="metric-value"><span id="wavePeriod">--</span> <span class="metric-unit">s</span></div>
+          <div class="metric-note" data-i18n="timeBetweenWaves">Time between waves</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <button class="refresh-button" id="refreshBtn" type="button" onclick="refreshData()">
+        ↻ <span data-i18n="refresh">REFRESH CONDITIONS</span>
+      </button>
+      <div class="data-stamp" id="updatedAt" data-i18n="waitingUpdate">Waiting for latest data...</div>
+    </div>
+
+    <div class="error-box" id="mainError" role="status"></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:5px">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker" data-i18n="activitiesKicker">PLAN YOUR EXPERIENCE</div>
+      <h2 data-i18n="activitiesTitle">What Do Conditions Suggest?</h2>
+      <p class="section-intro" data-i18n="activitiesCopy">
+        A simple forecast-based guide to help you understand the general conditions for popular sea activities.
+      </p>
+    </div>
+
+    <div class="activities">
+      <article class="activity">
+        <div class="activity-icon">🤿</div>
+        <h3 data-i18n="snorkelTitle">Snorkelling</h3>
+        <p data-i18n="snorkelCopy">Surface conditions can affect comfort and visibility. Always check with your boat crew.</p>
+        <span class="activity-status" id="snorkelStatus">● <span data-i18n="checking">Checking forecast</span></span>
+      </article>
+
+      <article class="activity">
+        <div class="activity-icon">⛵</div>
+        <h3 data-i18n="boatTitle">Boat Trips</h3>
+        <p data-i18n="boatCopy">Wave and wind conditions are useful indicators when planning a day at sea.</p>
+        <span class="activity-status" id="boatStatus">● <span data-i18n="checking">Checking forecast</span></span>
+      </article>
+
+      <article class="activity">
+        <div class="activity-icon">🐠</div>
+        <h3 data-i18n="divingTitle">Scuba Diving</h3>
+        <p data-i18n="divingCopy">A forecast is not a diving clearance. Ask a qualified dive centre about the site and conditions.</p>
+        <span class="activity-status" id="divingStatus">● <span data-i18n="checking">Checking forecast</span></span>
+      </article>
+    </div>
+
+    <div class="disclaimer" data-i18n="activityDisclaimer">
+      Activity indicators are general forecast guidance only. They do not determine whether an activity is safe.
+      Actual conditions can differ by reef, island, harbour and time. The captain, licensed dive centre and local authorities make the final operational decisions.
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#edf6f8">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker" data-i18n="windKicker">WIND REPORT</div>
+      <h2 data-i18n="windTitle">Wind Around Hurghada</h2>
+      <p class="section-intro" data-i18n="windCopy">
+        Wind speed, gusts and direction from the weather forecast for the Hurghada area.
+      </p>
+    </div>
+
+    <div class="wind-grid">
+      <div class="wind-card">
+        <div class="wind-icon">💨</div>
+        <div class="wind-label" data-i18n="windSpeed">Wind speed</div>
+        <div class="wind-value"><span id="windSpeed2">--</span> km/h</div>
+        <div class="wind-note" data-i18n="windAverage">Forecast wind speed</div>
+      </div>
+
+      <div class="wind-card">
+        <div class="wind-icon">🌬️</div>
+        <div class="wind-label" data-i18n="windGusts">Wind gusts</div>
+        <div class="wind-value"><span id="windGusts">--</span> km/h</div>
+        <div class="wind-note" data-i18n="windGustsNote">Maximum gust estimate</div>
+      </div>
+
+      <div class="wind-card">
+        <div class="wind-icon">🧭</div>
+        <div class="wind-label" data-i18n="windDirection">Wind direction</div>
+        <div class="wind-value" id="windDirection">--</div>
+        <div class="wind-note" id="windDegrees">--°</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section forecast-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker" data-i18n="forecastKicker">LOOKING AHEAD</div>
+      <h2 data-i18n="forecastTitle">The Next 24 Hours</h2>
+      <p class="section-intro" data-i18n="forecastCopy">
+        Follow the expected changes in waves and wind throughout the coming hours.
+      </p>
+    </div>
+
+    <div class="forecast-grid" id="forecastGrid">
+      <div class="loading-message" data-i18n="loadingForecast">Loading marine forecast...</div>
+    </div>
+    <div class="disclaimer" data-i18n="forecastDisclaimer">
+      Forecast values are model estimates, not measurements taken directly from your exact beach or reef.
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker" data-i18n="understandKicker">KNOW BEFORE YOU GO</div>
+      <h2 data-i18n="understandTitle">Understanding the Sea Report</h2>
+      <p class="section-intro" data-i18n="understandCopy">
+        A few useful details to help you read the marine forecast.
+      </p>
+    </div>
+
+    <div class="info-grid">
+      <article class="info-card">
+        <h3 data-i18n="waveMeaningTitle">🌊 What does wave height mean?</h3>
+        <p data-i18n="waveMeaningCopy">
+          Wave height is the forecast significant wave height. It describes the average height of the highest one-third of waves, not the maximum individual wave.
+        </p>
+      </article>
+
+      <article class="info-card">
+        <h3 data-i18n="windMeaningTitle">💨 Why does wind matter?</h3>
+        <p data-i18n="windMeaningCopy">
+          Wind can influence surface conditions, boat comfort and the way the sea changes during the day. Gusts may be stronger than the average wind speed.
+        </p>
+      </article>
+
+      <article class="info-card">
+        <h3 data-i18n="waterMeaningTitle">🌡️ What is sea temperature?</h3>
+        <p data-i18n="waterMeaningCopy">
+          Sea surface temperature is a model estimate for the water near the surface. It can differ from the temperature at your swimming or diving location.
+        </p>
+      </article>
+
+      <article class="info-card">
+        <h3 data-i18n="directionMeaningTitle">🧭 What is wave direction?</h3>
+        <p data-i18n="directionMeaningCopy">
+          Direction is shown in degrees and describes where waves are coming from. Local reefs and coastlines can change conditions at individual sites.
+        </p>
+        <div class="direction-compass">
+          <div class="compass">🧭</div>
+          <div>
+            <div class="direction-text" data-i18n="compassTitle">Compass reference</div>
+            <div class="direction-sub" data-i18n="compassCopy">0° North · 90° East · 180° South · 270° West</div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="disclaimer" data-i18n="safetyNote">
+      IMPORTANT: This page is an informational forecast tool, not a navigation service or safety warning system.
+      Never use it as the only basis for deciding to sail, swim, snorkel or dive.
+      Follow official marine advice and your captain or dive professional.
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="kicker" data-i18n="ctaKicker">YOUR RED SEA ADVENTURE</div>
+    <h2 data-i18n="ctaTitle">Ready to Experience the Red Sea?</h2>
+    <p data-i18n="ctaCopy">
+      Discover the islands, reefs and unforgettable experiences waiting for you in Hurghada.
+    </p>
+    <a href="../index.html#tours" class="cta-button">
+      <span data-i18n="ctaButton">EXPLORE OUR EXPERIENCES</span> →
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <strong>ATLANTIS TOURS AND EXPERIENCES</strong><br>
+  <span data-i18n="footerCopy">Discover the extraordinary · Hurghada, Egypt</span><br>
+  <span data-i18n="dataCredit">Marine and weather forecast data:</span>
+  <a class="source-link" href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>
+  <br>© <span id="year"></span> Atlantis Tours and Experiences
+</footer>
+
+<script>
+"use strict";
+
+/* =========================================
+   ATLANTIS TOURS AND EXPERIENCES
+   RED SEA LIVE CONDITIONS
+   Location: Hurghada, Egypt
+========================================= */
+
+const CONFIG = {
+  latitude: 27.2579,
+  longitude: 33.8116,
+  timezone: "Africa/Cairo",
+  refreshMinutes: 15
+};
+
+let language = "en";
+let marineData = null;
+let weatherData = null;
+let refreshTimer = null;
+
+const TEXT = {
+  en: {
+    liveLabel:"LIVE SEA REPORT",
+    eyebrow:"THE RED SEA, IN REAL TIME",
+    heroTitle:'Discover the <span>Sea Before You Go.</span>',
+    heroCopy:"Check the latest marine forecast for Hurghada. Explore waves, water temperature and wind conditions before planning your next Red Sea experience.",
+    pillWaves:"Wave forecast",pillWater:"Water temperature",pillWind:"Wind conditions",
+    overviewKicker:"TODAY'S MARINE OVERVIEW",
+    overviewTitle:"Hurghada Sea Conditions",
+    overviewCopy:"A quick overview of the latest available marine forecast for the Red Sea near Hurghada.",
+    seaOutlook:"CURRENT SEA OUTLOOK",
+    waveHeight:"Wave height",waterTemp:"Water temperature",
+    significantWaves:"Significant waves",surfaceWater:"Sea surface",
+    windSpeed:"Wind speed",currentWind:"Current coastal forecast",
+    wavePeriod:"Wave period",timeBetweenWaves:"Time between waves",
+    refresh:"REFRESH CONDITIONS",waitingUpdate:"Waiting for latest data...",
+    updated:"Last updated",loading:"Updating...",
+    activitiesKicker:"PLAN YOUR EXPERIENCE",
+    activitiesTitle:"What Do Conditions Suggest?",
+    activitiesCopy:"A simple forecast-based guide to help you understand the general conditions for popular sea activities.",
+    snorkelTitle:"Snorkelling",
+    snorkelCopy:"Surface conditions can affect comfort and visibility. Always check with your boat crew.",
+    boatTitle:"Boat Trips",
+    boatCopy:"Wave and wind conditions are useful indicators when planning a day at sea.",
+    divingTitle:"Scuba Diving",
+    divingCopy:"A forecast is not a diving clearance. Ask a qualified dive centre about the site and conditions.",
+    checking:"Checking forecast",calm:"Calmer outlook",moderate:"Mixed conditions",rough:"Rougher outlook",
+    activityDisclaimer:"Activity indicators are general forecast guidance only. They do not determine whether an activity is safe. Actual conditions can differ by reef, island, harbour and time. The captain, licensed dive centre and local authorities make the final operational decisions.",
+    windKicker:"WIND REPORT",windTitle:"Wind Around Hurghada",
+    windCopy:"Wind speed, gusts and direction from the weather forecast for the Hurghada area.",
+    windGusts:"Wind gusts",windGustsNote:"Maximum gust estimate",
+    windDirection:"Wind direction",windAverage:"Forecast wind speed",
+    forecastKicker:"LOOKING AHEAD",forecastTitle:"The Next 24 Hours",
+    forecastCopy:"Follow the expected changes in waves and wind throughout the coming hours.",
+    loadingForecast:"Loading marine forecast...",
+    forecastDisclaimer:"Forecast values are model estimates, not measurements taken directly from your exact beach or reef.",
+    understandKicker:"KNOW BEFORE YOU GO",
+    understandTitle:"Understanding the Sea Report",
+    understandCopy:"A few useful details to help you read the marine forecast.",
+    waveMeaningTitle:"🌊 What does wave height mean?",
+    waveMeaningCopy:"Wave height is the forecast significant wave height. It describes the average height of the highest one-third of waves, not the maximum individual wave.",
+    windMeaningTitle:"💨 Why does wind matter?",
+    windMeaningCopy:"Wind can influence surface conditions, boat comfort and the way the sea changes during the day. Gusts may be stronger than the average wind speed.",
+    waterMeaningTitle:"🌡️ What is sea temperature?",
+    waterMeaningCopy:"Sea surface temperature is a model estimate for the water near the surface. It can differ from the temperature at your swimming or diving location.",
+    directionMeaningTitle:"🧭 What is wave direction?",
+    directionMeaningCopy:"Direction is shown in degrees and describes where waves are coming from. Local reefs and coastlines can change conditions at individual sites.",
+    compassTitle:"Compass reference",
+    compassCopy:"0° North · 90° East · 180° South · 270° West",
+    safetyNote:"IMPORTANT: This page is an informational forecast tool, not a navigation service or safety warning system. Never use it as the only basis for deciding to sail, swim, snorkel or dive. Follow official marine advice and your captain or dive professional.",
+    ctaKicker:"YOUR RED SEA ADVENTURE",
+    ctaTitle:"Ready to Experience the Red Sea?",
+    ctaCopy:"Discover the islands, reefs and unforgettable experiences waiting for you in Hurghada.",
+    ctaButton:"EXPLORE OUR EXPERIENCES",
+    footerCopy:"Discover the extraordinary · Hurghada, Egypt",
+    dataCredit:"Marine and weather forecast data:",
+    calmTitle:"Calmer Conditions",
+    calmDescription:"The current forecast suggests relatively calmer conditions. Always check the exact location and latest advice before heading out.",
+    moderateTitle:"Moderate Conditions",
+    moderateDescription:"The forecast suggests some wave or wind activity. Conditions may vary across reefs and boat routes.",
+    roughTitle:"Choppier Conditions",
+    roughDescription:"The forecast indicates stronger wind or waves. Check with your captain or dive centre before planning any activity.",
+    noData:"Data temporarily unavailable",
+    apiError:"We could not load the latest forecast. Please try again in a moment.",
+    windDirections:["N","NE","E","SE","S","SW","W","NW"],
+    hour:"hour",
+    notAvailable:"N/A"
+  },
+
+  de: {
+    liveLabel:"AKTUELLER MEERESBERICHT",
+    eyebrow:"DAS ROTE MEER IN ECHTZEIT",
+    heroTitle:'Entdecken Sie das <span>Meer vor Ihrer Reise.</span>',
+    heroCopy:"Prüfen Sie die aktuelle Meeresvorhersage für Hurghada. Entdecken Sie Wellen, Wassertemperatur und Windbedingungen, bevor Sie Ihr nächstes Abenteuer am Roten Meer planen.",
+    pillWaves:"Wellenvorhersage",pillWater:"Wassertemperatur",pillWind:"Windbedingungen",
+    overviewKicker:"AKTUELLER MEERESÜBERBLICK",
+    overviewTitle:"Meeresbedingungen in Hurghada",
+    overviewCopy:"Ein schneller Überblick über die aktuelle Meeresvorhersage für das Rote Meer bei Hurghada.",
+    seaOutlook:"AKTUELLE MEERESLAGE",
+    waveHeight:"Wellenhöhe",waterTemp:"Wassertemperatur",
+    significantWaves:"Signifikante Wellen",surfaceWater:"Meeresoberfläche",
+    windSpeed:"Windgeschwindigkeit",currentWind:"Aktuelle Küstenvorhersage",
+    wavePeriod:"Wellenperiode",timeBetweenWaves:"Zeit zwischen den Wellen",
+    refresh:"BEDINGUNGEN AKTUALISIEREN",waitingUpdate:"Warte auf aktuelle Daten...",
+    updated:"Zuletzt aktualisiert",loading:"Wird aktualisiert...",
+    activitiesKicker:"PLANEN SIE IHR ERLEBNIS",
+    activitiesTitle:"Was sagen die Bedingungen?",
+    activitiesCopy:"Eine einfache, vorhersagebasierte Orientierung zu den allgemeinen Bedingungen für beliebte Aktivitäten auf dem Meer.",
+    snorkelTitle:"Schnorcheln",
+    snorkelCopy:"Die Bedingungen an der Oberfläche können Komfort und Sicht beeinflussen. Fragen Sie immer Ihre Bootscrew.",
+    boatTitle:"Bootsausflüge",
+    boatCopy:"Wellen und Wind sind hilfreiche Hinweise bei der Planung eines Tages auf dem Meer.",
+    divingTitle:"Gerätetauchen",
+    divingCopy:"Eine Vorhersage ist keine Tauchfreigabe. Fragen Sie ein qualifiziertes Tauchzentrum nach Tauchplatz und Bedingungen.",
+    checking:"Vorhersage wird geprüft",calm:"Eher ruhige Bedingungen",moderate:"Wechselhafte Bedingungen",rough:"Unruhigere Bedingungen",
+    activityDisclaimer:"Die Aktivitätsanzeigen sind nur eine allgemeine Orientierung anhand der Vorhersage. Sie entscheiden nicht darüber, ob eine Aktivität sicher ist. Die tatsächlichen Bedingungen können je nach Riff, Insel, Hafen und Uhrzeit variieren. Kapitän, lizenziertes Tauchzentrum und örtliche Behörden treffen die endgültigen Entscheidungen.",
+    windKicker:"WINDREPORT",windTitle:"Wind rund um Hurghada",
+    windCopy:"Windgeschwindigkeit, Böen und Richtung laut Wettervorhersage für die Region Hurghada.",
+    windGusts:"Windböen",windGustsNote:"Geschätzte maximale Böen",
+    windDirection:"Windrichtung",windAverage:"Vorhergesagte Windgeschwindigkeit",
+    forecastKicker:"AUSBLICK",forecastTitle:"Die nächsten 24 Stunden",
+    forecastCopy:"Verfolgen Sie die erwarteten Veränderungen von Wellen und Wind in den kommenden Stunden.",
+    loadingForecast:"Meeresvorhersage wird geladen...",
+    forecastDisclaimer:"Die Vorhersagewerte sind Modellschätzungen und keine direkten Messungen an Ihrem Strand oder Riff.",
+    understandKicker:"GUT INFORMIERT UNTERWEGS",
+    understandTitle:"Den Meeresbericht verstehen",
+    understandCopy:"Ein paar hilfreiche Informationen zum Lesen der Meeresvorhersage.",
+    waveMeaningTitle:"🌊 Was bedeutet Wellenhöhe?",
+    waveMeaningCopy:"Die Wellenhöhe ist die vorhergesagte signifikante Wellenhöhe. Sie beschreibt die durchschnittliche Höhe des höchsten Wellendrittels, nicht die maximale Einzelwelle.",
+    windMeaningTitle:"💨 Warum ist Wind wichtig?",
+    windMeaningCopy:"Wind kann die Oberflächenbedingungen, den Komfort auf dem Boot und die Veränderung des Meeres im Tagesverlauf beeinflussen. Böen können stärker sein als die durchschnittliche Windgeschwindigkeit.",
+    waterMeaningTitle:"🌡️ Was ist die Wassertemperatur?",
+    waterMeaningCopy:"Die Meeresoberflächentemperatur ist eine Modellschätzung für das Wasser nahe der Oberfläche. Sie kann von der Temperatur an Ihrem Schwimm- oder Tauchplatz abweichen.",
+    directionMeaningTitle:"🧭 Was bedeutet Wellenrichtung?",
+    directionMeaningCopy:"Die Richtung wird in Grad angegeben und beschreibt, aus welcher Richtung die Wellen kommen. Riffe und Küstenlinien können die Bedingungen an einzelnen Orten verändern.",
+    compassTitle:"Kompassreferenz",
+    compassCopy:"0° Nord · 90° Ost · 180° Süd · 270° West",
+    safetyNote:"WICHTIG: Diese Seite ist ein Informationsangebot zur Vorhersage und weder ein Navigationsdienst noch ein Sicherheitswarnsystem. Verwenden Sie sie niemals als alleinige Grundlage für Entscheidungen zum Segeln, Schwimmen, Schnorcheln oder Tauchen. Befolgen Sie offizielle Hinweise sowie die Anweisungen Ihres Kapitäns oder Tauchprofis.",
+    ctaKicker:"IHR ABENTEUER AM ROTEN MEER",
+    ctaTitle:"Bereit, das Rote Meer zu erleben?",
+    ctaCopy:"Entdecken Sie die Inseln, Riffe und unvergesslichen Erlebnisse, die Sie in Hurghada erwarten.",
+    ctaButton:"UNSERE ERLEBNISSE ENTDECKEN",
+    footerCopy:"Entdecken Sie das Außergewöhnliche · Hurghada, Ägypten",
+    dataCredit:"Meeres- und Wettervorhersagedaten:",
+    calmTitle:"Eher ruhige Bedingungen",
+    calmDescription:"Die aktuelle Vorhersage deutet auf vergleichsweise ruhigere Bedingungen hin. Prüfen Sie vor dem Start immer den genauen Ort und die aktuellen Hinweise.",
+    moderateTitle:"Mäßige Bedingungen",
+    moderateDescription:"Die Vorhersage deutet auf etwas Wellen- oder Windaktivität hin. Die Bedingungen können sich je nach Riff und Bootsroute unterscheiden.",
+    roughTitle:"Unruhigere Bedingungen",
+    roughDescription:"Die Vorhersage zeigt stärkeren Wind oder höhere Wellen. Fragen Sie Ihren Kapitän oder Ihr Tauchzentrum, bevor Sie Aktivitäten planen.",
+    noData:"Daten vorübergehend nicht verfügbar",
+    apiError:"Die aktuelle Vorhersage konnte nicht geladen werden. Bitte versuchen Sie es gleich noch einmal.",
+    windDirections:["N","NO","O","SO","S","SW","W","NW"],
+    hour:"Uhr",
+    notAvailable:"k. A."
+  }
+};
+
+function tr(key){
+  return TEXT[language][key] ?? TEXT.en[key] ?? key;
+}
+
+function setLanguage(lang){
+  language=lang;
+  document.documentElement.lang=lang;
+
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key=el.dataset.i18n;
+    if(TEXT[lang][key]) el.textContent=TEXT[lang][key];
+  });
+
+  document.getElementById("enBtn").classList.toggle("active",lang==="en");
+  document.getElementById("deBtn").classList.toggle("active",lang==="de");
+
+  if(marineData && weatherData) renderAll();
+}
+
+function number(value,digits=1){
+  if(value===null || value===undefined || !Number.isFinite(Number(value))) return "--";
+  return Number(value).toFixed(digits);
+}
+
+function getDirection(degrees){
+  if(!Number.isFinite(Number(degrees))) return "--";
+  const directions=tr("windDirections");
+  const index=Math.round(((Number(degrees)%360)/45))%8;
+  return directions[index];
+}
+
+function localTime(iso){
+  if(!iso) return "--";
+  try{
+    return new Intl.DateTimeFormat(language==="de"?"de-DE":"en-GB",{
+      hour:"2-digit",minute:"2-digit",
+      timeZone:CONFIG.timezone
+    }).format(new Date(iso));
+  }catch(e){
+    return String(iso).slice(11,16);
+  }
+}
+
+async function fetchJSON(url){
+  const controller=new AbortController();
+  const timeout=setTimeout(()=>controller.abort(),15000);
+  try{
+    const response=await fetch(url,{
+      signal:controller.signal,
+      cache:"no-store"
+    });
+    if(!response.ok) throw new Error("HTTP "+response.status);
+    const json=await response.json();
+    if(json.error) throw new Error(json.reason || "API error");
+    return json;
+  }finally{
+    clearTimeout(timeout);
+  }
+}
+
+function buildURL(base,params){
+  const url=new URL(base);
+  Object.entries(params).forEach(([key,value])=>{
+    url.searchParams.set(key,value);
+  });
+  return url.toString();
+}
+
+async function fetchMarine(){
+  const url=buildURL("https://marine-api.open-meteo.com/v1/marine",{
+    latitude:CONFIG.latitude,
+    longitude:CONFIG.longitude,
+    current:"wave_height,wave_period,wave_direction,sea_surface_temperature",
+    hourly:"wave_height,wave_period,wave_direction,sea_surface_temperature",
+    forecast_days:"2",
+    timezone:CONFIG.timezone
+  });
+  return fetchJSON(url);
+}
+
+async function fetchWeather(){
+  const url=buildURL("https://api.open-meteo.com/v1/forecast",{
+    latitude:CONFIG.latitude,
+    longitude:CONFIG.longitude,
+    current:"wind_speed_10m,wind_direction_10m,wind_gusts_10m",
+    hourly:"wind_speed_10m,wind_direction_10m,wind_gusts_10m",
+    forecast_days:"2",
+    timezone:CONFIG.timezone,
+    wind_speed_unit:"kmh"
+  });
+  return fetchJSON(url);
+}
+
+function getOutlook(wave,wind){
+  if(!Number.isFinite(wave) || !Number.isFinite(wind)){
+    return "unknown";
+  }
+  if(wave<=0.5 && wind<=15) return "calm";
+  if(wave<=1.0 && wind<=25) return "moderate";
+  return "rough";
+}
+
+function renderStatus(){
+  const c=marineData.current || {};
+  const w=weatherData.current || {};
+
+  const wave=Number(c.wave_height);
+  const wind=Number(w.wind_speed_10m);
+  const outlook=getOutlook(wave,wind);
+
+  const status={
+    calm:{
+      emoji:"🌤️",
+      name:tr("calmTitle"),
+      description:tr("calmDescription")
+    },
+    moderate:{
+      emoji:"🌊",
+      name:tr("moderateTitle"),
+      description:tr("moderateDescription")
+    },
+    rough:{
+      emoji:"🌬️",
+      name:tr("roughTitle"),
+      description:tr("roughDescription")
+    },
+    unknown:{
+      emoji:"🌊",
+      name:tr("noData"),
+      description:tr("apiError")
+    }
+  }[outlook];
+
+  document.getElementById("statusEmoji").textContent=status.emoji;
+  document.getElementById("statusName").textContent=status.name;
+  document.getElementById("statusDescription").textContent=status.description;
+
+  document.getElementById("waveHeight").textContent=number(c.wave_height);
+  document.getElementById("waterTemp").textContent=number(c.sea_surface_temperature);
+  document.getElementById("windSpeed").textContent=number(w.wind_speed_10m,0);
+  document.getElementById("wavePeriod").textContent=number(c.wave_period);
+
+  document.getElementById("conditionTime").textContent=
+    marineData.current?.time
+      ? localTime(marineData.current.time)+" · Hurghada local time"
+      : "Hurghada · Red Sea";
+
+  renderActivity("snorkelStatus",outlook);
+  renderActivity("boatStatus",outlook);
+  renderActivity("divingStatus",outlook);
+}
+
+function renderActivity(id,outlook){
+  const el=document.getElementById(id);
+  el.className="activity-status";
+
+  let label=tr("checking");
+
+  if(outlook==="calm") label=tr("calm");
+  if(outlook==="moderate"){
+    label=tr("moderate");
+    el.classList.add("moderate");
+  }
+  if(outlook==="rough"){
+    label=tr("rough");
+    el.classList.add("rough");
+  }
+
+  el.textContent="● "+label;
+}
+
+function renderWind(){
+  const w=weatherData.current || {};
+
+  document.getElementById("windSpeed2").textContent=number(w.wind_speed_10m,0);
+  document.getElementById("windGusts").textContent=number(w.wind_gusts_10m,0);
+
+  const direction=getDirection(w.wind_direction_10m);
+  document.getElementById("windDirection").textContent=direction;
+  document.getElementById("windDegrees").textContent=
+    Number.isFinite(Number(w.wind_direction_10m))
+      ? number(w.wind_direction_10m,0)+"°"
+      : "--";
+}
+
+function renderForecast(){
+  const grid=document.getElementById("forecastGrid");
+  const m=marineData.hourly || {};
+  const w=weatherData.hourly || {};
+
+  if(!Array.isArray(m.time) || !Array.isArray(w.time)){
+    grid.innerHTML='<div class="loading-message">'+tr("noData")+'</div>';
+    return;
+  }
+
+  const now=Date.now();
+  const items=[];
+
+  for(let i=0;i<m.time.length;i++){
+    const timestamp=new Date(m.time[i]).getTime();
+    if(!Number.isFinite(timestamp) || timestamp<now-30*60*1000) continue;
+
+    const wi=w.time.indexOf(m.time[i]);
+    if(wi<0) continue;
+
+    items.push({
+      time:m.time[i],
+      wave:m.wave_height?.[i],
+      period:m.wave_period?.[i],
+      wind:w.wind_speed_10m?.[wi]
+    });
+
+    if(items.length===8) break;
+  }
+
+  if(!items.length){
+    grid.innerHTML='<div class="loading-message">'+tr("noData")+'</div>';
+    return;
+  }
+
+  grid.replaceChildren();
+
+  items.forEach(item=>{
+    const outlook=getOutlook(Number(item.wave),Number(item.wind));
+    const emoji=outlook==="calm"?"🌤️":outlook==="moderate"?"🌊":"🌬️";
+
+    const card=document.createElement("article");
+    card.className="forecast-card";
+
+    const time=document.createElement("div");
+    time.className="forecast-time";
+    time.textContent=localTime(item.time);
+
+    const icon=document.createElement("div");
+    icon.className="forecast-icon";
+    icon.textContent=emoji;
+
+    const wave=document.createElement("div");
+    wave.className="forecast-wave";
+    wave.textContent=number(item.wave)+" m";
+
+    const label=document.createElement("div");
+    label.className="forecast-label";
+    label.textContent=tr("waveHeight");
+
+    const wind=document.createElement("div");
+    wind.className="forecast-wind";
+    wind.textContent="💨 "+number(item.wind,0)+" km/h";
+
+    card.append(time,icon,wave,label,wind);
+    grid.appendChild(card);
+  });
+}
+
+function renderAll(){
+  renderStatus();
+  renderWind();
+  renderForecast();
+}
+
+async function refreshData(){
+  const button=document.getElementById("refreshBtn");
+  const error=document.getElementById("mainError");
+
+  button.disabled=true;
+  error.classList.remove("show");
+  document.getElementById("updatedAt").textContent=tr("loading");
+
+  try{
+    const results=await Promise.all([
+      fetchMarine(),
+      fetchWeather()
+    ]);
+
+    marineData=results[0];
+    weatherData=results[1];
+
+    renderAll();
+
+    const stamp=new Intl.DateTimeFormat(
+      language==="de"?"de-DE":"en-GB",
+      {hour:"2-digit",minute:"2-digit",second:"2-digit",timeZone:CONFIG.timezone}
+    ).format(new Date());
+
+    document.getElementById("updatedAt").textContent=
+      tr("updated")+": "+stamp+" · Hurghada";
+
+  }catch(error){
+    console.error("Red Sea Live error:",error);
+    error.textContent=tr("apiError");
+    error.classList.add("show");
+    document.getElementById("updatedAt").textContent=tr("noData");
+  }finally{
+    button.disabled=false;
+  }
+}
+
+document.getElementById("year").textContent=new Date().getFullYear();
+
+refreshData();
+
+if(refreshTimer) clearInterval(refreshTimer);
+refreshTimer=setInterval(refreshData,CONFIG.refreshMinutes*60*1000);
+
+</script>
+</body>
+</html>
