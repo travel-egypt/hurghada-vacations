@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +9,7 @@
 <meta name="description" content="Discover unforgettable Red Sea adventures with Atlantis Tours and Experiences. Explore Orange Bay, snorkeling, diving, boat trips and Egypt excursions in Hurghada.">
 
 <meta name="theme-color" content="#003b5c">
+<link rel="manifest" href="manifest.webmanifest">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -336,6 +336,79 @@ section {
 .intro p {
     color: var(--text);
     font-size: 16px;
+}
+
+/* DIGITAL TOOLS */
+
+.digital-tools {
+    background: var(--light);
+}
+
+.digital-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.digital-tool-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 275px;
+    padding: 32px 28px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: linear-gradient(145deg, var(--navy), var(--deep));
+    color: white;
+    box-shadow: var(--shadow);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.digital-tool-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,40,65,.2);
+}
+
+.digital-tool-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+    background: rgba(22,197,206,.14);
+    color: var(--turquoise);
+    font-size: 29px;
+}
+
+.digital-tool-card h3 {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 21px;
+}
+
+.digital-tool-card p {
+    flex: 1;
+    margin-bottom: 22px;
+    color: #c7d9e1;
+    font-size: 14px;
+}
+
+.digital-tool-link {
+    color: var(--turquoise);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.digital-tool-link span {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform .3s;
+}
+
+.digital-tool-card:hover .digital-tool-link span {
+    transform: translateX(5px);
 }
 
 /* TOURS */
@@ -674,6 +747,14 @@ footer h3 {
         grid-template-columns: 1fr;
     }
 
+    .digital-tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .digital-tool-card {
+        min-height: 245px;
+    }
+
     .about-grid {
         grid-template-columns: 1fr;
         gap: 35px;
@@ -744,6 +825,7 @@ footer h3 {
         <li><a href="all-tours.html">Tours</a></li>
         <li><a href="stories.html">Stories</a></li>
         <li><a href="hurghada.html">Hurghada Guide</a></li>
+        <li><a href="#digital-tools">Digital Tools</a></li>
         <li><a href="booking.html">Booking</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="booking.html" class="nav-book">Book Now</a></li>
@@ -824,6 +906,55 @@ footer h3 {
         Let the beauty of Egypt inspire your next holiday.
     </p>
 
+</section>
+
+<!-- DIGITAL TOOLS -->
+<section class="section digital-tools" id="digital-tools">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-label">Explore More With Atlantis</span>
+            <h2>Digital Tools For Your Journey</h2>
+            <p>
+                Discover live updates, explore the Red Sea and get useful
+                travel information with our interactive digital guides.
+            </p>
+        </div>
+
+        <div class="digital-tools-grid">
+
+            <a class="digital-tool-card" href="features/hurghada-live.html">
+                <div class="digital-tool-icon" aria-hidden="true">☀️</div>
+                <h3>Hurghada Live</h3>
+                <p>
+                    Explore useful live information for Hurghada and stay
+                    connected with what is happening around the city.
+                </p>
+                <span class="digital-tool-link">Explore Hurghada Live <span>→</span></span>
+            </a>
+
+            <a class="digital-tool-card" href="features/red-sea-live.html">
+                <div class="digital-tool-icon" aria-hidden="true">🌊</div>
+                <h3>Red Sea Live</h3>
+                <p>
+                    Discover helpful Red Sea information and get closer
+                    to the sea adventures waiting for you.
+                </p>
+                <span class="digital-tool-link">Explore Red Sea Live <span>→</span></span>
+            </a>
+
+            <a class="digital-tool-card" href="features/pocket-guide.html">
+                <div class="digital-tool-icon" aria-hidden="true">🧭</div>
+                <h3>Pocket Guide</h3>
+                <p>
+                    Keep useful travel tips and destination information
+                    close at hand throughout your holiday in Egypt.
+                </p>
+                <span class="digital-tool-link">Open Pocket Guide <span>→</span></span>
+            </a>
+
+        </div>
+    </div>
 </section>
 
 <!-- POPULAR TOURS -->
@@ -1106,6 +1237,13 @@ footer h3 {
                 <li><a href="all-tours.html">Boat Trips</a></li>
                 <li><a href="all-tours.html">Desert Adventures</a></li>
             </ul>
+
+            <h3 class="footer-tools-heading">Digital Tools</h3>
+            <ul class="footer-links">
+                <li><a href="features/hurghada-live.html">Hurghada Live</a></li>
+                <li><a href="features/red-sea-live.html">Red Sea Live</a></li>
+                <li><a href="features/pocket-guide.html">Pocket Guide</a></li>
+            </ul>
         </div>
 
     </div>
@@ -1138,6 +1276,16 @@ document.querySelectorAll(".nav-links a").forEach(function(link) {
         menuToggle.innerHTML = "☰";
     });
 });
+
+/* Register the existing Progressive Web App service worker */
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./service-worker.js", { scope: "./" })
+            .catch(function (error) {
+                console.error("Service worker registration failed:", error);
+            });
+    });
+}
 </script>
 
 </body>
