@@ -1,252 +1,703 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#071e2c">
-<meta name="description" content="An interactive Egyptian Arabic phrasebook for visitors to Hurghada, with English and German pronunciation guides and Egyptian Arabic audio.">
-<title>Hurghada Pocket Guide | Atlantis Tours and Experiences</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071c2c">
+<meta name="description" content="Your practical Egyptian Arabic pocket guide. Useful phrases, pronunciation and translations in English and German.">
+<title>Egyptian Arabic Pocket Guide | Atlantis Tours and Experiences</title>
 <link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../pocket-guide-icon.svg" type="image/svg+xml">
+
 <style>
-:root{--navy:#071e2c;--navy2:#10384a;--teal:#087e89;--aqua:#a8e9e1;--gold:#d8b77b;--paper:#f3f7f7;--white:#fff;--ink:#102d3a;--muted:#71858d;--line:#e2ebed;--green:#16836b;--shadow:0 12px 35px rgba(7,30,44,.08)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}button,a{font:inherit}a{text-decoration:none}button{cursor:pointer}
-.top{background:var(--navy);color:white;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;gap:14px;position:sticky;top:0;z-index:20}
-.brand{display:flex;align-items:center;gap:11px;color:white}.brand-mark{width:42px;height:42px;border:1px solid #4a7c83;border-radius:14px;display:grid;place-items:center;color:var(--aqua);font-size:23px}.brand-name{font-size:12px;font-weight:800;letter-spacing:.04em}.brand-tag{display:block;color:#9cb9c2;font-size:9px;letter-spacing:.16em;margin-top:4px}
-.actions{display:flex;gap:8px;align-items:center}.lang{display:flex;gap:3px;padding:4px;border-radius:30px;background:#ffffff12}.lang button{border:0;background:transparent;color:#c4d5da;border-radius:20px;padding:8px 11px;font-size:10px;font-weight:800}.lang button.active{background:var(--aqua);color:var(--navy)}
-.install{border:1px solid #6a9399;background:#ffffff0c;color:white;border-radius:24px;padding:9px 13px;font-size:10px;font-weight:800}.install:hover{background:#ffffff20}
-.hero{color:white;background:linear-gradient(105deg,rgba(4,24,36,.96),rgba(6,47,59,.86)),radial-gradient(circle at 85% 30%,#168b91,transparent 40%);position:relative;overflow:hidden}.hero-inner{width:min(1120px,90%);margin:auto;padding:58px 0 52px;position:relative;z-index:1}.eyebrow{color:var(--aqua);font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}h1{max-width:720px;margin:16px 0 13px;font-size:clamp(38px,6vw,62px);line-height:1.04;letter-spacing:-.05em}h1 span{color:var(--aqua)}.hero p{max-width:700px;color:#d0e0e4;font-size:14px;line-height:1.8;margin:0}.hero-note{display:inline-flex;gap:9px;align-items:center;margin-top:20px;padding:10px 14px;border-radius:30px;border:1px solid #ffffff30;background:#ffffff0c;color:#dcebed;font-size:10px}
-.container{width:min(1120px,90%);margin:auto}.section{padding:38px 0}.section-head{margin-bottom:18px}.kicker{color:var(--teal);font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}h2{font-size:clamp(24px,3.5vw,34px);letter-spacing:-.04em;margin:8px 0}.intro{color:var(--muted);font-size:12px;line-height:1.8;margin:0;max-width:760px}
-.card{background:white;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}.emergency-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.emergency{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 10px;text-align:center}.emergency strong{display:block;font-size:25px;color:var(--navy);letter-spacing:-.04em}.emergency span{display:block;font-size:10px;color:var(--muted);margin:5px 0 11px}.call{display:inline-block;background:#e8f5f1;color:#14745f;border-radius:20px;padding:7px 12px;font-size:10px;font-weight:800}.notice{margin-top:13px;padding:13px 15px;border-radius:12px;background:#fff8e9;color:#79633b;font-size:10px;line-height:1.7}
-.phrase-tools{display:grid;grid-template-columns:1fr auto;gap:12px;margin:20px 0 14px}.search{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:white;font-size:14px;outline:none}.search:focus{border-color:var(--teal);box-shadow:0 0 0 3px #087e8918}.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.category-btn{border:1px solid var(--line);background:white;border-radius:15px;padding:15px;text-align:left;color:var(--ink);box-shadow:0 5px 18px #071e2c08;transition:.2s}.category-btn:hover,.category-btn.active{border-color:var(--teal);background:#edf8f6;transform:translateY(-2px)}.category-btn .emoji{font-size:22px;display:block;margin-bottom:8px}.category-btn strong{display:block;font-size:13px}.category-btn small{display:block;color:var(--muted);font-size:10px;margin-top:4px}
-.phrase-section{margin-top:24px}.phrase-section-head{display:flex;justify-content:space-between;align-items:end;gap:10px;margin:0 0 12px}.phrase-section-head h3{margin:0;font-size:20px}.phrase-count{font-size:10px;color:var(--muted)}.phrases{display:grid;gap:11px}.phrase{background:#fff;border:1px solid var(--line);border-radius:17px;padding:17px;box-shadow:0 5px 18px #071e2c06}.phrase-ar{font-size:22px;font-weight:800;color:var(--navy);direction:rtl;text-align:right;line-height:1.6}.phrase-label{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-top:10px}.phrase-phonetic{font-size:15px;font-weight:700;color:var(--teal);margin-top:3px;line-height:1.5}.phrase-meaning{font-size:12px;color:#526775;margin-top:3px;line-height:1.5}.phrase-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.action{border:1px solid var(--line);background:#f7faf9;color:var(--teal);border-radius:22px;padding:8px 12px;font-size:10px;font-weight:800}.action.listen{background:#e8f5f1;border-color:#d1e9e1;color:#14745f}.action:hover{filter:brightness(.97)}.small-note{font-size:10px;color:var(--muted);line-height:1.7;margin-top:12px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.tip-list{display:grid;gap:12px}.tip{display:flex;gap:11px;align-items:flex-start}.tip-icon{font-size:19px;flex:0 0 25px}.tip strong{display:block;font-size:12px;margin-bottom:4px}.tip p{font-size:11px;line-height:1.7;color:var(--muted);margin:0}.card-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}.card-icon{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;background:#eaf5f4;font-size:22px}.card h3{font-size:16px;margin:0}.card-sub{font-size:10px;color:var(--muted);margin-top:4px}.quick-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.quick-links a{padding:9px 12px;border-radius:22px;border:1px solid var(--line);color:var(--teal);font-size:10px;font-weight:800;background:#fbfdfd}
-.checklist{display:grid;gap:10px}.check{display:flex;align-items:flex-start;gap:10px;font-size:11px;color:#506771;line-height:1.6}.check input{accent-color:var(--teal);margin-top:2px;width:16px;height:16px}.offline-banner{background:linear-gradient(120deg,#0a3447,#087d85);color:white;border-radius:22px;padding:25px;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:var(--shadow)}.offline-banner h3{margin:0 0 7px;font-size:18px}.offline-banner p{margin:0;color:#c8e1e3;font-size:11px;line-height:1.7}.offline-state{font-size:10px;color:#d8f2ed;margin-top:10px}footer{background:#041722;color:#a9bdc4;text-align:center;padding:25px 12px;font-size:10px;line-height:1.9}footer strong{color:white}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);background:#092b3b;color:white;padding:12px 18px;border-radius:30px;font-size:11px;opacity:0;pointer-events:none;transition:.25s;z-index:50;box-shadow:var(--shadow)}.toast.show{opacity:1;transform:translate(-50%,0)}.empty{padding:24px;text-align:center;color:var(--muted);background:white;border-radius:15px;border:1px dashed var(--line)}
-@media(max-width:720px){.grid{grid-template-columns:1fr}.emergency-grid{grid-template-columns:repeat(2,1fr)}.offline-banner{align-items:flex-start;flex-direction:column}.category-grid{grid-template-columns:repeat(2,1fr)}.phrase-tools{grid-template-columns:1fr}.hero-inner{padding:45px 0}}
-@media(max-width:440px){.top{padding:12px 4%}.brand-name{font-size:9px}.brand-tag{font-size:7px}.brand-mark{width:35px;height:35px}.install{padding:8px 9px;font-size:9px}.lang button{padding:7px 8px}.section{padding:30px 0}.card{padding:17px}.phrase{padding:14px}.phrase-ar{font-size:20px}}
+:root{
+ --navy:#071c2c;--navy2:#0d2b40;--teal:#087e83;--aqua:#43d6c8;
+ --gold:#e9b95e;--cream:#f5f7f5;--white:#fff;--muted:#a9bdc8;
+ --ink:#173244;--line:#dce7e8;--shadow:0 12px 35px rgba(4,25,39,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);
+ font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+button,input{font:inherit}
+button{cursor:pointer}
+header{background:var(--navy);color:white;padding:15px 5%;
+ display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:42px;height:42px;border:2px solid var(--gold);border-radius:50%;
+ display:grid;place-items:center;color:var(--gold);font-weight:bold;font-size:20px}
+.brand-name{font-weight:800;letter-spacing:.5px}
+.brand-sub{font-size:11px;color:var(--muted);letter-spacing:2px}
+.header-actions{display:flex;align-items:center;gap:8px}
+.btn{border:0;border-radius:9px;padding:10px 15px;font-weight:700}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-outline{background:transparent;color:white;border:1px solid #527080}
+.btn.active{background:var(--aqua);color:var(--navy);border-color:var(--aqua)}
+.hero{background:linear-gradient(125deg,#071c2c,#104b5a);
+ color:white;padding:55px 5% 48px;text-align:center}
+.hero-tag{color:var(--gold);font-size:12px;font-weight:bold;letter-spacing:3px;text-transform:uppercase}
+.hero h1{font-size:clamp(30px,5vw,49px);line-height:1.15;margin:12px auto;max-width:850px}
+.hero p{color:#c2d4dc;max-width:700px;margin:0 auto 25px}
+.hero-pills{display:flex;gap:9px;justify-content:center;flex-wrap:wrap}
+.pill{border:1px solid #527080;border-radius:30px;padding:6px 13px;font-size:12px;color:#e0eeee}
+main{max-width:1250px;margin:auto;padding:28px 5% 65px}
+.search-panel{background:white;border-radius:16px;padding:20px;box-shadow:var(--shadow);
+ margin-top:-48px;position:relative}
+.search-title{font-weight:800;margin-bottom:10px}
+.search-wrap{display:flex;gap:10px}
+.search-wrap input{width:100%;border:1px solid var(--line);border-radius:10px;
+ padding:14px 16px;outline:none;font-size:16px}
+.search-wrap input:focus{border-color:var(--teal);box-shadow:0 0 0 3px #087e831c}
+.search-hint{font-size:12px;color:#6d838e;margin-top:8px}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:34px 0 15px}
+.section-heading h2{margin:0;color:var(--navy);font-size:23px}
+.section-heading p{margin:3px 0 0;color:#71848d;font-size:13px}
+.count{color:var(--teal);font-size:13px;font-weight:bold}
+.category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:11px}
+.category{background:white;border:1px solid var(--line);border-radius:12px;padding:14px;
+ text-align:left;color:var(--ink);transition:.2s;min-height:95px}
+.category:hover,.category.selected{border-color:var(--teal);transform:translateY(-2px);
+ box-shadow:0 7px 18px #0b596018}
+.category.selected{background:#e9f7f5}
+.cat-icon{font-size:23px;display:block;margin-bottom:5px}
+.cat-name{font-size:13px;font-weight:800;display:block}
+.cat-count{font-size:11px;color:#82949b}
+.subnav{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}
+.subnav button{border:1px solid var(--line);background:white;color:#47616c;
+ border-radius:30px;padding:7px 13px;font-size:12px}
+.subnav button.active{background:var(--navy2);color:white;border-color:var(--navy2)}
+.phrase-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:13px}
+.phrase-card{background:white;border:1px solid var(--line);border-radius:13px;
+ padding:17px;box-shadow:0 4px 13px rgba(9,39,53,.04)}
+.phrase-group{font-size:10px;letter-spacing:1.3px;text-transform:uppercase;
+ color:var(--teal);font-weight:800;margin-bottom:7px}
+.arabic{font-size:25px;font-weight:700;color:var(--navy);direction:rtl;text-align:right;
+ line-height:1.7;margin:3px 0}
+.pron{font-size:13px;color:#a06d16;font-style:italic;margin:4px 0 10px}
+.translation{font-size:13px;margin:4px 0;color:#425b67}
+.translation b{color:var(--navy)}
+.card-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}
+.small-btn{border:1px solid var(--line);background:#f8fbfa;border-radius:7px;
+ padding:7px 10px;font-size:11px;font-weight:700;color:#315362}
+.small-btn:hover{background:#e8f6f3;border-color:var(--teal)}
+.empty{background:white;border:1px dashed #b8cbce;border-radius:12px;padding:30px;
+ text-align:center;color:#70848c;grid-column:1/-1}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.info-card{background:white;border-radius:13px;padding:18px;border:1px solid var(--line)}
+.info-card h3{margin:0 0 8px;color:var(--navy);font-size:16px}
+.info-card p,.info-card li{font-size:13px;color:#526a75}
+.info-card ul{padding-left:19px;margin:7px 0}
+.emergency{background:#fff4ef;border:1px solid #f0c9b9;border-radius:13px;padding:18px}
+.emergency h3{color:#a63d27;margin:0 0 10px}
+.emergency-numbers{display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:10px}
+.emergency-number{background:white;border-radius:9px;padding:12px;text-align:center}
+.emergency-number strong{display:block;font-size:25px;color:#a63d27}
+.emergency-number span{font-size:11px;color:#657780}
+.checklist label{display:flex;gap:9px;padding:7px 0;font-size:13px}
+.checklist input{accent-color:var(--teal)}
+.offline{margin-top:25px;background:var(--navy);color:white;border-radius:14px;
+ padding:20px;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.offline p{margin:4px 0 0;color:#b9cbd2;font-size:12px}
+footer{background:var(--navy);color:#b6c8d0;text-align:center;padding:25px 5%;font-size:12px}
+footer strong{color:var(--gold)}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
+ background:#092d3d;color:white;padding:11px 18px;border-radius:9px;
+ box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.25s;z-index:20}
+.toast.show{opacity:1}
+.hidden{display:none!important}
+@media(max-width:600px){
+ header{padding:12px 4%}.hero{padding:40px 5% 55px}
+ .header-actions{width:100%;justify-content:flex-end}
+ main{padding-left:4%;padding-right:4%}
+ .search-wrap{flex-direction:column}.search-wrap .btn{width:100%}
+ .section-heading{align-items:start;flex-direction:column}
+}
 </style>
 </head>
+
 <body>
-<header class="top">
-<a class="brand" href="../index.html"><span class="brand-mark">✦</span><span><span class="brand-name">ATLANTIS TOURS AND EXPERIENCES</span><span class="brand-tag">YOUR HURGHADA COMPANION</span></span></a>
-<div class="actions"><div class="lang"><button id="enBtn" class="active" onclick="setLang('en')">EN</button><button id="deBtn" onclick="setLang('de')">DE</button></div><button class="install" id="installBtn" onclick="installApp()">＋ INSTALL</button></div>
+<header>
+ <div class="brand">
+  <div class="brand-mark">A</div>
+  <div><div class="brand-name">ATLANTIS TOURS</div>
+   <div class="brand-sub">AND EXPERIENCES</div></div>
+ </div>
+ <div class="header-actions">
+  <button class="btn btn-outline active" id="langEN" onclick="setLanguage('en')">EN</button>
+  <button class="btn btn-outline" id="langDE" onclick="setLanguage('de')">DE</button>
+  <button class="btn btn-gold" id="installBtn" hidden>Install Guide</button>
+ </div>
 </header>
-<section class="hero"><div class="hero-inner"><div class="eyebrow" data-i="eyebrow">YOUR POCKET GUIDE TO HURGHADA</div><h1 data-i-html="heroTitle">Explore Hurghada.<br><span>Feel at Home.</span></h1><p data-i="heroText">Useful local information, everyday Egyptian Arabic phrases and emergency contacts — all in one simple travel companion.</p><div class="hero-note">📱 <span data-i="heroNote">Save this guide and keep useful information close.</span></div></div></section>
-<main class="container">
-<section class="section">
-<div class="section-head"><div class="kicker" data-i="emergencyKicker">IMPORTANT NUMBERS</div><h2 data-i="emergencyTitle">Emergency Contacts in Egypt</h2><p class="intro" data-i="emergencyIntro">Keep these numbers handy during your stay. Tap a number to call from your phone.</p></div>
-<div class="emergency-grid">
-<div class="emergency"><strong>123</strong><span data-i="ambulance">Ambulance</span><a class="call" href="tel:123" data-i="callNow">CALL NOW</a></div>
-<div class="emergency"><strong>122</strong><span data-i="police">Police</span><a class="call" href="tel:122" data-i="callNow">CALL NOW</a></div>
-<div class="emergency"><strong>180</strong><span data-i="fire">Fire service</span><a class="call" href="tel:180" data-i="callNow">CALL NOW</a></div>
-<div class="emergency"><strong>126</strong><span data-i="touristPolice">Tourist Police</span><a class="call" href="tel:126" data-i="callNow">CALL NOW</a></div>
-</div>
-<div class="notice" data-i="emergencyNotice">For a serious emergency, contact the relevant local service. If you need help communicating, ask your hotel reception or tour representative to assist.</div>
-<div class="quick-links"><a href="https://www.experienceegypt.eg/en/UsefulInfo" target="_blank" rel="noopener" data-i="officialInfo">Official Egypt travel information ↗</a></div>
+
+<section class="hero">
+ <div class="hero-tag" id="heroTag">YOUR TRAVEL COMPANION</div>
+ <h1 id="heroTitle">Speak a Little Egyptian. Experience a Lot More.</h1>
+ <p id="heroDesc">Your practical pocket guide to everyday Egyptian Arabic. Find the right words, hear the pronunciation and communicate with confidence.</p>
+ <div class="hero-pills">
+  <span class="pill" id="pill1">🇪🇬 Real Egyptian Arabic</span>
+  <span class="pill" id="pill2">🔊 Listen & Learn</span>
+  <span class="pill" id="pill3">📱 Works Offline</span>
+ </div>
 </section>
 
-<section class="section" id="phrasebook">
-<div class="section-head"><div class="kicker" data-i="phraseKicker">SPEAK EGYPTIAN ARABIC</div><h2 data-i="phraseTitle">What Would You Like to Say?</h2><p class="intro" data-i="phraseIntro">Choose the situation you are in. Every phrase includes Arabic writing, an easy pronunciation guide in your language, its meaning and Egyptian Arabic audio.</p></div>
-<div class="phrase-tools"><input id="phraseSearch" class="search" type="search" placeholder="Search a phrase or situation..." aria-label="Search phrases" oninput="renderPhrases()"><button class="action" onclick="clearSearch()" data-i="clearSearch">CLEAR SEARCH</button></div>
-<div id="categoryGrid" class="category-grid" aria-label="Phrase categories"></div>
-<div id="phraseResults" aria-live="polite"></div>
-<p class="small-note" data-i="speechNote">Audio uses the Egyptian Arabic voice available on your device or browser. Voice availability and accent quality can vary. The written pronunciation is provided as a guide.</p>
-</section>
+<main>
+ <section class="search-panel">
+  <div class="search-title" id="searchTitle">What do you want to say?</div>
+  <div class="search-wrap">
+   <input id="searchInput" type="search" placeholder="Search in English or German..." autocomplete="off">
+   <button class="btn btn-gold" onclick="searchPhrases()" id="searchBtn">Search</button>
+   <button class="btn btn-outline" style="background:var(--navy2)" onclick="clearSearch()" id="clearBtn">Clear</button>
+  </div>
+  <div class="search-hint" id="searchHint">Try: Where is the hotel? · Ich brauche einen Arzt · How much is this?</div>
+ </section>
 
-<section class="section">
-<div class="section-head"><div class="kicker" data-i="transportKicker">GETTING AROUND</div><h2 data-i="transportTitle">Smart Local Travel Tips</h2><p class="intro" data-i="transportIntro">A few simple habits can make getting around Hurghada easier.</p></div>
-<div class="grid">
-<article class="card"><div class="card-top"><div class="card-icon">🚕</div><div><h3 data-i="taxiTitle">Before taking a taxi</h3><div class="card-sub" data-i="taxiSub">Agree clearly before the ride</div></div></div><div class="tip-list">
-<div class="tip"><span class="tip-icon">✓</span><div><strong data-i="taxi1Title">Confirm the total fare</strong><p data-i="taxi1">Agree on the full price and currency before getting in, unless the meter is being used.</p></div></div>
-<div class="tip"><span class="tip-icon">✓</span><div><strong data-i="taxi2Title">Clarify the destination</strong><p data-i="taxi2">Show the hotel or destination name on your phone, and check the route before departure.</p></div></div>
-<div class="tip"><span class="tip-icon">✓</span><div><strong data-i="taxi3Title">Keep small notes</strong><p data-i="taxi3">Carry some smaller Egyptian-pound notes for everyday purchases and transport.</p></div></div></div></article>
-<article class="card"><div class="card-top"><div class="card-icon">💳</div><div><h3 data-i="moneyTitle">Money & Shopping</h3><div class="card-sub" data-i="moneySub">Simple ways to avoid confusion</div></div></div><div class="tip-list">
-<div class="tip"><span class="tip-icon">✓</span><div><strong data-i="money1Title">Check the currency</strong><p data-i="money1">Confirm whether a quoted price is in Egyptian pounds, euros or another currency.</p></div></div>
-<div class="tip"><span class="tip-icon">✓</span><div><strong data-i="money2Title">Agree before buying</strong><p data-i="money2">For market goods and services without displayed prices, agree on the price before accepting.</p></div></div>
-<div class="tip"><span class="tip-icon">✓</span><div><strong data-i="money3Title">Use trusted exchange services</strong><p data-i="money3">Exchange money through banks or licensed exchange offices and keep your receipt.</p></div></div></div></article>
-</div><p class="small-note" data-i="priceNote">Taxi fares and shopping prices change. Confirm the current amount and currency before you agree.</p>
-</section>
+ <div class="section-heading">
+  <div><h2 id="categoriesTitle">Explore the guide</h2>
+   <p id="categoriesDesc">Choose a situation to find useful phrases.</p></div>
+  <span class="count" id="categoryCount"></span>
+ </div>
+ <div class="category-grid" id="categoryGrid"></div>
 
-<section class="section">
-<div class="section-head"><div class="kicker" data-i="mobileKicker">STAY CONNECTED</div><h2 data-i="mobileTitle">SIM Cards & Mobile Internet</h2><p class="intro" data-i="mobileIntro">A local SIM can be useful for maps, messaging and contacting your hotel or tour operator.</p></div>
-<div class="grid">
-<article class="card"><div class="card-top"><div class="card-icon">📶</div><div><h3 data-i="simTitle">Getting a local SIM</h3><div class="card-sub" data-i="simSub">Choose an official provider</div></div></div><div class="tip-list">
-<div class="tip"><span class="tip-icon">1</span><div><strong data-i="sim1Title">Visit an official operator counter</strong><p data-i="sim1">Look for an official mobile-network shop or airport counter rather than an unverified street seller.</p></div></div>
-<div class="tip"><span class="tip-icon">2</span><div><strong data-i="sim2Title">Bring your passport</strong><p data-i="sim2">Ask the provider which identification documents are required to register and activate your SIM.</p></div></div>
-<div class="tip"><span class="tip-icon">3</span><div><strong data-i="sim3Title">Check the package details</strong><p data-i="sim3">Confirm the data allowance, validity period, local minutes and total price before paying.</p></div></div>
-<div class="tip"><span class="tip-icon">4</span><div><strong data-i="sim4Title">Test before leaving</strong><p data-i="sim4">Make sure mobile data works and keep the receipt and provider details.</p></div></div></div></article>
-<article class="card"><div class="card-top"><div class="card-icon">📱</div><div><h3 data-i="phoneTitle">Before you use your phone</h3><div class="card-sub" data-i="phoneSub">Avoid unexpected costs</div></div></div><div class="tip-list">
-<div class="tip"><span class="tip-icon">✓</span><div><strong data-i="phone1Title">Check roaming charges</strong><p data-i="phone1">If you keep your home SIM active, check international roaming rates with your home provider.</p></div></div>
-<div class="tip"><span class="tip-icon">✓</span><div><strong data-i="phone2Title">Download offline maps</strong><p data-i="phone2">Save the Hurghada area in your map app before leaving Wi-Fi.</p></div></div>
-<div class="tip"><span class="tip-icon">✓</span><div><strong data-i="phone3Title">Keep important details</strong><p data-i="phone3">Save your hotel address, travel insurance details and tour contact information offline.</p></div></div></div>
-<div class="quick-links"><a href="https://www.orange.eg/" target="_blank" rel="noopener">Orange Egypt ↗</a><a href="https://www.etisalat.eg/" target="_blank" rel="noopener">e& Egypt ↗</a><a href="https://te.eg/" target="_blank" rel="noopener">WE ↗</a><a href="https://web.vodafone.com.eg/" target="_blank" rel="noopener">Vodafone ↗</a></div></article>
-</div><p class="small-note" data-i="simNote">SIM availability, registration rules and package prices may change. Confirm current requirements directly with the mobile operator.</p>
-</section>
+ <div class="section-heading" id="phrasesHeading">
+  <div><h2 id="phrasesTitle">Useful Egyptian phrases</h2>
+   <p id="phrasesDesc">Arabic, pronunciation and translation.</p></div>
+  <span class="count" id="phraseCount"></span>
+ </div>
+ <div class="subnav" id="subnav"></div>
+ <div class="phrase-list" id="phraseList"></div>
 
-<section class="section">
-<div class="section-head"><div class="kicker" data-i="seaKicker">SUN, SEA & EXCURSIONS</div><h2 data-i="seaTitle">A Few Smart Travel Habits</h2><p class="intro" data-i="seaIntro">Enjoy your time in Hurghada while keeping the essentials in mind.</p></div>
-<div class="grid">
-<article class="card"><div class="card-top"><div class="card-icon">☀️</div><div><h3 data-i="sunTitle">Sun & Beach</h3><div class="card-sub" data-i="sunSub">Take care in the Egyptian sun</div></div></div><div class="tip-list">
-<div class="tip"><span class="tip-icon">✓</span><div><strong data-i="sun1Title">Stay hydrated</strong><p data-i="sun1">Carry drinking water, especially during outdoor activities and boat trips.</p></div></div>
-<div class="tip"><span class="tip-icon">✓</span><div><strong data-i="sun2Title">Use sun protection</strong><p data-i="sun2">Wear suitable sun protection, sunglasses and a hat. Take breaks in the shade.</p></div></div>
-<div class="tip"><span class="tip-icon">✓</span><div><strong data-i="sun3Title">Respect the reef</strong><p data-i="sun3">Do not stand on, touch or collect coral. Follow your guide's instructions in the water.</p></div></div></div></article>
-<article class="card"><div class="card-top"><div class="card-icon">🧳</div><div><h3 data-i="documentsTitle">Keep Your Essentials Safe</h3><div class="card-sub" data-i="documentsSub">A quick personal checklist</div></div></div><div class="checklist">
-<label class="check"><input type="checkbox"><span data-i="check1">I have my hotel name and address saved.</span></label><label class="check"><input type="checkbox"><span data-i="check2">I have a copy of my passport stored securely.</span></label><label class="check"><input type="checkbox"><span data-i="check3">I have my travel insurance details available.</span></label><label class="check"><input type="checkbox"><span data-i="check4">I have saved my tour and transfer contact details.</span></label><label class="check"><input type="checkbox"><span data-i="check5">I have saved important information for offline use.</span></label></div><p class="small-note" data-i="privacyNote">Keep original travel documents secure. Share copies only when necessary with trusted providers.</p></article>
-</div></section>
+ <div class="section-heading">
+  <div><h2 id="emergencyTitle">Emergency numbers in Egypt</h2>
+   <p id="emergencyDesc">Keep these numbers available during your trip.</p></div>
+ </div>
+ <div class="emergency">
+  <h3 id="emergencyWarning">Important emergency contacts</h3>
+  <div class="emergency-numbers">
+   <div class="emergency-number"><strong>123</strong><span id="ambLabel">Ambulance</span></div>
+   <div class="emergency-number"><strong>122</strong><span id="polLabel">Police</span></div>
+   <div class="emergency-number"><strong>180</strong><span id="fireLabel">Fire Department</span></div>
+   <div class="emergency-number"><strong>126</strong><span id="touristLabel">Tourist Police</span></div>
+  </div>
+  <p id="emergencyNote">If you are in immediate danger, contact the appropriate emergency service. Ask your hotel or tour representative for assistance when possible.</p>
+ </div>
 
-<section class="section"><div class="offline-banner"><div><h3 data-i="offlineTitle">Your guide. Even without internet.</h3><p data-i="offlineText">After your first successful visit while online, this guide can be available offline on this device. Install it for easier access from your home screen.</p><div class="offline-state" id="offlineState">Checking offline availability...</div></div><button class="install" onclick="installApp()" data-i="installGuide">＋ ADD TO HOME SCREEN</button></div></section>
+ <div class="section-heading">
+  <div><h2 id="tipsTitle">Smart travel tips</h2>
+   <p id="tipsDesc">A few useful things to know before you head out.</p></div>
+ </div>
+ <div class="info-grid">
+  <article class="info-card"><h3 id="simTitle">📱 SIM cards & Internet</h3>
+   <ul id="simList">
+    <li>Ask about the data allowance and validity period before purchasing.</li>
+    <li>Keep your passport available when buying a local SIM.</li>
+    <li>Save your hotel address offline.</li>
+   </ul></article>
+  <article class="info-card"><h3 id="sunTitle">☀️ Sun, heat & beach</h3>
+   <ul id="sunList">
+    <li>Drink water regularly, especially during outdoor activities.</li>
+    <li>Use sunscreen, sunglasses and a hat.</li>
+    <li>Follow local beach and sea safety instructions.</li>
+   </ul></article>
+  <article class="info-card"><h3 id="moneyTitle">💵 Money & shopping</h3>
+   <ul id="moneyList">
+    <li>Ask for the price before agreeing to buy or use a service.</li>
+    <li>Carry some small Egyptian pound notes.</li>
+    <li>Check your change before leaving.</li>
+   </ul></article>
+  <article class="info-card"><h3 id="respectTitle">🤝 Local culture</h3>
+   <ul id="respectList">
+    <li>A friendly greeting and a smile go a long way.</li>
+    <li>Ask permission before photographing people.</li>
+    <li>Dress appropriately when visiting religious places.</li>
+   </ul></article>
+ </div>
+
+ <div class="section-heading">
+  <div><h2 id="checkTitle">Before you go checklist</h2>
+   <p id="checkDesc">A quick reminder for a smoother day.</p></div>
+ </div>
+ <div class="info-card checklist" id="checklist">
+  <label><input type="checkbox"> <span id="check1">Phone charged and power bank ready</span></label>
+  <label><input type="checkbox"> <span id="check2">Hotel address saved on your phone</span></label>
+  <label><input type="checkbox"> <span id="check3">Water, sunscreen and sunglasses</span></label>
+  <label><input type="checkbox"> <span id="check4">Some cash and a payment card</span></label>
+  <label><input type="checkbox"> <span id="check5">Travel documents and necessary medication</span></label>
+  <label><input type="checkbox"> <span id="check6">Tour and transfer details confirmed</span></label>
+ </div>
+
+ <div class="offline">
+  <div><strong id="offlineTitle">Take your guide with you</strong>
+   <p id="offlineDesc">Install the Pocket Guide for quick access. Offline availability depends on the page being cached on your device.</p></div>
+  <button class="btn btn-gold" onclick="window.scrollTo({top:0,behavior:'smooth'})" id="topBtn">Back to top ↑</button>
+ </div>
 </main>
-<footer><strong>ATLANTIS TOURS AND EXPERIENCES</strong><br><span data-i="footerText">Your Hurghada companion · Hurghada, Egypt</span><br><span data-i="footerDisclaimer">Travel information is general guidance. Always confirm current details with official providers.</span><br>© <span id="year"></span> Atlantis Tours and Experiences</footer>
-<div class="toast" id="toast" role="status"></div>
+
+<footer>
+ <strong>ATLANTIS TOURS AND EXPERIENCES</strong>
+ <div id="footerText">Discover Egypt. Connect with its people. Travel with confidence.</div>
+ <div style="margin-top:8px">Egyptian Arabic Pocket Guide</div>
+</footer>
+<div class="toast" id="toast"></div>
 
 <script>
-const categories = [
-{ id:"basics", icon:"👋", en:"Greetings & Basics", de:"Begrüßung & Grundlagen", items:[
-["أهلاً وسهلاً","Ahlan wa sahlan","Ahlan wa sahlan","Hello / Welcome","Hallo / Willkommen"],
-["صباح الخير","Sabah el-kheir","Sabah el-cheir","Good morning","Guten Morgen"],
-["مساء الخير","Masa el-kheir","Masa el-cheir","Good evening","Guten Abend"],
-["إزيك؟","Izzayyak? (to a man) / Izzayyek? (to a woman)","Izzayyak? / Izzayyek?","How are you?","Wie geht es dir?"],
-["كويس، شكراً","Kwayyis, shokran","Kuwejjis, schokran","I'm fine, thank you","Mir geht es gut, danke"],
-["اسمي ...","Esmi ...","Esmi ...","My name is ...","Ich heiße ..."],
-["أنا من ...","Ana men ...","Ana men ...","I'm from ...","Ich komme aus ..."],
-["بتتكلم إنجليزي؟","Bititkallem English?","Bititkallem Inglisch?","Do you speak English?","Sprichst du Englisch?"],
-["مش فاهم","Mish fahem","Misch fahem","I don't understand","Ich verstehe nicht"],
-["ممكن تتكلم بالراحة؟","Momken titkallem biraha?","Momken titkallem biraha?","Could you speak slowly?","Könnten Sie langsam sprechen?"]
-]},
-{ id:"restaurant", icon:"🍽️", en:"Restaurant & Café", de:"Restaurant & Café", items:[
-["ممكن المنيو؟","Momken el-menu?","Momken el-menu?","Could I have the menu?","Kann ich bitte die Speisekarte haben?"],
-["عايز مية من فضلك","Ayez mayya, min fadlak","Ajes majja, min fadlak","I'd like some water, please","Ich möchte bitte Wasser"],
-["من غير تلج","Men gheir talg","Men gheir talg","Without ice","Ohne Eis"],
-["إيه الأكل المشهور هنا؟","Eh el-akl el-mashhour hena?","Eh el-akl el-maschhur hena?","What food is popular here?","Was ist hier besonders beliebt?"],
-["الأكل ده حار؟","El-akl da harr?","El-akl da harr?","Is this food spicy?","Ist dieses Essen scharf?"],
-["أنا نباتي","Ana nabati","Ana nabati","I'm vegetarian","Ich bin Vegetarier/in"],
-["عندي حساسية من ...","Andi hasaseyya men ...","Andi hasasejja men ...","I'm allergic to ...","Ich bin allergisch gegen ..."],
-["ممكن من غير بصل؟","Momken men gheir basal?","Momken men gheir basal?","Could I have it without onion?","Könnte ich es ohne Zwiebeln bekommen?"],
-["الأكل لذيذ جداً","El-akl laziz giddan","El-akl lasis giddan","The food is very delicious","Das Essen ist sehr lecker"],
-["الحساب من فضلك","El-hesab, min fadlak","El-hesab, min fadlak","The bill, please","Die Rechnung, bitte"],
-["ممكن أدفع بالكارت؟","Momken adfa' bel-kart?","Momken adfa' bel-kart?","Can I pay by card?","Kann ich mit Karte bezahlen?"]
-]},
-{ id:"airport", icon:"✈️", en:"Airport & Arrival", de:"Flughafen & Ankunft", items:[
-["فين استلام الشنط؟","Fein estelam el-shonat?","Fein estelam esch-schonat?","Where is baggage claim?","Wo ist die Gepäckausgabe?"],
-["فين الجوازات؟","Fein el-gawazat?","Fein el-gawazat?","Where is passport control?","Wo ist die Passkontrolle?"],
-["شنطتي ما وصلتش","Shanteti ma wesletsh","Schanteti ma wesletsch","My luggage hasn't arrived","Mein Gepäck ist nicht angekommen"],
-["أنا عندي حجز","Ana andi hagz","Ana andi hagz","I have a booking","Ich habe eine Buchung"],
-["فين بوابة رقم ...؟","Fein bawwabet raqm ...?","Fein bawwabet rakm ...?","Where is gate number ...?","Wo ist Gate Nummer ...?"],
-["الرحلة اتأخرت؟","El-rehla et'akhkharit?","Er-rehla et-achcharit?","Is the flight delayed?","Hat der Flug Verspätung?"],
-["فين مكتب المعلومات؟","Fein maktab el-ma'lumat?","Fein maktab el-ma'lumat?","Where is the information desk?","Wo ist der Informationsschalter?"],
-["محتاج شريحة موبايل","Mehtag sheriha mobayl","Mehtag scheriha mobail","I need a SIM card","Ich brauche eine SIM-Karte"]
-]},
-{ id:"taxi", icon:"🚕", en:"Taxi & Transport", de:"Taxi & Transport", items:[
-["ممكن توديني الفندق؟","Momken tewaddini el-fondoq?","Momken tewaddini el-fondok?","Can you take me to the hotel?","Können Sie mich zum Hotel bringen?"],
-["بكام المشوار؟","Bekaam el-meshwar?","Bekaam el-meschwar?","How much is the ride?","Wie viel kostet die Fahrt?"],
-["شغّل العداد من فضلك","Shaghal el-addad, min fadlak","Schaghal el-addad, min fadlak","Please turn on the meter","Bitte schalten Sie das Taxameter ein"],
-["استنى هنا من فضلك","Istanna hena, min fadlak","Istanna hena, min fadlak","Please wait here","Bitte warten Sie hier"],
-["وقف هنا لو سمحت","W'if hena law samaht","Wif hena lau samaht","Stop here, please","Bitte hier anhalten"],
-["خدني للمطار","Khodni lel-matar","Chodni lel-matar","Take me to the airport","Bringen Sie mich zum Flughafen"],
-["ده بعيد؟","Da ba'eed?","Da ba'id?","Is it far?","Ist es weit?"],
-["ممكن تساعدني أحمل الشنط؟","Momken tsa'edni ahammel el-shonat?","Momken tsa'edni ahammel esch-schonat?","Can you help me with the bags?","Können Sie mir mit den Koffern helfen?"]
-]},
-{ id:"shopping", icon:"🛍️", en:"Shopping & Markets", de:"Einkaufen & Märkte", items:[
-["بكام ده؟","Bekaam da?","Bekaam da?","How much is this?","Wie viel kostet das?"],
-["ده غالي أوي","Da ghali awi","Da ghali awi","That's very expensive","Das ist sehr teuer"],
-["ممكن سعر أحسن؟","Momken se'r ahsan?","Momken se'r ahsan?","Could you give me a better price?","Können Sie mir einen besseren Preis machen?"],
-["هفكر وأرجع","Hafakkar wa arga'","Hafakkar wa arga'","I'll think about it and come back","Ich überlege es mir und komme wieder"],
-["أنا بتفرج بس","Ana batfarreg bass","Ana batfarreg bass","I'm just looking","Ich schaue mich nur um"],
-["عندك لون تاني؟","Andak lawn tani?","Andak laun tani?","Do you have another colour?","Haben Sie eine andere Farbe?"],
-["ممكن أشوف ده؟","Momken ashoof da?","Momken aschuf da?","Can I see this?","Kann ich das sehen?"],
-["مش عايز أشتري، شكراً","Mish ayiz ashtiri, shokran","Misch ajiz aschtiri, schokran","I don't want to buy, thank you","Ich möchte nichts kaufen, danke"]
-]},
-{ id:"hotel", icon:"🏨", en:"Hotel & Accommodation", de:"Hotel & Unterkunft", items:[
-["عندي حجز باسم ...","Andi hagz besm ...","Andi hagz besm ...","I have a reservation under the name ...","Ich habe eine Reservierung auf den Namen ..."],
-["ممكن مفتاح الغرفة؟","Momken meftah el-ghorfa?","Momken meftah el-ghorfa?","Could I have the room key?","Kann ich bitte den Zimmerschlüssel haben?"],
-["الواي فاي إيه اسمه؟","El-Wi-Fi eh esmo?","El-Wai-Fai eh esmo?","What's the Wi-Fi name?","Wie heißt das WLAN?"],
-["إيه كلمة السر؟","Eh kelmet el-ser?","Eh kelmet es-ser?","What's the password?","Wie lautet das Passwort?"],
-["ممكن فوطة زيادة؟","Momken foota zeyada?","Momken futa sejada?","Could I have an extra towel?","Könnte ich ein zusätzliches Handtuch bekommen?"],
-["التكييف مش شغال","El-takyif mish shaghal","Et-takjif misch schaghal","The air conditioning isn't working","Die Klimaanlage funktioniert nicht"],
-["الفطار الساعة كام؟","El-fetar el-sa'a kam?","El-fetar es-sa'a kam?","What time is breakfast?","Um wie viel Uhr gibt es Frühstück?"],
-["ممكن أعمل تشيك أوت متأخر؟","Momken a'mel check-out meta'akhkher?","Momken a'mel Tschek-aut meta'achcher?","Could I have a late check-out?","Könnte ich später auschecken?"]
-]},
-{ id:"street", icon:"🧭", en:"Street & Directions", de:"Straße & Wegbeschreibung", items:[
-["فين ...؟","Fein ...?","Fein ...?","Where is ...?","Wo ist ...?"],
-["إزاي أروح ...؟","Ezzay arooh ...?","Ezzaj aru ...?","How do I get to ...?","Wie komme ich nach ...?"],
-["على اليمين ولا الشمال؟","Ala el-yemeen walla el-shemal?","Ala el-jemin walla esch-schemal?","Is it on the right or left?","Ist es rechts oder links?"],
-["امشي على طول؟","Emshi ala tool?","Em-schi ala tul?","Should I go straight?","Soll ich geradeaus gehen?"],
-["فين أقرب صيدلية؟","Fein aqrab saydaliyya?","Fein akrab seidalejja?","Where is the nearest pharmacy?","Wo ist die nächste Apotheke?"],
-["فين ماكينة الصراف؟","Fein makanet el-sarraf?","Fein makanet es-sarraf?","Where is an ATM?","Wo ist ein Geldautomat?"],
-["ممكن توريني على الخريطة؟","Momken tewarini ala el-khareeta?","Momken tewarini ala el-chareeta?","Can you show me on the map?","Können Sie es mir auf der Karte zeigen?"],
-["أنا تايه","Ana tayeh","Ana taje","I'm lost","Ich habe mich verlaufen"]
-]},
-{ id:"pharmacy", icon:"💊", en:"Pharmacy & Health", de:"Apotheke & Gesundheit", items:[
-["فين أقرب صيدلية؟","Fein aqrab saydaliyya?","Fein akrab seidalejja?","Where is the nearest pharmacy?","Wo ist die nächste Apotheke?"],
-["عندي صداع","Andi soda'","Andi soda'","I have a headache","Ich habe Kopfschmerzen"],
-["بطني بتوجعني","Batni betewga'ni","Batni betewga'ni","My stomach hurts","Ich habe Bauchschmerzen"],
-["عندي حساسية","Andi hasaseyya","Andi hasasejja","I have an allergy","Ich habe eine Allergie"],
-["محتاج دكتور","Mehtag doktor","Mehtag Doktor","I need a doctor","Ich brauche einen Arzt"],
-["ممكن إسعاف؟","Momken es'af?","Momken es'af?","Could you call an ambulance?","Können Sie einen Krankenwagen rufen?"],
-["فين المستشفى؟","Fein el-mostashfa?","Fein el-mostaschfa?","Where is the hospital?","Wo ist das Krankenhaus?"],
-["أنا محتاج مساعدة حالاً","Ana mehtag mosa'ada halen","Ana mehtag mosa'ada halen","I need help now","Ich brauche sofort Hilfe"]
-]},
-{ id:"beach", icon:"🏖️", en:"Beach & Boat Trips", de:"Strand & Bootsausflüge", items:[
-["فين نقطة التجمع؟","Fein no'tet el-tagammo'?","Fein noktet et-tagammo'?","Where is the meeting point?","Wo ist der Treffpunkt?"],
-["المركب فين؟","El-markeb fein?","El-markeb fein?","Where is the boat?","Wo ist das Boot?"],
-["إمتى هنرجع؟","Emta hanerga'?","Emta hanerga'?","When will we return?","Wann kommen wir zurück?"],
-["فين معدات السنوركل؟","Fein mo'addat el-snorkel?","Fein mo'addat es-Schnorkel?","Where is the snorkelling equipment?","Wo ist die Schnorchelausrüstung?"],
-["هل السباحة مسموحة؟","Hal el-sebaha masmoha?","Hal es-sebaha masmuha?","Is swimming allowed?","Ist Schwimmen erlaubt?"],
-["محتاج عوامة","Mehtag 'awwama","Mehtag aw-wama","I need a float","Ich brauche eine Schwimmhilfe"],
-["البحر عميق؟","El-bahr ameeq?","El-bahr amik?","Is the sea deep?","Ist das Meer tief?"],
-["ممكن تساعدني ألبس اللايف جاكيت؟","Momken tsa'edni albas el-life jacket?","Momken tsa'edni albas el-Laif-Tscheket?","Can you help me put on the life jacket?","Können Sie mir helfen, die Schwimmweste anzuziehen?"]
-]},
-{ id:"social", icon:"🤝", en:"Everyday Conversation", de:"Alltagsgespräche", items:[
-["شكراً جزيلاً","Shokran gazilan","Schokran gasilan","Thank you very much","Vielen Dank"],
-["العفو","El-afw","El-afw","You're welcome","Gern geschehen"],
-["معلش","Ma'lesh","Ma'lesch","Never mind / Sorry","Schon gut / Entschuldigung"],
-["مفيش مشكلة","Mafeesh moshkela","Mafisch moschkela","No problem","Kein Problem"],
-["ممكن؟","Momken?","Momken?","Is it possible? / May I?","Ist das möglich? / Darf ich?"],
-["ثانية واحدة","Sanya wahda","Sanja wahda","Just a second","Einen Moment"],
-["يومك سعيد","Yomak sa'eed","Jomak sa'id","Have a nice day","Einen schönen Tag"],
-["تشرفت بمعرفتك","Tasharraft bema'reftak","Tascharraft bema'reftak","Nice to meet you","Freut mich, Sie kennenzulernen"]
-]},
-{ id:"problems", icon:"🆘", en:"Problems & Emergencies", de:"Probleme & Notfälle", items:[
-["ساعدني من فضلك","Sa'edni min fadlak","Sa'edni min fadlak","Help me, please","Helfen Sie mir bitte"],
-["اتصل بالشرطة","Ettesel bel-shorta","Ettesel besch-schorta","Call the police","Rufen Sie die Polizei"],
-["اتصل بالإسعاف","Ettesel bel-es'af","Ettesel bel-es'af","Call an ambulance","Rufen Sie einen Krankenwagen"],
-["اتسرق مني ...","Etsara' menni ...","Etsarak menni ...","... was stolen from me","Mir wurde ... gestohlen"],
-["تليفوني ضاع","Telefoni da'a","Telefoni da'a","I've lost my phone","Ich habe mein Handy verloren"],
-["أنا مش عارف أرجع الفندق","Ana mish aref arga' el-fondoq","Ana misch aref arga' el-fondok","I don't know how to get back to the hotel","Ich weiß nicht, wie ich zum Hotel zurückkomme"],
-["محتاج أتكلم مع مسؤول","Mehtag atkallem ma' mas'ool","Mehtag atkallem ma' mas'ul","I need to speak to a manager / official","Ich muss mit einem Verantwortlichen sprechen"],
-["فين الشرطة السياحية؟","Fein el-shorta el-seyahiyya?","Fein esch-schorta es-sejahijja?","Where is the tourist police?","Wo ist die Touristenpolizei?"]
-]},
-{ id:"numbers", icon:"🔢", en:"Numbers & Money", de:"Zahlen & Geld", items:[
-["واحد","Wahed","Wahed","One","Eins"],
-["اتنين","Etnein","Etnein","Two","Zwei"],
-["تلاتة","Talata","Talata","Three","Drei"],
-["أربعة","Arba'a","Arba'a","Four","Vier"],
-["خمسة","Khamsa","Chamsa","Five","Fünf"],
-["عشرة","Ashara","Aschara","Ten","Zehn"],
-["مية","Meyya","Mejja","One hundred","Hundert"],
-["جنيه مصري","Geneih masri","Geneih masri","Egyptian pound","Ägyptisches Pfund"]
-]}
+const phrases = [
+/* BASICS */
+["basics","Greetings","صباح الخير","Sabah el-kheer","Good morning","Guten Morgen","morning hello"],
+["basics","Greetings","مساء الخير","Masa el-kheer","Good evening","Guten Abend","evening hello"],
+["basics","Greetings","أهلاً وسهلاً","Ahlan wa sahlan","Welcome","Herzlich willkommen","welcome"],
+["basics","Greetings","إزيك؟","Ezzayyak?","How are you?","Wie geht es dir?","how are you"],
+["basics","Greetings","الحمد لله، كويس","El hamdulillah, kwayyes","I'm fine, thank God","Mir geht es gut, Gott sei Dank","fine well"],
+["basics","Polite words","شكراً","Shokran","Thank you","Danke","thanks"],
+["basics","Polite words","العفو","El afw","You're welcome","Gern geschehen","welcome response"],
+["basics","Polite words","من فضلك","Men fadlak","Please","Bitte","please"],
+["basics","Polite words","معلش","Maalesh","Never mind / Sorry","Macht nichts / Entschuldigung","sorry no problem"],
+["basics","Polite words","آسف","Asef","I'm sorry","Es tut mir leid","sorry"],
+["basics","Polite words","أيوه","Aywa","Yes","Ja","yes"],
+["basics","Polite words","لأ","La'","No","Nein","no"],
+["basics","Polite words","مش فاهم","Mesh fahem","I don't understand","Ich verstehe nicht","understand"],
+["basics","Polite words","ممكن تتكلم بالراحة؟","Momken tetkallem beraha?","Can you speak slowly?","Können Sie bitte langsam sprechen?","slowly repeat"],
+["basics","Polite words","بتتكلم إنجليزي؟","Betetkallem English?","Do you speak English?","Sprechen Sie Englisch?","language speak"],
+["basics","Polite words","أنا بتعلم عربي","Ana bat'allim Arabi","I'm learning Arabic","Ich lerne Arabisch","learning language"],
+["basics","Polite words","ممكن تساعدني؟","Momken tesaa'edni?","Can you help me?","Können Sie mir helfen?","help"],
+["basics","Polite words","تمام","Tamam","Okay / Great","Okay / In Ordnung","okay fine"],
+
+/* RESTAURANT */
+["restaurant","Finding a table","عندكم ترابيزة لشخصين؟","Andokom tarabeza le shakhsayn?","Do you have a table for two?","Haben Sie einen Tisch für zwei?","table reservation two people"],
+["restaurant","Finding a table","ممكن المنيو؟","Momken el menu?","Can I see the menu?","Kann ich bitte die Speisekarte sehen?","menu"],
+["restaurant","Finding a table","فيه مكان بره؟","Feh makan barra?","Is there a table outside?","Gibt es einen Tisch draußen?","outside terrace"],
+["restaurant","Ordering food","أنا عايز أطلب","Ana ayiz atlub","I'd like to order","Ich möchte bestellen","order"],
+["restaurant","Ordering food","ممكن مية من فضلك؟","Momken mayya men fadlak?","Can I have some water, please?","Kann ich bitte Wasser haben?","water"],
+["restaurant","Ordering food","من غير تلج","Men gheer talg","Without ice","Ohne Eis","ice"],
+["restaurant","Ordering food","الأكل ده حار؟","El akl da harr?","Is this food spicy?","Ist dieses Essen scharf?","spicy hot"],
+["restaurant","Ordering food","عايزه من غير شطة","Ayzo men gheer shatta","I'd like it without chilli","Ich möchte es ohne Chili","chilli spicy"],
+["restaurant","Food needs","أنا نباتي","Ana nabati","I'm vegetarian","Ich bin Vegetarier/in","vegetarian"],
+["restaurant","Food needs","عندي حساسية من المكسرات","Andi hassaseya men el mokassarat","I'm allergic to nuts","Ich bin allergisch gegen Nüsse","allergy nuts"],
+["restaurant","Food needs","فيه أكل من غير لحمة؟","Feh akl men gheer lahma?","Do you have food without meat?","Haben Sie Essen ohne Fleisch?","meat"],
+["restaurant","Food needs","ده فيه لبن؟","Da feeh laban?","Does this contain milk?","Enthält das Milch?","milk ingredients"],
+["restaurant","Bill & service","الحساب لو سمحت","El hesab law samaht","The bill, please","Die Rechnung, bitte","bill check"],
+["restaurant","Bill & service","الخدمة included؟","El kheddma included?","Is service included?","Ist die Bedienung inbegriffen?","service charge"],
+["restaurant","Bill & service","ممكن أدفع بالكارت؟","Momken adfa' bel card?","Can I pay by card?","Kann ich mit Karte bezahlen?","card payment"],
+["restaurant","Bill & service","الأكل كان جميل، شكراً","El akl kan gameel, shokran","The food was lovely, thank you","Das Essen war sehr lecker, danke","delicious"],
+
+/* HOTEL */
+["hotel","Check-in","عندي حجز باسم ...","Andi hagz besm ...","I have a reservation under the name ...","Ich habe eine Reservierung auf den Namen ...","booking reservation"],
+["hotel","Check-in","ممكن أعمل check-in؟","Momken aamel check-in?","Can I check in?","Kann ich einchecken?","check in"],
+["hotel","Check-in","إمتى ميعاد تسجيل الخروج؟","Emta me'ad tasgeel el khoroug?","What time is check-out?","Wann ist Check-out?","check out"],
+["hotel","Room requests","مفتاح الأوضة لو سمحت","Meftah el oda law samaht","The room key, please","Den Zimmerschlüssel, bitte","room key"],
+["hotel","Room requests","التكييف مش شغال","El takyeef mesh shaghal","The air conditioning isn't working","Die Klimaanlage funktioniert nicht","air conditioning"],
+["hotel","Room requests","مفيش مياه سخنة","Mafeesh mayya sokhna","There is no hot water","Es gibt kein warmes Wasser","hot water"],
+["hotel","Room requests","ممكن فوطة زيادة؟","Momken fota zeyada?","Can I have an extra towel?","Kann ich ein zusätzliches Handtuch bekommen?","towel"],
+["hotel","Room requests","ممكن حد يساعدني؟","Momken had yesaa'edni?","Could someone help me?","Könnte mir jemand helfen?","assistance"],
+["hotel","Hotel services","الفطار الساعة كام؟","El fetar el saa'a kam?","What time is breakfast?","Um wie viel Uhr gibt es Frühstück?","breakfast time"],
+["hotel","Hotel services","الواي فاي رقمه السري إيه؟","El Wi-Fi raqmo el serri eh?","What's the Wi-Fi password?","Wie lautet das WLAN-Passwort?","wifi internet password"],
+["hotel","Hotel services","ممكن تاكسي للفندق؟","Momken taxi lel fondok?","Can you arrange a taxi?","Können Sie ein Taxi bestellen?","taxi"],
+
+/* AIRPORT */
+["airport","Airport","فين استلام الشنط؟","Fein estelam el shonat?","Where is baggage claim?","Wo ist die Gepäckausgabe?","luggage baggage"],
+["airport","Airport","فين الجوازات؟","Fein el gawazat?","Where is passport control?","Wo ist die Passkontrolle?","passport immigration"],
+["airport","Airport","دي شنطتي","Di shanteti","This is my suitcase","Das ist mein Koffer","suitcase luggage"],
+["airport","Airport","شنطتي ما وصلتش","Shanteti ma wesletsh","My luggage hasn't arrived","Mein Gepäck ist nicht angekommen","lost luggage"],
+["airport","Airport","رحلتي اتأخرت؟","Rehlti et'akhkharit?","Is my flight delayed?","Hat mein Flug Verspätung?","flight delay"],
+["airport","Airport","فين بوابة رقم ...؟","Fein bawabet raqm ...?","Where is gate number ...?","Wo ist Gate Nummer ...?","gate"],
+["airport","Airport","ممكن تساعدني ألاقي السواق؟","Momken tesaa'edni ala'i el saw-wa'?","Can you help me find my driver?","Können Sie mir helfen, meinen Fahrer zu finden?","driver pickup"],
+
+/* TRANSPORT */
+["transport","Taxi","ممكن توديني العنوان ده؟","Momken tewaddini el onwan da?","Can you take me to this address?","Können Sie mich zu dieser Adresse bringen?","address destination"],
+["transport","Taxi","بكام للمكان ده؟","Bekam lel makan da?","How much to this place?","Wie viel kostet es bis dorthin?","price fare"],
+["transport","Taxi","شغّل العداد لو سمحت","Shaghal el addad law samaht","Please turn on the meter","Bitte schalten Sie das Taxameter ein","meter"],
+["transport","Taxi","استنى هنا لو سمحت","Estanna hena law samaht","Please wait here","Bitte warten Sie hier","wait"],
+["transport","Taxi","نزّلني هنا من فضلك","Nezzelni hena men fadlak","Please drop me off here","Bitte lassen Sie mich hier aussteigen","stop"],
+["transport","Directions","يمين","Yemeen","Right","Rechts","right"],
+["transport","Directions","شمال","Shemaal","Left","Links","left"],
+["transport","Directions","على طول","Ala tool","Straight ahead","Geradeaus","straight"],
+["transport","Directions","قريب من هنا؟","Areeb men hena?","Is it near here?","Ist es in der Nähe?","near"],
+["transport","Directions","بعيد عن هنا؟","Ba'eed an hena?","Is it far from here?","Ist es weit von hier?","far"],
+["transport","Directions","ممكن تبعتلي اللوكيشن؟","Momken teb'atli el location?","Can you send me the location?","Können Sie mir den Standort schicken?","location map"],
+
+/* SHOPPING */
+["shopping","Prices","بكام ده؟","Bekam da?","How much is this?","Wie viel kostet das?","price cost"],
+["shopping","Prices","السعر النهائي كام؟","El se'r el neha'i kam?","What's your final price?","Was ist Ihr letzter Preis?","final price"],
+["shopping","Prices","غالي أوي","Ghali awi","That's very expensive","Das ist sehr teuer","expensive"],
+["shopping","Prices","ممكن سعر أحسن؟","Momken se'r ahsan?","Can you give me a better price?","Können Sie mir einen besseren Preis machen?","discount bargain"],
+["shopping","Buying","هشتري ده","Hashtari da","I'll buy this","Ich nehme das","buy"],
+["shopping","Buying","أنا بتفرج بس، شكراً","Ana batfarag bass, shokran","I'm just looking, thank you","Ich schaue mich nur um, danke","just looking"],
+["shopping","Buying","عندك لون تاني؟","Andak lawn tani?","Do you have another colour?","Haben Sie eine andere Farbe?","colour size"],
+["shopping","Buying","ممكن إيصال؟","Momken eesal?","Can I have a receipt?","Kann ich eine Quittung bekommen?","receipt"],
+
+/* BEACH */
+["beach","Beach","فين الشاطئ؟","Fein el shate'?","Where is the beach?","Wo ist der Strand?","beach"],
+["beach","Beach","البحر آمن للسباحة؟","El bahr amen lel sebaha?","Is the sea safe for swimming?","Ist das Meer zum Schwimmen sicher?","swimming safe"],
+["beach","Beach","فين مكان تغيير الملابس؟","Fein makan taghyeer el malabes?","Where is the changing room?","Wo ist die Umkleidekabine?","changing room"],
+["beach","Beach","ممكن أستأجر شمسية؟","Momken asta'ger shamsiya?","Can I rent a beach umbrella?","Kann ich einen Sonnenschirm mieten?","umbrella rent"],
+["beach","Sea trips","الرحلة بتبدأ الساعة كام؟","El rehla betebda el saa'a kam?","What time does the trip start?","Um wie viel Uhr beginnt der Ausflug?","trip excursion"],
+["beach","Sea trips","إيه اللي لازم أجيبه معايا؟","Eh elli lazim ageebo ma'aya?","What should I bring with me?","Was soll ich mitbringen?","bring"],
+["beach","Sea trips","معدات السنوركل included؟","Mo'addat el snorkel included?","Is snorkelling equipment included?","Ist die Schnorchelausrüstung inklusive?","snorkeling equipment"],
+["beach","Sea trips","مش بعرف أعوم","Mesh ba'ref a'oom","I can't swim","Ich kann nicht schwimmen","cannot swim"],
+
+/* HEALTH */
+["health","Getting help","محتاج دكتور","Mehtag doktor","I need a doctor","Ich brauche einen Arzt","doctor"],
+["health","Getting help","ممكن تتصل بالإسعاف؟","Momken tettesel bel esa'af?","Can you call an ambulance?","Können Sie einen Krankenwagen rufen?","ambulance"],
+["health","Symptoms","أنا تعبان","Ana ta'ban","I feel unwell","Mir geht es nicht gut","unwell sick"],
+["health","Symptoms","عندي صداع","Andi soda'a","I have a headache","Ich habe Kopfschmerzen","headache"],
+["health","Symptoms","عندي سخونية","Andi sokhoneyya","I have a fever","Ich habe Fieber","fever temperature"],
+["health","Symptoms","عندي ألم في بطني","Andi alam fi batni","I have stomach pain","Ich habe Bauchschmerzen","stomach pain"],
+["health","Symptoms","حاسس بدوخة","Hases bedawkha","I feel dizzy","Mir ist schwindelig","dizzy"],
+["health","Symptoms","عندي حساسية","Andi hassaseya","I have an allergy","Ich habe eine Allergie","allergy"],
+["health","Doctor","الألم بدأ إمتى؟","El alam bede emta?","When did the pain start?","Wann haben die Schmerzen angefangen?","pain started"],
+["health","Doctor","محتاج أروح المستشفى","Mehtag arooh el mostashfa","I need to go to the hospital","Ich muss ins Krankenhaus","hospital"],
+["health","Doctor","أنا باخد الدوا ده","Ana bakhod el dawa da","I take this medicine","Ich nehme dieses Medikament","medicine medication"],
+
+/* PHARMACY */
+["pharmacy","At the pharmacy","فين أقرب صيدلية؟","Fein a'rab saydaliyya?","Where is the nearest pharmacy?","Wo ist die nächste Apotheke?","pharmacy chemist"],
+["pharmacy","At the pharmacy","محتاج حاجة للصداع","Mehtag haga lel soda'a","I need something for a headache","Ich brauche etwas gegen Kopfschmerzen","headache medicine"],
+["pharmacy","At the pharmacy","محتاج حاجة للمعدة","Mehtag haga lel me'da","I need something for my stomach","Ich brauche etwas für den Magen","stomach medicine"],
+["pharmacy","At the pharmacy","ممكن تشرحلي طريقة الاستخدام؟","Momken teshr ahli taree'et el estekhdam?","Can you explain how to use it?","Können Sie mir erklären, wie man es benutzt?","instructions use"],
+["pharmacy","At the pharmacy","هل محتاج روشتة؟","Hal mehtag rosh teta?","Do I need a prescription?","Brauche ich ein Rezept?","prescription"],
+
+/* SUN & WELLBEING */
+["sun","Sun & heat","الشمس قوية أوي النهارده","El shams aweya awi ennaharda","The sun is very strong today","Die Sonne ist heute sehr stark","sun hot"],
+["sun","Sun & heat","محتاج أشرب مية","Mehtag ashrab mayya","I need to drink water","Ich muss Wasser trinken","water thirsty"],
+["sun","Sun & heat","ممكن نقعد في مكان ضل؟","Momken ne'od fi makan dell?","Can we sit somewhere in the shade?","Können wir im Schatten sitzen?","shade"],
+["sun","Sun & heat","حاسس إني سخنت من الشمس","Hases enni sekhent men el shams","I think I've overheated in the sun","Ich glaube, ich habe zu viel Sonne abbekommen","overheated sunburn"],
+
+/* PLACES */
+["places","Finding places","فين الحمام؟","Fein el hammam?","Where is the toilet?","Wo ist die Toilette?","toilet bathroom"],
+["places","Finding places","فين أقرب ماكينة ATM؟","Fein a'rab ATM?","Where is the nearest ATM?","Wo ist der nächste Geldautomat?","atm cash machine"],
+["places","Finding places","فين السوبر ماركت؟","Fein el supermarket?","Where is the supermarket?","Wo ist der Supermarkt?","supermarket shop"],
+["places","Finding places","ممكن توريني على الخريطة؟","Momken tewarreeni ala el khareeta?","Can you show me on the map?","Können Sie es mir auf der Karte zeigen?","map"],
+["places","Finding places","المكان ده مفتوح؟","El makan da maftooh?","Is this place open?","Ist dieser Ort geöffnet?","open closed"],
+
+/* SOCIAL */
+["social","Meeting people","اسمك إيه؟","Esmak eh?","What's your name?","Wie heißt du?","name"],
+["social","Meeting people","اسمي ...","Esmi ...","My name is ...","Ich heiße ...","my name"],
+["social","Meeting people","إنت منين؟","Enta men fein?","Where are you from?","Woher kommst du?","from country"],
+["social","Meeting people","أنا من ألمانيا","Ana men Almanya","I'm from Germany","Ich komme aus Deutschland","Germany"],
+["social","Meeting people","أنا من إنجلترا","Ana men Engiltera","I'm from England","Ich komme aus England","England"],
+["social","Meeting people","مصر جميلة","Masr gameela","Egypt is beautiful","Ägypten ist wunderschön","Egypt beautiful"],
+["social","Meeting people","تشرفت بمعرفتك","Tasharraft bema'refetak","Nice to meet you","Freut mich, dich kennenzulernen","nice meet"],
+
+/* PROBLEMS */
+["problems","Getting help","أنا تايه","Ana tayeh","I'm lost","Ich habe mich verlaufen","lost"],
+["problems","Getting help","ممكن تساعدني ألاقي الفندق؟","Momken tesaa'edni ala'i el fondok?","Can you help me find the hotel?","Können Sie mir helfen, das Hotel zu finden?","find hotel"],
+["problems","Getting help","موبايلي ضاع","Mobayli da'a","I've lost my phone","Ich habe mein Handy verloren","lost phone"],
+["problems","Getting help","محفظتي اتسرقت","Mahfazti etsara'et","My wallet has been stolen","Meine Geldbörse wurde gestohlen","stolen wallet"],
+["problems","Getting help","عايز أكلم الشرطة","Ayiz akallem el shorta","I want to speak to the police","Ich möchte mit der Polizei sprechen","police"],
+["problems","Getting help","ممكن تتكلم معايا بالإنجليزي؟","Momken tetkallem ma'aya bel English?","Can you speak with me in English?","Können Sie mit mir Englisch sprechen?","English help"],
+["problems","Getting help","استنى، في مشكلة","Estanna, fe moshkela","Wait, there's a problem","Warten Sie, es gibt ein Problem","problem"],
+
+/* MONEY, TIME & NUMBERS */
+["numbers","Numbers & money","واحد","Wahed","One","Eins","number one"],
+["numbers","Numbers & money","اتنين","Etnein","Two","Zwei","number two"],
+["numbers","Numbers & money","تلاتة","Talata","Three","Drei","number three"],
+["numbers","Numbers & money","أربعة","Arba'a","Four","Vier","number four"],
+["numbers","Numbers & money","خمسة","Khamsa","Five","Fünf","number five"],
+["numbers","Numbers & money","عشرة","Ashara","Ten","Zehn","number ten"],
+["numbers","Numbers & money","عشرين","Eshreen","Twenty","Zwanzig","number twenty"],
+["numbers","Numbers & money","مية","Meyya","One hundred","Einhundert","number hundred"],
+["numbers","Numbers & money","جنيه مصري","Geneh masri","Egyptian pound","Ägyptisches Pfund","Egyptian money currency"],
+["numbers","Time","الساعة كام؟","El saa'a kam?","What time is it?","Wie spät ist es?","time clock"],
+["numbers","Time","النهارده","Ennaharda","Today","Heute","today"],
+["numbers","Time","بكرة","Bokra","Tomorrow","Morgen","tomorrow"],
+["numbers","Time","دلوقتي","Delwa'ti","Now","Jetzt","now"],
+["numbers","Time","بسرعة لو سمحت","Besor'a law samaht","Quickly, please","Bitte schnell","quickly"]
+];
+
+const categoryData = [
+ {id:"basics",icon:"👋",en:"Basics & polite words",de:"Grundlagen & Höflichkeit"},
+ {id:"restaurant",icon:"🍽️",en:"Restaurants & food",de:"Restaurants & Essen"},
+ {id:"hotel",icon:"🏨",en:"Hotel & accommodation",de:"Hotel & Unterkunft"},
+ {id:"airport",icon:"✈️",en:"Airport & flights",de:"Flughafen & Flüge"},
+ {id:"transport",icon:"🚕",en:"Taxi & transportation",de:"Taxi & Verkehr"},
+ {id:"shopping",icon:"🛍️",en:"Shopping & markets",de:"Einkaufen & Märkte"},
+ {id:"beach",icon:"🏖️",en:"Beach & sea trips",de:"Strand & Bootsausflüge"},
+ {id:"health",icon:"🩺",en:"Health & doctor",de:"Gesundheit & Arzt"},
+ {id:"pharmacy",icon:"💊",en:"Pharmacy",de:"Apotheke"},
+ {id:"sun",icon:"☀️",en:"Sun & wellbeing",de:"Sonne & Wohlbefinden"},
+ {id:"places",icon:"📍",en:"Places & directions",de:"Orte & Wegbeschreibung"},
+ {id:"social",icon:"💬",en:"Everyday conversation",de:"Alltagsgespräche"},
+ {id:"problems",icon:"🆘",en:"Problems & emergencies",de:"Probleme & Notfälle"},
+ {id:"numbers",icon:"🔢",en:"Money, time & numbers",de:"Geld, Zeit & Zahlen"}
 ];
 
 const ui = {
-en:{eyebrow:"YOUR POCKET GUIDE TO HURGHADA",heroTitle:'Explore Hurghada.<br><span>Feel at Home.</span>',heroText:"Useful local information, everyday Egyptian Arabic phrases and emergency contacts — all in one simple travel companion.",heroNote:"Save this guide and keep useful information close.",emergencyKicker:"IMPORTANT NUMBERS",emergencyTitle:"Emergency Contacts in Egypt",emergencyIntro:"Keep these numbers handy during your stay. Tap a number to call from your phone.",ambulance:"Ambulance",police:"Police",fire:"Fire service",touristPolice:"Tourist Police",callNow:"CALL NOW",emergencyNotice:"For a serious emergency, contact the relevant local service. If you need help communicating, ask your hotel reception or tour representative to assist.",officialInfo:"Official Egypt travel information ↗",phraseKicker:"SPEAK EGYPTIAN ARABIC",phraseTitle:"What Would You Like to Say?",phraseIntro:"Choose the situation you are in. Every phrase includes Arabic writing, an easy pronunciation guide in your language, its meaning and Egyptian Arabic audio.",search:"Search a phrase or situation...",clearSearch:"CLEAR SEARCH",speechNote:"Audio uses the Egyptian Arabic voice available on your device or browser. Voice availability and accent quality can vary. The written pronunciation is provided as a guide.",arabic:"ARABIC",pronunciation:"READ IT IN ENGLISH LETTERS",meaning:"MEANING",listen:"🔊 LISTEN",copy:"COPY ARABIC",noResults:"No phrases found. Try another search.",all:"ALL CATEGORIES",transportKicker:"GETTING AROUND",transportTitle:"Smart Local Travel Tips",transportIntro:"A few simple habits can make getting around Hurghada easier.",taxiTitle:"Before taking a taxi",taxiSub:"Agree clearly before the ride",taxi1Title:"Confirm the total fare",taxi1:"Agree on the full price and currency before getting in, unless the meter is being used.",taxi2Title:"Clarify the destination",taxi2:"Show the hotel or destination name on your phone, and check the route before departure.",taxi3Title:"Keep small notes",taxi3:"Carry some smaller Egyptian-pound notes for everyday purchases and transport.",moneyTitle:"Money & Shopping",moneySub:"Simple ways to avoid confusion",money1Title:"Check the currency",money1:"Confirm whether a quoted price is in Egyptian pounds, euros or another currency.",money2Title:"Agree before buying",money2:"For market goods and services without displayed prices, agree on the price before accepting.",money3Title:"Use trusted exchange services",money3:"Exchange money through banks or licensed exchange offices and keep your receipt.",priceNote:"Taxi fares and shopping prices change. Confirm the current amount and currency before you agree.",mobileKicker:"STAY CONNECTED",mobileTitle:"SIM Cards & Mobile Internet",mobileIntro:"A local SIM can be useful for maps, messaging and contacting your hotel or tour operator.",simTitle:"Getting a local SIM",simSub:"Choose an official provider",sim1Title:"Visit an official operator counter",sim1:"Look for an official mobile-network shop or airport counter rather than an unverified street seller.",sim2Title:"Bring your passport",sim2:"Ask the provider which identification documents are required to register and activate your SIM.",sim3Title:"Check the package details",sim3:"Confirm the data allowance, validity period, local minutes and total price before paying.",sim4Title:"Test before leaving",sim4:"Make sure mobile data works and keep the receipt and provider details.",phoneTitle:"Before you use your phone",phoneSub:"Avoid unexpected costs",phone1Title:"Check roaming charges",phone1:"If you keep your home SIM active, check international roaming rates with your home provider.",phone2Title:"Download offline maps",phone2:"Save the Hurghada area in your map app before leaving Wi-Fi.",phone3Title:"Keep important details",phone3:"Save your hotel address, travel insurance details and tour contact information offline.",simNote:"SIM availability, registration rules and package prices may change. Confirm current requirements directly with the mobile operator.",seaKicker:"SUN, SEA & EXCURSIONS",seaTitle:"A Few Smart Travel Habits",seaIntro:"Enjoy your time in Hurghada while keeping the essentials in mind.",sunTitle:"Sun & Beach",sunSub:"Take care in the Egyptian sun",sun1Title:"Stay hydrated",sun1:"Carry drinking water, especially during outdoor activities and boat trips.",sun2Title:"Use sun protection",sun2:"Wear suitable sun protection, sunglasses and a hat. Take breaks in the shade.",sun3Title:"Respect the reef",sun3:"Do not stand on, touch or collect coral. Follow your guide's instructions in the water.",documentsTitle:"Keep Your Essentials Safe",documentsSub:"A quick personal checklist",check1:"I have my hotel name and address saved.",check2:"I have a copy of my passport stored securely.",check3:"I have my travel insurance details available.",check4:"I have saved my tour and transfer contact details.",check5:"I have saved important information for offline use.",privacyNote:"Keep original travel documents secure. Share copies only when necessary with trusted providers.",offlineTitle:"Your guide. Even without internet.",offlineText:"After your first successful visit while online, this guide can be available offline on this device. Install it for easier access from your home screen.",installGuide:"＋ ADD TO HOME SCREEN",footerText:"Your Hurghada companion · Hurghada, Egypt",footerDisclaimer:"Travel information is general guidance. Always confirm current details with official providers.",copied:"Arabic phrase copied!",copyFailed:"Please copy manually.",offlineReady:"Offline support is ready on this device.",offlineNotReady:"Open this page once while online to prepare offline access.",installHelp:"Use your browser menu and choose “Add to Home Screen” or “Install app”.",installUnavailable:"Installation is not available in this browser right now.",copy:"COPY ARABIC"},
-de:{eyebrow:"IHR TASCHENREISEFÜHRER FÜR HURGHADA",heroTitle:'Hurghada entdecken.<br><span>Wie zu Hause fühlen.</span>',heroText:"Nützliche lokale Informationen, ägyptisch-arabische Redewendungen und Notfallnummern – alles in einem praktischen Reisebegleiter.",heroNote:"Speichern Sie diesen Reiseführer und haben Sie wichtige Informationen immer dabei.",emergencyKicker:"WICHTIGE NUMMERN",emergencyTitle:"Notfallkontakte in Ägypten",emergencyIntro:"Speichern Sie diese Nummern für Ihren Aufenthalt. Tippen Sie auf eine Nummer, um anzurufen.",ambulance:"Krankenwagen",police:"Polizei",fire:"Feuerwehr",touristPolice:"Touristenpolizei",callNow:"JETZT ANRUFEN",emergencyNotice:"Wenden Sie sich bei einem ernsthaften Notfall an den zuständigen lokalen Dienst. Wenn Sie Hilfe bei der Verständigung benötigen, bitten Sie die Hotelrezeption oder Ihre Reisevertretung um Unterstützung.",officialInfo:"Offizielle Reiseinformationen für Ägypten ↗",phraseKicker:"ÄGYPTISCH ARABISCH SPRECHEN",phraseTitle:"Was möchten Sie sagen?",phraseIntro:"Wählen Sie Ihre Situation. Jede Redewendung zeigt den arabischen Text, eine leicht lesbare Aussprachehilfe, die deutsche Bedeutung und ägyptisch-arabisches Audio.",search:"Redewendung oder Situation suchen...",clearSearch:"SUCHE LÖSCHEN",speechNote:"Die Audiofunktion verwendet die auf Ihrem Gerät oder Browser verfügbare ägyptisch-arabische Stimme. Verfügbarkeit und Akzentqualität können variieren. Die Lautschrift dient als Hilfe.",arabic:"ARABISCH",pronunciation:"AUSSPRACHE MIT LATEINISCHEN BUCHSTABEN",meaning:"BEDEUTUNG",listen:"🔊 ANHÖREN",copy:"ARABISCH KOPIEREN",noResults:"Keine Redewendung gefunden. Versuchen Sie eine andere Suche.",all:"ALLE KATEGORIEN",transportKicker:"UNTERWEGS",transportTitle:"Praktische Reisetipps",transportIntro:"Ein paar einfache Gewohnheiten machen die Fortbewegung in Hurghada leichter.",taxiTitle:"Vor der Taxifahrt",taxiSub:"Den Preis vorher klar vereinbaren",taxi1Title:"Gesamtpreis bestätigen",taxi1:"Vereinbaren Sie vor dem Einsteigen den Gesamtpreis und die Währung, sofern nicht das Taxameter verwendet wird.",taxi2Title:"Fahrtziel klären",taxi2:"Zeigen Sie den Hotel- oder Zielnamen auf Ihrem Telefon und prüfen Sie die Route vor der Abfahrt.",taxi3Title:"Kleine Scheine dabeihaben",taxi3:"Halten Sie kleinere ägyptische Pfundnoten für Einkäufe und Fahrten bereit.",moneyTitle:"Geld & Einkaufen",moneySub:"So vermeiden Sie Missverständnisse",money1Title:"Währung prüfen",money1:"Klären Sie, ob ein genannter Preis in ägyptischen Pfund, Euro oder einer anderen Währung angegeben ist.",money2Title:"Preis vorher vereinbaren",money2:"Vereinbaren Sie bei Waren und Dienstleistungen ohne Preisschild den Preis vor dem Kauf.",money3Title:"Seriöse Wechselstellen nutzen",money3:"Wechseln Sie Geld bei Banken oder lizenzierten Wechselstuben und bewahren Sie den Beleg auf.",priceNote:"Taxi- und Einkaufspreise ändern sich. Bestätigen Sie den aktuellen Betrag und die Währung, bevor Sie zustimmen.",mobileKicker:"IN VERBINDUNG BLEIBEN",mobileTitle:"SIM-Karten & mobiles Internet",mobileIntro:"Eine lokale SIM-Karte ist praktisch für Karten, Nachrichten und den Kontakt mit Ihrem Hotel oder Reiseveranstalter.",simTitle:"Eine lokale SIM-Karte kaufen",simSub:"Einen offiziellen Anbieter wählen",sim1Title:"Offiziellen Anbieter aufsuchen",sim1:"Nutzen Sie einen offiziellen Mobilfunkshop oder Flughafenschalter statt eines nicht verifizierten Straßenverkäufers.",sim2Title:"Reisepass mitbringen",sim2:"Fragen Sie den Anbieter, welche Ausweisdokumente zur Registrierung und Aktivierung benötigt werden.",sim3Title:"Paketdetails prüfen",sim3:"Prüfen Sie Datenvolumen, Gültigkeit, lokale Gesprächsminuten und Gesamtpreis vor der Zahlung.",sim4Title:"Vor dem Verlassen testen",sim4:"Prüfen Sie, ob mobile Daten funktionieren, und bewahren Sie den Beleg sowie die Anbieterinformationen auf.",phoneTitle:"Bevor Sie Ihr Telefon nutzen",phoneSub:"Unerwartete Kosten vermeiden",phone1Title:"Roamingkosten prüfen",phone1:"Wenn Ihre heimische SIM aktiv bleibt, prüfen Sie die internationalen Roaminggebühren bei Ihrem Anbieter.",phone2Title:"Offline-Karten herunterladen",phone2:"Speichern Sie das Gebiet von Hurghada in Ihrer Karten-App, bevor Sie das WLAN verlassen.",phone3Title:"Wichtige Angaben speichern",phone3:"Speichern Sie Hoteladresse, Reiseversicherungsdaten und Kontaktdaten Ihrer Ausflüge offline.",simNote:"SIM-Verfügbarkeit, Registrierungsregeln und Paketpreise können sich ändern. Erkundigen Sie sich direkt beim Mobilfunkanbieter nach den aktuellen Anforderungen.",seaKicker:"SONNE, MEER & AUSFLÜGE",seaTitle:"Ein paar clevere Reisetipps",seaIntro:"Genießen Sie Ihre Zeit in Hurghada und behalten Sie diese wichtigen Hinweise im Blick.",sunTitle:"Sonne & Strand",sunSub:"Schützen Sie sich vor der ägyptischen Sonne",sun1Title:"Ausreichend trinken",sun1:"Nehmen Sie Trinkwasser mit, besonders bei Aktivitäten im Freien und Bootsausflügen.",sun2Title:"Sonnenschutz verwenden",sun2:"Verwenden Sie geeigneten Sonnenschutz, Sonnenbrille und Hut. Machen Sie Pausen im Schatten.",sun3Title:"Das Riff respektieren",sun3:"Treten Sie nicht auf Korallen, berühren oder sammeln Sie sie nicht. Befolgen Sie die Anweisungen Ihres Guides im Wasser.",documentsTitle:"Wichtige Dinge sicher aufbewahren",documentsSub:"Eine kurze persönliche Checkliste",check1:"Ich habe Hotelname und Adresse gespeichert.",check2:"Ich habe eine Passkopie sicher aufbewahrt.",check3:"Ich habe meine Reiseversicherungsdaten verfügbar.",check4:"Ich habe die Kontaktinformationen für Ausflüge und Transfers gespeichert.",check5:"Ich habe wichtige Informationen offline gespeichert.",privacyNote:"Bewahren Sie Original-Reisedokumente sicher auf. Teilen Sie Kopien nur bei Bedarf mit vertrauenswürdigen Anbietern.",offlineTitle:"Ihr Reiseführer. Auch ohne Internet.",offlineText:"Nach dem ersten erfolgreichen Besuch mit Internet kann dieser Reiseführer auf diesem Gerät offline verfügbar sein. Installieren Sie ihn für einen schnellen Zugriff vom Startbildschirm.",installGuide:"＋ ZUM STARTBILDSCHIRM",footerText:"Ihr Hurghada-Begleiter · Hurghada, Ägypten",footerDisclaimer:"Reiseinformationen dienen als allgemeine Orientierung. Bestätigen Sie aktuelle Angaben immer bei offiziellen Anbietern.",copied:"Arabischer Satz kopiert!",copyFailed:"Bitte manuell kopieren.",offlineReady:"Offline-Unterstützung ist auf diesem Gerät bereit.",offlineNotReady:"Öffnen Sie diese Seite einmal mit Internet, um den Offline-Zugriff vorzubereiten.",installHelp:"Öffnen Sie das Browsermenü und wählen Sie „Zum Startbildschirm hinzufügen“ oder „App installieren“.",installUnavailable:"Die Installation ist in diesem Browser momentan nicht verfügbar."}
+ en:{
+  heroTag:"YOUR TRAVEL COMPANION",heroTitle:"Speak a Little Egyptian. Experience a Lot More.",
+  heroDesc:"Your practical pocket guide to everyday Egyptian Arabic. Find the right words, hear the pronunciation and communicate with confidence.",
+  pill1:"🇪🇬 Real Egyptian Arabic",pill2:"🔊 Listen & Learn",pill3:"📱 Works Offline",
+  searchTitle:"What do you want to say?",searchPlaceholder:"Search in English or German...",
+  searchHint:"Try: Where is the hotel? · Ich brauche einen Arzt · How much is this?",
+  searchBtn:"Search",clearBtn:"Clear",categoriesTitle:"Explore the guide",
+  categoriesDesc:"Choose a situation to find useful phrases.",phrasesTitle:"Useful Egyptian phrases",
+  phrasesDesc:"Arabic, pronunciation and translation.",all:"All phrases",listen:"🔊 Listen",
+  copy:"Copy Arabic",copied:"Arabic phrase copied!",noResults:"No matching phrases found. Try another word or phrase.",
+  result:"phrases",emergencyTitle:"Emergency numbers in Egypt",
+  emergencyDesc:"Keep these numbers available during your trip.",
+  emergencyWarning:"Important emergency contacts",amb:"Ambulance",pol:"Police",
+  fire:"Fire Department",tourist:"Tourist Police",
+  emergencyNote:"If you are in immediate danger, contact the appropriate emergency service. Ask your hotel or tour representative for assistance when possible.",
+  tipsTitle:"Smart travel tips",tipsDesc:"A few useful things to know before you head out.",
+  simTitle:"📱 SIM cards & Internet",
+  sim:["Ask about the data allowance and validity period before purchasing.","Keep your passport available when buying a local SIM.","Save your hotel address offline."],
+  sunTitle:"☀️ Sun, heat & beach",
+  sun:["Drink water regularly, especially during outdoor activities.","Use sunscreen, sunglasses and a hat.","Follow local beach and sea safety instructions."],
+  moneyTitle:"💵 Money & shopping",
+  money:["Ask for the price before agreeing to buy or use a service.","Carry some small Egyptian pound notes.","Check your change before leaving."],
+  respectTitle:"🤝 Local culture",
+  respect:["A friendly greeting and a smile go a long way.","Ask permission before photographing people.","Dress appropriately when visiting religious places."],
+  checkTitle:"Before you go checklist",checkDesc:"A quick reminder for a smoother day.",
+  checks:["Phone charged and power bank ready","Hotel address saved on your phone","Water, sunscreen and sunglasses","Some cash and a payment card","Travel documents and necessary medication","Tour and transfer details confirmed"],
+  offlineTitle:"Take your guide with you",offlineDesc:"Install the Pocket Guide for quick access. Offline availability depends on the page being cached on your device.",
+  topBtn:"Back to top ↑",footer:"Discover Egypt. Connect with its people. Travel with confidence.",
+  subAll:"All",english:"English",german:"German"
+ },
+ de:{
+  heroTag:"IHR REISEBEGLEITER",heroTitle:"Ein wenig Ägyptisch sprechen. Viel mehr erleben.",
+  heroDesc:"Ihr praktischer Sprachführer für ägyptisches Arabisch. Finden Sie passende Sätze, hören Sie die Aussprache und verständigen Sie sich sicher.",
+  pill1:"🇪🇬 Echtes ägyptisches Arabisch",pill2:"🔊 Anhören & Lernen",pill3:"📱 Offline nutzbar",
+  searchTitle:"Was möchten Sie sagen?",searchPlaceholder:"Auf Englisch oder Deutsch suchen...",
+  searchHint:"Versuchen Sie: Where is the hotel? · Ich brauche einen Arzt · How much is this?",
+  searchBtn:"Suchen",clearBtn:"Löschen",categoriesTitle:"Den Sprachführer entdecken",
+  categoriesDesc:"Wählen Sie eine Situation und finden Sie hilfreiche Sätze.",
+  phrasesTitle:"Nützliche ägyptische Sätze",phrasesDesc:"Arabisch, Aussprache und Übersetzung.",
+  all:"Alle Sätze",listen:"🔊 Anhören",copy:"Arabisch kopieren",
+  copied:"Arabischer Satz kopiert!",noResults:"Keine passenden Sätze gefunden. Versuchen Sie einen anderen Suchbegriff.",
+  result:"Sätze",emergencyTitle:"Notrufnummern in Ägypten",
+  emergencyDesc:"Speichern Sie diese Nummern für Ihre Reise.",
+  emergencyWarning:"Wichtige Notfallkontakte",amb:"Krankenwagen",pol:"Polizei",
+  fire:"Feuerwehr",tourist:"Touristenpolizei",
+  emergencyNote:"Bei unmittelbarer Gefahr wenden Sie sich an den zuständigen Notdienst. Bitten Sie nach Möglichkeit Ihr Hotel oder Ihren Reiseveranstalter um Hilfe.",
+  tipsTitle:"Praktische Reisetipps",tipsDesc:"Ein paar hilfreiche Hinweise für unterwegs.",
+  simTitle:"📱 SIM-Karten & Internet",
+  sim:["Fragen Sie vor dem Kauf nach Datenvolumen und Gültigkeitsdauer.","Halten Sie beim Kauf einer lokalen SIM-Karte Ihren Reisepass bereit.","Speichern Sie Ihre Hoteladresse offline."],
+  sunTitle:"☀️ Sonne, Hitze & Strand",
+  sun:["Trinken Sie regelmäßig Wasser, besonders bei Aktivitäten im Freien.","Verwenden Sie Sonnencreme und tragen Sie Sonnenbrille und Hut.","Beachten Sie die örtlichen Sicherheitsregeln am Strand und im Meer."],
+  moneyTitle:"💵 Geld & Einkaufen",
+  money:["Fragen Sie nach dem Preis, bevor Sie etwas kaufen oder einen Service nutzen.","Halten Sie kleine ägyptische Geldscheine bereit.","Prüfen Sie Ihr Wechselgeld, bevor Sie gehen."],
+  respectTitle:"🤝 Kultur & Respekt",
+  respect:["Eine freundliche Begrüßung und ein Lächeln wirken Wunder.","Fragen Sie um Erlaubnis, bevor Sie Menschen fotografieren.","Kleiden Sie sich beim Besuch religiöser Orte angemessen."],
+  checkTitle:"Checkliste vor dem Ausgehen",checkDesc:"Eine kurze Erinnerung für einen entspannten Tag.",
+  checks:["Handy geladen und Powerbank bereit","Hoteladresse auf dem Handy gespeichert","Wasser, Sonnencreme und Sonnenbrille","Etwas Bargeld und eine Zahlungskarte","Reisedokumente und benötigte Medikamente","Ausflug und Transfer bestätigt"],
+  offlineTitle:"Nehmen Sie den Sprachführer mit",offlineDesc:"Installieren Sie den Pocket Guide für schnellen Zugriff. Die Offline-Nutzung hängt davon ab, ob die Seite auf Ihrem Gerät gespeichert wurde.",
+  topBtn:"Nach oben ↑",footer:"Ägypten entdecken. Menschen kennenlernen. Sicher reisen.",
+  subAll:"Alle",english:"Englisch",german:"Deutsch"
+ }
 };
-let currentLang="en",activeCategory="all",deferredPrompt=null;
+
+let language="en";
+let selectedCategory="all";
+let selectedSub="all";
+let currentResults=[...phrases];
+let deferredPrompt=null;
+
 const $=id=>document.getElementById(id);
-function setLang(lang){currentLang=lang;document.documentElement.lang=lang;document.querySelectorAll("[data-i]").forEach(el=>{const k=el.dataset.i;if(ui[lang][k])el.textContent=ui[lang][k]});document.querySelectorAll("[data-i-html]").forEach(el=>{const k=el.dataset.iHtml;if(ui[lang][k])el.innerHTML=ui[lang][k]});$("enBtn").classList.toggle("active",lang==="en");$("deBtn").classList.toggle("active",lang==="de");$("phraseSearch").placeholder=ui[lang].search;try{localStorage.setItem("pocketGuideLanguage",lang)}catch(e){}renderCategories();renderPhrases()}
-function renderCategories(){const host=$("categoryGrid");const q=$("phraseSearch").value.trim().toLowerCase();const cats=categories.filter(c=>!q||categoryName(c).toLowerCase().includes(q)||c.items.some(p=>p.join(" ").toLowerCase().includes(q)));host.innerHTML="";const all=document.createElement("button");all.className="category-btn"+(activeCategory==="all"?" active":"");all.innerHTML='<span class="emoji">🌍</span><strong>'+ui[currentLang].all+'</strong><small>'+categories.reduce((n,c)=>n+c.items.length,0)+' phrases</small>';all.onclick=()=>{activeCategory="all";renderCategories();renderPhrases()};host.appendChild(all);cats.forEach(c=>{const b=document.createElement("button");b.className="category-btn"+(activeCategory===c.id?" active":"");b.innerHTML='<span class="emoji">'+c.icon+'</span><strong>'+categoryName(c)+'</strong><small>'+c.items.length+' '+(currentLang==="en"?"phrases":"Redewendungen")+'</small>';b.onclick=()=>{activeCategory=c.id;renderCategories();renderPhrases();$("phraseResults").scrollIntoView({behavior:"smooth",block:"start"})};host.appendChild(b)})}
-function categoryName(c){return currentLang==="en"?c.en:c.de}
-function renderPhrases(){renderCategories();const host=$("phraseResults"),q=$("phraseSearch").value.trim().toLowerCase();let html="",found=0;const cats=categories.filter(c=>activeCategory==="all"||c.id===activeCategory);cats.forEach(c=>{const items=c.items.filter(p=>!q||(categoryName(c)+" "+p.join(" ")).toLowerCase().includes(q));if(!items.length)return;found+=items.length;html+='<div class="phrase-section"><div class="phrase-section-head"><h3>'+c.icon+' '+categoryName(c)+'</h3><span class="phrase-count">'+items.length+' '+(currentLang==="en"?"phrases":"Redewendungen")+'</span></div><div class="phrases">';items.forEach(p=>{const arabic=p[0],pron=p[currentLang==="en"?1:2],meaning=p[currentLang==="en"?3:4];html+='<article class="phrase"><div class="phrase-label">'+ui[currentLang].arabic+'</div><div class="phrase-ar" lang="ar" dir="rtl">'+escapeHtml(arabic)+'</div><div class="phrase-label">'+ui[currentLang].pronunciation+'</div><div class="phrase-phonetic">'+escapeHtml(pron)+'</div><div class="phrase-label">'+ui[currentLang].meaning+'</div><div class="phrase-meaning">'+escapeHtml(meaning)+'</div><div class="phrase-actions"><button class="action listen" onclick="speakArabic('+JSON.stringify(arabic).replace(/</g,"\\u003c")+')">'+ui[currentLang].listen+'</button><button class="action" onclick="copyText('+JSON.stringify(arabic).replace(/</g,"\\u003c")+')">'+ui[currentLang].copy+'</button></div></article>'});html+='</div></div>'});host.innerHTML=found?html:'<div class="empty">'+ui[currentLang].noResults+'</div>'}
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function clearSearch(){$("phraseSearch").value="";activeCategory="all";renderCategories();renderPhrases()}
-function showToast(msg){const t=$("toast");t.textContent=msg;t.classList.add("show");clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>t.classList.remove("show"),2200)}
-function speakArabic(text){if(!("speechSynthesis"in window)){showToast(currentLang==="en"?"Audio is not supported by this browser.":"Dieser Browser unterstützt keine Sprachausgabe.");return}window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang="ar-EG";u.rate=.82;const voices=window.speechSynthesis.getVoices();const v=voices.find(v=>/^ar(-|_)?EG/i.test(v.lang))||voices.find(v=>/^ar/i.test(v.lang));if(v)u.voice=v;window.speechSynthesis.speak(u)}
-async function copyText(text){try{if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(text);else{const f=document.createElement("textarea");f.value=text;f.style.position="fixed";f.style.opacity="0";document.body.appendChild(f);f.select();const ok=document.execCommand("copy");f.remove();if(!ok)throw Error("copy failed")}showToast(ui[currentLang].copied)}catch(e){showToast(ui[currentLang].copyFailed)}}
-window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredPrompt=e;$("installBtn").hidden=false});
-async function installApp(){if(deferredPrompt){deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;return}showToast(window.matchMedia("(display-mode: standalone)").matches?ui[currentLang].offlineReady:ui[currentLang].installHelp)}
-function updateOfflineStatus(){$("offlineState").textContent=("serviceWorker"in navigator&&navigator.serviceWorker.controller)?ui[currentLang].offlineReady:ui[currentLang].offlineNotReady}
-if("serviceWorker"in navigator){window.addEventListener("load",async()=>{try{await navigator.serviceWorker.register("../service-worker.js")}catch(e){console.warn("Offline registration unavailable:",e)}updateOfflineStatus()})}else{$("offlineState").textContent=ui[currentLang].offlineNotReady}
-try{const saved=localStorage.getItem("pocketGuideLanguage");if(saved==="de")currentLang="de"}catch(e){}
-$("year").textContent=new Date().getFullYear();setLang(currentLang);
+const normalize=s=>String(s||"").toLowerCase().normalize("NFD")
+ .replace(/[\u0300-\u036f]/g,"").replace(/[^\p{L}\p{N}\s]/gu," ")
+ .replace(/\s+/g," ").trim();
+
+function setLanguage(lang){
+ language=lang;
+ document.documentElement.lang=lang;
+ $("langEN").classList.toggle("active",lang==="en");
+ $("langDE").classList.toggle("active",lang==="de");
+ const t=ui[lang];
+ const textMap={
+ heroTag:"heroTag",heroTitle:"heroTitle",heroDesc:"heroDesc",
+ pill1:"pill1",pill2:"pill2",pill3:"pill3",searchTitle:"searchTitle",
+ searchHint:"searchHint",searchBtn:"searchBtn",clearBtn:"clearBtn",
+ categoriesTitle:"categoriesTitle",categoriesDesc:"categoriesDesc",
+ phrasesTitle:"phrasesTitle",phrasesDesc:"phrasesDesc",
+ emergencyTitle:"emergencyTitle",emergencyDesc:"emergencyDesc",
+ emergencyWarning:"emergencyWarning",emergencyNote:"emergencyNote",
+ tipsTitle:"tipsTitle",tipsDesc:"tipsDesc",simTitle:"simTitle",
+ sunTitle:"sunTitle",moneyTitle:"moneyTitle",respectTitle:"respectTitle",
+ checkTitle:"checkTitle",checkDesc:"checkDesc",offlineTitle:"offlineTitle",
+ offlineDesc:"offlineDesc",topBtn:"topBtn",footerText:"footer"
+ };
+ Object.entries(textMap).forEach(([id,key])=>$(id).textContent=t[key]);
+ $("searchInput").placeholder=t.searchPlaceholder;
+ $("ambLabel").textContent=t.amb;$("polLabel").textContent=t.pol;
+ $("fireLabel").textContent=t.fire;$("touristLabel").textContent=t.tourist;
+ ["sim","sun","money","respect"].forEach(key=>{
+  const id=key+"List";$(id).innerHTML="";
+  t[key].forEach(item=>{const li=document.createElement("li");li.textContent=item;$(id).appendChild(li)});
+ });
+ t.checks.forEach((item,i)=>$("check"+(i+1)).textContent=item);
+ renderCategories();renderSubnav();renderPhrases();
+}
+
+function renderCategories(){
+ const grid=$("categoryGrid");grid.innerHTML="";
+ const allCount=phrases.length;
+ $("categoryCount").textContent=categoryData.length+" "+(language==="en"?"sections":"Bereiche");
+ const allButton=document.createElement("button");
+ allButton.className="category"+(selectedCategory==="all"?" selected":"");
+ allButton.innerHTML='<span class="cat-icon">🌍</span><span class="cat-name">'+(language==="en"?"All situations":"Alle Situationen")+'</span><span class="cat-count">'+allCount+' '+ui[language].result+'</span>';
+ allButton.onclick=()=>selectCategory("all");grid.appendChild(allButton);
+ categoryData.forEach(cat=>{
+  const count=phrases.filter(p=>p[0]===cat.id).length;
+  const b=document.createElement("button");
+  b.className="category"+(selectedCategory===cat.id?" selected":"");
+  b.innerHTML='<span class="cat-icon">'+cat.icon+'</span><span class="cat-name">'+cat[language]+'</span><span class="cat-count">'+count+' '+ui[language].result+'</span>';
+  b.onclick=()=>selectCategory(cat.id);grid.appendChild(b);
+ });
+}
+
+function selectCategory(id){
+ selectedCategory=id;selectedSub="all";
+ $("searchInput").value="";
+ currentResults=phrases.filter(p=>id==="all"||p[0]===id);
+ renderCategories();renderSubnav();renderPhrases();
+ $("phrasesHeading").scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function renderSubnav(){
+ const nav=$("subnav");nav.innerHTML="";
+ if(selectedCategory==="all"){nav.classList.add("hidden");return}
+ nav.classList.remove("hidden");
+ const t=ui[language];
+ const subs=[...new Set(phrases.filter(p=>p[0]===selectedCategory).map(p=>p[1]))];
+ const add=(name,value)=>{
+  const b=document.createElement("button");b.textContent=name;
+  b.className=selectedSub===value?"active":"";
+  b.onclick=()=>{selectedSub=value;renderSubnav();renderPhrases()};
+  nav.appendChild(b);
+ };
+ add(t.subAll,"all");subs.forEach(s=>add(s,s));
+}
+
+function renderPhrases(){
+ const list=$("phraseList");list.innerHTML="";
+ $("phraseCount").textContent=currentResults.length+" "+ui[language].result;
+ if(!currentResults.length){
+  list.innerHTML='<div class="empty">'+ui[language].noResults+'</div>';return;
+ }
+ currentResults.forEach((p,index)=>{
+  if(selectedCategory!=="all"&&selectedSub!=="all"&&p[1]!==selectedSub)return;
+  const card=document.createElement("article");card.className="phrase-card";
+  const group=document.createElement("div");group.className="phrase-group";group.textContent=p[1];
+  const arabic=document.createElement("div");arabic.className="arabic";arabic.lang="ar";arabic.textContent=p[2];
+  const pron=document.createElement("div");pron.className="pron";pron.textContent=p[3];
+  const meaning=document.createElement("div");meaning.className="translation";
+  meaning.innerHTML="<b>"+(language==="en"?"English: ":"Englisch: ")+"</b>";
+  meaning.appendChild(document.createTextNode(p[4]));
+  const german=document.createElement("div");german.className="translation";
+  german.innerHTML="<b>Deutsch: </b>";german.appendChild(document.createTextNode(p[5]));
+  const actions=document.createElement("div");actions.className="card-actions";
+  const listen=document.createElement("button");listen.className="small-btn";
+  listen.textContent=ui[language].listen;listen.onclick=()=>speakArabic(p[2]);
+  const copy=document.createElement("button");copy.className="small-btn";
+  copy.textContent=ui[language].copy;copy.onclick=()=>copyArabic(p[2]);
+  actions.append(listen,copy);
+  card.append(group,arabic,pron,meaning,german,actions);list.appendChild(card);
+ });
+ if(!list.children.length)list.innerHTML='<div class="empty">'+ui[language].noResults+'</div>';
+}
+
+const synonyms={
+ hotel:["accommodation","room","zimmer","unterkunft","hotel room"],
+ doctor:["arzt","ärztin","medical","medizin","hospital","krankenhaus","sick","krank"],
+ pharmacy:["apotheke","chemist","medicine","medikament","medikamente"],
+ price:["cost","expensive","teuer","billig","how much","preis"],
+ toilet:["bathroom","wc","restroom","toilette"],
+ beach:["strand","sea","meer","swimming","schwimmen"],
+ taxi:["cab","driver","fahrer","transport","fahrt"],
+ help:["hilfe","assist","assistance","emergency","notfall"],
+ food:["essen","restaurant","menu","speisekarte","hungry","vegetarian"],
+ water:["wasser","drink","trinken","thirsty","durstig"],
+ airport:["flughafen","flight","flug","luggage","gepäck"],
+ lost:["verloren","missing","stolen","gestohlen"],
+ directions:["where","wo","location","standort","map","karte"]
+};
+
+function searchPhrases(){
+ const query=normalize($("searchInput").value);
+ selectedCategory="all";selectedSub="all";
+ if(!query){currentResults=[...phrases];renderCategories();renderSubnav();renderPhrases();return}
+ const terms=query.split(" ").filter(Boolean);
+ const expanded=[...terms];
+ Object.entries(synonyms).forEach(([key,words])=>{
+  if(terms.some(t=>key.includes(t)||words.some(w=>normalize(w).includes(t)))){
+   expanded.push(key,...words.map(normalize));
+  }
+ });
+ const scored=phrases.map((p,index)=>{
+  const searchable=normalize([p[1],p[2],p[3],p[4],p[5],p[6],categoryData.find(c=>c.id===p[0])?.en||"",categoryData.find(c=>c.id===p[0])?.de||""].join(" "));
+  let score=0;
+  terms.forEach(term=>{
+   if(searchable.includes(term))score+=searchable.startsWith(term)?5:2;
+  });
+  expanded.slice(terms.length).forEach(term=>{if(term&&searchable.includes(term))score+=1});
+  if(normalize(p[4])===query||normalize(p[5])===query)score+=8;
+  return {p,index,score};
+ }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score);
+ currentResults=scored.map(x=>x.p);
+ renderCategories();renderSubnav();renderPhrases();
+ $("phrasesTitle").textContent=language==="en"?"Search results":"Suchergebnisse";
+ $("phrasesDesc").textContent=language==="en"?"Matching Egyptian Arabic phrases":"Passende ägyptisch-arabische Sätze";
+}
+
+function clearSearch(){
+ $("searchInput").value="";selectedCategory="all";selectedSub="all";
+ $("phrasesTitle").textContent=ui[language].phrasesTitle;
+ $("phrasesDesc").textContent=ui[language].phrasesDesc;
+ currentResults=[...phrases];renderCategories();renderSubnav();renderPhrases();
+}
+$("searchInput").addEventListener("input",searchPhrases);
+$("searchInput").addEventListener("keydown",e=>{if(e.key==="Enter")searchPhrases()});
+
+function speakArabic(text){
+ if(!("speechSynthesis" in window)){showToast("Audio is not supported by this browser.");return}
+ window.speechSynthesis.cancel();
+ const utterance=new SpeechSynthesisUtterance(text);
+ utterance.lang="ar-EG";utterance.rate=.82;
+ const voices=window.speechSynthesis.getVoices();
+ const voice=voices.find(v=>v.lang.toLowerCase().startsWith("ar-eg"))||
+             voices.find(v=>v.lang.toLowerCase().startsWith("ar"));
+ if(voice)utterance.voice=voice;
+ window.speechSynthesis.speak(utterance);
+}
+
+async function copyArabic(text){
+ try{
+  await navigator.clipboard.writeText(text);
+  showToast(ui[language].copied);
+ }catch(e){
+  const area=document.createElement("textarea");area.value=text;
+  document.body.appendChild(area);area.select();
+  try{document.execCommand("copy");showToast(ui[language].copied)}
+  catch(err){showToast("Please copy manually: "+text)}
+  area.remove();
+ }
+}
+let toastTimer;
+function showToast(message){
+ const el=$("toast");el.textContent=message;el.classList.add("show");
+ clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2200);
+}
+
+window.addEventListener("beforeinstallprompt",event=>{
+ event.preventDefault();deferredPrompt=event;$("installBtn").hidden=false;
+});
+$("installBtn").addEventListener("click",async()=>{
+ if(!deferredPrompt)return;
+ deferredPrompt.prompt();
+ await deferredPrompt.userChoice;
+ deferredPrompt=null;$("installBtn").hidden=true;
+});
+window.addEventListener("appinstalled",()=>{
+ $("installBtn").hidden=true;showToast("Pocket Guide installed!");
+});
+
+if("serviceWorker" in navigator && location.protocol!=="file:"){
+ window.addEventListener("load",()=>{
+  navigator.serviceWorker.register("../service-worker.js").catch(err=>{
+   console.log("Service worker registration failed:",err);
+  });
+ });
+}
+
+setLanguage("en");
 </script>
 </body>
 </html>
