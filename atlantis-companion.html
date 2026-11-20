@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Atlantis Companion for Hurghada &amp; the Red Sea: Red Sea Reef &amp; Treasure Run game and Daily Hurghada Vibe &amp; Day Planner in English and German.">
+<meta name="description" content="Atlantis Companion for Hurghada &amp; the Red Sea: Red Sea Reef &amp; Treasure Run game, Spot Atlas, Hurghada Quick Quiz, and Daily Trip Planner in English and German.">
 <meta name="theme-color" content="#031d30">
 <title>Atlantis Companion (EN / DE) | Atlantis Tours and Experiences</title>
 
@@ -50,32 +50,40 @@ header{position:sticky;top:0;z-index:1000;background:rgba(3,29,48,.97);backdrop-
 .lang-btn.active{background:var(--gold);color:var(--deep)}
 
 /* HERO */
-.companion-hero{background:linear-gradient(125deg,var(--deep),var(--navy) 55%,var(--blue));color:#fff;padding:54px 0}
+.companion-hero{background:linear-gradient(125deg,var(--deep),var(--navy) 55%,var(--blue));color:#fff;padding:52px 0}
 .eyebrow{color:var(--gold);text-transform:uppercase;font-size:12px;font-weight:800;letter-spacing:2.5px;margin-bottom:10px}
 .companion-hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,52px);line-height:1.15;margin-bottom:14px}
-.companion-hero p{max-width:740px;color:#e4f3f8;font-size:16px;margin-bottom:24px}
-.hero-tabs{display:flex;gap:12px;flex-wrap:wrap}
-.tab-jump{display:inline-block;padding:11px 20px;border-radius:30px;font-weight:800;font-size:13.5px;transition:.2s;cursor:pointer;border:0}
+.companion-hero p{max-width:760px;color:#e4f3f8;font-size:16px;margin-bottom:22px}
+.hero-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.tab-jump{display:inline-block;padding:10px 18px;border-radius:30px;font-weight:800;font-size:13px;transition:.2s;cursor:pointer;border:0}
 .tab-jump.primary{background:var(--turquoise);color:var(--deep)}
 .tab-jump.primary:hover{background:#fff;color:var(--navy)}
 .tab-jump.secondary{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.3)}
 .tab-jump.secondary:hover{background:#fff;color:var(--navy)}
 
+.progress-strip{background:rgba(3,29,48,.58);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.progress-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.rank-badge{background:var(--gold);color:var(--deep);font-size:11.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;padding:4px 12px;border-radius:20px}
+.xp-text{font-size:13.5px;font-weight:700;color:#eaf6fa}
+.xp-bar-wrap{flex:1;min-width:200px;max-width:340px;height:9px;background:rgba(255,255,255,.14);border-radius:99px;overflow:hidden}
+.xp-bar-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--turquoise),var(--gold));transition:width .3s ease}
+
 /* MAIN GRID */
-.companion-main{padding:44px 0 68px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
+.companion-main{padding:42px 0 68px;display:grid;grid-template-columns:1.22fr .78fr;gap:28px;align-items:start}
+.stack-col{display:flex;flex-direction:column;gap:26px}
 .panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow)}
 .panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--line)}
-.panel-head h2{font-family:'Playfair Display',serif;font-size:26px;color:var(--navy);line-height:1.2}
+.panel-head h2{font-family:'Playfair Display',serif;font-size:25px;color:var(--navy);line-height:1.2}
 .panel-head p{color:var(--text);font-size:13.5px;margin-top:4px}
 
 /* GAME */
-.game-hud{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
-.hud-pill{background:var(--light);border:1px solid #d4e6ed;border-radius:12px;padding:8px 14px;min-width:105px}
-.hud-pill small{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:1.2px;color:var(--blue);font-weight:800}
-.hud-pill strong{font-size:18px;color:var(--navy)}
+.game-hud{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.hud-pill{background:var(--light);border:1px solid #d4e6ed;border-radius:12px;padding:8px 12px}
+.hud-pill small{display:block;font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:var(--blue);font-weight:800}
+.hud-pill strong{font-size:17px;color:var(--navy)}
 
 .game-stage-wrap{position:relative;border-radius:16px;overflow:hidden;border:2px solid var(--navy);background:#04243b}
-canvas#reefCanvas{display:block;width:100%;height:360px;background:linear-gradient(180deg,#086f8c 0%,#064b68 48%,#03243b 100%)}
+canvas#reefCanvas{display:block;width:100%;height:350px;background:linear-gradient(180deg,#086f8c 0%,#064b68 48%,#03243b 100%)}
 
 .canvas-overlay{
   position:absolute;
@@ -87,15 +95,14 @@ canvas#reefCanvas{display:block;width:100%;height:360px;background:linear-gradie
   justify-content:center;
   text-align:center;
   padding:24px;
-  background:rgba(3,29,48,.74);
+  background:rgba(3,29,48,.76);
   backdrop-filter:blur(3px);
   color:#fff;
-  transition:opacity .2s ease;
 }
 .canvas-overlay.hidden{display:none}
 .overlay-badge{display:inline-block;background:rgba(22,197,206,.18);border:1px solid var(--turquoise);color:var(--turquoise);font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:10px}
 .overlay-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3.6vw,34px);line-height:1.2;margin-bottom:8px;color:#fff}
-.overlay-sub{max-width:440px;font-size:14px;color:#dff3f8;margin-bottom:18px}
+.overlay-sub{max-width:450px;font-size:14px;color:#dff3f8;margin-bottom:18px}
 .overlay-play-btn{background:var(--gold);color:var(--deep);border:0;padding:12px 26px;border-radius:30px;font-weight:800;font-size:14.5px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:transform .18s ease,filter .18s ease}
 .overlay-play-btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
 
@@ -104,37 +111,71 @@ canvas#reefCanvas{display:block;width:100%;height:360px;background:linear-gradie
 .btn-gold:hover{filter:brightness(1.05);transform:translateY(-1px)}
 .btn-navy{background:var(--navy);color:#fff;border:0;padding:10px 18px;border-radius:25px;font-weight:700;font-size:13px;cursor:pointer;transition:.2s}
 .btn-navy:hover{background:var(--blue)}
-.btn-turquoise{background:var(--turquoise);color:var(--deep);border:0;padding:10px 18px;border-radius:25px;font-weight:800;font-size:13px;cursor:pointer;transition:.2s}
+.btn-turquoise{background:var(--turquoise);color:var(--deep);border:0;padding:10px 18px;border-radius:25px;font-weight:800;font-size:13px;cursor:pointer;transition:.2s;display:inline-block}
 .btn-turquoise:hover{background:var(--navy);color:#fff}
+.btn-outline{background:#fff;color:var(--navy);border:1px solid #c5dce5;padding:9px 16px;border-radius:25px;font-weight:700;font-size:12.5px;cursor:pointer;transition:.2s;display:inline-block}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
 
 .touch-pads{display:none;gap:10px}
 .touch-btn{width:46px;height:46px;border-radius:12px;border:1px solid #c6dce5;background:var(--light);color:var(--navy);font-weight:800;font-size:18px;cursor:pointer;touch-action:none;user-select:none}
 .touch-btn:active{background:var(--turquoise);color:var(--deep)}
 
-.discovery-box{margin-top:18px;background:var(--light);border:1px solid #cde2ea;border-left:4px solid var(--turquoise);border-radius:12px;padding:14px 16px}
+.discovery-box{margin-top:18px;background:var(--light);border:1px solid #cde2ea;border-left:4px solid var(--turquoise);border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap}
 .discovery-kicker{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:var(--blue)}
 .discovery-title{font-size:17px;font-weight:800;color:var(--navy);margin:2px 0 4px}
-.discovery-text{font-size:13.5px;color:var(--text)}
+.discovery-text{font-size:13.5px;color:var(--text);max-width:560px}
 
-/* PLANNER */
-.planner-block{margin-bottom:22px}
-.planner-block label{display:block;font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--blue);margin-bottom:6px}
+/* SPOT ATLAS */
+.atlas-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.spot-card{border:1px solid var(--line);border-radius:14px;padding:15px;background:#fafdfe;display:flex;flex-direction:column;gap:8px;transition:border-color .2s,transform .2s}
+.spot-card:hover{border-color:var(--turquoise);transform:translateY(-2px)}
+.spot-card.locked{background:#f5f8fa;opacity:.88}
+.spot-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.spot-status{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border-radius:20px}
+.spot-status.unlocked{background:rgba(22,197,206,.16);color:#055f75;border:1px solid rgba(22,197,206,.45)}
+.spot-status.locked{background:#e7eff3;color:#5a6f7c}
+.spot-card h3{font-size:16px;color:var(--navy)}
+.spot-card p{font-size:13px;color:var(--text);line-height:1.55}
+.spot-footer{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px;padding-top:6px}
+.spot-tour-link{font-size:12.5px;font-weight:800;color:var(--blue)}
+.spot-tour-link:hover{color:var(--navy)}
+
+/* QUIZ */
+.quiz-box{background:var(--light);border:1px solid #d5e7ee;border-radius:14px;padding:18px}
+.quiz-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;font-size:12px;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:1px}
+.quiz-question{font-size:16.5px;font-weight:800;color:var(--navy);margin-bottom:14px;line-height:1.4}
+.quiz-options{display:grid;grid-template-columns:1fr;gap:9px}
+.quiz-opt{text-align:left;padding:11px 14px;border-radius:12px;border:1px solid #c9dde6;background:#fff;color:var(--navy);font-size:13.5px;font-weight:700;cursor:pointer;transition:.2s}
+.quiz-opt:hover:not(:disabled){border-color:var(--blue);background:#f3fbfe}
+.quiz-opt.correct{background:#e3f8f4;border-color:#129e88;color:#054c41}
+.quiz-opt.wrong{background:#fdeceb;border-color:#d9534f;color:#7c1d1a}
+.quiz-feedback{margin-top:12px;font-size:13.5px;font-weight:700;color:var(--navy);min-height:20px}
+.quiz-actions{margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+
+/* PLANNER & PACKING */
+.planner-block{margin-bottom:20px}
+.planner-block label{display:block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--blue);margin-bottom:6px}
 .vibe-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .vibe-btn{border:1px solid #d1e3ea;background:#fff;color:var(--navy);padding:9px 10px;border-radius:12px;font-size:12.5px;font-weight:700;cursor:pointer;transition:.2s;text-align:center}
 .vibe-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
 
-.slot-card{background:var(--light);border:1px solid #d7e8ef;border-radius:12px;padding:12px 14px;margin-bottom:10px}
+.slot-card{background:var(--light);border:1px solid #d7e8ef;border-radius:12px;padding:11px 14px;margin-bottom:10px}
 .slot-card .slot-label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:var(--blue);margin-bottom:4px}
 .slot-card select{width:100%;padding:8px 10px;border-radius:8px;border:1px solid #c5dce5;background:#fff;color:var(--navy);font-size:13.5px;font-weight:600}
 
-.plan-summary{background:#f7fcfd;border:1px dashed #9ec8d8;border-radius:14px;padding:16px;margin-top:14px}
-.plan-summary h3{font-size:16px;color:var(--navy);margin-bottom:8px}
-.plan-list{list-style:none;font-size:13.5px;color:var(--text)}
+.plan-summary{background:#f7fcfd;border:1px dashed #9ec8d8;border-radius:14px;padding:15px;margin-top:12px}
+.plan-summary h3{font-size:15.5px;color:var(--navy);margin-bottom:8px}
+.plan-list{list-style:none;font-size:13px;color:var(--text)}
 .plan-list li{padding:5px 0;border-bottom:1px solid #e3eff3}
 .plan-list li:last-child{border-bottom:0}
 .plan-list strong{color:var(--navy)}
-.plan-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.plan-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 .status-msg{font-size:12.5px;font-weight:700;color:var(--blue);margin-top:8px;min-height:18px}
+
+.pack-list{display:flex;flex-direction:column;gap:9px}
+.pack-item{display:flex;align-items:center;gap:10px;background:var(--light);border:1px solid #dcebf1;border-radius:11px;padding:10px 12px;font-size:13.5px;font-weight:600;color:var(--navy);cursor:pointer}
+.pack-item input{width:16px;height:16px;accent-color:var(--blue);cursor:pointer}
+.pack-item.checked span{text-decoration:line-through;color:var(--text)}
 
 /* FOOTER */
 footer{background:#021b2b;color:#fff;padding:48px 0 20px}
@@ -149,7 +190,7 @@ footer h3{margin-bottom:12px;color:#fff;font-size:15px}
 .footer-links a:hover{color:var(--turquoise)}
 .copyright{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;text-align:center;font-size:12px;color:#bdcfd8}
 
-@media(max-width:960px){
+@media(max-width:1020px){
   .companion-main{grid-template-columns:1fr}
   .touch-pads{display:flex}
 }
@@ -162,7 +203,9 @@ footer h3{margin-bottom:12px;color:#fff;font-size:15px}
   .nav-links.active{display:flex}
   .footer-grid{grid-template-columns:1fr}
 }
-@media(max-width:520px){
+@media(max-width:640px){
+  .game-hud{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .atlas-grid{grid-template-columns:1fr}
   .vibe-row{grid-template-columns:1fr}
   canvas#reefCanvas{height:300px}
 }
@@ -201,113 +244,179 @@ footer h3{margin-bottom:12px;color:#fff;font-size:15px}
 <section class="companion-hero">
   <div class="container">
     <div class="eyebrow" data-i18n="heroEyebrow">Daily Hurghada &amp; Red Sea Companion</div>
-    <h1 data-i18n="heroTitle">Play, Plan &amp; Explore Hurghada.</h1>
+    <h1 data-i18n="heroTitle">Play, Discover &amp; Plan Your Stay.</h1>
     <p data-i18n="heroDesc">
-      Switch between English and German anytime. Collect Red Sea pearls in the reef game, unlock spot discoveries, and build your daily trip plan.
+      Earn Explorer XP across the Reef Game, Red Sea Spot Atlas, Hurghada Quiz, and Daily Trip Planner — all in English or German with progress saved on your device.
     </p>
     <div class="hero-tabs">
       <button type="button" id="heroPlayBtn" class="tab-jump primary" data-i18n="jumpGame">Play Reef Game</button>
-      <a href="#daily-planner-panel" class="tab-jump secondary" data-i18n="jumpPlanner">Open Day Planner</a>
+      <a href="#spot-atlas-panel" class="tab-jump secondary" data-i18n="jumpAtlas">Spot Atlas</a>
+      <a href="#quiz-panel" class="tab-jump secondary" data-i18n="jumpQuiz">Hurghada Quiz</a>
+      <a href="#daily-planner-panel" class="tab-jump secondary" data-i18n="jumpPlanner">Day Planner</a>
+    </div>
+
+    <div class="progress-strip">
+      <div class="progress-meta">
+        <span class="rank-badge" id="rankBadge">Reef Scout</span>
+        <span class="xp-text" id="xpSummaryText">0 XP · 1 / 5 Spots Unlocked</span>
+      </div>
+      <div class="xp-bar-wrap" aria-hidden="true">
+        <div class="xp-bar-fill" id="xpBarFill"></div>
+      </div>
     </div>
   </div>
 </section>
 
 <main class="companion-main container">
-  <!-- GAME PANEL -->
-  <section class="panel" id="reef-game-panel">
-    <div class="panel-head">
-      <div>
-        <h2 data-i18n="gameTitle">Red Sea Reef &amp; Treasure Run</h2>
-        <p data-i18n="gameSub">Steer your mini-sub with Arrow keys / W-S or tap Up/Down. Collect pearls &amp; corals, dodge jellyfish &amp; anchors.</p>
+  <!-- LEFT COLUMN: GAME, SPOT ATLAS, QUIZ -->
+  <div class="stack-col">
+    <section class="panel" id="reef-game-panel">
+      <div class="panel-head">
+        <div>
+          <h2 data-i18n="gameTitle">Red Sea Reef &amp; Treasure Run</h2>
+          <p data-i18n="gameSub">Steer with Arrow keys / W-S or Up/Down buttons. Collect pearls (+25 XP) &amp; unlock Red Sea spots.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="game-hud">
-      <div class="hud-pill">
-        <small data-i18n="hudScore">Score</small>
-        <strong id="scoreVal">0</strong>
+      <div class="game-hud">
+        <div class="hud-pill">
+          <small data-i18n="hudScore">Score</small>
+          <strong id="scoreVal">0</strong>
+        </div>
+        <div class="hud-pill">
+          <small data-i18n="hudBest">Best</small>
+          <strong id="bestVal">0</strong>
+        </div>
+        <div class="hud-pill">
+          <small data-i18n="hudPearls">Pearls</small>
+          <strong id="pearlsVal">0</strong>
+        </div>
+        <div class="hud-pill">
+          <small data-i18n="hudXp">Explorer XP</small>
+          <strong id="hudXpVal">0</strong>
+        </div>
       </div>
-      <div class="hud-pill">
-        <small data-i18n="hudBest">Best</small>
-        <strong id="bestVal">0</strong>
+
+      <div class="game-stage-wrap">
+        <canvas id="reefCanvas" width="760" height="350" aria-label="Red Sea Reef and Treasure Run game canvas"></canvas>
+        <div class="canvas-overlay" id="gameOverlay">
+          <span class="overlay-badge" data-i18n="overlayBadge">Red Sea Arcade</span>
+          <h3 class="overlay-title" id="overlayTitle" data-i18n="overlayStartTitle">Ready to Dive?</h3>
+          <p class="overlay-sub" id="overlaySub" data-i18n="overlayStartSub">Press Play to pilot your mini-sub, gather Red Sea pearls, earn XP, and unlock spots.</p>
+          <button type="button" class="overlay-play-btn" id="overlayPlayBtn" data-i18n="overlayPlayBtn">Play Now</button>
+        </div>
       </div>
-      <div class="hud-pill">
-        <small data-i18n="hudPearls">Pearls</small>
-        <strong id="pearlsVal">0</strong>
+
+      <div class="game-controls">
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button type="button" class="btn-gold" id="startGameBtn" data-i18n="startBtn">Start / Restart</button>
+          <button type="button" class="btn-navy" id="pauseGameBtn" data-i18n="pauseBtn">Pause</button>
+        </div>
+        <div class="touch-pads" aria-label="Touch controls">
+          <button type="button" class="touch-btn" id="upBtn" aria-label="Move up">↑</button>
+          <button type="button" class="touch-btn" id="downBtn" aria-label="Move down">↓</button>
+        </div>
       </div>
-    </div>
 
-    <div class="game-stage-wrap">
-      <canvas id="reefCanvas" width="760" height="360" aria-label="Red Sea Reef and Treasure Run game canvas"></canvas>
-      <div class="canvas-overlay" id="gameOverlay">
-        <span class="overlay-badge" data-i18n="overlayBadge">Red Sea Arcade</span>
-        <h3 class="overlay-title" id="overlayTitle" data-i18n="overlayStartTitle">Ready to Dive?</h3>
-        <p class="overlay-sub" id="overlaySub" data-i18n="overlayStartSub">Press Play to pilot your mini-sub, gather Red Sea pearls, and unlock island &amp; reef spots.</p>
-        <button type="button" class="overlay-play-btn" id="overlayPlayBtn" data-i18n="overlayPlayBtn">Play Now</button>
+      <div class="discovery-box">
+        <div>
+          <div class="discovery-kicker" data-i18n="spotKicker">Latest Unlocked Red Sea Spot</div>
+          <div class="discovery-title" id="spotTitle">Giftun &amp; Orange Bay</div>
+          <div class="discovery-text" id="spotDesc">Shallow turquoise lagoons and sandy beaches make the Giftun islands a classic full-day boat escape from Hurghada.</div>
+        </div>
+        <a href="all-tours.html#tour-orange-bay-island" class="btn-outline" id="activeSpotTourBtn" data-i18n="viewRelatedTour">Related Tour →</a>
       </div>
-    </div>
+    </section>
 
-    <div class="game-controls">
-      <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <button type="button" class="btn-gold" id="startGameBtn" data-i18n="startBtn">Start / Restart</button>
-        <button type="button" class="btn-navy" id="pauseGameBtn" data-i18n="pauseBtn">Pause</button>
+    <section class="panel" id="spot-atlas-panel">
+      <div class="panel-head">
+        <div>
+          <h2 data-i18n="atlasTitle">Red Sea Spot Atlas</h2>
+          <p data-i18n="atlasSub">Play the game to unlock spots automatically — or preview any spot and jump straight to its excursion.</p>
+        </div>
       </div>
-      <div class="touch-pads" aria-label="Touch controls">
-        <button type="button" class="touch-btn" id="upBtn" aria-label="Move up">↑</button>
-        <button type="button" class="touch-btn" id="downBtn" aria-label="Move down">↓</button>
+      <div class="atlas-grid" id="spotAtlasGrid"></div>
+    </section>
+
+    <section class="panel" id="quiz-panel">
+      <div class="panel-head">
+        <div>
+          <h2 data-i18n="quizTitle">Hurghada &amp; Red Sea Quick Quiz</h2>
+          <p data-i18n="quizSub">Test your knowledge and earn +30 Explorer XP per right answer.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="discovery-box">
-      <div class="discovery-kicker" data-i18n="spotKicker">Unlocked Red Sea Spot</div>
-      <div class="discovery-title" id="spotTitle">Giftun &amp; Orange Bay</div>
-      <div class="discovery-text" id="spotDesc">Shallow turquoise lagoons and sandy beaches make the Giftun islands a classic full-day boat escape from Hurghada.</div>
-    </div>
-  </section>
-
-  <!-- DAILY PLANNER PANEL -->
-  <section class="panel" id="daily-planner-panel">
-    <div class="panel-head">
-      <div>
-        <h2 data-i18n="plannerTitle">Daily Vibe &amp; Planner</h2>
-        <p data-i18n="plannerSub">Pick your vibe for today and set your morning, afternoon, and evening plan.</p>
+      <div class="quiz-box">
+        <div class="quiz-top">
+          <span id="quizCounter">Question 1 / 4</span>
+          <span id="quizScoreLabel">Quiz XP: 0</span>
+        </div>
+        <div class="quiz-question" id="quizQuestion"></div>
+        <div class="quiz-options" id="quizOptions"></div>
+        <div class="quiz-feedback" id="quizFeedback"></div>
+        <div class="quiz-actions">
+          <button type="button" class="btn-navy" id="nextQuizBtn" data-i18n="nextQuestionBtn">Next Question</button>
+          <a href="hurghada.html" class="spot-tour-link" data-i18n="readGuideLink">Read Hurghada Guide →</a>
+        </div>
       </div>
-    </div>
+    </section>
+  </div>
 
-    <div class="planner-block">
-      <label data-i18n="vibeLabel">Today's Vibe</label>
-      <div class="vibe-row">
-        <button type="button" class="vibe-btn active" data-vibe="relax" data-i18n="vibeRelax">Relax &amp; Beach</button>
-        <button type="button" class="vibe-btn" data-vibe="adventure" data-i18n="vibeAdventure">Sea &amp; Reef</button>
-        <button type="button" class="vibe-btn" data-vibe="desert" data-i18n="vibeDesert">Desert &amp; City</button>
+  <!-- RIGHT COLUMN: DAILY PLANNER & PACKING CHECKLIST -->
+  <div class="stack-col">
+    <section class="panel" id="daily-planner-panel">
+      <div class="panel-head">
+        <div>
+          <h2 data-i18n="plannerTitle">Daily Vibe &amp; Planner</h2>
+          <p data-i18n="plannerSub">Pick your vibe for today and send your schedule straight to booking.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="slot-card">
-      <div class="slot-label" data-i18n="slotMorning">Morning</div>
-      <select id="morningSelect" aria-label="Morning plan"></select>
-    </div>
-
-    <div class="slot-card">
-      <div class="slot-label" data-i18n="slotAfternoon">Afternoon</div>
-      <select id="afternoonSelect" aria-label="Afternoon plan"></select>
-    </div>
-
-    <div class="slot-card">
-      <div class="slot-label" data-i18n="slotEvening">Evening</div>
-      <select id="eveningSelect" aria-label="Evening plan"></select>
-    </div>
-
-    <div class="plan-summary">
-      <h3 data-i18n="summaryHeading">Your Saved Day Plan</h3>
-      <ul class="plan-list" id="planSummaryList"></ul>
-      <div class="plan-actions">
-        <button type="button" class="btn-navy" id="savePlanBtn" data-i18n="savePlanBtn">Save Plan</button>
-        <a href="booking.html" class="btn-turquoise" id="bookPlanLink" data-i18n="bookPlanBtn">Send to Booking</a>
+      <div class="planner-block">
+        <label data-i18n="vibeLabel">Today's Vibe</label>
+        <div class="vibe-row">
+          <button type="button" class="vibe-btn active" data-vibe="relax" data-i18n="vibeRelax">Relax &amp; Beach</button>
+          <button type="button" class="vibe-btn" data-vibe="adventure" data-i18n="vibeAdventure">Sea &amp; Reef</button>
+          <button type="button" class="vibe-btn" data-vibe="desert" data-i18n="vibeDesert">Desert &amp; City</button>
+        </div>
       </div>
-      <div class="status-msg" id="planStatusMsg"></div>
-    </div>
-  </section>
+
+      <div class="slot-card">
+        <div class="slot-label" data-i18n="slotMorning">Morning</div>
+        <select id="morningSelect" aria-label="Morning plan"></select>
+      </div>
+
+      <div class="slot-card">
+        <div class="slot-label" data-i18n="slotAfternoon">Afternoon</div>
+        <select id="afternoonSelect" aria-label="Afternoon plan"></select>
+      </div>
+
+      <div class="slot-card">
+        <div class="slot-label" data-i18n="slotEvening">Evening</div>
+        <select id="eveningSelect" aria-label="Evening plan"></select>
+      </div>
+
+      <div class="plan-summary">
+        <h3 data-i18n="summaryHeading">Your Saved Day Plan</h3>
+        <ul class="plan-list" id="planSummaryList"></ul>
+        <div class="plan-actions">
+          <button type="button" class="btn-navy" id="savePlanBtn" data-i18n="savePlanBtn">Save Plan</button>
+          <a href="booking.html" class="btn-turquoise" id="bookPlanLink" data-i18n="bookPlanBtn">Send to Booking</a>
+        </div>
+        <div class="status-msg" id="planStatusMsg"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="packing-panel">
+      <div class="panel-head">
+        <div>
+          <h2 data-i18n="packTitle">Red Sea Day-Bag Checklist</h2>
+          <p data-i18n="packSub">Tick items off as you get ready for boats, islands, or desert trips.</p>
+        </div>
+      </div>
+      <div class="pack-list" id="packList"></div>
+    </section>
+  </div>
 </main>
 
 <footer>
@@ -366,6 +475,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const LANG_KEY = "atlantis_companion_lang_v1";
   const BEST_KEY = "atlantis_reef_best_v1";
   const PLAN_KEY = "atlantis_daily_plan_v1";
+  const XP_KEY = "atlantis_companion_xp_v1";
+  const SPOTS_KEY = "atlantis_unlocked_spots_v1";
+  const PACK_KEY = "atlantis_pack_checked_v1";
 
   const I18N = {
     en: {
@@ -378,18 +490,21 @@ document.addEventListener("DOMContentLoaded", function () {
       navBook: "Book Now",
       navContact: "Contact",
       heroEyebrow: "Daily Hurghada & Red Sea Companion",
-      heroTitle: "Play, Plan & Explore Hurghada.",
-      heroDesc: "Switch between English and German anytime. Collect Red Sea pearls in the reef game, unlock spot discoveries, and build your daily trip plan.",
+      heroTitle: "Play, Discover & Plan Your Stay.",
+      heroDesc: "Earn Explorer XP across the Reef Game, Red Sea Spot Atlas, Hurghada Quiz, and Daily Trip Planner — all in English or German with progress saved on your device.",
       jumpGame: "Play Reef Game",
-      jumpPlanner: "Open Day Planner",
+      jumpAtlas: "Spot Atlas",
+      jumpQuiz: "Hurghada Quiz",
+      jumpPlanner: "Day Planner",
       gameTitle: "Red Sea Reef & Treasure Run",
-      gameSub: "Steer your mini-sub with Arrow keys / W-S or tap Up/Down. Collect pearls & corals, dodge jellyfish & anchors.",
+      gameSub: "Steer with Arrow keys / W-S or Up/Down buttons. Collect pearls (+25 XP) & unlock Red Sea spots.",
       hudScore: "Score",
       hudBest: "Best",
       hudPearls: "Pearls",
+      hudXp: "Explorer XP",
       overlayBadge: "Red Sea Arcade",
       overlayStartTitle: "Ready to Dive?",
-      overlayStartSub: "Press Play to pilot your mini-sub, gather Red Sea pearls, and unlock island & reef spots.",
+      overlayStartSub: "Press Play to pilot your mini-sub, gather Red Sea pearls, earn XP, and unlock spots.",
       overlayOverTitle: "Submarine Surfacing!",
       overlayOverSub: "You hit a reef hazard. Press Play Again to dive back into the Red Sea.",
       overlayPlayBtn: "Play Now",
@@ -397,9 +512,21 @@ document.addEventListener("DOMContentLoaded", function () {
       startBtn: "Start / Restart",
       pauseBtn: "Pause",
       resumeBtn: "Resume",
-      spotKicker: "Unlocked Red Sea Spot",
+      spotKicker: "Latest Unlocked Red Sea Spot",
+      viewRelatedTour: "Related Tour →",
+      atlasTitle: "Red Sea Spot Atlas",
+      atlasSub: "Play the game to unlock spots automatically — or preview any spot and jump straight to its excursion.",
+      statusUnlocked: "Unlocked",
+      statusLocked: "Locked · Collect Pearls",
+      exploreTour: "View Tour →",
+      quizTitle: "Hurghada & Red Sea Quick Quiz",
+      quizSub: "Test your knowledge and earn +30 Explorer XP per right answer.",
+      nextQuestionBtn: "Next Question",
+      readGuideLink: "Read Hurghada Guide →",
+      quizCorrect: "Great call! +30 Explorer XP added.",
+      quizWrong: "Not quite — check the Hurghada Guide and try the next question.",
       plannerTitle: "Daily Vibe & Planner",
-      plannerSub: "Pick your vibe for today and set your morning, afternoon, and evening plan.",
+      plannerSub: "Pick your vibe for today and send your schedule straight to booking.",
       vibeLabel: "Today's Vibe",
       vibeRelax: "Relax & Beach",
       vibeAdventure: "Sea & Reef",
@@ -411,15 +538,77 @@ document.addEventListener("DOMContentLoaded", function () {
       savePlanBtn: "Save Plan",
       bookPlanBtn: "Send to Booking",
       planSaved: "Your daily plan is saved on this device.",
+      packTitle: "Red Sea Day-Bag Checklist",
+      packSub: "Tick items off as you get ready for boats, islands, or desert trips.",
       footerTagline: "Discover turquoise islands, coral reefs, desert adventures, and ancient Egypt from Hurghada.",
       footerPages: "Pages",
       footerTools: "Daily Tools",
+      ranks: [
+        { minXp: 0, label: "Reef Scout" },
+        { minXp: 100, label: "Lagoon Explorer" },
+        { minXp: 250, label: "Red Sea Navigator" },
+        { minXp: 450, label: "Atlantis Master" }
+      ],
       spots: [
-        { title: "Giftun & Orange Bay", desc: "Shallow turquoise lagoons and sandy beaches make the Giftun islands a classic full-day boat escape from Hurghada." },
-        { title: "Mahmya Island", desc: "Clear Red Sea water, soft shoreline sand, and relaxed island atmosphere ideal for swimming and unwinding." },
-        { title: "Abu Dabbab Bay", desc: "Seagrass bay near Marsa Alam known for calm shore entry and potential sea turtle sightings." },
-        { title: "Dolphin House", desc: "Open Red Sea waters frequented by wild dolphins, paired with guided reef snorkeling stops." },
-        { title: "Eastern Desert & Marina", desc: "Balance daytime desert trails or quad rides with a relaxed evening stroll along Hurghada Marina." }
+        {
+          id: "giftun",
+          title: "Giftun & Orange Bay",
+          desc: "Shallow turquoise lagoons and sandy beaches make the Giftun islands a classic full-day boat escape from Hurghada.",
+          tourUrl: "all-tours.html#tour-orange-bay-island"
+        },
+        {
+          id: "mahmya",
+          title: "Mahmya Island",
+          desc: "Clear Red Sea water, soft shoreline sand, and relaxed island atmosphere ideal for swimming and unwinding.",
+          tourUrl: "all-tours.html#tour-mahmya-island"
+        },
+        {
+          id: "abu-dabbab",
+          title: "Abu Dabbab Bay",
+          desc: "Seagrass bay near Marsa Alam known for calm shore entry and potential sea turtle sightings.",
+          tourUrl: "all-tours.html#tour-red-sea-snorkeling"
+        },
+        {
+          id: "dolphin-house",
+          title: "Dolphin House",
+          desc: "Open Red Sea waters frequented by wild dolphins, paired with guided reef snorkeling stops.",
+          tourUrl: "all-tours.html#tour-red-sea-snorkeling"
+        },
+        {
+          id: "desert-marina",
+          title: "Eastern Desert & Marina",
+          desc: "Balance daytime desert trails or quad rides with a relaxed evening stroll along Hurghada Marina.",
+          tourUrl: "all-tours.html#tour-quad-bike"
+        }
+      ],
+      quiz: [
+        {
+          q: "What makes Giftun & Orange Bay a top choice from Hurghada?",
+          opts: ["High mountain ski slopes", "Shallow turquoise lagoons and sandy island beaches", "Sub-zero glacial caves"],
+          ans: 1
+        },
+        {
+          q: "When is the best time for a relaxed waterfront walk in Hurghada?",
+          opts: ["Evening along Hurghada Marina or El Dahar", "Midnight inside a closed reef boat", "During a midday sandstorm"],
+          ans: 0
+        },
+        {
+          q: "What should you always do around coral reefs and marine life?",
+          opts: ["Stand on corals to rest", "Keep a respectful distance and never touch or step on reefs", "Feed marine wildlife packaged snacks"],
+          ans: 1
+        },
+        {
+          q: "Which combo fits a 'Desert & City' day in Hurghada?",
+          opts: ["Quad bike or 4x4 safari plus sunset views or Marina stroll", "Ice skating in the desert", "Deep-sea submarine only"],
+          ans: 0
+        }
+      ],
+      packItems: [
+        "Reef-safe sunscreen & UV hat",
+        "Swimwear, quick-dry towel & sunglasses",
+        "Waterproof phone pouch & power bank",
+        "Light scarf / sunglasses for desert & quad trails",
+        "Hotel room info & excursion confirmation"
       ],
       options: {
         morning: [
@@ -457,18 +646,21 @@ document.addEventListener("DOMContentLoaded", function () {
       navBook: "Buchen",
       navContact: "Kontakt",
       heroEyebrow: "Täglicher Hurghada & Rotes-Meer-Begleiter",
-      heroTitle: "Spielen, Planen & Hurghada Erleben.",
-      heroDesc: "Wechsle jederzeit zwischen Englisch und Deutsch. Sammle Perlen im Riff-Spiel, schalte Spots frei und plane deinen Tagesablauf.",
+      heroTitle: "Spielen, Entdecken & Planen.",
+      heroDesc: "Sammle Explorer-XP im Riff-Spiel, Spot-Atlas, Hurghada-Quiz und Tagesplaner — auf Englisch oder Deutsch mit lokal gespeichertem Fortschritt.",
       jumpGame: "Riff-Spiel Starten",
-      jumpPlanner: "Tagesplaner Öffnen",
+      jumpAtlas: "Spot-Atlas",
+      jumpQuiz: "Hurghada-Quiz",
+      jumpPlanner: "Tagesplaner",
       gameTitle: "Red Sea Reef & Treasure Run",
-      gameSub: "Steuere dein Mini-U-Boot mit Pfeiltasten / W-S oder Hoch/Runter. Sammle Perlen & weiche Quallen und Ankern aus.",
+      gameSub: "Steuere mit Pfeiltasten / W-S oder Hoch/Runter. Sammle Perlen (+25 XP) & schalte Spots frei.",
       hudScore: "Punkte",
       hudBest: "Rekord",
       hudPearls: "Perlen",
+      hudXp: "Explorer-XP",
       overlayBadge: "Rotes-Meer-Arcade",
       overlayStartTitle: "Bereit zum Tauchen?",
-      overlayStartSub: "Drücke Starten, steuere dein Mini-U-Boot, sammle Perlen und schalte Spots frei.",
+      overlayStartSub: "Drücke Starten, steuere dein Mini-U-Boot, sammle Perlen, verdiene XP und schalte Spots frei.",
       overlayOverTitle: "U-Boot Aufgetaucht!",
       overlayOverSub: "Ein Hindernis erwischt. Starte neu für den nächsten Tauchgang im Roten Meer.",
       overlayPlayBtn: "Jetzt Spielen",
@@ -476,9 +668,21 @@ document.addEventListener("DOMContentLoaded", function () {
       startBtn: "Start / Neustart",
       pauseBtn: "Pause",
       resumeBtn: "Weiter",
-      spotKicker: "Freigeschalteter Spot am Roten Meer",
+      spotKicker: "Zuletzt Freigeschalteter Spot",
+      viewRelatedTour: "Passender Ausflug →",
+      atlasTitle: "Rotes-Meer Spot-Atlas",
+      atlasSub: "Schalte Spots durchs Spielen frei — oder öffne direkt den passenden Ausflug.",
+      statusUnlocked: "Freigeschaltet",
+      statusLocked: "Gesperrt · Perlen Sammeln",
+      exploreTour: "Ausflug Ansehen →",
+      quizTitle: "Hurghada & Rotes-Meer Quiz",
+      quizSub: "Teste dein Wissen und sichere dir +30 Explorer-XP pro richtiger Antwort.",
+      nextQuestionBtn: "Nächste Frage",
+      readGuideLink: "Hurghada Guide Lesen →",
+      quizCorrect: "Stark! +30 Explorer-XP erhalten.",
+      quizWrong: "Nicht ganz — schau im Hurghada Guide vorbei und probiere die nächste Frage.",
       plannerTitle: "Tagesstimmung & Planer",
-      plannerSub: "Wähle deine Stimmung für heute und plane Vormittag, Nachmittag und Abend.",
+      plannerSub: "Wähle deine Stimmung für heute und sende deinen Plan direkt zur Buchung.",
       vibeLabel: "Stimmung Heute",
       vibeRelax: "Entspannung & Strand",
       vibeAdventure: "Meer & Riff",
@@ -490,15 +694,77 @@ document.addEventListener("DOMContentLoaded", function () {
       savePlanBtn: "Plan Speichern",
       bookPlanBtn: "Zur Buchung",
       planSaved: "Dein Tagesplan wurde auf diesem Gerät gespeichert.",
+      packTitle: "Checkliste für den Ausflugstag",
+      packSub: "Hake wichtige Dinge vor Boots-, Insel- oder Wüstentouren ab.",
       footerTagline: "Türkise Inseln, Korallenriffe, Wüstensafaris und das alte Ägypten ab Hurghada entdecken.",
       footerPages: "Seiten",
       footerTools: "Tägliche Tools",
+      ranks: [
+        { minXp: 0, label: "Riff-Scout" },
+        { minXp: 100, label: "Lagunen-Entdecker" },
+        { minXp: 250, label: "Rotes-Meer Navigator" },
+        { minXp: 450, label: "Atlantis-Meister" }
+      ],
       spots: [
-        { title: "Giftun & Orange Bay", desc: "Flache türkisfarbene Lagunen und Sandstrände machen die Giftun-Inseln zu einem beliebten Bootsausflug ab Hurghada." },
-        { title: "Mahmya Island", desc: "Klares Wasser im Roten Meer, weicher Sand und entspanntes Inselgefühl zum Baden und Abschalten." },
-        { title: "Abu Dabbab Bucht", desc: "Seegrasbucht nahe Marsa Alam mit ruhigem Einstieg und Chance auf Meeresschildkröten." },
-        { title: "Dolphin House", desc: "Offene Gewässer des Roten Meeres, in denen wilde Delfine leben, kombiniert mit Schnorchelstopps." },
-        { title: "Ostküstenwüste & Marina", desc: "Kombiniere Wüstentouren oder Quad-Fahrten tagsüber mit einem entspannten Abendspaziergang an der Hurghada Marina." }
+        {
+          id: "giftun",
+          title: "Giftun & Orange Bay",
+          desc: "Flache türkisfarbene Lagunen und Sandstrände machen die Giftun-Inseln zu einem beliebten Bootsausflug ab Hurghada.",
+          tourUrl: "all-tours.html#tour-orange-bay-island"
+        },
+        {
+          id: "mahmya",
+          title: "Mahmya Island",
+          desc: "Klares Wasser im Roten Meer, weicher Sand und entspanntes Inselgefühl zum Baden und Abschalten.",
+          tourUrl: "all-tours.html#tour-mahmya-island"
+        },
+        {
+          id: "abu-dabbab",
+          title: "Abu Dabbab Bucht",
+          desc: "Seegrasbucht nahe Marsa Alam mit ruhigem Einstieg und Chance auf Meeresschildkröten.",
+          tourUrl: "all-tours.html#tour-red-sea-snorkeling"
+        },
+        {
+          id: "dolphin-house",
+          title: "Dolphin House",
+          desc: "Offene Gewässer des Roten Meeres, in denen wilde Delfine leben, kombiniert mit Schnorchelstopps.",
+          tourUrl: "all-tours.html#tour-red-sea-snorkeling"
+        },
+        {
+          id: "desert-marina",
+          title: "Ostküstenwüste & Marina",
+          desc: "Kombiniere Wüstentouren oder Quad-Fahrten tagsüber mit einem entspannten Abendspaziergang an der Hurghada Marina.",
+          tourUrl: "all-tours.html#tour-quad-bike"
+        }
+      ],
+      quiz: [
+        {
+          q: "Was macht Giftun & Orange Bay ab Hurghada besonders beliebt?",
+          opts: ["Hohe Skipisten", "Flache türkisfarbene Lagunen und Sandstrände", "Eishöhlen"],
+          ans: 1
+        },
+        {
+          q: "Wann lohnt sich ein entspannter Abendspaziergang in Hurghada besonders?",
+          opts: ["Abends an der Hurghada Marina oder in El Dahar", "Um Mitternacht auf einem geschlossenen Boot", "Mitten im Sandsturm"],
+          ans: 0
+        },
+        {
+          q: "Wie verhalten wir uns verantwortungsvoll an Korallenriffen?",
+          opts: ["Auf Korallen stehen", "Abstand halten und Riffe niemals berühren oder betreten", "Wildtiere mit Verpackungsresten füttern"],
+          ans: 1
+        },
+        {
+          q: "Was passt gut zu einem 'Wüste & Stadt'-Tag in Hurghada?",
+          opts: ["Quad- oder Jeep-Safari plus Sonnenuntergang oder Marina-Spaziergang", "Schlittschuhlaufen in der Wüste", "Nur Tiefsee-U-Boot"],
+          ans: 0
+        }
+      ],
+      packItems: [
+        "Riff-freundliche Sonnencreme & Kopfbedeckung",
+        "Badesachen, schnelltrocknendes Handtuch & Sonnenbrille",
+        "Wasserdichte Handytasche & Powerbank",
+        "Leichtes Tuch / Sonnenbrille für Wüste & Quad",
+        "Hoteldaten & Ausflugsbestätigung"
       ],
       options: {
         morning: [
@@ -534,6 +800,218 @@ document.addEventListener("DOMContentLoaded", function () {
     if (savedLang === "en" || savedLang === "de") currentLang = savedLang;
   } catch (e) {}
 
+  let explorerXp = 0;
+  try {
+    explorerXp = parseInt(localStorage.getItem(XP_KEY) || "0", 10) || 0;
+  } catch (e) {}
+
+  let unlockedSpotCount = 1;
+  try {
+    unlockedSpotCount = Math.max(1, Math.min(5, parseInt(localStorage.getItem(SPOTS_KEY) || "1", 10) || 1));
+  } catch (e) {}
+
+  let checkedPack = {};
+  try {
+    const rawPack = localStorage.getItem(PACK_KEY);
+    if (rawPack) checkedPack = JSON.parse(rawPack) || {};
+  } catch (e) {}
+
+  const rankBadgeEl = document.getElementById("rankBadge");
+  const xpSummaryTextEl = document.getElementById("xpSummaryText");
+  const xpBarFillEl = document.getElementById("xpBarFill");
+  const hudXpValEl = document.getElementById("hudXpVal");
+
+  function getRankLabel(xp) {
+    const ranks = I18N[currentLang].ranks;
+    let activeRank = ranks[0].label;
+    ranks.forEach(function (r) {
+      if (xp >= r.minXp) activeRank = r.label;
+    });
+    return activeRank;
+  }
+
+  function refreshProgressUi() {
+    if (hudXpValEl) hudXpValEl.textContent = String(explorerXp);
+    if (rankBadgeEl) rankBadgeEl.textContent = getRankLabel(explorerXp);
+    const totalSpots = I18N[currentLang].spots.length;
+    if (xpSummaryTextEl) {
+      xpSummaryTextEl.textContent = explorerXp + " XP · " + unlockedSpotCount + " / " + totalSpots + " Spots Unlocked";
+    }
+    if (xpBarFillEl) {
+      const pct = Math.min(100, Math.round((explorerXp % 100) * 1.0));
+      xpBarFillEl.style.width = (explorerXp >= 450 ? 100 : pct) + "%";
+    }
+  }
+
+  function addXp(amount) {
+    explorerXp += amount;
+    try { localStorage.setItem(XP_KEY, String(explorerXp)); } catch (e) {}
+    refreshProgressUi();
+  }
+
+  /* SPOT ATLAS */
+  const spotAtlasGrid = document.getElementById("spotAtlasGrid");
+  const spotTitleEl = document.getElementById("spotTitle");
+  const spotDescEl = document.getElementById("spotDesc");
+  const activeSpotTourBtn = document.getElementById("activeSpotTourBtn");
+
+  let activeSpotIdx = 0;
+
+  function selectSpot(idx) {
+    const spots = I18N[currentLang].spots;
+    activeSpotIdx = ((idx % spots.length) + spots.length) % spots.length;
+    const spot = spots[activeSpotIdx];
+    if (spotTitleEl) spotTitleEl.textContent = spot.title;
+    if (spotDescEl) spotDescEl.textContent = spot.desc;
+    if (activeSpotTourBtn) activeSpotTourBtn.href = spot.tourUrl;
+  }
+
+  function renderSpotAtlas() {
+    if (!spotAtlasGrid) return;
+    const dict = I18N[currentLang];
+    spotAtlasGrid.innerHTML = "";
+    dict.spots.forEach(function (spot, idx) {
+      const isUnlocked = idx < unlockedSpotCount;
+      const card = document.createElement("article");
+      card.className = "spot-card " + (isUnlocked ? "" : "locked");
+
+      const top = document.createElement("div");
+      top.className = "spot-top";
+
+      const badge = document.createElement("span");
+      badge.className = "spot-status " + (isUnlocked ? "unlocked" : "locked");
+      badge.textContent = isUnlocked ? dict.statusUnlocked : dict.statusLocked;
+      top.appendChild(badge);
+
+      const h3 = document.createElement("h3");
+      h3.textContent = spot.title;
+
+      const p = document.createElement("p");
+      p.textContent = spot.desc;
+
+      const foot = document.createElement("div");
+      foot.className = "spot-footer";
+
+      const link = document.createElement("a");
+      link.className = "spot-tour-link";
+      link.href = spot.tourUrl;
+      link.textContent = dict.exploreTour;
+
+      foot.appendChild(link);
+      card.appendChild(top);
+      card.appendChild(h3);
+      card.appendChild(p);
+      card.appendChild(foot);
+      spotAtlasGrid.appendChild(card);
+    });
+  }
+
+  function unlockNextSpot() {
+    const total = I18N[currentLang].spots.length;
+    if (unlockedSpotCount < total) {
+      unlockedSpotCount += 1;
+      try { localStorage.setItem(SPOTS_KEY, String(unlockedSpotCount)); } catch (e) {}
+    }
+    selectSpot(unlockedSpotCount - 1);
+    renderSpotAtlas();
+    refreshProgressUi();
+  }
+
+  /* QUIZ */
+  const quizCounterEl = document.getElementById("quizCounter");
+  const quizScoreLabelEl = document.getElementById("quizScoreLabel");
+  const quizQuestionEl = document.getElementById("quizQuestion");
+  const quizOptionsEl = document.getElementById("quizOptions");
+  const quizFeedbackEl = document.getElementById("quizFeedback");
+  const nextQuizBtn = document.getElementById("nextQuizBtn");
+
+  let quizIndex = 0;
+  let quizEarnedXp = 0;
+  let quizAnswered = false;
+
+  function renderQuiz() {
+    const questions = I18N[currentLang].quiz;
+    const qObj = questions[quizIndex % questions.length];
+    quizAnswered = false;
+
+    if (quizCounterEl) {
+      quizCounterEl.textContent = "Question " + ((quizIndex % questions.length) + 1) + " / " + questions.length;
+    }
+    if (quizScoreLabelEl) {
+      quizScoreLabelEl.textContent = "Quiz XP: " + quizEarnedXp;
+    }
+    if (quizQuestionEl) quizQuestionEl.textContent = qObj.q;
+    if (quizFeedbackEl) quizFeedbackEl.textContent = "";
+
+    if (quizOptionsEl) {
+      quizOptionsEl.innerHTML = "";
+      qObj.opts.forEach(function (optText, idx) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "quiz-opt";
+        btn.textContent = optText;
+        btn.addEventListener("click", function () {
+          if (quizAnswered) return;
+          quizAnswered = true;
+          const allBtns = quizOptionsEl.querySelectorAll(".quiz-opt");
+          allBtns.forEach(function (b) { b.disabled = true; });
+          if (idx === qObj.ans) {
+            btn.classList.add("correct");
+            quizEarnedXp += 30;
+            addXp(30);
+            if (quizScoreLabelEl) quizScoreLabelEl.textContent = "Quiz XP: " + quizEarnedXp;
+            if (quizFeedbackEl) quizFeedbackEl.textContent = I18N[currentLang].quizCorrect;
+          } else {
+            btn.classList.add("wrong");
+            if (allBtns[qObj.ans]) allBtns[qObj.ans].classList.add("correct");
+            if (quizFeedbackEl) quizFeedbackEl.textContent = I18N[currentLang].quizWrong;
+          }
+        });
+        quizOptionsEl.appendChild(btn);
+      });
+    }
+  }
+
+  if (nextQuizBtn) {
+    nextQuizBtn.addEventListener("click", function () {
+      quizIndex += 1;
+      renderQuiz();
+    });
+  }
+
+  /* PACKING CHECKLIST */
+  const packListEl = document.getElementById("packList");
+  function renderPackingList() {
+    if (!packListEl) return;
+    const items = I18N[currentLang].packItems;
+    packListEl.innerHTML = "";
+    items.forEach(function (labelText, idx) {
+      const key = "item_" + idx;
+      const isChecked = Boolean(checkedPack[key]);
+
+      const row = document.createElement("label");
+      row.className = "pack-item" + (isChecked ? " checked" : "");
+
+      const cb = document.createElement("input");
+      cb.type = "checkbox";
+      cb.checked = isChecked;
+
+      const span = document.createElement("span");
+      span.textContent = labelText;
+
+      cb.addEventListener("change", function () {
+        checkedPack[key] = cb.checked;
+        row.classList.toggle("checked", cb.checked);
+        try { localStorage.setItem(PACK_KEY, JSON.stringify(checkedPack)); } catch (e) {}
+      });
+
+      row.appendChild(cb);
+      row.appendChild(span);
+      packListEl.appendChild(row);
+    });
+  }
+
+  /* PLANNER */
   const morningSelect = document.getElementById("morningSelect");
   const afternoonSelect = document.getElementById("afternoonSelect");
   const eveningSelect = document.getElementById("eveningSelect");
@@ -655,6 +1133,7 @@ document.addEventListener("DOMContentLoaded", function () {
       try {
         localStorage.setItem(PLAN_KEY, JSON.stringify(planState));
       } catch (e) {}
+      addXp(15);
       if (planStatusMsg) planStatusMsg.textContent = I18N[currentLang].planSaved;
     });
   }
@@ -674,8 +1153,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlayPlayBtn = document.getElementById("overlayPlayBtn");
   const upBtn = document.getElementById("upBtn");
   const downBtn = document.getElementById("downBtn");
-  const spotTitleEl = document.getElementById("spotTitle");
-  const spotDescEl = document.getElementById("spotDesc");
 
   let bestScore = 0;
   try {
@@ -688,7 +1165,6 @@ document.addEventListener("DOMContentLoaded", function () {
     hasPlayedOnce: false,
     score: 0,
     pearls: 0,
-    spotIndex: 0,
     subY: 170,
     vy: 0,
     items: [],
@@ -714,13 +1190,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function updateSpotCard() {
-    const spots = I18N[currentLang].spots;
-    const spot = spots[game.spotIndex % spots.length];
-    if (spotTitleEl) spotTitleEl.textContent = spot.title;
-    if (spotDescEl) spotDescEl.textContent = spot.desc;
-  }
-
   function updateHud() {
     if (scoreVal) scoreVal.textContent = String(game.score);
     if (pearlsVal) pearlsVal.textContent = String(game.pearls);
@@ -738,7 +1207,6 @@ document.addEventListener("DOMContentLoaded", function () {
       hasPlayedOnce: true,
       score: 0,
       pearls: 0,
-      spotIndex: 0,
       subY: canvas ? canvas.height / 2 : 170,
       vy: 0,
       items: [],
@@ -747,7 +1215,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (pauseGameBtn) pauseGameBtn.textContent = I18N[currentLang].pauseBtn;
     syncOverlay();
     updateHud();
-    updateSpotCard();
   }
 
   function spawnItem() {
@@ -769,7 +1236,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const h = canvas.height;
     ctx.clearRect(0, 0, w, h);
 
-    // Subtle light rays
     ctx.save();
     ctx.fillStyle = "rgba(22, 197, 206, 0.06)";
     for (let i = 0; i < 4; i++) {
@@ -783,11 +1249,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     ctx.restore();
 
-    // Seabed
     ctx.fillStyle = "#08364f";
     ctx.fillRect(0, h - 24, w, 24);
 
-    // Items
     game.items.forEach(function (it) {
       ctx.save();
       if (it.kind === "pearl") {
@@ -808,7 +1272,6 @@ document.addEventListener("DOMContentLoaded", function () {
       ctx.restore();
     });
 
-    // Mini-sub
     const subX = 88;
     const subY = game.subY;
     ctx.save();
@@ -820,7 +1283,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ctx.lineWidth = 2;
     ctx.stroke();
 
-    // Window
     ctx.fillStyle = "#e8b967";
     ctx.beginPath();
     ctx.arc(subX + 9, subY - 2, 6, 0, Math.PI * 2);
@@ -848,9 +1310,9 @@ document.addEventListener("DOMContentLoaded", function () {
           if (it.kind === "pearl") {
             game.pearls += 1;
             game.score += 20;
-            if (game.pearls % 3 === 0) {
-              game.spotIndex += 1;
-              updateSpotCard();
+            addXp(25);
+            if (game.pearls % 2 === 0) {
+              unlockNextSpot();
             }
             updateHud();
             return false;
@@ -938,9 +1400,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     syncOverlay();
+    refreshProgressUi();
+    selectSpot(activeSpotIdx);
+    renderSpotAtlas();
+    renderQuiz();
+    renderPackingList();
     populateSelects();
     renderPlanSummary();
-    updateSpotCard();
   }
 
   document.querySelectorAll(".lang-btn").forEach(function (btn) {
