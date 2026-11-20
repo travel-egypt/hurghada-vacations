@@ -567,10 +567,21 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
             <li>Protected marine habitat with coral edges on both sides of the bay.</li>
           </ul>
           <div class="note">Wildlife encounters depend on nature; follow protected-area rules.</div>
-          <details class="tour-media" id="media-abu-dabbab-bay">
-            <summary><strong>Watch Abu Dabbab Video</strong></summary>
+          <details class="tour-media" id="media-abu-dabbab-bay" open>
+            <summary><strong>Abu Dabbab Bay Gallery &amp; Video</strong></summary>
+            <p>Tap any photo to open the full-screen viewer, or play/open the video clip below.</p>
+            <div class="tour-media-grid">
+              <img alt="Sea turtle gliding through clear Abu Dabbab water" loading="lazy" src="https://images.unsplash.com/photo-1591025209863-84536b5756f7?auto=format&amp;fit=crop&w=1100&q=85">
+              <img alt="Coral reef and turquoise Red Sea bay at Abu Dabbab" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1100&q=85">
+              <img alt="Clear Red Sea snorkeling bay waters" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1100&q=85">
+            </div>
             <div class="tour-video-grid">
-              <div><video controls playsinline webkit-playsinline="true" preload="metadata"><source src="assets/videos/Abo%20Dabbab%20.mp4" type="video/mp4"></video><div class="tour-video-caption">Abu Dabbab Bay clip</div></div>
+              <div>
+                <video controls playsinline webkit-playsinline="true" preload="auto" data-alt-src="assets/videos/Abo%20Dabbab%20.mp4">
+                  <source src="assets/videos/Abo%20Dabbab.mp4" type="video/mp4">
+                </video>
+                <div class="tour-video-caption">Abu Dabbab Bay clip — <a href="assets/videos/Abo%20Dabbab.mp4" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700;text-decoration:underline">Open video directly</a></div>
+              </div>
             </div>
           </details>
           <div class="card-actions">
@@ -1350,6 +1361,13 @@ document.addEventListener("DOMContentLoaded", function () {
     video.addEventListener("error", function () {
       const source = video.querySelector("source");
       if (!source || !source.src) return;
+      const altSrc = video.getAttribute("data-alt-src");
+      if (altSrc && !video.dataset.triedAlt && source.getAttribute("src") !== altSrc) {
+        video.dataset.triedAlt = "1";
+        source.setAttribute("src", altSrc);
+        video.load();
+        return;
+      }
       let msg = video.parentElement.querySelector(".video-fallback");
       if (!msg) {
         msg = document.createElement("div");
