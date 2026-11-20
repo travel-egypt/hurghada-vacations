@@ -104,7 +104,7 @@ header{position:sticky;top:0;z-index:1000;background:rgba(3,29,48,.97);backdrop-
 .tours-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
 .tour-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease}
 .tour-card:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(6,44,67,.16)}
-.tour-card > img{width:100%;height:255px;object-fit:cover;display:block;background:#dce9ee}
+.tour-card > img{width:100%;height:260px;object-fit:cover;object-position:center;display:block;background:#dce9ee}
 .card-content{padding:24px;display:flex;flex-direction:column;flex:1}
 .card-category{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
 .tour-card h3{font-size:23px;color:var(--navy);line-height:1.25;margin-bottom:10px}
@@ -294,16 +294,15 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
 
 <main class="container">
 
-  <!-- 1. ISLANDS & SEA TRIPS -->
   <section class="category-section" data-category-section="islands">
     <div class="category-heading">
-      <h2>Islands &amp; Sea Trips</h2>
+      <h2>Islands & Sea Trips</h2>
       <p>Red Sea island beaches, clear lagoons and boat routes tailored to sea conditions and your preferred pace.</p>
     </div>
 
     <div class="tours-grid">
       <article class="tour-card" data-category="islands" id="tour-mahmya-island">
-        <img alt="Mahmya Island beach and turquoise Red Sea water" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg">
+        <img alt="Mahmya Island turquoise beach and Red Sea shoreline" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg">
         <div class="card-content">
           <div class="card-category">Island Escape</div>
           <h3>Mahmya Island</h3>
@@ -333,7 +332,7 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="islands" id="tour-orange-bay-island">
-        <img alt="Orange Bay Island beach and Red Sea scenery" loading="lazy" src="assets/images/IMG-20261117-WA0011.jpg">
+        <img alt="Orange Bay Island turquoise water and sandy beach" loading="lazy" src="assets/images/IMG-20261117-WA0011.jpg">
         <div class="card-content">
           <div class="card-category">Island Escape</div>
           <h3>Orange Bay Island</h3>
@@ -373,7 +372,7 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="islands" id="tour-paradise-island">
-        <img alt="Paradise Island style beach scenery in the Red Sea" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005709%20Paradise%20Island%20Makadi.jpg">
+        <img alt="Paradise Island white sand and clear Red Sea water" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005709%20Paradise%20Island%20Makadi.jpg">
         <div class="card-content">
           <div class="card-category">Island Escape</div>
           <h3>Paradise Island</h3>
@@ -392,7 +391,7 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="islands" id="tour-hula-hula-island">
-        <img alt="Hula Hula Island beach and Red Sea scenery" loading="lazy" src="assets/images/Hula.jpeg">
+        <img alt="Hula Hula Island beach and Red Sea water" loading="lazy" src="assets/images/Hula.jpeg">
         <div class="card-content">
           <div class="card-category">Island Escape</div>
           <h3>Hula Hula Island</h3>
@@ -440,7 +439,7 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="islands" id="tour-magawish-island">
-        <img alt="Egyptian Red Sea island and sea scenery" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Il%20mare%20d%27Egitto%20-%20panoramio.jpg">
+        <img alt="Red Sea island and clear coastal sea view" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Il%20mare%20d%27Egitto%20-%20panoramio.jpg">
         <div class="card-content">
           <div class="card-category">Island Escape</div>
           <h3>Magawish Island</h3>
@@ -458,10 +457,10 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="islands" id="tour-private-boat">
-        <img alt="Turquoise sea and private yacht coastline" loading="lazy" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Private yacht sailing on turquoise sea" loading="lazy" src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Private Sea Experience</div>
-          <h3>Private Boat &amp; Yacht Trips</h3>
+          <h3>Private Boat & Yacht Trips</h3>
           <p>Tailored private sea charter for families, couples or small groups wanting flexible stops and privacy.</p>
           <h4>Highlights</h4>
           <ul>
@@ -477,17 +476,15 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
     </div>
   </section>
-
-  <!-- 2. SNORKELING & DIVING -->
   <section class="category-section" data-category-section="diving">
     <div class="category-heading">
-      <h2>Snorkeling &amp; Diving Adventures</h2>
+      <h2>Snorkeling & Diving Adventures</h2>
       <p>Coral gardens, reef walls and marine habitats across the Red Sea.</p>
     </div>
 
     <div class="tours-grid">
       <article class="tour-card" data-category="diving" id="tour-red-sea-snorkeling">
-        <img alt="Snorkeling and swimming in clear Red Sea water" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Snorkeler swimming over crystal-clear turquoise water" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Snorkeling</div>
           <h3>Red Sea Snorkeling Trip</h3>
@@ -505,7 +502,7 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="diving" id="tour-discover-scuba">
-        <img alt="Colourful underwater coral reef" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Vibrant coral reef underwater scene" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Introductory Scuba</div>
           <h3>Discover Scuba Diving</h3>
@@ -523,7 +520,7 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="diving" id="tour-certified-diving">
-        <img alt="Scuba diver exploring an underwater reef" loading="lazy" src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Scuba diver exploring deep underwater reef" loading="lazy" src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Certified Diving</div>
           <h3>Daily Diving for Certified Divers</h3>
@@ -541,10 +538,10 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="diving" id="tour-dolphin-house">
-        <img alt="Dolphins swimming in the sea" loading="lazy" src="https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Dolphins swimming in clear blue ocean water" loading="lazy" src="https://images.unsplash.com/photo-1570481662006-a3a1374699e8?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
-          <div class="card-category">Wildlife &amp; Sea Trip</div>
-          <h3>Dolphin House &amp; Dolphin Watching</h3>
+          <div class="card-category">Wildlife & Sea Trip</div>
+          <h3>Dolphin House & Dolphin Watching</h3>
           <p>Boat excursion to Red Sea areas frequented by wild dolphins, paired with permitted reef snorkeling stops.</p>
           <h4>Highlights</h4>
           <ul>
@@ -559,9 +556,9 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="diving" id="tour-abu-dabbab">
-        <img alt="Snorkeling in clear Red Sea water" loading="lazy" src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Sea turtle gliding through clear underwater sea" loading="lazy" src="https://images.unsplash.com/photo-1591025209863-84536b5756f7?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
-          <div class="card-category">Snorkeling &amp; Wildlife</div>
+          <div class="card-category">Snorkeling & Wildlife</div>
           <h3>Abu Dabbab Bay</h3>
           <p>Famous seagrass bay near Marsa Alam known for clear shore entry and potential sea turtle sightings.</p>
           <h4>Highlights</h4>
@@ -584,10 +581,10 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="diving" id="tour-semi-submarine">
-        <img alt="Underwater coral and marine environment" loading="lazy" src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1100&q=85">
+        <img alt="School of colourful reef fish and coral underwater" loading="lazy" src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Family Sea Experience</div>
-          <h3>Glass-Bottom Boat &amp; Semi-Submarine</h3>
+          <h3>Glass-Bottom Boat & Semi-Submarine</h3>
           <p>View Red Sea coral reefs through panoramic underwater windows without getting wet — ideal for all ages.</p>
           <h4>Highlights</h4>
           <ul>
@@ -602,19 +599,17 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
     </div>
   </section>
-
-  <!-- 3. WATER SPORTS -->
   <section class="category-section" data-category-section="watersports">
     <div class="category-heading">
-      <h2>Water Sports &amp; Active Experiences</h2>
+      <h2>Water Sports & Active Experiences</h2>
       <p>Wind, speed and paddle sessions along the Hurghada coast, subject to wind and sea conditions.</p>
     </div>
 
     <div class="tours-grid">
       <article class="tour-card" data-category="watersports" id="tour-kitesurfing">
-        <img alt="Kitesurfing on the Red Sea" loading="lazy" src="assets/images/Kitesurfing3.jpeg">
+        <img alt="Kitesurfer riding across Red Sea water" loading="lazy" src="assets/images/Kitesurfing3.jpeg">
         <div class="card-content">
-          <div class="card-category">Wind &amp; Water Sport</div>
+          <div class="card-category">Wind & Water Sport</div>
           <h3>Kitesurfing</h3>
           <p>Take advantage of steady Red Sea winds with beginner lessons or equipment sessions in approved lagoons.</p>
           <h4>Highlights</h4>
@@ -636,13 +631,13 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
           </details>
           <div class="card-actions">
             <a class="book-link" href="booking.html?tour=Kitesurfing">Book Now</a>
-            <a class="details-link" href="#media-kitesurfing">Photos &amp; Videos</a>
+            <a class="details-link" href="#media-kitesurfing">Photos & Videos</a>
           </div>
         </div>
       </article>
 
       <article class="tour-card" data-category="watersports" id="tour-parasailing">
-        <img alt="Parasailing over the sea" loading="lazy" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Parasailing parachute gliding high over blue sea" loading="lazy" src="https://images.unsplash.com/photo-1530870110042-98b2cb110834?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Aerial Water Adventure</div>
           <h3>Parasailing</h3>
@@ -660,10 +655,10 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="watersports" id="tour-banana-sofa">
-        <img alt="Fun inflatable boat rides on clear sea" loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Speedboat wake and tropical sea waves" loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Group Water Ride</div>
-          <h3>Banana Boat &amp; Sofa Ride</h3>
+          <h3>Banana Boat & Sofa Ride</h3>
           <p>High-energy inflatable rides towed by speedboat — a quick, fun session for friends and families.</p>
           <h4>Highlights</h4>
           <ul>
@@ -678,7 +673,7 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="watersports" id="tour-jet-ski">
-        <img alt="Jet ski riding on open blue water" loading="lazy" src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Watercraft splashing across bright coastal water" loading="lazy" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Motorised Water Sport</div>
           <h3>Jet Ski Adventure</h3>
@@ -696,9 +691,9 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="watersports" id="tour-windsurfing">
-        <img alt="Windsurfing sail on the sea" loading="lazy" src="https://images.unsplash.com/photo-1502933691298-84fc14542831?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Windsurfer catching wind on open sea" loading="lazy" src="https://images.unsplash.com/photo-1502933691298-84fc14542831?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
-          <div class="card-category">Wind &amp; Water Sport</div>
+          <div class="card-category">Wind & Water Sport</div>
           <h3>Windsurfing</h3>
           <p>Balance, sail control and coastal breezes — available as introductory coaching or free-ride rental.</p>
           <h4>Highlights</h4>
@@ -714,10 +709,10 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="watersports" id="tour-paddle-kayak">
-        <img alt="Paddleboarding and kayaking on calm water" loading="lazy" src="https://images.unsplash.com/photo-1544551763-8dd44758c2dd?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Paddling on calm turquoise water near shore" loading="lazy" src="https://images.unsplash.com/photo-1526188717906-ab4a2f949f84?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Relaxed Water Sport</div>
-          <h3>Stand-Up Paddleboarding &amp; Kayaking</h3>
+          <h3>Stand-Up Paddleboarding & Kayaking</h3>
           <p>Explore calm coastal waters at your own rhythm on a SUP board or single/double kayak.</p>
           <h4>Highlights</h4>
           <ul>
@@ -732,21 +727,19 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
     </div>
   </section>
-
-  <!-- 4. DESERT ADVENTURES -->
   <section class="category-section" data-category-section="desert">
     <div class="category-heading">
-      <h2>Desert Safaris &amp; Outdoor Adventures</h2>
+      <h2>Desert Safaris & Outdoor Adventures</h2>
       <p>Eastern Desert trails, mountain sunsets, Bedouin hospitality and off-road rides beyond the coast.</p>
     </div>
 
     <div class="tours-grid">
       <article class="tour-card" data-category="desert" id="tour-quad-bike">
-        <img alt="Desert dunes and mountain landscape" loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Desert sand dunes and arid mountain horizon" loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Desert Adventure</div>
           <h3>Quad Bike Safari</h3>
-          <p>Ride across Eastern Desert tracks with mountain views, safety gear and guided convoy stops.</p>
+          <p>Ride across Eastern Desert trails with mountain views, safety gear and guided convoy stops.</p>
           <h4>Highlights</h4>
           <ul>
             <li>Test ride, helmet and safety rules before entering desert trails.</li>
@@ -760,7 +753,7 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="desert" id="tour-jeep-safari">
-        <img alt="Desert jeep safari landscape" loading="lazy" src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Desert trail winding through golden dunes" loading="lazy" src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Off-Road Adventure</div>
           <h3>Jeep Desert Safari</h3>
@@ -778,7 +771,7 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="desert" id="tour-spider-buggy">
-        <img alt="Desert buggy adventure in sandy terrain" loading="lazy" src="https://images.unsplash.com/photo-1542401886-65d6c61db217?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Wide desert valley and off-road terrain" loading="lazy" src="https://images.unsplash.com/photo-1542401886-65d6c61db217?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Motorised Desert Adventure</div>
           <h3>Spider Buggy Safari</h3>
@@ -796,7 +789,7 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="desert" id="tour-bedouin-village">
-        <img alt="Traditional desert camp and mountain scenery" loading="lazy" src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Camels walking across desert sand at sunset" loading="lazy" src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Cultural Desert Experience</div>
           <h3>Bedouin Village Experience</h3>
@@ -814,10 +807,10 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="desert" id="tour-stargazing">
-        <img alt="Desert sunset and night sky" loading="lazy" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Dramatic twilight sky over desert landscape" loading="lazy" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Evening Outdoor Experience</div>
-          <h3>Desert Sunset &amp; Stargazing</h3>
+          <h3>Desert Sunset & Stargazing</h3>
           <p>Watch sunset colours over the desert mountains followed by quiet night-sky observation away from city lights.</p>
           <h4>Highlights</h4>
           <ul>
@@ -832,7 +825,7 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="desert" id="tour-horse-riding">
-        <img alt="Horse riding along coastal and desert trails" loading="lazy" src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Horse rider outdoors in warm golden light" loading="lazy" src="https://images.unsplash.com/photo-1553284965-8300e5436a0a?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Horse Riding</div>
           <h3>Horse Riding Experience</h3>
@@ -850,26 +843,24 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
     </div>
   </section>
-
-  <!-- 5. HURGHADA CITY & CULTURE -->
   <section class="category-section" data-category-section="city">
     <div class="category-heading">
-      <h2>Hurghada City &amp; Local Culture</h2>
+      <h2>Hurghada City & Local Culture</h2>
       <p>Landmarks, traditional markets and waterfront walks around Hurghada.</p>
     </div>
 
     <div class="tours-grid">
       <article class="tour-card" data-category="city" id="tour-hurghada-city">
-        <img alt="El Mina Mosque in Hurghada" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Al%20mina%20mosque%20Hurghada.jpg">
+        <img alt="El Mina Mosque architecture in Hurghada" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Al%20mina%20mosque%20Hurghada.jpg">
         <div class="card-content">
-          <div class="card-category">City &amp; Culture</div>
+          <div class="card-category">City & Culture</div>
           <h3>Hurghada City Tour</h3>
           <p>Explore Hurghada's highlights from El Mina Mosque and the Marina to the traditional streets of El Dahar.</p>
-          <h4>Possible Stops</h4>
+          <h4>Highlights</h4>
           <ul>
-            <li><strong>El Mina Mosque:</strong> iconic waterfront mosque near the harbour.</li>
-            <li><strong>El Dahar &amp; Fish Market:</strong> old-town bazaars and local seafood trading.</li>
-            <li><strong>Hurghada Marina:</strong> modern promenade with yachts, cafés and sea views.</li>
+            <li>El Mina Mosque: iconic waterfront mosque near the harbour.</li>
+            <li>El Dahar & Fish Market: old-town bazaars and local seafood trading.</li>
+            <li>Hurghada Marina: modern promenade with yachts, cafés and sea views.</li>
           </ul>
           <div class="note">Exact stops and duration can be tailored to your interests.</div>
           <div class="card-actions">
@@ -879,10 +870,10 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="city" id="tour-hurghada-marina">
-        <img alt="Waterfront marina and city atmosphere" loading="lazy" src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Harbour boats and waterfront lights" loading="lazy" src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Coastal Lifestyle</div>
-          <h3>Hurghada Marina &amp; Waterfront</h3>
+          <h3>Hurghada Marina & Waterfront</h3>
           <p>Evening or daytime stroll along the yacht harbour, waterfront restaurants and coastal promenade.</p>
           <h4>Highlights</h4>
           <ul>
@@ -897,10 +888,10 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="city" id="tour-el-dahar">
-        <img alt="Traditional shopping street in El Dahar Hurghada" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bazaar%20Street%2C%20El%20Dahar%2C%20Hurghada%2C%20Egypt%2C%20Oct%202004.jpg">
+        <img alt="El Dahar market street in Hurghada" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bazaar%20Street%2C%20El%20Dahar%2C%20Hurghada%2C%20Egypt%2C%20Oct%202004.jpg">
         <div class="card-content">
           <div class="card-category">Local Discovery</div>
-          <h3>El Dahar Old Town &amp; Local Markets</h3>
+          <h3>El Dahar Old Town & Local Markets</h3>
           <p>Walk through Hurghada's historic district to experience local spices, crafts and everyday street life.</p>
           <h4>Highlights</h4>
           <ul>
@@ -915,9 +906,9 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="city" id="tour-fish-market">
-        <img alt="El Halaqa fish market in Hurghada" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/%D8%AD%D9%84%D9%82%D8%A9%20%D8%A7%D9%84%D8%B3%D9%85%D9%83%201.jpg">
+        <img alt="El Halaqa fish market seafood display in Hurghada" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/%D8%AD%D9%84%D9%82%D8%A9%20%D8%A7%D9%84%D8%B3%D9%85%D9%83%201.jpg">
         <div class="card-content">
-          <div class="card-category">Local Food &amp; Culture</div>
+          <div class="card-category">Local Food & Culture</div>
           <h3>El Halaqa Fish Market Visit</h3>
           <p>See Hurghada's Red Sea fishing heritage up close at the bustling local seafood market.</p>
           <h4>Highlights</h4>
@@ -933,22 +924,20 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
     </div>
   </section>
-
-  <!-- 6. EGYPT HISTORICAL EXCURSIONS -->
   <section class="category-section" data-category-section="egypt">
     <div class="category-heading">
-      <h2>Egypt Historical &amp; Cultural Excursions</h2>
+      <h2>Egypt Historical & Cultural Excursions</h2>
       <p>Iconic pyramids, ancient temples and Nile cities arranged from Hurghada.</p>
     </div>
 
     <div class="tours-grid">
       <article class="tour-card" data-category="egypt" id="tour-cairo-giza">
-        <img alt="The Great Pyramids of Giza" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Giza%20Pyramids.jpg">
+        <img alt="Great Pyramids of Giza in Egypt" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Giza%20Pyramids.jpg">
         <div class="card-content">
           <div class="card-category">Ancient Egypt</div>
-          <h3>Cairo &amp; The Pyramids of Giza</h3>
+          <h3>Cairo & The Pyramids of Giza</h3>
           <p>Visit the Giza Plateau, the Great Sphinx and Cairo's major museum highlights on a full-day or private trip.</p>
-          <h4>Possible Highlights</h4>
+          <h4>Highlights</h4>
           <ul>
             <li>Great Pyramids of Khufu, Khafre and Menkaure plus the Great Sphinx.</li>
             <li>Egyptian Museum or Grand Egyptian Museum depending on itinerary.</li>
@@ -961,12 +950,12 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="egypt" id="tour-luxor">
-        <img alt="Karnak Temple complex in Luxor" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Karnak%20Temple%20%2C%20Luxor%20%2C%20Egypt.jpg">
+        <img alt="Karnak Temple columns and courtyard in Luxor" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Karnak%20Temple%20%2C%20Luxor%20%2C%20Egypt.jpg">
         <div class="card-content">
           <div class="card-category">Ancient Thebes</div>
-          <h3>Luxor &amp; The Ancient Temples</h3>
+          <h3>Luxor & The Ancient Temples</h3>
           <p>Discover ancient Thebes across Luxor's East and West Banks, from Karnak Temple to the Valley of the Kings.</p>
-          <h4>Possible Highlights</h4>
+          <h4>Highlights</h4>
           <ul>
             <li>Karnak Temple complex and Colossi of Memnon.</li>
             <li>Valley of the Kings and Temple of Hatshepsut on the West Bank.</li>
@@ -979,12 +968,12 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="egypt" id="tour-aswan">
-        <img alt="Philae Temple in Aswan" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Philae%20Temple%20Aswan.jpg">
+        <img alt="Philae Temple on Agilkia Island in Aswan" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Philae%20Temple%20Aswan.jpg">
         <div class="card-content">
           <div class="card-category">Southern Egypt</div>
-          <h3>Aswan &amp; Nubian Culture</h3>
+          <h3>Aswan & Nubian Culture</h3>
           <p>Experience Nile island scenery, Philae Temple, the High Dam and Nubian heritage in southern Egypt.</p>
-          <h4>Possible Highlights</h4>
+          <h4>Highlights</h4>
           <ul>
             <li>Island boat crossing to Philae Temple and views of the Aswan High Dam.</li>
             <li>Opportunity to explore Nubian culture and Nile landscapes.</li>
@@ -997,12 +986,12 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="egypt" id="tour-dendera-abydos">
-        <img alt="Ancient Egyptian temple columns and hieroglyphics" loading="lazy" src="https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Carved ancient Egyptian temple columns and reliefs" loading="lazy" src="https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Ancient Egyptian Temples</div>
-          <h3>Dendera &amp; Abydos Temples</h3>
+          <h3>Dendera & Abydos Temples</h3>
           <p>Explore finely preserved temple reliefs, astronomical ceilings and sacred architecture north of Luxor.</p>
-          <h4>Possible Highlights</h4>
+          <h4>Highlights</h4>
           <ul>
             <li>Temple of Hathor at Dendera and Temple of Seti I at Abydos.</li>
             <li>Richly carved hieroglyphics and quieter archaeological surroundings.</li>
@@ -1015,12 +1004,12 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
       </article>
 
       <article class="tour-card" data-category="egypt" id="tour-alexandria">
-        <img alt="Historic Egyptian coastal city architecture" loading="lazy" src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=1100&q=85">
+        <img alt="Historic Egyptian coastal and classical architecture" loading="lazy" src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=1100&q=85">
         <div class="card-content">
           <div class="card-category">Mediterranean Heritage</div>
           <h3>Alexandria City Tour</h3>
           <p>Discover Egypt's Mediterranean port city, blending Greco-Roman history with coastal landmarks.</p>
-          <h4>Possible Highlights</h4>
+          <h4>Highlights</h4>
           <ul>
             <li>Bibliotheca Alexandrina, Citadel of Qaitbay exterior and coastal corniche.</li>
             <li>Selected historic and Roman sites depending on schedule.</li>
