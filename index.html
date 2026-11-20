@@ -186,7 +186,7 @@ header {
     text-align: center;
     color: white;
     overflow: hidden;
-    background: var(--navy);
+    background: linear-gradient(rgba(0,22,39,.55),rgba(0,22,39,.55)), url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=1600") center/cover no-repeat, var(--navy);
 }
 
 .hero video {
@@ -596,6 +596,36 @@ section {
     transform: scale(1.025);
 }
 
+/* MOBILE VIDEO FALLBACK */
+.hero-video-play{position:absolute;z-index:4;left:50%;bottom:22px;transform:translateX(-50%);display:none;border:1px solid rgba(255,255,255,.65);border-radius:30px;padding:10px 19px;background:rgba(3,29,48,.78);color:#fff;font-weight:800;cursor:pointer;backdrop-filter:blur(8px)}
+.hero-video-play.visible{display:inline-flex;align-items:center;gap:8px}
+.hero video{background:#031d30}
+.hero.video-unavailable video{display:none}
+.hero.video-unavailable .hero-video-play{display:none}
+
+/* INTERACTIVE PHOTO GALLERY */
+.gallery-grid .gallery-item{position:relative;display:block;width:100%;height:260px;padding:0;border:0;border-radius:15px;overflow:hidden;background:#dce9ee;cursor:zoom-in;text-align:left}
+.gallery-grid .gallery-item img{display:block;width:100%;height:100%;object-fit:cover;border-radius:0;transition:transform .4s ease}
+.gallery-grid .gallery-item:hover img{transform:scale(1.06)}
+.gallery-grid .gallery-item::after{content:"View photo";position:absolute;right:12px;bottom:12px;padding:7px 12px;border-radius:20px;background:rgba(3,29,48,.82);color:#fff;font-size:12px;font-weight:700;opacity:0;transform:translateY(5px);transition:.25s}
+.gallery-grid .gallery-item:hover::after,.gallery-grid .gallery-item:focus-visible::after{opacity:1;transform:translateY(0)}
+.photo-viewer{position:fixed;inset:0;z-index:3000;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(1,16,27,.94);backdrop-filter:blur(8px)}
+.photo-viewer.open{display:flex}
+.photo-viewer-panel{position:relative;width:min(100%,1000px);max-height:92vh;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.8fr);overflow:hidden;border:1px solid rgba(255,255,255,.16);border-radius:20px;background:#062c43;box-shadow:0 25px 80px rgba(0,0,0,.4)}
+.photo-viewer-media{min-height:300px;background:#031d30;display:flex;align-items:center;justify-content:center}
+.photo-viewer-media img{display:block;width:100%;height: min(72vh,720px);object-fit:contain}
+.photo-viewer-info{display:flex;flex-direction:column;justify-content:center;padding:clamp(22px,4vw,42px);color:#fff}
+.photo-viewer-kicker{color:var(--turquoise);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.photo-viewer-info h3{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,34px);line-height:1.2;margin-bottom:14px;color:#fff}
+.photo-viewer-info p{color:#d2e2e9;font-size:15px;line-height:1.9}
+.photo-viewer-count{margin-top:22px;color:#9fbac7;font-size:12px;font-weight:700}
+.photo-viewer-close,.photo-viewer-nav{position:absolute;z-index:2;border:1px solid rgba(255,255,255,.25);background:rgba(3,29,48,.82);color:#fff;cursor:pointer;display:grid;place-items:center}
+.photo-viewer-close{top:12px;right:12px;width:42px;height:42px;border-radius:50%;font-size:27px;line-height:1}
+.photo-viewer-nav{top:50%;width:44px;height:44px;border-radius:50%;font-size:25px;transform:translateY(-50%)}
+.photo-viewer-prev{left:12px}.photo-viewer-next{right:12px}
+.photo-viewer-close:hover,.photo-viewer-nav:hover{background:var(--turquoise);color:var(--deep)}
+@media(max-width:700px){.gallery-grid .gallery-item{height:170px}.photo-viewer{padding:10px}.photo-viewer-panel{width:100%;max-height:94vh;grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto;border-radius:15px}.photo-viewer-media{min-height:0;max-height:57vh}.photo-viewer-media img{height:55vh;max-height:55vh}.photo-viewer-info{padding:18px 20px 20px}.photo-viewer-info h3{font-size:23px;margin-bottom:7px}.photo-viewer-info p{font-size:13px;line-height:1.6}.photo-viewer-count{margin-top:9px}.photo-viewer-nav{top:28vh;width:40px;height:40px}.photo-viewer-prev{left:8px}.photo-viewer-next{right:8px}.photo-viewer-close{top:8px;right:8px}}
+
 /* CTA */
 
 .booking-cta {
@@ -837,9 +867,11 @@ footer h3 {
 <!-- HERO -->
 <section class="hero">
 
-    <video autoplay muted loop playsinline preload="metadata">
+    <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline="true" preload="metadata" aria-label="Red Sea travel video">
         <source src="assets/videos/Abo%20Dabbab%20.mp4" type="video/mp4">
     </video>
+
+    <button class="hero-video-play" id="heroVideoPlay" type="button" aria-label="Play background video">▶ Play video</button>
 
     <div class="hero-content">
 
@@ -1162,30 +1194,32 @@ footer h3 {
         </p>
     </div>
 
-    <div class="gallery-grid">
-
-        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=700"
-             alt="Underwater snorkeling adventure">
-
-        <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=700"
-             alt="Beautiful island beach">
-
-        <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=700"
-             alt="Clear blue ocean">
-
-        <img src="https://images.unsplash.com/photo-1530053969600-caed2596d242?w=700"
-             alt="Colorful tropical fish">
-
-        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=700"
-             alt="Beautiful holiday resort">
-
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700"
-             alt="Tropical beach and turquoise sea">
-
+    <div class="gallery-grid" aria-label="Red Sea photo gallery">
+        <button class="gallery-item" type="button" data-title="Discover the Underwater World" data-description="Look beneath the clear Red Sea surface and discover the colourful coral environment that makes snorkeling around Hurghada so memorable."><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900" alt="Snorkeling adventure in the Red Sea" loading="lazy"></button>
+        <button class="gallery-item" type="button" data-title="A Beautiful Island Escape" data-description="Take in the inviting shoreline and island atmosphere. A boat trip is a wonderful way to enjoy the coast, the sunshine and the changing shades of blue."><img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=900" alt="Sandy island beach beside turquoise water" loading="lazy"></button>
+        <button class="gallery-item" type="button" data-title="The Blue of the Red Sea" data-description="The open water, bright sky and coastal views are part of the Red Sea experience. Conditions and sea colours naturally change throughout the day."><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=900" alt="Clear blue ocean and open sea" loading="lazy"></button>
+        <button class="gallery-item" type="button" data-title="Colourful Marine Life" data-description="The Red Sea is known for its rich marine environment. Observe marine life respectfully, avoid touching coral and always follow your guide's instructions."><img src="https://images.unsplash.com/photo-1530053969600-caed2596d242?w=900" alt="Colourful tropical fish and underwater scenery" loading="lazy"></button>
+        <button class="gallery-item" type="button" data-title="Relax and Enjoy Your Holiday" data-description="A holiday is also about slowing down, enjoying the sunshine and finding time to relax between sea adventures and excursions."><img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=900" alt="Resort pool and relaxing holiday atmosphere" loading="lazy"></button>
+        <button class="gallery-item" type="button" data-title="A Day Beside Turquoise Water" data-description="Soft sand and inviting water create the perfect setting for a peaceful beach break. Swimming should always take place in permitted areas and suitable conditions."><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900" alt="Tropical beach and turquoise sea" loading="lazy"></button>
     </div>
 
 </div>
 </section>
+
+<div class="photo-viewer" id="homePhotoViewer" role="dialog" aria-modal="true" aria-label="Photo details" aria-hidden="true">
+    <div class="photo-viewer-panel">
+        <button class="photo-viewer-close" type="button" aria-label="Close photo viewer">×</button>
+        <button class="photo-viewer-nav photo-viewer-prev" type="button" aria-label="Previous photo">‹</button>
+        <div class="photo-viewer-media"><img id="homeViewerImage" src="" alt=""></div>
+        <button class="photo-viewer-nav photo-viewer-next" type="button" aria-label="Next photo">›</button>
+        <div class="photo-viewer-info">
+            <div class="photo-viewer-kicker">Atlantis Photo Stories</div>
+            <h3 id="homeViewerTitle"></h3>
+            <p id="homeViewerDescription"></p>
+            <div class="photo-viewer-count" id="homeViewerCount"></div>
+        </div>
+    </div>
+</div>
 
 <!-- BOOKING CTA -->
 <section class="booking-cta">
@@ -1286,6 +1320,67 @@ document.querySelectorAll(".nav-links a").forEach(function(link) {
         menuToggle.innerHTML = "☰";
     });
 });
+
+
+/* Mobile-safe hero video: attempt muted inline playback, then offer a tap-to-play fallback. */
+(function(){
+    const video=document.getElementById('heroVideo');
+    const playButton=document.getElementById('heroVideoPlay');
+    if(!video || !playButton) return;
+    video.muted=true;
+    video.defaultMuted=true;
+    video.playsInline=true;
+    video.setAttribute('muted','');
+    video.setAttribute('playsinline','');
+    video.setAttribute('webkit-playsinline','true');
+    function showFallback(){playButton.classList.add('visible');}
+    function hideFallback(){playButton.classList.remove('visible');}
+    const attempt=video.play();
+    if(attempt && typeof attempt.catch==='function') attempt.then(hideFallback).catch(showFallback);
+    else showFallback();
+    video.addEventListener('playing',hideFallback);
+    video.addEventListener('error',function(){document.querySelector('.hero').classList.add('video-unavailable');hideFallback();});
+    playButton.addEventListener('click',function(){
+        video.muted=true;
+        const result=video.play();
+        if(result && typeof result.then==='function') result.then(hideFallback).catch(showFallback);
+    });
+})();
+
+/* Homepage gallery: large in-page viewer with real descriptions and next/previous controls. */
+(function(){
+    const viewer=document.getElementById('homePhotoViewer');
+    if(!viewer) return;
+    const images=Array.from(document.querySelectorAll('.gallery-grid .gallery-item'));
+    const image= document.getElementById('homeViewerImage');
+    const title=document.getElementById('homeViewerTitle');
+    const description=document.getElementById('homeViewerDescription');
+    const count=document.getElementById('homeViewerCount');
+    const close=viewer.querySelector('.photo-viewer-close');
+    let active=0;
+    let previousFocus=null;
+    function render(){
+        const item=images[active], photo=item.querySelector('img');
+        image.src=photo.currentSrc || photo.src;
+        image.alt=photo.alt;
+        title.textContent=item.dataset.title || photo.alt;
+        description.textContent=item.dataset.description || photo.alt;
+        count.textContent='PHOTO '+(active+1)+' / '+images.length;
+    }
+    function open(index){active=index;previousFocus=document.activeElement;render();viewer.classList.add('open');viewer.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus();}
+    function shut(){viewer.classList.remove('open');viewer.setAttribute('aria-hidden','true');image.src='';document.body.style.overflow='';if(previousFocus)previousFocus.focus();}
+    images.forEach((item,index)=>item.addEventListener('click',()=>open(index)));
+    viewer.querySelector('.photo-viewer-prev').addEventListener('click',()=>{active=(active-1+images.length)%images.length;render();});
+    viewer.querySelector('.photo-viewer-next').addEventListener('click',()=>{active=(active+1)%images.length;render();});
+    close.addEventListener('click',shut);
+    viewer.addEventListener('click',event=>{if(event.target===viewer)shut();});
+    document.addEventListener('keydown',event=>{
+        if(!viewer.classList.contains('open')) return;
+        if(event.key==='Escape') shut();
+        if(event.key==='ArrowLeft'){active=(active-1+images.length)%images.length;render();}
+        if(event.key==='ArrowRight'){active=(active+1)%images.length;render();}
+    });
+})();
 
 /* Register the existing Progressive Web App service worker */
 if ("serviceWorker" in navigator) {
