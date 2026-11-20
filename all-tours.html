@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Explore Red Sea islands, snorkeling, diving, water sports, desert safaris and Egypt sightseeing excursions with Atlantic Tours and Experiences." name="description"/>
-<title>All Tours &amp; Experiences | Atlantis Tours and Experiences</title>
+<title>All Tours & Experiences | Atlantis Tours and Experiences</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,10 +55,25 @@ display:flex;align-items:center;color:#fff
 .intro p{max-width:850px;margin:auto;color:var(--muted)}
 
 /* FILTERS */
-.filters{padding:25px 0 45px}
+.filters{padding:25px 0 28px}
 .filter-list{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
 .filter-btn{border:1px solid #d5e2e8;background:#fff;color:var(--navy);padding:10px 19px;border-radius:30px;cursor:pointer;font-weight:bold;transition:.25s}
 .filter-btn:hover,.filter-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* DAILY SAVED TRIP LIST */
+.daily-saved-bar{margin:0 auto 38px;background:var(--light);border:1px solid #d7e7ee;border-radius:16px;padding:18px 22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;box-shadow:0 8px 24px rgba(6,44,67,.06)}
+.daily-saved-kicker{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue)}
+.daily-saved-summary{font-size:15px;font-weight:700;color:var(--navy);margin-top:2px}
+.daily-saved-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.daily-saved-chip{background:#fff;border:1px solid #b8d4e0;color:var(--navy);padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:7px}
+.daily-saved-chip button{border:0;background:none;color:#b91c1c;font-weight:800;cursor:pointer;padding:0;line-height:1}
+.daily-saved-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.daily-saved-book{display:inline-block;background:var(--turquoise);color:var(--deep);border:1px solid var(--turquoise);padding:10px 18px;border-radius:25px;font-size:13px;font-weight:800;transition:.25s}
+.daily-saved-book:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.daily-saved-clear{background:#fff;border:1px solid #cbd5e1;color:var(--navy);padding:9px 15px;border-radius:25px;font-size:12px;font-weight:700;cursor:pointer;transition:.25s}
+.daily-saved-clear:hover{border-color:var(--navy)}
+.save-tour-btn{padding:10px 16px;border-radius:25px;font-size:13px;font-weight:700;cursor:pointer;border:1px solid var(--navy);background:#fff;color:var(--navy);transition:.2s}
+.save-tour-btn.is-saved{background:var(--navy);color:#fff}
 
 /* CATEGORY */
 .category-section{padding:35px 0 65px}
@@ -282,7 +297,7 @@ footer h3{margin-bottom:17px;color:#fff}
 <section class="hero">
 <div class="container">
 <div class="hero-content">
-<div class="eyebrow">Discover the Red Sea &amp; Beyond</div>
+<div class="eyebrow">Discover the Red Sea & Beyond</div>
 <h1>Explore More.<br/>Experience Egypt.</h1>
 <p>
 Discover beautiful islands, crystal-clear waters, colourful coral reefs,
@@ -295,7 +310,7 @@ Explore a wide range of experiences with Atlantic Tours and Experiences.
 </section>
 <section class="intro container" id="all-experiences">
 <div class="section-label">Find Your Experience</div>
-<h2 class="section-title">All Tours &amp; Experiences</h2>
+<h2 class="section-title">All Tours & Experiences</h2>
 <p>
 From relaxing island escapes and exciting sea adventures to desert journeys
 and unforgettable cultural discoveries, explore different ways to enjoy
@@ -306,19 +321,35 @@ to the selected activity, local conditions and availability.
 <section class="filters container">
 <div class="filter-list">
 <button class="filter-btn active" data-filter="all">All Experiences</button>
-<button class="filter-btn" data-filter="islands">Islands &amp; Sea Trips</button>
-<button class="filter-btn" data-filter="diving">Snorkeling &amp; Diving</button>
+<button class="filter-btn" data-filter="islands">Islands & Sea Trips</button>
+<button class="filter-btn" data-filter="diving">Snorkeling & Diving</button>
 <button class="filter-btn" data-filter="watersports">Water Sports</button>
 <button class="filter-btn" data-filter="desert">Desert Adventures</button>
-<button class="filter-btn" data-filter="city">City &amp; Culture</button>
+<button class="filter-btn" data-filter="city">City & Culture</button>
 <button class="filter-btn" data-filter="egypt">Egypt Excursions</button>
 </div>
 </section>
+
+<!-- DAILY TRIP LIST (SAVED ON VISITOR DEVICE) -->
+<section class="container" id="daily-trip-list">
+<div class="daily-saved-bar">
+<div>
+<div class="daily-saved-kicker">Your Daily Trip List</div>
+<div class="daily-saved-summary" id="dailySavedSummary">No saved experiences yet — tap "+ Save" on any tour card.</div>
+<div class="daily-saved-chips" id="dailySavedChips"></div>
+</div>
+<div class="daily-saved-actions">
+<a class="daily-saved-book" href="booking.html" id="dailySavedBookBtn" style="display:none;">Book Saved Tours</a>
+<button class="daily-saved-clear" id="dailySavedClearBtn" style="display:none;" type="button">Clear List</button>
+</div>
+</div>
+</section>
+
 <main class="container">
 <!-- ISLANDS -->
 <section class="category-section" data-category-section="islands">
 <div class="category-heading">
-<h2>Islands &amp; Sea Trips</h2>
+<h2>Islands & Sea Trips</h2>
 <p>Discover the Red Sea coastline, island beaches, clear lagoons and beautiful marine scenery. Island visits and boat routes depend on the selected trip and sea conditions.</p>
 </div>
 <div class="tours-grid">
@@ -351,7 +382,7 @@ access arrangements and included services should be confirmed when booking.
 </p>
 <div class="note">The exact boat route, beach access, facilities and included activities may vary according to the selected service and local operating conditions.</div>
 <details class="tour-media" id="media-mahmya-island">
-<summary><strong>View Mahmya Island Photos &amp; Videos</strong></summary>
+<summary><strong>View Mahmya Island Photos & Videos</strong></summary>
 <p>Watch the four Mahmya videos uploaded for this island experience.</p>
 <div class="tour-video-grid">
 <div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Mahmeya1.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 1</div></div>
@@ -359,7 +390,7 @@ access arrangements and included services should be confirmed when booking.
 <div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Mahmeya3.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 3</div></div>
 <div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Mahmeya4.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 4</div></div>
 </div>
-</details><div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-mahmya-island">View Photos &amp; Videos</a></div>
+</details><div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-mahmya-island">View Photos & Videos</a></div>
 </div>
 </article>
 <article class="tour-card" data-category="islands" id="tour-paradise-island">
@@ -480,7 +511,7 @@ the beach setting at their own pace.
 </p>
 <div class="note">The image illustrates a Red Sea sandbank landscape, not a verified photograph of Hula Hula Island itself. Facilities and activities vary.</div>
 <details class="tour-media" id="media-hula-hula-island">
-<summary><strong>View Hula Hula Island Photos &amp; Videos</strong></summary>
+<summary><strong>View Hula Hula Island Photos & Videos</strong></summary>
 <p>Explore the Hula Hula image collection uploaded to the Atlantic Tours and Experiences repository.</p>
 <div class="tour-media-grid">
 <img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula.jpeg"/>
@@ -506,14 +537,14 @@ the beach setting at their own pace.
 <img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula (21).jpeg"/>
 <img alt="Hula Hula Island photo" loading="lazy" src="assets/images/Hula(2).jpeg"/>
 </div>
-</details><div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-hula-hula-island">View Photos &amp; Videos</a></div>
+</details><div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-hula-hula-island">View Photos & Videos</a></div>
 </div>
 </article>
 <article class="tour-card" data-category="islands" id="tour-private-boat---yacht-trips">
-<img alt="Turquoise sea and tropical island coastline" loading="lazy" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Turquoise sea and tropical island coastline" loading="lazy" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Private Sea Experience</div>
-<h3>Private Boat &amp; Yacht Trips</h3>
+<h3>Private Boat & Yacht Trips</h3>
 <p>
 Enjoy a more personal way to explore the Red Sea with a private boat
 or yacht arrangement. This option is suitable for families, couples,
@@ -641,12 +672,12 @@ before the trip.
 <!-- SNORKELING AND DIVING -->
 <section class="category-section" data-category-section="diving">
 <div class="category-heading">
-<h2>Snorkeling &amp; Diving Adventures</h2>
+<h2>Snorkeling & Diving Adventures</h2>
 <p>Explore coral gardens, colourful fish and the underwater world of the Red Sea. Marine life sightings and underwater conditions are natural and cannot be guaranteed.</p>
 </div>
 <div class="tours-grid">
 <article class="tour-card" data-category="diving" id="tour-red-sea-snorkeling-trip">
-<img alt="Snorkeling and swimming in clear Red Sea water" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Snorkeling and swimming in clear Red Sea water" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Snorkeling</div>
 <h3>Red Sea Snorkeling Trip</h3>
@@ -677,7 +708,7 @@ also include time on the boat to relax and enjoy the surroundings.
 </div>
 </article>
 <article class="tour-card" data-category="diving" id="tour-discover-scuba-diving">
-<img alt="Colourful underwater coral reef" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Colourful underwater coral reef" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Scuba Diving</div>
 <h3>Discover Scuba Diving</h3>
@@ -708,7 +739,7 @@ centre's standards, participant suitability and sea conditions.
 </div>
 </article>
 <article class="tour-card" data-category="diving" id="tour-daily-diving-for-certified-divers">
-<img alt="Scuba diver exploring an underwater reef" loading="lazy" src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Scuba diver exploring an underwater reef" loading="lazy" src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Certified Diving</div>
 <h3>Daily Diving for Certified Divers</h3>
@@ -739,9 +770,9 @@ according to conditions and diver qualifications.
 </div>
 </article>
 <article class="tour-card" data-category="diving" id="tour-dolphin-house-snorkeling">
-<img alt="Dolphins swimming in the sea" loading="lazy" src="https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Dolphins swimming in the sea" loading="lazy" src="https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
-<div class="card-category">Wildlife &amp; Sea Trip</div>
+<div class="card-category">Wildlife & Sea Trip</div>
 <h3>Dolphin House Snorkeling</h3>
 <p>
 Explore the Red Sea around the area commonly known as Dolphin House,
@@ -770,7 +801,7 @@ and the operator's arrangement.
 </div>
 </article>
 <article class="tour-card" data-category="diving" id="tour-dolphin-watching-boat-trip">
-<img alt="Red Sea boat and clear blue water" loading="lazy" src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Red Sea boat and clear blue water" loading="lazy" src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Marine Excursion</div>
 <h3>Dolphin Watching Boat Trip</h3>
@@ -800,10 +831,10 @@ depends on the selected package and the conditions at the location.
 </div>
 </article>
 <article class="tour-card" data-category="diving" id="tour-glass-bottom-boat---semi-submarine">
-<img alt="Underwater coral and marine environment" loading="lazy" src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Underwater coral and marine environment" loading="lazy" src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Family Sea Experience</div>
-<h3>Glass-Bottom Boat &amp; Semi-Submarine</h3>
+<h3>Glass-Bottom Boat & Semi-Submarine</h3>
 <p>
 Discover underwater scenery without needing to swim or dive.
 A glass-bottom boat or semi-submarine experience allows guests
@@ -829,28 +860,28 @@ naturally according to weather, water clarity and location.
 <div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#tour-glass-bottom-boat---semi-submarine">View Tour Details</a></div>
 </div>
 </article><article class="tour-card" data-category="diving" id="tour-abu-dabbab-bay">
-<img alt="Snorkeling in clear Red Sea water" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Snorkeling in clear Red Sea water" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
-<div class="card-category">Snorkeling &amp; Wildlife</div>
+<div class="card-category">Snorkeling & Wildlife</div>
 <h3>Abu Dabbab Bay</h3>
 <p>Discover the famous bay near Marsa Alam, known for its seagrass habitat and opportunities to observe marine life. Sightings of turtles or dugongs are never guaranteed and depend on nature and conditions.</p>
 <h4>Experience Highlights</h4>
 <ul><li>Explore a beautiful Red Sea bay and its coastal scenery.</li><li>Snorkeling in permitted areas, subject to sea conditions.</li><li>Respectful wildlife watching without touching or disturbing animals.</li></ul>
 <div class="note">Wildlife sightings cannot be promised. Follow local guides and protected-area rules.</div>
 <details class="tour-media" id="media-abu-dabbab-bay"><summary><strong>Watch the Abu Dabbab Video</strong></summary><div class="tour-video-grid"><div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Abo%20Dabbab%20.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Abu Dabbab video</div></div></div></details>
-<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-abu-dabbab-bay">View Photos &amp; Videos</a></div>
+<div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-abu-dabbab-bay">View Photos & Videos</a></div>
 </div></article>
 </div>
 </section>
 <!-- WATER SPORTS -->
 <section class="category-section" data-category-section="watersports">
 <div class="category-heading">
-<h2>Water Sports &amp; Active Experiences</h2>
+<h2>Water Sports & Active Experiences</h2>
 <p>Enjoy action on the water, from relaxing paddle activities to exciting rides. Activities are subject to safety instructions, weather and operator availability.</p>
 </div>
 <div class="tours-grid">
 <article class="tour-card" data-category="watersports" id="tour-parasailing">
-<img alt="Parasailing over the sea" loading="lazy" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Parasailing over the sea" loading="lazy" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Aerial Water Adventure</div>
 <h3>Parasailing</h3>
@@ -879,10 +910,10 @@ and operational conditions.
 </div>
 </article>
 <article class="tour-card" data-category="watersports" id="tour-banana-boat---sofa-ride">
-<img alt="Water sports and clear sea environment" loading="lazy" src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Water sports and clear sea environment" loading="lazy" src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Fun Water Ride</div>
-<h3>Banana Boat &amp; Sofa Ride</h3>
+<h3>Banana Boat & Sofa Ride</h3>
 <p>
 Share a fun water activity with friends or family on an inflatable
 ride pulled by a motorboat. Banana boat and sofa rides are popular
@@ -908,7 +939,7 @@ suitability.
 </div>
 </article>
 <article class="tour-card" data-category="watersports" id="tour-jet-ski-adventure">
-<img alt="Jet ski adventure on open water" loading="lazy" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Jet ski adventure on open water" loading="lazy" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Motorised Water Sport</div>
 <h3>Jet Ski Adventure</h3>
@@ -936,9 +967,9 @@ place according to local rules and sea conditions.
 </div>
 </article>
 <article class="tour-card" data-category="watersports" id="tour-windsurfing">
-<img alt="Windsurfing on the sea" loading="lazy" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Windsurfing on the sea" loading="lazy" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
-<div class="card-category">Wind &amp; Water Sport</div>
+<div class="card-category">Wind & Water Sport</div>
 <h3>Windsurfing</h3>
 <p>
 Combine sailing and board skills in a windsurfing experience.
@@ -966,7 +997,7 @@ participant's experience and the conditions.
 <article class="tour-card" data-category="watersports" id="tour-kitesurfing">
 <img alt="Kitesurfing on the Red Sea" loading="lazy" src="assets/images/Kitesurfing3.jpeg"/>
 <div class="card-content">
-<div class="card-category">Wind &amp; Water Sport</div>
+<div class="card-category">Wind & Water Sport</div>
 <h3>Kitesurfing</h3>
 <p>
 Discover the combination of wind power and board riding in a
@@ -990,7 +1021,7 @@ riders can discuss suitable arrangements with the centre.
 </p>
 <div class="note">Kitesurfing depends strongly on wind conditions, instructor availability and participant ability. No specific learning outcome is guaranteed.</div>
 <details class="tour-media" id="media-kitesurfing">
-<summary><strong>View Kitesurfing Photos &amp; Videos</strong></summary>
+<summary><strong>View Kitesurfing Photos & Videos</strong></summary>
 <p>Real Kitesurfing photographs and video clips uploaded for this experience.</p>
 <div class="tour-media-grid">
 <img alt="Kitesurfing photo" loading="lazy" src="assets/images/Kitesurfing3.jpeg"/>
@@ -1000,14 +1031,14 @@ riders can discuss suitable arrangements with the centre.
 <div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Kitesurfing1.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Kitesurfing video 1</div></div>
 <div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Kitesurfing2.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Kitesurfing video 2</div></div>
 </div>
-</details><div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-kitesurfing">View Photos &amp; Videos</a></div>
+</details><div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-kitesurfing">View Photos & Videos</a></div>
 </div>
 </article>
 <article class="tour-card" data-category="watersports" id="tour-stand-up-paddleboarding---kayaking">
-<img alt="Paddleboarding on calm water" loading="lazy" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Paddleboarding on calm water" loading="lazy" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Relaxed Water Sport</div>
-<h3>Stand-Up Paddleboarding &amp; Kayaking</h3>
+<h3>Stand-Up Paddleboarding & Kayaking</h3>
 <p>
 Enjoy a calmer way to explore the water with a paddleboard or kayak.
 These activities allow guests to move at their own pace while
@@ -1036,12 +1067,12 @@ adapted to the participant's comfort and ability.
 <!-- DESERT -->
 <section class="category-section" data-category-section="desert">
 <div class="category-heading">
-<h2>Desert Safaris &amp; Outdoor Adventures</h2>
+<h2>Desert Safaris & Outdoor Adventures</h2>
 <p>Discover the desert landscapes around the Red Sea through off-road activities, traditional experiences and scenic viewpoints.</p>
 </div>
 <div class="tours-grid">
 <article class="tour-card" data-category="desert" id="tour-quad-bike-safari">
-<img alt="Desert dunes and mountain landscape" loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Desert dunes and mountain landscape" loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Desert Adventure</div>
 <h3>Quad Bike Safari</h3>
@@ -1071,7 +1102,7 @@ to conditions and the group's suitability.
 </div>
 </article>
 <article class="tour-card" data-category="desert" id="tour-jeep-desert-safari">
-<img alt="Desert jeep safari landscape" loading="lazy" src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Desert jeep safari landscape" loading="lazy" src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Off-Road Adventure</div>
 <h3>Jeep Desert Safari</h3>
@@ -1101,7 +1132,7 @@ setting or enjoy a scenic stop. The route and activities are flexible.
 </div>
 </article>
 <article class="tour-card" data-category="desert" id="tour-spider-buggy-safari">
-<img alt="Desert buggy adventure in sandy terrain" loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Desert buggy adventure in sandy terrain" loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Motorised Desert Adventure</div>
 <h3>Spider Buggy Safari</h3>
@@ -1130,7 +1161,7 @@ on the conditions and the arrangement.
 </div>
 </article>
 <article class="tour-card" data-category="desert" id="tour-bedouin-village-experience">
-<img alt="Desert landscape and mountain scenery" loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Desert landscape and mountain scenery" loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Cultural Desert Experience</div>
 <h3>Bedouin Village Experience</h3>
@@ -1160,10 +1191,10 @@ Any refreshments or additional activities should be confirmed.
 </div>
 </article>
 <article class="tour-card" data-category="desert" id="tour-desert-sunset---stargazing">
-<img alt="Desert sunset and mountain landscape" loading="lazy" src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Desert sunset and mountain landscape" loading="lazy" src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Outdoor Experience</div>
-<h3>Desert Sunset &amp; Stargazing</h3>
+<h3>Desert Sunset & Stargazing</h3>
 <p>
 Enjoy the peaceful atmosphere of the desert away from bright
 city lights. Depending on weather and visibility, the experience
@@ -1190,7 +1221,7 @@ all affect what can be seen.
 </div>
 </article>
 <article class="tour-card" data-category="desert" id="tour-horse-riding-experience">
-<img alt="Horse riding in an outdoor landscape" loading="lazy" src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Horse riding in an outdoor landscape" loading="lazy" src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Horse Riding</div>
 <h3>Horse Riding Experience</h3>
@@ -1223,14 +1254,14 @@ The route and riding format depend on the centre and conditions.
 <!-- HURGHADA CITY -->
 <section class="category-section" data-category-section="city">
 <div class="category-heading">
-<h2>Hurghada City &amp; Local Culture</h2>
+<h2>Hurghada City & Local Culture</h2>
 <p>Discover the city's character, local markets, marina, traditional neighbourhoods and important landmarks.</p>
 </div>
 <div class="tours-grid">
 <article class="tour-card" data-category="city" id="tour-hurghada-city-tour">
 <img alt="El Mina Mosque in Hurghada" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Al%20mina%20mosque%20Hurghada.jpg"/>
 <div class="card-content">
-<div class="card-category">City &amp; Culture</div>
+<div class="card-category">City & Culture</div>
 <h3>Hurghada City Tour</h3>
 <p>
 Discover a different side of Hurghada beyond its hotels and beaches.
@@ -1238,7 +1269,7 @@ A city tour can introduce visitors to local neighbourhoods,
 religious landmarks, traditional shopping areas and the modern
 marina atmosphere.
 </p>
-<h4>Places &amp; Possible Highlights</h4>
+<h4>Places & Possible Highlights</h4>
 <ul>
 <li><strong>El Mina Mosque:</strong> an important local landmark known for its architecture and prominent position near the marina area.</li>
 <li><strong>El Dahar:</strong> the older central area, with traditional streets, shops and everyday local life.</li>
@@ -1259,10 +1290,10 @@ and the places accessible during the visit.
 </div>
 </article>
 <article class="tour-card" data-category="city" id="tour-hurghada-marina---waterfront">
-<img alt="Waterfront marina and city atmosphere" loading="lazy" src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Waterfront marina and city atmosphere" loading="lazy" src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Coastal Lifestyle</div>
-<h3>Hurghada Marina &amp; Waterfront</h3>
+<h3>Hurghada Marina & Waterfront</h3>
 <p>
 Explore the waterfront atmosphere of Hurghada Marina, where
 boats, restaurants, cafés and coastal views create a different
@@ -1291,7 +1322,7 @@ around Hurghada, depending on the preferred route and arrangements.
 <img alt="Traditional shopping street in El Dahar Hurghada" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bazaar%20Street%2C%20El%20Dahar%2C%20Hurghada%2C%20Egypt%2C%20Oct%202004.jpg"/>
 <div class="card-content">
 <div class="card-category">Local Discovery</div>
-<h3>El Dahar Old Town &amp; Local Markets</h3>
+<h3>El Dahar Old Town & Local Markets</h3>
 <p>
 Explore El Dahar, one of Hurghada's traditional central areas.
 The neighbourhood offers a look at everyday local life through
@@ -1319,7 +1350,7 @@ optional and made directly by the visitor.
 <article class="tour-card" data-category="city" id="tour-el-halaqa-fish-market-visit">
 <img alt="El Halaqa fish market in Hurghada" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/%D8%AD%D9%84%D9%82%D8%A9%20%D8%A7%D9%84%D8%B3%D9%85%D9%83%201.jpg"/>
 <div class="card-content">
-<div class="card-category">Local Food &amp; Culture</div>
+<div class="card-category">Local Food & Culture</div>
 <h3>El Halaqa Fish Market Visit</h3>
 <p>
 Discover the atmosphere of Hurghada's traditional fish market,
@@ -1352,7 +1383,7 @@ separate unless confirmed.
 <!-- EGYPT EXCURSIONS -->
 <section class="category-section" data-category-section="egypt">
 <div class="category-heading">
-<h2>Egypt Historical &amp; Cultural Excursions</h2>
+<h2>Egypt Historical & Cultural Excursions</h2>
 <p>Explore Egypt's famous archaeological sites, ancient temples, museums and historic cities. The actual itinerary depends on the selected excursion and current site access.</p>
 </div>
 <div class="tours-grid">
@@ -1360,14 +1391,14 @@ separate unless confirmed.
 <img alt="The Great Pyramids of Giza" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Giza%20Pyramids.jpg"/>
 <div class="card-content">
 <div class="card-category">Ancient Egypt</div>
-<h3>Cairo &amp; The Pyramids of Giza</h3>
+<h3>Cairo & The Pyramids of Giza</h3>
 <p>
 Discover the remarkable history of ancient Egypt with an excursion
 to Cairo and the Giza Plateau. The area is home to the Great
 Pyramids and the Great Sphinx, among the best-known archaeological
 landmarks in the world.
 </p>
-<h4>Places &amp; Possible Highlights</h4>
+<h4>Places & Possible Highlights</h4>
 <ul>
 <li><strong>Great Pyramid of Khufu:</strong> the largest of the three main pyramids at Giza.</li>
 <li><strong>Pyramids of Khafre and Menkaure:</strong> the other major pyramid monuments on the plateau.</li>
@@ -1391,13 +1422,13 @@ depending on the itinerary selected and current arrangements.
 <img alt="Karnak Temple complex in Luxor" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Karnak%20Temple%20%2C%20Luxor%20%2C%20Egypt.jpg"/>
 <div class="card-content">
 <div class="card-category">Ancient Thebes</div>
-<h3>Luxor &amp; The Ancient Temples</h3>
+<h3>Luxor & The Ancient Temples</h3>
 <p>
 Discover Luxor, one of Egypt's most important historical destinations.
 The city preserves extraordinary monuments from ancient Thebes,
 including vast temple complexes, royal tombs and monumental statues.
 </p>
-<h4>Places &amp; Possible Highlights</h4>
+<h4>Places & Possible Highlights</h4>
 <ul>
 <li><strong>Karnak Temple:</strong> an extensive religious complex famous for its monumental columns, pylons and sacred lake.</li>
 <li><strong>Luxor Temple:</strong> a historic temple in the heart of the modern city.</li>
@@ -1428,7 +1459,7 @@ ancient Egyptian royal burials and monumental funerary architecture.
 It offers a fascinating introduction to beliefs about the afterlife
 and the history of the Theban necropolis.
 </p>
-<h4>Places &amp; Possible Highlights</h4>
+<h4>Places & Possible Highlights</h4>
 <ul>
 <li><strong>Valley of the Kings:</strong> royal tombs decorated with ancient scenes and inscriptions.</li>
 <li><strong>Temple of Hatshepsut:</strong> a terraced monument set against a dramatic cliff face.</li>
@@ -1450,14 +1481,14 @@ access arrangements.
 <img alt="Philae Temple in Aswan" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Philae%20Temple%20Aswan.jpg"/>
 <div class="card-content">
 <div class="card-category">Southern Egypt</div>
-<h3>Aswan &amp; Nubian Culture</h3>
+<h3>Aswan & Nubian Culture</h3>
 <p>
 Discover Aswan, a city known for its Nile scenery, island temples
 and Nubian cultural heritage. The destination offers a different
 atmosphere from Egypt's northern cities, with river landscapes
 and important historical monuments.
 </p>
-<h4>Places &amp; Possible Highlights</h4>
+<h4>Places & Possible Highlights</h4>
 <ul>
 <li><strong>Philae Temple:</strong> the beautiful island temple complex dedicated to the goddess Isis.</li>
 <li><strong>Aswan High Dam:</strong> a major modern engineering landmark.</li>
@@ -1478,7 +1509,7 @@ selected travel arrangement.
 </div>
 </article>
 <article class="tour-card" data-category="egypt" id="tour-alexandria-city-tour">
-<img alt="Historic Egyptian coastal city architecture" loading="lazy" src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Historic Egyptian coastal city architecture" loading="lazy" src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Mediterranean Heritage</div>
 <h3>Alexandria City Tour</h3>
@@ -1488,7 +1519,7 @@ with ancient scholarship, coastal architecture and layers of
 Egyptian, Greek and Roman history. The city offers a different
 cultural experience from the Red Sea region.
 </p>
-<h4>Places &amp; Possible Highlights</h4>
+<h4>Places & Possible Highlights</h4>
 <ul>
 <li><strong>Bibliotheca Alexandrina:</strong> a modern cultural landmark inspired by the ancient Library of Alexandria.</li>
 <li><strong>Citadel of Qaitbay:</strong> a historic fortress overlooking the Mediterranean, subject to access.</li>
@@ -1509,17 +1540,17 @@ and attraction opening or access conditions.
 </div>
 </article>
 <article class="tour-card" data-category="egypt" id="tour-dendera---abydos-temples">
-<img alt="Ancient Egyptian temple columns and hieroglyphics" loading="lazy" src="https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<img alt="Ancient Egyptian temple columns and hieroglyphics" loading="lazy" src="https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=1100&q=85"/>
 <div class="card-content">
 <div class="card-category">Ancient Egyptian Temples</div>
-<h3>Dendera &amp; Abydos Temples</h3>
+<h3>Dendera & Abydos Temples</h3>
 <p>
 Explore two important temple destinations connected with ancient
 Egyptian religion and royal history. Dendera and Abydos offer
 visitors the opportunity to discover detailed temple decoration,
 inscriptions and sacred architecture.
 </p>
-<h4>Places &amp; Possible Highlights</h4>
+<h4>Places & Possible Highlights</h4>
 <ul>
 <li><strong>Dendera Temple:</strong> the temple complex dedicated to Hathor, known for its decorated halls and astronomical ceiling imagery.</li>
 <li><strong>Abydos Temple:</strong> an important religious site associated with Osiris and the worship of ancient Egyptian kings.</li>
@@ -1560,7 +1591,7 @@ The confirmed route should be discussed before booking.
 </p>
 </div>
 <div class="info-box">
-<h3>Safety &amp; Local Conditions</h3>
+<h3>Safety & Local Conditions</h3>
 <p>
 Sea activities, diving, desert trips and outdoor experiences depend on
 weather, safety requirements, participant suitability and the provider's
@@ -1668,6 +1699,103 @@ filterButtons.forEach(button => {
             section.classList.toggle("hidden", !shouldShow);
         });
     });
+});
+
+
+/* DAILY SAVED TRIP LIST (LOCALSTORAGE + BOOKING LINK) */
+document.addEventListener("DOMContentLoaded", function () {
+    const STORAGE_KEY = "atlantis_daily_saved_tours_v1";
+    const summaryEl = document.getElementById("dailySavedSummary");
+    const chipsEl = document.getElementById("dailySavedChips");
+    const clearBtn = document.getElementById("dailySavedClearBtn");
+    const bookBtn = document.getElementById("dailySavedBookBtn");
+    if (!summaryEl || !chipsEl || !clearBtn || !bookBtn) return;
+
+    let savedTours = [];
+    try {
+        const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+        if (Array.isArray(parsed)) savedTours = parsed;
+    } catch (err) {
+        savedTours = [];
+    }
+
+    function persistSaved() {
+        try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(savedTours));
+        } catch (err) {}
+    }
+
+    function renderDailySaved() {
+        persistSaved();
+        chipsEl.innerHTML = "";
+
+        if (!savedTours.length) {
+            summaryEl.textContent = 'No saved experiences yet — tap "+ Save" on any tour card.';
+            clearBtn.style.display = "none";
+            bookBtn.style.display = "none";
+            bookBtn.href = "booking.html";
+        } else {
+            summaryEl.textContent = "Saved for your stay (" + savedTours.length + "):";
+            clearBtn.style.display = "inline-block";
+            bookBtn.style.display = "inline-block";
+            bookBtn.href = "booking.html?tours=" + encodeURIComponent(savedTours.join(", "));
+
+            savedTours.forEach(function (tourName, idx) {
+                const chip = document.createElement("span");
+                chip.className = "daily-saved-chip";
+
+                const label = document.createElement("span");
+                label.textContent = tourName;
+
+                const removeBtn = document.createElement("button");
+                removeBtn.type = "button";
+                removeBtn.setAttribute("aria-label", "Remove " + tourName);
+                removeBtn.textContent = "×";
+                removeBtn.addEventListener("click", function () {
+                    savedTours.splice(idx, 1);
+                    renderDailySaved();
+                });
+
+                chip.appendChild(label);
+                chip.appendChild(removeBtn);
+                chipsEl.appendChild(chip);
+            });
+        }
+
+        document.querySelectorAll(".tour-card").forEach(function (card) {
+            const heading = card.querySelector(".card-content h3");
+            const actions = card.querySelector(".card-actions");
+            if (!heading || !actions) return;
+
+            const tourName = heading.textContent.trim();
+            let btn = actions.querySelector(".save-tour-btn");
+            if (!btn) {
+                btn = document.createElement("button");
+                btn.type = "button";
+                btn.className = "save-tour-btn";
+                btn.addEventListener("click", function () {
+                    if (savedTours.includes(tourName)) {
+                        savedTours = savedTours.filter(function (item) { return item !== tourName; });
+                    } else {
+                        savedTours.push(tourName);
+                    }
+                    renderDailySaved();
+                });
+                actions.appendChild(btn);
+            }
+
+            const isSaved = savedTours.includes(tourName);
+            btn.textContent = isSaved ? "✓ Saved" : "+ Save";
+            btn.classList.toggle("is-saved", isSaved);
+        });
+    }
+
+    clearBtn.addEventListener("click", function () {
+        savedTours = [];
+        renderDailySaved();
+    });
+
+    renderDailySaved();
 });
 
 
