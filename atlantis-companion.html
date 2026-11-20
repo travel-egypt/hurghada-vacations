@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Atlantis Hurghada &amp; Red Sea Companion | Atlantis Tours &amp; Experiences</title>
+  <meta name="theme-color" content="#031d30">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --atlantis-deep: #031d30;
+      --atlantis-navy: #062c43;
+      --atlantis-blue: #087f9e;
+      --atlantis-turquoise: #16c5ce;
+      --atlantis-gold: #e8b967;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: linear-gradient(180deg, #062c43 0%, #031d30 55%, #021422 100%);
+      color: #f4fafc;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .font-display {
+      font-family: 'Playfair Display', 'DM Sans', sans-serif;
+    }
+
+    .glass-panel {
+      background: rgba(6, 44, 67, 0.82);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(22, 197, 206, 0.24);
+      box-shadow: 0 20px 50px rgba(3, 29, 48, 0.45);
+    }
+
+    body {
+      font-family: 'Cairo', 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #083854 0%, #031d30 58%, #02121e 100%);
+      color: #f4fafc;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .font-latin {
+      font-family: 'Inter', 'Cairo', sans-serif;
+    }
+
+    .glass-panel {
+      background: rgba(6, 44, 67, 0.78);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(22, 197, 206, 0.22);
+      box-shadow: 0 20px 50px rgba(0, 12, 22, 0.45);
+    }
+
+    .gold-badge {
+      background: linear-gradient(135deg, rgba(232, 185, 103, 0.2), rgba(232, 185, 103, 0.08));
+      border: 1px solid rgba(232, 185, 103, 0.45);
+      color: #f6d594;
+    }
+
+    .game-canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      touch-action: none;
+      background: linear-gradient(180deg, #073b59 0%, #05283e 55%, #031726 100%);
+    }
+
+    .bubble-btn {
+      transition: transform 0.16s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+      box-shadow: 0 8px 20px rgba(22, 197, 206, 0.22);
+    }
+
+    .bubble-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(22, 197, 206, 0.35);
+    }
+
+    .bubble-btn:active {
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+<body class="selection:bg-[#16c5ce] selection:text-[#031d30]">
+  <!-- Top Brand & Daily Return Bar -->
+  <header class="sticky top-0 z-30 border-b border-[#16c5ce]/20 bg-[#031d30]/90 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
+      <a href="index.html" class="flex items-center gap-3 rounded-xl p-1.5 transition hover:bg-white/5">
+        <img
+          src="logo.png"
+          alt="Atlantis Tours Logo"
+          class="h-11 w-11 rounded-xl border border-[#e8b967]/40 bg-[#062c43] object-contain p-1"
+          onerror="this.onerror=null;this.src='https://placehold.co/88x88/062c43/e8b967?text=ATL';"
+        >
+        <div>
+          <div class="text-sm font-extrabold tracking-wide text-white sm:text-base">
+            <span id="brandNameText">ATLANTIS</span> <span class="text-xs font-bold text-[#16c5ce]">TOURS &amp; EXPERIENCES</span>
+          </div>
+          <p id="brandTaglineText" class="text-[11px] text-[#b8d4e0]">Your daily Hurghada &amp; Red Sea companion</p>
+        </div>
+      </a>
+
+      <nav aria-label="Primary navigation" class="hidden items-center gap-4 text-xs font-bold text-[#d8ecf3] md:flex">
+        <a id="navHomeLink" href="index.html" class="transition hover:text-[#16c5ce]">Home</a>
+        <a id="navToursLink" href="all-tours.html" class="transition hover:text-[#16c5ce]">All Tours</a>
+        <a id="navPlannerLink" href="#planner-section" class="transition hover:text-[#16c5ce]">Day Planner</a>
+        <a id="navGameLink" href="#reef-game-section" class="transition hover:text-[#16c5ce]">Reef Game</a>
+      </nav>
+
+      <div class="flex flex-wrap items-center gap-2 sm:gap-2.5">
+        <!-- Bilingual Language Switcher (EN / DE) -->
+        <div role="group" aria-label="Language selector" class="flex items-center rounded-full border border-[#16c5ce]/40 bg-[#062c43] p-0.5 text-xs font-extrabold">
+          <button
+            id="langEnBtn"
+            type="button"
+            data-lang="en"
+            aria-pressed="true"
+            class="lang-btn rounded-full bg-[#16c5ce] px-2.5 py-1 text-[#031d30] transition"
+          >
+            EN
+          </button>
+          <button
+            id="langDeBtn"
+            type="button"
+            data-lang="de"
+            aria-pressed="false"
+            class="lang-btn rounded-full px-2.5 py-1 text-[#c9e3ed] transition hover:text-white"
+          >
+            DE
+          </button>
+        </div>
+
+        <div class="gold-badge flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-bold">
+          <span id="bestScoreLabel">Best:</span>
+          <span id="headerBestScore" class="text-[#e8b967]">0</span>
+        </div>
+        <button
+          id="installTipBtn"
+          type="button"
+          class="rounded-full border border-[#16c5ce]/40 bg-[#062c43] px-3 py-1.5 text-xs font-bold text-[#9beff3] transition hover:border-[#16c5ce] hover:text-white"
+        >
+          Quick App Tip
+        </button>
+        <a
+          id="headerBookBtn"
+          href="booking.html"
+          class="bubble-btn rounded-full bg-[#16c5ce] px-4 py-1.5 text-xs font-extrabold text-[#031d30]"
+        >
+          Book Now →
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Toast / Status Message Box (Never using alert()) -->
+  <div id="statusToast" class="pointer-events-none fixed bottom-5 left-1/2 z-50 hidden -translate-x-1/2 rounded-2xl border border-[#16c5ce]/50 bg-[#062c43]/95 px-5 py-3 text-center text-xs font-bold text-white shadow-2xl sm:text-sm"></div>
+
+  <!-- Install / Quick Access Helper Banner -->
+  <div id="installTipBox" class="mx-auto mt-4 hidden max-w-6xl px-4 sm:px-6">
+    <div class="glass-panel flex flex-col justify-between gap-3 rounded-2xl p-4 sm:flex-row sm:items-center">
+      <div id="installTipText" class="text-xs leading-relaxed text-[#d9eef5] sm:text-sm">
+        <strong class="text-[#e8b967]">Keep Atlantis handy throughout your trip:</strong>
+        Open your browser menu on mobile and tap <strong>"Add to Home Screen"</strong> or bookmark this page for instant daily access.
+      </div>
+      <button
+        id="closeInstallTipBtn"
+        type="button"
+        class="self-end rounded-xl border border-white/20 px-3 py-1.5 text-xs font-bold text-[#b8d4e0] hover:bg-white/10 hover:text-white sm:self-auto"
+      >
+        Dismiss
+      </button>
+    </div>
+  </div>
+
+  <main class="mx-auto max-w-6xl space-y-8 px-4 py-6 sm:px-6 sm:py-8">
+    <!-- Hero Section -->
+    <section class="glass-panel relative overflow-hidden rounded-3xl p-6 sm:p-8">
+      <div class="relative z-10 grid items-center gap-6 lg:grid-cols-12">
+        <div class="space-y-3 lg:col-span-8">
+          <div class="inline-flex items-center gap-2 rounded-full border border-[#16c5ce]/35 bg-[#16c5ce]/10 px-3.5 py-1 text-xs font-bold text-[#7df0f6]">
+            <span>🌊</span>
+            <span id="heroBadgeText">Daily Red Sea &amp; Hurghada Companion</span>
+          </div>
+          <h1 id="heroTitleText" class="text-2xl font-extrabold leading-snug text-white sm:text-4xl">
+            Play, explore the Red Sea &amp; plan your day in <span class="text-[#e8b967]">Hurghada</span>
+          </h1>
+          <p id="heroSubtitleText" class="max-w-2xl text-sm leading-relaxed text-[#c6e0ea] sm:text-base">
+            Enjoy a quick Red Sea submarine game to unlock spot discoveries, build your morning, afternoon and evening Hurghada plan, and send your saved tours straight to booking.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-1">
+            <a id="heroPlayCta" href="#reef-game-section" class="bubble-btn rounded-2xl bg-[#16c5ce] px-5 py-3 text-sm font-extrabold text-[#031d30]">
+              Play Reef Game 🎮
+            </a>
+            <a id="heroPlanCta" href="#planner-section" class="rounded-2xl border border-[#e8b967]/50 bg-[#031d30]/70 px-5 py-3 text-sm font-bold text-[#f6d594] transition hover:bg-[#e8b967]/15">
+              Plan Your Day 🗓️
+            </a>
+            <a id="heroAllToursCta" href="all-tours.html" class="rounded-2xl border border-[#16c5ce]/35 bg-[#062c43]/80 px-5 py-3 text-sm font-bold text-[#9beff3] transition hover:border-[#16c5ce]">
+              Browse All Tours
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Daily Streak & Saved Count Card -->
+        <div class="grid grid-cols-2 gap-3 rounded-2xl border border-white/10 bg-[#031d30]/75 p-4 lg:col-span-4">
+          <div class="rounded-xl bg-[#062c43]/90 p-3.5 text-center">
+            <div id="streakLabelText" class="text-xs text-[#9bc4d4]">Play Streak</div>
+            <div id="streakCount" class="mt-1 text-2xl font-extrabold text-[#e8b967]">0</div>
+            <div id="streakSubText" class="text-[11px] text-[#8ab3c4]">completed runs</div>
+          </div>
+          <div class="rounded-xl bg-[#062c43]/90 p-3.5 text-center">
+            <div id="savedToursLabelText" class="text-xs text-[#9bc4d4]">Saved Tours</div>
+            <div id="savedToursCount" class="mt-1 text-2xl font-extrabold text-[#16c5ce]">0</div>
+            <div id="savedToursSubText" class="text-[11px] text-[#8ab3c4]">in your trip list</div>
+          </div>
+          <div id="dailyTipBox" class="col-span-2 rounded-xl border border-[#16c5ce]/20 bg-[#052438] p-3 text-xs leading-relaxed text-[#cde6f0]">
+            💡 <strong class="text-white">Daily Tip:</strong> Collect pearls and stars in the Reef Game to unlock discoveries about Hurghada, Giftun &amp; Orange Bay, Mahmya, Abu Dabbab, Dolphin House and the Eastern Desert.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. RED SEA REEF & TREASURE RUN (INTERACTIVE GAME) -->
+    <section id="reef-game-section" class="glass-panel rounded-3xl p-5 sm:p-7">
+      <div class="mb-5 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-extrabold tracking-wider text-[#16c5ce]">RED SEA REEF &amp; TREASURE RUN</span>
+          <h2 id="gameSectionTitle" class="mt-1 text-xl font-extrabold text-white sm:text-2xl">Red Sea Submarine &amp; Treasure Run</h2>
+          <p id="gameSectionSubtitle" class="text-xs text-[#b8d4e0] sm:text-sm">Collect pearls and stars while avoiding sea urchins and mines. Use Arrow keys, touch buttons, or drag on the screen.</p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+          <div class="rounded-2xl border border-white/15 bg-[#031d30] px-3.5 py-2 text-center">
+            <div id="scoreStatLabel" class="text-[10px] text-[#9ac2d2]">Score</div>
+            <div id="gameScore" class="text-lg font-extrabold text-white">0</div>
+          </div>
+          <div class="rounded-2xl border border-white/15 bg-[#031d30] px-3.5 py-2 text-center">
+            <div id="bestStatLabel" class="text-[10px] text-[#9ac2d2]">Best</div>
+            <div id="gameBestScore" class="text-lg font-extrabold text-[#e8b967]">0</div>
+          </div>
+          <div class="rounded-2xl border border-white/15 bg-[#031d30] px-3.5 py-2 text-center">
+            <div id="livesStatLabel" class="text-[10px] text-[#9ac2d2]">Lives</div>
+            <div id="gameLives" class="text-lg font-extrabold text-[#16c5ce]">♥♥♥</div>
+          </div>
+          <button
+            id="startRestartBtn"
+            type="button"
+            class="bubble-btn rounded-2xl bg-[#16c5ce] px-4 py-2.5 text-xs font-extrabold text-[#031d30] sm:text-sm"
+          >
+            Start Game
+          </button>
+        </div>
+      </div>
+
+      <!-- Responsive Game Canvas Container -->
+      <div class="relative h-[320px] w-full overflow-hidden rounded-2xl border border-[#16c5ce]/30 sm:h-[380px]">
+        <canvas id="reefCanvas" class="game-canvas" aria-label="Red Sea Reef and Treasure Run Game"></canvas>
+
+        <!-- Start / Game Over Overlay -->
+        <div id="gameOverlay" class="absolute inset-0 flex flex-col items-center justify-center bg-[#031d30]/75 p-5 text-center backdrop-blur-[2px]">
+          <div id="overlayBadge" class="gold-badge mb-2 rounded-full px-3.5 py-1 text-xs font-extrabold">Red Sea Deep Adventure</div>
+          <h3 id="overlayTitle" class="text-2xl font-extrabold text-white sm:text-3xl">Ready to dive in?</h3>
+          <p id="overlayDesc" class="mt-2 max-w-md text-xs leading-relaxed text-[#cce5ef] sm:text-sm">
+            Move up and down to collect golden pearls and sea stars while dodging sea urchins and mines. Every 50 points unlocks a Red Sea or Hurghada discovery!
+          </p>
+          <button
+            id="overlayActionBtn"
+            type="button"
+            class="bubble-btn mt-5 rounded-2xl bg-[#16c5ce] px-6 py-3 text-sm font-extrabold text-[#031d30]"
+          >
+            Dive Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Touch + Keyboard Controls Outside Canvas -->
+      <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-2.5">
+          <button
+            id="moveUpBtn"
+            type="button"
+            class="bubble-btn flex h-12 w-14 items-center justify-center rounded-2xl border border-[#16c5ce]/40 bg-[#031d30] text-lg font-extrabold text-[#16c5ce]"
+            aria-label="Move submarine up"
+          >
+            ▲
+          </button>
+          <button
+            id="moveDownBtn"
+            type="button"
+            class="bubble-btn flex h-12 w-14 items-center justify-center rounded-2xl border border-[#16c5ce]/40 bg-[#031d30] text-lg font-extrabold text-[#16c5ce]"
+            aria-label="Move submarine down"
+          >
+            ▼
+          </button>
+          <span id="controlsHintText" class="text-xs text-[#a8cddb]">Or use <kbd class="rounded bg-[#031d30] px-1.5 py-0.5 text-[#e8b967]">↑</kbd> / <kbd class="rounded bg-[#031d30] px-1.5 py-0.5 text-[#e8b967]">↓</kbd> or drag on touchscreens</span>
+        </div>
+
+        <button
+          id="pauseGameBtn"
+          type="button"
+          class="rounded-2xl border border-white/20 bg-[#031d30]/80 px-4 py-2 text-xs font-bold text-[#d4ebf3] transition hover:border-[#16c5ce] hover:text-white"
+        >
+          Pause
+        </button>
+      </div>
+
+      <!-- Unlocked Red Sea Spot Facts -->
+      <div class="mt-6 rounded-2xl border border-white/10 bg-[#031d30]/70 p-4 sm:p-5">
+        <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+          <h3 id="factsHeadingText" class="text-sm font-extrabold text-[#e8b967] sm:text-base">Red Sea &amp; Hurghada Spot Discoveries</h3>
+          <span id="factsProgressText" class="text-xs font-bold text-[#9bc4d4]">0 / 6 Unlocked</span>
+        </div>
+        <div id="factsGrid" class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <!-- 2. DAILY HURGHADA VIBE & DAY PLANNER (DAILY UTILITY TOOL) -->
+    <section id="planner-section" class="glass-panel rounded-3xl p-5 sm:p-7">
+      <div class="mb-6">
+        <span class="text-xs font-extrabold tracking-wider text-[#e8b967]">DAILY HURGHADA VIBE &amp; DAY PLANNER</span>
+        <h2 id="plannerSectionTitle" class="mt-1 text-xl font-extrabold text-white sm:text-2xl">Smart Daily Hurghada Planner</h2>
+        <p id="plannerSectionSubtitle" class="text-xs text-[#b8d4e0] sm:text-sm">Pick your vibe for today and who you are traveling with to build a morning, afternoon and evening plan.</p>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-12">
+        <!-- Mood & Group Controls -->
+        <div class="space-y-5 rounded-2xl border border-white/10 bg-[#031d30]/75 p-4 sm:p-5 lg:col-span-5">
+          <div>
+            <label id="moodStepLabel" class="mb-2.5 block text-xs font-extrabold text-[#9beff3] sm:text-sm">1. What is today's vibe?</label>
+            <div id="moodButtons" class="grid grid-cols-2 gap-2.5">
+              <button type="button" data-mood="relaxed" class="mood-btn rounded-2xl border border-[#16c5ce] bg-[#16c5ce]/20 p-3 text-left text-xs font-extrabold text-white transition sm:text-sm">
+                🏝️ Relax &amp; Islands
+              </button>
+              <button type="button" data-mood="adventure" class="mood-btn rounded-2xl border border-white/15 bg-[#062c43] p-3 text-left text-xs font-bold text-[#cfe7f0] transition hover:border-[#16c5ce]/50 sm:text-sm">
+                🤿 Reef &amp; Water Sports
+              </button>
+              <button type="button" data-mood="desert" class="mood-btn rounded-2xl border border-white/15 bg-[#062c43] p-3 text-left text-xs font-bold text-[#cfe7f0] transition hover:border-[#16c5ce]/50 sm:text-sm">
+                🏜️ Desert &amp; Safari
+              </button>
+              <button type="button" data-mood="culture" class="mood-btn rounded-2xl border border-white/15 bg-[#062c43] p-3 text-left text-xs font-bold text-[#cfe7f0] transition hover:border-[#16c5ce]/50 sm:text-sm">
+                ⛵ Marina &amp; City Culture
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label id="groupStepLabel" class="mb-2.5 block text-xs font-extrabold text-[#9beff3] sm:text-sm">2. Who is joining?</label>
+            <div id="groupButtons" class="grid grid-cols-2 gap-2.5">
+              <button type="button" data-group="Solo" class="group-btn rounded-xl border border-white/15 bg-[#062c43] px-3 py-2.5 text-xs font-bold text-[#cfe7f0] transition hover:border-[#e8b967]/50">
+                🧳 Solo
+              </button>
+              <button type="button" data-group="Couple" class="group-btn rounded-xl border border-[#e8b967] bg-[#e8b967]/20 px-3 py-2.5 text-xs font-extrabold text-[#f8dfad] transition">
+                🌅 Couple
+              </button>
+              <button type="button" data-group="Family" class="group-btn rounded-xl border border-white/15 bg-[#062c43] px-3 py-2.5 text-xs font-bold text-[#cfe7f0] transition hover:border-[#e8b967]/50">
+                👨‍👩‍👧‍👦 Family
+              </button>
+              <button type="button" data-group="Friends" class="group-btn rounded-xl border border-white/15 bg-[#062c43] px-3 py-2.5 text-xs font-bold text-[#cfe7f0] transition hover:border-[#e8b967]/50">
+                🎉 Friends
+              </button>
+            </div>
+          </div>
+
+          <button
+            id="generatePlanBtn"
+            type="button"
+            class="bubble-btn w-full rounded-2xl bg-[#e8b967] px-4 py-3 text-sm font-extrabold text-[#031d30] hover:bg-[#f3cb7d]"
+          >
+            Cycle Next Day Plan ✨
+          </button>
+        </div>
+
+        <!-- Generated Day Schedule & Saved Shortlist -->
+        <div class="space-y-5 rounded-2xl border border-white/10 bg-[#031d30]/75 p-4 sm:p-5 lg:col-span-7">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-3">
+            <div>
+              <h3 id="planHeading" class="text-base font-extrabold text-white sm:text-lg">Suggested Day Plan</h3>
+              <p id="planSubheading" class="text-xs text-[#9ec7d7]">Check off steps or save experiences to your trip list</p>
+            </div>
+            <button
+              id="copyPlanBtn"
+              type="button"
+              class="rounded-xl border border-[#16c5ce]/50 bg-[#062c43] px-3.5 py-2 text-xs font-bold text-[#9beff3] transition hover:bg-[#16c5ce] hover:text-[#031d30]"
+            >
+              Copy Plan Summary 📋
+            </button>
+          </div>
+
+          <div id="scheduleSlots" class="space-y-3"></div>
+
+          <!-- Saved Daily Shortlist ('atlantis_daily_saved_tours_v1') -->
+          <div class="rounded-2xl border border-[#16c5ce]/30 bg-[#062c43]/90 p-4">
+            <div class="mb-2.5 flex flex-wrap items-center justify-between gap-2">
+              <div class="text-xs font-extrabold text-[#e8b967] sm:text-sm">
+                <span id="shortlistHeadingText">Your Saved Trip List</span> (<span id="shortlistCount">0</span>)
+              </div>
+              <div class="flex flex-wrap items-center gap-2">
+                <a
+                  id="exploreAllToursLink"
+                  href="all-tours.html"
+                  class="rounded-lg border border-[#16c5ce]/35 bg-[#031d30] px-2.5 py-1 text-[11px] font-bold text-[#9beff3] hover:border-[#16c5ce]"
+                >
+                  All Tours
+                </a>
+                <button
+                  id="clearShortlistBtn"
+                  type="button"
+                  class="rounded-lg border border-white/15 px-2.5 py-1 text-[11px] font-bold text-[#b8d4e0] hover:bg-white/10 hover:text-white"
+                >
+                  Clear List
+                </button>
+                <a
+                  id="bookingHandoffLink"
+                  href="booking.html"
+                  class="bubble-btn rounded-xl bg-[#16c5ce] px-3.5 py-1.5 text-xs font-extrabold text-[#031d30]"
+                >
+                  Send to Booking →
+                </a>
+              </div>
+            </div>
+            <div id="shortlistContainer" class="flex flex-wrap gap-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-[#021422] py-6 text-center text-xs text-[#93bac9]">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 sm:flex-row sm:px-6">
+      <div id="footerBrandText">Atlantis Tours &amp; Experiences — Your daily Hurghada &amp; Red Sea companion</div>
+      <div class="flex gap-4">
+        <a id="footerHomeLink" href="index.html" class="hover:text-[#16c5ce]">Home</a>
+        <a id="footerToursLink" href="all-tours.html" class="hover:text-[#16c5ce]">All Tours</a>
+        <a id="footerBookingLink" href="booking.html" class="hover:text-[#e8b967]">Booking</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      // =========================================================================
+      // Storage Keys & Bilingual Localization Data (EN / DE)
+      // =========================================================================
+      const SAVED_TOURS_KEY = 'atlantis_daily_saved_tours_v1';
+      const BEST_SCORE_KEY = 'atlantis_reef_best_score_v1';
+      const STREAK_KEY = 'atlantis_reef_streak_v1';
+      const UNLOCKED_FACTS_KEY = 'atlantis_unlocked_facts_v1';
+      const LANG_KEY = 'atlantis_companion_lang_v1';
+
+      const I18N = {
+        en: {
+          pageTitle: 'Atlantis Hurghada & Red Sea Companion | Atlantis Tours & Experiences',
+          brandTagline: 'Your daily Hurghada & Red Sea companion',
+          navHome: 'Home',
+          navTours: 'All Tours',
+          navPlanner: 'Day Planner',
+          navGame: 'Reef Game',
+          bestScoreLabel: 'Best:',
+          installTipBtn: 'Quick App Tip',
+          headerBookBtn: 'Book Now →',
+          installTipHtml: '<strong class="text-[#e8b967]">Keep Atlantis handy throughout your trip:</strong> Open your browser menu on mobile and tap <strong>"Add to Home Screen"</strong> or bookmark this page for instant daily access.',
+          closeInstallTipBtn: 'Dismiss',
+          heroBadge: 'Daily Red Sea & Hurghada Companion',
+          heroTitleHtml: 'Play, explore the Red Sea &amp; plan your day in <span class="text-[#e8b967]">Hurghada</span>',
+          heroSubtitle: 'Enjoy a quick Red Sea submarine game to unlock spot discoveries, build your morning, afternoon and evening Hurghada plan, and send your saved tours straight to booking.',
+          heroPlayCta: 'Play Reef Game 🎮',
+          heroPlanCta: 'Plan Your Day 🗓️',
+          heroAllToursCta: 'Browse All Tours',
+          streakLabel: 'Play Streak',
+          streakSub: 'completed runs',
+          savedToursLabel: 'Saved Tours',
+          savedToursSub: 'in your trip list',
+          dailyTipHtml: '💡 <strong class="text-white">Daily Tip:</strong> Collect pearls and stars in the Reef Game to unlock discoveries about Hurghada, Giftun &amp; Orange Bay, Mahmya, Abu Dabbab, Dolphin House and the Eastern Desert.',
+          gameSectionTitle: 'Red Sea Submarine & Treasure Run',
+          gameSectionSubtitle: 'Collect pearls and stars while avoiding sea urchins and mines. Use Arrow keys, touch buttons, or drag on the screen.',
+          scoreStatLabel: 'Score',
+          bestStatLabel: 'Best',
+          livesStatLabel: 'Lives',
+          startBtn: 'Start Game',
+          restartBtn: 'Restart',
+          pauseBtn: 'Pause',
+          resumeBtn: 'Resume',
+          moveUpAria: 'Move submarine up',
+          moveDownAria: 'Move submarine down',
+          controlsHintHtml: 'Or use <kbd class="rounded bg-[#031d30] px-1.5 py-0.5 text-[#e8b967]">↑</kbd> / <kbd class="rounded bg-[#031d30] px-1.5 py-0.5 text-[#e8b967]">↓</kbd> or drag on touchscreens',
+          overlayIdleBadge: 'Red Sea Deep Adventure',
+          overlayIdleTitle: 'Ready to dive in?',
+          overlayIdleDesc: 'Move up and down to collect golden pearls and sea stars while dodging sea urchins and mines. Every 50 points unlocks a Red Sea or Hurghada discovery!',
+          overlayIdleBtn: 'Dive Now',
+          overlayPausedBadge: 'Paused',
+          overlayPausedTitle: 'Game Paused',
+          overlayPausedDesc: 'Press resume to continue exploring the Red Sea depths.',
+          overlayPausedBtn: 'Resume Game',
+          overlayGameOverBadge: 'Run Complete',
+          overlayGameOverDesc: 'Your best score is {best} points. Dive again to unlock more Red Sea & Hurghada discoveries!',
+          overlayGameOverBtn: 'Play Again',
+          factsHeading: 'Red Sea & Hurghada Spot Discoveries',
+          factsUnlockedSuffix: 'Unlocked',
+          factUnlockedBadge: 'Unlocked',
+          factLockedBadge: 'Locked',
+          factLockedDesc: 'Score points in the Reef Game to unlock a discovery about {place}.',
+          factUnlockedToast: '🎉 Unlocked discovery: {title}',
+          plannerSectionTitle: 'Smart Daily Hurghada Planner',
+          plannerSectionSubtitle: 'Pick your vibe for today and who you are traveling with to build a morning, afternoon and evening plan.',
+          moodStepLabel: "1. What is today's vibe?",
+          moodRelaxed: '🏝️ Relax & Islands',
+          moodAdventure: '🤿 Reef & Water Sports',
+          moodDesert: '🏜️ Desert & Safari',
+          moodCulture: '⛵ Marina & City Culture',
+          groupStepLabel: '2. Who is joining?',
+          groupSolo: '🧳 Solo',
+          groupCouple: '🌅 Couple',
+          groupFamily: '👨‍👩‍👧‍👦 Family',
+          groupFriends: '🎉 Friends',
+          generatePlanBtn: 'Cycle Next Day Plan ✨',
+          planSubheading: 'Check off steps or save experiences to your trip list',
+          copyPlanBtn: 'Copy Plan Summary 📋',
+          shortlistHeading: 'Your Saved Trip List',
+          exploreAllToursLink: 'All Tours',
+          clearShortlistBtn: 'Clear List',
+          bookingHandoffLink: 'Send to Booking →',
+          emptyShortlist: 'No tours saved yet — tap "+ Save Tour" on any slot in your plan.',
+          saveTourBtn: '+ Save Tour',
+          savedTourBtn: '✓ Saved',
+          removeTourAria: 'Remove {tour}',
+          toastRemovedTour: 'Removed {tour} from your saved list',
+          toastSavedTour: 'Saved {tour} to your daily trip list',
+          toastClearedList: 'Cleared your saved trip list',
+          toastCycledPlan: 'Switched to the next Hurghada day plan',
+          toastCopiedPlan: 'Copied your daily plan summary',
+          toastCopyFailed: 'Could not copy automatically — please select the text manually',
+          copyHeader: 'My Hurghada Day Plan - Atlantis Tours & Experiences',
+          copyGroupPrefix: 'Group: ',
+          copySavedPrefix: 'Saved tours: ',
+          footerBrand: 'Atlantis Tours & Experiences — Your daily Hurghada & Red Sea companion',
+          footerHome: 'Home',
+          footerTours: 'All Tours',
+          footerBooking: 'Booking',
+          moods: {
+            relaxed: 'Relax & Islands',
+            adventure: 'Reef & Water Sports',
+            desert: 'Desert & Safari',
+            culture: 'Marina & City Culture'
+          },
+          groups: {
+            Solo: 'Solo',
+            Couple: 'Couple',
+            Family: 'Family',
+            Friends: 'Friends'
+          },
+          groupNotes: {
+            Solo: 'Flexible timing and easy pacing for exploring at your own speed.',
+            Couple: 'Relaxed coastal moments, clear water and scenic sunset views.',
+            Family: 'Balanced pacing and comfortable options suitable for different ages.',
+            Friends: 'Lively sea, desert and marina moments with plenty of photo spots.'
+          },
+          plans: {
+            relaxed: [
+              {
+                slot: 'Morning (09:00)',
+                tourName: 'Orange Bay Island',
+                title: 'Boat trip to Giftun & Orange Bay for shallow turquoise water and beach time',
+                tip: 'Pack reef-safe sunscreen, sunglasses and swimwear before morning pickup.'
+              },
+              {
+                slot: 'Afternoon (15:30)',
+                tourName: 'Mahmya Island',
+                title: 'Unwind by the water or enjoy a quiet afternoon rest after returning ashore',
+                tip: 'Hydrate and recharge before heading out for the evening.'
+              },
+              {
+                slot: 'Evening (19:30)',
+                tourName: 'Hurghada Marina & Waterfront',
+                title: 'Stroll Hurghada Marina and enjoy a relaxed dinner by the yachts',
+                tip: 'An easy, unhurried evening walk along the waterfront.'
+              }
+            ],
+            adventure: [
+              {
+                slot: 'Morning (08:30)',
+                tourName: 'Red Sea Snorkeling Trip',
+                title: 'Red Sea reef snorkeling trip with boat transfers and guided reef stops',
+                tip: 'Check reef conditions with the crew and never touch or stand on coral.'
+              },
+              {
+                slot: 'Afternoon (14:30)',
+                tourName: 'Kitesurfing',
+                title: 'Water sports session (kitesurfing, parasailing or jet ski depending on wind & sea)',
+                tip: 'Water sports depend on daily wind speed, sea state and safety rules.'
+              },
+              {
+                slot: 'Evening (20:00)',
+                tourName: 'Dolphin House Snorkeling',
+                title: 'Marina relaxation and saving your next Red Sea or Dolphin House trip',
+                tip: 'Save experiences you want to ask about before booking.'
+              }
+            ],
+            desert: [
+              {
+                slot: 'Morning (10:00)',
+                tourName: 'Glass-Bottom Boat & Semi-Submarine',
+                title: 'Light morning outing or hotel rest before warm afternoon desert air',
+                tip: 'Taking it easy in the morning makes an afternoon safari much more comfortable.'
+              },
+              {
+                slot: 'Afternoon (15:00)',
+                tourName: 'Quad Bike Safari',
+                title: 'Eastern Desert safari (quad bike, buggy or 4x4 jeep) across mountain trails',
+                tip: 'Wear closed-toe shoes, a scarf for dust and sunglasses.'
+              },
+              {
+                slot: 'Evening (18:00)',
+                tourName: 'Desert Sunset & Stargazing',
+                title: 'Desert sunset views over the Red Sea mountains and evening Bedouin hospitality',
+                tip: 'Golden hour over the Eastern Desert mountains is a highlight of the trip.'
+              }
+            ],
+            culture: [
+              {
+                slot: 'Morning (09:30)',
+                tourName: 'Hurghada City Tour',
+                title: 'Explore Hurghada highlights including El Mina Mosque, El Dahar and local markets',
+                tip: 'Great way to see everyday local life and coastal landmarks.'
+              },
+              {
+                slot: 'Afternoon (15:00)',
+                tourName: 'El Dahar Old Town & Local Markets',
+                title: 'Wander El Dahar bazaar streets for spices, crafts and local atmosphere',
+                tip: 'Browse at your own pace with zero pressure.'
+              },
+              {
+                slot: 'Evening (19:30)',
+                tourName: 'Hurghada Marina & Waterfront',
+                title: 'Evening promenade along Hurghada Marina with waterfront lights and cafés',
+                tip: 'A smooth wrap-up to a cultural day in the city.'
+              }
+            ]
+          },
+          spots: [
+            {
+              id: 'hurghada',
+              place: 'Hurghada',
+              title: 'Hurghada Coast',
+              fact: 'Hurghada stretches along the Red Sea coast with year-round sunshine, coral reefs and easy access to islands, desert trails and marinas.'
+            },
+            {
+              id: 'orange-bay',
+              place: 'Giftun & Orange Bay',
+              title: 'Giftun & Orange Bay',
+              fact: 'Giftun Island and Orange Bay are famous for clear turquoise shallows, sandy shores and relaxed island day trips from Hurghada.'
+            },
+            {
+              id: 'mahmya',
+              place: 'Mahmya Island',
+              title: 'Mahmya Island',
+              fact: 'Set within the Giftun Islands protected area, Mahmya offers soft sand, bright blue water and nearby coral reefs.'
+            },
+            {
+              id: 'abu-dabbab',
+              place: 'Abu Dabbab Bay',
+              title: 'Abu Dabbab Bay',
+              fact: 'A sheltered seagrass and coral bay south along the coast known for clear water entry and occasional sea turtle sightings.'
+            },
+            {
+              id: 'dolphin-house',
+              place: 'Dolphin House',
+              title: 'Dolphin House',
+              fact: 'Offshore reef areas frequented by wild dolphins; responsible boat trips observe marine life while protecting natural habitats.'
+            },
+            {
+              id: 'eastern-desert',
+              place: 'Eastern Desert',
+              title: 'Eastern Desert',
+              fact: 'Right behind the Red Sea coast, rugged desert mountains, wadis and Bedouin traditions offer dramatic sunset and safari scenery.'
+            }
+          ]
+        },
+        de: {
+          pageTitle: 'Atlantis Hurghada & Rotes Meer Begleiter | Atlantis Tours & Experiences',
+          brandTagline: 'Dein täglicher Begleiter für Hurghada & das Rote Meer',
+          navHome: 'Startseite',
+          navTours: 'Alle Touren',
+          navPlanner: 'Tagesplaner',
+          navGame: 'Riff-Spiel',
+          bestScoreLabel: 'Rekord:',
+          installTipBtn: 'App-Tipp',
+          headerBookBtn: 'Jetzt buchen →',
+          installTipHtml: '<strong class="text-[#e8b967]">Atlantis immer griffbereit auf deiner Reise:</strong> Öffne das Browser-Menü auf dem Smartphone und wähle <strong>„Zum Startbildschirm“</strong> oder speichere ein Lesezeichen.',
+          closeInstallTipBtn: 'Schließen',
+          heroBadge: 'Täglicher Begleiter für Rotes Meer & Hurghada',
+          heroTitleHtml: 'Spielen, das Rote Meer entdecken &amp; deinen Tag in <span class="text-[#e8b967]">Hurghada</span> planen',
+          heroSubtitle: 'Starte das schnelle U-Boot-Spiel im Roten Meer, schalte Spot-Infos frei, plane Vormittag, Nachmittag und Abend in Hurghada und sende deine Merkliste direkt an die Buchung.',
+          heroPlayCta: 'Riff-Spiel starten 🎮',
+          heroPlanCta: 'Tag planen 🗓️',
+          heroAllToursCta: 'Alle Touren ansehen',
+          streakLabel: 'Spielserie',
+          streakSub: 'beendete Runden',
+          savedToursLabel: 'Gemerkte Touren',
+          savedToursSub: 'auf deiner Liste',
+          dailyTipHtml: '💡 <strong class="text-white">Tages-Tipp:</strong> Sammle Perlen und Sterne im Riff-Spiel, um Infos zu Hurghada, Giftun &amp; Orange Bay, Mahmya, Abu Dabbab, Dolphin House und der Ostwüste freizuschalten.',
+          gameSectionTitle: 'Rotes-Meer-U-Boot & Schatzsuche',
+          gameSectionSubtitle: 'Sammle Perlen und Sterne und weiche Seeigeln sowie Minen aus. Nutze Pfeiltasten, Touch-Buttons oder Wischen auf dem Display.',
+          scoreStatLabel: 'Punkte',
+          bestStatLabel: 'Rekord',
+          livesStatLabel: 'Leben',
+          startBtn: 'Spiel starten',
+          restartBtn: 'Neu starten',
+          pauseBtn: 'Pause',
+          resumeBtn: 'Weiter',
+          moveUpAria: 'U-Boot nach oben bewegen',
+          moveDownAria: 'U-Boot nach unten bewegen',
+          controlsHintHtml: 'Oder nutze <kbd class="rounded bg-[#031d30] px-1.5 py-0.5 text-[#e8b967]">↑</kbd> / <kbd class="rounded bg-[#031d30] px-1.5 py-0.5 text-[#e8b967]">↓</kbd> bzw. Ziehen per Touch',
+          overlayIdleBadge: 'Tiefsee-Abenteuer im Roten Meer',
+          overlayIdleTitle: 'Bereit zum Abtauchen?',
+          overlayIdleDesc: 'Steuere nach oben und unten, sammle goldene Perlen und Seesterne und weiche Seeigeln sowie Minen aus. Alle 50 Punkte schalten ein neues Ziel frei!',
+          overlayIdleBtn: 'Jetzt abtauchen',
+          overlayPausedBadge: 'Pausiert',
+          overlayPausedTitle: 'Spiel pausiert',
+          overlayPausedDesc: 'Tippe auf „Weiter“, um deine Tour durch das Rote Meer fortzusetzen.',
+          overlayPausedBtn: 'Spiel fortsetzen',
+          overlayGameOverBadge: 'Runde beendet',
+          overlayGameOverDesc: 'Dein Rekord liegt bei {best} Punkten. Tauche erneut ab und entdecke noch mehr Ziele am Roten Meer!',
+          overlayGameOverBtn: 'Nochmal spielen',
+          factsHeading: 'Entdeckungen: Rotes Meer & Hurghada',
+          factsUnlockedSuffix: 'Freigeschaltet',
+          factUnlockedBadge: 'Freigeschaltet',
+          factLockedBadge: 'Gesperrt',
+          factLockedDesc: 'Sammle Punkte im Riff-Spiel, um Infos über {place} freizuschalten.',
+          factUnlockedToast: '🎉 Neue Entdeckung freigeschaltet: {title}',
+          plannerSectionTitle: 'Smarter Tagesplaner für Hurghada',
+          plannerSectionSubtitle: 'Wähle deine Stimmung für heute und deine Begleitung für einen Plan am Vormittag, Nachmittag und Abend.',
+          moodStepLabel: '1. Wie ist deine Stimmung heute?',
+          moodRelaxed: '🏝️ Entspannung & Inseln',
+          moodAdventure: '🤿 Riff & Wassersport',
+          moodDesert: '🏜️ Wüste & Safari',
+          moodCulture: '⛵ Marina & Stadt erleben',
+          groupStepLabel: '2. Wer ist dabei?',
+          groupSolo: '🧳 Allein',
+          groupCouple: '🌅 Zu zweit',
+          groupFamily: '👨‍👩‍👧‍👦 Familie',
+          groupFriends: '🎉 Freunde',
+          generatePlanBtn: 'Nächsten Tagesplan zeigen ✨',
+          planSubheading: 'Hake Schritte ab oder merke Touren für deine Reiseliste vor',
+          copyPlanBtn: 'Plan-Zusammenfassung kopieren 📋',
+          shortlistHeading: 'Deine gemerkte Reiseliste',
+          exploreAllToursLink: 'Alle Touren',
+          clearShortlistBtn: 'Liste leeren',
+          bookingHandoffLink: 'Zur Buchung senden →',
+          emptyShortlist: 'Noch keine Touren gemerkt — tippe bei einem Programmpunkt auf „+ Merken“.',
+          saveTourBtn: '+ Merken',
+          savedTourBtn: '✓ Gemerkt',
+          removeTourAria: '{tour} entfernen',
+          toastRemovedTour: '{tour} von deiner Merkliste entfernt',
+          toastSavedTour: '{tour} auf deiner Tagesliste gespeichert',
+          toastClearedList: 'Deine Merkliste wurde geleert',
+          toastCycledPlan: 'Nächster Tagesplan für Hurghada geladen',
+          toastCopiedPlan: 'Tagesplan-Zusammenfassung kopiert',
+          toastCopyFailed: 'Automatisches Kopieren nicht möglich — bitte Text manuell markieren',
+          copyHeader: 'Mein Hurghada-Tagesplan - Atlantis Tours & Experiences',
+          copyGroupPrefix: 'Gruppe: ',
+          copySavedPrefix: 'Gemerkte Touren: ',
+          footerBrand: 'Atlantis Tours & Experiences — Dein täglicher Begleiter für Hurghada & das Rote Meer',
+          footerHome: 'Startseite',
+          footerTours: 'Alle Touren',
+          footerBooking: 'Buchung',
+          moods: {
+            relaxed: 'Entspannung & Inseln',
+            adventure: 'Riff & Wassersport',
+            desert: 'Wüste & Safari',
+            culture: 'Marina & Stadt erleben'
+          },
+          groups: {
+            Solo: 'Allein',
+            Couple: 'Zu zweit',
+            Family: 'Familie',
+            Friends: 'Freunde'
+          },
+          groupNotes: {
+            Solo: 'Flexibles Tempo und freie Zeiteinteilung ganz nach deinem Geschmack.',
+            Couple: 'Ruhige Küstenmomente, klares Wasser und schöne Sonnenuntergänge.',
+            Family: 'Ausgewogenes Tempo und entspannte Abläufe für verschiedene Altersgruppen.',
+            Friends: 'Abwechslungsreiche Momente an Meer, Wüste und Marina mit tollen Fotospots.'
+          },
+          plans: {
+            relaxed: [
+              {
+                slot: 'Vormittag (09:00)',
+                tourName: 'Orange Bay Island',
+                title: 'Bootsausflug nach Giftun & Orange Bay mit flachem türkisem Wasser und Strandzeit',
+                tip: 'Riff-freundliche Sonnencreme, Sonnenbrille und Badesachen rechtzeitig einpacken.'
+              },
+              {
+                slot: 'Nachmittag (15:30)',
+                tourName: 'Mahmya Island',
+                title: 'Entspannt am Wasser bleiben oder nach der Rückkehr im Hotel kurz durchatmen',
+                tip: 'Ausreichend trinken und Energie tanken, bevor der Abend startet.'
+              },
+              {
+                slot: 'Abend (19:30)',
+                tourName: 'Hurghada Marina & Waterfront',
+                title: 'Spaziergang an der Hurghada Marina und entspanntes Abendessen am Hafen',
+                tip: 'Ein gemütlicher Abendspaziergang entlang der Promenade ohne Hektik.'
+              }
+            ],
+            adventure: [
+              {
+                slot: 'Vormittag (08:30)',
+                tourName: 'Red Sea Snorkeling Trip',
+                title: 'Schnorchelausflug am Roten Meer mit Bootstransfer und geführten Riff-Stopps',
+                tip: 'Riff-Bedingungen mit der Crew abstimmen und Korallen niemals berühren.'
+              },
+              {
+                slot: 'Nachmittag (14:30)',
+                tourName: 'Kitesurfing',
+                title: 'Wassersport-Session (Kitesurfen, Parasailing oder Jetski je nach Wind & Meer)',
+                tip: 'Wassersport richtet sich nach Windstärke, Seegang und Sicherheitsvorgaben.'
+              },
+              {
+                slot: 'Abend (20:00)',
+                tourName: 'Dolphin House Snorkeling',
+                title: 'Ausklang an der Marina und Vormerken für einen Dolphin-House- oder Riff-Tag',
+                tip: 'Wunschtouren direkt auf deiner Liste speichern, bevor du anfragst.'
+              }
+            ],
+            desert: [
+              {
+                slot: 'Vormittag (10:00)',
+                tourName: 'Glass-Bottom Boat & Semi-Submarine',
+                title: 'Ruhiger Vormittagsausflug oder Erholung im Hotel vor der Wüstentour',
+                tip: 'Ein entspannter Vormittag macht den Wüstenausflug am Nachmittag besonders angenehm.'
+              },
+              {
+                slot: 'Nachmittag (15:00)',
+                tourName: 'Quad Bike Safari',
+                title: 'Safari in der Ostwüste (Quad, Buggy oder 4x4-Jeep) durch Täler und Bergkulisse',
+                tip: 'Feste Schuhe, ein Tuch gegen Staub und eine Sonnenbrille mitnehmen.'
+              },
+              {
+                slot: 'Abend (18:00)',
+                tourName: 'Desert Sunset & Stargazing',
+                title: 'Sonnenuntergang über den Wüstenbergen und Beduinen-Gastfreundschaft am Abend',
+                tip: 'Das Abendlicht über den Bergen der Ostwüste gehört zu den schönsten Eindrücken.'
+              }
+            ],
+            culture: [
+              {
+                slot: 'Vormittag (09:30)',
+                tourName: 'Hurghada City Tour',
+                title: 'Stadtrundgang in Hurghada mit El-Mina-Moschee, El Dahar und lokalen Märkten',
+                tip: 'Ideal, um den Alltag vor Ort und bekannte Wahrzeichen kennenzulernen.'
+              },
+              {
+                slot: 'Nachmittag (15:00)',
+                tourName: 'El Dahar Old Town & Local Markets',
+                title: 'Durch die Basargassen von El Dahar schlendern und Gewürze sowie Handwerk entdecken',
+                tip: 'In Ruhe umsehen — ganz ohne Kaufzwang.'
+              },
+              {
+                slot: 'Abend (19:30)',
+                tourName: 'Hurghada Marina & Waterfront',
+                title: 'Abendstimmung an der Hurghada Marina mit Lichtern, Cafés und Hafenblick',
+                tip: 'Ein entspannter Abschluss für einen abwechslungsreichen Stadttag.'
+              }
+            ]
+          },
+          spots: [
+            {
+              id: 'hurghada',
+              place: 'Hurghada',
+              title: 'Küste von Hurghada',
+              fact: 'Hurghada liegt direkt am Roten Meer und bietet ganzjährig Sonne, Korallenriffe sowie schnelle Wege zu Inseln, Wüste und Marinas.'
+            },
+            {
+              id: 'orange-bay',
+              place: 'Giftun & Orange Bay',
+              title: 'Giftun & Orange Bay',
+              fact: 'Die Insel Giftun und Orange Bay sind bekannt für flaches türkisfarbenes Wasser, helle Strände und entspannte Tagesausflüge.'
+            },
+            {
+              id: 'mahmya',
+              place: 'Mahmya Island',
+              title: 'Mahmya Island',
+              fact: 'Im geschützten Bereich der Giftun-Inseln erwartet dich feiner Sand, klares Wasser und bunte Korallenwelt.'
+            },
+            {
+              id: 'abu-dabbab',
+              place: 'Abu Dabbab Bay',
+              title: 'Abu Dabbab Bay',
+              fact: 'Eine geschützte Seegras- und Korallenbucht weiter südlich, bekannt für leichten Einstieg und mögliche Meeresschildkröten-Sichtungen.'
+            },
+            {
+              id: 'dolphin-house',
+              place: 'Dolphin House',
+              title: 'Dolphin House',
+              fact: 'Riffgebiete auf See, die von wilden Delfinen aufgesucht werden; rücksichtsvolle Touren schützen den natürlichen Lebensraum.'
+            },
+            {
+              id: 'eastern-desert',
+              place: 'Ostwüste',
+              title: 'Ostwüste',
+              fact: 'Gleich hinter der Küste prägen Wüstentäler, Berge und Beduinenkultur eindrucksvolle Sonnenuntergänge und Safari-Routen.'
+            }
+          ]
+        }
+      };
+
+      function readStoredLang() {
+        try {
+          const saved = localStorage.getItem(LANG_KEY);
+          if (saved === 'de' || saved === 'en') return saved;
+        } catch (err) {
+          // Ignore storage error
+        }
+        return 'en';
+      }
+
+      let currentLang = readStoredLang();
+
+      function t() {
+        return I18N[currentLang] || I18N.en;
+      }
+
+      function formatText(template, replacements) {
+        let out = template;
+        Object.keys(replacements).forEach((key) => {
+          out = out.replace(new RegExp('\\{' + key + '\\}', 'g'), String(replacements[key]));
+        });
+        return out;
+      }
+
+      function setTextById(id, text) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = text;
+      }
+
+      function setHtmlById(id, html) {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = html;
+      }
+      ];
+
+      const DAY_PLANS = {
+        relaxed: [
+          {
+            slot: 'الصباح (09:00)',
+            tourName: 'Orange Bay Island',
+            titleAr: 'رحلة بحرية إلى أورانج باي والسباحة في المياه الفيروزية',
+            tipAr: 'خلي معاك نظارة شمسية، واقي شمس صديق للشعاب، وملابس بحر جاهزة من بدري.'
+          },
+          {
+            slot: 'العصر (15:30)',
+            tourName: 'Mahmya Island',
+            titleAr: 'استرخاء على الشاطئ أو قيلولة هادئة بعد العودة للفندق',
+            tipAr: 'وقت مثالي لتجديد الطاقة وترطيب الجسم قبل السهرة.'
+          },
+          {
+            slot: 'المساء (19:30)',
+            tourName: 'Hurghada Marina & Waterfront',
+            titleAr: 'ممشى مارينا الغردقة وعشاء هادئ على البحر',
+            tipAr: 'جولة مريحة على الكورنيش والميناء بدون أي استعجال.'
+          }
+        ],
+        adventure: [
+          {
+            slot: 'الصباح (08:30)',
+            tourName: 'Red Sea Snorkeling Trip',
+            titleAr: 'جولة سنوركلينج على الشعاب المرجانية بالبحر الأحمر',
+            tipAr: 'اسأل الفريق عن أنسب موقع حسب اتجاه الريح وحالة البحر اليوم.'
+          },
+          {
+            slot: 'العصر (14:30)',
+            tourName: 'Kitesurfing',
+            titleAr: 'جلسة رياضات مائية (كايت سيرف أو باراسيلينج أو جيت سكي)',
+            tipAr: 'الأنشطة المائية بتعتمد على سرعة الرياح وتعليمات السلامة.'
+          },
+          {
+            slot: 'المساء (20:00)',
+            tourName: 'Hurghada Marina & Waterfront',
+            titleAr: 'استراحة في المارينا ومراجعة خطة اليوم التالي',
+            tipAr: 'احفظ الرحلة اللي عجبتك ليوم تاني في جدول إقامتك.'
+          }
+        ],
+        desert: [
+          {
+            slot: 'الصباح (10:00)',
+            tourName: 'Glass-Bottom Boat & Semi-Submarine',
+            titleAr: 'جولة صباحية خفيفة أو راحة في الفندق قبل حرارة الصحراء',
+            tipAr: 'الراحة الصباحية بتخلي تجربة السفاري بعد الظهر أمتع بكتير.'
+          },
+          {
+            slot: 'العصر (15:00)',
+            tourName: 'Quad Bike Safari',
+            titleAr: 'سفاري الصحراء (بيتش باجي / جيب 4x4) بين الجبال والدروب الصحراوية',
+            tipAr: 'البس حذاء مريح، كوفية أو وشاح للغبار، ونظارة واقية.'
+          },
+          {
+            slot: 'المساء (18:00)',
+            tourName: 'Desert Sunset & Stargazing',
+            titleAr: 'غروب الشمس في الصحراء وضيافة بدوية تحت السماء',
+            tipAr: 'لحظات الغروب وسط جبال البحر الأحمر من أجمل مشاهد الرحلة.'
+          }
+        ],
+        culture: [
+          {
+            slot: 'الصباح (09:30)',
+            tourName: 'Hurghada City Tour',
+            titleAr: 'جولة في الغردقة (مسجد الميناء وحلقة السمك والدهار)',
+            tipAr: 'فرصة تشوف الحياة اليومية والأسواق المحلية عن قرب.'
+          },
+          {
+            slot: 'العصر (15:00)',
+            tourName: 'El Dahar Old Town & Local Markets',
+            titleAr: 'تمشية في الدهار واستكشاف التوابل والمنتجات المحلية',
+            tipAr: 'خد وقتك في التفرج والمفاوضة الهادئة.'
+          },
+          {
+            slot: 'المساء (19:30)',
+            tourName: 'Hurghada Marina & Waterfront',
+            titleAr: 'سهرة في مارينا الغردقة وسط الأضواء واليخوت',
+            tipAr: 'ختام ممتع ليوم ثقافي وخفيف.'
+          }
+        ]
+      };
+
+      const GROUP_NOTES = {
+        Solo: 'مناسبة لمرونة المواعيد وسرعة الحركة.',
+        Couple: 'مثالية لأجواء هادئة ولحظات غروب وبحر مميزة.',
+        Family: 'مرتبة لتكون مريحة وآمنة ومناسبة لمختلف الأعمار.',
+        Friends: 'مليانة حركة وحماس وصور جماعية حلوة.'
+      };
+
+      function safeReadJson(key, fallback) {
+        try {
+          const raw = localStorage.getItem(key);
+          if (!raw) return fallback;
+          const parsed = JSON.parse(raw);
+          return parsed ?? fallback;
+        } catch (err) {
+          return fallback;
+        }
+      }
+
+      function safeWriteJson(key, value) {
+        try {
+          localStorage.setItem(key, JSON.stringify(value));
+        } catch (err) {
+          // Ignore storage quota / privacy mode restrictions
+        }
+      }
+
+      let toastTimer = null;
+      function showToast(message) {
+        const toast = document.getElementById('statusToast');
+        if (!toast) return;
+        toast.textContent = message;
+        toast.classList.remove('hidden');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.classList.add('hidden');
+        }, 2600);
+      }
+
+      // =========================================================================
+      // Install Tip Toggle
+      // =========================================================================
+      const installTipBtn = document.getElementById('installTipBtn');
+      const installTipBox = document.getElementById('installTipBox');
+      const closeInstallTipBtn = document.getElementById('closeInstallTipBtn');
+
+      if (installTipBtn && installTipBox) {
+        installTipBtn.addEventListener('click', () => {
+          installTipBox.classList.toggle('hidden');
+        });
+      }
+      if (closeInstallTipBtn && installTipBox) {
+        closeInstallTipBtn.addEventListener('click', () => {
+          installTipBox.classList.add('hidden');
+        });
+      }
+
+      // =========================================================================
+      // Shared Saved Tours Shortlist ('atlantis_daily_saved_tours_v1')
+      // =========================================================================
+      let savedTours = safeReadJson(SAVED_TOURS_KEY, []);
+      if (!Array.isArray(savedTours)) savedTours = [];
+
+      function updateShortlistUI() {
+        safeWriteJson(SAVED_TOURS_KEY, savedTours);
+        const dict = t();
+
+        const countText = String(savedTours.length);
+        const headerCount = document.getElementById('savedToursCount');
+        const shortlistCount = document.getElementById('shortlistCount');
+        const container = document.getElementById('shortlistContainer');
+        const bookingLink = document.getElementById('bookingHandoffLink');
+
+        if (headerCount) headerCount.textContent = countText;
+        if (shortlistCount) shortlistCount.textContent = countText;
+
+        if (bookingLink) {
+          if (savedTours.length === 1) {
+            bookingLink.href = 'booking.html?tour=' + encodeURIComponent(savedTours[0]);
+          } else if (savedTours.length > 1) {
+            bookingLink.href = 'booking.html?tours=' + encodeURIComponent(savedTours.join(', '));
+          } else {
+            bookingLink.href = 'booking.html';
+          }
+        }
+
+        if (!container) return;
+        container.innerHTML = '';
+
+        if (!savedTours.length) {
+          const empty = document.createElement('span');
+          empty.className = 'text-xs text-[#9bc4d4]';
+          empty.textContent = dict.emptyShortlist;
+          container.appendChild(empty);
+        } else {
+          savedTours.forEach((tour, idx) => {
+            const chip = document.createElement('span');
+            chip.className = 'inline-flex items-center gap-2 rounded-full border border-[#e8b967]/50 bg-[#031d30] px-3 py-1 text-xs font-bold text-[#f6d594]';
+
+            const label = document.createElement('span');
+            label.textContent = tour;
+
+            const removeBtn = document.createElement('button');
+            removeBtn.type = 'button';
+            removeBtn.className = 'text-sm leading-none text-red-300 hover:text-red-100';
+            removeBtn.setAttribute('aria-label', formatText(dict.removeTourAria, { tour }));
+            removeBtn.textContent = '×';
+            removeBtn.addEventListener('click', () => {
+              savedTours.splice(idx, 1);
+              updateShortlistUI();
+              renderScheduleSlots();
+            });
+
+            chip.appendChild(label);
+            chip.appendChild(removeBtn);
+            container.appendChild(chip);
+          });
+        }
+      }
+
+      function toggleTourInShortlist(tourName) {
+        if (!tourName) return;
+        const dict = t();
+        const existsIndex = savedTours.indexOf(tourName);
+        if (existsIndex >= 0) {
+          savedTours.splice(existsIndex, 1);
+          showToast(formatText(dict.toastRemovedTour, { tour: tourName }));
+        } else {
+          savedTours.push(tourName);
+          showToast(formatText(dict.toastSavedTour, { tour: tourName }));
+        }
+        updateShortlistUI();
+        renderScheduleSlots();
+      }
+
+      const clearShortlistBtn = document.getElementById('clearShortlistBtn');
+      if (clearShortlistBtn) {
+        clearShortlistBtn.addEventListener('click', () => {
+          savedTours = [];
+          updateShortlistUI();
+          renderScheduleSlots();
+          showToast(t().toastClearedList);
+        });
+      }
+
+      // =========================================================================
+      // 2. DAILY HURGHADA VIBE & DAY PLANNER
+      // =========================================================================
+      let currentMood = 'relaxed';
+      let currentGroup = 'Couple';
+      let checkedSlots = {};
+
+      function getCurrentPlanItems() {
+        const dict = t();
+        const base = dict.plans[currentMood] || dict.plans.relaxed;
+        return base.map((item, index) => ({
+          ...item,
+          id: currentMood + '-' + index
+        }));
+      }
+
+      function renderScheduleSlots() {
+        const dict = t();
+        const slotsEl = document.getElementById('scheduleSlots');
+        const headingEl = document.getElementById('planHeading');
+        const subheadingEl = document.getElementById('planSubheading');
+        if (!slotsEl) return;
+
+        const moodLabel = (dict.moods && dict.moods[currentMood]) || currentMood;
+        const groupLabel = (dict.groups && dict.groups[currentGroup]) || currentGroup;
+
+        if (headingEl) {
+          headingEl.textContent = moodLabel + ' (' + groupLabel + ')';
+        }
+        if (subheadingEl) {
+          subheadingEl.textContent = (dict.groupNotes && dict.groupNotes[currentGroup]) || dict.planSubheading;
+        }
+
+        const items = getCurrentPlanItems();
+        slotsEl.innerHTML = '';
+
+        items.forEach((item) => {
+          const isChecked = Boolean(checkedSlots[item.id]);
+          const isSaved = savedTours.includes(item.tourName);
+
+          const card = document.createElement('div');
+          card.className = 'flex flex-col justify-between gap-3 rounded-2xl border border-white/10 bg-[#062c43]/80 p-3.5 sm:flex-row sm:items-center';
+
+          const left = document.createElement('div');
+          left.className = 'flex items-start gap-3';
+
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.checked = isChecked;
+          checkbox.className = 'mt-1 h-4 w-4 cursor-pointer rounded accent-[#16c5ce]';
+          checkbox.setAttribute('aria-label', item.title);
+          checkbox.addEventListener('change', () => {
+            checkedSlots[item.id] = checkbox.checked;
+            renderScheduleSlots();
+          });
+
+          const textWrap = document.createElement('div');
+          const slotBadge = document.createElement('div');
+          slotBadge.className = 'flex flex-wrap items-center gap-2 text-[11px] font-bold text-[#16c5ce]';
+
+          const slotSpan = document.createElement('span');
+          slotSpan.textContent = item.slot;
+
+          const tourTag = document.createElement('span');
+          tourTag.className = 'rounded-full bg-[#031d30] px-2 py-0.5 text-[#e8b967]';
+          tourTag.textContent = item.tourName;
+
+          slotBadge.appendChild(slotSpan);
+          slotBadge.appendChild(tourTag);
+
+          const title = document.createElement('div');
+          title.className = 'mt-1 text-sm font-bold text-white ' + (isChecked ? 'line-through opacity-60' : '');
+          title.textContent = item.title;
+
+          const tip = document.createElement('div');
+          tip.className = 'mt-0.5 text-xs text-[#a9cedd]';
+          tip.textContent = item.tip;
+
+          textWrap.appendChild(slotBadge);
+          textWrap.appendChild(title);
+          textWrap.appendChild(tip);
+
+          left.appendChild(checkbox);
+          left.appendChild(textWrap);
+
+          const saveBtn = document.createElement('button');
+          saveBtn.type = 'button';
+          saveBtn.className = isSaved
+            ? 'shrink-0 rounded-xl bg-[#e8b967] px-3.5 py-2 text-xs font-extrabold text-[#031d30] transition'
+            : 'shrink-0 rounded-xl border border-[#16c5ce]/50 bg-[#031d30] px-3.5 py-2 text-xs font-bold text-[#9beff3] transition hover:bg-[#16c5ce] hover:text-[#031d30]';
+          saveBtn.textContent = isSaved ? dict.savedTourBtn : dict.saveTourBtn;
+          saveBtn.addEventListener('click', () => toggleTourInShortlist(item.tourName));
+
+          card.appendChild(left);
+          card.appendChild(saveBtn);
+          slotsEl.appendChild(card);
+        });
+      }
+
+      document.querySelectorAll('.mood-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          currentMood = btn.dataset.mood || 'relaxed';
+          document.querySelectorAll('.mood-btn').forEach((b) => {
+            const active = b === btn;
+            b.className = active
+              ? 'mood-btn rounded-2xl border border-[#16c5ce] bg-[#16c5ce]/20 p-3 text-left text-xs font-extrabold text-white transition sm:text-sm'
+              : 'mood-btn rounded-2xl border border-white/15 bg-[#062c43] p-3 text-left text-xs font-bold text-[#cfe7f0] transition hover:border-[#16c5ce]/50 sm:text-sm';
+          });
+          renderScheduleSlots();
+        });
+      });
+
+      document.querySelectorAll('.group-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          currentGroup = btn.dataset.group || 'Couple';
+          document.querySelectorAll('.group-btn').forEach((b) => {
+            const active = b === btn;
+            b.className = active
+              ? 'group-btn rounded-xl border border-[#e8b967] bg-[#e8b967]/20 px-3 py-2.5 text-xs font-extrabold text-[#f8dfad] transition'
+              : 'group-btn rounded-xl border border-white/15 bg-[#062c43] px-3 py-2.5 text-xs font-bold text-[#cfe7f0] transition hover:border-[#e8b967]/50';
+          });
+          renderScheduleSlots();
+        });
+      });
+
+      const moodsOrder = ['relaxed', 'adventure', 'desert', 'culture'];
+      const generatePlanBtn = document.getElementById('generatePlanBtn');
+      if (generatePlanBtn) {
+        generatePlanBtn.addEventListener('click', () => {
+          const nextIdx = (moodsOrder.indexOf(currentMood) + 1) % moodsOrder.length;
+          const nextMood = moodsOrder[nextIdx];
+          const targetBtn = document.querySelector('.mood-btn[data-mood="' + nextMood + '"]');
+          if (targetBtn) {
+            targetBtn.click();
+          } else {
+            currentMood = nextMood;
+            renderScheduleSlots();
+          }
+          showToast(t().toastCycledPlan);
+        });
+      }
+
+      const copyPlanBtn = document.getElementById('copyPlanBtn');
+      if (copyPlanBtn) {
+        copyPlanBtn.addEventListener('click', () => {
+          const dict = t();
+          const groupLabel = (dict.groups && dict.groups[currentGroup]) || currentGroup;
+          const items = getCurrentPlanItems();
+          const lines = [
+            dict.copyHeader,
+            dict.copyGroupPrefix + groupLabel,
+            ''
+          ];
+          items.forEach((it) => {
+            const mark = checkedSlots[it.id] ? '[✓]' : '[•]';
+            lines.push(mark + ' ' + it.slot + ': ' + it.title + ' (' + it.tourName + ')');
+          });
+          if (savedTours.length) {
+            lines.push('');
+            lines.push(dict.copySavedPrefix + savedTours.join(', '));
+          }
+          const summaryText = lines.join('\n');
+
+          let copied = false;
+          try {
+            const helper = document.createElement('textarea');
+            helper.value = summaryText;
+            helper.setAttribute('readonly', '');
+            helper.style.position = 'fixed';
+            helper.style.opacity = '0';
+            document.body.appendChild(helper);
+            helper.select();
+            copied = document.execCommand('copy');
+            document.body.removeChild(helper);
+          } catch (err) {
+            copied = false;
+          }
+
+          if (copied) {
+            showToast(dict.toastCopiedPlan);
+          } else {
+            showToast(dict.toastCopyFailed);
+          }
+        });
+      }
+
+      // =========================================================================
+      // 1. RED SEA REEF & TREASURE RUN (RESPONSIVE CANVAS GAME)
+      // =========================================================================
+      const canvas = document.getElementById('reefCanvas');
+      const ctx = canvas ? canvas.getContext('2d') : null;
+      const overlay = document.getElementById('gameOverlay');
+      const overlayBadge = document.getElementById('overlayBadge');
+      const overlayTitle = document.getElementById('overlayTitle');
+      const overlayDesc = document.getElementById('overlayDesc');
+      const overlayActionBtn = document.getElementById('overlayActionBtn');
+      const startRestartBtn = document.getElementById('startRestartBtn');
+      const pauseGameBtn = document.getElementById('pauseGameBtn');
+      const moveUpBtn = document.getElementById('moveUpBtn');
+      const moveDownBtn = document.getElementById('moveDownBtn');
+
+      let bestScore = Number(safeReadJson(BEST_SCORE_KEY, 0)) || 0;
+      let streak = Number(safeReadJson(STREAK_KEY, 0)) || 0;
+      let unlockedFacts = safeReadJson(UNLOCKED_FACTS_KEY, []);
+      if (!Array.isArray(unlockedFacts)) unlockedFacts = [];
+
+      function syncScoreboardUI(currentScore, lives) {
+        const bestStr = String(bestScore);
+        const headerBest = document.getElementById('headerBestScore');
+        const gameBest = document.getElementById('gameBestScore');
+        const gameScore = document.getElementById('gameScore');
+        const gameLives = document.getElementById('gameLives');
+        const streakEl = document.getElementById('streakCount');
+
+        if (headerBest) headerBest.textContent = bestStr;
+        if (gameBest) gameBest.textContent = bestStr;
+        if (gameScore) gameScore.textContent = String(currentScore);
+        if (streakEl) streakEl.textContent = String(streak);
+        if (gameLives) {
+          const safeLives = Math.max(0, lives);
+          gameLives.textContent = '♥'.repeat(safeLives) + '♡'.repeat(Math.max(0, 3 - safeLives));
+        }
+      }
+
+      function renderFactsGrid() {
+        const dict = t();
+        const spots = dict.spots || I18N.en.spots;
+        const grid = document.getElementById('factsGrid');
+        const progress = document.getElementById('factsProgressText');
+        if (progress) {
+          progress.textContent = unlockedFacts.length + ' / ' + spots.length + ' ' + dict.factsUnlockedSuffix;
+        }
+        if (!grid) return;
+        grid.innerHTML = '';
+
+        spots.forEach((spot) => {
+          const isUnlocked = unlockedFacts.includes(spot.id);
+          const card = document.createElement('div');
+          card.className = isUnlocked
+            ? 'rounded-xl border border-[#16c5ce]/45 bg-[#062c43] p-3 text-left'
+            : 'rounded-xl border border-white/10 bg-[#052134]/70 p-3 text-left opacity-75';
+
+          const header = document.createElement('div');
+          header.className = 'flex items-center justify-between gap-2';
+
+          const title = document.createElement('div');
+          title.className = 'text-xs font-extrabold text-white';
+          title.textContent = spot.title;
+
+          const statusTag = document.createElement('span');
+          statusTag.className = isUnlocked
+            ? 'shrink-0 rounded-full bg-[#16c5ce]/20 px-2 py-0.5 text-[10px] font-bold text-[#7df0f6]'
+            : 'shrink-0 rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-bold text-[#9ac2d2]';
+          statusTag.textContent = isUnlocked ? dict.factUnlockedBadge : dict.factLockedBadge;
+
+          header.appendChild(title);
+          header.appendChild(statusTag);
+
+          const body = document.createElement('p');
+          body.className = 'mt-1.5 text-[11px] leading-relaxed text-[#c6e0ea]';
+          body.textContent = isUnlocked
+            ? spot.fact
+            : formatText(dict.factLockedDesc, { place: spot.place });
+
+          card.appendChild(header);
+          card.appendChild(body);
+          grid.appendChild(card);
+        });
+      }
+
+      function checkFactUnlocks(currentScore) {
+        const spots = t().spots || I18N.en.spots;
+        const shouldUnlockCount = Math.min(spots.length, Math.floor(currentScore / 50));
+        let newlyUnlocked = null;
+        for (let i = 0; i < shouldUnlockCount; i++) {
+          const spot = spots[i];
+          if (!unlockedFacts.includes(spot.id)) {
+            unlockedFacts.push(spot.id);
+            newlyUnlocked = spot.title;
+          }
+        }
+        if (newlyUnlocked) {
+          safeWriteJson(UNLOCKED_FACTS_KEY, unlockedFacts);
+          renderFactsGrid();
+          showToast(formatText(t().factUnlockedToast, { title: newlyUnlocked }));
+        }
+      }
+
+      // Game State
+      let viewWidth = 600;
+      let viewHeight = 360;
+      let gameState = 'idle'; // 'idle' | 'playing' | 'paused' | 'gameover'
+      let score = 0;
+      let lives = 3;
+      let lastFrameTime = 0;
+      let spawnTimer = 0;
+      let bubbleTimer = 0;
+      let items = [];
+      let bubbles = [];
+
+      const sub = {
+        x: 84,
+        y: 170,
+        r: 20,
+        vy: 0,
+        moveDir: 0,
+        invulnTimer: 0
+      };
+
+      function refreshOverlayTexts() {
+        const dict = t();
+        if (gameState === 'idle') {
+          if (overlayBadge) overlayBadge.textContent = dict.overlayIdleBadge;
+          if (overlayTitle) overlayTitle.textContent = dict.overlayIdleTitle;
+          if (overlayDesc) overlayDesc.textContent = dict.overlayIdleDesc;
+          if (overlayActionBtn) overlayActionBtn.textContent = dict.overlayIdleBtn;
+          if (startRestartBtn) startRestartBtn.textContent = dict.startBtn;
+          if (pauseGameBtn) pauseGameBtn.textContent = dict.pauseBtn;
+        } else if (gameState === 'paused') {
+          if (overlayBadge) overlayBadge.textContent = dict.overlayPausedBadge;
+          if (overlayTitle) overlayTitle.textContent = dict.overlayPausedTitle;
+          if (overlayDesc) overlayDesc.textContent = dict.overlayPausedDesc;
+          if (overlayActionBtn) overlayActionBtn.textContent = dict.overlayPausedBtn;
+          if (startRestartBtn) startRestartBtn.textContent = dict.restartBtn;
+          if (pauseGameBtn) pauseGameBtn.textContent = dict.resumeBtn;
+        } else if (gameState === 'gameover') {
+          if (overlayBadge) overlayBadge.textContent = dict.overlayGameOverBadge;
+          if (overlayDesc) overlayDesc.textContent = formatText(dict.overlayGameOverDesc, { best: bestScore });
+          if (overlayActionBtn) overlayActionBtn.textContent = dict.overlayGameOverBtn;
+          if (startRestartBtn) startRestartBtn.textContent = dict.restartBtn;
+          if (pauseGameBtn) pauseGameBtn.textContent = dict.pauseBtn;
+        } else {
+          if (startRestartBtn) startRestartBtn.textContent = dict.restartBtn;
+          if (pauseGameBtn) pauseGameBtn.textContent = dict.pauseBtn;
+        }
+      }
+
+      function applyLanguage(lang) {
+        currentLang = lang === 'de' ? 'de' : 'en';
+        try {
+          localStorage.setItem(LANG_KEY, currentLang);
+        } catch (err) {
+          // Ignore storage error
+        }
+
+        document.documentElement.lang = currentLang;
+        document.documentElement.dir = 'ltr';
+
+        document.querySelectorAll('.lang-btn').forEach((btn) => {
+          const isSelected = btn.dataset.lang === currentLang;
+          btn.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+          btn.className = isSelected
+            ? 'lang-btn rounded-full bg-[#16c5ce] px-2.5 py-1 text-[#031d30] transition'
+            : 'lang-btn rounded-full px-2.5 py-1 text-[#c9e3ed] transition hover:text-white';
+        });
+
+        const dict = t();
+        document.title = dict.pageTitle;
+        setTextById('brandTaglineText', dict.brandTagline);
+        setTextById('navHomeLink', dict.navHome);
+        setTextById('navToursLink', dict.navTours);
+        setTextById('navPlannerLink', dict.navPlanner);
+        setTextById('navGameLink', dict.navGame);
+        setTextById('bestScoreLabel', dict.bestScoreLabel);
+        setTextById('installTipBtn', dict.installTipBtn);
+        setTextById('headerBookBtn', dict.headerBookBtn);
+        setHtmlById('installTipText', dict.installTipHtml);
+        setTextById('closeInstallTipBtn', dict.closeInstallTipBtn);
+
+        setTextById('heroBadgeText', dict.heroBadge);
+        setHtmlById('heroTitleText', dict.heroTitleHtml);
+        setTextById('heroSubtitleText', dict.heroSubtitle);
+        setTextById('heroPlayCta', dict.heroPlayCta);
+        setTextById('heroPlanCta', dict.heroPlanCta);
+        setTextById('heroAllToursCta', dict.heroAllToursCta);
+
+        setTextById('streakLabelText', dict.streakLabel);
+        setTextById('streakSubText', dict.streakSub);
+        setTextById('savedToursLabelText', dict.savedToursLabel);
+        setTextById('savedToursSubText', dict.savedToursSub);
+        setHtmlById('dailyTipBox', dict.dailyTipHtml);
+
+        setTextById('gameSectionTitle', dict.gameSectionTitle);
+        setTextById('gameSectionSubtitle', dict.gameSectionSubtitle);
+        setTextById('scoreStatLabel', dict.scoreStatLabel);
+        setTextById('bestStatLabel', dict.bestStatLabel);
+        setTextById('livesStatLabel', dict.livesStatLabel);
+        if (moveUpBtn) moveUpBtn.setAttribute('aria-label', dict.moveUpAria);
+        if (moveDownBtn) moveDownBtn.setAttribute('aria-label', dict.moveDownAria);
+        setHtmlById('controlsHintText', dict.controlsHintHtml);
+        setTextById('factsHeadingText', dict.factsHeading);
+
+        setTextById('plannerSectionTitle', dict.plannerSectionTitle);
+        setTextById('plannerSectionSubtitle', dict.plannerSectionSubtitle);
+        setTextById('moodStepLabel', dict.moodStepLabel);
+        const relaxedBtn = document.querySelector('.mood-btn[data-mood="relaxed"]');
+        const adventureBtn = document.querySelector('.mood-btn[data-mood="adventure"]');
+        const desertBtn = document.querySelector('.mood-btn[data-mood="desert"]');
+        const cultureBtn = document.querySelector('.mood-btn[data-mood="culture"]');
+        if (relaxedBtn) relaxedBtn.textContent = dict.moodRelaxed;
+        if (adventureBtn) adventureBtn.textContent = dict.moodAdventure;
+        if (desertBtn) desertBtn.textContent = dict.moodDesert;
+        if (cultureBtn) cultureBtn.textContent = dict.moodCulture;
+
+        setTextById('groupStepLabel', dict.groupStepLabel);
+        const soloBtn = document.querySelector('.group-btn[data-group="Solo"]');
+        const coupleBtn = document.querySelector('.group-btn[data-group="Couple"]');
+        const familyBtn = document.querySelector('.group-btn[data-group="Family"]');
+        const friendsBtn = document.querySelector('.group-btn[data-group="Friends"]');
+        if (soloBtn) soloBtn.textContent = dict.groupSolo;
+        if (coupleBtn) coupleBtn.textContent = dict.groupCouple;
+        if (familyBtn) familyBtn.textContent = dict.groupFamily;
+        if (friendsBtn) friendsBtn.textContent = dict.groupFriends;
+
+        setTextById('generatePlanBtn', dict.generatePlanBtn);
+        setTextById('copyPlanBtn', dict.copyPlanBtn);
+        setTextById('shortlistHeadingText', dict.shortlistHeading);
+        setTextById('exploreAllToursLink', dict.exploreAllToursLink);
+        setTextById('clearShortlistBtn', dict.clearShortlistBtn);
+        setTextById('bookingHandoffLink', dict.bookingHandoffLink);
+
+        setTextById('footerBrandText', dict.footerBrand);
+        setTextById('footerHomeLink', dict.footerHome);
+        setTextById('footerToursLink', dict.footerTours);
+        setTextById('footerBookingLink', dict.footerBooking);
+
+        refreshOverlayTexts();
+        renderFactsGrid();
+        updateShortlistUI();
+        renderScheduleSlots();
+      }
+
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          applyLanguage(btn.dataset.lang || 'en');
+        });
+      });
+
+      function resizeCanvas() {
+        if (!canvas || !ctx) return;
+        const rect = canvas.getBoundingClientRect();
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        viewWidth = Math.max(280, rect.width);
+        viewHeight = Math.max(220, rect.height);
+        canvas.width = Math.round(viewWidth * dpr);
+        canvas.height = Math.round(viewHeight * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        sub.x = Math.min(Math.max(58, viewWidth * 0.14), 120);
+        sub.y = Math.min(Math.max(sub.r + 12, sub.y), viewHeight - sub.r - 12);
+      }
+
+      function resetAndStartGame() {
+        resizeCanvas();
+        score = 0;
+        lives = 3;
+        items = [];
+        bubbles = [];
+        spawnTimer = 0.4;
+        bubbleTimer = 0;
+        sub.y = viewHeight * 0.5;
+        sub.vy = 0;
+        sub.invulnTimer = 0;
+        gameState = 'playing';
+
+        if (overlay) overlay.classList.add('hidden');
+        if (startRestartBtn) startRestartBtn.textContent = 'إعادة التشغيل';
+        if (pauseGameBtn) pauseGameBtn.textContent = 'إيقاف مؤقت';
+        syncScoreboardUI(score, lives);
+      }
+
+      function endGame() {
+        gameState = 'gameover';
+        if (score > 0) {
+          streak += 1;
+          safeWriteJson(STREAK_KEY, streak);
+        }
+        if (score > bestScore) {
+          bestScore = score;
+          safeWriteJson(BEST_SCORE_KEY, bestScore);
+        }
+        syncScoreboardUI(score, 0);
+        refreshOverlayTexts();
+
+        if (overlay && overlayTitle) {
+          overlayTitle.textContent = score + ' pts';
+          overlay.classList.remove('hidden');
+        }
+      }
+
+      function togglePauseGame() {
+        if (gameState === 'playing') {
+          gameState = 'paused';
+          refreshOverlayTexts();
+          if (overlay) overlay.classList.remove('hidden');
+        } else if (gameState === 'paused') {
+          gameState = 'playing';
+          lastFrameTime = performance.now();
+          refreshOverlayTexts();
+          if (overlay) overlay.classList.add('hidden');
+        }
+      }
+
+      function spawnEntity() {
+        const isHazard = Math.random() < Math.min(0.45, 0.28 + score / 500);
+        const type = isHazard
+          ? (Math.random() < 0.55 ? 'urchin' : 'mine')
+          : (Math.random() < 0.35 ? 'star' : 'pearl');
+
+        const radius = type === 'star' ? 15 : 14;
+        const margin = radius + 28;
+        const y = margin + Math.random() * Math.max(40, viewHeight - margin * 2);
+        const speedBoost = Math.min(190, score * 0.45);
+        const speed = (type === 'urchin' ? 145 : 165) + speedBoost + Math.random() * 45;
+
+        items.push({
+          type,
+          x: viewWidth + radius + 10,
+          y,
+          r: radius,
+          vx: speed,
+          phase: Math.random() * Math.PI * 2
+        });
+      }
+
+      function drawBackground() {
+        if (!ctx) return;
+        const grad = ctx.createLinearGradient(0, 0, 0, viewHeight);
+        grad.addColorStop(0, '#073c5c');
+        grad.addColorStop(0.6, '#05273d');
+        grad.addColorStop(1, '#031522');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, viewWidth, viewHeight);
+
+        // Subtle light rays from surface
+        ctx.save();
+        ctx.fillStyle = 'rgba(22, 197, 206, 0.05)';
+        for (let i = 0; i < 3; i++) {
+          const baseX = ((viewWidth * (0.2 + i * 0.32)) + (performance.now() * 0.015)) % (viewWidth + 120) - 60;
+          ctx.beginPath();
+          ctx.moveTo(baseX, 0);
+          ctx.lineTo(baseX + 75, 0);
+          ctx.lineTo(baseX + 160, viewHeight);
+          ctx.lineTo(baseX + 45, viewHeight);
+          ctx.closePath();
+          ctx.fill();
+        }
+        ctx.restore();
+
+        // Ambient bubbles
+        ctx.fillStyle = 'rgba(180, 244, 248, 0.28)';
+        bubbles.forEach((b) => {
+          ctx.beginPath();
+          ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        // Seabed coral silhouette at bottom
+        ctx.fillStyle = '#041c2c';
+        ctx.fillRect(0, viewHeight - 16, viewWidth, 16);
+      }
+
+      function drawSubmarine() {
+        if (!ctx) return;
+        ctx.save();
+        if (sub.invulnTimer > 0 && Math.floor(sub.invulnTimer * 12) % 2 === 0) {
+          ctx.globalAlpha = 0.45;
+        }
+
+        const tilt = Math.max(-0.25, Math.min(0.25, sub.vy * 0.001));
+        ctx.translate(sub.x, sub.y);
+        ctx.rotate(tilt);
+
+        // Propeller
+        const propOffset = Math.sin(performance.now() * 0.03) * 4;
+        ctx.strokeStyle = '#9beff3';
+        ctx.lineWidth = 2.5;
+        ctx.beginPath();
+        ctx.moveTo(-26, -6 + propOffset);
+        ctx.lineTo(-26, 6 - propOffset);
+        ctx.stroke();
+
+        // Hull
+        ctx.fillStyle = '#e8b967';
+        ctx.beginPath();
+        ctx.ellipse(0, 0, 24, 15, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Top conning tower
+        ctx.fillStyle = '#d49f46';
+        ctx.beginPath();
+        ctx.roundRect(-7, -21, 14, 9, 4);
+        ctx.fill();
+
+        // Porthole window
+        ctx.fillStyle = '#16c5ce';
+        ctx.beginPath();
+        ctx.arc(8, -1, 6.5, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.strokeStyle = '#031d30';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        ctx.restore();
+      }
+
+      function drawItems() {
+        if (!ctx) return;
+        items.forEach((it) => {
+          ctx.save();
+          ctx.translate(it.x, it.y);
+
+          if (it.type === 'pearl') {
+            ctx.fillStyle = '#fff5dc';
+            ctx.beginPath();
+            ctx.arc(0, 0, it.r * 0.85, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.strokeStyle = '#e8b967';
+            ctx.lineWidth = 2.5;
+            ctx.stroke();
+          } else if (it.type === 'star') {
+            ctx.fillStyle = '#16c5ce';
+            ctx.beginPath();
+            for (let i = 0; i < 10; i++) {
+              const rad = i % 2 === 0 ? it.r : it.r * 0.48;
+              const ang = (i * Math.PI) / 5 - Math.PI / 2;
+              const px = Math.cos(ang) * rad;
+              const py = Math.sin(ang) * rad;
+              if (i === 0) ctx.moveTo(px, py);
+              else ctx.lineTo(px, py);
+            }
+            ctx.closePath();
+            ctx.fill();
+          } else if (it.type === 'urchin') {
+            ctx.strokeStyle = '#fb7185';
+            ctx.lineWidth = 2.2;
+            for (let s = 0; s < 8; s++) {
+              const a = (s * Math.PI) / 4 + it.phase;
+              ctx.beginPath();
+              ctx.moveTo(0, 0);
+              ctx.lineTo(Math.cos(a) * (it.r + 5), Math.sin(a) * (it.r + 5));
+              ctx.stroke();
+            }
+            ctx.fillStyle = '#be123c';
+            ctx.beginPath();
+            ctx.arc(0, 0, it.r * 0.72, 0, Math.PI * 2);
+            ctx.fill();
+          } else if (it.type === 'mine') {
+            ctx.fillStyle = '#334155';
+            ctx.beginPath();
+            ctx.arc(0, 0, it.r * 0.82, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.strokeStyle = '#f59e0b';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+          }
+
+          ctx.restore();
+        });
+      }
+
+      function updateGame(dt) {
+        bubbleTimer += dt;
+        if (bubbleTimer >= 0.25) {
+          bubbleTimer = 0;
+          bubbles.push({
+            x: Math.random() * viewWidth,
+            y: viewHeight - 18,
+            r: 1.5 + Math.random() * 2.5,
+            vy: 35 + Math.random() * 35
+          });
+        }
+        bubbles.forEach((b) => {
+          b.y -= b.vy * dt;
+        });
+        bubbles = bubbles.filter((b) => b.y > 0);
+
+        if (gameState !== 'playing') return;
+
+        if (sub.invulnTimer > 0) {
+          sub.invulnTimer = Math.max(0, sub.invulnTimer - dt);
+        }
+
+        const accel = 1350;
+        if (sub.moveDir !== 0) {
+          sub.vy += sub.moveDir * accel * dt;
+        } else {
+          sub.vy *= Math.pow(0.04, dt);
+        }
+        sub.vy = Math.max(-320, Math.min(320, sub.vy));
+        sub.y += sub.vy * dt;
+
+        const minY = sub.r + 10;
+        const maxY = viewHeight - sub.r - 18;
+        if (sub.y < minY) {
+          sub.y = minY;
+          sub.vy = 0;
+        } else if (sub.y > maxY) {
+          sub.y = maxY;
+          sub.vy = 0;
+        }
+
+        spawnTimer -= dt;
+        if (spawnTimer <= 0) {
+          spawnEntity();
+          const interval = Math.max(0.55, 1.15 - score / 700);
+          spawnTimer = interval + Math.random() * 0.25;
+        }
+
+        const remaining = [];
+        items.forEach((it) => {
+          it.x -= it.vx * dt;
+          it.phase += dt * 4;
+          if (it.type === 'urchin') {
+            it.y += Math.sin(it.phase) * 22 * dt;
+          }
+
+          const dx = it.x - sub.x;
+          const dy = it.y - sub.y;
+          const dist = Math.hypot(dx, dy);
+          const hitDist = it.r + sub.r * 0.85;
+
+          if (dist < hitDist) {
+            if (it.type === 'pearl' || it.type === 'star') {
+              score += it.type === 'star' ? 25 : 15;
+              if (score > bestScore) {
+                bestScore = score;
+                safeWriteJson(BEST_SCORE_KEY, bestScore);
+              }
+              checkFactUnlocks(score);
+              syncScoreboardUI(score, lives);
+              return;
+            } else if (sub.invulnTimer <= 0) {
+              lives -= 1;
+              sub.invulnTimer = 1.1;
+              syncScoreboardUI(score, lives);
+              if (lives <= 0) {
+                endGame();
+                return;
+              }
+            }
+          }
+
+          if (it.x + it.r > -20) {
+            remaining.push(it);
+          }
+        });
+        items = remaining;
+      }
+
+      function gameLoop(now) {
+        const dt = Math.min(0.05, Math.max(0.001, (now - (lastFrameTime || now)) / 1000));
+        lastFrameTime = now;
+
+        updateGame(dt);
+        drawBackground();
+        drawItems();
+        drawSubmarine();
+
+        requestAnimationFrame(gameLoop);
+      }
+
+      // Controls (Keyboard + Buttons + Touch Drag)
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W') {
+          sub.moveDir = -1;
+        } else if (e.key === 'ArrowDown' || e.key === 's' || e.key === 'S') {
+          sub.moveDir = 1;
+        } else if (e.key === ' ' && (gameState === 'playing' || gameState === 'paused')) {
+          e.preventDefault();
+          togglePauseGame();
+        }
+      });
+
+      window.addEventListener('keyup', (e) => {
+        if (
+          e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W' ||
+          e.key === 'ArrowDown' || e.key === 's' || e.key === 'S'
+        ) {
+          sub.moveDir = 0;
+        }
+      });
+
+      function bindHoldButton(btn, dir) {
+        if (!btn) return;
+        const startHold = () => { sub.moveDir = dir; };
+        const stopHold = () => { if (sub.moveDir === dir) sub.moveDir = 0; };
+        btn.addEventListener('mousedown', startHold);
+        btn.addEventListener('touchstart', (e) => { e.preventDefault(); startHold(); }, { passive: false });
+        ['mouseup', 'mouseleave', 'touchend', 'touchcancel'].forEach((ev) => {
+          btn.addEventListener(ev, stopHold);
+        });
+      }
+
+      bindHoldButton(moveUpBtn, -1);
+      bindHoldButton(moveDownBtn, 1);
+
+      if (canvas) {
+        canvas.addEventListener('touchmove', (e) => {
+          if (gameState !== 'playing' || !e.touches.length) return;
+          e.preventDefault();
+          const rect = canvas.getBoundingClientRect();
+          const touchY = e.touches[0].clientY - rect.top;
+          sub.y = Math.min(Math.max(sub.r + 10, touchY), viewHeight - sub.r - 18);
+          sub.vy = 0;
+        }, { passive: false });
+      }
+
+      if (overlayActionBtn) {
+        overlayActionBtn.addEventListener('click', () => {
+          if (gameState === 'paused') {
+            togglePauseGame();
+          } else {
+            resetAndStartGame();
+          }
+        });
+      }
+
+      if (startRestartBtn) {
+        startRestartBtn.addEventListener('click', resetAndStartGame);
+      }
+
+      if (pauseGameBtn) {
+        pauseGameBtn.addEventListener('click', togglePauseGame);
+      }
+
+      window.addEventListener('resize', resizeCanvas);
+
+      // Initialize UI & Start Loop on Window Load
+      window.addEventListener('load', () => {
+        resizeCanvas();
+        syncScoreboardUI(0, 3);
+        applyLanguage(currentLang);
+        lastFrameTime = performance.now();
+        requestAnimationFrame(gameLoop);
+      });
+    })();
+  </script>
+</body>
+</html>
