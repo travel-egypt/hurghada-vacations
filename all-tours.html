@@ -156,12 +156,12 @@ footer a:hover{color:var(--gold)}
 .orange-bay-final-quote h3{font-size:clamp(25px,4vw,34px);color:#fff;margin:0 0 12px}
 .orange-bay-final-quote p{color:#e5f2f7;max-width:760px;margin:0 auto 20px}
 .orange-bay-final-quote a{display:inline-block;background:var(--gold);color:var(--navy);font-weight:bold;padding:12px 24px;border-radius:25px}
-.orange-bay-lightbox{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.94);align-items:center;justify-content:center;padding:55px 20px 25px}
+.orange-bay-lightbox{display:none;position:fixed;inset:0;z-index:2000;background:rgba(1,16,27,.96);align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(8px)}
 .orange-bay-lightbox.open{display:flex}
-.orange-bay-lightbox img{display:block;max-width:95vw;max-height:85vh;object-fit:contain;border-radius:8px}
+.orange-bay-lightbox img{display:block;max-width:100%;max-height:70vh;object-fit:contain;border-radius:12px;grid-area:photo;min-width:0;background:#031d30}
 .orange-bay-lightbox-close{position:absolute;top:10px;right:22px;border:0;background:transparent;color:#fff;font-size:44px;line-height:1;cursor:pointer}
-.orange-bay-lightbox-caption{position:absolute;bottom:12px;left:15px;right:15px;text-align:center;color:#fff;font-size:13px}
-@media(max-width:800px){.orange-bay-two-col{grid-template-columns:1fr;gap:18px}.orange-bay-features{grid-template-columns:repeat(2,minmax(0,1fr))}.orange-bay-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.orange-bay-hero{min-height:370px}}
+.orange-bay-lightbox-caption{color:#d5e5ec;font-size:14px;line-height:1.7;text-align:left}.orange-bay-lightbox-panel{position:relative;width:min(1100px,100%);max-height:94vh;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.75fr);grid-template-areas:"photo info";align-items:center;gap:28px;padding:24px;border:1px solid #ffffff25;border-radius:20px;background:#062c43;box-shadow:0 25px 80px #0008}.orange-bay-lightbox-info{color:#fff;grid-area:info}.orange-bay-lightbox-info h3{color:#fff;font-size:clamp(24px,3vw,34px);line-height:1.2;margin:0 0 13px}.orange-bay-lightbox-kicker{color:#16c5ce;font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}.orange-bay-lightbox-count{color:#9fbac7;font-size:12px;font-weight:bold;margin-top:18px}.orange-bay-lightbox-close{position:absolute;top:10px;right:12px;z-index:4;width:42px;height:42px;border:1px solid #ffffff40;border-radius:50%;background:#031d30;color:#fff;font-size:30px;line-height:1;cursor:pointer}.orange-bay-lightbox-nav{position:absolute;top:50%;z-index:4;width:44px;height:44px;border:1px solid #ffffff55;border-radius:50%;background:#031d30d9;color:#fff;font-size:28px;cursor:pointer;transform:translateY(-50%)}.orange-bay-lightbox-prev{left:12px}.orange-bay-lightbox-next{right:calc(34% + 24px)}.orange-bay-gallery button,.tour-media-grid img{cursor:zoom-in}.tour-media-grid img{transition:transform .25s ease,box-shadow .25s ease}.tour-media-grid img:hover{transform:translateY(-2px);box-shadow:0 8px 20px #092d4625}.tour-video-grid video,.tour-feature-video video{max-width:100%;aspect-ratio:16/9;object-fit:contain;touch-action:pan-y}.video-fallback{display:none;margin-top:8px;padding:9px 12px;border-radius:8px;background:#fff4e5;color:#76501c;font-size:12px}.video-fallback.visible{display:block}.video-fallback a{font-weight:bold;text-decoration:underline}
+@media(max-width:800px){.orange-bay-lightbox-panel{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto;grid-template-areas:"photo" "info";gap:12px;padding:16px;max-height:96vh}.orange-bay-lightbox img{max-height:55vh;width:100%}.orange-bay-lightbox-info h3{font-size:23px;margin-bottom:6px}.orange-bay-lightbox-caption{font-size:13px}.orange-bay-lightbox-count{margin-top:8px}.orange-bay-lightbox-nav{top:30vh}.orange-bay-lightbox-next{right:22px}.orange-bay-lightbox-prev{left:22px}.orange-bay-two-col{grid-template-columns:1fr;gap:18px}.orange-bay-features{grid-template-columns:repeat(2,minmax(0,1fr))}.orange-bay-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.orange-bay-hero{min-height:370px}}
 @media(max-width:480px){.orange-bay-features{grid-template-columns:1fr}.orange-bay-gallery{gap:9px}.orange-bay-gallery button{border-radius:8px}.orange-bay-story{padding:35px 0 50px}}
 /* =============== END ORANGE BAY FEATURE =============== */
 
@@ -354,10 +354,10 @@ access arrangements and included services should be confirmed when booking.
 <summary><strong>View Mahmya Island Photos &amp; Videos</strong></summary>
 <p>Watch the four Mahmya videos uploaded for this island experience.</p>
 <div class="tour-video-grid">
-<div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/Mahmeya1.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 1</div></div>
-<div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/Mahmeya2.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 2</div></div>
-<div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/Mahmeya3.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 3</div></div>
-<div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/Mahmeya4.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 4</div></div>
+<div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Mahmeya1.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 1</div></div>
+<div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Mahmeya2.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 2</div></div>
+<div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Mahmeya3.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 3</div></div>
+<div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Mahmeya4.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 4</div></div>
 </div>
 </details><div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-mahmya-island">View Photos &amp; Videos</a></div>
 </div>
@@ -580,7 +580,7 @@ before the trip.
 <p>Take photographs, enjoy the beach, explore the water and let the rhythm of the island replace the rush of daily life. The best part is often the feeling of having nowhere else you need to be.</p>
 </div>
 </div>
-<div class="tour-feature-video"><h3>Orange Bay Video Experience</h3><video controls="" playsinline="" poster="assets/images/IMG-20261117-WA0011.jpg" preload="metadata"><source src="assets/videos/Orange.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><p class="tour-video-caption">A video from the Orange Bay collection.</p></div><div class="orange-bay-gallery-head">
+<div class="tour-feature-video"><h3>Orange Bay Video Experience</h3><video controls="" playsinline="" webkit-playsinline="true" poster="assets/images/IMG-20261117-WA0011.jpg" preload="metadata"><source src="assets/videos/Orange.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><p class="tour-video-caption">A video from the Orange Bay collection.</p></div><div class="orange-bay-gallery-head">
 <div class="orange-bay-label">The Orange Bay Experience</div>
 <h2 class="orange-bay-heading">Why Visit Orange Bay?</h2>
 <p>Beautiful scenery, time by the sea and the chance to make your own island memories.</p>
@@ -628,10 +628,14 @@ before the trip.
 </div>
 </div>
 </section>
-<div aria-label="Orange Bay photo viewer" aria-modal="true" class="orange-bay-lightbox" id="orangeBayLightbox" role="dialog">
+<div aria-label="Photo viewer" aria-modal="true" aria-hidden="true" class="orange-bay-lightbox" id="orangeBayLightbox" role="dialog">
+<div class="orange-bay-lightbox-panel">
 <button aria-label="Close image viewer" class="orange-bay-lightbox-close" type="button">×</button>
+<button aria-label="Previous photo" class="orange-bay-lightbox-nav orange-bay-lightbox-prev" type="button">‹</button>
 <img alt="" src=""/>
-<div class="orange-bay-lightbox-caption"></div>
+<button aria-label="Next photo" class="orange-bay-lightbox-nav orange-bay-lightbox-next" type="button">›</button>
+<div class="orange-bay-lightbox-info"><div class="orange-bay-lightbox-kicker">Atlantis Photo Stories</div><h3 class="orange-bay-lightbox-title"></h3><div class="orange-bay-lightbox-caption"></div><div class="orange-bay-lightbox-count"></div></div>
+</div>
 </div>
 <!-- END ORANGE BAY FULL STORY -->
 <!-- SNORKELING AND DIVING -->
@@ -833,7 +837,7 @@ naturally according to weather, water clarity and location.
 <h4>Experience Highlights</h4>
 <ul><li>Explore a beautiful Red Sea bay and its coastal scenery.</li><li>Snorkeling in permitted areas, subject to sea conditions.</li><li>Respectful wildlife watching without touching or disturbing animals.</li></ul>
 <div class="note">Wildlife sightings cannot be promised. Follow local guides and protected-area rules.</div>
-<details class="tour-media" id="media-abu-dabbab-bay"><summary><strong>Watch the Abu Dabbab Video</strong></summary><div class="tour-video-grid"><div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/Abo%20Dabbab%20.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Abu Dabbab video</div></div></div></details>
+<details class="tour-media" id="media-abu-dabbab-bay"><summary><strong>Watch the Abu Dabbab Video</strong></summary><div class="tour-video-grid"><div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Abo%20Dabbab%20.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Abu Dabbab video</div></div></div></details>
 <div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-abu-dabbab-bay">View Photos &amp; Videos</a></div>
 </div></article>
 </div>
@@ -993,8 +997,8 @@ riders can discuss suitable arrangements with the centre.
 <img alt="Kitesurfing photo" loading="lazy" src="assets/images/Kitesurfing4.jpeg"/>
 </div>
 <div class="tour-video-grid">
-<div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/Kitesurfing1.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Kitesurfing video 1</div></div>
-<div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/Kitesurfing2.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Kitesurfing video 2</div></div>
+<div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Kitesurfing1.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Kitesurfing video 1</div></div>
+<div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Kitesurfing2.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Kitesurfing video 2</div></div>
 </div>
 </details><div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-kitesurfing">View Photos &amp; Videos</a></div>
 </div>
@@ -1583,7 +1587,7 @@ the arrangements for your chosen trip.
 </p>
 <a class="main-button" href="contact.html">Contact Atlantic Tours</a>
 </section>
-<section class="section" id="red-sea-video-highlights"><div class="container"><div class="section-heading"><span class="section-label">Video Highlights</span><h2>More Red Sea Moments</h2><p>An additional video from the media collection. Choose a trip above to explore its dedicated photos and videos.</p></div><div class="tour-feature-video"><video controls="" playsinline="" preload="metadata"><source src="assets/videos/lv_7493550543768522045_20260910224514.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><p class="tour-video-caption">Additional Red Sea video</p></div></div></section><footer>
+<section class="section" id="red-sea-video-highlights"><div class="container"><div class="section-heading"><span class="section-label">Video Highlights</span><h2>More Red Sea Moments</h2><p>An additional video from the media collection. Choose a trip above to explore its dedicated photos and videos.</p></div><div class="tour-feature-video"><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/lv_7493550543768522045_20260910224514.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><p class="tour-video-caption">Additional Red Sea video</p></div></div></section><footer>
 
 <div class="container">
 
@@ -1667,42 +1671,107 @@ filterButtons.forEach(button => {
 });
 
 
-/* ORANGE BAY PHOTO GALLERY */
+/* UNIVERSAL TOUR PHOTO VIEWER + MOBILE VIDEO COMPATIBILITY */
 document.addEventListener("DOMContentLoaded", function () {
     const lightbox = document.getElementById("orangeBayLightbox");
     if (!lightbox) return;
-
     const largeImage = lightbox.querySelector("img");
+    const title = lightbox.querySelector(".orange-bay-lightbox-title");
     const caption = lightbox.querySelector(".orange-bay-lightbox-caption");
+    const count = lightbox.querySelector(".orange-bay-lightbox-count");
     const closeButton = lightbox.querySelector(".orange-bay-lightbox-close");
+    const photoSelector = "#orange-bay-details .orange-bay-gallery img, .tour-media-grid img";
+    let photos = [];
+    let activeIndex = 0;
+    let previousFocus = null;
 
-    function closeOrangeBayImage() {
+    function refreshPhotos() { photos = Array.from(document.querySelectorAll(photoSelector)); }
+    function photoTitle(photo) {
+        const details = photo.closest("details.tour-media");
+        if (details) return details.querySelector("summary")?.textContent.trim().replace(/^View\s+/i, "").replace(/\s+Photos?\s*&\s*Videos?$/i, "") || "Tour Photo Collection";
+        const article = photo.closest("article");
+        if (article && article.querySelector("h3")) return article.querySelector("h3").textContent.trim();
+        return "Orange Bay Island";
+    }
+    function photoDescription(photo, index) {
+        const alt = (photo.getAttribute("alt") || "").trim();
+        const subject = photoTitle(photo);
+        if (alt && !/^(photo|image)(\s*\d+)?$/i.test(alt)) return alt + ". Explore this moment from the " + subject + " photo collection.";
+        return "A closer look at the " + subject + " experience. This photograph is part of the visual collection for this excursion.";
+    }
+    function renderPhoto() {
+        if (!photos.length) return;
+        const photo = photos[activeIndex];
+        largeImage.src = photo.currentSrc || photo.src;
+        largeImage.alt = photo.alt || photoTitle(photo);
+        title.textContent = photoTitle(photo);
+        caption.textContent = photoDescription(photo, activeIndex);
+        count.textContent = "PHOTO " + (activeIndex + 1) + " / " + photos.length;
+    }
+    function openPhoto(photo) {
+        refreshPhotos();
+        activeIndex = photos.indexOf(photo);
+        if (activeIndex < 0) return;
+        previousFocus = document.activeElement;
+        renderPhoto();
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        closeButton.focus();
+    }
+    function closePhoto() {
         lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
         largeImage.src = "";
         document.body.style.overflow = "";
+        if (previousFocus && typeof previousFocus.focus === "function") previousFocus.focus();
     }
+    function movePhoto(direction) {
+        if (!photos.length) return;
+        activeIndex = (activeIndex + direction + photos.length) % photos.length;
+        renderPhoto();
+    }
+    document.addEventListener("click", function (event) {
+        const photo = event.target.closest(photoSelector);
+        if (photo) openPhoto(photo);
+    });
+    closeButton.addEventListener("click", closePhoto);
+    lightbox.querySelector(".orange-bay-lightbox-prev").addEventListener("click", function () { movePhoto(-1); });
+    lightbox.querySelector(".orange-bay-lightbox-next").addEventListener("click", function () { movePhoto(1); });
+    lightbox.addEventListener("click", function (event) { if (event.target === lightbox) closePhoto(); });
+    document.addEventListener("keydown", function (event) {
+        if (!lightbox.classList.contains("open")) return;
+        if (event.key === "Escape") closePhoto();
+        if (event.key === "ArrowLeft") movePhoto(-1);
+        if (event.key === "ArrowRight") movePhoto(1);
+    });
 
-    document.querySelectorAll("#orange-bay-details .orange-bay-gallery button").forEach(function (button) {
-        button.addEventListener("click", function () {
-            const image = button.querySelector("img");
-            largeImage.src = image.src;
-            largeImage.alt = image.alt;
-            caption.textContent = image.alt;
-            lightbox.classList.add("open");
-            document.body.style.overflow = "hidden";
-            closeButton.focus();
+    document.querySelectorAll("video").forEach(function (video) {
+        video.controls = true;
+        video.playsInline = true;
+        video.setAttribute("playsinline", "");
+        video.setAttribute("webkit-playsinline", "true");
+        video.preload = "metadata";
+        video.addEventListener("error", function () {
+            const source = video.querySelector("source");
+            if (!source || !source.src) return;
+            let message = video.parentElement.querySelector(".video-fallback");
+            if (!message) {
+                message = document.createElement("div");
+                message.className = "video-fallback";
+                message.textContent = "This video format may not be supported by this device. ";
+                const link = document.createElement("a");
+                link.href = source.src;
+                link.textContent = "Open video file";
+                link.target = "_blank";
+                link.rel = "noopener";
+                message.appendChild(link);
+                video.insertAdjacentElement("afterend", message);
+            }
+            message.classList.add("visible");
         });
     });
-
-    closeButton.addEventListener("click", closeOrangeBayImage);
-    lightbox.addEventListener("click", function (event) {
-        if (event.target === lightbox) closeOrangeBayImage();
-    });
-    document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape" && lightbox.classList.contains("open")) closeOrangeBayImage();
-    });
 });
-
 </script>
 
 <script>
