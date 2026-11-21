@@ -1,15 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Explore Red Sea islands, snorkeling, diving, water sports, desert safaris and Egypt sightseeing excursions with Atlantis Tours and Experiences." name="description"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="Explore Hurghada island cruises, Mahmya and Giftun Island, Orange Bay, Eden Island, Hula Hula, Red Sea snorkeling, desert adventures and Egypt excursions with Atlantis Tours and Experiences." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://travel-egypt.github.io/hurghada-vacations/all-tours.html" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="All Tours &amp; Experiences | Atlantis Tours and Experiences" property="og:title"/>
+<meta content="Find your Red Sea escape: island boat trips, snorkeling, diving, desert safaris, Hurghada experiences and Egypt sightseeing with Atlantis Tours and Experiences." property="og:description"/>
+<meta content="https://travel-egypt.github.io/hurghada-vacations/all-tours.html" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <title>All Tours &amp; Experiences | Atlantis Tours and Experiences</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -18,7 +24,7 @@
 --muted:#647783;--white:#fff
 }
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);line-height:1.7;background:#fff}
+body{font-family:"DM Sans",Arial,sans-serif;color:var(--dark);line-height:1.7;background:#fff}
 a{text-decoration:none;color:inherit}
 button{font:inherit}
 .container{width:min(1160px,92%);margin:auto}
@@ -281,31 +287,70 @@ footer h3{margin-bottom:17px;color:#fff}
 .orange-bay-lightbox img.is-zoomed{transform:scale(2);cursor:zoom-out;max-width:none;max-height:none}
 .orange-bay-lightbox-zoom{position:absolute;right:64px;top:10px;z-index:5;width:42px;height:42px;border:1px solid #ffffff40;border-radius:50%;background:#031d30;color:#fff;font-size:22px;cursor:pointer}
 
+
+/* REFINEMENT PATCH — typography, gallery usability and responsive viewer */
+body{font-family:"DM Sans",Arial,Helvetica,sans-serif}
+h1,h2,h3,.section-title,.category-heading h2{font-family:"Playfair Display",Georgia,serif}
+.nav-links,button,.book-link,.details-link,.main-button{font-family:"DM Sans",Arial,Helvetica,sans-serif}
+.tour-card>img,.tour-media-grid img,.orange-bay-gallery img{cursor:zoom-in}
+.tour-card>img:focus-visible,.tour-media-grid img:focus-visible,.orange-bay-gallery img:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.orange-bay-lightbox{overflow:auto}
+.orange-bay-lightbox-panel{overflow:auto}
+.orange-bay-lightbox img{cursor:zoom-in;transition:transform .2s ease;transform-origin:center center}
+.orange-bay-lightbox img.is-zoomed{cursor:zoom-out;max-width:none;max-height:none;transform:scale(2)}
+.video-fallback{overflow-wrap:anywhere}
+@media(max-width:800px){.orange-bay-lightbox{padding:8px}.orange-bay-lightbox-panel{width:100%;padding:12px}.orange-bay-lightbox img{max-height:52vh}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tour-media-grid img,.orange-bay-lightbox img{transition:none}}
+
+
+/* ATLANTIS PREMIUM EXPERIENCE DESIGN — aligned with the main website */
+:root{--navy:#062c43;--deep:#031d30;--blue:#087f9e;--cyan:#16c5ce;--gold:#e8b967;--light:#f2f9fb;--dark:#183344;--muted:#607583;--white:#fff}
+body{font-family:'DM Sans',Arial,sans-serif;color:#263f4d;background:#fff;letter-spacing:0;line-height:1.78;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.section-title,.category-heading h2,.orange-bay-hero h2,.orange-bay-heading,.cta h2{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.025em}
+header{background:rgba(3,29,48,.97);backdrop-filter:blur(14px);box-shadow:0 8px 28px rgba(3,29,48,.12)}
+.navbar{min-height:82px;gap:24px}.brand-name{font-family:'DM Sans',sans-serif;font-weight:800;letter-spacing:-.035em}.brand-name span{letter-spacing:.17em}
+.nav-links{gap:clamp(12px,1.5vw,23px);font-size:13px;font-weight:700}.nav-links a{transition:color .22s ease,opacity .22s ease}.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.nav-book{background:var(--gold);color:var(--deep)!important;border-radius:999px;padding:11px 19px;box-shadow:0 5px 16px rgba(232,185,103,.18)}
+.hero{min-height:535px;background-position:center 48%;position:relative;isolation:isolate}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,29,48,.88) 0%,rgba(3,29,48,.58) 52%,rgba(3,29,48,.12) 100%);z-index:-1}
+.hero-content{max-width:790px;padding:95px 0 100px}.eyebrow{font-size:11px;letter-spacing:3.2px;color:var(--gold);font-weight:800}.hero h1{font-size:clamp(43px,6.3vw,76px);line-height:1.06;font-weight:700;max-width:760px;margin-bottom:23px}.hero p{font-size:17px;line-height:1.9;max-width:660px;color:#e7f1f5}
+.main-button,.book-link{background:var(--gold);color:var(--deep);border:1px solid var(--gold);border-radius:999px;padding:13px 24px;font-size:13px;font-weight:800;letter-spacing:.01em;box-shadow:0 8px 20px rgba(232,185,103,.16);transition:transform .22s ease,background .22s ease,box-shadow .22s ease}.main-button:hover,.book-link:hover{background:#f4d28f;transform:translateY(-2px);box-shadow:0 12px 25px rgba(232,185,103,.24)}
+.intro{padding:82px 0 35px}.section-label{color:var(--blue);font-size:10px;letter-spacing:2.7px;font-weight:800}.section-title{font-size:clamp(34px,4.2vw,49px);line-height:1.13;color:var(--navy);margin-bottom:18px}.intro p{max-width:880px;font-size:15px;line-height:1.95;color:#627684}
+.experience-promise{width:min(1050px,92%);margin:0 auto 32px;padding:17px 23px;border:1px solid #dcebef;border-left:4px solid var(--gold);border-radius:12px;background:linear-gradient(100deg,#f5fafb,#fff);color:#49616e;font-size:13px;line-height:1.8}
+.filters{padding:18px 0 42px}.filter-list{gap:9px}.filter-btn{padding:10px 17px;border:1px solid #d9e6ea;border-radius:999px;background:#fff;color:#315061;font-size:12px;font-weight:700;box-shadow:0 2px 9px rgba(6,44,67,.035)}.filter-btn:hover,.filter-btn.active{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:0 7px 18px rgba(6,44,67,.15)}
+.category-section{padding:38px 0 67px}.category-heading{border-left:4px solid var(--gold);padding:5px 0 5px 20px;margin-bottom:30px}.category-heading h2{font-size:clamp(30px,3.5vw,39px);line-height:1.15;color:var(--navy)}.category-heading p{font-size:14px;line-height:1.8;color:#70828d}
+.tours-grid{gap:28px}.tour-card{border:1px solid #e5edf0;border-radius:19px;box-shadow:0 9px 30px rgba(6,44,67,.065);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}.tour-card:hover{transform:translateY(-6px);box-shadow:0 20px 45px rgba(6,44,67,.13);border-color:#d5e5e9}.tour-card>img{height:290px;transition:transform .55s ease}.tour-card:hover>img{transform:scale(1.025)}.card-content{padding:28px 29px 30px}.card-category{font-size:10px;letter-spacing:2px;color:var(--blue);font-weight:800;margin-bottom:9px}.tour-card h3{font-size:clamp(25px,2.4vw,30px);line-height:1.16;color:var(--navy);margin-bottom:13px}.tour-card p{font-size:14px;line-height:1.9;color:#627684;margin-bottom:15px}.tour-card p.tour-lead{font-size:14.5px;color:#425d6b;line-height:1.95}.tour-card h4{font-family:'DM Sans',Arial,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);font-weight:800;margin:23px 0 10px}.tour-card ul{font-size:13px;line-height:1.85;color:#617582}.tour-card li{margin-bottom:7px;padding-left:2px}.note{padding:14px 16px;border-radius:10px;background:#f2f9fb;border-left:3px solid var(--cyan);font-size:12px;line-height:1.8;color:#536d79}.card-actions{gap:11px;margin-top:23px}.card-actions a{padding:11px 19px;font-size:12px}.details-link{border:1px solid #d3e1e6;color:var(--navy);background:#fff;transition:all .2s ease}.details-link:hover{border-color:var(--blue);background:#f1f8fa}
+.tour-program{border:1px solid #e1ecef!important;border-radius:14px!important;background:#f8fbfc!important;padding:20px!important;margin-top:20px!important}.tour-program-head h4{font-size:13px!important;letter-spacing:.04em!important}.tour-program-head p{font-size:12px!important}.program-timeline li{line-height:1.8!important}
+.info-section{background:linear-gradient(180deg,#f2f9fb,#f8fbfc);padding:78px 0}.info-box{border:1px solid #e3edf0;border-radius:15px;box-shadow:0 7px 22px rgba(6,44,67,.04)}.info-box h3{font-family:'Playfair Display',Georgia,serif;font-size:23px}.info-box p{font-size:13px;line-height:1.85}
+.cta{padding:88px 20px;background:linear-gradient(120deg,#031d30,#075777 72%,#087f9e)}.cta h2{font-size:clamp(34px,4vw,48px)}.cta p{font-size:15px;line-height:1.9}
+footer{background:#031d30;padding:55px 0 22px}.footer-brand{font-family:'Playfair Display',Georgia,serif;font-size:25px;color:#fff}.footer-links a{transition:color .2s ease}.copyright{font-size:11px;letter-spacing:.04em}
+/* Keep gallery viewer controls clear and touch-friendly */
+.orange-bay-lightbox-panel{border-radius:20px!important;border-color:rgba(255,255,255,.16)!important}.orange-bay-lightbox-nav,.orange-bay-lightbox-close{box-shadow:0 5px 20px rgba(0,0,0,.22)}
+@media(max-width:850px){.navbar{align-items:center;flex-direction:row;min-height:76px;padding:10px 0}.nav-links{width:auto;gap:12px}.hero{min-height:460px}.hero-content{padding:75px 0}.tour-card>img{height:265px}}
+@media(max-width:680px){.navbar{align-items:center;flex-direction:column;gap:13px;padding:14px 0}.nav-links{justify-content:center;width:100%;gap:9px 15px}.nav-links a{font-size:11px}.hero{min-height:430px}.hero-content{padding:66px 0}.hero h1{font-size:clamp(39px,11vw,55px)}.hero p{font-size:14px}.intro{padding:60px 0 25px}.section-title{font-size:34px}.experience-promise{font-size:12px;padding:14px 16px}.category-section{padding:30px 0 48px}.card-content{padding:22px}.tour-card>img{height:230px}.tour-card h3{font-size:26px}.orange-bay-two-col,.orange-bay-features{grid-template-columns:1fr!important}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 </style>
-</head>
+</meta></head>
 <body>
 <header>
 <nav class="navbar container">
-    <a href="index.html" class="brand">
-        <img src="logo.png" alt="Atlantis Tours and Experiences Logo">
-        <div class="brand-name">
+<a class="brand" href="index.html">
+<img alt="Atlantis Tours and Experiences Logo" src="logo.png"/>
+<div class="brand-name">
             Atlantis Tours and Experiences
             <span>Discover The Red Sea</span>
-        </div>
-    </a>
-
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
-
-    <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="all-tours.html" class="active" aria-current="page">Tours</a></li>
-        <li><a href="stories.html">Stories</a></li>
-        <li><a href="hurghada.html">Hurghada Guide</a></li>
-        <li><a href="index.html#digital-tools">Digital Tools</a></li>
-        <li><a href="booking.html">Booking</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="booking.html" class="nav-book">Book Now</a></li>
-    </ul>
+</div>
+</a>
+<button aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" id="menuToggle">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a aria-current="page" class="active" href="all-tours.html">Tours</a></li>
+<li><a href="stories.html">Stories</a></li>
+<li><a href="hurghada.html">Hurghada Guide</a></li>
+<li><a href="index.html#digital-tools">Digital Tools</a></li>
+<li><a href="booking.html">Booking</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a class="nav-book" href="booking.html">Book Now</a></li>
+</ul>
 </nav>
 </header>
 <section class="hero">
@@ -314,9 +359,10 @@ footer h3{margin-bottom:17px;color:#fff}
 <div class="eyebrow">Discover the Red Sea &amp; Beyond</div>
 <h1>Explore More.<br/>Experience Egypt.</h1>
 <p>
-Discover beautiful islands, crystal-clear waters, colourful coral reefs,
-desert landscapes and Egypt's extraordinary historical treasures.
-Explore a wide range of experiences with Atlantis Tours and Experiences.
+From turquoise island bays and vibrant coral reefs to open-desert adventures
+and the landmarks of ancient Egypt, discover experiences that reveal the
+character of the Red Sea and beyond. Explore Hurghada and plan your next
+adventure with Atlantis Tours and Experiences.
 </p>
 <a class="main-button" href="#all-experiences">Explore All Experiences</a>
 </div>
@@ -326,12 +372,13 @@ Explore a wide range of experiences with Atlantis Tours and Experiences.
 <div class="section-label">Find Your Experience</div>
 <h2 class="section-title">All Tours &amp; Experiences</h2>
 <p>
-From relaxing island escapes and exciting sea adventures to desert journeys
-and unforgettable cultural discoveries, explore different ways to enjoy
-Hurghada and Egypt. Each experience can be discussed and arranged according
-to the selected activity, local conditions and availability.
+Choose the kind of day you want to remember: drift across clear Red Sea water,
+spend time on a sunlit island, discover life beneath the surface, explore the
+desert beyond the coast or travel deeper into Egypt’s history. Every listing
+explains the character of the experience; final inclusions and arrangements
+are confirmed with our team before booking.
 </p>
-</section>
+</section><div class="experience-promise">Hotel pickup: For tours with transfers included, collection is arranged from inside your hotel—not from an outside meeting point. Exact pickup time and transfer details are confirmed before your trip.</div>
 <section class="filters container">
 <div class="filter-list">
 <button class="filter-btn active" data-filter="all">All Experiences</button>
@@ -352,15 +399,11 @@ to the selected activity, local conditions and availability.
 </div>
 <div class="tours-grid">
 <article class="tour-card" data-category="islands" id="tour-mahmya-island">
-<img alt="Mahmya Island beach and turquoise Red Sea water" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg"/>
+<img alt="Mahmya Island beach and turquoise Red Sea water" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg">
 <div class="card-content">
 <div class="card-category">Island Escape</div>
 <h3>Giftun Island National Park – Mahmya Beach</h3>
-<p>
-Enjoy a relaxing island experience in the Giftun Islands area, known for
-its bright water, sandy shoreline and attractive Red Sea scenery.
-Mahmya Beach offers a beautiful island escape within the Giftun Islands area, with clear Red Sea water, sandy shoreline and time to relax by the sea.
-</p>
+<p class="tour-lead">Escape the busy coastline for a full day in the protected Giftun Islands area. Mahmya pairs the brilliant colours of the Red Sea with a beautiful sandy beach, time to swim and unwind, and the pleasure of reaching the island by boat. Your day includes lunch served on board and unlimited drinks throughout the trip, with the schedule shaped by sea and weather conditions.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Boat journey through the Red Sea.</li>
@@ -375,24 +418,20 @@ Mahmya Beach offers a beautiful island escape within the Giftun Islands area, wi
 <summary><strong>View Mahmya Island Photos &amp; Videos</strong></summary>
 <p>Watch the four Mahmya videos uploaded for this island experience.</p>
 <div class="tour-video-grid">
-<div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Mahmeya1.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 1</div></div>
-<div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Mahmeya2.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 2</div></div>
-<div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Mahmeya3.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 3</div></div>
-<div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Mahmeya4.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 4</div></div>
+<div><video controls="" playsinline="" preload="metadata" webkit-playsinline="true"><source src="assets/videos/Mahmeya1.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 1</div></div>
+<div><video controls="" playsinline="" preload="metadata" webkit-playsinline="true"><source src="assets/videos/Mahmeya2.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 2</div></div>
+<div><video controls="" playsinline="" preload="metadata" webkit-playsinline="true"><source src="assets/videos/Mahmeya3.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 3</div></div>
+<div><video controls="" playsinline="" preload="metadata" webkit-playsinline="true"><source src="assets/videos/Mahmeya4.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Mahmya video 4</div></div>
 </div>
 </details><div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-mahmya-island">View Photos &amp; Videos</a></div>
 </div>
-</article>
+</img></article>
 <article class="tour-card" data-category="islands" id="tour-paradise-island">
 <img alt="Paradise Island style beach scenery in the Red Sea" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005709%20Paradise%20Island%20Makadi.jpg"/>
 <div class="card-content">
 <div class="card-category">Island Escape</div>
 <h3>Paradise Island</h3>
-<p>
-Paradise Island is a beach and sea escape for visitors who want to enjoy
-the colours of the Red Sea, soft sandy areas and a relaxed island atmosphere.
-It combines a boat outing with time to enjoy the natural coastal setting.
-</p>
+<p class="tour-lead">Trade the hotel pool for a day on the Red Sea, travelling by boat to the Paradise Island area for open-water views and time on the beach. The appeal is the contrast between the journey across clear blue water and the slower pace of the island shoreline. Swimming and any snorkeling stops depend on the selected trip and daily sea conditions.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Boat trip across the Red Sea.</li>
@@ -418,12 +457,7 @@ in the island setting.
 <div class="card-content">
 <div class="card-category">Island Escape</div>
 <h3>Orange Bay Island</h3>
-<p>
-Discover the famous island atmosphere associated with Orange Bay, with
-beautiful sea colours, wooden beach details and relaxing coastal scenery.
-This experience is suitable for guests looking for a combination of
-boat travel, beach time and memorable photographs.
-</p>
+<p class="tour-lead">Spend the day cruising across the Red Sea to Orange Bay, an island escape known for its pale sandy beach, shallow turquoise water and distinctive beach setting. There is time to enjoy the shoreline, take photographs and soak up the island atmosphere before returning by boat. The exact time on the island and any swimming or snorkeling stops depend on the day’s programme.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Scenic boat journey in the Giftun Islands area.</li>
@@ -442,7 +476,7 @@ boat travel, beach time and memorable photographs.
 <div class="card-content">
 <div class="card-category">Island Escape</div>
 <h3>Eden Island</h3>
-<p>Spend a memorable day at Eden Island, combining a scenic Red Sea boat trip, two snorkeling experiences, a special taxi-boat transfer to the island, beach relaxation, lunch on board and unlimited drinks.</p>
+<p class="tour-lead">Make a full day of the Red Sea with a boat journey, two snorkeling stops and a special taxi-boat transfer from the main vessel to Eden Island. Enjoy time on the beach, then return to the boat for lunch served on board and unlimited drinks throughout the trip. Hotel pickup is arranged from inside your hotel, with the day’s timing adjusted to sea conditions.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Hotel pickup and return to the same hotel.</li>
@@ -451,10 +485,10 @@ boat travel, beach time and memorable photographs.
 <li>Free time to enjoy the island beach and turquoise water.</li>
 <li>Lunch served on the main boat and unlimited drinks throughout the trip.</li>
 </ul>
-<div class="tour-program"><div class="tour-program-head"><div class="tour-program-icon">✦</div><div><h4>Your Day at a Glance</h4><p>An estimated full-day schedule. Exact timing may change with sea and weather conditions.</p></div></div><ol class="program-timeline"><li><strong>Before 09:00 AM – Hotel Pickup</strong>We collect you from inside your hotel and take you directly to Hurghada Marina.</li><li><strong>09:00 AM – Boat Departure</strong>Board the main boat and enjoy the cruise across the Red Sea.</li><li><strong>First Snorkeling Stop</strong>Explore a beautiful reef and discover colourful fish and coral formations.</li><li><strong>Taxi Boat to Eden Island</strong>When we reach the island area, transfer from the main boat to a smaller taxi boat that takes you to Eden Island.</li><li><strong>Eden Island – Beach & Relaxation</strong>Enjoy free time on the beach: swim, relax, walk along the shore and take memorable photos.</li><li><strong>Lunch on the Main Boat</strong>Return to the main boat for lunch. Unlimited drinks are available throughout the trip.</li><li><strong>Second Snorkeling Stop</strong>Enjoy another snorkeling experience at a reef location selected by the captain.</li><li><strong>Around 04:00 PM – Return to Marina</strong>Cruise back to Hurghada Marina. The return time is approximate and may change with sea conditions.</li><li><strong>Hotel Drop-off</strong>Our transfer takes you back to the same hotel where we collected you.</li></ol><div class="tour-includes"><h4>What is Included</h4><ul><li>Pickup from inside your hotel and return to the same hotel</li><li>Air-conditioned transfer to and from Hurghada Marina</li><li>Full-day boat trip</li><li>Two snorkeling stops</li><li>Snorkeling equipment</li><li>Lunch served on board</li><li>Unlimited drinks throughout the trip</li><li>Crew assistance during the experience</li></ul></div><div class="tour-transfer-note"><strong>Hotel transfers included:</strong> We collect you from inside your hotel, take you directly to the marina and boat, then return you to the same hotel after the trip. Your exact pickup time is confirmed according to your hotel location.</div></div><details class="tour-media" id="media-eden-island"><summary><strong>Watch Eden Island Videos</strong></summary><p>Videos from the Eden Island collection.</p><div class="tour-video-grid">
-<div><video controls playsinline webkit-playsinline="true" preload="metadata"><source src="assets/videos/Eden.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Eden Island video</div></div>
-<div><video controls playsinline webkit-playsinline="true" preload="metadata"><source src="assets/videos/Eden2.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Eden Island video 2</div></div>
-<div><video controls playsinline webkit-playsinline="true" preload="metadata"><source src="assets/videos/Eden3.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Eden Island video 3</div></div>
+<div class="tour-program"><div class="tour-program-head"><div class="tour-program-icon">✦</div><div><h4>Your Day at a Glance</h4><p>An estimated full-day schedule. Exact timing may change with sea and weather conditions.</p></div></div><ol class="program-timeline"><li><strong>Before 09:00 AM – Hotel Pickup</strong>We collect you from inside your hotel and take you directly to Hurghada Marina.</li><li><strong>09:00 AM – Boat Departure</strong>Board the main boat and enjoy the cruise across the Red Sea.</li><li><strong>First Snorkeling Stop</strong>Explore a beautiful reef and discover colourful fish and coral formations.</li><li><strong>Taxi Boat to Eden Island</strong>When we reach the island area, transfer from the main boat to a smaller taxi boat that takes you to Eden Island.</li><li><strong>Eden Island – Beach &amp; Relaxation</strong>Enjoy free time on the beach: swim, relax, walk along the shore and take memorable photos.</li><li><strong>Lunch on the Main Boat</strong>Return to the main boat for lunch. Unlimited drinks are available throughout the trip.</li><li><strong>Second Snorkeling Stop</strong>Enjoy another snorkeling experience at a reef location selected by the captain.</li><li><strong>Around 04:00 PM – Return to Marina</strong>Cruise back to Hurghada Marina. The return time is approximate and may change with sea conditions.</li><li><strong>Hotel Drop-off</strong>Our transfer takes you back to the same hotel where we collected you.</li></ol><div class="tour-includes"><h4>What is Included</h4><ul><li>Pickup from inside your hotel and return to the same hotel</li><li>Air-conditioned transfer to and from Hurghada Marina</li><li>Full-day boat trip</li><li>Two snorkeling stops</li><li>Snorkeling equipment</li><li>Lunch served on board</li><li>Unlimited drinks throughout the trip</li><li>Crew assistance during the experience</li></ul></div><div class="tour-transfer-note"><strong>Hotel transfers included:</strong> We collect you from inside your hotel, take you directly to the marina and boat, then return you to the same hotel after the trip. Your exact pickup time is confirmed according to your hotel location.</div></div><details class="tour-media" id="media-eden-island"><summary><strong>Watch Eden Island Videos</strong></summary><p>Videos from the Eden Island collection.</p><div class="tour-video-grid">
+<div><video controls="" playsinline="" preload="metadata" webkit-playsinline="true"><source src="assets/videos/Eden.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Eden Island video</div></div>
+<div><video controls="" playsinline="" preload="metadata" webkit-playsinline="true"><source src="assets/videos/Eden2.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Eden Island video 2</div></div>
+<div><video controls="" playsinline="" preload="metadata" webkit-playsinline="true"><source src="assets/videos/Eden3.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Eden Island video 3</div></div>
 </div></details>
 <div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-eden-island">Watch Videos</a></div>
 </div></article>
@@ -463,11 +497,7 @@ boat travel, beach time and memorable photographs.
 <div class="card-content">
 <div class="card-category">Island Escape</div>
 <h3>Magawish Island</h3>
-<p>
-Magawish is associated with the island and beach experiences around
-Hurghada. It is an option for guests who enjoy open sea views, sandy
-coastlines and a relaxed day by the Red Sea.
-</p>
+<p class="tour-lead">Discover the quieter island scenery around Magawish, where open sea views and sandy coastal stretches create a relaxed setting away from the mainland. The journey is as much a part of the experience as the time by the water, offering space to unwind, swim where conditions allow and enjoy the Red Sea at an easier pace. Specific stops and services depend on the selected arrangement.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Boat journey and views of the surrounding islands.</li>
@@ -493,11 +523,7 @@ combination of relaxation and Red Sea scenery.
 <div class="card-content">
 <div class="card-category">Island Escape</div>
 <h3>Hula Hula Island</h3>
-<p>
-Hula Hula is promoted as a lively beach and island-style experience in
-the Hurghada area. It may appeal to guests who want to combine a boat
-outing with beach relaxation, sea views and a social atmosphere.
-</p>
+<p class="tour-lead">Choose a livelier island day with Hula Hula’s beach-club atmosphere, music and time beside the Red Sea. The boat journey brings you out to the island setting, where you can relax on the beach, enjoy the social atmosphere and make the most of the sea. Snorkeling stops and the order of activities follow the confirmed daily programme and local conditions.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Boat trip and views of the Red Sea coastline.</li>
@@ -543,11 +569,7 @@ outing with beach relaxation, sea views and a social atmosphere.
 <div class="card-content">
 <div class="card-category">Private Sea Experience</div>
 <h3>Private Boat &amp; Yacht Trips</h3>
-<p>
-Enjoy a more personal way to explore the Red Sea with a private boat
-or yacht arrangement. This option is suitable for families, couples,
-friends and small groups who prefer a more individual experience.
-</p>
+<p class="tour-lead">Set your own pace on a private Red Sea escape, with the boat reserved for your family, couple or group. Rather than following a fixed group schedule, you can discuss the style of day you want—relaxed cruising, swimming, snorkeling or simply enjoying time together on the water. The vessel, route, duration, stops and onboard services are agreed before departure.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Private boat or yacht arrangement, subject to availability.</li>
@@ -609,7 +631,7 @@ before the trip.
 <p>Take photographs, enjoy the beach, explore the water and let the rhythm of the island replace the rush of daily life. The best part is often the feeling of having nowhere else you need to be.</p>
 </div>
 </div>
-<div class="tour-feature-video"><h3>Orange Bay Video Experience</h3><video controls="" playsinline="" webkit-playsinline="true" poster="assets/images/IMG-20261117-WA0011.jpg" preload="metadata"><source src="assets/videos/Orange.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><p class="tour-video-caption">A video from the Orange Bay collection.</p></div><div class="orange-bay-gallery-head">
+<div class="tour-feature-video"><h3>Orange Bay Video Experience</h3><video controls="" playsinline="" poster="assets/images/IMG-20261117-WA0011.jpg" preload="metadata" webkit-playsinline="true"><source src="assets/videos/Orange.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><p class="tour-video-caption">A video from the Orange Bay collection.</p></div><div class="orange-bay-gallery-head">
 <div class="orange-bay-label">The Orange Bay Experience</div>
 <h2 class="orange-bay-heading">Why Visit Orange Bay?</h2>
 <p>Beautiful scenery, time by the sea and the chance to make your own island memories.</p>
@@ -657,7 +679,7 @@ before the trip.
 </div>
 </div>
 </section>
-<div aria-label="Photo viewer" aria-modal="true" aria-hidden="true" class="orange-bay-lightbox" id="orangeBayLightbox" role="dialog">
+<div aria-hidden="true" aria-label="Photo viewer" aria-modal="true" class="orange-bay-lightbox" id="orangeBayLightbox" role="dialog">
 <div class="orange-bay-lightbox-panel">
 <button aria-label="Zoom image" class="orange-bay-lightbox-zoom" type="button">＋</button>
 <button aria-label="Close image viewer" class="orange-bay-lightbox-close" type="button">×</button>
@@ -680,12 +702,7 @@ before the trip.
 <div class="card-content">
 <div class="card-category">Snorkeling</div>
 <h3>Red Sea Snorkeling Trip</h3>
-<p>
-Discover the underwater beauty of the Red Sea through a snorkeling
-experience suitable for guests who want to observe coral formations
-and marine life from the surface. Snorkeling locations are selected
-according to sea conditions and operational arrangements.
-</p>
+<p class="tour-lead">Explore the underwater world that makes the Red Sea famous. Travel by boat to selected reef locations, where clear water can reveal coral formations and colourful marine life just below the surface. Before entering the sea, the crew explains the site and essential safety guidance; the number of stops and time in the water depend on conditions and the chosen programme.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Boat journey to selected reef areas.</li>
@@ -711,12 +728,7 @@ also include time on the boat to relax and enjoy the surroundings.
 <div class="card-content">
 <div class="card-category">Scuba Diving</div>
 <h3>Discover Scuba Diving</h3>
-<p>
-Try scuba diving with an introductory experience designed for people
-who want to discover what it feels like to breathe underwater.
-Depending on the dive centre's procedures, beginners may receive
-a briefing and practical guidance before entering the water.
-</p>
+<p class="tour-lead">Take your first step beneath the surface with an introductory scuba experience designed for people who have not yet earned a diving certification. A professional dive team introduces the equipment, basic underwater communication and essential safety procedures before guiding participants through the experience. The dive format, depth and location are determined by the dive centre and each participant’s suitability.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Introduction to scuba equipment and basic diving concepts.</li>
@@ -742,12 +754,7 @@ centre's standards, participant suitability and sea conditions.
 <div class="card-content">
 <div class="card-category">Certified Diving</div>
 <h3>Daily Diving for Certified Divers</h3>
-<p>
-Certified divers can explore selected Red Sea dive sites with a
-professional dive operation. The area offers a variety of underwater
-landscapes, which may include coral gardens, reef walls and different
-marine habitats.
-</p>
+<p class="tour-lead">Explore the Red Sea as a certified diver, with dive sites selected to suit the group’s qualifications, experience and conditions on the day. Depending on the location, underwater scenery may include coral gardens, reef slopes and varied marine habitats. Your dive team reviews certification details, briefs the site and sets the plan in line with professional safety standards.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Discussion of certification level and recent diving experience.</li>
@@ -773,12 +780,7 @@ according to conditions and diver qualifications.
 <div class="card-content">
 <div class="card-category">Wildlife &amp; Sea Trip</div>
 <h3>Dolphin House Snorkeling</h3>
-<p>
-Explore the Red Sea around the area commonly known as Dolphin House,
-a marine area associated with dolphin sightings. The experience combines
-a boat trip with the opportunity to enjoy the sea and observe marine
-wildlife from a respectful distance.
-</p>
+<p class="tour-lead">Head out by boat to the marine area known as Dolphin House, where visitors may have the chance to observe dolphins in their natural environment. Wildlife encounters are never guaranteed, so the experience is about enjoying the sea responsibly as well as looking for marine life. Snorkeling takes place only at suitable permitted locations and in accordance with local guidance.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Boat journey towards the selected dolphin area.</li>
@@ -804,12 +806,7 @@ and the operator's arrangement.
 <div class="card-content">
 <div class="card-category">Marine Excursion</div>
 <h3>Dolphin Watching Boat Trip</h3>
-<p>
-Enjoy a sea excursion focused on observing dolphins and appreciating
-the Red Sea environment. It is an option for guests who prefer to
-experience the sea from a boat, with wildlife observation as a possible
-part of the journey.
-</p>
+<p class="tour-lead">Enjoy the Red Sea from the deck of a boat on an excursion centred on the possibility of seeing dolphins in the wild. The crew chooses the route according to local conditions and responsible wildlife-observation guidance. Sightings cannot be promised, but the journey offers open-water scenery and time to watch for marine life without entering the water.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Boat trip through selected Red Sea areas.</li>
@@ -834,12 +831,7 @@ depends on the selected package and the conditions at the location.
 <div class="card-content">
 <div class="card-category">Family Sea Experience</div>
 <h3>Glass-Bottom Boat &amp; Semi-Submarine</h3>
-<p>
-Discover underwater scenery without needing to swim or dive.
-A glass-bottom boat or semi-submarine experience allows guests
-to view the marine environment through specially designed viewing
-windows, depending on the vessel used.
-</p>
+<p class="tour-lead">See the underwater world without swimming or getting wet. A glass-bottom boat or semi-submarine lets you look through purpose-built viewing windows as the vessel travels along the coast or over suitable marine areas. The view depends on the vessel, water clarity, light and sea conditions, making each outing a different window onto the Red Sea.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Boat journey along selected coastal waters.</li>
@@ -863,11 +855,11 @@ naturally according to weather, water clarity and location.
 <div class="card-content">
 <div class="card-category">Snorkeling &amp; Wildlife</div>
 <h3>Abu Dabbab Bay</h3>
-<p>Discover the famous bay near Marsa Alam, known for its seagrass habitat and opportunities to observe marine life. Sightings of turtles or dugongs are never guaranteed and depend on nature and conditions.</p>
+<p class="tour-lead">Discover Abu Dabbab, a celebrated bay near Marsa Alam with sandy shoreline and seagrass habitat that supports a rich marine environment. The bay is known for the possibility of seeing sea turtles and, more rarely, dugongs—but these are wild animals, so sightings are never guaranteed. Enjoy the natural setting respectfully and follow local conservation guidance.</p>
 <h4>Experience Highlights</h4>
 <ul><li>Explore a beautiful Red Sea bay and its coastal scenery.</li><li>Snorkeling in permitted areas, subject to sea conditions.</li><li>Respectful wildlife watching without touching or disturbing animals.</li></ul>
 <div class="note">Wildlife sightings cannot be promised. Follow local guides and protected-area rules.</div>
-<details class="tour-media" id="media-abu-dabbab-bay"><summary><strong>Watch the Abu Dabbab Video</strong></summary><div class="tour-video-grid"><div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Abo%20Dabbab%20.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Abu Dabbab video</div></div></div></details>
+<details class="tour-media" id="media-abu-dabbab-bay"><summary><strong>Watch the Abu Dabbab Video</strong></summary><div class="tour-video-grid"><div><video controls="" playsinline="" preload="metadata" webkit-playsinline="true"><source src="assets/videos/Abo%20Dabbab%20.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Abu Dabbab video</div></div></div></details>
 <div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-abu-dabbab-bay">View Photos &amp; Videos</a></div>
 </div></article>
 </div>
@@ -884,12 +876,7 @@ naturally according to weather, water clarity and location.
 <div class="card-content">
 <div class="card-category">Aerial Water Adventure</div>
 <h3>Parasailing</h3>
-<p>
-Enjoy a different view of the Red Sea with a parasailing experience.
-Participants are lifted above the water using a parachute connected
-to a suitable boat, offering a panoramic view of the coastline and
-surrounding sea.
-</p>
+<p class="tour-lead">Rise above the coastline for a memorable aerial view of the Red Sea. Safely connected to a purpose-designed parasail and boat system, participants are lifted above the water under the supervision of the activity crew. The flight is subject to wind, visibility, equipment checks and the operator’s safety decision on the day.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Safety explanation and equipment preparation.</li>
@@ -913,11 +900,7 @@ and operational conditions.
 <div class="card-content">
 <div class="card-category">Fun Water Ride</div>
 <h3>Banana Boat &amp; Sofa Ride</h3>
-<p>
-Share a fun water activity with friends or family on an inflatable
-ride pulled by a motorboat. Banana boat and sofa rides are popular
-options for guests who enjoy a lively experience on the water.
-</p>
+<p class="tour-lead">Add a burst of fun to your beach day with a shared inflatable ride pulled across the water by a motorboat. Choose a banana boat or sofa-style ride for a lively experience with friends or family, with the activity team providing instructions and the required safety equipment. The ride is operated according to participant suitability and sea conditions.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Inflatable banana or sofa-style ride.</li>
@@ -942,11 +925,7 @@ suitability.
 <div class="card-content">
 <div class="card-category">Motorised Water Sport</div>
 <h3>Jet Ski Adventure</h3>
-<p>
-Experience the excitement of riding a personal watercraft in an
-approved area. Jet skiing offers a fast-paced way to enjoy the
-water while taking in views of the Red Sea coastline.
-</p>
+<p class="tour-lead">Feel the speed of the Red Sea on a personal watercraft in an approved riding area. After a briefing on controls, boundaries and safety procedures, enjoy time on the water under the provider’s operating rules. The permitted riding area, supervision and duration are confirmed by the operator and depend on current conditions.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Introduction to the watercraft and controls.</li>
@@ -970,11 +949,7 @@ place according to local rules and sea conditions.
 <div class="card-content">
 <div class="card-category">Wind &amp; Water Sport</div>
 <h3>Windsurfing</h3>
-<p>
-Combine sailing and board skills in a windsurfing experience.
-The activity uses a board with a sail and can be suitable for
-beginners receiving instruction as well as more experienced riders.
-</p>
+<p class="tour-lead">Experience the balance of sailing and board sport in a windsurfing session on the Red Sea. Learn how the sail responds to the wind, practise balance and movement on the board, or build on existing skills with guidance suited to your level. Equipment, instruction and session format depend on the centre and the day’s wind conditions.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Introduction to the board, sail and basic techniques.</li>
@@ -998,12 +973,7 @@ participant's experience and the conditions.
 <div class="card-content">
 <div class="card-category">Wind &amp; Water Sport</div>
 <h3>Kitesurfing</h3>
-<p>
-Discover the combination of wind power and board riding in a
-kitesurfing experience. Hurghada and nearby coastal areas are
-known for water-sport locations where conditions may be suitable
-for different skill levels.
-</p>
+<p class="tour-lead">Harness the wind and skim across the water in one of the Red Sea’s most dynamic sports. Whether you are curious about a first lesson or looking to progress your riding, the kitesurfing centre can discuss an appropriate session based on your experience. Training, equipment and launch arrangements follow wind conditions and safety requirements.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Introduction to kite equipment and safety systems.</li>
@@ -1027,8 +997,8 @@ riders can discuss suitable arrangements with the centre.
 <img alt="Kitesurfing photo" loading="lazy" src="assets/images/Kitesurfing4.jpeg"/>
 </div>
 <div class="tour-video-grid">
-<div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Kitesurfing1.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Kitesurfing video 1</div></div>
-<div><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/Kitesurfing2.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Kitesurfing video 2</div></div>
+<div><video controls="" playsinline="" preload="metadata" webkit-playsinline="true"><source src="assets/videos/Kitesurfing1.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Kitesurfing video 1</div></div>
+<div><video controls="" playsinline="" preload="metadata" webkit-playsinline="true"><source src="assets/videos/Kitesurfing2.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><div class="tour-video-caption">Kitesurfing video 2</div></div>
 </div>
 </details><div class="card-actions"><a class="book-link" href="booking.html">Book Now</a><a class="details-link" href="#media-kitesurfing">View Photos &amp; Videos</a></div>
 </div>
@@ -1038,11 +1008,7 @@ riders can discuss suitable arrangements with the centre.
 <div class="card-content">
 <div class="card-category">Relaxed Water Sport</div>
 <h3>Stand-Up Paddleboarding &amp; Kayaking</h3>
-<p>
-Enjoy a calmer way to explore the water with a paddleboard or kayak.
-These activities allow guests to move at their own pace while
-appreciating the coastline and nearby scenery.
-</p>
+<p class="tour-lead">Slow things down with a paddleboard or kayak session along a suitable stretch of coastline. These easy-paced activities offer a closer view of the water and shoreline, with the freedom to explore at a comfortable rhythm. The team provides basic guidance and selects an area appropriate to the weather, water conditions and your experience.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Basic equipment introduction.</li>
@@ -1075,11 +1041,7 @@ adapted to the participant's comfort and ability.
 <div class="card-content">
 <div class="card-category">Desert Adventure</div>
 <h3>Quad Bike Safari</h3>
-<p>
-Explore desert tracks on a quad bike and enjoy the open landscapes
-beyond the city. This activity is designed for guests interested
-in a motorised outdoor adventure in the Eastern Desert environment.
-</p>
+<p class="tour-lead">Leave the resort area behind and follow an organised quad-bike route into the desert landscape surrounding Hurghada. After registration, equipment preparation and a safety briefing, ride along an approved track with the group and guide. The route, pace and stops are set by the operator according to conditions and participant suitability.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Introduction to the quad bike and safety equipment.</li>
@@ -1105,12 +1067,7 @@ to conditions and the group's suitability.
 <div class="card-content">
 <div class="card-category">Off-Road Adventure</div>
 <h3>Jeep Desert Safari</h3>
-<p>
-Travel through desert landscapes in a suitable off-road vehicle.
-A jeep safari offers a different perspective on the Eastern Desert,
-with open views, rocky scenery and opportunities to learn about
-the region's natural environment.
-</p>
+<p class="tour-lead">Travel beyond the coast into the Eastern Desert in a suitable off-road vehicle. The changing landscape of rocky hills, wide horizons and desert tracks offers a striking contrast to Hurghada’s beaches. Depending on the selected package, the journey may include scenic stops or a cultural visit; the exact route and inclusions are confirmed before departure.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Off-road journey with an experienced driver.</li>
@@ -1135,12 +1092,7 @@ setting or enjoy a scenic stop. The route and activities are flexible.
 <div class="card-content">
 <div class="card-category">Motorised Desert Adventure</div>
 <h3>Spider Buggy Safari</h3>
-<p>
-Enjoy a buggy adventure through selected desert tracks.
-A spider buggy offers a different driving experience from a
-quad bike and may be suitable for guests who prefer a shared
-vehicle arrangement.
-</p>
+<p class="tour-lead">Take on the desert tracks in a spider buggy, a distinctive open-style vehicle that brings you closer to the surrounding landscape. Following a briefing on the vehicle and safety rules, travel along an approved route selected by the operator. Vehicle type, passenger arrangements, route and stops depend on the chosen package and local conditions.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Introduction to the buggy and safety procedures.</li>
@@ -1164,12 +1116,7 @@ on the conditions and the arrangement.
 <div class="card-content">
 <div class="card-category">Cultural Desert Experience</div>
 <h3>Bedouin Village Experience</h3>
-<p>
-Discover elements of traditional desert life through a visit to
-a local-style Bedouin setting, where guests may learn about
-hospitality, daily customs and the relationship between people
-and the desert environment.
-</p>
+<p class="tour-lead">Gain an introduction to aspects of desert hospitality and local traditions through a visit to a Bedouin-style setting. The experience can offer context about life in the desert and the customs associated with the community, depending on the host and programme. Any refreshments, demonstrations or additional activities should be checked in the confirmed itinerary.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Introduction to the desert environment.</li>
@@ -1194,12 +1141,7 @@ Any refreshments or additional activities should be confirmed.
 <div class="card-content">
 <div class="card-category">Outdoor Experience</div>
 <h3>Desert Sunset &amp; Stargazing</h3>
-<p>
-Enjoy the peaceful atmosphere of the desert away from bright
-city lights. Depending on weather and visibility, the experience
-may offer sunset views, open landscapes and an opportunity
-to observe the night sky.
-</p>
+<p class="tour-lead">Leave the bright resort lights behind and experience the stillness of the desert as the day gives way to evening. A suitable viewpoint can offer wide sunset colours and, when the sky is clear, a chance to look up at the stars. What you can see depends on cloud, moonlight, visibility and the location chosen for the trip.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Scenic desert viewpoints.</li>
@@ -1224,12 +1166,7 @@ all affect what can be seen.
 <div class="card-content">
 <div class="card-category">Horse Riding</div>
 <h3>Horse Riding Experience</h3>
-<p>
-Enjoy a horse-riding experience in a suitable riding area.
-Depending on the centre and selected arrangement, the activity
-may take place in a desert setting, along a coastal area or
-within a designated riding facility.
-</p>
+<p class="tour-lead">Enjoy time in the saddle in a setting selected by the riding centre, which may be a designated facility, desert landscape or coastal area. The team considers your experience level, introduces the horse and explains the essential safety guidance before the ride. Route, duration and riding style depend on the centre and conditions.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Introduction to the horse and riding arrangements.</li>
@@ -1262,12 +1199,7 @@ The route and riding format depend on the centre and conditions.
 <div class="card-content">
 <div class="card-category">City &amp; Culture</div>
 <h3>Hurghada City Tour</h3>
-<p>
-Discover a different side of Hurghada beyond its hotels and beaches.
-A city tour can introduce visitors to local neighbourhoods,
-religious landmarks, traditional shopping areas and the modern
-marina atmosphere.
-</p>
+<p class="tour-lead">See Hurghada beyond the resort gates on a guided introduction to the city’s everyday character and best-known neighbourhoods. Depending on the confirmed route, discover the atmosphere of El Dahar and its markets, visit local religious landmarks, explore the fish market and finish with the waterfront feel of Hurghada Marina. Stops and order are agreed before the tour.</p>
 <div class="city-stop-list">
 <div class="city-stop"><strong>El Mina Mosque</strong><span>Admire the architecture and learn about this important local landmark. Entry is subject to prayer times and visitor rules.</span></div>
 <div class="city-stop"><strong>Hurghada Grand Aquarium</strong><span>Discover Red Sea marine life through aquarium displays and underwater viewing areas. Optional entry; ticket arrangements should be confirmed.</span></div>
@@ -1294,12 +1226,7 @@ marina atmosphere.
 <div class="card-content">
 <div class="card-category">Coastal Lifestyle</div>
 <h3>Hurghada Marina &amp; Waterfront</h3>
-<p>
-Explore the waterfront atmosphere of Hurghada Marina, where
-boats, restaurants, cafés and coastal views create a different
-side of the city. It is an option for visitors who enjoy walking,
-photography and discovering local leisure areas.
-</p>
+<p class="tour-lead">Discover Hurghada’s more modern waterfront, where yachts, cafés, restaurants and sea views create a relaxed place to stroll. The marina offers a different perspective on the city after a day at the beach, with opportunities for photographs and time to explore at your own pace. It can also be combined with other city stops by arrangement.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Marina and harbour views.</li>
@@ -1323,11 +1250,7 @@ around Hurghada, depending on the preferred route and arrangements.
 <div class="card-content">
 <div class="card-category">Local Discovery</div>
 <h3>El Dahar Old Town &amp; Local Markets</h3>
-<p>
-Explore El Dahar, one of Hurghada's traditional central areas.
-The neighbourhood offers a look at everyday local life through
-shops, cafés, streets and market activity.
-</p>
+<p class="tour-lead">Explore El Dahar, one of Hurghada’s traditional districts, where market streets, everyday shops and local cafés reveal a side of the city beyond the hotels. Walk through selected areas, take in the atmosphere and browse at your own pace. Shopping is optional, and any purchases are made directly by the visitor.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Walk through traditional shopping streets.</li>
@@ -1352,12 +1275,7 @@ optional and made directly by the visitor.
 <div class="card-content">
 <div class="card-category">Local Food &amp; Culture</div>
 <h3>El Halaqa Fish Market Visit</h3>
-<p>
-Discover the atmosphere of Hurghada's traditional fish market,
-known locally as El Halaqa. The area offers an opportunity
-to observe local seafood trading and learn more about the
-importance of fishing and the Red Sea to the city.
-</p>
+<p class="tour-lead">Step into the working atmosphere of El Halaqa, Hurghada’s traditional fish market, and see the close connection between the city and the Red Sea. The visit offers a glimpse of local seafood trading and daily market activity. Any food purchases, tasting or restaurant arrangements are separate unless they are specifically included in your confirmed plan.</p>
 <h4>Experience Highlights</h4>
 <ul>
 <li>Explore the fish-market surroundings.</li>
@@ -1392,12 +1310,7 @@ separate unless confirmed.
 <div class="card-content">
 <div class="card-category">Ancient Egypt</div>
 <h3>Cairo &amp; The Pyramids of Giza</h3>
-<p>
-Discover the remarkable history of ancient Egypt with an excursion
-to Cairo and the Giza Plateau. The area is home to the Great
-Pyramids and the Great Sphinx, among the best-known archaeological
-landmarks in the world.
-</p>
+<p class="tour-lead">Journey from the Red Sea to the heart of ancient Egypt and stand before the Great Pyramids of Giza and the Great Sphinx. Discover the stories, engineering and royal history behind these extraordinary monuments with time to explore the selected sites. Transport, museum visits and additional Cairo stops depend on the itinerary confirmed for your excursion.</p>
 <h4>Places &amp; Possible Highlights</h4>
 <ul>
 <li><strong>Great Pyramid of Khufu:</strong> the largest of the three main pyramids at Giza.</li>
@@ -1423,11 +1336,7 @@ depending on the itinerary selected and current arrangements.
 <div class="card-content">
 <div class="card-category">Ancient Thebes</div>
 <h3>Luxor &amp; The Ancient Temples</h3>
-<p>
-Discover Luxor, one of Egypt's most important historical destinations.
-The city preserves extraordinary monuments from ancient Thebes,
-including vast temple complexes, royal tombs and monumental statues.
-</p>
+<p class="tour-lead">Discover Luxor, the city built around the legacy of ancient Thebes, where monumental temples and archaeological landscapes bring Egypt’s history to life. Depending on the selected itinerary, explore sites such as Karnak and other important east- or west-bank monuments, with explanations of the rulers, rituals and craftsmanship behind them.</p>
 <h4>Places &amp; Possible Highlights</h4>
 <ul>
 <li><strong>Karnak Temple:</strong> an extensive religious complex famous for its monumental columns, pylons and sacred lake.</li>
@@ -1453,12 +1362,7 @@ with west-bank attractions depending on the chosen arrangement.
 <div class="card-content">
 <div class="card-category">West Bank of Luxor</div>
 <h3>West Bank of Luxor</h3>
-<p>
-Explore the west bank of Luxor, an area closely connected with
-ancient Egyptian royal burials and monumental funerary architecture.
-It offers a fascinating introduction to beliefs about the afterlife
-and the history of the Theban necropolis.
-</p>
+<p class="tour-lead">Explore the west bank of the Nile, a landscape shaped by royal tombs, monumental temples and ancient beliefs about the afterlife. Selected visits may introduce the Theban necropolis and its remarkable funerary architecture, with the route tailored to the agreed excursion and site access on the day.</p>
 <h4>Places &amp; Possible Highlights</h4>
 <ul>
 <li><strong>Valley of the Kings:</strong> royal tombs decorated with ancient scenes and inscriptions.</li>
@@ -1482,12 +1386,7 @@ access arrangements.
 <div class="card-content">
 <div class="card-category">Southern Egypt</div>
 <h3>Aswan &amp; Nubian Culture</h3>
-<p>
-Discover Aswan, a city known for its Nile scenery, island temples
-and Nubian cultural heritage. The destination offers a different
-atmosphere from Egypt's northern cities, with river landscapes
-and important historical monuments.
-</p>
+<p class="tour-lead">Experience the distinctive atmosphere of Aswan, where Nile scenery, island landmarks and Nubian heritage create a different rhythm from the Red Sea coast. Depending on the itinerary, discover selected cultural or historical sites and learn about the region’s traditions. Some locations require a boat transfer, and the exact visits are confirmed in advance.</p>
 <h4>Places &amp; Possible Highlights</h4>
 <ul>
 <li><strong>Philae Temple:</strong> the beautiful island temple complex dedicated to the goddess Isis.</li>
@@ -1513,12 +1412,7 @@ selected travel arrangement.
 <div class="card-content">
 <div class="card-category">Mediterranean Heritage</div>
 <h3>Alexandria City Tour</h3>
-<p>
-Discover Alexandria, the historic Mediterranean city associated
-with ancient scholarship, coastal architecture and layers of
-Egyptian, Greek and Roman history. The city offers a different
-cultural experience from the Red Sea region.
-</p>
+<p class="tour-lead">Discover Alexandria’s Mediterranean character through its coastal setting, historic streets and layers of Egyptian, Greek and Roman heritage. The city offers a different perspective on Egypt, shaped by centuries of trade, learning and architecture. The sightseeing route and included landmarks depend on the agreed programme and access conditions.</p>
 <h4>Places &amp; Possible Highlights</h4>
 <ul>
 <li><strong>Bibliotheca Alexandrina:</strong> a modern cultural landmark inspired by the ancient Library of Alexandria.</li>
@@ -1544,12 +1438,7 @@ and attraction opening or access conditions.
 <div class="card-content">
 <div class="card-category">Ancient Egyptian Temples</div>
 <h3>Dendera &amp; Abydos Temples</h3>
-<p>
-Explore two important temple destinations connected with ancient
-Egyptian religion and royal history. Dendera and Abydos offer
-visitors the opportunity to discover detailed temple decoration,
-inscriptions and sacred architecture.
-</p>
+<p class="tour-lead">Travel into the history of ancient Egypt at Dendera and Abydos, two remarkable temple destinations known for their sacred architecture, inscriptions and detailed stone decoration. Explore one or both sites according to the excursion you select, and learn about the religious traditions and royal stories connected with these important monuments.</p>
 <h4>Places &amp; Possible Highlights</h4>
 <ul>
 <li><strong>Dendera Temple:</strong> the temple complex dedicated to Hathor, known for its decorated halls and astronomical ceiling imagery.</li>
@@ -1618,89 +1507,76 @@ the arrangements for your chosen trip.
 </p>
 <a class="main-button" href="contact.html">Contact Atlantis Tours</a>
 </section>
-<section class="section" id="red-sea-video-highlights"><div class="container"><div class="section-heading"><span class="section-label">Video Highlights</span><h2>More Red Sea Moments</h2><p>An additional video from the media collection. Choose a trip above to explore its dedicated photos and videos.</p></div><div class="tour-feature-video"><video controls="" playsinline="" webkit-playsinline="true" preload="metadata"><source src="assets/videos/lv_7493550543768522045_20260910224514.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><p class="tour-video-caption">Additional Red Sea video</p></div></div></section><footer>
-
+<section class="section" id="red-sea-video-highlights"><div class="container"><div class="section-heading"><span class="section-label">Video Highlights</span><h2>More Red Sea Moments</h2><p>An additional video from the media collection. Choose a trip above to explore its dedicated photos and videos.</p></div><div class="tour-feature-video"><video controls="" playsinline="" preload="metadata" webkit-playsinline="true"><source src="assets/videos/lv_7493550543768522045_20260910224514.mp4" type="video/mp4"/>Your browser does not support HTML video.</video><p class="tour-video-caption">Additional Red Sea video</p></div></div></section><footer>
 <div class="container">
-
-    <div class="footer-grid">
-
-        <div>
-            <div class="footer-brand">
+<div class="footer-grid">
+<div>
+<div class="footer-brand">
                 Atlantis <span>Tours and Experiences</span>
-            </div>
-
-            <p>
+</div>
+<p>
                 Discover the beauty of Egypt and experience
                 unforgettable adventures across the Red Sea.
             </p>
-        </div>
-
-        <div>
-            <h3>Quick Links</h3>
-
-            <ul class="footer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="all-tours.html">All Tours</a></li>
-                <li><a href="stories.html">Stories</a></li>
-                <li><a href="hurghada.html">Hurghada City Guide</a></li>
-                <li><a href="booking.html">Booking</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Explore Egypt</h3>
-
-            <ul class="footer-links">
-                <li><a href="all-tours.html">Orange Bay</a></li>
-                <li><a href="all-tours.html">Snorkeling</a></li>
-                <li><a href="all-tours.html">Boat Trips</a></li>
-                <li><a href="all-tours.html">Desert Adventures</a></li>
-            </ul>
-
-            <h3 class="footer-tools-heading">Digital Tools</h3>
-            <ul class="footer-links">
-                <li><a href="features/hurghada-live.html">Hurghada Live</a></li>
-                <li><a href="features/red-sea-live.html">Red Sea Live</a></li>
-                <li><a href="features/pocket-guide.html">Pocket Guide</a></li>
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="copyright">
+</div>
+<div>
+<h3>Quick Links</h3>
+<ul class="footer-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="all-tours.html">All Tours</a></li>
+<li><a href="stories.html">Stories</a></li>
+<li><a href="hurghada.html">Hurghada City Guide</a></li>
+<li><a href="booking.html">Booking</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3>Explore Egypt</h3>
+<ul class="footer-links">
+<li><a href="all-tours.html">Orange Bay</a></li>
+<li><a href="all-tours.html">Snorkeling</a></li>
+<li><a href="all-tours.html">Boat Trips</a></li>
+<li><a href="all-tours.html">Desert Adventures</a></li>
+</ul>
+<h3 class="footer-tools-heading">Digital Tools</h3>
+<ul class="footer-links">
+<li><a href="features/hurghada-live.html">Hurghada Live</a></li>
+<li><a href="features/red-sea-live.html">Red Sea Live</a></li>
+<li><a href="features/pocket-guide.html">Pocket Guide</a></li>
+</ul>
+</div>
+</div>
+<div class="copyright">
         © 2026 Atlantis Tours and Experiences. All Rights Reserved.
     </div>
-
 </div>
-
 </footer>
-<script>
-const filterButtons = document.querySelectorAll(".filter-btn");
+<script>const filterButtons = document.querySelectorAll(".filter-btn");
 const tourCards = document.querySelectorAll(".tour-card");
 const categorySections = document.querySelectorAll("[data-category-section]");
 
 filterButtons.forEach(button => {
+    button.setAttribute("aria-pressed", button.classList.contains("active") ? "true" : "false");
     button.addEventListener("click", () => {
-        const selectedFilter = button.dataset.filter;
-
-        filterButtons.forEach(item => item.classList.remove("active"));
-        button.classList.add("active");
-
-        tourCards.forEach(card => {
-            const category = card.dataset.category;
-            const shouldShow = selectedFilter === "all" || category === selectedFilter;
-            card.classList.toggle("hidden", !shouldShow);
+        const selectedFilter = button.dataset.filter || "all";
+        filterButtons.forEach(item => {
+            const active = item === button;
+            item.classList.toggle("active", active);
+            item.setAttribute("aria-pressed", active ? "true" : "false");
         });
-
+        tourCards.forEach(card => {
+            const visible = selectedFilter === "all" || card.dataset.category === selectedFilter;
+            card.classList.toggle("hidden", !visible);
+            card.setAttribute("aria-hidden", visible ? "false" : "true");
+        });
         categorySections.forEach(section => {
-            const sectionCategory = section.dataset.categorySection;
-            const shouldShow = selectedFilter === "all" || sectionCategory === selectedFilter;
-            section.classList.toggle("hidden", !shouldShow);
+            const category = section.dataset.categorySection;
+            const visible = selectedFilter === "all" || category === selectedFilter;
+            section.classList.toggle("hidden", !visible);
+            section.setAttribute("aria-hidden", visible ? "false" : "true");
         });
     });
 });
-
 
 /* UNIVERSAL TOUR PHOTO VIEWER + MOBILE VIDEO COMPATIBILITY */
 document.addEventListener("DOMContentLoaded", function () {
@@ -1712,25 +1588,30 @@ document.addEventListener("DOMContentLoaded", function () {
     const count = lightbox.querySelector(".orange-bay-lightbox-count");
     const closeButton = lightbox.querySelector(".orange-bay-lightbox-close");
     const zoomButton = lightbox.querySelector(".orange-bay-lightbox-zoom");
-    let isZoomed = false;
-    const photoSelector = "#orange-bay-details .orange-bay-gallery img, .tour-media-grid img, .tour-card > img";
+    const previousButton = lightbox.querySelector(".orange-bay-lightbox-prev");
+    const nextButton = lightbox.querySelector(".orange-bay-lightbox-next");
+    const photoSelector = "#orange-bay-details .orange-bay-gallery img, .tour-media-grid img, article.tour-card > img";
     let photos = [];
     let activeIndex = 0;
     let previousFocus = null;
+    let touchStartX = 0;
+    let isZoomed = false;
 
-    function refreshPhotos() { photos = Array.from(document.querySelectorAll(photoSelector)); }
+    function refreshPhotos() {
+        photos = Array.from(document.querySelectorAll(photoSelector)).filter(photo => photo.getAttribute("src"));
+        photos.forEach((photo, index) => {
+            photo.tabIndex = 0;
+            photo.setAttribute("role", "button");
+            photo.setAttribute("aria-label", "Open photo " + (photo.alt || "from tour gallery") + " in photo viewer");
+        });
+    }
     function photoTitle(photo) {
         const details = photo.closest("details.tour-media");
-        if (details) return details.querySelector("summary")?.textContent.trim().replace(/^View\s+/i, "").replace(/\s+Photos?\s*&\s*Videos?$/i, "") || "Tour Photo Collection";
+        if (details) return details.querySelector("summary")?.textContent.trim().replace(/^View\s+/i, "").replace(/\s+Photos?\\s*&\\s*Videos?$/i, "") || "Tour Photo Collection";
         const article = photo.closest("article");
         if (article && article.querySelector("h3")) return article.querySelector("h3").textContent.trim();
-        return "Orange Bay Island";
-    }
-    function photoDescription(photo, index) {
-        const alt = (photo.getAttribute("alt") || "").trim();
-        const subject = photoTitle(photo);
-        if (alt && !/^(photo|image)(\s*\d+)?$/i.test(alt)) return alt + ". Explore this moment from the " + subject + " photo collection.";
-        return "A closer look at the " + subject + " experience. This photograph is part of the visual collection for this excursion.";
+        const section = photo.closest("section");
+        return section?.querySelector("h2")?.textContent.trim() || "Red Sea Photo Collection";
     }
     function renderPhoto() {
         if (!photos.length) return;
@@ -1741,8 +1622,10 @@ document.addEventListener("DOMContentLoaded", function () {
         zoomButton.textContent = "＋";
         largeImage.alt = photo.alt || photoTitle(photo);
         title.textContent = photoTitle(photo);
-        caption.textContent = photoDescription(photo, activeIndex);
+        caption.textContent = (photo.alt || "A photograph from this excursion") + " — explore this moment from the " + photoTitle(photo) + " collection.";
         count.textContent = "PHOTO " + (activeIndex + 1) + " / " + photos.length;
+        previousButton.disabled = photos.length < 2;
+        nextButton.disabled = photos.length < 2;
     }
     function openPhoto(photo) {
         refreshPhotos();
@@ -1758,7 +1641,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function closePhoto() {
         lightbox.classList.remove("open");
         lightbox.setAttribute("aria-hidden", "true");
-        largeImage.src = "";
+        largeImage.removeAttribute("src");
         largeImage.classList.remove("is-zoomed");
         isZoomed = false;
         zoomButton.textContent = "＋";
@@ -1766,34 +1649,44 @@ document.addEventListener("DOMContentLoaded", function () {
         if (previousFocus && typeof previousFocus.focus === "function") previousFocus.focus();
     }
     function movePhoto(direction) {
-        if (!photos.length) return;
+        if (photos.length < 2) return;
         activeIndex = (activeIndex + direction + photos.length) % photos.length;
         renderPhoto();
     }
+    function toggleZoom() {
+        isZoomed = !isZoomed;
+        largeImage.classList.toggle("is-zoomed", isZoomed);
+        zoomButton.textContent = isZoomed ? "−" : "＋";
+    }
+    refreshPhotos();
     document.addEventListener("click", function (event) {
         const photo = event.target.closest(photoSelector);
         if (photo) openPhoto(photo);
     });
-    closeButton.addEventListener("click", closePhoto);
-    zoomButton.addEventListener("click", function () {
-        isZoomed = !isZoomed;
-        largeImage.classList.toggle("is-zoomed", isZoomed);
-        zoomButton.textContent = isZoomed ? "−" : "＋";
-    });
-    largeImage.addEventListener("dblclick", function () {
-        isZoomed = !isZoomed;
-        largeImage.classList.toggle("is-zoomed", isZoomed);
-        zoomButton.textContent = isZoomed ? "−" : "＋";
-    });
-    lightbox.querySelector(".orange-bay-lightbox-prev").addEventListener("click", function () { movePhoto(-1); });
-    lightbox.querySelector(".orange-bay-lightbox-next").addEventListener("click", function () { movePhoto(1); });
-    lightbox.addEventListener("click", function (event) { if (event.target === lightbox) closePhoto(); });
     document.addEventListener("keydown", function (event) {
+        const photo = event.target.closest?.(photoSelector);
+        if (photo && (event.key === "Enter" || event.key === " ")) {
+            event.preventDefault();
+            openPhoto(photo);
+            return;
+        }
         if (!lightbox.classList.contains("open")) return;
         if (event.key === "Escape") closePhoto();
         if (event.key === "ArrowLeft") movePhoto(-1);
         if (event.key === "ArrowRight") movePhoto(1);
     });
+    closeButton.addEventListener("click", closePhoto);
+    zoomButton.addEventListener("click", toggleZoom);
+    largeImage.addEventListener("dblclick", toggleZoom);
+    previousButton.addEventListener("click", () => movePhoto(-1));
+    nextButton.addEventListener("click", () => movePhoto(1));
+    lightbox.addEventListener("click", event => { if (event.target === lightbox) closePhoto(); });
+    lightbox.addEventListener("touchstart", event => { touchStartX = event.changedTouches[0].clientX; }, {passive:true});
+    lightbox.addEventListener("touchend", event => {
+        if (isZoomed) return;
+        const delta = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(delta) > 55) movePhoto(delta > 0 ? -1 : 1);
+    }, {passive:true});
 
     document.querySelectorAll("video").forEach(function (video) {
         video.controls = true;
@@ -1808,12 +1701,12 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!message) {
                 message = document.createElement("div");
                 message.className = "video-fallback";
-                message.textContent = "This video format may not be supported by this device. ";
+                message.append("This video could not be played in the current browser. ");
                 const link = document.createElement("a");
                 link.href = source.src;
                 link.textContent = "Open video file";
                 link.target = "_blank";
-                link.rel = "noopener";
+                link.rel = "noopener noreferrer";
                 message.appendChild(link);
                 video.insertAdjacentElement("afterend", message);
             }
@@ -1822,7 +1715,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
-
 <script>
 (function () {
   function openLinkedDetails() {
@@ -1840,7 +1732,6 @@ document.addEventListener("DOMContentLoaded", function () {
   openLinkedDetails();
 })();
 </script>
-
 <script>
 (function () {
     const menuToggle = document.getElementById("menuToggle");
@@ -1863,6 +1754,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 })();
 </script>
-
 </body>
 </html>
