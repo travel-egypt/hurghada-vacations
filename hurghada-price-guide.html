@@ -140,7 +140,7 @@
     }
 
     .intro-strip {
-      background:white;
+      background-color: #F1EBDD;
       border-bottom:1px solid var(--line);
       padding:20px 0;
     }
@@ -189,7 +189,7 @@
     .notice strong {color:#503b16}
 
     .search-panel {
-      background:white;
+      background-color: #F1EBDD;
       border:1px solid var(--line);
       padding:20px;
       border-radius:20px;
@@ -237,7 +237,7 @@
     }
     .chip {
       border:1px solid #dfe8e8;
-      background:white;
+      background-color: #F1EBDD;
       color:#4c626d;
       padding:9px 14px;
       border-radius:30px;
@@ -256,7 +256,7 @@
       gap:15px;
     }
     .price-card {
-      background:white;
+      background-color: #F1EBDD;
       border:1px solid var(--line);
       border-radius:16px;
       padding:18px;
@@ -306,7 +306,7 @@
     .no-results {
       grid-column:1/-1;
       text-align:center;padding:45px 20px;
-      background:white;border-radius:16px;color:var(--muted);
+      background-color: #F1EBDD;border-radius:16px;color:var(--muted);
     }
 
     .travel-section {
@@ -329,7 +329,7 @@
       gap:16px;
     }
     .tour-card {
-      background:#fff;color:var(--ink);
+      background-color: #F1EBDD;color:var(--ink);
       border-radius:17px;overflow:hidden;
       display:flex;flex-direction:column;
       border:1px solid rgba(255,255,255,.12);
@@ -373,7 +373,7 @@
       display:grid;grid-template-columns:repeat(3,1fr);gap:15px;
     }
     .value-card {
-      background:white;border:1px solid #e0ebea;
+      background-color: #F1EBDD;border:1px solid #e0ebea;
       padding:20px;border-radius:16px;
     }
     .value-card .emoji {font-size:25px}
@@ -384,7 +384,7 @@
       display:grid;grid-template-columns:repeat(2,1fr);gap:14px;
     }
     .tip {
-      background:white;border:1px solid var(--line);
+      background-color: #F1EBDD;border:1px solid var(--line);
       border-radius:14px;padding:17px;
       display:flex;gap:12px;
     }
@@ -394,7 +394,7 @@
 
     .faq-list {max-width:850px}
     .faq-list details {
-      background:white;border:1px solid var(--line);
+      background-color: #F1EBDD;border:1px solid var(--line);
       border-radius:12px;padding:15px 17px;margin-bottom:10px;
     }
     .faq-list summary {
@@ -404,7 +404,7 @@
     .faq-list details p {font-size:12px;color:var(--muted);margin-bottom:0}
 
     .source-box {
-      background:white;border:1px solid var(--line);
+      background-color: #F1EBDD;border:1px solid var(--line);
       border-radius:16px;padding:20px;
       font-size:12px;color:var(--muted);
     }
@@ -473,7 +473,90 @@
     }
   }
   </script>
-<meta content="Atlantis Tours and Experiences" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/></head>
+<meta content="Atlantis Tours and Experiences" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style id="atlantis-refined-typography">
+
+/* ATLANTIS — refined typography and warm coastal reading system */
+:root {
+  --atl-sand: #E9E1D3;
+  --atl-sand-soft: #F1EBDD;
+  --atl-sand-deep: #DCD2C1;
+  --atl-ink: #293B40;
+  --atl-muted: #66716F;
+  --atl-ocean: #29454B;
+  --atl-gold: #B99B70;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  color: var(--atl-ink) !important;
+  background-color: var(--atl-sand) !important;
+  font-size: 15.5px;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body :is(button, input, select, textarea) { font-family: 'Manrope', Arial, sans-serif !important; }
+h1, h2 {
+  font-family: 'DM Serif Display', Georgia, serif !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.13 !important;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2.65rem, 5.2vw, 4.65rem) !important; }
+h2 { font-size: clamp(2rem, 3.35vw, 3rem) !important; }
+h3 {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.018em;
+  line-height: 1.28 !important;
+  font-size: clamp(1.12rem, 1.55vw, 1.42rem) !important;
+}
+h4, h5, h6 {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.01em;
+}
+p, li, label, input, select, textarea {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  letter-spacing: 0;
+}
+p { line-height: 1.72; }
+small, .eyebrow, .kicker, .section-label, .card-category {
+  letter-spacing: .075em;
+}
+button, .btn, a.button, .book-link, .main-button, .cta-button {
+  font-weight: 650 !important;
+  letter-spacing: .035em !important;
+}
+/* Soft, warm surfaces instead of bright white cards */
+.tour-card, .info-card, .info-box, .feature-card, .story-card,
+.tool-card, .price-card, .faq-item, .content-card, .booking-panel,
+.form-panel, .contact-card, .guide-card, .card, .tour-includes {
+  background-color: var(--atl-sand-soft) !important;
+  color: var(--atl-ink) !important;
+}
+.tour-card p, .info-card p, .info-box p, .feature-card p,
+.story-card p, .tool-card p, .price-card p, .content-card p {
+  color: var(--atl-muted);
+}
+.tour-card .tour-lead {
+  font-size: .94rem !important;
+  line-height: 1.68 !important;
+  font-weight: 450 !important;
+}
+@media (max-width: 640px) {
+  body { font-size: 15px; line-height: 1.68; }
+  h1 { font-size: clamp(2.25rem, 10vw, 3.2rem) !important; }
+  h2 { font-size: clamp(1.8rem, 8vw, 2.35rem) !important; }
+  h3 { font-size: 1.12rem !important; }
+}
+
+</style>
+</head>
 <body>
 <div class="topbar">
 <div class="container">

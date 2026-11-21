@@ -1,0 +1,8 @@
+ATLANTIS TOURS AND EXPERIENCES — TYPOGRAPHY & TOUR COPY UPDATE
+
+1. Extract this ZIP.
+2. Upload the extracted files to the matching paths in your GitHub repository.
+3. Allow GitHub to replace the existing files with the same names.
+4. Commit the changes.
+
+This update changes typography and warm background surfaces across the HTML pages, and shortens the 36 tour introductions on all-tours.html. It preserves the existing images, videos, links, booking controls and page scripts.

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Atlantis Tours and Experiences in Hurghada &amp; the Red Sea. Explore islands, snorkeling, diving, water sports, desert safaris, Egypt excursions, and daily trip tools." name="description"/>
+<meta content="#031d30" name="theme-color"/>
+<title>Atlantis Tours and Experiences | Hurghada &amp; Red Sea</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#062c43;
+  --deep:#031d30;
+  --blue:#087f9e;
+  --turquoise:#16c5ce;
+  --gold:#e8b967;
+  --light:#f2f9fb;
+  --white:#ffffff;
+  --text:#526775;
+  --line:#e1ecf0;
+  --shadow:0 15px 40px rgba(0,40,65,.10);
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',Arial,sans-serif;color:var(--navy);line-height:1.7;background:#fff}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:90%;max-width:1250px;margin:0 auto}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:1000;background:rgba(3,29,48,.97);backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,.12)}
+.navbar{min-height:85px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:13px;color:#fff;min-width:0}
+.brand img{width:62px;height:62px;object-fit:contain;border-radius:10px;flex:0 0 auto}
+.brand-name{font-size:17px;font-weight:800;line-height:1.3;letter-spacing:.3px;color:#fff}
+.brand-name span{display:block;color:var(--turquoise);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-top:3px}
+.menu-toggle{display:none;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;border-radius:8px;padding:8px 12px;font-size:22px;cursor:pointer}
+.nav-links{display:flex;align-items:center;list-style:none;gap:16px;font-size:13px;font-weight:700}
+.nav-links a{color:#fff;transition:.25s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--turquoise)}
+.nav-links .nav-book{display:inline-block;background:var(--turquoise);color:var(--deep);padding:10px 18px;border-radius:30px;font-weight:800}
+.nav-links .nav-book:hover{background-color: #F1EBDD;color:var(--navy)}
+
+/* HERO */
+.hero{
+  min-height:540px;
+  background:linear-gradient(95deg,rgba(3,28,47,.92),rgba(3,28,47,.42)),
+  url("https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat;
+  display:flex;align-items:center;color:#fff
+}
+.hero-content{max-width:760px;padding:84px 0}
+.eyebrow{color:var(--gold);text-transform:uppercase;font-size:12px;font-weight:800;letter-spacing:3px;margin-bottom:12px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(38px,6vw,64px);line-height:1.1;margin-bottom:18px}
+.hero p{max-width:660px;font-size:17px;color:#eaf6fa;margin-bottom:28px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.main-button{display:inline-block;background:var(--turquoise);color:var(--deep);border:1px solid var(--turquoise);font-weight:800;padding:13px 26px;border-radius:30px;transition:.25s}
+.main-button:hover{background-color: #F1EBDD;color:var(--navy);border-color:#fff;transform:translateY(-2px)}
+.ghost-button{display:inline-block;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.35);font-weight:700;padding:13px 24px;border-radius:30px;transition:.25s}
+.ghost-button:hover{background-color: #F1EBDD;color:var(--navy);border-color:#fff}
+
+/* SECTIONS */
+.section{padding:72px 0}
+.section-alt{background:var(--light)}
+.section-header{text-align:center;max-width:780px;margin:0 auto 42px}
+.section-label{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:12px;margin-bottom:8px}
+.section-title{font-family:'Playfair Display',serif;color:var(--navy);font-size:clamp(28px,4vw,42px);line-height:1.18;margin-bottom:14px}
+.section-header p{color:var(--text);font-size:15.5px}
+
+/* FEATURED CATEGORIES */
+.cat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.cat-card{background-color: #F1EBDD;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease}
+.cat-card:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(6,44,67,.16)}
+.cat-card img{width:100%;height:215px;object-fit:cover;display:block;background:#dce9ee}
+.cat-body{padding:22px;display:flex;flex-direction:column;flex:1}
+.cat-tag{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.cat-body h3{font-size:21px;color:var(--navy);margin-bottom:8px;line-height:1.25}
+.cat-body p{color:var(--text);font-size:14px;margin-bottom:16px}
+.card-link{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:800;color:var(--blue);transition:.2s}
+.card-link:hover{color:var(--navy)}
+
+/* DAILY ROUTINE & DIGITAL TOOLS */
+.tools-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.tool-card{background-color: #F1EBDD;border-radius:16px;padding:24px;border:1px solid var(--line);box-shadow:0 10px 28px rgba(6,44,67,.06);display:flex;flex-direction:column;transition:transform .25s ease,border-color .25s ease}
+.tool-card:hover{transform:translateY(-4px);border-color:var(--turquoise)}
+.tool-badge{display:inline-block;align-self:flex-start;background:rgba(22,197,206,.14);color:var(--navy);border:1px solid rgba(22,197,206,.45);font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-bottom:14px}
+.tool-card h3{font-size:20px;color:var(--navy);margin-bottom:10px;line-height:1.25}
+.tool-card p{font-size:13.8px;color:var(--text);margin-bottom:18px}
+.tool-btn{margin-top:auto;display:inline-block;text-align:center;background:var(--navy);color:#fff;padding:10px 16px;border-radius:25px;font-size:13px;font-weight:800;transition:.2s}
+.tool-btn:hover{background:var(--turquoise);color:var(--deep)}
+.tool-btn.highlight{background:var(--turquoise);color:var(--deep)}
+.tool-btn.highlight:hover{background:var(--navy);color:#fff}
+
+/* WHY ATLANTIS */
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.why-box{background-color: #F1EBDD;border-radius:16px;padding:26px;border:1px solid var(--line);box-shadow:0 8px 24px rgba(6,44,67,.05)}
+.why-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:10px}
+.why-box h3{font-size:19px;color:var(--navy);margin-bottom:8px}
+.why-box p{font-size:14px;color:var(--text)}
+
+/* CTA */
+.cta{padding:72px 20px;text-align:center;background:linear-gradient(120deg,var(--navy),var(--blue));color:#fff}
+.cta h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,40px);margin-bottom:12px}
+.cta p{max-width:660px;margin:0 auto 26px;color:#e4f3f8;font-size:15.5px}
+.cta-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+
+/* FOOTER */
+footer{background:#021b2b;color:#fff;padding:60px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:36px}
+.footer-brand{font-size:21px;font-weight:800;margin-bottom:14px;color:#fff}
+.footer-brand span{color:var(--turquoise)}
+footer p{color:#bdcfd8;font-size:14px}
+footer h3{margin-bottom:15px;color:#fff;font-size:16px}
+.footer-links{list-style:none}
+.footer-links li{margin:8px 0;font-size:13.5px}
+.footer-links a{color:#bdcfd8;transition:.25s}
+.footer-links a:hover{color:var(--turquoise)}
+.footer-tools-heading{margin-top:22px}
+.copyright{border-top:1px solid rgba(255,255,255,.13);padding-top:20px;text-align:center;font-size:12px;color:#bdcfd8}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .tools-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nav-links{gap:11px;font-size:12px}
+  .brand-name{font-size:15px}
+}
+@media(max-width:850px){
+  .cat-grid,.why-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:28px}
+}
+@media(max-width:760px){
+  .navbar{min-height:75px}
+  .brand img{width:50px;height:50px}
+  .brand-name{font-size:14px}
+  .brand-name span{font-size:10px;letter-spacing:1.5px}
+  .menu-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:75px;left:0;width:100%;padding:20px;background:var(--deep);flex-direction:column;gap:16px;text-align:center}
+  .nav-links.active{display:flex}
+  .nav-links a{font-size:14px}
+  .hero{min-height:440px}
+}
+@media(max-width:560px){
+  .tools-grid{grid-template-columns:1fr}
+  .brand{gap:9px}
+  .brand img{width:45px;height:45px}
+  .brand-name{font-size:12px}
+  .brand-name span{font-size:9px}
+}
+</style>
+<link href="https://travel-egypt.github.io/hurghada-vacations/index.html" rel="canonical"/><meta content="website" property="og:type"/><meta content="Atlantis Tours and Experiences | Hurghada &amp; Red Sea" property="og:title"/><meta content="Atlantis Tours and Experiences in Hurghada &amp; the Red Sea. Explore islands, snorkeling, diving, water sports, desert safaris, Egypt excursions, and daily trip tools." property="og:description"/><meta content="https://travel-egypt.github.io/hurghada-vacations/index.html" property="og:url"/><meta content="Atlantis Tours and Experiences" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style id="atlantis-refined-typography">
+
+/* ATLANTIS — refined typography and warm coastal reading system */
+:root {
+  --atl-sand: #E9E1D3;
+  --atl-sand-soft: #F1EBDD;
+  --atl-sand-deep: #DCD2C1;
+  --atl-ink: #293B40;
+  --atl-muted: #66716F;
+  --atl-ocean: #29454B;
+  --atl-gold: #B99B70;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  color: var(--atl-ink) !important;
+  background-color: var(--atl-sand) !important;
+  font-size: 15.5px;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body :is(button, input, select, textarea) { font-family: 'Manrope', Arial, sans-serif !important; }
+h1, h2 {
+  font-family: 'DM Serif Display', Georgia, serif !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.13 !important;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2.65rem, 5.2vw, 4.65rem) !important; }
+h2 { font-size: clamp(2rem, 3.35vw, 3rem) !important; }
+h3 {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.018em;
+  line-height: 1.28 !important;
+  font-size: clamp(1.12rem, 1.55vw, 1.42rem) !important;
+}
+h4, h5, h6 {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.01em;
+}
+p, li, label, input, select, textarea {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  letter-spacing: 0;
+}
+p { line-height: 1.72; }
+small, .eyebrow, .kicker, .section-label, .card-category {
+  letter-spacing: .075em;
+}
+button, .btn, a.button, .book-link, .main-button, .cta-button {
+  font-weight: 650 !important;
+  letter-spacing: .035em !important;
+}
+/* Soft, warm surfaces instead of bright white cards */
+.tour-card, .info-card, .info-box, .feature-card, .story-card,
+.tool-card, .price-card, .faq-item, .content-card, .booking-panel,
+.form-panel, .contact-card, .guide-card, .card, .tour-includes {
+  background-color: var(--atl-sand-soft) !important;
+  color: var(--atl-ink) !important;
+}
+.tour-card p, .info-card p, .info-box p, .feature-card p,
+.story-card p, .tool-card p, .price-card p, .content-card p {
+  color: var(--atl-muted);
+}
+.tour-card .tour-lead {
+  font-size: .94rem !important;
+  line-height: 1.68 !important;
+  font-weight: 450 !important;
+}
+@media (max-width: 640px) {
+  body { font-size: 15px; line-height: 1.68; }
+  h1 { font-size: clamp(2.25rem, 10vw, 3.2rem) !important; }
+  h2 { font-size: clamp(1.8rem, 8vw, 2.35rem) !important; }
+  h3 { font-size: 1.12rem !important; }
+}
+
+</style>
+</head>
+<body>
+<header>
+<nav class="navbar container">
+<a class="brand" href="index.html">
+<img alt="Atlantis Tours and Experiences Logo" onerror="this.style.display='none'" src="logo.png"/>
+<div class="brand-name">
+        Atlantis Tours and Experiences
+        <span>Discover The Red Sea</span>
+</div>
+</a>
+<button aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" id="menuToggle">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a aria-current="page" class="active" href="index.html">Home</a></li>
+<li><a href="all-tours.html">Tours</a></li>
+<li><a href="stories.html">Stories</a></li>
+<li><a href="hurghada.html">Hurghada Guide</a></li>
+<li><a href="#digital-tools">Digital Tools</a></li>
+<li><a href="atlantis-companion.html">Companion (EN/DE)</a></li>
+<li><a href="booking.html">Booking</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a class="nav-book" href="booking.html">Book Now</a></li>
+</ul>
+</nav>
+</header>
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<div class="eyebrow">Hurghada &amp; Red Sea Experiences</div>
+<h1>Your Red Sea Journey,<br/>Planned Your Way.</h1>
+<p>
+        From Giftun islands and coral reefs to Eastern Desert safaris and ancient Egypt —
+        discover tailored excursions and daily travel tools with Atlantis Tours and Experiences.
+      </p>
+<div class="hero-actions">
+<a class="main-button" href="all-tours.html">Explore All Tours</a>
+<a class="ghost-button" href="atlantis-companion.html">Open Companion (EN / DE)</a>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-header">
+<div class="section-label">Curated Excursions</div>
+<h2 class="section-title">Popular Ways to Explore</h2>
+<p>
+        Browse our main excursion categories from Hurghada and build your personal trip list at your own pace.
+      </p>
+</div>
+<div class="cat-grid">
+<article class="cat-card">
+<img alt="Turquoise Red Sea island beach and clear water" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg"/>
+<div class="cat-body">
+<div class="cat-tag">Islands &amp; Sea Trips</div>
+<h3>Giftun Islands &amp; Boat Escapes</h3>
+<p>Relax on sandy beaches, swim in clear lagoons, or book a private boat charter across the Red Sea.</p>
+<a class="card-link" href="all-tours.html#tour-mahmya-island">View Island Trips →</a>
+</div>
+</article>
+<article class="cat-card">
+<img alt="Coral reef and marine life in the Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<div class="cat-body">
+<div class="cat-tag">Snorkeling &amp; Diving</div>
+<h3>Reefs, Turtles &amp; Dolphin Bays</h3>
+<p>Guided snorkeling, introductory scuba, certified dives, and marine bay outings suited to sea conditions.</p>
+<a class="card-link" href="all-tours.html#tour-red-sea-snorkeling-trip">Explore Sea &amp; Reefs →</a>
+</div>
+</article>
+<article class="cat-card">
+<img alt="Eastern Desert landscape and safari route" loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<div class="cat-body">
+<div class="cat-tag">Desert &amp; Egypt Trips</div>
+<h3>Desert Safaris &amp; Ancient Wonders</h3>
+<p>Quad bikes, 4x4 desert trails, Bedouin hospitality, Hurghada city spots, plus Luxor, Cairo &amp; Aswan.</p>
+<a class="card-link" href="all-tours.html#tour-quad-bike-safari">Explore Desert &amp; Egypt →</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="section section-alt" id="digital-tools">
+<div class="container">
+<div class="section-header">
+<div class="section-label">Daily Travel Utility</div>
+<h2 class="section-title">Digital Tools for Every Day of Your Stay</h2>
+<p>
+        Use our interactive companion game, daily planner, and local guides to make the most of each day in Hurghada.
+      </p>
+</div>
+<div class="tools-grid">
+<article class="tool-card">
+<span class="tool-badge">EN / DE · Game &amp; Planner</span>
+<h3>Atlantis Companion</h3>
+<p>Play Red Sea Reef &amp; Treasure Run, unlock spot facts, and plan your morning, afternoon &amp; evening in English or German.</p>
+<a class="tool-btn highlight" href="atlantis-companion.html">Launch Companion</a>
+</article>
+<article class="tool-card">
+<span class="tool-badge">Live Coast</span>
+<h3>Hurghada Live</h3>
+<p>Check practical daily context and local coastal rhythms before heading out for beach, city, or evening plans.</p>
+<a class="tool-btn" href="features/hurghada-live.html">Open Hurghada Live</a>
+</article>
+<article class="tool-card">
+<span class="tool-badge">Sea &amp; Reef</span>
+<h3>Red Sea Live</h3>
+<p>Quick reference for Red Sea outings, boat &amp; reef awareness, and planning your water days smoothly.</p>
+<a class="tool-btn" href="features/red-sea-live.html">Open Red Sea Live</a>
+</article>
+<article class="tool-card">
+<span class="tool-badge">Quick Tips</span>
+<h3>Pocket Guide</h3>
+<p>Handy travel notes, local etiquette, and practical reminders for getting around Hurghada with confidence.</p>
+<a class="tool-btn" href="features/pocket-guide.html">Open Pocket Guide</a>
+</article>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-header">
+<div class="section-label">Why Atlantis</div>
+<h2 class="section-title">Clear Planning Without Guesswork</h2>
+<p>Every trip is coordinated around real weather, sea conditions, and clear inclusions before you confirm.</p>
+</div>
+<div class="why-grid">
+<div class="why-box">
+<div class="why-num">01</div>
+<h3>Conditions-First Routing</h3>
+<p>We align boat, snorkeling, water sport, and desert options with daily sea and weather conditions.</p>
+</div>
+<div class="why-box">
+<div class="why-num">02</div>
+<h3>Save &amp; Compare Easily</h3>
+<p>Save your favorite tours on your device, plan your days, and carry your shortlist straight to booking.</p>
+</div>
+<div class="why-box">
+<div class="why-num">03</div>
+<h3>Direct Local Support</h3>
+<p>Confirm pickup details, inclusions, and custom requests directly with Atlantis Tours and Experiences.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="cta">
+<h2>Ready to Plan Your Next Day in Hurghada?</h2>
+<p>Browse all excursions, save your favorites, or send your booking request directly to our team.</p>
+<div class="cta-actions">
+<a class="main-button" href="booking.html">Book Your Experience</a>
+<a class="ghost-button" href="contact.html">Contact Our Team</a>
+</div>
+</section>
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="footer-brand">
+          Atlantis <span>Tours and Experiences</span>
+</div>
+<p>
+          Discover the beauty of Egypt and experience
+          unforgettable adventures across the Red Sea.
+        </p>
+</div>
+<div>
+<h3>Quick Links</h3>
+<ul class="footer-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="all-tours.html">All Tours</a></li>
+<li><a href="stories.html">Stories</a></li>
+<li><a href="hurghada.html">Hurghada City Guide</a></li>
+<li><a href="booking.html">Booking</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3>Explore Egypt</h3>
+<ul class="footer-links">
+<li><a href="all-tours.html#tour-orange-bay-island">Orange Bay</a></li>
+<li><a href="all-tours.html#tour-red-sea-snorkeling-trip">Snorkeling</a></li>
+<li><a href="all-tours.html#tour-private-boat---yacht-trips">Boat Trips</a></li>
+<li><a href="all-tours.html#tour-quad-bike-safari">Desert Adventures</a></li>
+</ul>
+<h3 class="footer-tools-heading">Digital Tools</h3>
+<ul class="footer-links">
+<li><a href="features/hurghada-live.html">Hurghada Live</a></li>
+<li><a href="features/red-sea-live.html">Red Sea Live</a></li>
+<li><a href="features/pocket-guide.html">Pocket Guide</a></li>
+<li><a href="atlantis-companion.html">Hurghada Companion (EN/DE)</a></li>
+</ul>
+</div>
+</div>
+<div class="copyright">
+      © <span id="year">2026</span> Atlantis Tours and Experiences. All Rights Reserved.
+    </div>
+</div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("active");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+  }
+});
+</script>
+</body>
+</html>
