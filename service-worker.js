@@ -1,7 +1,7 @@
 
 "use strict";
 
-const CACHE_NAME = "atlantis-pocket-guide-v1";
+const CACHE_NAME = "atlantis-pocket-guide-v2";
 
 const BASE = new URL("./", self.registration.scope);
 
