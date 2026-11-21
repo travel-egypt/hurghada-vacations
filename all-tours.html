@@ -1,330 +1,955 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore Hurghada and Red Sea excursions with Atlantis Tours and Experiences: Abu Dabbab Bay, Hula Hula Island, Orange Bay Island, and Eden Island with real photos, videos, and transparent EUR/USD pricing.">
+
+<title>All Red Sea Tours & Prices | Atlantis Tours and Experiences</title>
+<meta name="description" content="Explore Red Sea excursions with Atlantis Tours and Experiences. Discover Abu Dabbab, Hula Hula, Orange Bay and Eden Island with real photos, videos and EUR/USD prices.">
 <meta name="theme-color" content="#031d30">
-<title>All Tours &amp; Price List | Atlantis Tours and Experiences</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-:root{
+:root {
   --navy:#062c43;
   --deep:#031d30;
   --blue:#087f9e;
   --turquoise:#16c5ce;
   --gold:#e8b967;
   --light:#f2f9fb;
-  --white:#ffffff;
+  --white:#fff;
   --text:#526775;
   --line:#e1ecf0;
-  --shadow:0 15px 40px rgba(0,40,65,.09);
+  --shadow:0 15px 40px rgba(0,40,65,.10);
 }
+
+*{box-sizing:border-box;margin:0;padding:0}
+
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',Arial,sans-serif;color:var(--navy);line-height:1.7;background:var(--light)}
+
+body{
+  font-family:'DM Sans',Arial,sans-serif;
+  color:var(--navy);
+  background:var(--light);
+  line-height:1.7;
+}
+
 a{text-decoration:none;color:inherit}
 button{font:inherit}
-.container{width:90%;max-width:1250px;margin:0 auto}
+img,video{max-width:100%}
+
+.container{
+  width:90%;
+  max-width:1250px;
+  margin:auto;
+}
 
 /* HEADER */
-header{position:sticky;top:0;z-index:1000;background:rgba(3,29,48,.97);backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,.12)}
-.navbar{min-height:85px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{display:flex;align-items:center;gap:12px;color:#fff;min-width:0}
-.brand img{width:58px;height:58px;object-fit:contain;border-radius:10px;flex:0 0 auto}
-.brand-name{font-size:16px;font-weight:800;line-height:1.25;color:#fff}
-.brand-name span{display:block;color:var(--turquoise);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-top:2px}
-.menu-toggle{display:none;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;border-radius:8px;padding:8px 12px;font-size:22px;cursor:pointer}
-.nav-links{display:flex;align-items:center;list-style:none;gap:18px;font-size:13.5px;font-weight:700}
-.nav-links a{color:#fff;transition:.25s;white-space:nowrap}
-.nav-links a:hover,.nav-links a.active{color:var(--turquoise)}
-.nav-links .nav-book{display:inline-block;background:var(--turquoise);color:var(--deep);padding:9px 16px;border-radius:30px;font-weight:800}
-.nav-links .nav-book:hover{background:#fff;color:var(--navy)}
 
-/* HERO WITH REAL PHOTO BACKDROP */
-.tours-hero{
-  position:relative;
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(3,29,48,.97);
+  backdrop-filter:blur(12px);
+  box-shadow:0 4px 20px rgba(0,0,0,.12);
+}
+
+.navbar{
+  min-height:85px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:13px;
   color:#fff;
-  padding:74px 0 64px;
+  min-width:0;
+}
+
+.brand img{
+  width:60px;
+  height:60px;
+  object-fit:contain;
+  border-radius:10px;
+}
+
+.brand-name{
+  font-size:16px;
+  font-weight:800;
+  line-height:1.3;
+}
+
+.brand-name span{
+  display:block;
+  color:var(--turquoise);
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-top:3px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:25px;
+  list-style:none;
+}
+
+.nav-links a{
+  color:#fff;
+  font-size:14px;
+  font-weight:700;
+  transition:.25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{color:var(--turquoise)}
+
+.nav-links .nav-book{
+  background:var(--turquoise);
+  color:var(--deep);
+  padding:10px 20px;
+  border-radius:30px;
+}
+
+.menu-toggle{
+  display:none;
+  border:1px solid rgba(255,255,255,.3);
+  background:transparent;
+  color:#fff;
+  border-radius:8px;
+  padding:7px 12px;
+  font-size:23px;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  padding:90px 0 75px;
+  color:#fff;
   background-color:var(--deep);
-  background-image:linear-gradient(120deg,rgba(3,29,48,.88) 0%,rgba(6,44,67,.74) 55%,rgba(8,127,158,.58) 100%),url('images/Hula.jpeg');
+  background-image:
+    linear-gradient(110deg,rgba(3,29,48,.91),rgba(6,44,67,.76),rgba(8,127,158,.48)),
+    url("assets/images/Hula.jpeg");
   background-size:cover;
   background-position:center;
 }
-.eyebrow{color:var(--gold);text-transform:uppercase;font-size:12px;font-weight:800;letter-spacing:2.5px;margin-bottom:10px}
-.tours-hero h1{font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,54px);line-height:1.15;margin-bottom:14px}
-.tours-hero p{max-width:760px;color:#e8f5fa;font-size:16px;margin-bottom:24px}
 
-.hero-controls{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.filter-bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.filter-btn{border:1px solid rgba(255,255,255,.3);background:rgba(3,29,48,.55);backdrop-filter:blur(6px);color:#fff;padding:9px 18px;border-radius:30px;font-size:13px;font-weight:800;cursor:pointer;transition:.2s}
-.filter-btn:hover,.filter-btn.active{background:var(--turquoise);color:var(--deep);border-color:var(--turquoise)}
+.eyebrow{
+  color:var(--gold);
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  margin-bottom:12px;
+}
 
-.currency-switch{display:inline-flex;background:rgba(3,29,48,.75);border:1px solid rgba(255,255,255,.25);border-radius:30px;padding:4px;gap:4px}
-.curr-btn{border:none;background:transparent;color:#d6ecf3;padding:6px 14px;border-radius:24px;font-size:12.5px;font-weight:800;cursor:pointer;transition:.2s}
-.curr-btn.active{background:var(--gold);color:var(--deep)}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(36px,5vw,60px);
+  line-height:1.15;
+  max-width:850px;
+  margin-bottom:18px;
+}
 
-/* MAIN CONTENT */
-.tours-section{padding:48px 0 76px}
+.hero p{
+  max-width:760px;
+  color:#e5f2f7;
+  font-size:16px;
+  margin-bottom:30px;
+}
 
-/* PRICE LIST SUMMARY BAR */
+.hero-controls{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.filter-bar{
+  display:flex;
+  gap:9px;
+  flex-wrap:wrap;
+}
+
+.filter-btn,
+.curr-btn{
+  cursor:pointer;
+  font-weight:800;
+  transition:.2s;
+}
+
+.filter-btn{
+  border:1px solid rgba(255,255,255,.3);
+  background:rgba(3,29,48,.6);
+  color:#fff;
+  padding:9px 17px;
+  border-radius:30px;
+  font-size:13px;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+  background:var(--turquoise);
+  color:var(--deep);
+  border-color:var(--turquoise);
+}
+
+.currency-switch{
+  display:flex;
+  gap:4px;
+  padding:4px;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:30px;
+  background:rgba(3,29,48,.75);
+}
+
+.curr-btn{
+  border:0;
+  background:transparent;
+  color:#fff;
+  padding:7px 13px;
+  border-radius:25px;
+  font-size:12px;
+}
+
+.curr-btn.active{
+  background:var(--gold);
+  color:var(--deep);
+}
+
+/* MAIN */
+
+.tours-section{padding:55px 0 80px}
+
+/* PRICE LIST */
+
 .pricelist-card{
   background:#fff;
   border:1px solid var(--line);
   border-radius:20px;
   box-shadow:var(--shadow);
-  padding:24px 26px;
-  margin-bottom:36px;
+  padding:26px;
+  margin-bottom:40px;
 }
-.pricelist-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--line)}
-.pricelist-head h2{font-family:'Playfair Display',serif;font-size:26px;color:var(--navy)}
-.pricelist-head span{font-size:13px;font-weight:700;color:var(--blue)}
-.pricelist-table{width:100%;border-collapse:collapse;font-size:14.5px}
-.pricelist-table th{text-align:left;padding:10px 12px;color:var(--text);font-size:12px;text-transform:uppercase;letter-spacing:1.1px;border-bottom:2px solid var(--line)}
-.pricelist-table td{padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
-.pricelist-table tr:last-child td{border-bottom:none}
-.pl-tour-name{font-weight:800;color:var(--navy);font-size:15.5px}
-.pl-tour-sub{display:block;font-size:12.5px;font-weight:500;color:var(--text)}
-.pl-price{font-weight:800;color:var(--navy);font-size:16px;white-space:nowrap}
-.pl-price small{display:block;font-size:12px;font-weight:600;color:var(--blue)}
-.pl-tba{display:inline-block;background:#fdf6e7;border:1px solid #f0d7a1;color:#8a5e14;font-size:12px;font-weight:800;padding:4px 12px;border-radius:20px}
-.pl-book{display:inline-block;background:var(--light);border:1px solid #cde2ea;color:var(--navy);padding:6px 14px;border-radius:20px;font-size:12.5px;font-weight:800;transition:.2s}
-.pl-book:hover{background:var(--turquoise);border-color:var(--turquoise);color:var(--deep)}
 
-/* TOURS GRID */
-.tours-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
-.tour-card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .25s ease,border-color .25s ease}
-.tour-card:hover{transform:translateY(-4px);border-color:var(--turquoise)}
+.pricelist-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:15px;
+  flex-wrap:wrap;
+  padding-bottom:16px;
+  margin-bottom:15px;
+  border-bottom:1px solid var(--line);
+}
+
+.pricelist-head h2{
+  font-family:'Playfair Display',serif;
+  font-size:27px;
+}
+
+.pricelist-head p{
+  color:var(--blue);
+  font-size:13px;
+  font-weight:700;
+}
+
+.table-wrap{overflow-x:auto}
+
+.pricelist-table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:580px;
+}
+
+.pricelist-table th{
+  text-align:left;
+  padding:12px;
+  font-size:11px;
+  color:var(--text);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  border-bottom:2px solid var(--line);
+}
+
+.pricelist-table td{
+  padding:14px 12px;
+  border-bottom:1px solid var(--line);
+  font-size:14px;
+}
+
+.pricelist-table tr:last-child td{border-bottom:0}
+
+.pl-tour-name{
+  display:block;
+  font-weight:800;
+  font-size:15px;
+}
+
+.pl-tour-sub{
+  display:block;
+  color:var(--text);
+  font-size:12px;
+}
+
+.pl-price{
+  font-weight:800;
+  white-space:nowrap;
+}
+
+.pl-price small{
+  display:block;
+  color:var(--blue);
+  font-size:11px;
+  font-weight:600;
+}
+
+.pl-tba{
+  display:inline-block;
+  background:#fdf6e7;
+  color:#8a5e14;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.pl-book{
+  display:inline-block;
+  background:var(--light);
+  border:1px solid #cde2ea;
+  padding:7px 15px;
+  border-radius:25px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.pl-book:hover{
+  background:var(--turquoise);
+  border-color:var(--turquoise);
+}
+
+/* TOUR CARDS */
+
+.tours-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:28px;
+}
+
+.tour-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  transition:transform .25s,border-color .25s;
+}
+
+.tour-card:hover{
+  transform:translateY(-5px);
+  border-color:var(--turquoise);
+}
+
 .tour-card.hidden-filter{display:none}
 
-/* REAL MEDIA STAGE */
-.tour-media{position:relative;height:290px;background:var(--deep);overflow:hidden;cursor:zoom-in}
-.tour-media img.main-photo{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
-.tour-card:hover .tour-media img.main-photo{transform:scale(1.02)}
-.tour-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,29,48,.22) 0%,rgba(3,29,48,.1) 45%,rgba(3,29,48,.86) 100%);pointer-events:none}
+.tour-media{
+  position:relative;
+  height:310px;
+  background:var(--deep);
+  overflow:hidden;
+  cursor:zoom-in;
+}
 
-.tour-media-top{position:absolute;top:14px;left:14px;right:14px;z-index:3;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;pointer-events:none}
-.tour-category{background:rgba(3,29,48,.84);color:#fff;border:1px solid rgba(255,255,255,.24);font-size:11px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;padding:5px 12px;border-radius:20px}
-.price-badge{background:var(--gold);color:var(--deep);font-size:13.5px;font-weight:800;padding:5px 14px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.25)}
-.price-badge.tba{background:rgba(3,29,48,.86);color:var(--gold);border:1px solid rgba(232,185,103,.45)}
+.main-photo{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .4s;
+}
+
+.tour-card:hover .main-photo{transform:scale(1.025)}
+
+.tour-media:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(
+    180deg,
+    rgba(3,29,48,.20),
+    transparent 40%,
+    rgba(3,29,48,.85)
+  );
+}
+
+.tour-media-top{
+  position:absolute;
+  z-index:3;
+  top:15px;
+  left:15px;
+  right:15px;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:center;
+  pointer-events:none;
+}
+
+.tour-category{
+  color:#fff;
+  background:rgba(3,29,48,.85);
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.price-badge{
+  background:var(--gold);
+  color:var(--deep);
+  padding:6px 13px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.price-badge.tba{
+  color:var(--gold);
+  background:rgba(3,29,48,.9);
+  border:1px solid var(--gold);
+}
 
 .media-nav-btn{
   position:absolute;
+  z-index:4;
   top:50%;
   transform:translateY(-50%);
-  z-index:3;
-  width:36px;
-  height:36px;
+  width:39px;
+  height:39px;
   border-radius:50%;
-  border:1px solid rgba(255,255,255,.35);
-  background:rgba(3,29,48,.72);
+  border:1px solid rgba(255,255,255,.4);
+  background:rgba(3,29,48,.75);
   color:#fff;
-  font-size:16px;
-  font-weight:800;
+  font-size:22px;
   cursor:pointer;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  transition:.2s;
 }
-.media-nav-btn:hover{background:var(--turquoise);color:var(--deep);border-color:var(--turquoise)}
+
+.media-nav-btn:hover{
+  background:var(--turquoise);
+  color:var(--deep);
+}
+
 .media-prev{left:12px}
 .media-next{right:12px}
 
 .media-caption-bar{
   position:absolute;
-  bottom:12px;
-  left:14px;
-  right:14px;
   z-index:3;
+  bottom:14px;
+  left:15px;
+  right:15px;
   display:flex;
   justify-content:space-between;
   align-items:flex-end;
-  gap:10px;
+  gap:12px;
 }
-.media-caption-text{color:#fff;font-size:13px;font-weight:600;line-height:1.35;text-shadow:0 2px 8px rgba(0,0,0,.6)}
-.media-caption-text strong{display:block;color:var(--turquoise);font-size:11.5px;text-transform:uppercase;letter-spacing:1px}
-.open-lightbox-btn{
-  flex:0 0 auto;
-  background:rgba(255,255,255,.16);
-  backdrop-filter:blur(6px);
-  border:1px solid rgba(255,255,255,.35);
-  color:#fff;
-  font-size:11.5px;
-  font-weight:800;
-  padding:6px 12px;
-  border-radius:20px;
-  cursor:pointer;
-  transition:.2s;
-}
-.open-lightbox-btn:hover{background:#fff;color:var(--navy)}
 
-/* THUMBNAIL STRIP */
+.media-caption-text{
+  color:#fff;
+  font-size:12px;
+  line-height:1.5;
+  text-shadow:0 2px 7px #000;
+}
+
+.media-caption-text strong{
+  display:block;
+  color:var(--turquoise);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+}
+
+.open-lightbox-btn{
+  flex-shrink:0;
+  background:rgba(255,255,255,.17);
+  border:1px solid rgba(255,255,255,.4);
+  color:#fff;
+  padding:7px 12px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.open-lightbox-btn:hover{
+  background:#fff;
+  color:var(--navy);
+}
+
+/* THUMBNAILS */
+
 .thumb-strip{
   display:flex;
   gap:7px;
   overflow-x:auto;
-  padding:10px 14px;
+  padding:10px 13px;
   background:#042236;
   scrollbar-width:thin;
 }
-.thumb-btn{width:54px;height:40px;border-radius:7px;overflow:hidden;border:2px solid transparent;background:var(--deep);cursor:pointer;flex:0 0 auto;opacity:.68;transition:.2s}
-.thumb-btn.active,.thumb-btn:hover{opacity:1;border-color:var(--turquoise)}
-.thumb-btn img{width:100%;height:100%;object-fit:cover;display:block}
 
-/* BODY */
-.tour-body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
-.tour-meta{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12.5px;font-weight:700;color:var(--blue)}
-.tour-body h2{font-family:'Playfair Display',serif;font-size:26px;color:var(--navy);line-height:1.25}
-.tour-price-box{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-.tour-price-box strong{font-size:24px;font-weight:800;color:var(--navy)}
-.tour-price-box span{font-size:13.5px;color:var(--text);font-weight:600}
-.tour-body p{color:var(--text);font-size:14.5px}
-.tour-highlights{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
-.tour-highlights li{background:var(--light);border:1px solid #d9ebf2;color:var(--navy);font-size:12px;font-weight:700;padding:4px 11px;border-radius:20px}
+.thumb-btn{
+  flex:0 0 auto;
+  width:58px;
+  height:43px;
+  padding:0;
+  overflow:hidden;
+  border:2px solid transparent;
+  border-radius:7px;
+  background:var(--deep);
+  opacity:.65;
+  cursor:pointer;
+}
 
-/* VIDEO GALLERY */
-.video-box{background:var(--light);border:1px solid var(--line);border-radius:16px;padding:14px}
-.video-header{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
-.video-header span{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.1px;color:var(--blue)}
-.video-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
-.vtab-btn{border:1px solid #cde2ea;background:#fff;color:var(--navy);padding:6px 12px;border-radius:20px;font-size:12px;font-weight:800;cursor:pointer;transition:.2s}
-.vtab-btn.active,.vtab-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
-.tour-video{width:100%;max-height:230px;border-radius:12px;background:#031d30;display:block}
-.video-caption{margin-top:9px;font-size:13px;color:var(--text);line-height:1.45}
+.thumb-btn.active,
+.thumb-btn:hover{
+  opacity:1;
+  border-color:var(--turquoise);
+}
+
+.thumb-btn img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* CARD BODY */
+
+.tour-body{
+  padding:23px;
+  display:flex;
+  flex-direction:column;
+  gap:13px;
+  flex:1;
+}
+
+.tour-meta{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+  color:var(--blue);
+  font-size:11px;
+  font-weight:800;
+}
+
+.tour-body h2{
+  font-family:'Playfair Display',serif;
+  font-size:26px;
+  line-height:1.25;
+}
+
+.tour-price-box{
+  display:flex;
+  align-items:baseline;
+  gap:9px;
+  flex-wrap:wrap;
+}
+
+.tour-price-box strong{
+  font-size:25px;
+  color:var(--blue);
+}
+
+.tour-price-box span{
+  color:var(--text);
+  font-size:12px;
+}
+
+.tour-description{
+  color:var(--text);
+  font-size:14px;
+}
+
+.tour-highlights{
+  list-style:none;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+}
+
+.tour-highlights li{
+  background:var(--light);
+  padding:8px 10px;
+  border-radius:8px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.tour-highlights li:before{
+  content:"✓";
+  color:var(--blue);
+  font-weight:900;
+  margin-right:7px;
+}
+
+/* VIDEO */
+
+.video-box{
+  background:var(--light);
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:14px;
+  margin-top:4px;
+}
+
+.video-header{
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+
+.video-header span{
+  color:var(--blue);
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+}
+
+.video-tabs{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+
+.vtab-btn{
+  border:1px solid #cde2ea;
+  background:#fff;
+  color:var(--navy);
+  padding:6px 11px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.vtab-btn.active,
+.vtab-btn:hover{
+  background:var(--navy);
+  color:#fff;
+}
+
+.tour-video{
+  width:100%;
+  max-height:260px;
+  display:block;
+  background:#031d30;
+  border-radius:11px;
+}
+
+.video-caption{
+  margin-top:9px;
+  color:var(--text);
+  font-size:12px;
+}
+
 .video-caption strong{color:var(--navy)}
 
-.tour-actions{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.btn-book{background:var(--turquoise);color:var(--deep);padding:10px 22px;border-radius:25px;font-size:13.5px;font-weight:800;transition:.2s}
-.btn-book:hover{background:var(--navy);color:#fff}
-.link-companion{font-size:13px;font-weight:800;color:var(--blue)}
+.media-error{
+  display:none;
+  margin-top:8px;
+  padding:9px 11px;
+  border-radius:9px;
+  background:#fff4e5;
+  border:1px solid #f0d7a1;
+  color:#80530c;
+  font-size:12px;
+  font-weight:700;
+}
+
+.media-error.visible{display:block}
+
+/* ACTIONS */
+
+.tour-actions{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:auto;
+  padding-top:15px;
+  border-top:1px solid var(--line);
+}
+
+.btn-book{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--turquoise);
+  color:var(--deep);
+  padding:11px 21px;
+  border-radius:25px;
+  font-size:13px;
+  font-weight:800;
+  transition:.2s;
+}
+
+.btn-book:hover{
+  background:var(--navy);
+  color:#fff;
+}
+
+.link-companion{
+  color:var(--blue);
+  font-size:12px;
+  font-weight:800;
+}
+
 .link-companion:hover{color:var(--navy)}
 
-/* LIGHTBOX MODAL */
+/* LIGHTBOX */
+
 .lightbox{
   position:fixed;
   inset:0;
-  z-index:2000;
-  background:rgba(2,17,28,.94);
-  backdrop-filter:blur(8px);
+  z-index:3000;
   display:none;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   padding:20px;
+  background:rgba(2,17,28,.96);
+  backdrop-filter:blur(8px);
 }
+
 .lightbox.open{display:flex}
-.lightbox-top{
+
+.lightbox-top,
+.lightbox-caption{
   width:100%;
-  max-width:1050px;
+  max-width:1100px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  gap:15px;
   color:#fff;
-  margin-bottom:12px;
-  gap:12px;
 }
-.lightbox-title{font-size:15px;font-weight:800;color:var(--turquoise)}
-.lightbox-close{
-  background:rgba(255,255,255,.14);
-  border:1px solid rgba(255,255,255,.3);
-  color:#fff;
-  border-radius:24px;
-  padding:7px 16px;
-  font-size:13px;
+
+.lightbox-top{margin-bottom:12px}
+
+.lightbox-title{
+  color:var(--turquoise);
   font-weight:800;
-  cursor:pointer;
+  font-size:15px;
 }
-.lightbox-close:hover{background:var(--turquoise);color:var(--deep)}
+
+.lightbox-close{
+  background:rgba(255,255,255,.15);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:25px;
+  padding:8px 16px;
+  cursor:pointer;
+  font-weight:800;
+}
+
 .lightbox-stage{
   position:relative;
   width:100%;
-  max-width:1050px;
-  height:min(70vh,620px);
+  max-width:1100px;
+  height:min(70vh,650px);
   display:flex;
   align-items:center;
   justify-content:center;
   background:#031d30;
-  border-radius:16px;
+  border-radius:15px;
   overflow:hidden;
-  border:1px solid rgba(255,255,255,.15);
 }
-.lightbox-stage img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+
+.lightbox-stage img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+}
+
 .lb-arrow{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
   width:46px;
   height:46px;
+  border:1px solid rgba(255,255,255,.4);
   border-radius:50%;
-  border:1px solid rgba(255,255,255,.35);
-  background:rgba(3,29,48,.82);
+  background:rgba(3,29,48,.85);
   color:#fff;
-  font-size:20px;
-  font-weight:800;
+  font-size:22px;
   cursor:pointer;
 }
-.lb-arrow:hover{background:var(--turquoise);color:var(--deep)}
-.lb-prev{left:14px}
-.lb-next{right:14px}
-.lightbox-caption{
-  width:100%;
-  max-width:1050px;
-  margin-top:12px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:16px;
-  color:#e4f3f8;
-  font-size:14px;
+
+.lb-arrow:hover{
+  background:var(--turquoise);
+  color:var(--deep);
 }
-.lightbox-counter{color:var(--gold);font-weight:800;white-space:nowrap}
+
+.lb-prev{left:13px}
+.lb-next{right:13px}
+
+.lightbox-caption{
+  margin-top:12px;
+  font-size:13px;
+}
+
+.lightbox-counter{
+  color:var(--gold);
+  font-weight:800;
+  white-space:nowrap;
+}
 
 /* FOOTER */
-footer{background:#021b2b;color:#fff;padding:48px 0 20px}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:32px;padding-bottom:28px}
-.footer-brand{font-size:20px;font-weight:800;margin-bottom:10px;color:#fff}
-.footer-brand span{color:var(--turquoise)}
-footer p{color:#bdcfd8;font-size:13.5px}
-footer h3{margin-bottom:12px;color:#fff;font-size:15px}
-.footer-links{list-style:none}
-.footer-links li{margin:7px 0;font-size:13px}
-.footer-links a{color:#bdcfd8;transition:.2s}
-.footer-links a:hover{color:var(--turquoise)}
-.copyright{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;text-align:center;font-size:12px;color:#bdcfd8}
 
-@media(max-width:920px){
+footer{
+  background:#021b2b;
+  color:#fff;
+  padding:48px 0 20px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:35px;
+  padding-bottom:30px;
+}
+
+.footer-brand{
+  font-size:20px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.footer-brand span{color:var(--turquoise)}
+
+footer p{
+  color:#bdcfd8;
+  font-size:13px;
+}
+
+footer h3{
+  font-size:15px;
+  margin-bottom:12px;
+}
+
+.footer-links{list-style:none}
+
+.footer-links li{
+  margin:7px 0;
+  font-size:13px;
+}
+
+.footer-links a{color:#bdcfd8}
+.footer-links a:hover{color:var(--turquoise)}
+
+.copyright{
+  border-top:1px solid rgba(255,255,255,.13);
+  padding-top:18px;
+  text-align:center;
+  color:#bdcfd8;
+  font-size:12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
   .tours-grid{grid-template-columns:1fr}
 }
+
 @media(max-width:820px){
   .navbar{min-height:74px}
   .brand img{width:48px;height:48px}
-  .brand-name{font-size:14px}
+  .brand-name{font-size:13px}
   .menu-toggle{display:block}
-  .nav-links{display:none;position:absolute;top:74px;left:0;width:100%;padding:20px;background:var(--deep);flex-direction:column;gap:14px;text-align:center}
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:74px;
+    left:0;
+    width:100%;
+    padding:22px;
+    background:var(--deep);
+    flex-direction:column;
+    gap:17px;
+    text-align:center;
+  }
+
   .nav-links.active{display:flex}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:600px){
+  .hero{padding:65px 0 55px}
+  .hero h1{font-size:36px}
+  .hero p{font-size:14px}
+  .hero-controls{align-items:flex-start}
+  .filter-bar{width:100%}
+  .filter-btn{font-size:11px;padding:8px 12px}
+  .currency-switch{width:100%;justify-content:space-between}
+  .curr-btn{flex:1;padding:8px 5px;font-size:11px}
+  .tours-section{padding:30px 0 55px}
+  .pricelist-card{padding:16px}
+  .pricelist-head h2{font-size:22px}
+  .tour-media{height:245px}
+  .tour-body{padding:17px}
+  .tour-body h2{font-size:23px}
+  .tour-highlights{grid-template-columns:1fr 1fr}
   .footer-grid{grid-template-columns:1fr}
-  .pricelist-table th:nth-child(2),.pricelist-table td:nth-child(2){display:none}
+  .lightbox{padding:10px}
+  .lightbox-stage{height:60vh}
+  .lightbox-caption{font-size:11px}
 }
 </style>
 </head>
+
 <body>
 
 <header>
   <nav class="navbar container">
+
     <a href="index.html" class="brand">
-      <img src="images/logo.png" alt="Atlantis Tours and Experiences Logo" onerror="this.style.display='none'">
+      <img src="logo.png" alt="Atlantis Tours and Experiences Logo">
       <div class="brand-name">
         Atlantis Tours and Experiences
         <span>Discover The Red Sea</span>
       </div>
     </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false">☰</button>
 
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
@@ -333,736 +958,1067 @@ footer h3{margin-bottom:12px;color:#fff;font-size:15px}
       <li><a href="contact.html">Contact</a></li>
       <li><a href="booking.html" class="nav-book">Book Now</a></li>
     </ul>
+
   </nav>
 </header>
 
-<section class="tours-hero">
+<section class="hero">
   <div class="container">
-    <div class="eyebrow">Hurghada &amp; Red Sea</div>
-    <h1>Red Sea Islands &amp; Bay Excursions</h1>
+
+    <div class="eyebrow">Hurghada · Red Sea · Egypt</div>
+
+    <h1>Discover Your Next Red Sea Adventure</h1>
+
     <p>
-      Browse real photos and trip videos from our Red Sea excursions — Abu Dabbab Bay, Hula Hula Island, Orange Bay Island, and Eden Island — with clear EUR &amp; USD rates.
+      Explore our island escapes and coastal excursions through real trip
+      photos and videos. Compare prices, discover what each experience offers,
+      and choose your next unforgettable day in the Red Sea.
     </p>
+
     <div class="hero-controls">
-      <div class="filter-bar" role="group" aria-label="Filter tours by category">
-        <button type="button" class="filter-btn active" data-filter="all">All Tours (4)</button>
-        <button type="button" class="filter-btn" data-filter="bay-reef">Bay &amp; Turtle Reef</button>
-        <button type="button" class="filter-btn" data-filter="island">Red Sea Islands</button>
+
+      <div class="filter-bar" role="group" aria-label="Filter tours">
+        <button class="filter-btn active" data-filter="all">All Tours (4)</button>
+        <button class="filter-btn" data-filter="bay-reef">Bay & Turtle Reef</button>
+        <button class="filter-btn" data-filter="island">Red Sea Islands</button>
       </div>
 
-      <div class="currency-switch" role="group" aria-label="Display currency">
-        <button type="button" class="curr-btn active" data-currency="both">EUR &amp; USD</button>
-        <button type="button" class="curr-btn" data-currency="eur">EUR (€)</button>
-        <button type="button" class="curr-btn" data-currency="usd">USD ($)</button>
+      <div class="currency-switch" role="group" aria-label="Currency">
+        <button class="curr-btn active" data-currency="both">EUR & USD</button>
+        <button class="curr-btn" data-currency="eur">EUR (€)</button>
+        <button class="curr-btn" data-currency="usd">USD ($)</button>
       </div>
+
     </div>
   </div>
 </section>
 
 <main class="tours-section container">
 
-  <!-- PRICE LIST SUMMARY -->
-  <section class="pricelist-card" aria-label="Excursion Price List">
+  <section class="pricelist-card">
+
     <div class="pricelist-head">
       <div>
         <div class="eyebrow" style="margin-bottom:4px">Transparent Rates</div>
         <h2>Red Sea Excursion Price List</h2>
       </div>
-      <span>Per Guest · Hotel Transfers &amp; Boat/Day Program</span>
+      <p>Prices per guest · EUR / USD</p>
     </div>
-    <table class="pricelist-table">
-      <thead>
-        <tr>
-          <th>Excursion</th>
-          <th>Highlights</th>
-          <th>Rate / Person</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <span class="pl-tour-name">Abu Dabbab Bay &amp; Turtle Reef</span>
-            <span class="pl-tour-sub">Full-day coastal bay &amp; coral reef snorkeling</span>
-          </td>
-          <td>Sandy bay entry, reef snorkeling, 17 photos &amp; 3 videos</td>
-          <td class="pl-price" data-eur="75" data-usd="82">€75 <small>approx. $82 USD</small></td>
-          <td><a href="booking.html?tours=Abu%20Dabbab%20Bay%20Excursion&amp;price=75" class="pl-book">Book</a></td>
-        </tr>
-        <tr>
-          <td>
-            <span class="pl-tour-name">Hula Hula Island Escape</span>
-            <span class="pl-tour-sub">Full-day Red Sea boat trip &amp; white-sand beach</span>
-          </td>
-          <td>Turquoise lagoon, island lounge, 6 photos &amp; 4 videos</td>
-          <td class="pl-price" data-eur="30" data-usd="33">€30 <small>approx. $33 USD</small></td>
-          <td><a href="booking.html?tours=Hula%20Hula%20Island%20Escape&amp;price=30" class="pl-book">Book</a></td>
-        </tr>
-        <tr>
-          <td>
-            <span class="pl-tour-name">Orange Bay Island Boat Trip</span>
-            <span class="pl-tour-sub">Giftun turquoise shallow lagoon &amp; island relaxation</span>
-          </td>
-          <td>Crystal lagoon, beach swings, boat cruise</td>
-          <td class="pl-price" data-eur="30" data-usd="33">€30 <small>approx. $33 USD</small></td>
-          <td><a href="booking.html?tours=Orange%20Bay%20Island%20Boat%20Trip&amp;price=30" class="pl-book">Book</a></td>
-        </tr>
-        <tr>
-          <td>
-            <span class="pl-tour-name">Eden Island Retreat</span>
-            <span class="pl-tour-sub">Scenic island shoreline &amp; calm Red Sea waters</span>
-          </td>
-          <td>3 trip video previews, island beach day</td>
-          <td><span class="pl-tba">Price on Request</span></td>
-          <td><a href="booking.html?tours=Eden%20Island%20Retreat" class="pl-book">Inquire</a></td>
-        </tr>
-      </tbody>
-    </table>
+
+    <div class="table-wrap">
+      <table class="pricelist-table">
+        <thead>
+          <tr>
+            <th>Excursion</th>
+            <th>Experience</th>
+            <th>Rate / Person</th>
+            <th>Booking</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>
+              <span class="pl-tour-name">Abu Dabbab Bay & Turtle Reef</span>
+              <span class="pl-tour-sub">Full-day coastal bay excursion</span>
+            </td>
+            <td>Sandy beach, coral reef and sea turtles</td>
+            <td class="pl-price" data-eur="75" data-usd="82">€75 <small>approx. $82 USD</small></td>
+            <td><a class="pl-book" href="booking.html?tours=Abu%20Dabbab%20Bay%20Excursion&price=75">Book</a></td>
+          </tr>
+
+          <tr>
+            <td>
+              <span class="pl-tour-name">Hula Hula Island Escape</span>
+              <span class="pl-tour-sub">Full-day Red Sea boat trip</span>
+            </td>
+            <td>Turquoise lagoon, island beach and snorkeling</td>
+            <td class="pl-price" data-eur="30" data-usd="33">€30 <small>approx. $33 USD</small></td>
+            <td><a class="pl-book" href="booking.html?tours=Hula%20Hula%20Island%20Escape&price=30">Book</a></td>
+          </tr>
+
+          <tr>
+            <td>
+              <span class="pl-tour-name">Orange Bay Island Boat Trip</span>
+              <span class="pl-tour-sub">Giftun Island experience</span>
+            </td>
+            <td>Crystal lagoon, beach swings and boat cruise</td>
+            <td class="pl-price" data-eur="30" data-usd="33">€30 <small>approx. $33 USD</small></td>
+            <td><a class="pl-book" href="booking.html?tours=Orange%20Bay%20Island%20Boat%20Trip&price=30">Book</a></td>
+          </tr>
+
+          <tr>
+            <td>
+              <span class="pl-tour-name">Eden Island Retreat</span>
+              <span class="pl-tour-sub">Relaxed Red Sea island day</span>
+            </td>
+            <td>Island scenery, calm waters and real trip videos</td>
+            <td><span class="pl-tba">Price on Request</span></td>
+            <td><a class="pl-book" href="booking.html?tours=Eden%20Island%20Retreat">Inquire</a></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
   </section>
 
-  <!-- TOURS GRID -->
-  <div class="tours-grid" id="toursGrid">
+  <div class="tours-grid" id="toursGrid"></div>
 
-    <!-- 1. ABU DABBAB -->
-    <article class="tour-card" id="tour-abu-dabbab" data-category="bay-reef" data-tour-key="abudabbab">
-      <div class="tour-media" data-open-lightbox="abudabbab">
-        <img id="main-abudabbab" class="main-photo" src="images/AbuDabab.jpeg" alt="Abu Dabbab Turquoise Bay Shoreline">
-        <div class="tour-media-top">
-          <span class="tour-category">Bay &amp; Turtle Reef</span>
-          <span class="price-badge" data-eur="75" data-usd="82">€75 · $82 / person</span>
-        </div>
-        <button type="button" class="media-nav-btn media-prev" data-dir="-1" data-gallery="abudabbab" aria-label="Previous photo">‹</button>
-        <button type="button" class="media-nav-btn media-next" data-dir="1" data-gallery="abudabbab" aria-label="Next photo">›</button>
-        <div class="media-caption-bar">
-          <div class="media-caption-text">
-            <strong id="title-abudabbab">Abu Dabbab Turquoise Bay</strong>
-            <span id="desc-abudabbab">Calm sandy shoreline and crystal-clear Red Sea entry at Abu Dabbab Bay.</span>
-          </div>
-          <button type="button" class="open-lightbox-btn" data-open-lightbox="abudabbab">Full Screen (1/17)</button>
-        </div>
-      </div>
-
-      <div class="thumb-strip" id="thumbs-abudabbab" aria-label="Abu Dabbab photo gallery"></div>
-
-      <div class="tour-body">
-        <div class="tour-meta">
-          <span>Full-Day Bay Excursion</span>
-          <span>17 Real Photos · 3 Videos</span>
-        </div>
-        <h2>Abu Dabbab Bay &amp; Turtle Reef</h2>
-        <div class="tour-price-box" data-eur="75" data-usd="82">
-          <strong>€75</strong>
-          <span>/ person (approx. $82 USD)</span>
-        </div>
-        <p>
-          Spend an unforgettable day at world-famous Abu Dabbab Bay — known for its gentle sandy beach entry, vibrant coral gardens, sea turtles, and relaxed Red Sea atmosphere.
-        </p>
-        <ul class="tour-highlights">
-          <li>Sandy Bay Entry</li>
-          <li>Coral Reef Snorkeling</li>
-          <li>Sea Turtle Habitat</li>
-        </ul>
-
-        <div class="video-box">
-          <div class="video-header">
-            <span>Trip Video Highlights</span>
-            <span id="vcounter-abudabbab">Clip 1 of 3</span>
-          </div>
-          <div class="video-tabs" id="vtabs-abudabbab"></div>
-          <video id="video-abudabbab" class="tour-video" controls preload="metadata" poster="images/AbuDabab.jpeg" src="videos/AbuDabab17.mp4"></video>
-          <div class="video-caption" id="vcap-abudabbab">
-            <strong>Underwater Reef &amp; Marine Life:</strong> Guided snorkeling moments over colorful Red Sea corals at Abu Dabbab.
-          </div>
-        </div>
-
-        <div class="tour-actions">
-          <a href="booking.html?tours=Abu%20Dabbab%20Bay%20Excursion&amp;price=75" class="btn-book">Book Abu Dabbab (€75)</a>
-          <a href="atlantis-companion.html#daily-planner-panel" class="link-companion">Add to Day Plan →</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- 2. HULA HULA ISLAND -->
-    <article class="tour-card" id="tour-hula-hula" data-category="island" data-tour-key="hulahula">
-      <div class="tour-media" data-open-lightbox="hulahula">
-        <img id="main-hulahula" class="main-photo" src="images/Hula.jpeg" alt="Hula Hula Island Tropical Lagoon">
-        <div class="tour-media-top">
-          <span class="tour-category">Red Sea Island</span>
-          <span class="price-badge" data-eur="30" data-usd="33">€30 · $33 / person</span>
-        </div>
-        <button type="button" class="media-nav-btn media-prev" data-dir="-1" data-gallery="hulahula" aria-label="Previous photo">‹</button>
-        <button type="button" class="media-nav-btn media-next" data-dir="1" data-gallery="hulahula" aria-label="Next photo">›</button>
-        <div class="media-caption-bar">
-          <div class="media-caption-text">
-            <strong id="title-hulahula">Hula Hula Island Panorama</strong>
-            <span id="desc-hulahula">Bright turquoise shallows and soft island sand on our Hula Hula boat excursion.</span>
-          </div>
-          <button type="button" class="open-lightbox-btn" data-open-lightbox="hulahula">Full Screen (1/6)</button>
-        </div>
-      </div>
-
-      <div class="thumb-strip" id="thumbs-hulahula" aria-label="Hula Hula photo gallery"></div>
-
-      <div class="tour-body">
-        <div class="tour-meta">
-          <span>Full-Day Boat &amp; Island</span>
-          <span>22 Real Photos · 4 Videos</span>
-        </div>
-        <h2>Hula Hula Island Escape</h2>
-        <div class="tour-price-box" data-eur="30" data-usd="33">
-          <strong>€30</strong>
-          <span>/ person (approx. $33 USD)</span>
-        </div>
-        <p>
-          Cruise across the Red Sea to Hula Hula Island for tropical beach vibes, crystal-clear swimming lagoons, shaded cabanas, and reef snorkeling stops.
-        </p>
-        <ul class="tour-highlights">
-          <li>White-Sand Lagoon</li>
-          <li>Island Lounge &amp; Swings</li>
-          <li>Boat Cruise &amp; Snorkel</li>
-        </ul>
-
-        <div class="video-box">
-          <div class="video-header">
-            <span>Trip Video Highlights</span>
-            <span id="vcounter-hulahula">Clip 1 of 4</span>
-          </div>
-          <div class="video-tabs" id="vtabs-hulahula"></div>
-          <video id="video-hulahula" class="tour-video" controls preload="metadata" poster="images/Hula.jpeg" src="videos/Hula.mp4"></video>
-          <div class="video-caption" id="vcap-hulahula">
-            <strong>Arrival at Hula Hula Island:</strong> First look at the turquoise shoreline and island beach setup.
-          </div>
-        </div>
-
-        <div class="tour-actions">
-          <a href="booking.html?tours=Hula%20Hula%20Island%20Escape&amp;price=30" class="btn-book">Book Hula Hula (€30)</a>
-          <a href="atlantis-companion.html#daily-planner-panel" class="link-companion">Add to Day Plan →</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- 3. ORANGE BAY ISLAND -->
-    <article class="tour-card" id="tour-orange-bay-island" data-category="island" data-tour-key="orangebay">
-      <div class="tour-media" data-open-lightbox="orangebay">
-        <img id="main-orangebay" class="main-photo" src="images/IMG-20261117-WA0011.jpg" alt="Orange Bay Lagoon View">
-        <div class="tour-media-top">
-          <span class="tour-category">Red Sea Island</span>
-          <span class="price-badge" data-eur="30" data-usd="33">€30 · $33 / person</span>
-        </div>
-        <button type="button" class="media-nav-btn media-prev" data-dir="-1" data-gallery="orangebay" aria-label="Previous photo">‹</button>
-        <button type="button" class="media-nav-btn media-next" data-dir="1" data-gallery="orangebay" aria-label="Next photo">›</button>
-        <div class="media-caption-bar">
-          <div class="media-caption-text">
-            <strong id="title-orangebay">Orange Bay Shallow Lagoon</strong>
-            <span id="desc-orangebay">Walk out into knee-deep turquoise water along Giftun’s famous Orange Bay sandbar.</span>
-          </div>
-          <button type="button" class="open-lightbox-btn" data-open-lightbox="orangebay">Full Screen (1/4)</button>
-        </div>
-      </div>
-
-      <div class="thumb-strip" id="thumbs-orangebay" aria-label="Orange Bay photo gallery"></div>
-
-      <div class="tour-body">
-        <div class="tour-meta">
-          <span>Full-Day Boat &amp; Island</span>
-          <span>Giftun Island · Hurghada</span>
-        </div>
-        <h2>Orange Bay Island Boat Trip</h2>
-        <div class="tour-price-box" data-eur="30" data-usd="33">
-          <strong>€30</strong>
-          <span>/ person (approx. $33 USD)</span>
-        </div>
-        <p>
-          Sail from Hurghada to Orange Bay on Giftun Island — famous for its Caribbean-like turquoise sandbar, wooden walkways, overwater swings, and relaxing island time.
-        </p>
-        <ul class="tour-highlights">
-          <li>Turquoise Sandbar</li>
-          <li>Overwater Swings</li>
-          <li>Full-Day Boat Trip</li>
-        </ul>
-
-        <div class="tour-actions">
-          <a href="booking.html?tours=Orange%20Bay%20Island%20Boat%20Trip&amp;price=30" class="btn-book">Book Orange Bay (€30)</a>
-          <a href="atlantis-companion.html#daily-planner-panel" class="link-companion">Add to Day Plan →</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- 4. EDEN ISLAND -->
-    <article class="tour-card" id="tour-eden" data-category="island" data-tour-key="eden">
-      <div class="tour-media" data-open-lightbox="eden">
-        <img id="main-eden" class="main-photo" src="images/IMG-20261117-WA0014.jpg" alt="Eden Island Coastal View">
-        <div class="tour-media-top">
-          <span class="tour-category">Red Sea Island</span>
-          <span class="price-badge tba">Price on Request</span>
-        </div>
-        <button type="button" class="media-nav-btn media-prev" data-dir="-1" data-gallery="eden" aria-label="Previous photo">‹</button>
-        <button type="button" class="media-nav-btn media-next" data-dir="1" data-gallery="eden" aria-label="Next photo">›</button>
-        <div class="media-caption-bar">
-          <div class="media-caption-text">
-            <strong id="title-eden">Eden Island Coastal Escape</strong>
-            <span id="desc-eden">Serene Red Sea waters and sun-drenched island shoreline at Eden.</span>
-          </div>
-          <button type="button" class="open-lightbox-btn" data-open-lightbox="eden">Full Screen (1/9)</button>
-        </div>
-      </div>
-
-      <div class="thumb-strip" id="thumbs-eden" aria-label="Eden photo gallery"></div>
-
-      <div class="tour-body">
-        <div class="tour-meta">
-          <span>Red Sea Island Experience</span>
-          <span>3 Real Trip Videos</span>
-        </div>
-        <h2>Eden Island Retreat</h2>
-        <div class="tour-price-box">
-          <strong>Custom Rate</strong>
-          <span>· Ask for today’s availability &amp; price</span>
-        </div>
-        <p>
-          Discover Eden Island through three real on-location videos showcasing calm turquoise waters, coastal relaxation, and Red Sea island scenery.
-        </p>
-        <ul class="tour-highlights">
-          <li>3 Real Location Videos</li>
-          <li>Relaxed Island Day</li>
-          <li>Direct WhatsApp / Form Quote</li>
-        </ul>
-
-        <div class="video-box">
-          <div class="video-header">
-            <span>Trip Video Highlights</span>
-            <span id="vcounter-eden">Clip 1 of 3</span>
-          </div>
-          <div class="video-tabs" id="vtabs-eden"></div>
-          <video id="video-eden" class="tour-video" controls preload="metadata" poster="images/IMG-20261117-WA0014.jpg" src="videos/Eden.mp4"></video>
-          <div class="video-caption" id="vcap-eden">
-            <strong>Eden Island Shoreline &amp; Breeze:</strong> Panoramic view of Eden’s clear Red Sea coastline.
-          </div>
-        </div>
-
-        <div class="tour-actions">
-          <a href="booking.html?tours=Eden%20Island%20Retreat" class="btn-book">Request Eden Price</a>
-          <a href="atlantis-companion.html#daily-planner-panel" class="link-companion">Add to Day Plan →</a>
-        </div>
-      </div>
-    </article>
-
-  </div>
 </main>
 
-<!-- FULL-SCREEN LIGHTBOX GALLERY -->
-<div class="lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Photo gallery viewer">
+<!-- FULL SCREEN PHOTO VIEWER -->
+
+<div class="lightbox" id="photoLightbox"
+  role="dialog" aria-modal="true" aria-label="Photo gallery">
+
   <div class="lightbox-top">
-    <div class="lightbox-title" id="lbTitle">Gallery Photo</div>
-    <button type="button" class="lightbox-close" id="lbClose">Close ✕</button>
+    <div class="lightbox-title" id="lbTitle">Gallery</div>
+    <button class="lightbox-close" id="lbClose">Close ✕</button>
   </div>
+
   <div class="lightbox-stage">
-    <button type="button" class="lb-arrow lb-prev" id="lbPrev" aria-label="Previous image">‹</button>
+    <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Previous photo">‹</button>
     <img id="lbImage" src="" alt="">
-    <button type="button" class="lb-arrow lb-next" id="lbNext" aria-label="Next image">›</button>
+    <button class="lb-arrow lb-next" id="lbNext" aria-label="Next photo">›</button>
   </div>
+
   <div class="lightbox-caption">
     <span id="lbDesc"></span>
     <span class="lightbox-counter" id="lbCounter">1 / 1</span>
   </div>
+
 </div>
 
 <footer>
   <div class="container">
+
     <div class="footer-grid">
+
       <div>
-        <div class="footer-brand">Atlantis <span>Tours and Experiences</span></div>
-        <p>Curated Red Sea island and bay excursions from Hurghada with real trip media and transparent pricing.</p>
+        <div class="footer-brand">
+          Atlantis <span>Tours and Experiences</span>
+        </div>
+        <p>
+          Discover Hurghada and the Red Sea with carefully selected island
+          escapes, coastal experiences and unforgettable sea adventures.
+        </p>
       </div>
+
       <div>
-        <h3>Quick Links</h3>
+        <h3>Explore</h3>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="all-tours.html">All Tours</a></li>
           <li><a href="atlantis-companion.html">Companion</a></li>
-          <li><a href="booking.html">Booking</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="hurghada-price-guide.html">Price Guide</a></li>
         </ul>
       </div>
+
+      <div>
+        <h3>Useful Links</h3>
+        <ul class="footer-links">
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="features/pocket-guide.html">Pocket Guide</a></li>
+          <li><a href="snorkeling-in-hurghada.html">Snorkeling Guide</a></li>
+        </ul>
+      </div>
+
     </div>
+
     <div class="copyright">
-      © <span id="year">2026</span> Atlantis Tours and Experiences.
+      © <span id="year"></span> Atlantis Tours and Experiences. All Rights Reserved.
     </div>
+
   </div>
 </footer>
 
 <script>
-const TOUR_MEDIA = {
-  abudabbab: {
+/* =====================================================
+   ATLANTIS TOURS - MEDIA CONFIGURATION
+   All media paths use the real GitHub assets folders.
+   ===================================================== */
+
+const IMAGE_DIR = "assets/images/";
+const VIDEO_DIR = "assets/videos/";
+
+function imagePath(filename) {
+  return IMAGE_DIR + encodeURIComponent(filename);
+}
+
+function videoPath(filename) {
+  return VIDEO_DIR + encodeURIComponent(filename);
+}
+
+/* =====================================================
+   TOUR DATA
+   Exact filenames based on the uploaded GitHub folders.
+   ===================================================== */
+
+const TOURS = [
+
+  {
+    key: "abudabbab",
+    id: "tour-abu-dabbab",
+    category: "bay-reef",
+    name: "Abu Dabbab Bay & Turtle Reef",
+    categoryLabel: "Bay & Turtle Reef",
+    type: "Full-Day Bay Excursion",
+    priceEUR: 75,
+    priceUSD: 82,
+    priceLabel: "€75",
+    description:
+      "Spend an unforgettable day at world-famous Abu Dabbab Bay, known for its gentle sandy beach entry, vibrant coral gardens, sea turtles and relaxed Red Sea atmosphere.",
+    highlights: [
+      "Sandy Bay Entry",
+      "Coral Reef Snorkeling",
+      "Sea Turtle Habitat",
+      "Clear Red Sea Water"
+    ],
+    booking:
+      "booking.html?tours=Abu%20Dabbab%20Bay%20Excursion&price=75",
     photos: [
-      { src: "images/AbuDabab.jpeg", title: "Abu Dabbab Turquoise Bay", desc: "Calm sandy shoreline and crystal-clear Red Sea entry at Abu Dabbab Bay." },
-      { src: "images/AbuDabab1.jpeg", title: "Coral Garden Reef Edge", desc: "Shallow coral formations teeming with colorful Red Sea reef fish." },
-      { src: "images/AbuDabab2.jpeg", title: "Sea Turtle Grazing Grounds", desc: "Seagrass meadows where green sea turtles are frequently spotted." },
-      { src: "images/AbuDabab3.jpeg", title: "Sunlit Reef Drop-Off", desc: "Clear underwater visibility along the northern coral wall of the bay." },
-      { src: "images/AbuDabab4.jpeg", title: "Abu Dabbab Beach Lounge", desc: "Relaxing beachfront sunbeds and shaded umbrellas right by the water." },
-      { src: "images/AbuDabab5.jpeg", title: "Guided Snorkeling Session", desc: "Easy walk-in snorkeling suitable for both beginners and experienced swimmers." },
-      { src: "images/AbuDabab6.jpeg", title: "Red Sea Reef Panorama", desc: "Vibrant hard and soft corals illuminated by midday sunlight." },
-      { src: "images/AbuDabab7.jpeg", title: "Coastal Horizon View", desc: "Wide view across the sheltered bay and deep blue Red Sea beyond." },
-      { src: "images/AbuDabab8.jpeg", title: "Marine Life Encounter", desc: "Close-up moments with butterflyfish, clownfish, and reef species." },
-      { src: "images/AbuDabab9.jpeg", title: "Golden Sand & Clear Shallows", desc: "Soft natural sand leading gently into warm turquoise water." },
-      { src: "images/AbuDabab10.jpeg", title: "Southern Reef Exploration", desc: "Exploring the colorful coral pinnacles along the bay’s south side." },
-      { src: "images/AbuDabab11.jpeg", title: "Afternoon Sea Breeze", desc: "Unwinding by the shore between snorkeling sessions at Abu Dabbab." },
-      { src: "images/AbuDabab12.jpeg", title: "Crystal Underwater Clarity", desc: "High-visibility Red Sea water ideal for underwater photography." },
-      { src: "images/AbuDabab13.jpeg", title: "Reef Fish Schools", desc: "Dense schools of anthias and damselfish hovering over coral heads." },
-      { src: "images/AbuDabab14.jpeg", title: "Sheltered Lagoon Waters", desc: "Protected bay waters offering smooth swimming conditions all day." },
-      { src: "images/AbuDabab15.jpeg", title: "Red Sea Coral Diversity", desc: "Natural brain corals and table corals thriving in Abu Dabbab." },
-      { src: "images/AbuDabab16.jpeg", title: "Golden Hour over the Bay", desc: "Warm late-afternoon light reflecting across Abu Dabbab shoreline." }
+      "AbuDabab.jpeg",
+      "AbuDabab1.jpeg",
+      "AbuDabab2.jpeg",
+      "AbuDabab3.jpeg",
+      "AbuDabab4.jpeg",
+      "AbuDabab5.jpeg",
+      "AbuDabab6.jpeg",
+      "AbuDabab7.jpeg",
+      "AbuDabab8.jpeg",
+      "AbuDabab9.jpeg",
+      "AbuDabab10.jpeg",
+      "AbuDabab11.jpeg",
+      "AbuDabab12.jpeg",
+      "AbuDabab13.jpeg",
+      "AbuDabab14.jpeg",
+      "AbuDabab15.jpeg",
+      "AbuDabab16.jpeg"
     ],
     videos: [
-      { src: "videos/AbuDabab17.mp4", label: "Reef & Coral Swim", title: "Underwater Reef & Marine Life", desc: "Guided snorkeling moments over colorful Red Sea corals at Abu Dabbab." },
-      { src: "videos/AbuDabab18.mp4", label: "Turtle & Seagrass", title: "Abu Dabbab Bay Marine Encounter", desc: "Real footage from the sheltered bay waters and marine habitat." },
-      { src: "videos/AbuDabab19.mp4", label: "Shoreline & Lagoon", title: "Bay Coastline & Crystal Water", desc: "Scenic view of the beach entry and turquoise Red Sea waters." }
+      {
+        file: "AbuDabab17.mp4",
+        label: "Reef & Coral",
+        title: "Underwater Reef & Marine Life",
+        description: "Real snorkeling footage from the colorful Red Sea reef."
+      },
+      {
+        file: "AbuDabab18.mp4",
+        label: "Turtle & Sea",
+        title: "Abu Dabbab Marine Encounter",
+        description: "Real footage from Abu Dabbab Bay and its marine habitat."
+      },
+      {
+        file: "AbuDabab19.mp4",
+        label: "Bay & Beach",
+        title: "Bay Coastline & Crystal Water",
+        description: "A look at the beach entry and turquoise Red Sea waters."
+      }
     ]
   },
-  hulahula: {
+
+  {
+    key: "hulahula",
+    id: "tour-hula-hula",
+    category: "island",
+    name: "Hula Hula Island Escape",
+    categoryLabel: "Red Sea Island",
+    type: "Full-Day Boat & Island",
+    priceEUR: 30,
+    priceUSD: 33,
+    description:
+      "Cruise across the Red Sea to Hula Hula Island for tropical beach vibes, crystal-clear swimming lagoons, shaded relaxation areas and beautiful island scenery.",
+    highlights: [
+      "White-Sand Lagoon",
+      "Island Beach",
+      "Boat Cruise",
+      "Red Sea Swimming"
+    ],
+    booking:
+      "booking.html?tours=Hula%20Hula%20Island%20Escape&price=30",
     photos: [
-      { src: "images/Hula.jpeg", title: "Hula Hula Island Panorama", desc: "Bright turquoise shallows and soft island sand on our Hula Hula boat excursion." },
-      { src: "images/Hula%20(2).jpeg", title: "Tropical Beach Lounge", desc: "Palm-style umbrellas and relaxed seating along the island shoreline." },
-      { src: "images/Hula(2).jpeg", title: "Island Shore & Sandbar", desc: "Scenic Red Sea island beach view from Hula Hula." },
-      { src: "images/Hula%20(3).jpeg", title: "Crystal Lagoon Shallows", desc: "Calm, clear Red Sea water ideal for swimming and floating." },
-      { src: "images/Hula%20(4).jpeg", title: "Island Photo Spots", desc: "Iconic beach swings and scenic Red Sea backdrops on Hula Hula." },
-      { src: "images/Hula%20(5).jpeg", title: "Sun & Sea Horizon", desc: "Uninterrupted views of blue Red Sea waters from the island shore." },
-      { src: "images/Hula%20(6).jpeg", title: "Boat Day Atmosphere", desc: "Full-day Red Sea island escape with sunshine and sea breeze." },
-      { src: "images/Hula%20(7).jpeg", title: "Turquoise Water Edge", desc: "Clear shallow water along the sandy coast of Hula Hula." },
-      { src: "images/Hula%20(8).jpeg", title: "Island Beach Vibe", desc: "Relaxed seaside spots and bright Red Sea sunshine." },
-      { src: "images/Hula%20(9).jpeg", title: "Coastal Breeze & Sand", desc: "Soft sand and open sea views across the lagoon." },
-      { src: "images/Hula%20(10).jpeg", title: "Hula Hula Reef & Shallows", desc: "Inviting Red Sea waters for a refreshing swim." },
-      { src: "images/Hula%20(11).jpeg", title: "Island Getaway View", desc: "Scenic views from our island excursion in Hurghada." },
-      { src: "images/Hula%20(12).jpeg", title: "Sunny Shoreline", desc: "Bright coastal light across the island beach." },
-      { src: "images/Hula%20(13).jpeg", title: "Calm Red Sea Lagoon", desc: "Peaceful turquoise waters ready for island relaxation." },
-      { src: "images/Hula%20(14).jpeg", title: "Beachside Escape", desc: "Unwinding by the water with island views." },
-      { src: "images/Hula%20(15).jpeg", title: "Crystal Waters & Sand", desc: "Clear Red Sea tones along the shoreline." },
-      { src: "images/Hula%20(16).jpeg", title: "Island Horizon", desc: "Wide view of open sea and sandy shore." },
-      { src: "images/Hula%20(17).jpeg", title: "Day Trip Highlights", desc: "Memorable moments from our Hula Hula excursion." },
-      { src: "images/Hula%20(18).jpeg", title: "Turquoise Cove", desc: "Sheltered coastal waters with rich blue shades." },
-      { src: "images/Hula%20(19).jpeg", title: "Island Relaxation", desc: "Leisurely beach time under the Red Sea sun." },
-      { src: "images/Hula%20(20).jpeg", title: "Shoreline Panorama", desc: "Coastal scenery along the island excursion route." },
-      { src: "images/Hula%20(21).jpeg", title: "Red Sea Island Finale", desc: "Late-day coastal views from Hula Hula." }
+      "Hula.jpeg",
+      "Hula (2).jpeg",
+      "Hula(2).jpeg",
+      "Hula (3).jpeg",
+      "Hula (4).jpeg",
+      "Hula (5).jpeg",
+      "Hula (6).jpeg",
+      "Hula (7).jpeg",
+      "Hula (8).jpeg",
+      "Hula (9).jpeg",
+      "Hula (10).jpeg",
+      "Hula (11).jpeg",
+      "Hula (12).jpeg",
+      "Hula (13).jpeg",
+      "Hula (14).jpeg",
+      "Hula (15).jpeg",
+      "Hula (16).jpeg",
+      "Hula (17).jpeg",
+      "Hula (18).jpeg",
+      "Hula (19).jpeg",
+      "Hula (20).jpeg",
+      "Hula (21).jpeg"
     ],
     videos: [
-      { src: "videos/Hula.mp4", label: "Island Arrival", title: "Arrival at Hula Hula Island", desc: "First look at the turquoise shoreline and island beach setup." },
-      { src: "videos/Hula%20(2).mp4", label: "Lagoon & Beach", title: "Turquoise Lagoon & Shoreline", desc: "Walking along the soft white sand and clear shallow water." },
-      { src: "videos/Hula%20(3).mp4", label: "Island Vibes", title: "Hula Hula Beach Atmosphere", desc: "Relaxed island energy, sun loungers, and Red Sea views." },
-      { src: "videos/Hula%20(4).mp4", label: "Red Sea Cruise", title: "Sailing & Reef Stop Highlights", desc: "Moments from the boat journey across the Red Sea." }
+      {
+        file: "Hula.mp4",
+        label: "Island Arrival",
+        title: "Arrival at Hula Hula Island",
+        description: "First look at the island shoreline and beach atmosphere."
+      },
+      {
+        file: "Hula (2).mp4",
+        label: "Lagoon & Beach",
+        title: "Turquoise Lagoon & Shoreline",
+        description: "A closer look at the clear shallow water and island beach."
+      },
+      {
+        file: "Hula (3).mp4",
+        label: "Island Vibes",
+        title: "Hula Hula Beach Atmosphere",
+        description: "Island atmosphere, sunshine and Red Sea views."
+      },
+      {
+        file: "Hula (4).mp4",
+        label: "Red Sea Cruise",
+        title: "Sailing & Island Highlights",
+        description: "Moments from the boat journey across the Red Sea."
+      }
     ]
   },
-  orangebay: {
+
+  {
+    key: "orangebay",
+    id: "tour-orange-bay-island",
+    category: "island",
+    name: "Orange Bay Island Boat Trip",
+    categoryLabel: "Red Sea Island",
+    type: "Full-Day Boat & Island",
+    priceEUR: 30,
+    priceUSD: 33,
+    description:
+      "Sail from Hurghada to Orange Bay on Giftun Island, famous for its Caribbean-like turquoise sandbar, wooden walkways, overwater swings and relaxing island atmosphere.",
+    highlights: [
+      "Turquoise Sandbar",
+      "Island Relaxation",
+      "Overwater Swings",
+      "Full-Day Boat Trip"
+    ],
+    booking:
+      "booking.html?tours=Orange%20Bay%20Island%20Boat%20Trip&price=30",
     photos: [
-      { src: "images/IMG-20261117-WA0011.jpg", title: "Orange Bay Lagoon View", desc: "Bright turquoise Red Sea water and island day scenery." },
-      { src: "images/IMG-20261117-WA0012.jpg", title: "Sandy Island Escape", desc: "Relaxing island beach atmosphere from our Red Sea trips." },
-      { src: "images/IMG-20261117-WA0013.jpg", title: "Turquoise Shallows", desc: "Clear shallow water along the coastal excursion route." },
-      { src: "images/IMG-20261117-WA0013(1).jpg", title: "Coastal Horizon", desc: "Open Red Sea views and bright sunshine." }
+      "IMG-20261117-WA0011.jpg",
+      "IMG-20261117-WA0012.jpg",
+      "IMG-20261117-WA0013.jpg",
+      "IMG-20261117-WA0013(1).jpg"
     ],
     videos: []
   },
-  eden: {
+
+  {
+    key: "eden",
+    id: "tour-eden-island",
+    category: "island",
+    name: "Eden Island Retreat",
+    categoryLabel: "Red Sea Island",
+    type: "Red Sea Island Experience",
+    priceEUR: null,
+    priceUSD: null,
+    description:
+      "Discover Eden Island through real on-location photos and videos showcasing calm turquoise waters, coastal relaxation and beautiful Red Sea island scenery.",
+    highlights: [
+      "Island Beach Experience",
+      "Calm Red Sea Waters",
+      "Real Trip Videos",
+      "Price on Request"
+    ],
+    booking:
+      "booking.html?tours=Eden%20Island%20Retreat",
     photos: [
-      { src: "images/IMG-20261117-WA0014.jpg", title: "Eden Island Coastal View", desc: "Serene Red Sea waters and island escape scenery." },
-      { src: "images/IMG-20261117-WA0015.jpg", title: "Beachfront Relaxation", desc: "Calm seaside moment from our Red Sea excursions." },
-      { src: "images/IMG-20261117-WA0015(1).jpg", title: "Island Shore & Breeze", desc: "Relaxed coastal setting along the Red Sea." },
-      { src: "images/IMG-20261117-WA0016.jpg", title: "Turquoise Water & Sun", desc: "Bright island waters and clear sky." },
-      { src: "images/IMG-20261117-WA0017.jpg", title: "Red Sea Getaway", desc: "Scenic coastal view from the excursion." },
-      { src: "images/IMG-20261117-WA0017(1).jpg", title: "Shoreline Escape", desc: "Peaceful Red Sea shoreline atmosphere." },
-      { src: "images/IMG-20261117-WA0018.jpg", title: "Coastal Day Highlights", desc: "Sunlit Red Sea view from the day trip." },
-      { src: "images/Kitesurfing3.jpeg", title: "Red Sea Wind & Action", desc: "Dynamic Red Sea coastal energy and wind sport view." },
-      { src: "images/Kitesurfing4.jpeg", title: "Hurghada Coast & Sea", desc: "Open water and coastal adventure along the Red Sea." }
+      "IMG-20261117-WA0014.jpg",
+      "IMG-20261117-WA0015.jpg",
+      "IMG-20261117-WA0015(1).jpg",
+      "IMG-20261117-WA0016.jpg",
+      "IMG-20261117-WA0017.jpg",
+      "IMG-20261117-WA0017(1).jpg",
+      "IMG-20261117-WA0018.jpg",
+      "Kitesurfing3.jpeg",
+      "Kitesurfing4.jpeg"
     ],
     videos: [
-      { src: "videos/Eden.mp4", label: "Eden Shoreline", title: "Eden Island Shoreline & Breeze", desc: "Panoramic view of Eden’s clear Red Sea coastline." },
-      { src: "videos/Eden2.mp4", label: "Turquoise Waters", title: "Crystal Clear Red Sea Lagoon", desc: "Calm turquoise waters and relaxed island atmosphere at Eden." },
-      { src: "videos/Eden3.mp4", label: "Island Experience", title: "Eden Day Trip Highlights", desc: "Scenic moments from the Eden Red Sea excursion." }
+      {
+        file: "Eden.mp4",
+        label: "Eden Shoreline",
+        title: "Eden Island Shoreline",
+        description: "A panoramic look at the Eden coastline."
+      },
+      {
+        file: "Eden2.mp4",
+        label: "Turquoise Water",
+        title: "Crystal Clear Red Sea Lagoon",
+        description: "Calm turquoise waters and island atmosphere."
+      },
+      {
+        file: "Eden3.mp4",
+        label: "Island Experience",
+        title: "Eden Day Trip Highlights",
+        description: "Scenic moments from the Eden Red Sea excursion."
+      }
     ]
   }
-};
 
-document.addEventListener("DOMContentLoaded", function () {
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+];
 
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", function () {
-      const open = navLinks.classList.toggle("active");
-      menuToggle.setAttribute("aria-expanded", String(open));
-      menuToggle.textContent = open ? "✕" : "☰";
-    });
-    navLinks.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        navLinks.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.textContent = "☰";
-      });
-    });
-  }
+/* =====================================================
+   RENDER TOUR CARDS
+   ===================================================== */
 
-  // Track active photo index per gallery
-  const galleryIndex = { abudabbab: 0, hulahula: 0, orangebay: 0, eden: 0 };
+const toursGrid = document.getElementById("toursGrid");
 
-  function setGalleryPhoto(key, idx) {
-    const data = TOUR_MEDIA[key];
-    if (!data || !data.photos.length) return;
-    const total = data.photos.length;
-    const normalized = ((idx % total) + total) % total;
-    galleryIndex[key] = normalized;
-    const item = data.photos[normalized];
+function renderTours() {
 
-    const mainImg = document.getElementById("main-" + key);
-    const titleEl = document.getElementById("title-" + key);
-    const descEl = document.getElementById("desc-" + key);
-    const card = mainImg ? mainImg.closest(".tour-card") : null;
-    const openBtn = card ? card.querySelector(".open-lightbox-btn") : null;
-    const thumbStrip = document.getElementById("thumbs-" + key);
+  toursGrid.innerHTML = TOURS.map(tour => {
 
-    if (mainImg) {
-      mainImg.src = item.src;
-      mainImg.alt = item.title;
-    }
-    if (titleEl) titleEl.textContent = item.title;
-    if (descEl) descEl.textContent = item.desc;
-    if (openBtn) openBtn.textContent = "Full Screen (" + (normalized + 1) + "/" + total + ")";
-    if (thumbStrip) {
-      thumbStrip.querySelectorAll(".thumb-btn").forEach(function (btn, i) {
-        btn.classList.toggle("active", i === normalized);
-      });
-    }
-  }
+    const firstPhoto = tour.photos[0];
+    const hasPrice = tour.priceEUR !== null;
 
-  // Render thumbnails & video tabs
-  Object.keys(TOUR_MEDIA).forEach(function (key) {
-    const data = TOUR_MEDIA[key];
-    const thumbStrip = document.getElementById("thumbs-" + key);
-    if (thumbStrip && data.photos.length) {
-      data.photos.forEach(function (photo, i) {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "thumb-btn" + (i === 0 ? " active" : "");
-        btn.setAttribute("aria-label", photo.title);
-        btn.title = photo.title;
-        const img = document.createElement("img");
-        img.src = photo.src;
-        img.alt = photo.title;
-        img.loading = "lazy";
-        btn.appendChild(img);
-        btn.addEventListener("click", function (e) {
-          e.stopPropagation();
-          setGalleryPhoto(key, i);
-        });
-        thumbStrip.appendChild(btn);
-      });
-    }
+    const priceBadge = hasPrice
+      ? `<span class="price-badge"
+           data-eur="${tour.priceEUR}"
+           data-usd="${tour.priceUSD}">
+           €${tour.priceEUR} · $${tour.priceUSD} / person
+         </span>`
+      : `<span class="price-badge tba">Price on Request</span>`;
 
-    const vtabs = document.getElementById("vtabs-" + key);
-    const videoEl = document.getElementById("video-" + key);
-    const vcapEl = document.getElementById("vcap-" + key);
-    const vcounterEl = document.getElementById("vcounter-" + key);
-    if (vtabs && videoEl && data.videos.length) {
-      data.videos.forEach(function (vid, i) {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "vtab-btn" + (i === 0 ? " active" : "");
-        btn.textContent = vid.label;
-        btn.addEventListener("click", function () {
-          videoEl.pause();
-          videoEl.src = vid.src;
-          videoEl.load();
-          if (vcapEl) {
-            vcapEl.innerHTML = "<strong>" + vid.title + ":</strong> " + vid.desc;
-          }
-          if (vcounterEl) {
-            vcounterEl.textContent = "Clip " + (i + 1) + " of " + data.videos.length;
-          }
-          vtabs.querySelectorAll(".vtab-btn").forEach(function (b) {
-            b.classList.toggle("active", b === btn);
-          });
-        });
-        vtabs.appendChild(btn);
-      });
-    }
-  });
+    const priceBox = hasPrice
+      ? `<div class="tour-price-box"
+           data-eur="${tour.priceEUR}"
+           data-usd="${tour.priceUSD}">
+           <strong>€${tour.priceEUR}</strong>
+           <span>/ person (approx. $${tour.priceUSD} USD)</span>
+         </div>`
+      : `<div class="tour-price-box">
+           <strong>Custom Rate</strong>
+           <span>Ask for today's availability and price</span>
+         </div>`;
 
-  // Card prev/next arrows
-  document.querySelectorAll(".media-nav-btn").forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      const key = btn.dataset.gallery;
-      const dir = parseInt(btn.dataset.dir, 10) || 1;
-      setGalleryPhoto(key, galleryIndex[key] + dir);
-    });
-  });
+    const highlights = tour.highlights.map(item =>
+      `<li>${item}</li>`
+    ).join("");
 
-  // Fullscreen Lightbox
-  const lightbox = document.getElementById("photoLightbox");
-  const lbImage = document.getElementById("lbImage");
-  const lbTitle = document.getElementById("lbTitle");
-  const lbDesc = document.getElementById("lbDesc");
-  const lbCounter = document.getElementById("lbCounter");
-  const lbClose = document.getElementById("lbClose");
-  const lbPrev = document.getElementById("lbPrev");
-  const lbNext = document.getElementById("lbNext");
-  let activeLbKey = null;
+    const videoSection = tour.videos.length
+      ? `
+        <div class="video-box">
+          <div class="video-header">
+            <span>Trip Video Highlights</span>
+            <span id="vcounter-${tour.key}">
+              Clip 1 of ${tour.videos.length}
+            </span>
+          </div>
 
-  function renderLightbox() {
-    if (!activeLbKey) return;
-    const photos = TOUR_MEDIA[activeLbKey].photos;
-    const idx = galleryIndex[activeLbKey];
-    const item = photos[idx];
-    lbImage.src = item.src;
-    lbImage.alt = item.title;
-    lbTitle.textContent = item.title;
-    lbDesc.textContent = item.desc;
-    lbCounter.textContent = (idx + 1) + " / " + photos.length;
-  }
+          <div class="video-tabs" id="vtabs-${tour.key}"></div>
 
-  function openLightbox(key) {
-    if (!TOUR_MEDIA[key] || !TOUR_MEDIA[key].photos.length) return;
-    activeLbKey = key;
-    renderLightbox();
-    lightbox.classList.add("open");
-    document.body.style.overflow = "hidden";
-  }
+          <video
+            id="video-${tour.key}"
+            class="tour-video"
+            controls
+            playsinline
+            preload="metadata"
+            poster="${imagePath(firstPhoto)}">
+            <source src="${videoPath(tour.videos[0].file)}" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
 
-  function closeLightbox() {
-    lightbox.classList.remove("open");
-    document.body.style.overflow = "";
-    activeLbKey = null;
-  }
+          <div class="media-error" id="video-error-${tour.key}">
+            This video could not be loaded. Please check the file path.
+          </div>
 
-  document.querySelectorAll("[data-open-lightbox]").forEach(function (el) {
-    el.addEventListener("click", function (e) {
-      if (e.target.closest(".media-nav-btn")) return;
-      openLightbox(el.dataset.openLightbox);
-    });
-  });
+          <div class="video-caption" id="vcap-${tour.key}">
+            <strong>${tour.videos[0].title}:</strong>
+            ${tour.videos[0].description}
+          </div>
+        </div>
+      `
+      : "";
 
-  lbClose.addEventListener("click", closeLightbox);
-  lightbox.addEventListener("click", function (e) {
-    if (e.target === lightbox) closeLightbox();
-  });
-  lbPrev.addEventListener("click", function () {
-    if (!activeLbKey) return;
-    setGalleryPhoto(activeLbKey, galleryIndex[activeLbKey] - 1);
-    renderLightbox();
-  });
-  lbNext.addEventListener("click", function () {
-    if (!activeLbKey) return;
-    setGalleryPhoto(activeLbKey, galleryIndex[activeLbKey] + 1);
-    renderLightbox();
-  });
+    return `
+      <article class="tour-card"
+        id="${tour.id}"
+        data-category="${tour.category}">
 
-  document.addEventListener("keydown", function (e) {
-    if (!lightbox.classList.contains("open")) return;
-    if (e.key === "Escape") closeLightbox();
-    if (e.key === "ArrowLeft") {
-      setGalleryPhoto(activeLbKey, galleryIndex[activeLbKey] - 1);
-      renderLightbox();
-    }
-    if (e.key === "ArrowRight") {
-      setGalleryPhoto(activeLbKey, galleryIndex[activeLbKey] + 1);
-      renderLightbox();
-    }
-  });
+        <div class="tour-media" data-open-lightbox="${tour.key}">
 
-  // Category filter
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const cards = document.querySelectorAll(".tour-card");
-  filterButtons.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      const filter = btn.dataset.filter;
-      filterButtons.forEach(function (b) {
-        b.classList.toggle("active", b === btn);
-      });
-      cards.forEach(function (card) {
-        if (filter === "all" || card.dataset.category === filter) {
-          card.classList.remove("hidden-filter");
-        } else {
-          card.classList.add("hidden-filter");
-        }
-      });
-    });
-  });
+          <img
+            id="main-${tour.key}"
+            class="main-photo"
+            src="${imagePath(firstPhoto)}"
+            alt="${tour.name}"
+            loading="lazy">
 
+          <div class="tour-media-top">
+            <span class="tour-category">${tour.categoryLabel}</span>
+            ${priceBadge}
+          </div>
 
-  // Resilient media error handling (prevents broken image icons if a file is pending upload or renamed)
-  document.querySelectorAll("img").forEach(function (img) {
-    img.addEventListener("error", function () {
-      if (this.dataset.retried) {
-        this.style.display = "none";
-        return;
-      }
-      this.dataset.retried = "1";
-      const currentSrc = this.getAttribute("src") || "";
-      if (currentSrc.includes("%20")) {
-        this.src = decodeURIComponent(currentSrc);
-      } else if (currentSrc.includes(" ")) {
-        this.src = currentSrc.replace(/ /g, "%20");
-      } else {
-        this.style.display = "none";
-      }
-    });
-  });
+          <button type="button"
+            class="media-nav-btn media-prev"
+            data-dir="-1"
+            data-gallery="${tour.key}"
+            aria-label="Previous photo">‹</button>
 
-  document.querySelectorAll("video.tour-video").forEach(function (vid) {
-    vid.addEventListener("error", function () {
-      const box = this.closest(".video-box");
-      if (!box || box.querySelector(".video-missing-note")) return;
-      const note = document.createElement("div");
-      note.className = "video-missing-note";
-      note.style.cssText = "margin-top:8px;padding:8px 12px;border-radius:10px;background:#fff8eb;border:1px solid #f0d7a1;color:#7a5210;font-size:12.5px;font-weight:600;";
-      note.textContent = "Video file (" + (this.getAttribute("src") || "") + ") is not loaded yet in /videos — check that the videos folder and exact MP4 filename are uploaded.";
-      box.appendChild(note);
-    });
-  });
+          <button type="button"
+            class="media-nav-btn media-next"
+            data-dir="1"
+            data-gallery="${tour.key}"
+            aria-label="Next photo">›</button>
 
-  // Currency switcher (EUR / USD / Both)
-  const currButtons = document.querySelectorAll(".curr-btn");
-  currButtons.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      const mode = btn.dataset.currency;
-      currButtons.forEach(function (b) {
-        b.classList.toggle("active", b === btn);
-      });
+          <div class="media-caption-bar">
+            <div class="media-caption-text">
+              <strong id="title-${tour.key}">${tour.name}</strong>
+              <span id="desc-${tour.key}">Explore real photos from this excursion.</span>
+            </div>
 
-      document.querySelectorAll(".price-badge[data-eur]").forEach(function (el) {
-        const eur = el.dataset.eur;
-        const usd = el.dataset.usd;
-        if (mode === "eur") el.textContent = "€" + eur + " / person";
-        else if (mode === "usd") el.textContent = "$" + usd + " USD / person";
-        else el.textContent = "€" + eur + " · $" + usd + " / person";
-      });
+            <button type="button"
+              class="open-lightbox-btn"
+              data-open-lightbox="${tour.key}">
+              Full Screen (1/${tour.photos.length})
+            </button>
+          </div>
 
-      document.querySelectorAll(".tour-price-box[data-eur]").forEach(function (box) {
-        const eur = box.dataset.eur;
-        const usd = box.dataset.usd;
-        const strong = box.querySelector("strong");
-        const span = box.querySelector("span");
-        if (mode === "eur") {
-          strong.textContent = "€" + eur;
-          span.textContent = "/ person (EUR)";
-        } else if (mode === "usd") {
-          strong.textContent = "$" + usd + " USD";
-          span.textContent = "/ person (approx. €" + eur + ")";
-        } else {
-          strong.textContent = "€" + eur;
-          span.textContent = "/ person (approx. $" + usd + " USD)";
-        }
-      });
+        </div>
 
-      document.querySelectorAll(".pl-price[data-eur]").forEach(function (td) {
-        const eur = td.dataset.eur;
-        const usd = td.dataset.usd;
-        if (mode === "eur") td.innerHTML = "€" + eur + "<small>EUR per person</small>";
-        else if (mode === "usd") td.innerHTML = "$" + usd + " USD<small>approx. €" + eur + "</small>";
-        else td.innerHTML = "€" + eur + "<small>approx. $" + usd + " USD</small>";
-      });
-    });
-  });
+        <div class="thumb-strip" id="thumbs-${tour.key}"></div>
+
+        <div class="tour-body">
+
+          <div class="tour-meta">
+            <span>${tour.type}</span>
+            <span>${tour.photos.length} Photos · ${tour.videos.length} Videos</span>
+          </div>
+
+          <h2>${tour.name}</h2>
+
+          ${priceBox}
+
+          <p class="tour-description">${tour.description}</p>
+
+          <ul class="tour-highlights">${highlights}</ul>
+
+          ${videoSection}
+
+          <div class="tour-actions">
+            <a href="${tour.booking}" class="btn-book">
+              ${hasPrice ? "Book This Experience" : "Request Price"}
+            </a>
+
+            <a href="atlantis-companion.html#daily-planner-panel"
+              class="link-companion">
+              Add to Day Plan →
+            </a>
+          </div>
+
+        </div>
+      </article>
+    `;
+
+  }).join("");
+
+}
+
+/* =====================================================
+   GALLERY AND VIDEO FUNCTIONALITY
+   ===================================================== */
+
+const galleryIndex = {};
+
+TOURS.forEach(tour => {
+  galleryIndex[tour.key] = 0;
 });
+
+function showImageError(img) {
+  const card = img.closest(".tour-card");
+  if (!card) return;
+
+  const note = card.querySelector(".image-error-note");
+  if (note) {
+    note.classList.add("visible");
+    return;
+  }
+
+  const message = document.createElement("div");
+  message.className = "media-error image-error-note visible";
+  message.textContent =
+    "Image not found: " + img.getAttribute("src");
+
+  card.querySelector(".tour-media")?.appendChild(message);
+}
+
+function setGalleryPhoto(key, index) {
+
+  const tour = TOURS.find(item => item.key === key);
+  if (!tour || !tour.photos.length) return;
+
+  const total = tour.photos.length;
+  const normalized = ((index % total) + total) % total;
+
+  galleryIndex[key] = normalized;
+
+  const filename = tour.photos[normalized];
+  const image = document.getElementById("main-" + key);
+  const title = document.getElementById("title-" + key);
+  const description = document.getElementById("desc-" + key);
+  const card = document.getElementById(tour.id);
+
+  if (image) {
+    image.src = imagePath(filename);
+    image.alt = tour.name + " photo " + (normalized + 1);
+  }
+
+  if (title) {
+    title.textContent = tour.name;
+  }
+
+  if (description) {
+    description.textContent =
+      "Photo " + (normalized + 1) + " of " + total +
+      " from this Red Sea experience.";
+  }
+
+  const button = card?.querySelector(".open-lightbox-btn");
+
+  if (button) {
+    button.textContent =
+      "Full Screen (" + (normalized + 1) + "/" + total + ")";
+  }
+
+  const thumbnails = document.getElementById("thumbs-" + key);
+
+  if (thumbnails) {
+    thumbnails.querySelectorAll(".thumb-btn").forEach((btn, i) => {
+      btn.classList.toggle("active", i === normalized);
+    });
+  }
+
+  if (activeLightboxKey === key) {
+    renderLightbox();
+  }
+}
+
+/* CREATE THUMBNAILS AND VIDEO TABS */
+
+function initializeMedia() {
+
+  TOURS.forEach(tour => {
+
+    const strip = document.getElementById("thumbs-" + tour.key);
+
+    if (strip) {
+
+      tour.photos.forEach((filename, index) => {
+
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "thumb-btn" + (index === 0 ? " active" : "");
+        button.setAttribute("aria-label", "Show photo " + (index + 1));
+
+        const img = document.createElement("img");
+        img.src = imagePath(filename);
+        img.alt = tour.name + " thumbnail " + (index + 1);
+        img.loading = "lazy";
+
+        img.addEventListener("error", function() {
+          button.style.display = "none";
+        });
+
+        button.appendChild(img);
+
+        button.addEventListener("click", event => {
+          event.stopPropagation();
+          setGalleryPhoto(tour.key, index);
+        });
+
+        strip.appendChild(button);
+
+      });
+    }
+
+    const tabs = document.getElementById("vtabs-" + tour.key);
+    const video = document.getElementById("video-" + tour.key);
+
+    if (!tabs || !video || !tour.videos.length) return;
+
+    tour.videos.forEach((item, index) => {
+
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "vtab-btn" + (index === 0 ? " active" : "");
+      button.textContent = item.label;
+
+      button.addEventListener("click", () => {
+
+        video.pause();
+
+        video.src = videoPath(item.file);
+        video.load();
+
+        const errorBox =
+          document.getElementById("video-error-" + tour.key);
+
+        if (errorBox) errorBox.classList.remove("visible");
+
+        const caption =
+          document.getElementById("vcap-" + tour.key);
+
+        if (caption) {
+          const strong = document.createElement("strong");
+          strong.textContent = item.title + ": ";
+
+          caption.replaceChildren(
+            strong,
+            document.createTextNode(item.description)
+          );
+        }
+
+        const counter =
+          document.getElementById("vcounter-" + tour.key);
+
+        if (counter) {
+          counter.textContent =
+            "Clip " + (index + 1) + " of " + tour.videos.length;
+        }
+
+        tabs.querySelectorAll(".vtab-btn").forEach(tab => {
+          tab.classList.toggle("active", tab === button);
+        });
+
+      });
+
+      tabs.appendChild(button);
+
+    });
+
+    video.addEventListener("error", () => {
+
+      const errorBox =
+        document.getElementById("video-error-" + tour.key);
+
+      if (errorBox) errorBox.classList.add("visible");
+
+    });
+
+    video.addEventListener("loadeddata", () => {
+
+      const errorBox =
+        document.getElementById("video-error-" + tour.key);
+
+      if (errorBox) errorBox.classList.remove("visible");
+
+    });
+
+  });
+
+}
+
+/* =====================================================
+   LIGHTBOX
+   ===================================================== */
+
+const lightbox = document.getElementById("photoLightbox");
+const lbImage = document.getElementById("lbImage");
+const lbTitle = document.getElementById("lbTitle");
+const lbDesc = document.getElementById("lbDesc");
+const lbCounter = document.getElementById("lbCounter");
+
+let activeLightboxKey = null;
+
+function renderLightbox() {
+
+  if (!activeLightboxKey) return;
+
+  const tour = TOURS.find(
+    item => item.key === activeLightboxKey
+  );
+
+  if (!tour) return;
+
+  const index = galleryIndex[activeLightboxKey];
+  const filename = tour.photos[index];
+
+  lbImage.src = imagePath(filename);
+  lbImage.alt = tour.name + " gallery photo";
+
+  lbTitle.textContent = tour.name;
+
+  lbDesc.textContent =
+    "Real photo from " + tour.name;
+
+  lbCounter.textContent =
+    (index + 1) + " / " + tour.photos.length;
+
+}
+
+function openLightbox(key) {
+
+  const tour = TOURS.find(item => item.key === key);
+
+  if (!tour || !tour.photos.length) return;
+
+  activeLightboxKey = key;
+
+  renderLightbox();
+
+  lightbox.classList.add("open");
+  document.body.style.overflow = "hidden";
+
+}
+
+function closeLightbox() {
+
+  lightbox.classList.remove("open");
+  document.body.style.overflow = "";
+  activeLightboxKey = null;
+
+}
+
+document.querySelectorAll("[data-open-lightbox]").forEach(element => {
+
+  element.addEventListener("click", event => {
+
+    if (event.target.closest(".media-nav-btn")) return;
+
+    if (event.target.closest(".open-lightbox-btn")) {
+      event.stopPropagation();
+    }
+
+    openLightbox(element.dataset.openLightbox);
+
+  });
+
+});
+
+document.getElementById("lbClose").addEventListener("click", closeLightbox);
+
+lightbox.addEventListener("click", event => {
+  if (event.target === lightbox) closeLightbox();
+});
+
+document.getElementById("lbPrev").addEventListener("click", () => {
+
+  if (!activeLightboxKey) return;
+
+  setGalleryPhoto(
+    activeLightboxKey,
+    galleryIndex[activeLightboxKey] - 1
+  );
+
+});
+
+document.getElementById("lbNext").addEventListener("click", () => {
+
+  if (!activeLightboxKey) return;
+
+  setGalleryPhoto(
+    activeLightboxKey,
+    galleryIndex[activeLightboxKey] + 1
+  );
+
+});
+
+/* KEYBOARD NAVIGATION */
+
+document.addEventListener("keydown", event => {
+
+  if (!lightbox.classList.contains("open")) return;
+
+  if (event.key === "Escape") closeLightbox();
+
+  if (event.key === "ArrowLeft") {
+    setGalleryPhoto(
+      activeLightboxKey,
+      galleryIndex[activeLightboxKey] - 1
+    );
+  }
+
+  if (event.key === "ArrowRight") {
+    setGalleryPhoto(
+      activeLightboxKey,
+      galleryIndex[activeLightboxKey] + 1
+    );
+  }
+
+});
+
+/* PHOTO PREVIOUS / NEXT BUTTONS */
+
+document.querySelectorAll(".media-nav-btn").forEach(button => {
+
+  button.addEventListener("click", event => {
+
+    event.stopPropagation();
+
+    const key = button.dataset.gallery;
+    const direction = Number(button.dataset.dir);
+
+    setGalleryPhoto(
+      key,
+      galleryIndex[key] + direction
+    );
+
+  });
+
+});
+
+/* =====================================================
+   FILTERS
+   ===================================================== */
+
+document.querySelectorAll(".filter-btn").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const filter = button.dataset.filter;
+
+    document.querySelectorAll(".filter-btn").forEach(item => {
+      item.classList.toggle("active", item === button);
+    });
+
+    document.querySelectorAll(".tour-card").forEach(card => {
+
+      const matches =
+        filter === "all" ||
+        card.dataset.category === filter;
+
+      card.classList.toggle("hidden-filter", !matches);
+
+    });
+
+  });
+
+});
+
+/* =====================================================
+   CURRENCY SWITCHER
+   ===================================================== */
+
+function updateCurrency(mode) {
+
+  document.querySelectorAll(".curr-btn").forEach(button => {
+    button.classList.toggle(
+      "active",
+      button.dataset.currency === mode
+    );
+  });
+
+  document.querySelectorAll(".price-badge[data-eur]").forEach(element => {
+
+    const eur = element.dataset.eur;
+    const usd = element.dataset.usd;
+
+    if (mode === "eur") {
+      element.textContent = "€" + eur + " / person";
+    } else if (mode === "usd") {
+      element.textContent = "$" + usd + " USD / person";
+    } else {
+      element.textContent = "€" + eur + " · $" + usd + " / person";
+    }
+
+  });
+
+  document.querySelectorAll(".tour-price-box[data-eur]").forEach(box => {
+
+    const eur = box.dataset.eur;
+    const usd = box.dataset.usd;
+
+    const strong = box.querySelector("strong");
+    const span = box.querySelector("span");
+
+    if (mode === "eur") {
+      strong.textContent = "€" + eur;
+      span.textContent = "/ person (EUR)";
+    } else if (mode === "usd") {
+      strong.textContent = "$" + usd + " USD";
+      span.textContent = "/ person (approx. €" + eur + ")";
+    } else {
+      strong.textContent = "€" + eur;
+      span.textContent = "/ person (approx. $" + usd + " USD)";
+    }
+
+  });
+
+  document.querySelectorAll(".pl-price[data-eur]").forEach(cell => {
+
+    const eur = cell.dataset.eur;
+    const usd = cell.dataset.usd;
+
+    if (mode === "eur") {
+      cell.innerHTML = "€" + eur + "<small>EUR per person</small>";
+    } else if (mode === "usd") {
+      cell.innerHTML = "$" + usd + " USD<small>approx. €" + eur + "</small>";
+    } else {
+      cell.innerHTML = "€" + eur + "<small>approx. $" + usd + " USD</small>";
+    }
+
+  });
+
+}
+
+document.querySelectorAll(".curr-btn").forEach(button => {
+
+  button.addEventListener("click", () => {
+    updateCurrency(button.dataset.currency);
+  });
+
+});
+
+/* =====================================================
+   MOBILE MENU
+   ===================================================== */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+
+  const isOpen = navLinks.classList.toggle("active");
+
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.textContent = isOpen ? "✕" : "☰";
+
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    navLinks.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "☰";
+
+  });
+
+});
+
+/* =====================================================
+   INITIALIZE PAGE
+   ===================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const year = document.getElementById("year");
+
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
+});
+
+/* Render cards before initializing their media controls */
+
+renderTours();
+initializeMedia();
+
 </script>
 
 </body>
