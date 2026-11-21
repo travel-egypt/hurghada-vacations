@@ -1,0 +1,18 @@
+{
+  "name": "Atlantis Hurghada Price Guide",
+  "short_name": "Price Guide",
+  "description": "Offline-ready Hurghada prices for pharmacies, transport, supermarkets & Red Sea tours by Atlantis Tours and Experiences.",
+  "start_url": "./hurghada-price-guide.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#071b2c",
+  "theme_color": "#071b2c",
+  "icons": [
+    {
+      "src": "./assets/atlantis-guide-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
