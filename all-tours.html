@@ -987,6 +987,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+
+  // Resilient media error handling (prevents broken image icons if a file is pending upload or renamed)
+  document.querySelectorAll("img").forEach(function (img) {
+    img.addEventListener("error", function () {
+      if (this.dataset.retried) {
+        this.style.display = "none";
+        return;
+      }
+      this.dataset.retried = "1";
+      const currentSrc = this.getAttribute("src") || "";
+      if (currentSrc.includes("%20")) {
+        this.src = decodeURIComponent(currentSrc);
+      } else if (currentSrc.includes(" ")) {
+        this.src = currentSrc.replace(/ /g, "%20");
+      } else {
+        this.style.display = "none";
+      }
+    });
+  });
+
+  document.querySelectorAll("video.tour-video").forEach(function (vid) {
+    vid.addEventListener("error", function () {
+      const box = this.closest(".video-box");
+      if (!box || box.querySelector(".video-missing-note")) return;
+      const note = document.createElement("div");
+      note.className = "video-missing-note";
+      note.style.cssText = "margin-top:8px;padding:8px 12px;border-radius:10px;background:#fff8eb;border:1px solid #f0d7a1;color:#7a5210;font-size:12.5px;font-weight:600;";
+      note.textContent = "Video file (" + (this.getAttribute("src") || "") + ") is not loaded yet in /videos — check that the videos folder and exact MP4 filename are uploaded.";
+      box.appendChild(note);
+    });
+  });
+
   // Currency switcher (EUR / USD / Both)
   const currButtons = document.querySelectorAll(".curr-btn");
   currButtons.forEach(function (btn) {
