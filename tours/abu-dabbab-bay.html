@@ -7,31 +7,38 @@
   <link href="../css/style.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
   <style>
     :root{--navy:#062c43;--deep:#031d30;--blue:#087f9e;--cyan:#16c5ce;--gold:#e8b967;--light:#f2f9fb;--dark:#183344;--muted:#607583;--white:#fff}
     body{font-family:'DM Sans',Arial,sans-serif;color:#263f4d;background-color:#F1EBDD;line-height:1.78;margin:0}
+    html[dir="rtl"] body{font-family:'Cairo','DM Sans',Arial,sans-serif}
     h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;color:var(--navy)}
+    html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] h4{font-family:'Cairo','Playfair Display',Georgia,serif}
     .container{width:90%;max-width:1180px;margin:0 auto}
-    .page-top-bar{background:rgba(3,29,48,.97);padding:16px 0;position:sticky;top:0;z-index:100}
-    .page-top-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .page-top-bar{background:rgba(3,29,48,.97);padding:14px 0;position:sticky;top:0;z-index:100}
+    .page-top-inner{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
     .brand-link{color:#fff;text-decoration:none;font-weight:800;font-size:18px}
-    .top-nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+    .top-nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
     .top-nav a{color:#e5f2f7;text-decoration:none;font-size:14px;font-weight:600}
     .top-nav a.book-cta{background:var(--cyan);color:var(--deep);padding:8px 16px;border-radius:24px;font-weight:800}
+    .lang-switcher{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+    .lang-btn{background:rgba(255,255,255,.1);color:#e5f2f7;border:1px solid rgba(255,255,255,.22);padding:4px 9px;border-radius:6px;font-size:12px;font-weight:700;cursor:pointer;transition:.2s}
+    .lang-btn:hover{background:rgba(22,197,206,.25)}
+    .lang-btn.active{background:var(--gold);color:var(--navy);border-color:var(--gold)}
     .dabbab-story{padding:45px 0 75px}
     .dabbab-hero{min-height:410px;border-radius:18px;overflow:hidden;display:flex;align-items:flex-end;background:linear-gradient(0deg,rgba(3,29,43,.86),rgba(3,29,43,.14)),url("../assets/images/AbuDabab.jpeg") center/cover no-repeat;box-shadow:0 12px 35px rgba(9,45,70,.16)}
     .dabbab-hero-content{padding:clamp(24px,5vw,48px);max-width:780px;color:#fff}
     .dabbab-hero h1{color:#fff;font-size:clamp(34px,5.5vw,58px);line-height:1.1;margin:8px 0 12px}
     .dabbab-kicker{display:inline-block;color:#f4c66f;text-transform:uppercase;letter-spacing:2.5px;font-size:12px;font-weight:700}
+    html[dir="rtl"] .dabbab-kicker{letter-spacing:0}
     .tour-summary-box{background:#fff;border-radius:16px;padding:28px;margin-top:32px;box-shadow:0 8px 28px rgba(6,44,67,.08)}
     .tour-meta{display:flex;gap:16px;flex-wrap:wrap;margin:14px 0 20px;font-size:14px;color:var(--navy)}
     .tour-meta span{background:#f2f9fb;padding:8px 14px;border-radius:10px;border:1px solid #dcebf0}
-    .program-timeline{padding-left:20px;margin:14px 0 22px}
+    .program-timeline{padding-inline-start:20px;margin:14px 0 22px}
     .program-timeline li{margin-bottom:10px}
-    .dabbab-note{background:#fff9ec;border-left:4px solid var(--gold);padding:14px 18px;border-radius:8px;font-size:14px;color:var(--navy);margin-top:14px}
+    .dabbab-note{background:#fff9ec;border-inline-start:4px solid var(--gold);padding:14px 18px;border-radius:8px;font-size:14px;color:var(--navy);margin-top:14px}
     .dabbab-two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin:40px 0}
-    .dabbab-quote{padding:24px;border-left:4px solid var(--gold);border-radius:10px;background:#f8fbfc;color:var(--navy);font-size:18px;font-style:italic}
+    .dabbab-quote{padding:24px;border-inline-start:4px solid var(--gold);border-radius:10px;background:#f8fbfc;color:var(--navy);font-size:18px;font-style:italic}
     .dabbab-videos-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:32px 0}
     .tour-feature-video{background:#fff;padding:18px;border-radius:16px;box-shadow:0 8px 24px rgba(6,44,67,.06)}
     .tour-feature-video h4{margin:0 0 10px;font-size:16px}
@@ -46,6 +53,12 @@
     .dabbab-final-quote{text-align:center;padding:38px 24px;margin-top:44px;border-radius:16px;background:linear-gradient(120deg,#092d46,#087eaa);color:#fff}
     .dabbab-final-quote h2{color:#fff;margin:0 0 10px}
     .dabbab-final-quote a{display:inline-block;margin-top:14px;background:var(--gold);color:var(--navy);font-weight:800;padding:12px 24px;border-radius:25px;text-decoration:none}
+    .site-footer{background:var(--deep);color:#d7e8ef;padding:34px 0;margin-top:52px;font-size:14px}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .social-links{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .social-link{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);color:#fff;text-decoration:none;font-weight:700;font-size:13px;border:1px solid rgba(255,255,255,.16);transition:.2s}
+    .social-link:hover{background:var(--cyan);color:var(--deep);border-color:var(--cyan)}
+    .social-link svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
     .dabbab-lightbox{display:none;position:fixed;inset:0;z-index:2000;background:rgba(1,16,27,.94);align-items:center;justify-content:center;padding:20px}
     .dabbab-lightbox.open{display:flex}
     .dabbab-lightbox-panel{position:relative;max-width:960px;width:100%;background:#062c43;color:#fff;padding:20px;border-radius:16px;text-align:center}
@@ -57,20 +70,31 @@
     }
     @media(max-width:800px){
       .dabbab-two-col,.dabbab-videos-grid,.dabbab-gallery{grid-template-columns:1fr}
+      .footer-inner{flex-direction:column;text-align:center}
     }
   </style>
 </head>
 <body>
   <header class="page-top-bar">
     <div class="container page-top-inner">
-      <a class="brand-link" href="../index.html">Atlantis Tours & Experiences</a>
+      <a class="brand-link" href="../index.html" data-i18n="brand">Atlantis Tours & Experiences</a>
       <nav class="top-nav">
-        <a href="../index.html">Home</a>
-        <a href="../all-tours.html">All Tours</a>
-        <a href="../hurghada.html">Hurghada Guide</a>
-        <a href="../contact.html">Contact</a>
-        <a class="book-cta" href="../booking.html?tour=Abu+Dabbab+Bay">Book Now</a>
+        <a href="../index.html" data-i18n="nav_home">Home</a>
+        <a href="../all-tours.html" data-i18n="nav_tours">All Tours</a>
+        <a href="../hurghada.html" data-i18n="nav_guide">Hurghada Guide</a>
+        <a href="../contact.html" data-i18n="nav_contact">Contact</a>
+        <a class="book-cta" href="../booking.html?tour=Abu+Dabbab+Bay" data-i18n="nav_book">Book Now</a>
       </nav>
+      <div class="lang-switcher" aria-label="Language switcher">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="de">DE</button>
+        <button type="button" class="lang-btn" data-lang="ru">RU</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="pl">PL</button>
+        <button type="button" class="lang-btn" data-lang="ar">AR</button>
+      </div>
     </div>
   </header>
 
@@ -78,73 +102,73 @@
     <div class="container">
       <section class="dabbab-hero">
         <div class="dabbab-hero-content">
-          <span class="dabbab-kicker">Red Sea Bay & Marine Habitat · Near Marsa Alam</span>
-          <h1>Abu Dabbab Bay</h1>
-          <p>Visit Abu Dabbab Bay near Marsa Alam, known for its sandy shore and seagrass habitat. Sea turtles and dugongs may be present, but wildlife sightings are never guaranteed.</p>
+          <span class="dabbab-kicker" data-i18n="kicker">Red Sea Bay & Marine Habitat · Near Marsa Alam</span>
+          <h1 data-i18n="hero_title">Abu Dabbab Bay</h1>
+          <p data-i18n="hero_desc">Visit Abu Dabbab Bay near Marsa Alam, known for its sandy shore and seagrass habitat. Sea turtles and dugongs may be present, but wildlife sightings are never guaranteed.</p>
         </div>
       </section>
 
       <section class="tour-summary-box">
-        <h2>Trip Overview & General Experience Program</h2>
+        <h2 data-i18n="overview_title">Trip Overview & General Experience Program</h2>
         <div class="tour-meta">
-          <span><strong>Location:</strong> Abu Dabbab Bay (Near Marsa Alam)</span>
-          <span><strong>Habitat:</strong> Sandy Shore & Seagrass Bay</span>
-          <span><strong>Rate:</strong> Confirmed upon booking inquiry</span>
+          <span><strong data-i18n="meta_loc_label">Location:</strong> <span data-i18n="meta_loc_val">Abu Dabbab Bay (Near Marsa Alam)</span></span>
+          <span><strong data-i18n="meta_hab_label">Habitat:</strong> <span data-i18n="meta_hab_val">Sandy Shore & Seagrass Bay</span></span>
+          <span><strong data-i18n="meta_rate_label">Rate:</strong> <span data-i18n="meta_rate_val">Confirmed upon booking inquiry</span></span>
         </div>
 
-        <p>Abu Dabbab Bay is a well-known Red Sea coastal bay with a sandy shore and seagrass areas where marine wildlife such as sea turtles and dugongs may occasionally be spotted in the wild, alongside snorkeling in permitted areas when sea conditions allow.</p>
+        <p data-i18n="overview_p">Abu Dabbab Bay is a well-known Red Sea coastal bay with a sandy shore and seagrass areas where marine wildlife such as sea turtles and dugongs may occasionally be spotted in the wild, alongside snorkeling in permitted areas when sea conditions allow.</p>
 
         <ul class="program-timeline">
-          <li>Explore a Red Sea bay and its sandy coastal scenery.</li>
-          <li>Snorkeling in permitted areas, subject to sea conditions.</li>
-          <li>Respectful wildlife watching without touching or disturbing animals.</li>
+          <li data-i18n="prog_1">Explore a Red Sea bay and its sandy coastal scenery.</li>
+          <li data-i18n="prog_2">Snorkeling in permitted areas, subject to sea conditions.</li>
+          <li data-i18n="prog_3">Respectful wildlife watching without touching or disturbing animals.</li>
         </ul>
 
         <div class="dabbab-note">
-          <strong>Important Note:</strong> Wildlife sightings (including sea turtles or dugongs) cannot be promised or guaranteed. Always follow local guides, crew instructions, and protected-area / wildlife rules.
+          <strong data-i18n="note_label">Important Note:</strong> <span data-i18n="note_text">Wildlife sightings (including sea turtles or dugongs) cannot be promised or guaranteed. Always follow local guides, crew instructions, and protected-area / wildlife rules.</span>
         </div>
       </section>
 
       <section class="dabbab-two-col">
         <div>
-          <h3>Why Visit Abu Dabbab Bay?</h3>
-          <p>Unlike crowded offshore reef stops, Abu Dabbab combines a sandy bay setting with seagrass beds and coastal waters that attract marine life in a natural habitat.</p>
-          <p>Guests should keep a respectful distance from any marine animals and never touch, chase, or block their path.</p>
+          <h3 data-i18n="why_title">Why Visit Abu Dabbab Bay?</h3>
+          <p data-i18n="why_p1">Unlike crowded offshore reef stops, Abu Dabbab combines a sandy bay setting with seagrass beds and coastal waters that attract marine life in a natural habitat.</p>
+          <p data-i18n="why_p2">Guests should keep a respectful distance from any marine animals and never touch, chase, or block their path.</p>
         </div>
-        <div class="dabbab-quote">
+        <div class="dabbab-quote" data-i18n="quote_text">
           “A sandy Red Sea bay and seagrass habitat where nature sets the pace—requiring patience, respect for wildlife, and safe sea conditions.”
         </div>
       </section>
 
       <section>
-        <h2>Abu Dabbab Video Clips</h2>
+        <h2 data-i18n="videos_title">Abu Dabbab Video Clips</h2>
         <div class="dabbab-videos-grid">
           <div class="tour-feature-video">
-            <h4>Abu Dabbab Clip 1</h4>
+            <h4 data-i18n="vid_1">Abu Dabbab Clip 1</h4>
             <video controls playsinline poster="../assets/images/AbuDabab.jpeg" preload="metadata" webkit-playsinline="true">
               <source src="../assets/videos/AbuDabab17.mp4" type="video/mp4"/>
-              Your browser does not support HTML video.
+              <span data-i18n="vid_fallback">Your browser does not support HTML video.</span>
             </video>
           </div>
           <div class="tour-feature-video">
-            <h4>Abu Dabbab Clip 2</h4>
+            <h4 data-i18n="vid_2">Abu Dabbab Clip 2</h4>
             <video controls playsinline poster="../assets/images/AbuDabab1.jpeg" preload="metadata" webkit-playsinline="true">
               <source src="../assets/videos/AbuDabab18.mp4" type="video/mp4"/>
-              Your browser does not support HTML video.
+              <span data-i18n="vid_fallback">Your browser does not support HTML video.</span>
             </video>
           </div>
           <div class="tour-feature-video">
-            <h4>Abu Dabbab Clip 3</h4>
+            <h4 data-i18n="vid_3">Abu Dabbab Clip 3</h4>
             <video controls playsinline poster="../assets/images/AbuDabab2.jpeg" preload="metadata" webkit-playsinline="true">
               <source src="../assets/videos/AbuDabab19.mp4" type="video/mp4"/>
-              Your browser does not support HTML video.
+              <span data-i18n="vid_fallback">Your browser does not support HTML video.</span>
             </video>
           </div>
           <div class="tour-feature-video">
-            <h4>Abu Dabbab Bay Video</h4>
+            <h4 data-i18n="vid_4">Abu Dabbab Bay Video</h4>
             <video controls playsinline poster="../assets/images/AbuDabab3.jpeg" preload="metadata" webkit-playsinline="true">
               <source src="../assets/videos/Abo%20Dabbab%20.mp4" type="video/mp4"/>
-              Your browser does not support HTML video.
+              <span data-i18n="vid_fallback">Your browser does not support HTML video.</span>
             </video>
           </div>
         </div>
@@ -152,56 +176,427 @@
 
       <section>
         <div class="dabbab-gallery-head">
-          <h2>Abu Dabbab Bay Photo Gallery</h2>
-          <p>Click any photo to view it larger.</p>
+          <h2 data-i18n="gallery_title">Abu Dabbab Bay Photo Gallery</h2>
+          <p data-i18n="gallery_desc">Click any photo to view it larger.</p>
         </div>
         <div class="dabbab-gallery" id="dabbabGallery">
-          <button type="button"><img alt="Abu Dabbab photo 1" loading="lazy" src="../assets/images/AbuDabab.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 2" loading="lazy" src="../assets/images/AbuDabab1.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 3" loading="lazy" src="../assets/images/AbuDabab2.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 4" loading="lazy" src="../assets/images/AbuDabab3.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 5" loading="lazy" src="../assets/images/AbuDabab4.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 6" loading="lazy" src="../assets/images/AbuDabab5.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 7" loading="lazy" src="../assets/images/AbuDabab6.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 8" loading="lazy" src="../assets/images/AbuDabab7.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 9" loading="lazy" src="../assets/images/AbuDabab8.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 10" loading="lazy" src="../assets/images/AbuDabab9.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 11" loading="lazy" src="../assets/images/AbuDabab10.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 12" loading="lazy" src="../assets/images/AbuDabab11.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 13" loading="lazy" src="../assets/images/AbuDabab12.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 14" loading="lazy" src="../assets/images/AbuDabab13.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 15" loading="lazy" src="../assets/images/AbuDabab14.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 16" loading="lazy" src="../assets/images/AbuDabab15.jpeg"/></button>
-          <button type="button"><img alt="Abu Dabbab photo 17" loading="lazy" src="../assets/images/AbuDabab16.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 1" data-i18n-alt="img_alt" data-i18n-idx="1" loading="lazy" src="../assets/images/AbuDabab.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 2" data-i18n-alt="img_alt" data-i18n-idx="2" loading="lazy" src="../assets/images/AbuDabab1.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 3" data-i18n-alt="img_alt" data-i18n-idx="3" loading="lazy" src="../assets/images/AbuDabab2.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 4" data-i18n-alt="img_alt" data-i18n-idx="4" loading="lazy" src="../assets/images/AbuDabab3.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 5" data-i18n-alt="img_alt" data-i18n-idx="5" loading="lazy" src="../assets/images/AbuDabab4.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 6" data-i18n-alt="img_alt" data-i18n-idx="6" loading="lazy" src="../assets/images/AbuDabab5.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 7" data-i18n-alt="img_alt" data-i18n-idx="7" loading="lazy" src="../assets/images/AbuDabab6.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 8" data-i18n-alt="img_alt" data-i18n-idx="8" loading="lazy" src="../assets/images/AbuDabab7.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 9" data-i18n-alt="img_alt" data-i18n-idx="9" loading="lazy" src="../assets/images/AbuDabab8.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 10" data-i18n-alt="img_alt" data-i18n-idx="10" loading="lazy" src="../assets/images/AbuDabab9.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 11" data-i18n-alt="img_alt" data-i18n-idx="11" loading="lazy" src="../assets/images/AbuDabab10.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 12" data-i18n-alt="img_alt" data-i18n-idx="12" loading="lazy" src="../assets/images/AbuDabab11.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 13" data-i18n-alt="img_alt" data-i18n-idx="13" loading="lazy" src="../assets/images/AbuDabab12.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 14" data-i18n-alt="img_alt" data-i18n-idx="14" loading="lazy" src="../assets/images/AbuDabab13.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 15" data-i18n-alt="img_alt" data-i18n-idx="15" loading="lazy" src="../assets/images/AbuDabab14.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 16" data-i18n-alt="img_alt" data-i18n-idx="16" loading="lazy" src="../assets/images/AbuDabab15.jpeg"/></button>
+          <button type="button"><img alt="Abu Dabbab photo 17" data-i18n-alt="img_alt" data-i18n-idx="17" loading="lazy" src="../assets/images/AbuDabab16.jpeg"/></button>
         </div>
       </section>
 
       <section class="dabbab-faq">
-        <h2>Abu Dabbab Bay – Frequently Asked Questions</h2>
-        <details><summary>Are sea turtles or dugongs guaranteed at Abu Dabbab Bay?</summary><p>No, wildlife sightings cannot be promised or guaranteed because marine animals move freely in their natural habitat.</p></details>
-        <details><summary>What rules apply when snorkeling around marine life?</summary><p>Always follow local guides and protected-area rules, keep a safe distance, and never touch, chase, or disturb marine animals.</p></details>
+        <h2 data-i18n="faq_title">Abu Dabbab Bay – Frequently Asked Questions</h2>
+        <details><summary data-i18n="faq_q1">Are sea turtles or dugongs guaranteed at Abu Dabbab Bay?</summary><p data-i18n="faq_a1">No, wildlife sightings cannot be promised or guaranteed because marine animals move freely in their natural habitat.</p></details>
+        <details><summary data-i18n="faq_q2">What rules apply when snorkeling around marine life?</summary><p data-i18n="faq_a2">Always follow local guides and protected-area rules, keep a safe distance, and never touch, chase, or disturb marine animals.</p></details>
       </section>
 
       <section class="dabbab-final-quote">
-        <h2>Plan Your Abu Dabbab Bay Trip</h2>
-        <p>Reach out to check availability and confirm trip details for your dates.</p>
-        <a href="../booking.html?tour=Abu+Dabbab+Bay">Book or Inquire About Abu Dabbab</a>
+        <h2 data-i18n="cta_title">Plan Your Abu Dabbab Bay Trip</h2>
+        <p data-i18n="cta_desc">Reach out to check availability and confirm trip details for your dates.</p>
+        <a href="../booking.html?tour=Abu+Dabbab+Bay" data-i18n="cta_btn">Book or Inquire About Abu Dabbab</a>
       </section>
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong data-i18n="brand">Atlantis Tours & Experiences</strong> · <span data-i18n="footer_follow">Follow us on social media</span>
+      </div>
+      <div class="social-links" aria-label="Social media links">
+        <!-- Replace # with your official Facebook and Instagram profile URLs -->
+        <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99h-2.3V12h2.3V9.8c0-2.27 1.35-3.52 3.42-3.52.99 0 2.03.18 2.03.18v2.23h-1.14c-1.13 0-1.48.7-1.48 1.42V12h2.52l-.4 2.89h-2.12v6.99A10 10 0 0 0 22 12z"/></svg>
+          <span data-i18n="social_fb">Facebook</span>
+        </a>
+        <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm8.75 2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/></svg>
+          <span data-i18n="social_ig">Instagram</span>
+        </a>
+      </div>
+    </div>
+  </footer>
 
   <div class="dabbab-lightbox" id="dabbabLightbox" aria-hidden="true">
     <div class="dabbab-lightbox-panel">
       <img id="dabbabLightboxImg" src="" alt="Enlarged Abu Dabbab photo"/>
       <div class="lightbox-controls">
-        <button type="button" id="dabbabPrevPhoto">Previous</button>
-        <button type="button" id="dabbabNextPhoto">Next</button>
-        <button type="button" id="dabbabCloseLightbox">Close</button>
+        <button type="button" id="dabbabPrevPhoto" data-i18n="lb_prev">Previous</button>
+        <button type="button" id="dabbabNextPhoto" data-i18n="lb_next">Next</button>
+        <button type="button" id="dabbabCloseLightbox" data-i18n="lb_close">Close</button>
       </div>
     </div>
   </div>
 
   <script>
+    const TRANSLATIONS = {
+      en: {
+        page_title: "Abu Dabbab Bay | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Home", nav_tours: "All Tours", nav_guide: "Hurghada Guide", nav_contact: "Contact", nav_book: "Book Now",
+        kicker: "Red Sea Bay & Marine Habitat · Near Marsa Alam",
+        hero_title: "Abu Dabbab Bay",
+        hero_desc: "Visit Abu Dabbab Bay near Marsa Alam, known for its sandy shore and seagrass habitat. Sea turtles and dugongs may be present, but wildlife sightings are never guaranteed.",
+        overview_title: "Trip Overview & General Experience Program",
+        meta_loc_label: "Location:", meta_loc_val: "Abu Dabbab Bay (Near Marsa Alam)",
+        meta_hab_label: "Habitat:", meta_hab_val: "Sandy Shore & Seagrass Bay",
+        meta_rate_label: "Rate:", meta_rate_val: "Confirmed upon booking inquiry",
+        overview_p: "Abu Dabbab Bay is a well-known Red Sea coastal bay with a sandy shore and seagrass areas where marine wildlife such as sea turtles and dugongs may occasionally be spotted in the wild, alongside snorkeling in permitted areas when sea conditions allow.",
+        prog_1: "Explore a Red Sea bay and its sandy coastal scenery.",
+        prog_2: "Snorkeling in permitted areas, subject to sea conditions.",
+        prog_3: "Respectful wildlife watching without touching or disturbing animals.",
+        note_label: "Important Note:",
+        note_text: "Wildlife sightings (including sea turtles or dugongs) cannot be promised or guaranteed. Always follow local guides, crew instructions, and protected-area / wildlife rules.",
+        why_title: "Why Visit Abu Dabbab Bay?",
+        why_p1: "Unlike crowded offshore reef stops, Abu Dabbab combines a sandy bay setting with seagrass beds and coastal waters that attract marine life in a natural habitat.",
+        why_p2: "Guests should keep a respectful distance from any marine animals and never touch, chase, or block their path.",
+        quote_text: "“A sandy Red Sea bay and seagrass habitat where nature sets the pace—requiring patience, respect for wildlife, and safe sea conditions.”",
+        videos_title: "Abu Dabbab Video Clips",
+        vid_1: "Abu Dabbab Clip 1", vid_2: "Abu Dabbab Clip 2", vid_3: "Abu Dabbab Clip 3", vid_4: "Abu Dabbab Bay Video",
+        vid_fallback: "Your browser does not support HTML video.",
+        gallery_title: "Abu Dabbab Bay Photo Gallery", gallery_desc: "Click any photo to view it larger.",
+        img_alt: "Abu Dabbab photo {n}",
+        faq_title: "Abu Dabbab Bay – Frequently Asked Questions",
+        faq_q1: "Are sea turtles or dugongs guaranteed at Abu Dabbab Bay?",
+        faq_a1: "No, wildlife sightings cannot be promised or guaranteed because marine animals move freely in their natural habitat.",
+        faq_q2: "What rules apply when snorkeling around marine life?",
+        faq_a2: "Always follow local guides and protected-area rules, keep a safe distance, and never touch, chase, or disturb marine animals.",
+        cta_title: "Plan Your Abu Dabbab Bay Trip",
+        cta_desc: "Reach out to check availability and confirm trip details for your dates.",
+        cta_btn: "Book or Inquire About Abu Dabbab",
+        footer_follow: "Follow us on social media", social_fb: "Facebook", social_ig: "Instagram",
+        lb_prev: "Previous", lb_next: "Next", lb_close: "Close",
+        lb_alt_default: "Enlarged Abu Dabbab photo"
+      },
+      de: {
+        page_title: "Abu Dabbab Bucht | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Startseite", nav_tours: "Alle Touren", nav_guide: "Hurghada Guide", nav_contact: "Kontakt", nav_book: "Jetzt buchen",
+        kicker: "Rotes Meer Bucht & Lebensraum · Nahe Marsa Alam",
+        hero_title: "Abu Dabbab Bucht",
+        hero_desc: "Besuchen Sie die Abu-Dabbab-Bucht nahe Marsa Alam, bekannt für ihren Sandstrand und Seegraslebensraum. Meeresschildkröten und Dugongs können vorkommen, Sichtungen sind jedoch nie garantiert.",
+        overview_title: "Reiseübersicht & Allgemeines Erlebnisprogramm",
+        meta_loc_label: "Ort:", meta_loc_val: "Abu Dabbab Bucht (Nahe Marsa Alam)",
+        meta_hab_label: "Lebensraum:", meta_hab_val: "Sandstrand & Seegrasbucht",
+        meta_rate_label: "Preis:", meta_rate_val: "Bestätigung bei Buchungsanfrage",
+        overview_p: "Die Abu-Dabbab-Bucht ist eine bekannte Küstenbucht am Roten Meer mit Sandstrand und Seegraswiesen, in denen Meeresbewohner wie Meeresschildkröten und Dugongs gelegentlich frei beobachtet werden können – ergänzt durch Schnorcheln in erlaubten Bereichen je nach Seegang.",
+        prog_1: "Erkunden Sie eine Bucht am Roten Meer und ihre sandige Küstenlandschaft.",
+        prog_2: "Schnorcheln in erlaubten Bereichen, abhängig von den Seebedingungen.",
+        prog_3: "Respektvolle Tierbeobachtung ohne Berühren oder Stören der Tiere.",
+        note_label: "Wichtiger Hinweis:",
+        note_text: "Tiersichtungen (einschließlich Meeresschildkröten oder Dugongs) können nicht versprochen oder garantiert werden. Befolgen Sie stets die Anweisungen lokaler Guides, der Crew sowie Schutzgebiets- und Artenschutzregeln.",
+        why_title: "Warum die Abu Dabbab Bucht besuchen?",
+        why_p1: "Anders als überfüllte Offshore-Riffstopps verbindet Abu Dabbab eine sandige Bucht mit Seegraswiesen und Küstengewässern, die Meereslebewesen in ihrem natürlichen Lebensraum anziehen.",
+        why_p2: "Gäste sollten einen respektvollen Abstand zu Meerestieren halten und sie niemals berühren, verfolgen oder ihren Weg blockieren.",
+        quote_text: "„Eine sandige Bucht am Roten Meer und ein Seegraslebensraum, in dem die Natur das Tempo bestimmt – mit Geduld, Respekt vor der Tierwelt und sicheren Seebedingungen.“",
+        videos_title: "Abu Dabbab Videoclips",
+        vid_1: "Abu Dabbab Clip 1", vid_2: "Abu Dabbab Clip 2", vid_3: "Abu Dabbab Clip 3", vid_4: "Abu Dabbab Bucht Video",
+        vid_fallback: "Ihr Browser unterstützt kein HTML-Video.",
+        gallery_title: "Abu Dabbab Bucht Fotogalerie", gallery_desc: "Klicken Sie auf ein Foto, um es größer anzusehen.",
+        img_alt: "Abu Dabbab Foto {n}",
+        faq_title: "Abu Dabbab Bucht – Häufig gestellte Fragen",
+        faq_q1: "Sind Meeresschildkröten oder Dugongs in der Abu Dabbab Bucht garantiert?",
+        faq_a1: "Nein, Tiersichtungen können nicht versprochen oder garantiert werden, da sich Meerestiere frei in ihrem natürlichen Lebensraum bewegen.",
+        faq_q2: "Welche Regeln gelten beim Schnorcheln in der Nähe von Meerestieren?",
+        faq_a2: "Befolgen Sie stets die Regeln lokaler Guides und Schutzgebiete, halten Sie sicheren Abstand und berühren, jagen oder stören Sie Meerestiere niemals.",
+        cta_title: "Planen Sie Ihren Ausflug zur Abu Dabbab Bucht",
+        cta_desc: "Kontaktieren Sie uns, um Verfügbarkeit und Reisedetails für Ihre Wunschdaten zu prüfen.",
+        cta_btn: "Abu Dabbab buchen oder anfragen",
+        footer_follow: "Folgen Sie uns in den sozialen Medien", social_fb: "Facebook", social_ig: "Instagram",
+        lb_prev: "Zurück", lb_next: "Weiter", lb_close: "Schließen",
+        lb_alt_default: "Vergrößertes Abu-Dabbab-Foto"
+      },
+      ru: {
+        page_title: "Бухта Абу Даббаб | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Главная", nav_tours: "Все туры", nav_guide: "Гид по Хургаде", nav_contact: "Контакты", nav_book: "Забронировать",
+        kicker: "Бухта Красного моря и морская среда · Рядом с Марса-Алам",
+        hero_title: "Бухта Абу Даббаб",
+        hero_desc: "Посетите бухту Абу Даббаб рядом с Марса-Алам, известную песчаным берегом и зарослями морской травы. Возможны встречи с морскими черепахами и дюгонями, но появление животных никогда не гарантируется.",
+        overview_title: "Обзор поездки и общая программа",
+        meta_loc_label: "Локация:", meta_loc_val: "Бухта Абу Даббаб (рядом с Марса-Алам)",
+        meta_hab_label: "Среда:", meta_hab_val: "Песчаный берег и бухта с морской травой",
+        meta_rate_label: "Стоимость:", meta_rate_val: "Уточняется при запросе бронирования",
+        overview_p: "Бухта Абу Даббаб — известная прибрежная бухта Красного моря с песчаным берегом и участками морской травы, где в дикой природе иногда можно встретить морских черепах и дюгоней, а также поплавать с маской в разрешённых зонах при подходящей погоде на море.",
+        prog_1: "Знакомство с бухтой Красного моря и её песчаными прибрежными пейзажами.",
+        prog_2: "Снорклинг в разрешённых зонах в зависимости от морских условий.",
+        prog_3: "Бережное наблюдение за морскими обитателями без прикосновений и беспокойства.",
+        note_label: "Важное примечание:",
+        note_text: "Встречи с дикими животными (включая морских черепах или дюгоней) не могут быть обещаны или гарантированы. Всегда следуйте указаниям местных гидов, экипажа и правилам природоохранной зоны.",
+        why_title: "Почему стоит посетить бухту Абу Даббаб?",
+        why_p1: "В отличие от многолюдных остановок в открытом море, Абу Даббаб сочетает песчаную бухту, луга морской травы и прибрежные воды, привлекающие морскую фауну в естественной среде.",
+        why_p2: "Гостям необходимо соблюдать уважительную дистанцию до любых морских животных и никогда не трогать их, не преследовать и не преграждать путь.",
+        quote_text: "«Песчаная бухта Красного моря и заросли морской травы, где ритм задаёт природа — требуя терпения, уважения к фауне и безопасных условий на море.»",
+        videos_title: "Видеоролики из Абу Даббаб",
+        vid_1: "Абу Даббаб — клип 1", vid_2: "Абу Даббаб — клип 2", vid_3: "Абу Даббаб — клип 3", vid_4: "Видео бухты Абу Даббаб",
+        vid_fallback: "Ваш браузер не поддерживает HTML-видео.",
+        gallery_title: "Фотогалерея бухты Абу Даббаб", gallery_desc: "Нажмите на любое фото, чтобы открыть его в увеличенном виде.",
+        img_alt: "Фото Абу Даббаб {n}",
+        faq_title: "Бухта Абу Даббаб — часто задаваемые вопросы",
+        faq_q1: "Гарантированы ли встречи с морскими черепахами или дюгонями в Абу Даббаб?",
+        faq_a1: "Нет, встречи с дикими животными нельзя обещать или гарантировать, поскольку морские обитатели свободно перемещаются в естественной среде.",
+        faq_q2: "Какие правила действуют при снорклинге рядом с морскими животными?",
+        faq_a2: "Всегда соблюдайте правила местных гидов и заповедной зоны, держите безопасную дистанцию и никогда не прикасайтесь к животным, не преследуйте и не тревожьте их.",
+        cta_title: "Спланируйте поездку в бухту Абу Даббаб",
+        cta_desc: "Свяжитесь с нами, чтобы проверить наличие мест и уточнить детали поездки на ваши даты.",
+        cta_btn: "Забронировать или узнать об Абу Даббаб",
+        footer_follow: "Мы в социальных сетях", social_fb: "Facebook", social_ig: "Instagram",
+        lb_prev: "Назад", lb_next: "Далее", lb_close: "Закрыть",
+        lb_alt_default: "Увеличенное фото Абу Даббаб"
+      },
+      fr: {
+        page_title: "Baie d'Abu Dabbab | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Accueil", nav_tours: "Toutes les excursions", nav_guide: "Guide Hurghada", nav_contact: "Contact", nav_book: "Réserver",
+        kicker: "Baie de la mer Rouge & habitat marin · Près de Marsa Alam",
+        hero_title: "Baie d'Abu Dabbab",
+        hero_desc: "Visitez la baie d'Abu Dabbab près de Marsa Alam, réputée pour sa plage de sable et son herbier marin. Tortues marines et dugongs peuvent être présents, sans garantie d'observation.",
+        overview_title: "Aperçu du voyage & programme général",
+        meta_loc_label: "Lieu :", meta_loc_val: "Baie d'Abu Dabbab (Près de Marsa Alam)",
+        meta_hab_label: "Habitat :", meta_hab_val: "Rivage sableux & baie à herbiers",
+        meta_rate_label: "Tarif :", meta_rate_val: "Confirmé lors de la demande de réservation",
+        overview_p: "La baie d'Abu Dabbab est une baie côtière connue de la mer Rouge dotée d'une plage de sable et d'herbiers marins où des animaux sauvages comme les tortues marines et les dugongs peuvent parfois être aperçus, avec du snorkeling dans les zones autorisées selon les conditions en mer.",
+        prog_1: "Découvrir une baie de la mer Rouge et ses paysages côtiers sablonneux.",
+        prog_2: "Snorkeling dans les zones autorisées, selon les conditions maritimes.",
+        prog_3: "Observation respectueuse de la faune sans toucher ni déranger les animaux.",
+        note_label: "Remarque importante :",
+        note_text: "L'observation de la faune (y compris les tortues marines ou les dugongs) ne peut être promise ni garantie. Respectez toujours les guides locaux, l'équipage et les règles de protection de la zone.",
+        why_title: "Pourquoi visiter la baie d'Abu Dabbab ?",
+        why_p1: "Contrairement aux sites de récifs au large très fréquentés, Abu Dabbab associe une baie sablonneuse, des herbiers marins et des eaux côtières qui attirent la vie marine dans son habitat naturel.",
+        why_p2: "Les visiteurs doivent garder une distance respectueuse avec tout animal marin et ne jamais le toucher, le poursuivre ou lui barrer le passage.",
+        quote_text: "« Une baie sablonneuse de la mer Rouge et un herbier marin où la nature impose son rythme : patience, respect de la faune et conditions marines sûres. »",
+        videos_title: "Clips vidéo d'Abu Dabbab",
+        vid_1: "Abu Dabbab — Clip 1", vid_2: "Abu Dabbab — Clip 2", vid_3: "Abu Dabbab — Clip 3", vid_4: "Vidéo de la baie d'Abu Dabbab",
+        vid_fallback: "Votre navigateur ne prend pas en charge la vidéo HTML.",
+        gallery_title: "Galerie photo de la baie d'Abu Dabbab", gallery_desc: "Cliquez sur une photo pour l'agrandir.",
+        img_alt: "Photo d'Abu Dabbab {n}",
+        faq_title: "Baie d'Abu Dabbab – Questions fréquentes",
+        faq_q1: "La présence de tortues marines ou de dugongs est-elle garantie à Abu Dabbab ?",
+        faq_a1: "Non, l'observation de la faune sauvage ne peut être promise ni garantie car les animaux marins évoluent librement dans leur habitat naturel.",
+        faq_q2: "Quelles règles s'appliquent lors du snorkeling près de la faune marine ?",
+        faq_a2: "Suivez toujours les guides locaux et les règles de la zone protégée, gardez une distance de sécurité et ne touchez, poursuivez ou dérangez jamais les animaux marins.",
+        cta_title: "Préparez votre excursion à la baie d'Abu Dabbab",
+        cta_desc: "Contactez-nous pour vérifier les disponibilités et confirmer les détails selon vos dates.",
+        cta_btn: "Réserver ou demander des infos sur Abu Dabbab",
+        footer_follow: "Suivez-nous sur les réseaux sociaux", social_fb: "Facebook", social_ig: "Instagram",
+        lb_prev: "Précédent", lb_next: "Suivant", lb_close: "Fermer",
+        lb_alt_default: "Photo agrandie d'Abu Dabbab"
+      },
+      it: {
+        page_title: "Baia di Abu Dabbab | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Home", nav_tours: "Tutte le escursioni", nav_guide: "Guida Hurghada", nav_contact: "Contatti", nav_book: "Prenota ora",
+        kicker: "Baia del Mar Rosso & habitat marino · Vicino Marsa Alam",
+        hero_title: "Baia di Abu Dabbab",
+        hero_desc: "Visita la baia di Abu Dabbab vicino Marsa Alam, nota per la costa sabbiosa e l'habitat a fanerogame marine. Tartarughe marine e dugonghi possono essere presenti, ma gli avvistamenti non sono mai garantiti.",
+        overview_title: "Panoramica del tour e programma generale",
+        meta_loc_label: "Località:", meta_loc_val: "Baia di Abu Dabbab (Vicino Marsa Alam)",
+        meta_hab_label: "Habitat:", meta_hab_val: "Costa sabbiosa & baia a prateria marina",
+        meta_rate_label: "Tariffa:", meta_rate_val: "Confermata alla richiesta di prenotazione",
+        overview_p: "La baia di Abu Dabbab è una nota baia costiera del Mar Rosso con spiaggia sabbiosa e aree a fanerogame dove fauna marina come tartarughe marine e dugonghi può essere avvistata occasionalmente in natura, insieme allo snorkeling nelle aree consentite quando le condizioni del mare lo permettono.",
+        prog_1: "Esplora una baia del Mar Rosso e i suoi scenari costieri sabbiosi.",
+        prog_2: "Snorkeling nelle aree consentite, in base alle condizioni del mare.",
+        prog_3: "Osservazione rispettosa della fauna senza toccare o disturbare gli animali.",
+        note_label: "Nota importante:",
+        note_text: "Gli avvistamenti di fauna selvatica (incluse tartarughe marine o dugonghi) non possono essere promessi o garantiti. Segui sempre guide locali, istruzioni dell'equipaggio e regole dell'area protetta.",
+        why_title: "Perché visitare la baia di Abu Dabbab?",
+        why_p1: "A differenza delle affollate soste sui reef al largo, Abu Dabbab unisce una baia sabbiosa, praterie marine e acque costiere che attirano la vita marina nel suo habitat naturale.",
+        why_p2: "Gli ospiti devono mantenere una distanza rispettosa da qualsiasi animale marino e non toccarlo, inseguirlo o ostacolarne il percorso.",
+        quote_text: "«Una baia sabbiosa del Mar Rosso e un habitat a fanerogame dove la natura detta il ritmo: pazienza, rispetto per la fauna e condizioni del mare sicure.»",
+        videos_title: "Clip video di Abu Dabbab",
+        vid_1: "Abu Dabbab Clip 1", vid_2: "Abu Dabbab Clip 2", vid_3: "Abu Dabbab Clip 3", vid_4: "Video Baia di Abu Dabbab",
+        vid_fallback: "Il tuo browser non supporta i video HTML.",
+        gallery_title: "Galleria fotografica della baia di Abu Dabbab", gallery_desc: "Clicca su una foto per ingrandirla.",
+        img_alt: "Foto di Abu Dabbab {n}",
+        faq_title: "Baia di Abu Dabbab – Domande frequenti",
+        faq_q1: "Tartarughe marine o dugonghi sono garantiti nella baia di Abu Dabbab?",
+        faq_a1: "No, gli avvistamenti di fauna selvatica non possono essere promessi o garantiti perché gli animali marini si muovono liberamente nel loro habitat naturale.",
+        faq_q2: "Quali regole valgono durante lo snorkeling vicino alla fauna marina?",
+        faq_a2: "Segui sempre guide locali e regole dell'area protetta, mantieni una distanza di sicurezza e non toccare, inseguire o disturbare mai gli animali marini.",
+        cta_title: "Pianifica il tuo viaggio alla baia di Abu Dabbab",
+        cta_desc: "Contattaci per verificare disponibilità e confermare i dettagli del viaggio per le tue date.",
+        cta_btn: "Prenota o chiedi info su Abu Dabbab",
+        footer_follow: "Seguici sui social media", social_fb: "Facebook", social_ig: "Instagram",
+        lb_prev: "Precedente", lb_next: "Successiva", lb_close: "Chiudi",
+        lb_alt_default: "Foto ingrandita di Abu Dabbab"
+      },
+      es: {
+        page_title: "Bahía de Abu Dabbab | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Inicio", nav_tours: "Todos los tours", nav_guide: "Guía de Hurghada", nav_contact: "Contacto", nav_book: "Reservar ahora",
+        kicker: "Bahía del mar Rojo y hábitat marino · Cerca de Marsa Alam",
+        hero_title: "Bahía de Abu Dabbab",
+        hero_desc: "Visita la bahía de Abu Dabbab cerca de Marsa Alam, conocida por su orilla arenosa y hábitat de pastos marinos. Pueden verse tortugas marinas y dugongos, pero los avistamientos nunca están garantizados.",
+        overview_title: "Resumen del viaje y programa general",
+        meta_loc_label: "Ubicación:", meta_loc_val: "Bahía de Abu Dabbab (Cerca de Marsa Alam)",
+        meta_hab_label: "Hábitat:", meta_hab_val: "Orilla arenosa y bahía de pastos marinos",
+        meta_rate_label: "Tarifa:", meta_rate_val: "Confirmada al consultar la reserva",
+        overview_p: "La bahía de Abu Dabbab es una conocida bahía costera del mar Rojo con orilla arenosa y zonas de pastos marinos donde en ocasiones se avistan tortugas marinas y dugongos en libertad, junto con esnórquel en áreas permitidas cuando las condiciones del mar lo permiten.",
+        prog_1: "Explora una bahía del mar Rojo y su paisaje costero arenoso.",
+        prog_2: "Esnórquel en áreas permitidas, sujeto a las condiciones del mar.",
+        prog_3: "Observación respetuosa de la fauna sin tocar ni molestar a los animales.",
+        note_label: "Nota importante:",
+        note_text: "Los avistamientos de fauna silvestre (incluidas tortugas marinas o dugongos) no pueden prometerse ni garantizarse. Sigue siempre a los guías locales, las instrucciones de la tripulación y las normas del área protegida.",
+        why_title: "¿Por qué visitar la bahía de Abu Dabbab?",
+        why_p1: "A diferencia de las paradas saturadas en arrecifes mar adentro, Abu Dabbab combina una bahía arenosa con praderas marinas y aguas costeras que atraen vida marina en un hábitat natural.",
+        why_p2: "Los visitantes deben mantener una distancia respetuosa de cualquier animal marino y nunca tocarlo, perseguirlo ni bloquear su paso.",
+        quote_text: "«Una bahía arenosa del mar Rojo y un hábitat de pastos marinos donde la naturaleza marca el ritmo: paciencia, respeto por la fauna y condiciones marinas seguras.»",
+        videos_title: "Videoclips de Abu Dabbab",
+        vid_1: "Abu Dabbab Clip 1", vid_2: "Abu Dabbab Clip 2", vid_3: "Abu Dabbab Clip 3", vid_4: "Video Bahía de Abu Dabbab",
+        vid_fallback: "Tu navegador no admite video HTML.",
+        gallery_title: "Galería de fotos de la bahía de Abu Dabbab", gallery_desc: "Haz clic en cualquier foto para verla más grande.",
+        img_alt: "Foto de Abu Dabbab {n}",
+        faq_title: "Bahía de Abu Dabbab – Preguntas frecuentes",
+        faq_q1: "¿Están garantizadas las tortugas marinas o los dugongos en la bahía de Abu Dabbab?",
+        faq_a1: "No, los avistamientos de fauna silvestre no pueden prometerse ni garantizarse porque los animales marinos se mueven libremente en su hábitat natural.",
+        faq_q2: "¿Qué normas aplican al hacer esnórquel cerca de la fauna marina?",
+        faq_a2: "Sigue siempre a los guías locales y las normas del área protegida, mantén una distancia segura y nunca toques, persigas ni molestes a los animales marinos.",
+        cta_title: "Planifica tu viaje a la bahía de Abu Dabbab",
+        cta_desc: "Contáctanos para consultar disponibilidad y confirmar los detalles del viaje para tus fechas.",
+        cta_btn: "Reservar o consultar sobre Abu Dabbab",
+        footer_follow: "Síguenos en redes sociales", social_fb: "Facebook", social_ig: "Instagram",
+        lb_prev: "Anterior", lb_next: "Siguiente", lb_close: "Cerrar",
+        lb_alt_default: "Foto ampliada de Abu Dabbab"
+      },
+      pl: {
+        page_title: "Zatoka Abu Dabbab | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Strona główna", nav_tours: "Wszystkie wycieczki", nav_guide: "Przewodnik Hurghada", nav_contact: "Kontakt", nav_book: "Zarezerwuj",
+        kicker: "Zatoka Morza Czerwonego i środowisko morskie · Blisko Marsa Alam",
+        hero_title: "Zatoka Abu Dabbab",
+        hero_desc: "Odwiedź zatokę Abu Dabbab w pobliżu Marsa Alam, znaną z piaszczystego brzegu i łąk trawy morskiej. Mogą występować żółwie morskie i diugonie, ale obserwacje dzikiej przyrody nigdy nie są gwarantowane.",
+        overview_title: "Przegląd wycieczki i ogólny program",
+        meta_loc_label: "Lokalizacja:", meta_loc_val: "Zatoka Abu Dabbab (w pobliżu Marsa Alam)",
+        meta_hab_label: "Środowisko:", meta_hab_val: "Piaszczysty brzeg i zatoka z trawą morską",
+        meta_rate_label: "Cena:", meta_rate_val: "Potwierdzana przy zapytaniu o rezerwację",
+        overview_p: "Zatoka Abu Dabbab to znana zatoka nad Morzem Czerwonym z piaszczystym brzegiem i obszarami trawy morskiej, gdzie w naturalnym środowisku można czasem spotkać żółwie morskie i diugonie, a także snorkelować w dozwolonych miejscach, gdy pozwalają na to warunki na morzu.",
+        prog_1: "Poznaj zatokę Morza Czerwonego i jej piaszczyste wybrzeże.",
+        prog_2: "Snorkeling w dozwolonych miejscach w zależności od warunków na morzu.",
+        prog_3: "Szacunek dla dzikiej przyrody — bez dotykania i płoszenia zwierząt.",
+        note_label: "Ważna uwaga:",
+        note_text: "Obserwacje dzikich zwierząt (w tym żółwi morskich lub diugoni) nie mogą być obiecane ani zagwarantowane. Zawsze stosuj się do wskazówek lokalnych przewodników, załogi oraz zasad ochrony przyrody.",
+        why_title: "Dlaczego warto odwiedzić zatokę Abu Dabbab?",
+        why_p1: "W przeciwieństwie do zatłoczonych przystanków na rafach na pełnym morzu, Abu Dabbab łączy piaszczystą zatokę, trawy morskie i wody przybrzeżne przyciągające życie morskie w naturalnym środowisku.",
+        why_p2: "Goście powinni zachowywać bezpieczny dystans od zwierząt morskich oraz nigdy ich nie dotykać, nie gonić i nie zagradzać im drogi.",
+        quote_text: "„Piaszczysta zatoka Morza Czerwonego i trawy morskie, gdzie tempo nadaje natura — wymagając cierpliwości, szacunku do przyrody i bezpiecznych warunków na morzu.”",
+        videos_title: "Klip wideo z Abu Dabbab",
+        vid_1: "Abu Dabbab — klip 1", vid_2: "Abu Dabbab — klip 2", vid_3: "Abu Dabbab — klip 3", vid_4: "Wideo z zatoki Abu Dabbab",
+        vid_fallback: "Twoja przeglądarka nie obsługuje wideo HTML.",
+        gallery_title: "Galeria zdjęć z zatoki Abu Dabbab", gallery_desc: "Kliknij dowolne zdjęcie, aby powiększyć.",
+        img_alt: "Zdjęcie Abu Dabbab {n}",
+        faq_title: "Zatoka Abu Dabbab – Najczęstsze pytania",
+        faq_q1: "Czy żółwie morskie lub diugonie są gwarantowane w zatoce Abu Dabbab?",
+        faq_a1: "Nie, obserwacji dzikich zwierząt nie można obiecać ani zagwarantować, ponieważ zwierzęta morskie swobodnie przemieszczają się w swoim naturalnym środowisku.",
+        faq_q2: "Jakie zasady obowiązują podczas snorkelingu w pobliżu zwierząt morskich?",
+        faq_a2: "Zawsze przestrzegaj zasad lokalnych przewodników i strefy chronionej, trzymaj bezpieczny dystans oraz nigdy nie dotykaj, nie ścigaj i nie niepokój zwierząt morskich.",
+        cta_title: "Zaplanuj wycieczkę do zatoki Abu Dabbab",
+        cta_desc: "Skontaktuj się z nami, aby sprawdzić dostępność i potwierdzić szczegóły wyjazdu w wybranym terminie.",
+        cta_btn: "Zarezerwuj lub zapytaj o Abu Dabbab",
+        footer_follow: "Śledź nas w mediach społecznościowych", social_fb: "Facebook", social_ig: "Instagram",
+        lb_prev: "Poprzednie", lb_next: "Następne", lb_close: "Zamknij",
+        lb_alt_default: "Powiększone zdjęcie Abu Dabbab"
+      },
+      ar: {
+        page_title: "خليج أبو دباب | أتلانتس للرحلات والتجارب",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "الرئيسية", nav_tours: "جميع الرحلات", nav_guide: "دليل الغردقة", nav_contact: "تواصل معنا", nav_book: "احجز الآن",
+        kicker: "خليج البحر الأحمر وموئل بحري · بالقرب من مرسى علم",
+        hero_title: "خليج أبو دباب",
+        hero_desc: "زُر خليج أبو دباب بالقرب من مرسى علم المعروف بشاطئه الرملي وموائل الأعشاب البحرية. قد تتواجد السلاحف البحرية والأطوم (عروس البحر)، ولكن رؤية الحياة البرية غير مضمونة أبدًا.",
+        overview_title: "نظرة عامة على الرحلة والبرنامج العام",
+        meta_loc_label: "الموقع:", meta_loc_val: "خليج أبو دباب (بالقرب من مرسى علم)",
+        meta_hab_label: "البيئة البحرية:", meta_hab_val: "شاطئ رملي وخليج أعشاب بحرية",
+        meta_rate_label: "السعر:", meta_rate_val: "يُؤكَّد عند استفسار الحجز",
+        overview_p: "يُعد خليج أبو دباب خليجًا ساحليًا معروفًا في البحر الأحمر يتميز بشاطئ رملي ومناطق أعشاب بحرية قد تُشاهد فيها أحيانًا كائنات بحرية في بيئتها الطبيعية مثل السلاحف البحرية والأطوم، إلى جانب السنوركل في المناطق المسموح بها عندما تسمح حالة البحر.",
+        prog_1: "استكشاف خليج في البحر الأحمر ومشاهده الساحلية الرملية.",
+        prog_2: "ممارسة السنوركل في المناطق المسموح بها وفقًا لحالة البحر.",
+        prog_3: "مشاهدة مسؤولة للحياة البحرية دون لمس الكائنات أو إزعاجها.",
+        note_label: "ملاحظة مهمة:",
+        note_text: "لا يمكن وعد أو ضمان رؤية الحياة البرية (بما في ذلك السلاحف البحرية أو الأطوم). التزم دائمًا بتعليمات المرشدين المحليين والطاقم وقواعد المناطق المحمية والحياة البحرية.",
+        why_title: "لماذا تزور خليج أبو دباب؟",
+        why_p1: "على عكس محطات الشعاب المرجانية المزدحمة في عرض البحر، يجمع أبو دباب بين الخليج الرملي ومروج الأعشاب البحرية والمياه الساحلية التي تجذب الكائنات البحرية في موئلها الطبيعي.",
+        why_p2: "يجب على الضيوف الحفاظ على مسافة احترام من أي كائنات بحرية وعدم لمسها أو مطاردتها أو اعتراض طريقها أبدًا.",
+        quote_text: "«خليج رملي في البحر الأحمر وموئل أعشاب بحرية تحدد فيه الطبيعة الإيقاع—ويتطلب الصبر واحترام الحياة البحرية وظروف بحر آمنة.»",
+        videos_title: "مقاطع فيديو لأبو دباب",
+        vid_1: "مقطع أبو دباب 1", vid_2: "مقطع أبو دباب 2", vid_3: "مقطع أبو دباب 3", vid_4: "فيديو خليج أبو دباب",
+        vid_fallback: "متصفحك لا يدعم تشغيل فيديو HTML.",
+        gallery_title: "معرض صور خليج أبو دباب", gallery_desc: "اضغط على أي صورة لعرضها بحجم أكبر.",
+        img_alt: "صورة أبو دباب {n}",
+        faq_title: "خليج أبو دباب – الأسئلة الشائعة",
+        faq_q1: "هل رؤية السلاحف البحرية أو الأطوم مضمونة في خليج أبو دباب؟",
+        faq_a1: "لا، لا يمكن وعد أو ضمان رؤية الحياة البرية لأن الكائنات البحرية تتحرك بحرية في موئلها الطبيعي.",
+        faq_q2: "ما القواعد التي تنطبق عند السنوركل حول الكائنات البحرية؟",
+        faq_a2: "التزم دائمًا بتعليمات المرشدين المحليين وقواعد المنطقة المحمية، وحافظ على مسافة آمنة، ولا تلمس أو تطارد أو تزعج الكائنات البحرية أبدًا.",
+        cta_title: "خطط لرحلتك إلى خليج أبو دباب",
+        cta_desc: "تواصل معنا للتحقق من التوافر وتأكيد تفاصيل الرحلة لمواعيدك.",
+        cta_btn: "احجز أو استفسر عن أبو دباب",
+        footer_follow: "تابعنا على منصات التواصل الاجتماعي", social_fb: "فيسبوك", social_ig: "إنستغرام",
+        lb_prev: "السابق", lb_next: "التالي", lb_close: "إغلاق",
+        lb_alt_default: "صورة مكبّرة لأبو دباب"
+      }
+    };
+
+    (function(){
+      const STORAGE_KEY = "atlantis_lang";
+      const supported = Object.keys(TRANSLATIONS);
+      const btns = Array.from(document.querySelectorAll(".lang-btn"));
+
+      function applyLanguage(lang) {
+        const target = supported.includes(lang) ? lang : "en";
+        const dict = TRANSLATIONS[target] || TRANSLATIONS.en;
+
+        document.documentElement.lang = target;
+        document.documentElement.dir = target === "ar" ? "rtl" : "ltr";
+        if (dict.page_title) document.title = dict.page_title;
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (Object.prototype.hasOwnProperty.call(dict, key)) {
+            el.textContent = dict[key];
+          }
+        });
+
+        document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+          const key = el.getAttribute("data-i18n-alt");
+          const idx = el.getAttribute("data-i18n-idx") || "";
+          const tpl = dict[key] || TRANSLATIONS.en[key] || "";
+          el.alt = tpl.replace("{n}", idx);
+        });
+
+        btns.forEach((b) => {
+          const active = b.getAttribute("data-lang") === target;
+          b.classList.toggle("active", active);
+          b.setAttribute("aria-pressed", active ? "true" : "false");
+        });
+
+        try { localStorage.setItem(STORAGE_KEY, target); } catch (e) {}
+      }
+
+      btns.forEach((btn) => {
+        btn.addEventListener("click", () => applyLanguage(btn.getAttribute("data-lang")));
+      });
+
+      let saved = "en";
+      try { saved = localStorage.getItem(STORAGE_KEY) || "en"; } catch (e) {}
+      applyLanguage(saved);
+    })();
+
     (function(){
       const imgs = Array.from(document.querySelectorAll('#dabbabGallery img'));
       const lightbox = document.getElementById('dabbabLightbox');
