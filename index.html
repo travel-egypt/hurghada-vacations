@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -32,17 +33,23 @@ button{font:inherit}
 
 /* HEADER */
 header{position:sticky;top:0;z-index:1000;background:rgba(3,29,48,.97);backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,.12)}
-.navbar{min-height:85px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{display:flex;align-items:center;gap:13px;color:#fff;min-width:0}
-.brand img{width:62px;height:62px;object-fit:contain;border-radius:10px;flex:0 0 auto}
-.brand-name{font-size:17px;font-weight:800;line-height:1.3;letter-spacing:.3px;color:#fff}
-.brand-name span{display:block;color:var(--turquoise);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-top:3px}
+.navbar{min-height:85px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;min-width:0}
+.brand img{width:60px;height:60px;object-fit:contain;border-radius:10px;flex:0 0 auto}
+.brand-name{font-size:16px;font-weight:800;line-height:1.3;letter-spacing:.3px;color:#fff}
+.brand-name span{display:block;color:var(--turquoise);font-size:11.5px;letter-spacing:2px;text-transform:uppercase;margin-top:3px}
 .menu-toggle{display:none;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;border-radius:8px;padding:8px 12px;font-size:22px;cursor:pointer}
-.nav-links{display:flex;align-items:center;list-style:none;gap:16px;font-size:13px;font-weight:700}
+.nav-links{display:flex;align-items:center;list-style:none;gap:12px;font-size:12.5px;font-weight:700}
 .nav-links a{color:#fff;transition:.25s;white-space:nowrap}
 .nav-links a:hover,.nav-links a.active{color:var(--turquoise)}
-.nav-links .nav-book{display:inline-block;background:var(--turquoise);color:var(--deep);padding:10px 18px;border-radius:30px;font-weight:800}
+.nav-links .nav-book{display:inline-block;background:var(--turquoise);color:var(--deep);padding:9px 16px;border-radius:30px;font-weight:800}
 .nav-links .nav-book:hover{background-color: #F1EBDD;color:var(--navy)}
+
+/* LANGUAGE SWITCHER */
+.lang-switcher{display:flex;align-items:center;flex-wrap:wrap;gap:4px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:4px 6px;border-radius:20px;max-width:260px}
+.lang-btn{background:transparent;border:none;color:#dcecf2;font-size:10.5px;font-weight:800;padding:4px 7px;border-radius:14px;cursor:pointer;transition:.2s;letter-spacing:.4px;text-transform:uppercase;line-height:1.2}
+.lang-btn:hover{color:var(--turquoise)}
+.lang-btn.active{background:var(--turquoise);color:var(--deep)}
 
 /* HERO */
 .hero{
@@ -50,6 +57,10 @@ header{position:sticky;top:0;z-index:1000;background:rgba(3,29,48,.97);backdrop-
   background:linear-gradient(95deg,rgba(3,28,47,.92),rgba(3,28,47,.42)),
   url("https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat;
   display:flex;align-items:center;color:#fff
+}
+html[dir="rtl"] .hero{
+  background:linear-gradient(265deg,rgba(3,28,47,.92),rgba(3,28,47,.42)),
+  url("https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat;
 }
 .hero-content{max-width:760px;padding:84px 0}
 .eyebrow{color:var(--gold);text-transform:uppercase;font-size:12px;font-weight:800;letter-spacing:3px;margin-bottom:12px}
@@ -120,16 +131,24 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
 .footer-tools-heading{margin-top:22px}
 .copyright{border-top:1px solid rgba(255,255,255,.13);padding-top:20px;text-align:center;font-size:12px;color:#bdcfd8}
 
+/* RTL SUPPORT */
+html[dir="rtl"] body{font-family:'Cairo','Manrope',Arial,sans-serif !important}
+html[dir="rtl"] body :is(h1,h2,h3,h4,h5,h6,p,li,label,input,select,textarea,button,a,span,div){
+  font-family:'Cairo','Manrope',Arial,sans-serif !important;
+  letter-spacing:0 !important;
+}
+html[dir="rtl"] .eyebrow,
+html[dir="rtl"] .section-label,
+html[dir="rtl"] .cat-tag,
+html[dir="rtl"] .tool-badge,
+html[dir="rtl"] .brand-name span{letter-spacing:0 !important;text-transform:none}
+
 /* RESPONSIVE */
-@media(max-width:1100px){
-  .nav-links{gap:11px;font-size:12px}
-  .brand-name{font-size:15px}
+@media(max-width:1240px){
+  .nav-links{gap:9px;font-size:11.5px}
+  .brand-name{font-size:14.5px}
 }
-@media(max-width:850px){
-  .cat-grid,.why-grid{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr;gap:28px}
-}
-@media(max-width:760px){
+@media(max-width:1060px){
   .navbar{min-height:75px}
   .brand img{width:50px;height:50px}
   .brand-name{font-size:14px}
@@ -140,17 +159,21 @@ footer h3{margin-bottom:15px;color:#fff;font-size:16px}
   .nav-links a{font-size:14px}
   .hero{min-height:440px}
 }
+@media(max-width:850px){
+  .cat-grid,.why-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:28px}
+}
 @media(max-width:560px){
   .tools-grid{grid-template-columns:1fr}
   .brand{gap:9px}
   .brand img{width:45px;height:45px}
   .brand-name{font-size:12px}
   .brand-name span{font-size:9px}
+  .lang-switcher{max-width:195px;padding:3px 5px}
+  .lang-btn{padding:3px 6px;font-size:9.5px}
 }
 </style>
-<link href="https://travel-egypt.github.io/hurghada-vacations/index.html" rel="canonical"/><meta content="website" property="og:type"/><meta content="Atlantis Tours and Experiences | Hurghada & Red Sea" property="og:title"/><meta content="Atlantis Tours and Experiences in Hurghada & the Red Sea. Explore islands, snorkeling, diving, water sports, desert safaris, Egypt excursions, and daily trip tools." property="og:description"/><meta content="https://travel-egypt.github.io/hurghada-vacations/index.html" property="og:url"/><meta content="Atlantis Tours and Experiences" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://travel-egypt.github.io/hurghada-vacations/index.html" rel="canonical"/><meta content="website" property="og:type"/><meta content="Atlantis Tours and Experiences | Hurghada & Red Sea" property="og:title"/><meta content="Atlantis Tours and Experiences in Hurghada & the Red Sea. Explore islands, snorkeling, diving, water sports, desert safaris, Egypt excursions, and daily trip tools." property="og:description"/><meta content="https://travel-egypt.github.io/hurghada-vacations/index.html" property="og:url"/><meta content="Atlantis Tours and Experiences" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/>
 <style id="atlantis-refined-typography">
 
 /* ATLANTIS — refined typography and warm coastal reading system */
@@ -238,37 +261,47 @@ button, .btn, a.button, .book-link, .main-button, .cta-button {
 <a class="brand" href="index.html">
 <img alt="Atlantis Tours and Experiences Logo" onerror="this.style.display='none'" src="logo.png"/>
 <div class="brand-name">
-        Atlantis Tours and Experiences
-        <span>Discover The Red Sea</span>
+        <span class="brand-title-main" data-i18n="brandTitle">Atlantis Tours and Experiences</span>
+        <span class="brand-tagline" data-i18n="brandTagline">Discover The Red Sea</span>
 </div>
 </a>
+<div aria-label="Language switcher" class="lang-switcher" role="group">
+<button class="lang-btn active" data-lang="en" title="English" type="button">EN</button>
+<button class="lang-btn" data-lang="de" title="Deutsch" type="button">DE</button>
+<button class="lang-btn" data-lang="ru" title="Русский" type="button">RU</button>
+<button class="lang-btn" data-lang="fr" title="Français" type="button">FR</button>
+<button class="lang-btn" data-lang="it" title="Italiano" type="button">IT</button>
+<button class="lang-btn" data-lang="es" title="Español" type="button">ES</button>
+<button class="lang-btn" data-lang="pl" title="Polski" type="button">PL</button>
+<button class="lang-btn" data-lang="ar" title="العربية" type="button">AR</button>
+</div>
 <button aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" id="menuToggle">☰</button>
 <ul class="nav-links" id="navLinks">
-<li><a aria-current="page" class="active" href="index.html">Home</a></li>
-<li><a href="all-tours.html">Tours</a></li>
-<li><a href="stories.html">Stories</a></li>
-<li><a href="hurghada.html">Hurghada Guide</a></li>
-<li><a href="hurghada-price-guide.html">Price Guide</a></li>
-<li><a href="#digital-tools">Digital Tools</a></li>
-<li><a href="atlantis-companion.html">Companion (EN/DE)</a></li>
-<li><a href="booking.html">Booking</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a class="nav-book" href="booking.html">Book Now</a></li>
+<li><a aria-current="page" class="active" data-i18n="navHome" href="index.html">Home</a></li>
+<li><a data-i18n="navTours" href="all-tours.html">Tours</a></li>
+<li><a data-i18n="navStories" href="stories.html">Stories</a></li>
+<li><a data-i18n="navGuide" href="hurghada.html">Hurghada Guide</a></li>
+<li><a data-i18n="navPrices" href="hurghada-price-guide.html">Price Guide</a></li>
+<li><a data-i18n="navTools" href="#digital-tools">Digital Tools</a></li>
+<li><a data-i18n="navCompanion" href="atlantis-companion.html">Companion (EN/DE)</a></li>
+<li><a data-i18n="navBooking" href="booking.html">Booking</a></li>
+<li><a data-i18n="navContact" href="contact.html">Contact</a></li>
+<li><a class="nav-book" data-i18n="navBookNow" href="booking.html">Book Now</a></li>
 </ul>
 </nav>
 </header>
 <section class="hero">
 <div class="container">
 <div class="hero-content">
-<div class="eyebrow">Hurghada & Red Sea Experiences</div>
-<h1>Your Red Sea Journey,<br/>Planned Your Way.</h1>
-<p>
+<div class="eyebrow" data-i18n="heroEyebrow">Hurghada & Red Sea Experiences</div>
+<h1 data-i18n-html="heroTitle">Your Red Sea Journey,<br/>Planned Your Way.</h1>
+<p data-i18n="heroDesc">
         From Giftun islands and coral reefs to Eastern Desert safaris and ancient Egypt —
         discover tailored excursions and daily travel tools with Atlantis Tours and Experiences.
       </p>
 <div class="hero-actions">
-<a class="main-button" href="all-tours.html">Explore All Tours</a>
-<a class="ghost-button" href="atlantis-companion.html">Open Companion (EN / DE)</a>
+<a class="main-button" data-i18n="heroCtaPrimary" href="all-tours.html">Explore All Tours</a>
+<a class="ghost-button" data-i18n="heroCtaSecondary" href="atlantis-companion.html">Open Companion (EN / DE)</a>
 </div>
 </div>
 </div>
@@ -276,38 +309,38 @@ button, .btn, a.button, .book-link, .main-button, .cta-button {
 <section class="section">
 <div class="container">
 <div class="section-header">
-<div class="section-label">Curated Excursions</div>
-<h2 class="section-title">Popular Ways to Explore</h2>
-<p>
+<div class="section-label" data-i18n="catLabel">Curated Excursions</div>
+<h2 class="section-title" data-i18n="catTitle">Popular Ways to Explore</h2>
+<p data-i18n="catDesc">
         Browse our main excursion categories from Hurghada and build your personal trip list at your own pace.
       </p>
 </div>
 <div class="cat-grid">
 <article class="cat-card">
-<img alt="Turquoise Red Sea island beach and clear water" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg"/>
+<img alt="Turquoise Red Sea island beach and clear water" data-i18n-alt="cat1ImgAlt" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg"/>
 <div class="cat-body">
-<div class="cat-tag">Islands & Sea Trips</div>
-<h3>Giftun Islands & Boat Escapes</h3>
-<p>Relax on sandy beaches, swim in clear lagoons, or book a private boat charter across the Red Sea.</p>
-<a class="card-link" href="all-tours.html#tour-mahmya-island">View Island Trips →</a>
+<div class="cat-tag" data-i18n="cat1Tag">Islands & Sea Trips</div>
+<h3 data-i18n="cat1Title">Giftun Islands & Boat Escapes</h3>
+<p data-i18n="cat1Desc">Relax on sandy beaches, swim in clear lagoons, or book a private boat charter across the Red Sea.</p>
+<a class="card-link" data-i18n="cat1Link" href="all-tours.html#tour-mahmya-island">View Island Trips →</a>
 </div>
 </article>
 <article class="cat-card">
-<img alt="Coral reef and marine life in the Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1100&q=85"/>
+<img alt="Coral reef and marine life in the Red Sea" data-i18n-alt="cat2ImgAlt" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1100&q=85"/>
 <div class="cat-body">
-<div class="cat-tag">Snorkeling & Diving</div>
-<h3>Reefs, Turtles & Dolphin Bays</h3>
-<p>Guided snorkeling, introductory scuba, certified dives, and marine bay outings suited to sea conditions.</p>
-<a class="card-link" href="all-tours.html#tour-red-sea-snorkeling-trip">Explore Sea & Reefs →</a>
+<div class="cat-tag" data-i18n="cat2Tag">Snorkeling & Diving</div>
+<h3 data-i18n="cat2Title">Reefs, Turtles & Dolphin Bays</h3>
+<p data-i18n="cat2Desc">Guided snorkeling, introductory scuba, certified dives, and marine bay outings suited to sea conditions.</p>
+<a class="card-link" data-i18n="cat2Link" href="all-tours.html#tour-red-sea-snorkeling-trip">Explore Sea & Reefs →</a>
 </div>
 </article>
 <article class="cat-card">
-<img alt="Eastern Desert landscape and safari route" loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1100&q=85"/>
+<img alt="Eastern Desert landscape and safari route" data-i18n-alt="cat3ImgAlt" loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1100&q=85"/>
 <div class="cat-body">
-<div class="cat-tag">Desert & Egypt Trips</div>
-<h3>Desert Safaris & Ancient Wonders</h3>
-<p>Quad bikes, 4x4 desert trails, Bedouin hospitality, Hurghada city spots, plus Luxor, Cairo & Aswan.</p>
-<a class="card-link" href="all-tours.html#tour-quad-bike-safari">Explore Desert & Egypt →</a>
+<div class="cat-tag" data-i18n="cat3Tag">Desert & Egypt Trips</div>
+<h3 data-i18n="cat3Title">Desert Safaris & Ancient Wonders</h3>
+<p data-i18n="cat3Desc">Quad bikes, 4x4 desert trails, Bedouin hospitality, Hurghada city spots, plus Luxor, Cairo & Aswan.</p>
+<a class="card-link" data-i18n="cat3Link" href="all-tours.html#tour-quad-bike-safari">Explore Desert & Egypt →</a>
 </div>
 </article>
 </div>
@@ -316,42 +349,42 @@ button, .btn, a.button, .book-link, .main-button, .cta-button {
 <section class="section section-alt" id="digital-tools">
 <div class="container">
 <div class="section-header">
-<div class="section-label">Daily Travel Utility</div>
-<h2 class="section-title">Digital Tools for Every Day of Your Stay</h2>
-<p>
+<div class="section-label" data-i18n="toolsLabel">Daily Travel Utility</div>
+<h2 class="section-title" data-i18n="toolsTitle">Digital Tools for Every Day of Your Stay</h2>
+<p data-i18n="toolsDesc">
         Use our interactive companion game, daily planner, price guide, and local guides to make the most of each day in Hurghada.
       </p>
 </div>
 <div class="tools-grid">
 <article class="tool-card">
-<span class="tool-badge">EN / DE · Game & Planner</span>
-<h3>Atlantis Companion</h3>
-<p>Play Red Sea Reef & Treasure Run, unlock spot facts, and plan your morning, afternoon & evening in English or German.</p>
-<a class="tool-btn highlight" href="atlantis-companion.html">Launch Companion</a>
+<span class="tool-badge" data-i18n="tool1Badge">EN / DE · Game & Planner</span>
+<h3 data-i18n="tool1Title">Atlantis Companion</h3>
+<p data-i18n="tool1Desc">Play Red Sea Reef & Treasure Run, unlock spot facts, and plan your morning, afternoon & evening in English or German.</p>
+<a class="tool-btn highlight" data-i18n="tool1Btn" href="atlantis-companion.html">Launch Companion</a>
 </article>
 <article class="tool-card">
-<span class="tool-badge">Offline Ready · Prices</span>
-<h3>Hurghada Price Guide</h3>
-<p>Check transparent local prices for excursions, transfers, and daily experiences anytime — even offline.</p>
-<a class="tool-btn highlight" href="hurghada-price-guide.html">Open Price Guide</a>
+<span class="tool-badge" data-i18n="tool2Badge">Offline Ready · Prices</span>
+<h3 data-i18n="tool2Title">Hurghada Price Guide</h3>
+<p data-i18n="tool2Desc">Check transparent local prices for excursions, transfers, and daily experiences anytime — even offline.</p>
+<a class="tool-btn highlight" data-i18n="tool2Btn" href="hurghada-price-guide.html">Open Price Guide</a>
 </article>
 <article class="tool-card">
-<span class="tool-badge">Live Coast</span>
-<h3>Hurghada Live</h3>
-<p>Check practical daily context and local coastal rhythms before heading out for beach, city, or evening plans.</p>
-<a class="tool-btn" href="features/hurghada-live.html">Open Hurghada Live</a>
+<span class="tool-badge" data-i18n="tool3Badge">Live Coast</span>
+<h3 data-i18n="tool3Title">Hurghada Live</h3>
+<p data-i18n="tool3Desc">Check practical daily context and local coastal rhythms before heading out for beach, city, or evening plans.</p>
+<a class="tool-btn" data-i18n="tool3Btn" href="features/hurghada-live.html">Open Hurghada Live</a>
 </article>
 <article class="tool-card">
-<span class="tool-badge">Sea & Reef</span>
-<h3>Red Sea Live</h3>
-<p>Quick reference for Red Sea outings, boat & reef awareness, and planning your water days smoothly.</p>
-<a class="tool-btn" href="features/red-sea-live.html">Open Red Sea Live</a>
+<span class="tool-badge" data-i18n="tool4Badge">Sea & Reef</span>
+<h3 data-i18n="tool4Title">Red Sea Live</h3>
+<p data-i18n="tool4Desc">Quick reference for Red Sea outings, boat & reef awareness, and planning your water days smoothly.</p>
+<a class="tool-btn" data-i18n="tool4Btn" href="features/red-sea-live.html">Open Red Sea Live</a>
 </article>
 <article class="tool-card">
-<span class="tool-badge">Quick Tips</span>
-<h3>Pocket Guide</h3>
-<p>Handy Egyptian Arabic phrases, pronunciation, and practical reminders for getting around Hurghada with confidence.</p>
-<a class="tool-btn" href="features/pocket-guide.html">Open Pocket Guide</a>
+<span class="tool-badge" data-i18n="tool5Badge">Quick Tips</span>
+<h3 data-i18n="tool5Title">Pocket Guide</h3>
+<p data-i18n="tool5Desc">Handy Egyptian Arabic phrases, pronunciation, and practical reminders for getting around Hurghada with confidence.</p>
+<a class="tool-btn" data-i18n="tool5Btn" href="features/pocket-guide.html">Open Pocket Guide</a>
 </article>
 </div>
 </div>
@@ -359,35 +392,35 @@ button, .btn, a.button, .book-link, .main-button, .cta-button {
 <section class="section">
 <div class="container">
 <div class="section-header">
-<div class="section-label">Why Atlantis</div>
-<h2 class="section-title">Clear Planning Without Guesswork</h2>
-<p>Every trip is coordinated around real weather, sea conditions, and clear inclusions before you confirm.</p>
+<div class="section-label" data-i18n="whyLabel">Why Atlantis</div>
+<h2 class="section-title" data-i18n="whyTitle">Clear Planning Without Guesswork</h2>
+<p data-i18n="whyDesc">Every trip is coordinated around real weather, sea conditions, and clear inclusions before you confirm.</p>
 </div>
 <div class="why-grid">
 <div class="why-box">
 <div class="why-num">01</div>
-<h3>Conditions-First Routing</h3>
-<p>We align boat, snorkeling, water sport, and desert options with daily sea and weather conditions.</p>
+<h3 data-i18n="why1Title">Conditions-First Routing</h3>
+<p data-i18n="why1Desc">We align boat, snorkeling, water sport, and desert options with daily sea and weather conditions.</p>
 </div>
 <div class="why-box">
 <div class="why-num">02</div>
-<h3>Save & Compare Easily</h3>
-<p>Save your favorite tours on your device, plan your days, and carry your shortlist straight to booking.</p>
+<h3 data-i18n="why2Title">Save & Compare Easily</h3>
+<p data-i18n="why2Desc">Save your favorite tours on your device, plan your days, and carry your shortlist straight to booking.</p>
 </div>
 <div class="why-box">
 <div class="why-num">03</div>
-<h3>Direct Local Support</h3>
-<p>Confirm pickup details, inclusions, and custom requests directly with Atlantis Tours and Experiences.</p>
+<h3 data-i18n="why3Title">Direct Local Support</h3>
+<p data-i18n="why3Desc">Confirm pickup details, inclusions, and custom requests directly with Atlantis Tours and Experiences.</p>
 </div>
 </div>
 </div>
 </section>
 <section class="cta">
-<h2>Ready to Plan Your Next Day in Hurghada?</h2>
-<p>Browse all excursions, save your favorites, or send your booking request directly to our team.</p>
+<h2 data-i18n="ctaTitle">Ready to Plan Your Next Day in Hurghada?</h2>
+<p data-i18n="ctaDesc">Browse all excursions, save your favorites, or send your booking request directly to our team.</p>
 <div class="cta-actions">
-<a class="main-button" href="booking.html">Book Your Experience</a>
-<a class="ghost-button" href="contact.html">Contact Our Team</a>
+<a class="main-button" data-i18n="ctaPrimary" href="booking.html">Book Your Experience</a>
+<a class="ghost-button" data-i18n="ctaSecondary" href="contact.html">Contact Our Team</a>
 </div>
 </section>
 <footer>
@@ -395,68 +428,851 @@ button, .btn, a.button, .book-link, .main-button, .cta-button {
 <div class="footer-grid">
 <div>
 <div class="footer-brand">
-          Atlantis <span>Tours and Experiences</span>
+          Atlantis <span data-i18n="footerBrandSpan">Tours and Experiences</span>
 </div>
-<p>
+<p data-i18n="footerDesc">
           Discover the beauty of Egypt and experience
           unforgettable adventures across the Red Sea.
         </p>
 </div>
 <div>
-<h3>Quick Links</h3>
+<h3 data-i18n="footerQuickLinks">Quick Links</h3>
 <ul class="footer-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="all-tours.html">All Tours</a></li>
-<li><a href="stories.html">Stories</a></li>
-<li><a href="hurghada.html">Hurghada City Guide</a></li>
-<li><a href="booking.html">Booking</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a data-i18n="navHome" href="index.html">Home</a></li>
+<li><a data-i18n="footerAllTours" href="all-tours.html">All Tours</a></li>
+<li><a data-i18n="navStories" href="stories.html">Stories</a></li>
+<li><a data-i18n="footerCityGuide" href="hurghada.html">Hurghada City Guide</a></li>
+<li><a data-i18n="navBooking" href="booking.html">Booking</a></li>
+<li><a data-i18n="navContact" href="contact.html">Contact</a></li>
 </ul>
 </div>
 <div>
-<h3>Explore Egypt</h3>
+<h3 data-i18n="footerExploreEgypt">Explore Egypt</h3>
 <ul class="footer-links">
-<li><a href="all-tours.html#tour-orange-bay-island">Orange Bay</a></li>
-<li><a href="all-tours.html#tour-red-sea-snorkeling-trip">Snorkeling</a></li>
-<li><a href="all-tours.html#tour-private-boat---yacht-trips">Boat Trips</a></li>
-<li><a href="all-tours.html#tour-quad-bike-safari">Desert Adventures</a></li>
+<li><a data-i18n="footerOrangeBay" href="all-tours.html#tour-orange-bay-island">Orange Bay</a></li>
+<li><a data-i18n="footerSnorkeling" href="all-tours.html#tour-red-sea-snorkeling-trip">Snorkeling</a></li>
+<li><a data-i18n="footerBoatTrips" href="all-tours.html#tour-private-boat---yacht-trips">Boat Trips</a></li>
+<li><a data-i18n="footerDesert" href="all-tours.html#tour-quad-bike-safari">Desert Adventures</a></li>
 </ul>
-<h3 class="footer-tools-heading">Digital Tools</h3>
+<h3 class="footer-tools-heading" data-i18n="navTools">Digital Tools</h3>
 <ul class="footer-links">
-<li><a href="hurghada-price-guide.html">Hurghada Price Guide</a></li>
-<li><a href="features/hurghada-live.html">Hurghada Live</a></li>
-<li><a href="features/red-sea-live.html">Red Sea Live</a></li>
-<li><a href="features/pocket-guide.html">Pocket Guide</a></li>
-<li><a href="atlantis-companion.html">Hurghada Companion (EN/DE)</a></li>
+<li><a data-i18n="tool2Title" href="hurghada-price-guide.html">Hurghada Price Guide</a></li>
+<li><a data-i18n="tool3Title" href="features/hurghada-live.html">Hurghada Live</a></li>
+<li><a data-i18n="tool4Title" href="features/red-sea-live.html">Red Sea Live</a></li>
+<li><a data-i18n="tool5Title" href="features/pocket-guide.html">Pocket Guide</a></li>
+<li><a data-i18n="footerCompanionDE" href="atlantis-companion.html">Hurghada Companion (EN/DE)</a></li>
 </ul>
 </div>
 </div>
 <div class="copyright">
-      © <span id="year">2026</span> Atlantis Tours and Experiences. All Rights Reserved.
+      © <span id="year">2026</span> <span data-i18n="copyrightText">Atlantis Tours and Experiences. All Rights Reserved.</span>
     </div>
 </div>
 </footer>
 <script>
+const ATLANTIS_TRANSLATIONS = {
+  en: {
+    pageTitle: "Atlantis Tours and Experiences | Hurghada & Red Sea",
+    metaDesc: "Atlantis Tours and Experiences in Hurghada & the Red Sea. Explore islands, snorkeling, diving, water sports, desert safaris, Egypt excursions, and daily trip tools.",
+    brandTitle: "Atlantis Tours and Experiences",
+    brandTagline: "Discover The Red Sea",
+    menuOpenLabel: "Open navigation menu",
+    menuCloseLabel: "Close navigation menu",
+    navHome: "Home",
+    navTours: "Tours",
+    navStories: "Stories",
+    navGuide: "Hurghada Guide",
+    navPrices: "Price Guide",
+    navTools: "Digital Tools",
+    navCompanion: "Companion (EN/DE)",
+    navBooking: "Booking",
+    navContact: "Contact",
+    navBookNow: "Book Now",
+    heroEyebrow: "Hurghada & Red Sea Experiences",
+    heroTitle: "Your Red Sea Journey,<br/>Planned Your Way.",
+    heroDesc: "From Giftun islands and coral reefs to Eastern Desert safaris and ancient Egypt — discover tailored excursions and daily travel tools with Atlantis Tours and Experiences.",
+    heroCtaPrimary: "Explore All Tours",
+    heroCtaSecondary: "Open Companion (EN / DE)",
+    catLabel: "Curated Excursions",
+    catTitle: "Popular Ways to Explore",
+    catDesc: "Browse our main excursion categories from Hurghada and build your personal trip list at your own pace.",
+    cat1ImgAlt: "Turquoise Red Sea island beach and clear water",
+    cat1Tag: "Islands & Sea Trips",
+    cat1Title: "Giftun Islands & Boat Escapes",
+    cat1Desc: "Relax on sandy beaches, swim in clear lagoons, or book a private boat charter across the Red Sea.",
+    cat1Link: "View Island Trips →",
+    cat2ImgAlt: "Coral reef and marine life in the Red Sea",
+    cat2Tag: "Snorkeling & Diving",
+    cat2Title: "Reefs, Turtles & Dolphin Bays",
+    cat2Desc: "Guided snorkeling, introductory scuba, certified dives, and marine bay outings suited to sea conditions.",
+    cat2Link: "Explore Sea & Reefs →",
+    cat3ImgAlt: "Eastern Desert landscape and safari route",
+    cat3Tag: "Desert & Egypt Trips",
+    cat3Title: "Desert Safaris & Ancient Wonders",
+    cat3Desc: "Quad bikes, 4x4 desert trails, Bedouin hospitality, Hurghada city spots, plus Luxor, Cairo & Aswan.",
+    cat3Link: "Explore Desert & Egypt →",
+    toolsLabel: "Daily Travel Utility",
+    toolsTitle: "Digital Tools for Every Day of Your Stay",
+    toolsDesc: "Use our interactive companion game, daily planner, price guide, and local guides to make the most of each day in Hurghada.",
+    tool1Badge: "EN / DE · Game & Planner",
+    tool1Title: "Atlantis Companion",
+    tool1Desc: "Play Red Sea Reef & Treasure Run, unlock spot facts, and plan your morning, afternoon & evening in English or German.",
+    tool1Btn: "Launch Companion",
+    tool2Badge: "Offline Ready · Prices",
+    tool2Title: "Hurghada Price Guide",
+    tool2Desc: "Check transparent local prices for excursions, transfers, and daily experiences anytime — even offline.",
+    tool2Btn: "Open Price Guide",
+    tool3Badge: "Live Coast",
+    tool3Title: "Hurghada Live",
+    tool3Desc: "Check practical daily context and local coastal rhythms before heading out for beach, city, or evening plans.",
+    tool3Btn: "Open Hurghada Live",
+    tool4Badge: "Sea & Reef",
+    tool4Title: "Red Sea Live",
+    tool4Desc: "Quick reference for Red Sea outings, boat & reef awareness, and planning your water days smoothly.",
+    tool4Btn: "Open Red Sea Live",
+    tool5Badge: "Quick Tips",
+    tool5Title: "Pocket Guide",
+    tool5Desc: "Handy Egyptian Arabic phrases, pronunciation, and practical reminders for getting around Hurghada with confidence.",
+    tool5Btn: "Open Pocket Guide",
+    whyLabel: "Why Atlantis",
+    whyTitle: "Clear Planning Without Guesswork",
+    whyDesc: "Every trip is coordinated around real weather, sea conditions, and clear inclusions before you confirm.",
+    why1Title: "Conditions-First Routing",
+    why1Desc: "We align boat, snorkeling, water sport, and desert options with daily sea and weather conditions.",
+    why2Title: "Save & Compare Easily",
+    why2Desc: "Save your favorite tours on your device, plan your days, and carry your shortlist straight to booking.",
+    why3Title: "Direct Local Support",
+    why3Desc: "Confirm pickup details, inclusions, and custom requests directly with Atlantis Tours and Experiences.",
+    ctaTitle: "Ready to Plan Your Next Day in Hurghada?",
+    ctaDesc: "Browse all excursions, save your favorites, or send your booking request directly to our team.",
+    ctaPrimary: "Book Your Experience",
+    ctaSecondary: "Contact Our Team",
+    footerBrandSpan: "Tours and Experiences",
+    footerDesc: "Discover the beauty of Egypt and experience unforgettable adventures across the Red Sea.",
+    footerQuickLinks: "Quick Links",
+    footerAllTours: "All Tours",
+    footerCityGuide: "Hurghada City Guide",
+    footerExploreEgypt: "Explore Egypt",
+    footerOrangeBay: "Orange Bay",
+    footerSnorkeling: "Snorkeling",
+    footerBoatTrips: "Boat Trips",
+    footerDesert: "Desert Adventures",
+    footerCompanionDE: "Hurghada Companion (EN/DE)",
+    copyrightText: "Atlantis Tours and Experiences. All Rights Reserved."
+  },
+  de: {
+    pageTitle: "Atlantis Tours and Experiences | Hurghada & Rotes Meer",
+    metaDesc: "Atlantis Tours and Experiences in Hurghada & am Roten Meer. Entdecken Sie Inseln, Schnorcheln, Tauchen, Wassersport, Wüstensafaris, Ägypten-Ausflüge und tägliche Reise-Tools.",
+    brandTitle: "Atlantis Tours and Experiences",
+    brandTagline: "Das Rote Meer Entdecken",
+    menuOpenLabel: "Navigationsmenü öffnen",
+    menuCloseLabel: "Navigationsmenü schließen",
+    navHome: "Start",
+    navTours: "Touren",
+    navStories: "Berichte",
+    navGuide: "Hurghada-Guide",
+    navPrices: "Preisübersicht",
+    navTools: "Digitale Tools",
+    navCompanion: "Companion (EN/DE)",
+    navBooking: "Buchung",
+    navContact: "Kontakt",
+    navBookNow: "Jetzt Buchen",
+    heroEyebrow: "Hurghada & Rotes Meer Erlebnisse",
+    heroTitle: "Ihre Reise am Roten Meer,<br/>Ganz Nach Ihrem Plan.",
+    heroDesc: "Von Giftun-Inseln und Korallenriffen bis zu Safaris in der Ostwüste und dem alten Ägypten — entdecken Sie passende Ausflüge und tägliche Reise-Tools mit Atlantis Tours and Experiences.",
+    heroCtaPrimary: "Alle Touren Entdecken",
+    heroCtaSecondary: "Companion Öffnen (EN / DE)",
+    catLabel: "Ausgewählte Ausflüge",
+    catTitle: "Beliebte Arten Zu Entdecken",
+    catDesc: "Stöbern Sie durch unsere wichtigsten Ausflugskategorien ab Hurghada und stellen Sie Ihre persönliche Wunschliste in Ihrem Tempo zusammen.",
+    cat1ImgAlt: "Türkisfarbener Inselstrand am Roten Meer und klares Wasser",
+    cat1Tag: "Inseln & Bootstouren",
+    cat1Title: "Giftun-Inseln & Bootsausflüge",
+    cat1Desc: "Entspannen Sie an Sandstränden, schwimmen Sie in klaren Lagunen oder buchen Sie ein privates Boot auf dem Roten Meer.",
+    cat1Link: "Inseltouren Ansehen →",
+    cat2ImgAlt: "Korallenriff und Meeresleben im Roten Meer",
+    cat2Tag: "Schnorcheln & Tauchen",
+    cat2Title: "Riffe, Schildkröten & Delfinbuchten",
+    cat2Desc: "Geführtes Schnorcheln, Schnuppertauchen, zertifizierte Tauchgänge und Meeresbuchten passend zu den Seebedingungen.",
+    cat2Link: "Meer & Riffe Entdecken →",
+    cat3ImgAlt: "Landschaft der Ostwüste und Safari-Route",
+    cat3Tag: "Wüste & Ägypten-Reisen",
+    cat3Title: "Wüstensafaris & Antike Wunder",
+    cat3Desc: "Quads, 4x4-Wüstenrouten, Beduinen-Gastfreundschaft, Hurghada-Spots sowie Luxor, Kairo & Assuan.",
+    cat3Link: "Wüste & Ägypten Entdecken →",
+    toolsLabel: "Tägliche Reisehilfe",
+    toolsTitle: "Digitale Tools Für Jeden Tag Ihres Aufenthalts",
+    toolsDesc: "Nutzen Sie unser interaktives Companion-Spiel, den Tagesplaner, die Preisübersicht und lokale Guides für jeden Tag in Hurghada.",
+    tool1Badge: "EN / DE · Spiel & Planer",
+    tool1Title: "Atlantis Companion",
+    tool1Desc: "Spielen Sie Red Sea Reef & Treasure Run, schalten Sie Spot-Fakten frei und planen Sie Morgen, Nachmittag & Abend auf Englisch oder Deutsch.",
+    tool1Btn: "Companion Starten",
+    tool2Badge: "Offline Bereit · Preise",
+    tool2Title: "Hurghada Preisübersicht",
+    tool2Desc: "Prüfen Sie transparente lokale Preise für Ausflüge, Transfers und tägliche Erlebnisse jederzeit — auch offline.",
+    tool2Btn: "Preisübersicht Öffnen",
+    tool3Badge: "Küste Live",
+    tool3Title: "Hurghada Live",
+    tool3Desc: "Praktische Tagesinfos und den lokalen Küstenrhythmus prüfen, bevor Sie zu Strand-, Stadt- oder Abendplänen aufbrechen.",
+    tool3Btn: "Hurghada Live Öffnen",
+    tool4Badge: "Meer & Riff",
+    tool4Title: "Red Sea Live",
+    tool4Desc: "Schnelle Orientierung für Ausfahrten aufs Rote Meer, Boots- & Riffhinweise sowie entspannte Wassertage.",
+    tool4Btn: "Red Sea Live Öffnen",
+    tool5Badge: "Kurztipps",
+    tool5Title: "Pocket Guide",
+    tool5Desc: "Praktische ägyptisch-arabische Redewendungen, Aussprache und hilfreiche Tipps für unterwegs in Hurghada.",
+    tool5Btn: "Pocket Guide Öffnen",
+    whyLabel: "Warum Atlantis",
+    whyTitle: "Klare Planung Ohne Rätselraten",
+    whyDesc: "Jeder Ausflug wird vor der Bestätigung auf Wetter, Seebedingungen und klare Leistungen abgestimmt.",
+    why1Title: "Bedingungsgerechte Routen",
+    why1Desc: "Wir stimmen Boots-, Schnorchel-, Wassersport- und Wüstenoptionen auf die aktuellen See- und Wetterbedingungen ab.",
+    why2Title: "Einfach Speichern & Vergleichen",
+    why2Desc: "Speichern Sie Ihre Lieblingstouren auf Ihrem Gerät, planen Sie Ihre Tage und nehmen Sie die Auswahl direkt zur Buchung mit.",
+    why3Title: "Direkter Lokaler Support",
+    why3Desc: "Bestätigen Sie Abholzeiten, Inklusivleistungen und Sonderwünsche direkt mit Atlantis Tours and Experiences.",
+    ctaTitle: "Bereit Für Ihren Nächsten Tag In Hurghada?",
+    ctaDesc: "Entdecken Sie alle Ausflüge, merken Sie Ihre Favoriten vor oder senden Sie Ihre Buchungsanfrage direkt an unser Team.",
+    ctaPrimary: "Erlebnis Buchen",
+    ctaSecondary: "Team Kontaktieren",
+    footerBrandSpan: "Tours and Experiences",
+    footerDesc: "Entdecken Sie die Schönheit Ägyptens und erleben Sie unvergessliche Abenteuer am Roten Meer.",
+    footerQuickLinks: "Schnellzugriff",
+    footerAllTours: "Alle Touren",
+    footerCityGuide: "Hurghada Stadtguide",
+    footerExploreEgypt: "Ägypten Entdecken",
+    footerOrangeBay: "Orange Bay",
+    footerSnorkeling: "Schnorcheln",
+    footerBoatTrips: "Bootstouren",
+    footerDesert: "Wüstenabenteuer",
+    footerCompanionDE: "Hurghada Companion (EN/DE)",
+    copyrightText: "Atlantis Tours and Experiences. Alle Rechte vorbehalten."
+  },
+  ru: {
+    pageTitle: "Atlantis Tours and Experiences | Хургада и Красное море",
+    metaDesc: "Atlantis Tours and Experiences в Хургаде и на Красном море. Острова, снорклинг, дайвинг, водный спорт, сафари по пустыне, экскурсии по Египту и инструменты на каждый день.",
+    brandTitle: "Atlantis Tours and Experiences",
+    brandTagline: "Откройте Красное Море",
+    menuOpenLabel: "Открыть меню навигации",
+    menuCloseLabel: "Закрыть меню навигации",
+    navHome: "Главная",
+    navTours: "Туры",
+    navStories: "Истории",
+    navGuide: "Гид по Хургаде",
+    navPrices: "Гид по ценам",
+    navTools: "Цифровые инструменты",
+    navCompanion: "Companion (EN/DE)",
+    navBooking: "Бронирование",
+    navContact: "Контакты",
+    navBookNow: "Забронировать",
+    heroEyebrow: "Впечатления в Хургаде и на Красном море",
+    heroTitle: "Ваше путешествие к Красному морю —<br/>по вашему плану.",
+    heroDesc: "От островов Гифтун и коралловых рифов до сафари в Восточной пустыне и древнего Египта — выбирайте экскурсии и инструменты путешественника с Atlantis Tours and Experiences.",
+    heroCtaPrimary: "Смотреть все туры",
+    heroCtaSecondary: "Открыть Companion (EN / DE)",
+    catLabel: "Подборки экскурсий",
+    catTitle: "Популярные форматы отдыха",
+    catDesc: "Изучите основные направления из Хургады и соберите свой список поездок в удобном темпе.",
+    cat1ImgAlt: "Бирюзовый островной пляж и прозрачная вода Красного моря",
+    cat1Tag: "Острова и морские прогулки",
+    cat1Title: "Острова Гифтун и морские выходы",
+    cat1Desc: "Отдыхайте на песчаных пляжах, купайтесь в прозрачных лагунах или арендуйте частную лодку в Красном море.",
+    cat1Link: "Смотреть туры на острова →",
+    cat2ImgAlt: "Коралловый риф и морская жизнь Красного моря",
+    cat2Tag: "Снорклинг и дайвинг",
+    cat2Title: "Рифы, черепахи и бухты дельфинов",
+    cat2Desc: "Снорклинг с гидом, ознакомительное погружение, сертифицированный дайвинг и морские бухты по погоде и морю.",
+    cat2Link: "Изучить море и рифы →",
+    cat3ImgAlt: "Пейзаж Восточной пустыни и маршрут сафари",
+    cat3Tag: "Пустыня и поездки по Египту",
+    cat3Title: "Сафари в пустыне и древние чудеса",
+    cat3Desc: "Квадроциклы, маршруты 4x4 по пустыне, гостеприимство бедуинов, места Хургады, а также Луксор, Каир и Асуан.",
+    cat3Link: "Изучить пустыню и Египет →",
+    toolsLabel: "Полезные инструменты на каждый день",
+    toolsTitle: "Цифровые сервисы для каждого дня поездки",
+    toolsDesc: "Используйте игру-компаньон, дневной планировщик, гид по ценам и локальные подсказки для комфортного отдыха в Хургаде.",
+    tool1Badge: "EN / DE · Игра и планировщик",
+    tool1Title: "Atlantis Companion",
+    tool1Desc: "Играйте в Red Sea Reef & Treasure Run, открывайте факты о локациях и планируйте утро, день и вечер на английском или немецком.",
+    tool1Btn: "Запустить Companion",
+    tool2Badge: "Доступно офлайн · Цены",
+    tool2Title: "Гид по ценам Хургады",
+    tool2Desc: "Сверяйте прозрачные местные цены на экскурсии, трансферы и повседневные активности в любое время — даже офлайн.",
+    tool2Btn: "Открыть гид по ценам",
+    tool3Badge: "Побережье онлайн",
+    tool3Title: "Hurghada Live",
+    tool3Desc: "Полезный дневной контекст и ритм побережья перед поездкой на пляж, в город или на вечернюю прогулку.",
+    tool3Btn: "Открыть Hurghada Live",
+    tool4Badge: "Море и рифы",
+    tool4Title: "Red Sea Live",
+    tool4Desc: "Краткий справочник для морских выходов, правил у рифов и удобного планирования водных дней.",
+    tool4Btn: "Открыть Red Sea Live",
+    tool5Badge: "Быстрые советы",
+    tool5Title: "Pocket Guide",
+    tool5Desc: "Полезные египетско-арабские фразы, произношение и практические подсказки для уверенных поездок по Хургаде.",
+    tool5Btn: "Открыть Pocket Guide",
+    whyLabel: "Почему Atlantis",
+    whyTitle: "Чёткое планирование без догадок",
+    whyDesc: "Каждая поездка согласуется с реальной погодой, состоянием моря и понятным составом услуг до подтверждения.",
+    why1Title: "Маршруты с учётом условий",
+    why1Desc: "Подбираем морские, снорклинг-, водные и пустынные программы под текущую погоду и состояние моря.",
+    why2Title: "Сохраняйте и сравнивайте легко",
+    why2Desc: "Сохраняйте избранные туры на устройстве, планируйте дни и передавайте подборку сразу в форму бронирования.",
+    why3Title: "Прямая местная поддержка",
+    why3Desc: "Уточняйте время трансфера, включённые опции и индивидуальные пожелания напрямую у команды Atlantis Tours and Experiences.",
+    ctaTitle: "Готовы спланировать следующий день в Хургаде?",
+    ctaDesc: "Просмотрите все экскурсии, сохраните понравившиеся или отправьте заявку на бронирование нашей команде.",
+    ctaPrimary: "Забронировать поездку",
+    ctaSecondary: "Связаться с нами",
+    footerBrandSpan: "Tours and Experiences",
+    footerDesc: "Откройте красоту Египта и яркие приключения на Красном море.",
+    footerQuickLinks: "Быстрые ссылки",
+    footerAllTours: "Все туры",
+    footerCityGuide: "Путеводитель по Хургаде",
+    footerExploreEgypt: "Откройте Египет",
+    footerOrangeBay: "Orange Bay",
+    footerSnorkeling: "Снорклинг",
+    footerBoatTrips: "Морские прогулки",
+    footerDesert: "Приключения в пустыне",
+    footerCompanionDE: "Hurghada Companion (EN/DE)",
+    copyrightText: "Atlantis Tours and Experiences. Все права защищены."
+  },
+  fr: {
+    pageTitle: "Atlantis Tours and Experiences | Hurghada & Mer Rouge",
+    metaDesc: "Atlantis Tours and Experiences à Hurghada et en mer Rouge. Îles, snorkeling, plongée, sports nautiques, safaris désert, excursions en Égypte et outils quotidiens.",
+    brandTitle: "Atlantis Tours and Experiences",
+    brandTagline: "Découvrir La Mer Rouge",
+    menuOpenLabel: "Ouvrir le menu de navigation",
+    menuCloseLabel: "Fermer le menu de navigation",
+    navHome: "Accueil",
+    navTours: "Excursions",
+    navStories: "Récits",
+    navGuide: "Guide Hurghada",
+    navPrices: "Guide des Prix",
+    navTools: "Outils Numériques",
+    navCompanion: "Companion (EN/DE)",
+    navBooking: "Réservation",
+    navContact: "Contact",
+    navBookNow: "Réserver",
+    heroEyebrow: "Expériences à Hurghada & Mer Rouge",
+    heroTitle: "Votre voyage en mer Rouge,<br/>organisé à votre rythme.",
+    heroDesc: "Des îles Giftun et récifs coralliens aux safaris dans le désert Oriental et à l'Égypte antique — découvrez des excursions adaptées et des outils pratiques avec Atlantis Tours and Experiences.",
+    heroCtaPrimary: "Voir Toutes les Excursions",
+    heroCtaSecondary: "Ouvrir Companion (EN / DE)",
+    catLabel: "Sélection d'Excursions",
+    catTitle: "Façons Populaires d'Explorer",
+    catDesc: "Parcourez nos principales catégories d'excursions au départ d'Hurghada et composez votre liste à votre rythme.",
+    cat1ImgAlt: "Plage d'île turquoise et eau claire de la mer Rouge",
+    cat1Tag: "Îles & Sorties en Mer",
+    cat1Title: "Îles Giftun & Escapades Bateau",
+    cat1Desc: "Détendez-vous sur des plages de sable, baignez-vous dans des lagons clairs ou réservez un bateau privé en mer Rouge.",
+    cat1Link: "Voir les Îles →",
+    cat2ImgAlt: "Récif corallien et faune marine de la mer Rouge",
+    cat2Tag: "Snorkeling & Plongée",
+    cat2Title: "Récifs, Tortues & Baies aux Dauphins",
+    cat2Desc: "Snorkeling encadré, baptême, plongées certifiées et sorties en baie adaptées aux conditions de mer.",
+    cat2Link: "Explorer Mer & Récifs →",
+    cat3ImgAlt: "Paysage du désert Oriental et piste de safari",
+    cat3Tag: "Désert & Circuits Égypte",
+    cat3Title: "Safaris Désert & Merveilles Antiques",
+    cat3Desc: "Quads, pistes 4x4, hospitalité bédouine, lieux d'Hurghada, ainsi que Louxor, Le Caire et Assouan.",
+    cat3Link: "Explorer Désert & Égypte →",
+    toolsLabel: "Outils Quotidiens de Voyage",
+    toolsTitle: "Outils Numériques Pour Chaque Jour du Séjour",
+    toolsDesc: "Profitez de notre jeu compagnon, du planificateur quotidien, du guide des prix et des guides locaux à Hurghada.",
+    tool1Badge: "EN / DE · Jeu & Planificateur",
+    tool1Title: "Atlantis Companion",
+    tool1Desc: "Jouez à Red Sea Reef & Treasure Run, débloquez des infos sur les spots et planifiez matin, après-midi et soirée en anglais ou allemand.",
+    tool1Btn: "Lancer Companion",
+    tool2Badge: "Hors Ligne · Tarifs",
+    tool2Title: "Guide des Prix d'Hurghada",
+    tool2Desc: "Consultez des repères de prix locaux transparents pour excursions, transferts et sorties à tout moment — même hors ligne.",
+    tool2Btn: "Ouvrir le Guide des Prix",
+    tool3Badge: "Côte en Direct",
+    tool3Title: "Hurghada Live",
+    tool3Desc: "Vérifiez le contexte quotidien et le rythme côtier avant de partir vers la plage, la ville ou vos soirées.",
+    tool3Btn: "Ouvrir Hurghada Live",
+    tool4Badge: "Mer & Récif",
+    tool4Title: "Red Sea Live",
+    tool4Desc: "Repères rapides pour les sorties en mer Rouge, la vigilance nautique et l'organisation de vos journées aquatiques.",
+    tool4Btn: "Ouvrir Red Sea Live",
+    tool5Badge: "Conseils Rapides",
+    tool5Title: "Pocket Guide",
+    tool5Desc: "Expressions pratiques en arabe égyptien, prononciation et conseils utiles pour se déplacer sereinement à Hurghada.",
+    tool5Btn: "Ouvrir le Pocket Guide",
+    whyLabel: "Pourquoi Atlantis",
+    whyTitle: "Une Organisation Claire Sans Mauvaise Surprise",
+    whyDesc: "Chaque sortie est coordonnée selon la météo réelle, l'état de la mer et des inclusions claires avant confirmation.",
+    why1Title: "Choix Selon les Conditions",
+    why1Desc: "Nous adaptons les options bateau, snorkeling, sports nautiques et désert à la météo et à la mer du jour.",
+    why2Title: "Sauvegarder & Comparer Facilement",
+    why2Desc: "Enregistrez vos excursions préférées sur votre appareil, planifiez vos journées et envoyez votre sélection vers la réservation.",
+    why3Title: "Support Local Direct",
+    why3Desc: "Confirmez prise en charge, prestations incluses et demandes sur mesure directement avec Atlantis Tours and Experiences.",
+    ctaTitle: "Prêt à Organiser Votre Prochaine Journée à Hurghada ?",
+    ctaDesc: "Parcourez toutes les excursions, gardez vos favoris ou envoyez votre demande de réservation à notre équipe.",
+    ctaPrimary: "Réserver Votre Expérience",
+    ctaSecondary: "Contacter Notre Équipe",
+    footerBrandSpan: "Tours and Experiences",
+    footerDesc: "Découvrez la beauté de l'Égypte et vivez des aventures inoubliables en mer Rouge.",
+    footerQuickLinks: "Liens Rapides",
+    footerAllTours: "Toutes les Excursions",
+    footerCityGuide: "Guide de la Ville d'Hurghada",
+    footerExploreEgypt: "Découvrir l'Égypte",
+    footerOrangeBay: "Orange Bay",
+    footerSnorkeling: "Snorkeling",
+    footerBoatTrips: "Sorties en Bateau",
+    footerDesert: "Aventures au Désert",
+    footerCompanionDE: "Hurghada Companion (EN/DE)",
+    copyrightText: "Atlantis Tours and Experiences. Tous droits réservés."
+  },
+  it: {
+    pageTitle: "Atlantis Tours and Experiences | Hurghada & Mar Rosso",
+    metaDesc: "Atlantis Tours and Experiences a Hurghada e sul Mar Rosso. Isole, snorkeling, immersioni, sport acquatici, safari nel deserto, escursioni in Egitto e strumenti quotidiani.",
+    brandTitle: "Atlantis Tours and Experiences",
+    brandTagline: "Scopri Il Mar Rosso",
+    menuOpenLabel: "Apri menu di navigazione",
+    menuCloseLabel: "Chiudi menu di navigazione",
+    navHome: "Home",
+    navTours: "Escursioni",
+    navStories: "Storie",
+    navGuide: "Guida Hurghada",
+    navPrices: "Guida Prezzi",
+    navTools: "Strumenti Digitali",
+    navCompanion: "Companion (EN/DE)",
+    navBooking: "Prenotazione",
+    navContact: "Contatti",
+    navBookNow: "Prenota Ora",
+    heroEyebrow: "Esperienze a Hurghada & Mar Rosso",
+    heroTitle: "Il Tuo Viaggio sul Mar Rosso,<br/>Pianificato a Modo Tuo.",
+    heroDesc: "Dalle isole Giftun e barriere coralline ai safari nel Deserto Orientale e all'antico Egitto — scopri escursioni su misura e strumenti quotidiani con Atlantis Tours and Experiences.",
+    heroCtaPrimary: "Scopri Tutte le Escursioni",
+    heroCtaSecondary: "Apri Companion (EN / DE)",
+    catLabel: "Escursioni Selezionate",
+    catTitle: "Modi Popolari di Esplorare",
+    catDesc: "Sfoglia le principali categorie di escursioni da Hurghada e crea la tua lista personale con calma.",
+    cat1ImgAlt: "Spiaggia turchese su isola del Mar Rosso e acqua limpida",
+    cat1Tag: "Isole & Uscite in Mare",
+    cat1Title: "Isole Giftun & Escapade in Barca",
+    cat1Desc: "Rilassati su spiagge sabbiose, nuota in lagune limpide o prenota una barca privata sul Mar Rosso.",
+    cat1Link: "Vedi Escursioni Isole →",
+    cat2ImgAlt: "Barriera corallina e vita marina del Mar Rosso",
+    cat2Tag: "Snorkeling & Diving",
+    cat2Title: "Barriere, Tartarughe & Baie dei Delfini",
+    cat2Desc: "Snorkeling guidato, battesimo del mare, immersioni certificate e uscite in baia in base alle condizioni marine.",
+    cat2Link: "Esplora Mare & Barriere →",
+    cat3ImgAlt: "Paesaggio del Deserto Orientale e percorso safari",
+    cat3Tag: "Deserto & Tour Egitto",
+    cat3Title: "Safari nel Deserto & Meraviglie Antiche",
+    cat3Desc: "Quad, piste 4x4 nel deserto, ospitalità beduina, tappe a Hurghada, oltre a Luxor, Il Cairo e Assuan.",
+    cat3Link: "Esplora Deserto & Egitto →",
+    toolsLabel: "Utilità Quotidiana di Viaggio",
+    toolsTitle: "Strumenti Digitali Per Ogni Giorno del Soggiorno",
+    toolsDesc: "Usa il nostro gioco companion, il planner giornaliero, la guida prezzi e le guide locali per ogni giorno a Hurghada.",
+    tool1Badge: "EN / DE · Gioco & Planner",
+    tool1Title: "Atlantis Companion",
+    tool1Desc: "Gioca a Red Sea Reef & Treasure Run, sblocca curiosità sui luoghi e pianifica mattina, pomeriggio e sera in inglese o tedesco.",
+    tool1Btn: "Avvia Companion",
+    tool2Badge: "Pronto Offline · Prezzi",
+    tool2Title: "Guida Prezzi Hurghada",
+    tool2Desc: "Controlla prezzi locali trasparenti per escursioni, trasferimenti ed esperienze quotidiane in qualsiasi momento — anche offline.",
+    tool2Btn: "Apri Guida Prezzi",
+    tool3Badge: "Costa Live",
+    tool3Title: "Hurghada Live",
+    tool3Desc: "Controlla informazioni pratiche quotidiane e ritmi della costa prima di uscire per mare, città o serata.",
+    tool3Btn: "Apri Hurghada Live",
+    tool4Badge: "Mare & Barriera",
+    tool4Title: "Red Sea Live",
+    tool4Desc: "Riferimento rapido per uscite in Mar Rosso, attenzione a barche e barriere e organizzazione delle giornate in acqua.",
+    tool4Btn: "Apri Red Sea Live",
+    tool5Badge: "Consigli Rapidi",
+    tool5Title: "Pocket Guide",
+    tool5Desc: "Frasi pratiche in arabo egiziano, pronuncia e promemoria utili per muoverti a Hurghada con sicurezza.",
+    tool5Btn: "Apri Pocket Guide",
+    whyLabel: "Perché Atlantis",
+    whyTitle: "Pianificazione Chiara Senza Sorprese",
+    whyDesc: "Ogni uscita viene coordinata in base a meteo reale, condizioni del mare e inclusioni chiare prima della conferma.",
+    why1Title: "Scelte in Base alle Condizioni",
+    why1Desc: "Adattiamo opzioni in barca, snorkeling, sport acquatici e deserto alle condizioni meteo-marine del giorno.",
+    why2Title: "Salva & Confronta Facilmente",
+    why2Desc: "Salva le escursioni preferite sul dispositivo, organizza le giornate e porta la selezione direttamente alla prenotazione.",
+    why3Title: "Supporto Locale Diretto",
+    why3Desc: "Conferma pick-up, inclusioni e richieste personalizzate direttamente con Atlantis Tours and Experiences.",
+    ctaTitle: "Pronto a Pianificare la Tua Prossima Giornata a Hurghada?",
+    ctaDesc: "Esplora tutte le escursioni, salva i preferiti o invia la richiesta di prenotazione al nostro team.",
+    ctaPrimary: "Prenota la Tua Esperienza",
+    ctaSecondary: "Contatta il Team",
+    footerBrandSpan: "Tours and Experiences",
+    footerDesc: "Scopri la bellezza dell'Egitto e vivi avventure indimenticabili sul Mar Rosso.",
+    footerQuickLinks: "Link Rapidi",
+    footerAllTours: "Tutte le Escursioni",
+    footerCityGuide: "Guida Città di Hurghada",
+    footerExploreEgypt: "Scopri l'Egitto",
+    footerOrangeBay: "Orange Bay",
+    footerSnorkeling: "Snorkeling",
+    footerBoatTrips: "Gite in Barca",
+    footerDesert: "Avventure nel Deserto",
+    footerCompanionDE: "Hurghada Companion (EN/DE)",
+    copyrightText: "Atlantis Tours and Experiences. Tutti i diritti riservati."
+  },
+  es: {
+    pageTitle: "Atlantis Tours and Experiences | Hurghada y Mar Rojo",
+    metaDesc: "Atlantis Tours and Experiences en Hurghada y el Mar Rojo. Islas, esnórquel, buceo, deportes acuáticos, safaris en el desierto, excursiones por Egipto y herramientas diarias.",
+    brandTitle: "Atlantis Tours and Experiences",
+    brandTagline: "Descubre El Mar Rojo",
+    menuOpenLabel: "Abrir menú de navegación",
+    menuCloseLabel: "Cerrar menú de navegación",
+    navHome: "Inicio",
+    navTours: "Excursiones",
+    navStories: "Relatos",
+    navGuide: "Guía Hurghada",
+    navPrices: "Guía de Precios",
+    navTools: "Herramientas",
+    navCompanion: "Companion (EN/DE)",
+    navBooking: "Reservas",
+    navContact: "Contacto",
+    navBookNow: "Reservar",
+    heroEyebrow: "Experiencias en Hurghada y el Mar Rojo",
+    heroTitle: "Tu viaje por el Mar Rojo,<br/>planificado a tu medida.",
+    heroDesc: "Desde las islas Giftun y arrecifes de coral hasta safaris por el desierto Oriental y el antiguo Egipto — descubre excursiones a medida y herramientas diarias con Atlantis Tours and Experiences.",
+    heroCtaPrimary: "Ver Todas las Excursiones",
+    heroCtaSecondary: "Abrir Companion (EN / DE)",
+    catLabel: "Excursiones Destacadas",
+    catTitle: "Formas Populares de Explorar",
+    catDesc: "Explora nuestras principales categorías de excursiones desde Hurghada y arma tu lista personal a tu ritmo.",
+    cat1ImgAlt: "Playa turquesa de isla en el Mar Rojo y agua cristalina",
+    cat1Tag: "Islas y Salidas al Mar",
+    cat1Title: "Islas Giftun y Escapadas en Barco",
+    cat1Desc: "Relájate en playas de arena, nada en lagunas transparentes o reserva una embarcación privada en el Mar Rojo.",
+    cat1Link: "Ver Excursiones a Islas →",
+    cat2ImgAlt: "Arrecife de coral y vida marina en el Mar Rojo",
+    cat2Tag: "Esnórquel y Buceo",
+    cat2Title: "Arrecifes, Tortugas y Bahías de Delfines",
+    cat2Desc: "Esnórquel guiado, bautismo de buceo, inmersiones certificadas y bahías marinas según las condiciones del mar.",
+    cat2Link: "Explorar Mar y Arrecifes →",
+    cat3ImgAlt: "Paisaje del desierto Oriental y ruta de safari",
+    cat3Tag: "Desierto y Rutas por Egipto",
+    cat3Title: "Safaris en el Desierto y Maravillas Antiguas",
+    cat3Desc: "Quads, rutas 4x4 por el desierto, hospitalidad beduina, rincones de Hurghada, además de Luxor, El Cairo y Asuán.",
+    cat3Link: "Explorar Desierto y Egipto →",
+    toolsLabel: "Utilidad Diaria de Viaje",
+    toolsTitle: "Herramientas Digitales Para Cada Día de Tu Estancia",
+    toolsDesc: "Usa nuestro juego companion, planificador diario, guía de precios y guías locales para aprovechar cada día en Hurghada.",
+    tool1Badge: "EN / DE · Juego y Planificador",
+    tool1Title: "Atlantis Companion",
+    tool1Desc: "Juega a Red Sea Reef & Treasure Run, desbloquea datos de spots y planifica mañana, tarde y noche en inglés o alemán.",
+    tool1Btn: "Iniciar Companion",
+    tool2Badge: "Listo Sin Conexión · Precios",
+    tool2Title: "Guía de Precios de Hurghada",
+    tool2Desc: "Consulta referencias locales transparentes de excursiones, traslados y planes diarios en cualquier momento — incluso sin conexión.",
+    tool2Btn: "Abrir Guía de Precios",
+    tool3Badge: "Costa en Vivo",
+    tool3Title: "Hurghada Live",
+    tool3Desc: "Consulta información práctica diaria y el ritmo de la costa antes de salir a la playa, la ciudad o por la noche.",
+    tool3Btn: "Abrir Hurghada Live",
+    tool4Badge: "Mar y Arrecife",
+    tool4Title: "Red Sea Live",
+    tool4Desc: "Referencia rápida para salidas al Mar Rojo, cuidado de embarcaciones y arrecifes y planificación de tus días de mar.",
+    tool4Btn: "Abrir Red Sea Live",
+    tool5Badge: "Consejos Rápidos",
+    tool5Title: "Pocket Guide",
+    tool5Desc: "Frases prácticas en árabe egipcio, pronunciación y recordatorios útiles para moverte con confianza en Hurghada.",
+    tool5Btn: "Abrir Pocket Guide",
+    whyLabel: "Por Qué Atlantis",
+    whyTitle: "Planificación Clara Sin Adivinanzas",
+    whyDesc: "Cada salida se coordina según el clima real, el estado del mar y las inclusiones claras antes de confirmar.",
+    why1Title: "Rutas Según Condiciones",
+    why1Desc: "Ajustamos opciones de barco, esnórquel, deportes acuáticos y desierto al clima y al mar de cada día.",
+    why2Title: "Guarda y Compara Fácilmente",
+    why2Desc: "Guarda tus excursiones favoritas en tu dispositivo, organiza tus días y lleva tu selección directo a la reserva.",
+    why3Title: "Atención Local Directa",
+    why3Desc: "Confirma recogida, inclusiones y peticiones especiales directamente con Atlantis Tours and Experiences.",
+    ctaTitle: "¿Listo Para Planificar Tu Próximo Día en Hurghada?",
+    ctaDesc: "Explora todas las excursiones, guarda tus favoritas o envía tu solicitud de reserva a nuestro equipo.",
+    ctaPrimary: "Reservar Tu Experiencia",
+    ctaSecondary: "Contactar al Equipo",
+    footerBrandSpan: "Tours and Experiences",
+    footerDesc: "Descubre la belleza de Egipto y vive aventuras inolvidables en el Mar Rojo.",
+    footerQuickLinks: "Enlaces Rápidos",
+    footerAllTours: "Todas las Excursiones",
+    footerCityGuide: "Guía de Ciudad de Hurghada",
+    footerExploreEgypt: "Explorar Egipto",
+    footerOrangeBay: "Orange Bay",
+    footerSnorkeling: "Esnórquel",
+    footerBoatTrips: "Paseos en Barco",
+    footerDesert: "Aventuras en el Desierto",
+    footerCompanionDE: "Hurghada Companion (EN/DE)",
+    copyrightText: "Atlantis Tours and Experiences. Todos los derechos reservados."
+  },
+  pl: {
+    pageTitle: "Atlantis Tours and Experiences | Hurghada i Morze Czerwone",
+    metaDesc: "Atlantis Tours and Experiences w Hurghadzie i nad Morzem Czerwonym. Wyspy, snorkeling, nurkowanie, sporty wodne, safari pustynne, wycieczki po Egipcie i codzienne narzędzia.",
+    brandTitle: "Atlantis Tours and Experiences",
+    brandTagline: "Odkryj Morze Czerwone",
+    menuOpenLabel: "Otwórz menu nawigacji",
+    menuCloseLabel: "Zamknij menu nawigacji",
+    navHome: "Start",
+    navTours: "Wycieczki",
+    navStories: "Relacje",
+    navGuide: "Przewodnik Hurghada",
+    navPrices: "Cennik",
+    navTools: "Narzędzia",
+    navCompanion: "Companion (EN/DE)",
+    navBooking: "Rezerwacja",
+    navContact: "Kontakt",
+    navBookNow: "Rezerwuj",
+    heroEyebrow: "Wrażenia w Hurghadzie i nad Morzem Czerwonym",
+    heroTitle: "Twoja podróż nad Morze Czerwone,<br/>zaplanowana po swojemu.",
+    heroDesc: "Od wysp Giftun i raf koralowych po safari na Pustyni Wschodniej i starożytny Egipt — odkryj dopasowane wycieczki i codzienne narzędzia z Atlantis Tours and Experiences.",
+    heroCtaPrimary: "Zobacz Wszystkie Wycieczki",
+    heroCtaSecondary: "Otwórz Companion (EN / DE)",
+    catLabel: "Wybrane Wycieczki",
+    catTitle: "Popularne Sposoby Zwiedzania",
+    catDesc: "Przeglądaj główne kategorie wycieczek z Hurghady i twórz własną listę wyjazdów we własnym tempie.",
+    cat1ImgAlt: "Turkusowa plaża na wyspie Morza Czerwonego i przejrzysta woda",
+    cat1Tag: "Wyspy i Rejsy",
+    cat1Title: "Wyspy Giftun i Wypady Morskie",
+    cat1Desc: "Odpoczywaj na piaszczystych plażach, pływaj w czystych lagunach lub zarezerwuj prywatną łódź po Morzu Czerwonym.",
+    cat1Link: "Zobacz Rejsy na Wyspy →",
+    cat2ImgAlt: "Rafa koralowa i życie morskie Morza Czerwonego",
+    cat2Tag: "Snorkeling i Nurkowanie",
+    cat2Title: "Rafy, Żółwie i Zatoki Delfinów",
+    cat2Desc: "Snorkeling z przewodnikiem, intro nurkowe, nurkowania dla certyfikowanych i zatoki dopasowane do warunków na morzu.",
+    cat2Link: "Odkryj Morze i Rafy →",
+    cat3ImgAlt: "Krajobraz Pustyni Wschodniej i trasa safari",
+    cat3Tag: "Pustynia i Wycieczki po Egipcie",
+    cat3Title: "Safari Pustynne i Antyczne Cuda",
+    cat3Desc: "Quady, trasy 4x4 po pustyni, gościnność Beduinów, miejsca w Hurghadzie oraz Luksor, Kair i Asuan.",
+    cat3Link: "Odkryj Pustynię i Egipt →",
+    toolsLabel: "Codzienne Narzędzia Podróży",
+    toolsTitle: "Narzędzia Cyfrowe Na Każdy Dzień Pobytu",
+    toolsDesc: "Korzystaj z gry companion, dziennego planera, przewodnika cenowego i lokalnych wskazówek każdego dnia w Hurghadzie.",
+    tool1Badge: "EN / DE · Gra i Planer",
+    tool1Title: "Atlantis Companion",
+    tool1Desc: "Zagraj w Red Sea Reef & Treasure Run, odblokuj ciekawostki o miejscach i planuj poranek, popołudnie oraz wieczór po angielsku lub niemiecku.",
+    tool1Btn: "Uruchom Companion",
+    tool2Badge: "Dostępne Offline · Ceny",
+    tool2Title: "Przewodnik Cenowy Hurghady",
+    tool2Desc: "Sprawdzaj przejrzyste lokalne ceny wycieczek, transferów i codziennych atrakcji w dowolnym momencie — także offline.",
+    tool2Btn: "Otwórz Przewodnik Cenowy",
+    tool3Badge: "Wybrzeże Live",
+    tool3Title: "Hurghada Live",
+    tool3Desc: "Sprawdź praktyczny kontekst dnia i rytm wybrzeża przed wyjściem na plażę, do miasta lub na wieczór.",
+    tool3Btn: "Otwórz Hurghada Live",
+    tool4Badge: "Morze i Rafa",
+    tool4Title: "Red Sea Live",
+    tool4Desc: "Szybka ściągawka przed wyjściem na Morze Czerwone, zasady wobec łodzi i raf oraz sprawne planowanie dni na wodzie.",
+    tool4Btn: "Otwórz Red Sea Live",
+    tool5Badge: "Szybkie Porady",
+    tool5Title: "Pocket Guide",
+    tool5Desc: "Przydatne zwroty w egipskim arabskim, wymowa i praktyczne wskazówki do swobodnego poruszania się po Hurghadzie.",
+    tool5Btn: "Otwórz Pocket Guide",
+    whyLabel: "Dlaczego Atlantis",
+    whyTitle: "Jasne Planowanie Bez Domysłów",
+    whyDesc: "Każdy wyjazd koordynujemy pod kątem realnej pogody, stanu morza i jasnego zakresu świadczeń przed potwierdzeniem.",
+    why1Title: "Dobór Pod Warunki",
+    why1Desc: "Dopasowujemy opcje łodzi, snorkelingu, sportów wodnych i pustyni do bieżącej pogody oraz stanu morza.",
+    why2Title: "Zapisuj i Porównuj Łatwo",
+    why2Desc: "Zapisuj ulubione wycieczki na urządzeniu, planuj kolejne dni i przenieś listę od razu do rezerwacji.",
+    why3Title: "Bezpośrednie Lokalne Wsparcie",
+    why3Desc: "Potwierdzaj odbiór, świadczenia w cenie i indywidualne prośby bezpośrednio z zespołem Atlantis Tours and Experiences.",
+    ctaTitle: "Gotowy Zaplanować Kolejny Dzień w Hurghadzie?",
+    ctaDesc: "Przejrzyj wszystkie wycieczki, zapisz ulubione lub wyślij zapytanie o rezerwację bezpośrednio do naszego zespołu.",
+    ctaPrimary: "Zarezerwuj Wycieczkę",
+    ctaSecondary: "Skontaktuj Się Z Nami",
+    footerBrandSpan: "Tours and Experiences",
+    footerDesc: "Odkryj piękno Egiptu i przeżyj niezapomniane przygody nad Morzem Czerwonym.",
+    footerQuickLinks: "Szybkie Linki",
+    footerAllTours: "Wszystkie Wycieczki",
+    footerCityGuide: "Przewodnik Po Hurghadzie",
+    footerExploreEgypt: "Odkrywaj Egipt",
+    footerOrangeBay: "Orange Bay",
+    footerSnorkeling: "Snorkeling",
+    footerBoatTrips: "Rejsy Łodzią",
+    footerDesert: "Przygody Na Pustyni",
+    footerCompanionDE: "Hurghada Companion (EN/DE)",
+    copyrightText: "Atlantis Tours and Experiences. Wszelkie prawa zastrzeżone."
+  },
+  ar: {
+    pageTitle: "أتلانتس للرحلات والتجارب | الغردقة والبحر الأحمر",
+    metaDesc: "أتلانتس للرحلات والتجارب في الغردقة والبحر الأحمر. استكشف الجزر، السنوركل، الغوص، الرياضات المائية، رحلات السفاري الصحراوية، رحلات مصر، وأدوات التخطيط اليومية.",
+    brandTitle: "أتلانتس للرحلات والتجارب",
+    brandTagline: "اكتشف البحر الأحمر",
+    menuOpenLabel: "فتح قائمة التنقل",
+    menuCloseLabel: "إغلاق قائمة التنقل",
+    navHome: "الرئيسية",
+    navTours: "الرحلات",
+    navStories: "قصص وتجارب",
+    navGuide: "دليل الغردقة",
+    navPrices: "دليل الأسعار",
+    navTools: "الأدوات الرقمية",
+    navCompanion: "المرافق الذكي (EN/DE)",
+    navBooking: "الحجز",
+    navContact: "تواصل معنا",
+    navBookNow: "احجز الآن",
+    heroEyebrow: "تجارب الغردقة والبحر الأحمر",
+    heroTitle: "رحلتك في البحر الأحمر،<br/>مخططة على طريقتك.",
+    heroDesc: "من جزر الجفتون والشعاب المرجانية إلى سفاري الصحراء الشرقية وآثار مصر العريقة — اكتشف رحلات مصممة بعناية وأدوات سفر يومية مع أتلانتس للرحلات والتجارب.",
+    heroCtaPrimary: "استكشف جميع الرحلات",
+    heroCtaSecondary: "افتح المرافق الذكي (EN / DE)",
+    catLabel: "رحلات مختارة",
+    catTitle: "أشهر طرق الاستكشاف",
+    catDesc: "تصفح فئات الرحلات الرئيسية من الغردقة وابنِ قائمتك المفضلة بهدوء وعلى راحتك.",
+    cat1ImgAlt: "شاطئ جزيرة فيروزي ومياه صافية في البحر الأحمر",
+    cat1Tag: "الجزر والرحلات البحرية",
+    cat1Title: "جزر الجفتون والرحلات البحرية",
+    cat1Desc: "استرخِ على الشواطئ الرملية، واسبح في البحيرات الصافية، أو استأجر قارباً خاصاً في البحر الأحمر.",
+    cat1Link: "عرض رحلات الجزر ←",
+    cat2ImgAlt: "شعاب مرجانية وحياة بحرية في البحر الأحمر",
+    cat2Tag: "السنوركل والغوص",
+    cat2Title: "الشعاب والسلاحف وخلجان الدلافين",
+    cat2Desc: "سنوركل بصحبة مرشدين، غوص تمهيدي، غوص للمعتمدين، ورحلات خلجان بحرية مناسبة لحالة البحر.",
+    cat2Link: "استكشف البحر والشعاب ←",
+    cat3ImgAlt: "مشهد الصحراء الشرقية ومسار السفاري",
+    cat3Tag: "الصحراء ورحلات مصر",
+    cat3Title: "سفاري الصحراء والآثار الخالدة",
+    cat3Desc: "بيتش باجي، مسارات دفع رباعي، ضيافة بدوية، معالم الغردقة، بالإضافة إلى الأقصر والقاهرة وأسوان.",
+    cat3Link: "استكشف الصحراء ومصر ←",
+    toolsLabel: "أدوات السفر اليومية",
+    toolsTitle: "أدوات رقمية لكل يوم من إقامتك",
+    toolsDesc: "استخدم اللعبة التفاعلية والمخطط اليومي ودليل الأسعار والأدلة المحلية للاستفادة القصوى من كل يوم في الغردقة.",
+    tool1Badge: "EN / DE · لعبة ومخطط",
+    tool1Title: "مرافق أتلانتس الذكي",
+    tool1Desc: "العب Red Sea Reef & Treasure Run، واكتشف معلومات الأماكن، وخطط لصباحك ومسائك بالإنجليزية أو الألمانية.",
+    tool1Btn: "تشغيل المرافق الذكي",
+    tool2Badge: "يعمل أوفلاين · الأسعار",
+    tool2Title: "دليل أسعار الغردقة",
+    tool2Desc: "تحقق من الأسعار المحلية الواضحة للرحلات والتنقلات والتجارب اليومية في أي وقت — وحتى بدون إنترنت.",
+    tool2Btn: "فتح دليل الأسعار",
+    tool3Badge: "الساحل مباشر",
+    tool3Title: "الغردقة مباشر",
+    tool3Desc: "اطّلع على الأجواء العملية اليومية وإيقاع الساحل قبل الانطلاق للشاطئ أو المدينة أو السهرة.",
+    tool3Btn: "فتح الغردقة مباشر",
+    tool4Badge: "البحر والشعاب",
+    tool4Title: "البحر الأحمر مباشر",
+    tool4Desc: "مرجع سريع لرحلات البحر الأحمر والوعي بالقوارب والشعاب وتنظيم أيام البحر بسلاسة.",
+    tool4Btn: "فتح البحر الأحمر مباشر",
+    tool5Badge: "نصائح سريعة",
+    tool5Title: "الدليل السريع للجيب",
+    tool5Desc: "عبارات مصرية عملية ونطقها وتنبيهات مفيدة للتنقل في الغردقة بثقة.",
+    tool5Btn: "فتح الدليل السريع",
+    whyLabel: "لماذا أتلانتس",
+    whyTitle: "تخطيط واضح بدون تخمين",
+    whyDesc: "يتم تنسيق كل رحلة وفق الطقس الفعلي وحالة البحر وتفاصيل المشمولات بوضوح قبل التأكيد.",
+    why1Title: "اختيار حسب حالة البحر والطقس",
+    why1Desc: "نوائم خيارات القوارب والسنوركل والرياضات المائية والصحراء مع ظروف البحر والطقس اليومية.",
+    why2Title: "احفظ وقارن بسهولة",
+    why2Desc: "احفظ رحلاتك المفضلة على جهازك، ونظّم أيامك، وانقل قائمتك مباشرة إلى الحجز.",
+    why3Title: "دعم محلي مباشر",
+    why3Desc: "أكّد تفاصيل الاستقبال والمشمولات والطلبات الخاصة مباشرة مع فريق أتلانتس للرحلات والتجارب.",
+    ctaTitle: "مستعد لتخطيط يومك القادم في الغردقة؟",
+    ctaDesc: "تصفح جميع الرحلات، واحفظ مفضلاتك، أو أرسل طلب حجزك مباشرة إلى فريقنا.",
+    ctaPrimary: "احجز تجربتك",
+    ctaSecondary: "تواصل مع فريقنا",
+    footerBrandSpan: "للرحلات والتجارب",
+    footerDesc: "اكتشف جمال مصر وعِش مغامرات لا تُنسى في أنحاء البحر الأحمر.",
+    footerQuickLinks: "روابط سريعة",
+    footerAllTours: "جميع الرحلات",
+    footerCityGuide: "دليل مدينة الغردقة",
+    footerExploreEgypt: "استكشف مصر",
+    footerOrangeBay: "أورانج باي",
+    footerSnorkeling: "السنوركل",
+    footerBoatTrips: "رحلات القوارب",
+    footerDesert: "مغامرات الصحراء",
+    footerCompanionDE: "مرافق الغردقة الذكي (EN/DE)",
+    copyrightText: "أتلانتس للرحلات والتجارب. جميع الحقوق محفوظة."
+  }
+};
+
 document.addEventListener("DOMContentLoaded", function () {
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
+  let currentLang = "en";
+
+  function applyLanguage(lang) {
+    const dict = ATLANTIS_TRANSLATIONS[lang] || ATLANTIS_TRANSLATIONS.en;
+    currentLang = ATLANTIS_TRANSLATIONS[lang] ? lang : "en";
+
+    document.documentElement.lang = currentLang;
+    document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+    document.title = dict.pageTitle;
+
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && dict.metaDesc) {
+      metaDesc.setAttribute("content", dict.metaDesc);
+    }
+
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      const key = el.getAttribute("data-i18n");
+      if (dict[key] !== undefined) {
+        el.textContent = dict[key];
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      const key = el.getAttribute("data-i18n-html");
+      if (dict[key] !== undefined) {
+        el.innerHTML = dict[key];
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      const key = el.getAttribute("data-i18n-alt");
+      if (dict[key] !== undefined) {
+        el.setAttribute("alt", dict[key]);
+      }
+    });
+
+    if (menuToggle) {
+      const isOpen = navLinks && navLinks.classList.contains("active");
+      menuToggle.setAttribute("aria-label", isOpen ? dict.menuCloseLabel : dict.menuOpenLabel);
+    }
+
+    document.querySelectorAll(".lang-btn").forEach(function (btn) {
+      const active = btn.getAttribute("data-lang") === currentLang;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-pressed", String(active));
+    });
+
+    try {
+      localStorage.setItem("atlantis_lang", currentLang);
+    } catch (e) {}
+  }
+
+  document.querySelectorAll(".lang-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      applyLanguage(btn.getAttribute("data-lang"));
+    });
+  });
+
   if (menuToggle && navLinks) {
     menuToggle.addEventListener("click", function () {
       const isOpen = navLinks.classList.toggle("active");
+      const dict = ATLANTIS_TRANSLATIONS[currentLang] || ATLANTIS_TRANSLATIONS.en;
       menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? dict.menuCloseLabel : dict.menuOpenLabel);
       menuToggle.textContent = isOpen ? "✕" : "☰";
     });
     navLinks.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
+        const dict = ATLANTIS_TRANSLATIONS[currentLang] || ATLANTIS_TRANSLATIONS.en;
         navLinks.classList.remove("active");
         menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", dict.menuOpenLabel);
         menuToggle.textContent = "☰";
       });
     });
   }
+
+  let savedLang = "en";
+  try {
+    savedLang = localStorage.getItem("atlantis_lang") || "en";
+  } catch (e) {}
+  applyLanguage(savedLang);
 
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("./service-worker.js").catch(function () {});
