@@ -7,33 +7,40 @@
   <link href="../css/style.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
   <style>
     :root{--navy:#062c43;--deep:#031d30;--blue:#087f9e;--cyan:#16c5ce;--gold:#e8b967;--light:#f2f9fb;--dark:#183344;--muted:#607583;--white:#fff}
     body{font-family:'DM Sans',Arial,sans-serif;color:#263f4d;background-color:#F1EBDD;line-height:1.78;margin:0}
+    html[dir="rtl"] body{font-family:'Cairo','DM Sans',Arial,sans-serif}
     h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;color:var(--navy)}
+    html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] h4{font-family:'Cairo','Playfair Display',Georgia,serif}
     .container{width:90%;max-width:1180px;margin:0 auto}
-    .page-top-bar{background:rgba(3,29,48,.97);padding:16px 0;position:sticky;top:0;z-index:100}
-    .page-top-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .page-top-bar{background:rgba(3,29,48,.97);padding:14px 0;position:sticky;top:0;z-index:100}
+    .page-top-inner{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
     .brand-link{color:#fff;text-decoration:none;font-weight:800;font-size:18px}
-    .top-nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+    .top-nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
     .top-nav a{color:#e5f2f7;text-decoration:none;font-size:14px;font-weight:600}
     .top-nav a.book-cta{background:var(--cyan);color:var(--deep);padding:8px 16px;border-radius:24px;font-weight:800}
+    .lang-switcher{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+    .lang-btn{background:rgba(255,255,255,.1);color:#e5f2f7;border:1px solid rgba(255,255,255,.22);padding:4px 9px;border-radius:6px;font-size:12px;font-weight:700;cursor:pointer;transition:.2s}
+    .lang-btn:hover{background:rgba(22,197,206,.25)}
+    .lang-btn.active{background:var(--gold);color:var(--navy);border-color:var(--gold)}
     .aswan-story{padding:45px 0 75px}
     .aswan-hero{min-height:410px;border-radius:18px;overflow:hidden;display:flex;align-items:flex-end;background:linear-gradient(0deg,rgba(3,29,43,.86),rgba(3,29,43,.14)),url("https://d3rr2gvhjw0wwy.cloudfront.net/uploads/activity_headers/40630/2000x2000-0-70-8f19758248f845e5e1c70429c1fd1fa1.jpg") center/cover no-repeat;box-shadow:0 12px 35px rgba(9,45,70,.16)}
     .aswan-hero-content{padding:clamp(24px,5vw,48px);max-width:780px;color:#fff}
     .aswan-hero h1{color:#fff;font-size:clamp(34px,5.5vw,58px);line-height:1.1;margin:8px 0 12px}
     .aswan-kicker{display:inline-block;color:#f4c66f;text-transform:uppercase;letter-spacing:2.5px;font-size:12px;font-weight:700}
+    html[dir="rtl"] .aswan-kicker{letter-spacing:0}
     .tour-summary-box{background:#fff;border-radius:16px;padding:28px;margin-top:32px;box-shadow:0 8px 28px rgba(6,44,67,.08)}
     .tour-meta{display:flex;gap:16px;flex-wrap:wrap;margin:14px 0 20px;font-size:14px;color:var(--navy)}
     .tour-meta span{background:#f2f9fb;padding:8px 14px;border-radius:10px;border:1px solid #dcebf0}
-    .program-timeline{padding-left:20px;margin:14px 0 22px}
+    .program-timeline{padding-inline-start:20px;margin:14px 0 22px}
     .program-timeline li{margin-bottom:10px}
     .includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;list-style:none;padding:0;margin:12px 0 22px}
     .includes-grid li{background:#f8fbfc;border:1px solid #e3edf1;padding:10px 14px;border-radius:10px;font-size:14px}
-    .aswan-note{background:#fff9ec;border-left:4px solid var(--gold);padding:14px 18px;border-radius:8px;font-size:14px;color:var(--navy);margin-top:14px}
+    .aswan-note{background:#fff9ec;border-inline-start:4px solid var(--gold);padding:14px 18px;border-radius:8px;font-size:14px;color:var(--navy);margin-top:14px}
     .aswan-two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin:40px 0}
-    .aswan-quote{padding:24px;border-left:4px solid var(--gold);border-radius:10px;background:#f8fbfc;color:var(--navy);font-size:18px;font-style:italic}
+    .aswan-quote{padding:24px;border-inline-start:4px solid var(--gold);border-radius:10px;background:#f8fbfc;color:var(--navy);font-size:18px;font-style:italic}
     .aswan-features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:24px 0 48px}
     .aswan-feature{padding:20px;border:1px solid #e3edf1;border-radius:13px;background:#fff}
     .aswan-faq{max-width:850px;margin:48px auto}
@@ -42,22 +49,39 @@
     .aswan-final-quote{text-align:center;padding:38px 24px;margin-top:44px;border-radius:16px;background:linear-gradient(120deg,#092d46,#087eaa);color:#fff}
     .aswan-final-quote h2{color:#fff;margin:0 0 10px}
     .aswan-final-quote a{display:inline-block;margin-top:14px;background:var(--gold);color:var(--navy);font-weight:800;padding:12px 24px;border-radius:25px;text-decoration:none}
+    .site-footer{background:var(--deep);color:#d7e8ef;padding:34px 0;margin-top:52px;font-size:14px}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .social-links{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .social-link{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);color:#fff;text-decoration:none;font-weight:700;font-size:13px;border:1px solid rgba(255,255,255,.16);transition:.2s}
+    .social-link:hover{background:var(--cyan);color:var(--deep);border-color:var(--cyan)}
+    .social-link svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
     @media(max-width:800px){
       .aswan-two-col,.aswan-features{grid-template-columns:1fr}
+      .footer-inner{flex-direction:column;text-align:center}
     }
   </style>
 </head>
 <body>
   <header class="page-top-bar">
     <div class="container page-top-inner">
-      <a class="brand-link" href="../index.html">Atlantis Tours &amp; Experiences</a>
+      <a class="brand-link" href="../index.html" data-i18n="brand">Atlantis Tours &amp; Experiences</a>
       <nav class="top-nav">
-        <a href="../index.html">Home</a>
-        <a href="../all-tours.html">All Tours</a>
-        <a href="../hurghada.html">Hurghada Guide</a>
-        <a href="../contact.html">Contact</a>
-        <a class="book-cta" href="../booking.html?tour=Aswan+Trip">Book Now</a>
+        <a href="../index.html" data-i18n="nav_home">Home</a>
+        <a href="../all-tours.html" data-i18n="nav_tours">All Tours</a>
+        <a href="../hurghada.html" data-i18n="nav_guide">Hurghada Guide</a>
+        <a href="../contact.html" data-i18n="nav_contact">Contact</a>
+        <a class="book-cta" href="../booking.html?tour=Aswan+Trip" data-i18n="nav_book">Book Now</a>
       </nav>
+      <div class="lang-switcher" aria-label="Language switcher">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="de">DE</button>
+        <button type="button" class="lang-btn" data-lang="ru">RU</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="pl">PL</button>
+        <button type="button" class="lang-btn" data-lang="ar">AR</button>
+      </div>
     </div>
   </header>
 
@@ -65,74 +89,519 @@
     <div class="container">
       <section class="aswan-hero">
         <div class="aswan-hero-content">
-          <span class="aswan-kicker">Nile &amp; Heritage Excursion · Aswan, Egypt</span>
-          <h1>Aswan Trip</h1>
-          <p>Explore Aswan’s Nile setting, historic temples, and landmarks according to a confirmed schedule and transport plan. Exact stops, duration, and inclusions depend on your selected programme.</p>
+          <span class="aswan-kicker" data-i18n="kicker">Nile &amp; Heritage Excursion · Aswan, Egypt</span>
+          <h1 data-i18n="hero_title">Aswan Trip</h1>
+          <p data-i18n="hero_desc">Explore Aswan’s Nile setting, historic temples, and landmarks according to a confirmed schedule and transport plan. Exact stops, duration, and inclusions depend on your selected programme.</p>
         </div>
       </section>
 
       <section class="tour-summary-box">
-        <h2>Trip Overview &amp; General Experience Program</h2>
+        <h2 data-i18n="overview_title">Trip Overview &amp; General Experience Program</h2>
         <div class="tour-meta">
-          <span><strong>Category:</strong> Nile &amp; Heritage Excursion</span>
-          <span><strong>Destination:</strong> Aswan, Upper Egypt</span>
-          <span><strong>Format:</strong> Confirmed by Selected Programme</span>
-          <span><strong>Rate:</strong> Confirmed upon booking inquiry</span>
+          <span><strong data-i18n="meta_cat_label">Category:</strong> <span data-i18n="meta_cat_val">Nile &amp; Heritage Excursion</span></span>
+          <span><strong data-i18n="meta_dest_label">Destination:</strong> <span data-i18n="meta_dest_val">Aswan, Upper Egypt</span></span>
+          <span><strong data-i18n="meta_fmt_label">Format:</strong> <span data-i18n="meta_fmt_val">Confirmed by Selected Programme</span></span>
+          <span><strong data-i18n="meta_rate_label">Rate:</strong> <span data-i18n="meta_rate_val">Confirmed upon booking inquiry</span></span>
         </div>
 
-        <p>Excursions to Aswan typically pair scenic Nile surroundings and granite island landscapes with scheduled visits to historic landmarks—such as Philae Temple, the High Dam, or local river/site stops—along with planned breaks or meals depending on the confirmed itinerary.</p>
+        <p data-i18n="overview_p">Excursions to Aswan typically pair scenic Nile surroundings and granite island landscapes with scheduled visits to historic landmarks—such as Philae Temple, the High Dam, or local river/site stops—along with planned breaks or meals depending on the confirmed itinerary.</p>
 
         <ul class="program-timeline">
-          <li><strong>Confirmed Arrival &amp; Transfer:</strong> Follow the scheduled travel and transfer arrangement for your selected Aswan programme.</li>
-          <li><strong>Scheduled Aswan Landmarks:</strong> Visit the temples, viewpoints, or Nile stops included in your confirmed itinerary.</li>
-          <li><strong>Breaks &amp; Refreshments:</strong> Pause for scheduled rest or meals according to the chosen package.</li>
-          <li><strong>Return Plan:</strong> Complete the programme according to your confirmed return schedule.</li>
+          <li><strong data-i18n="prog_1_title">Confirmed Arrival &amp; Transfer:</strong> <span data-i18n="prog_1_desc">Follow the scheduled travel and transfer arrangement for your selected Aswan programme.</span></li>
+          <li><strong data-i18n="prog_2_title">Scheduled Aswan Landmarks:</strong> <span data-i18n="prog_2_desc">Visit the temples, viewpoints, or Nile stops included in your confirmed itinerary.</span></li>
+          <li><strong data-i18n="prog_3_title">Breaks &amp; Refreshments:</strong> <span data-i18n="prog_3_desc">Pause for scheduled rest or meals according to the chosen package.</span></li>
+          <li><strong data-i18n="prog_4_title">Return Plan:</strong> <span data-i18n="prog_4_desc">Complete the programme according to your confirmed return schedule.</span></li>
         </ul>
 
-        <h3>What to Confirm Before Booking</h3>
+        <h3 data-i18n="confirm_title">What to Confirm Before Booking</h3>
         <ul class="includes-grid">
-          <li>Duration, travel/transfer arrangement, and schedule</li>
-          <li>Exact list of temples, islands, or landmarks included</li>
-          <li>Whether entrance tickets, boat transfers, guide, or meals are included</li>
-          <li>Comfortable walking shoes, sun hat, sunglasses, water, and sun protection</li>
+          <li data-i18n="inc_1">Duration, travel/transfer arrangement, and schedule</li>
+          <li data-i18n="inc_2">Exact list of temples, islands, or landmarks included</li>
+          <li data-i18n="inc_3">Whether entrance tickets, boat transfers, guide, or meals are included</li>
+          <li data-i18n="inc_4">Comfortable walking shoes, sun hat, sunglasses, water, and sun protection</li>
         </ul>
 
         <div class="aswan-note">
-          <strong>Important Note:</strong> Exact schedules, travel/transfer arrangements, visited sites, boat crossings, entrance tickets, and included meals depend on the confirmed programme and local operating conditions.
+          <strong data-i18n="note_label">Important Note:</strong> <span data-i18n="note_text">Exact schedules, travel/transfer arrangements, visited sites, boat crossings, entrance tickets, and included meals depend on the confirmed programme and local operating conditions.</span>
         </div>
       </section>
 
       <section class="aswan-two-col">
         <div>
-          <h3>Nile Scenery &amp; Ancient Monuments</h3>
-          <p>Aswan blends calm Nile channels, desert hills, and ancient temple complexes, making it easiest to enjoy when stop order, boat crossings, and tickets are confirmed ahead of time.</p>
-          <p>Check weather and sun protection needs before heading out to open temple sites.</p>
+          <h3 data-i18n="why_title">Nile Scenery &amp; Ancient Monuments</h3>
+          <p data-i18n="why_p1">Aswan blends calm Nile channels, desert hills, and ancient temple complexes, making it easiest to enjoy when stop order, boat crossings, and tickets are confirmed ahead of time.</p>
+          <p data-i18n="why_p2">Check weather and sun protection needs before heading out to open temple sites.</p>
         </div>
-        <div class="aswan-quote">
+        <div class="aswan-quote" data-i18n="quote_text">
           “Nile waters, granite hills, and ancient stone—best experienced with clear timing and confirmed programme details.”
         </div>
       </section>
 
       <section>
         <div class="aswan-features">
-          <div class="aswan-feature"><h4>Nile &amp; Heritage Setting</h4><p>Experience Aswan’s river landscape and scheduled historic sites.</p></div>
-          <div class="aswan-feature"><h4>Programme-Specific Route</h4><p>Stops, duration, and transport follow your confirmed Aswan itinerary.</p></div>
-          <div class="aswan-feature"><h4>Clear Pre-Trip Check</h4><p>Verify tickets, transfers, meals, and timing prior to booking.</p></div>
+          <div class="aswan-feature"><h4 data-i18n="feat_1_title">Nile &amp; Heritage Setting</h4><p data-i18n="feat_1_desc">Experience Aswan’s river landscape and scheduled historic sites.</p></div>
+          <div class="aswan-feature"><h4 data-i18n="feat_2_title">Programme-Specific Route</h4><p data-i18n="feat_2_desc">Stops, duration, and transport follow your confirmed Aswan itinerary.</p></div>
+          <div class="aswan-feature"><h4 data-i18n="feat_3_title">Clear Pre-Trip Check</h4><p data-i18n="feat_3_desc">Verify tickets, transfers, meals, and timing prior to booking.</p></div>
         </div>
       </section>
 
       <section class="aswan-faq">
-        <h2>Aswan Trip – Frequently Asked Questions</h2>
-        <details><summary>Which temples or Nile stops are included on an Aswan trip?</summary><p>Visited sites, island boat transfers, and river stops depend on the confirmed programme and local conditions, so check the exact stop list before booking.</p></details>
-        <details><summary>Are entrance tickets and meals automatically included?</summary><p>Inclusions such as site tickets, boat transfers, guide services, and meals vary by programme and must be confirmed before booking.</p></details>
+        <h2 data-i18n="faq_title">Aswan Trip – Frequently Asked Questions</h2>
+        <details><summary data-i18n="faq_q1">Which temples or Nile stops are included on an Aswan trip?</summary><p data-i18n="faq_a1">Visited sites, island boat transfers, and river stops depend on the confirmed programme and local conditions, so check the exact stop list before booking.</p></details>
+        <details><summary data-i18n="faq_q2">Are entrance tickets and meals automatically included?</summary><p data-i18n="faq_a2">Inclusions such as site tickets, boat transfers, guide services, and meals vary by programme and must be confirmed before booking.</p></details>
       </section>
 
       <section class="aswan-final-quote">
-        <h2>Plan Your Aswan Trip</h2>
-        <p>Contact us with your preferred dates, duration, and stops to confirm availability.</p>
-        <a href="../booking.html?tour=Aswan+Trip">Book or Inquire About Aswan Trip</a>
+        <h2 data-i18n="cta_title">Plan Your Aswan Trip</h2>
+        <p data-i18n="cta_desc">Contact us with your preferred dates, duration, and stops to confirm availability.</p>
+        <a href="../booking.html?tour=Aswan+Trip" data-i18n="cta_btn">Book or Inquire About Aswan Trip</a>
       </section>
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong data-i18n="brand">Atlantis Tours &amp; Experiences</strong> · <span data-i18n="footer_follow">Follow us on social media</span>
+      </div>
+      <div class="social-links" aria-label="Social media links">
+        <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99h-2.3V12h2.3V9.8c0-2.27 1.35-3.52 3.42-3.52.99 0 2.03.18 2.03.18v2.23h-1.14c-1.13 0-1.48.7-1.48 1.42V12h2.52l-.4 2.89h-2.12v6.99A10 10 0 0 0 22 12z"/></svg>
+          <span data-i18n="social_fb">Facebook</span>
+        </a>
+        <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm8.75 2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/></svg>
+          <span data-i18n="social_ig">Instagram</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const TRANSLATIONS = {
+      en: {
+        page_title: "Aswan Trip | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Home", nav_tours: "All Tours", nav_guide: "Hurghada Guide", nav_contact: "Contact", nav_book: "Book Now",
+        kicker: "Nile & Heritage Excursion · Aswan, Egypt",
+        hero_title: "Aswan Trip",
+        hero_desc: "Explore Aswan’s Nile setting, historic temples, and landmarks according to a confirmed schedule and transport plan. Exact stops, duration, and inclusions depend on your selected programme.",
+        overview_title: "Trip Overview & General Experience Program",
+        meta_cat_label: "Category:", meta_cat_val: "Nile & Heritage Excursion",
+        meta_dest_label: "Destination:", meta_dest_val: "Aswan, Upper Egypt",
+        meta_fmt_label: "Format:", meta_fmt_val: "Confirmed by Selected Programme",
+        meta_rate_label: "Rate:", meta_rate_val: "Confirmed upon booking inquiry",
+        overview_p: "Excursions to Aswan typically pair scenic Nile surroundings and granite island landscapes with scheduled visits to historic landmarks—such as Philae Temple, the High Dam, or local river/site stops—along with planned breaks or meals depending on the confirmed itinerary.",
+        prog_1_title: "Confirmed Arrival & Transfer:",
+        prog_1_desc: "Follow the scheduled travel and transfer arrangement for your selected Aswan programme.",
+        prog_2_title: "Scheduled Aswan Landmarks:",
+        prog_2_desc: "Visit the temples, viewpoints, or Nile stops included in your confirmed itinerary.",
+        prog_3_title: "Breaks & Refreshments:",
+        prog_3_desc: "Pause for scheduled rest or meals according to the chosen package.",
+        prog_4_title: "Return Plan:",
+        prog_4_desc: "Complete the programme according to your confirmed return schedule.",
+        confirm_title: "What to Confirm Before Booking",
+        inc_1: "Duration, travel/transfer arrangement, and schedule",
+        inc_2: "Exact list of temples, islands, or landmarks included",
+        inc_3: "Whether entrance tickets, boat transfers, guide, or meals are included",
+        inc_4: "Comfortable walking shoes, sun hat, sunglasses, water, and sun protection",
+        note_label: "Important Note:",
+        note_text: "Exact schedules, travel/transfer arrangements, visited sites, boat crossings, entrance tickets, and included meals depend on the confirmed programme and local operating conditions.",
+        why_title: "Nile Scenery & Ancient Monuments",
+        why_p1: "Aswan blends calm Nile channels, desert hills, and ancient temple complexes, making it easiest to enjoy when stop order, boat crossings, and tickets are confirmed ahead of time.",
+        why_p2: "Check weather and sun protection needs before heading out to open temple sites.",
+        quote_text: "“Nile waters, granite hills, and ancient stone—best experienced with clear timing and confirmed programme details.”",
+        feat_1_title: "Nile & Heritage Setting",
+        feat_1_desc: "Experience Aswan’s river landscape and scheduled historic sites.",
+        feat_2_title: "Programme-Specific Route",
+        feat_2_desc: "Stops, duration, and transport follow your confirmed Aswan itinerary.",
+        feat_3_title: "Clear Pre-Trip Check",
+        feat_3_desc: "Verify tickets, transfers, meals, and timing prior to booking.",
+        faq_title: "Aswan Trip – Frequently Asked Questions",
+        faq_q1: "Which temples or Nile stops are included on an Aswan trip?",
+        faq_a1: "Visited sites, island boat transfers, and river stops depend on the confirmed programme and local conditions, so check the exact stop list before booking.",
+        faq_q2: "Are entrance tickets and meals automatically included?",
+        faq_a2: "Inclusions such as site tickets, boat transfers, guide services, and meals vary by programme and must be confirmed before booking.",
+        cta_title: "Plan Your Aswan Trip",
+        cta_desc: "Contact us with your preferred dates, duration, and stops to confirm availability.",
+        cta_btn: "Book or Inquire About Aswan Trip",
+        footer_follow: "Follow us on social media", social_fb: "Facebook", social_ig: "Instagram"
+      },
+      de: {
+        page_title: "Assuan-Ausflug | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Startseite", nav_tours: "Alle Touren", nav_guide: "Hurghada Guide", nav_contact: "Kontakt", nav_book: "Jetzt buchen",
+        kicker: "Nil- & Kulturausflug · Assuan, Ägypten",
+        hero_title: "Assuan-Ausflug",
+        hero_desc: "Entdecken Sie Assuans Nillandschaft, historische Tempel und Sehenswürdigkeiten nach bestätigtem Zeitplan und Transferkonzept. Stopps, Dauer und Leistungen richten sich nach Ihrem gewählten Programm.",
+        overview_title: "Reiseübersicht & Allgemeines Erlebnisprogramm",
+        meta_cat_label: "Kategorie:", meta_cat_val: "Nil- & Kulturausflug",
+        meta_dest_label: "Ziel:", meta_dest_val: "Assuan, Oberägypten",
+        meta_fmt_label: "Format:", meta_fmt_val: "Je nach gewähltem Programm bestätigt",
+        meta_rate_label: "Preis:", meta_rate_val: "Bestätigung bei Buchungsanfrage",
+        overview_p: "Ausflüge nach Assuan verbinden malerische Nilumgebungen und Granitinseln mit geplanten Besuchen historischer Sehenswürdigkeiten – wie dem Philae-Tempel, dem Hochdamm oder lokalen Fluss-/Stättenstopps – sowie Pausen oder Mahlzeiten je nach bestätigter Route.",
+        prog_1_title: "Bestätigte Anreise & Transfer:",
+        prog_1_desc: "Folgen Sie dem geplanten Reise- und Transferablauf für Ihr gewähltes Assuan-Programm.",
+        prog_2_title: "Geplante Sehenswürdigkeiten in Assuan:",
+        prog_2_desc: "Besuchen Sie die Tempel, Aussichtspunkte oder Nilstopps Ihres bestätigten Programms.",
+        prog_3_title: "Pausen & Verpflegung:",
+        prog_3_desc: "Geplante Ruhe- oder Essenspausen entsprechend dem gewählten Paket.",
+        prog_4_title: "Rückreiseplan:",
+        prog_4_desc: "Abschluss des Programms gemäß dem bestätigten Rückfahrplan.",
+        confirm_title: "Was vor der Buchung bestätigt werden sollte",
+        inc_1: "Dauer, Reise-/Transferablauf und Zeitplan",
+        inc_2: "Genaue Liste der enthaltenen Tempel, Inseln oder Sehenswürdigkeiten",
+        inc_3: "Ob Eintrittskarten, Bootstransfers, Guide oder Mahlzeiten inbegriffen sind",
+        inc_4: "Bequeme Wanderschuhe, Sonnenhut, Sonnenbrille, Wasser und Sonnenschutz",
+        note_label: "Wichtiger Hinweis:",
+        note_text: "Genaue Zeitpläne, Reise-/Transferabläufe, besuchte Stätten, Bootsüberfahrten, Eintrittskarten und enthaltene Mahlzeiten hängen vom bestätigten Programm und den örtlichen Betriebsbedingungen ab.",
+        why_title: "Nillandschaft & antike Monumente",
+        why_p1: "Assuan vereint ruhige Nilkanäle, Wüstenhügel und antike Tempelanlagen – besonders entspannt zu erleben, wenn Reihenfolge, Bootsfahrten und Tickets vorab feststehen.",
+        why_p2: "Prüfen Sie Wetter und Sonnenschutzbedarf, bevor Sie offene Tempelanlagen besuchen.",
+        quote_text: "„Nilwasser, Granithügel und antiker Stein – am besten mit klarem Zeitplan und bestätigten Programmdetails zu erleben.“",
+        feat_1_title: "Nil- & Kulturkulisse",
+        feat_1_desc: "Erleben Sie Assuans Flusslandschaft und geplante historische Stätten.",
+        feat_2_title: "Programmspezifische Route",
+        feat_2_desc: "Stopps, Dauer und Transport richten sich nach Ihrem bestätigten Assuan-Programm.",
+        feat_3_title: "Klarer Vorab-Check",
+        feat_3_desc: "Tickets, Transfers, Mahlzeiten und Zeiten vor der Buchung prüfen.",
+        faq_title: "Assuan-Ausflug – Häufig gestellte Fragen",
+        faq_q1: "Welche Tempel oder Nilstopps sind bei einem Assuan-Ausflug enthalten?",
+        faq_a1: "Besuchte Stätten, Insel-Bootstransfers und Flussstopps hängen vom bestätigten Programm und den örtlichen Bedingungen ab – prüfen Sie die genaue Stoppliste vor der Buchung.",
+        faq_q2: "Sind Eintrittskarten und Mahlzeiten automatisch enthalten?",
+        faq_a2: "Leistungen wie Eintrittskarten, Bootstransfers, Guide und Mahlzeiten variieren je nach Programm und müssen vor der Buchung bestätigt werden.",
+        cta_title: "Planen Sie Ihren Assuan-Ausflug",
+        cta_desc: "Kontaktieren Sie uns mit Wunschdaten, Dauer und Stopps, um die Verfügbarkeit zu prüfen.",
+        cta_btn: "Assuan-Ausflug buchen oder anfragen",
+        footer_follow: "Folgen Sie uns in den sozialen Medien", social_fb: "Facebook", social_ig: "Instagram"
+      },
+      ru: {
+        page_title: "Поездка в Асуан | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Главная", nav_tours: "Все туры", nav_guide: "Гид по Хургаде", nav_contact: "Контакты", nav_book: "Забронировать",
+        kicker: "Экскурсия по Нилу и наследию · Асуан, Египет",
+        hero_title: "Поездка в Асуан",
+        hero_desc: "Откройте для себя берега Нила в Асуане, старинные храмы и достопримечательности по подтверждённому расписанию и плану трансфера. Остановки, длительность и включённые услуги зависят от выбранной программы.",
+        overview_title: "Обзор поездки и общая программа",
+        meta_cat_label: "Категория:", meta_cat_val: "Экскурсия по Нилу и наследию",
+        meta_dest_label: "Направление:", meta_dest_val: "Асуан, Верхний Египет",
+        meta_fmt_label: "Формат:", meta_fmt_val: "Определяется выбранной программой",
+        meta_rate_label: "Стоимость:", meta_rate_val: "Уточняется при запросе бронирования",
+        overview_p: "Поездки в Асуан обычно сочетают живописные нильские пейзажи и гранитные острова с запланированным посещением исторических объектов — таких как храм Филе, Высотная плотина или остановки на реке/локациях — а также перерывами или питанием согласно подтверждённому маршруту.",
+        prog_1_title: "Подтверждённое прибытие и трансфер:",
+        prog_1_desc: "Следуйте запланированному порядку поездки и трансфера по выбранной программе в Асуан.",
+        prog_2_title: "Запланированные объекты Асуана:",
+        prog_2_desc: "Посещение храмов, смотровых точек или остановок на Ниле по подтверждённому маршруту.",
+        prog_3_title: "Перерывы и питание:",
+        prog_3_desc: "Паузы для отдыха или приёма пищи в соответствии с выбранным пакетом.",
+        prog_4_title: "План возвращения:",
+        prog_4_desc: "Завершение программы согласно подтверждённому расписанию обратного пути.",
+        confirm_title: "Что важно уточнить до бронирования",
+        inc_1: "Продолжительность, порядок поездки/трансфера и расписание",
+        inc_2: "Точный перечень включённых храмов, островов или достопримечательностей",
+        inc_3: "Входят ли входные билеты, лодочные переправы, гид или питание",
+        inc_4: "Удобная обувь для ходьбы, головной убор, солнцезащитные очки, вода и защита от солнца",
+        note_label: "Важное примечание:",
+        note_text: "Точное расписание, порядок поездок/трансферов, посещаемые объекты, переправы на лодках, входные билеты и питание зависят от подтверждённой программы и местных условий работы.",
+        why_title: "Пейзажи Нила и древние памятники",
+        why_p1: "Асуан объединяет спокойные протоки Нила, пустынные холмы и древние храмовые комплексы — поездка проходит комфортнее, когда порядок остановок, переправы и билеты согласованы заранее.",
+        why_p2: "Учитывайте погоду и защиту от солнца перед посещением открытых храмовых площадок.",
+        quote_text: "«Воды Нила, гранитные холмы и древний камень — лучше всего раскрываются при чётком тайминге и подтверждённых деталях программы.»",
+        feat_1_title: "Нильские берега и наследие",
+        feat_1_desc: "Знакомство с речными ландшафтами Асуана и запланированными историческими памятниками.",
+        feat_2_title: "Маршрут по программе",
+        feat_2_desc: "Остановки, длительность и транспорт соответствуют подтверждённому маршруту в Асуан.",
+        feat_3_title: "Понятная проверка перед поездкой",
+        feat_3_desc: "Уточнение билетов, трансферов, питания и времени до бронирования.",
+        faq_title: "Поездка в Асуан — часто задаваемые вопросы",
+        faq_q1: "Какие храмы или остановки на Ниле входят в поездку в Асуан?",
+        faq_a1: "Посещаемые объекты, переправы на острова и остановки на реке зависят от подтверждённой программы и местных условий — уточняйте точный список остановок до бронирования.",
+        faq_q2: "Входят ли входные билеты и питание автоматически?",
+        faq_a2: "Включённые услуги (билеты, лодки, гид, питание) различаются в зависимости от программы и должны быть подтверждены до бронирования.",
+        cta_title: "Спланируйте поездку в Асуан",
+        cta_desc: "Свяжитесь с нами, указав желаемые даты, длительность и остановки, чтобы проверить наличие.",
+        cta_btn: "Забронировать или уточнить поездку в Асуан",
+        footer_follow: "Мы в социальных сетях", social_fb: "Facebook", social_ig: "Instagram"
+      },
+      fr: {
+        page_title: "Excursion à Assouan | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Accueil", nav_tours: "Toutes les excursions", nav_guide: "Guide Hurghada", nav_contact: "Contact", nav_book: "Réserver",
+        kicker: "Excursion Nil & patrimoine · Assouan, Égypte",
+        hero_title: "Excursion à Assouan",
+        hero_desc: "Découvrez les paysages du Nil à Assouan, ses temples historiques et sites emblématiques selon un programme et un transport confirmés. Étapes, durée et inclusions dépendent de la formule choisie.",
+        overview_title: "Aperçu de l'excursion & programme général",
+        meta_cat_label: "Catégorie :", meta_cat_val: "Excursion Nil & patrimoine",
+        meta_dest_label: "Destination :", meta_dest_val: "Assouan, Haute-Égypte",
+        meta_fmt_label: "Format :", meta_fmt_val: "Selon le programme sélectionné",
+        meta_rate_label: "Tarif :", meta_rate_val: "Confirmé lors de la demande de réservation",
+        overview_p: "Les excursions à Assouan associent généralement les rives du Nil et les îles de granit à des visites programmées de sites historiques — comme le temple de Philae, le haut barrage ou des arrêts fluviaux/locaux — avec pauses ou repas selon l'itinéraire confirmé.",
+        prog_1_title: "Arrivée & transfert confirmés :",
+        prog_1_desc: "Suivez l'organisation du trajet et du transfert prévue pour votre programme à Assouan.",
+        prog_2_title: "Sites d'Assouan prévus :",
+        prog_2_desc: "Visitez les temples, points de vue ou arrêts sur le Nil inclus dans l'itinéraire confirmé.",
+        prog_3_title: "Pauses & rafraîchissements :",
+        prog_3_desc: "Temps de repos ou repas prévus selon la formule choisie.",
+        prog_4_title: "Plan de retour :",
+        prog_4_desc: "Terminez le programme selon l'horaire de retour confirmé.",
+        confirm_title: "Éléments à confirmer avant la réservation",
+        inc_1: "Durée, organisation du trajet/transfert et horaire",
+        inc_2: "Liste exacte des temples, îles ou lieux inclus",
+        inc_3: "Inclusion des billets d'entrée, traversées en bateau, guide ou repas",
+        inc_4: "Chaussures de marche confortables, chapeau, lunettes de soleil, eau et protection solaire",
+        note_label: "Remarque importante :",
+        note_text: "Les horaires précis, modalités de trajet/transfert, sites visités, traversées en bateau, billets d'entrée et repas inclus dépendent du programme confirmé et des conditions locales d'exploitation.",
+        why_title: "Paysages du Nil & monuments anciens",
+        why_p1: "Assouan mêle bras calmes du Nil, collines désertiques et ensembles templaires antiques, plus agréables à découvrir lorsque l'ordre des étapes, les traversées et les billets sont validés à l'avance.",
+        why_p2: "Vérifiez la météo et la protection solaire avant de visiter les sites de temples à ciel ouvert.",
+        quote_text: "« Les eaux du Nil, les collines de granit et la pierre antique s'apprécient pleinement avec un timing clair et un programme confirmé. »",
+        feat_1_title: "Cadre Nil & patrimoine",
+        feat_1_desc: "Découvrez les paysages fluviaux d'Assouan et ses sites historiques programmés.",
+        feat_2_title: "Itinéraire selon la formule",
+        feat_2_desc: "Étapes, durée et transport suivent votre programme confirmé à Assouan.",
+        feat_3_title: "Vérification claire avant départ",
+        feat_3_desc: "Confirmez billets, transferts, repas et horaires avant la réservation.",
+        faq_title: "Excursion à Assouan – Questions fréquentes",
+        faq_q1: "Quels temples ou arrêts sur le Nil sont inclus lors d'une excursion à Assouan ?",
+        faq_a1: "Les sites visités, traversées vers les îles et arrêts fluviaux dépendent du programme confirmé et des conditions locales ; vérifiez la liste exacte des étapes avant de réserver.",
+        faq_q2: "Les billets d'entrée et repas sont-ils automatiquement inclus ?",
+        faq_a2: "Les inclusions telles que billets d'entrée, traversées en bateau, guide et repas varient selon le programme et doivent être confirmées avant la réservation.",
+        cta_title: "Préparez votre excursion à Assouan",
+        cta_desc: "Contactez-nous avec vos dates souhaitées, durée et étapes pour vérifier la disponibilité.",
+        cta_btn: "Réserver ou demander des infos sur Assouan",
+        footer_follow: "Suivez-nous sur les réseaux sociaux", social_fb: "Facebook", social_ig: "Instagram"
+      },
+      it: {
+        page_title: "Escursione ad Assuan | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Home", nav_tours: "Tutte le escursioni", nav_guide: "Guida Hurghada", nav_contact: "Contatti", nav_book: "Prenota ora",
+        kicker: "Escursione sul Nilo e patrimonio storico · Assuan, Egitto",
+        hero_title: "Escursione ad Assuan",
+        hero_desc: "Esplora lo scenario del Nilo ad Assuan, i templi storici e i luoghi d'interesse secondo programma e piano di trasporto confermati. Tappe, durata e inclusioni dipendono dal programma scelto.",
+        overview_title: "Panoramica escursione e programma generale",
+        meta_cat_label: "Categoria:", meta_cat_val: "Escursione sul Nilo e patrimonio storico",
+        meta_dest_label: "Destinazione:", meta_dest_val: "Assuan, Alto Egitto",
+        meta_fmt_label: "Formato:", meta_fmt_val: "Confermato in base al programma scelto",
+        meta_rate_label: "Tariffa:", meta_rate_val: "Confermata alla richiesta di prenotazione",
+        overview_p: "Le escursioni ad Assuan uniscono in genere paesaggi fluviali sul Nilo e isole di granito a visite programmate a siti storici — come il Tempio di Philae, l'Alta Diga o soste fluviali/locali — con pause o pasti previsti in base all'itinerario confermato.",
+        prog_1_title: "Arrivo e transfer confermati:",
+        prog_1_desc: "Segui l'organizzazione di viaggio e transfer prevista per il programma di Assuan selezionato.",
+        prog_2_title: "Tappe programmate ad Assuan:",
+        prog_2_desc: "Visita i templi, i punti panoramici o le soste sul Nilo inclusi nell'itinerario confermato.",
+        prog_3_title: "Pause e ristori:",
+        prog_3_desc: "Soste di riposo o pasti programmati in base al pacchetto scelto.",
+        prog_4_title: "Piano di rientro:",
+        prog_4_desc: "Completa il programma secondo l'orario di rientro confermato.",
+        confirm_title: "Cosa confermare prima di prenotare",
+        inc_1: "Durata, organizzazione viaggio/transfer e programma orario",
+        inc_2: "Elenco esatto di templi, isole o luoghi inclusi",
+        inc_3: "Se biglietti d'ingresso, trasferimenti in barca, guida o pasti sono inclusi",
+        inc_4: "Scarpe comode da camminata, cappello da sole, occhiali da sole, acqua e protezione solare",
+        note_label: "Nota importante:",
+        note_text: "Orari esatti, modalità di viaggio/transfer, siti visitati, attraversamenti in barca, biglietti d'ingresso e pasti inclusi dipendono dal programma confermato e dalle condizioni operative locali.",
+        why_title: "Scenari del Nilo e monumenti antichi",
+        why_p1: "Assuan unisce canali tranquilli del Nilo, colline desertiche e complessi templari antichi, più facili da godere quando ordine delle tappe, barche e biglietti sono confermati in anticipo.",
+        why_p2: "Controlla meteo ed esigenze di protezione solare prima di recarti ai siti templari all'aperto.",
+        quote_text: "«Acque del Nilo, colline di granito e pietra antica: da vivere al meglio con tempi chiari e dettagli di programma confermati.»",
+        feat_1_title: "Scenario Nilo e storia",
+        feat_1_desc: "Vivi il paesaggio fluviale di Assuan e i siti storici programmati.",
+        feat_2_title: "Percorso legato al programma",
+        feat_2_desc: "Tappe, durata e trasporto seguono l'itinerario confermato ad Assuan.",
+        feat_3_title: "Controllo chiaro pre-viaggio",
+        feat_3_desc: "Verifica biglietti, transfer, pasti e orari prima di prenotare.",
+        faq_title: "Escursione ad Assuan – Domande frequenti",
+        faq_q1: "Quali templi o soste sul Nilo sono inclusi in un'escursione ad Assuan?",
+        faq_a1: "Siti visitati, trasferimenti in barca verso le isole e soste fluviali dipendono dal programma confermato e dalle condizioni locali: controlla l'elenco esatto delle tappe prima di prenotare.",
+        faq_q2: "Biglietti d'ingresso e pasti sono inclusi automaticamente?",
+        faq_a2: "Inclusioni come biglietti d'ingresso, trasferimenti in barca, guida e pasti variano per programma e vanno confermate prima di prenotare.",
+        cta_title: "Pianifica la tua escursione ad Assuan",
+        cta_desc: "Contattaci con date preferite, durata e tappe per verificare la disponibilità.",
+        cta_btn: "Prenota o chiedi info su Escursione ad Assuan",
+        footer_follow: "Seguici sui social media", social_fb: "Facebook", social_ig: "Instagram"
+      },
+      es: {
+        page_title: "Viaje a Asuán | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Inicio", nav_tours: "Todos los tours", nav_guide: "Guía de Hurghada", nav_contact: "Contacto", nav_book: "Reservar ahora",
+        kicker: "Excursión por el Nilo y patrimonio · Asuán, Egipto",
+        hero_title: "Viaje a Asuán",
+        hero_desc: "Explora el entorno del Nilo en Asuán, sus templos históricos y monumentos según un horario y plan de transporte confirmados. Paradas, duración e inclusiones dependen del programa elegido.",
+        overview_title: "Resumen del viaje y programa general",
+        meta_cat_label: "Categoría:", meta_cat_val: "Excursión por el Nilo y patrimonio",
+        meta_dest_label: "Destino:", meta_dest_val: "Asuán, Alto Egipto",
+        meta_fmt_label: "Formato:", meta_fmt_val: "Confirmado según el programa seleccionado",
+        meta_rate_label: "Tarifa:", meta_rate_val: "Confirmada al consultar la reserva",
+        overview_p: "Las excursiones a Asuán suelen combinar paisajes ribereños del Nilo e islas de granito con visitas programadas a lugares históricos —como el templo de Filae, la presa Alta o paradas fluviales/locales—, además de pausas o comidas según el itinerario confirmado.",
+        prog_1_title: "Llegada y traslado confirmados:",
+        prog_1_desc: "Sigue la logística de viaje y traslado programada para tu programa elegido en Asuán.",
+        prog_2_title: "Monumentos programados en Asuán:",
+        prog_2_desc: "Visita los templos, miradores o paradas en el Nilo incluidos en tu itinerario confirmado.",
+        prog_3_title: "Pausas y refrigerios:",
+        prog_3_desc: "Realiza pausas de descanso o comidas programadas según el paquete elegido.",
+        prog_4_title: "Plan de regreso:",
+        prog_4_desc: "Completa el programa de acuerdo con tu horario de regreso confirmado.",
+        confirm_title: "Qué confirmar antes de reservar",
+        inc_1: "Duración, logística de viaje/traslado y horario",
+        inc_2: "Lista exacta de templos, islas o lugares incluidos",
+        inc_3: "Si se incluyen entradas, traslados en lancha, guía o comidas",
+        inc_4: "Calzado cómodo para caminar, sombrero, gafas de sol, agua y protección solar",
+        note_label: "Nota importante:",
+        note_text: "Los horarios exactos, logística de viaje/traslado, sitios visitados, cruces en lancha, entradas y comidas incluidas dependen del programa confirmado y las condiciones operativas locales.",
+        why_title: "Paisajes del Nilo y monumentos antiguos",
+        why_p1: "Asuán combina canales tranquilos del Nilo, colinas desérticas y complejos de templos antiguos, resultando más cómodo cuando el orden de paradas, lanchas y entradas se confirma con antelación.",
+        why_p2: "Revisa el clima y la protección solar antes de acudir a recintos de templos al aire libre.",
+        quote_text: "«Aguas del Nilo, colinas de granito y piedra antigua: mejor disfrutados con horarios claros y detalles del programa confirmados.»",
+        feat_1_title: "Entorno del Nilo y patrimonio",
+        feat_1_desc: "Conoce el paisaje fluvial de Asuán y sus sitios históricos programados.",
+        feat_2_title: "Ruta según el programa",
+        feat_2_desc: "Las paradas, duración y transporte siguen tu itinerario confirmado en Asuán.",
+        feat_3_title: "Revisión clara previa al viaje",
+        feat_3_desc: "Verifica entradas, traslados, comidas y horarios antes de reservar.",
+        faq_title: "Viaje a Asuán – Preguntas frecuentes",
+        faq_q1: "¿Qué templos o paradas en el Nilo se incluyen en un viaje a Asuán?",
+        faq_a1: "Los sitios visitados, traslados en lancha a islas y paradas fluviales dependen del programa confirmado y las condiciones locales; revisa la lista exacta antes de reservar.",
+        faq_q2: "¿Las entradas y comidas vienen incluidas automáticamente?",
+        faq_a2: "Las inclusiones como entradas a sitios, lanchas, guía y comidas varían según el programa y deben confirmarse antes de reservar.",
+        cta_title: "Planifica tu viaje a Asuán",
+        cta_desc: "Contáctanos con tus fechas preferidas, duración y paradas para confirmar disponibilidad.",
+        cta_btn: "Reservar o consultar sobre Viaje a Asuán",
+        footer_follow: "Síguenos en redes sociales", social_fb: "Facebook", social_ig: "Instagram"
+      },
+      pl: {
+        page_title: "Wycieczka do Asuanu | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Strona główna", nav_tours: "Wszystkie wycieczki", nav_guide: "Przewodnik Hurghada", nav_contact: "Kontakt", nav_book: "Zarezerwuj",
+        kicker: "Wycieczka nad Nil i dziedzictwo · Asuan, Egipt",
+        hero_title: "Wycieczka do Asuanu",
+        hero_desc: "Poznaj nadrzeczny krajobraz Nilu w Asuanie, zabytkowe świątynie i punkty orientacyjne zgodnie z potwierdzonym harmonogramem i planem transportu. Przystanki, czas trwania i świadczenia zależą od wybranego programu.",
+        overview_title: "Przegląd wycieczki i ogólny program",
+        meta_cat_label: "Kategoria:", meta_cat_val: "Wycieczka nad Nil i dziedzictwo",
+        meta_dest_label: "Kierunek:", meta_dest_val: "Asuan, Górny Egipt",
+        meta_fmt_label: "Format:", meta_fmt_val: "Potwierdzany zgodnie z wybranym programem",
+        meta_rate_label: "Cena:", meta_rate_val: "Potwierdzana przy zapytaniu o rezerwację",
+        overview_p: "Wycieczki do Asuanu zazwyczaj łączą malownicze otoczenie Nilu i granitowe wyspy ze zwiedzaniem obiektów historycznych — takich jak Świątynia Philae, Wysoka Tama czy przystanki rzeczne/lokalne — wraz z przerwami lub posiłkami zależnie od potwierdzonej trasy.",
+        prog_1_title: "Potwierdzony przyjazd i transfer:",
+        prog_1_desc: "Realizacja zaplanowanego przejazdu i transferu dla wybranego programu w Asuanie.",
+        prog_2_title: "Zaplanowane miejsca w Asuanie:",
+        prog_2_desc: "Zwiedzanie świątyń, punktów widokowych lub przystanków nad Nilem ujętych w potwierdzonym programie.",
+        prog_3_title: "Przerwy i posiłki:",
+        prog_3_desc: "Zaplanowane przerwy na odpoczynek lub posiłki zgodnie z wybranym pakietem.",
+        prog_4_title: "Plan powrotu:",
+        prog_4_desc: "Zakończenie programu zgodnie z potwierdzonym harmonogramem powrotu.",
+        confirm_title: "Co potwierdzić przed rezerwacją",
+        inc_1: "Czas trwania, organizację przejazdu/transferu i harmonogram",
+        inc_2: "Dokładną listę uwzględnionych świątyń, wysp lub zabytków",
+        inc_3: "Czy w cenie są bilety wstępu, przeprawy łodzią, przewodnik lub posiłki",
+        inc_4: "Wygodne buty do chodzenia, nakrycie głowy, okulary przeciwsłoneczne, wodę i ochronę UV",
+        note_label: "Ważna uwaga:",
+        note_text: "Dokładne harmonogramy, organizacja przejazdów/transferów, zwiedzane miejsca, przeprawy łodzią, bilety wstępu i świadczenia żywieniowe zależą od potwierdzonego programu oraz lokalnych warunków.",
+        why_title: "Krajobrazy Nilu i starożytne zabytki",
+        why_p1: "Asuan łączy spokojne odnogi Nilu, pustynne wzgórza i starożytne zespoły świątynne — najwygodniej zwiedzać go, gdy kolejność przystanków, łodzie i bilety są ustalone z wyprzedzeniem.",
+        why_p2: "Sprawdź pogodę i ochronę przeciwsłoneczną przed wyjściem na otwarte tereny świątynne.",
+        quote_text: "„Wody Nilu, granitowe wzgórza i dawny kamień — najlepiej poznawać przy jasnym harmonogramie i potwierdzonym programie.”",
+        feat_1_title: "Nil i dziedzictwo",
+        feat_1_desc: "Poznaj rzeczne otoczenie Asuanu i zaplanowane miejsca historyczne.",
+        feat_2_title: "Trasa dopasowana do programu",
+        feat_2_desc: "Przystanki, czas i transport odpowiadają potwierdzonemu programowi w Asuanie.",
+        feat_3_title: "Jasne sprawdzenie przed wyjazdem",
+        feat_3_desc: "Potwierdź bilety, transfery, posiłki i godziny przed rezerwacją.",
+        faq_title: "Wycieczka do Asuanu – Najczęstsze pytania",
+        faq_q1: "Jakie świątynie lub przystanki nad Nilem obejmuje wycieczka do Asuanu?",
+        faq_a1: "Zwiedzane obiekty, przeprawy na wyspy i przystanki rzeczne zależą od potwierdzonego programu oraz lokalnych warunków — sprawdź dokładną listę przed rezerwacją.",
+        faq_q2: "Czy bilety wstępu i posiłki są wliczone automatycznie?",
+        faq_a2: "Świadczenia takie jak bilety wstępu, przeprawy łodzią, opieka przewodnika i posiłki różnią się w zależności od programu i wymagają potwierdzenia przed rezerwacją.",
+        cta_title: "Zaplanuj wycieczkę do Asuanu",
+        cta_desc: "Skontaktuj się z nami, podając preferowane daty, czas trwania i przystanki, aby sprawdzić dostępność.",
+        cta_btn: "Zarezerwuj lub zapytaj o Wycieczkę do Asuanu",
+        footer_follow: "Śledź nas w mediach społecznościowych", social_fb: "Facebook", social_ig: "Instagram"
+      },
+      ar: {
+        page_title: "رحلة أسوان | أتلانتس للرحلات والتجارب",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "الرئيسية", nav_tours: "جميع الرحلات", nav_guide: "دليل الغردقة", nav_contact: "تواصل معنا", nav_book: "احجز الآن",
+        kicker: "رحلة النيل والتراث · أسوان، مصر",
+        hero_title: "رحلة أسوان",
+        hero_desc: "استكشف أجواء النيل في أسوان ومعابدها التاريخية ومعالمها وفق جدول زمني وخطة انتقال مؤكدة. تعتمد المحطات الدقيقة والمدة والمشمولات على البرنامج الذي تختاره.",
+        overview_title: "نظرة عامة على الرحلة والبرنامج العام",
+        meta_cat_label: "الفئة:", meta_cat_val: "رحلة النيل والتراث",
+        meta_dest_label: "الوجهة:", meta_dest_val: "أسوان، صعيد مصر",
+        meta_fmt_label: "النظام:", meta_fmt_val: "يُحدَّد حسب البرنامج المختار",
+        meta_rate_label: "السعر:", meta_rate_val: "يُؤكَّد عند استفسار الحجز",
+        overview_p: "تجمع رحلات أسوان عادةً بين مشاهد النيل الخلابة وجزر الجرانيت وزيارات مجدولة للمعالم التاريخية — مثل معبد فيلة أو السد العالي أو محطات نهرية/محلية — مع فترات راحة أو وجبات حسب المسار المؤكد.",
+        prog_1_title: "الوصول والانتقال المؤكد:",
+        prog_1_desc: "اتباع ترتيب السفر والانتقال المجدول لبرنامج أسوان الذي اخترته.",
+        prog_2_title: "معالم أسوان المجدولة:",
+        prog_2_desc: "زيارة المعابد أو نقاط المشاهدة أو المحطات النيلية المدرجة في برنامجك المؤكد.",
+        prog_3_title: "الاستراحات والمرطبات:",
+        prog_3_desc: "التوقف للراحة المجدولة أو الوجبات وفق الباقة المختارة.",
+        prog_4_title: "خطة العودة:",
+        prog_4_desc: "إتمام البرنامج وفق موعد العودة المؤكد.",
+        confirm_title: "ما الذي يجب تأكيده قبل الحجز",
+        inc_1: "المدة وترتيب السفر/الانتقال والجدول الزمني",
+        inc_2: "القائمة الدقيقة للمعابد أو الجزر أو المعالم المشمولة",
+        inc_3: "ما إذا كانت تذاكر الدخول أو التنقل بالقارب أو المرشد أو الوجبات مشمولة",
+        inc_4: "حذاء مريح للمشي وقبعة ونظارة شمسية وماء وواقي شمس",
+        note_label: "ملاحظة مهمة:",
+        note_text: "تعتمد الجداول الدقيقة وترتيبات السفر/الانتقال والمواقع المزارة والعبور بالقوارب وتذاكر الدخول والوجبات المشمولة على البرنامج المؤكد وظروف التشغيل المحلية.",
+        why_title: "مشاهد النيل والآثار العريقة",
+        why_p1: "تجمع أسوان بين مجاري النيل الهادئة والتلال الصحراوية ومجمعات المعابد القديمة، ويسهل الاستمتاع بها عند تأكيد ترتيب المحطات والعبور بالقوارب والتذاكر مسبقًا.",
+        why_p2: "تحقق من حالة الطقس ومتطلبات الحماية من الشمس قبل التوجه إلى مواقع المعابد المكشوفة.",
+        quote_text: "«مياه النيل وتلال الجرانيت والحجر العريق — أجمل ما تكون بتوقيت واضح وتفاصيل برنامج مؤكدة.»",
+        feat_1_title: "أجواء النيل والتراث",
+        feat_1_desc: "عِش المشهد النهري لأسوان ومعالمها التاريخية المجدولة.",
+        feat_2_title: "مسار حسب البرنامج",
+        feat_2_desc: "تتبع المحطات والمدة والانتقال برنامج أسوان المؤكد لديك.",
+        feat_3_title: "مراجعة واضحة قبل الرحلة",
+        feat_3_desc: "تحقق من التذاكر والانتقالات والوجبات والمواعيد قبل الحجز.",
+        faq_title: "رحلة أسوان – الأسئلة الشائعة",
+        faq_q1: "ما المعابد أو المحطات النيلية المشمولة في رحلة أسوان؟",
+        faq_a1: "تعتمد المواقع المزارة وانتقالات القوارب إلى الجزر والمحطات النهرية على البرنامج المؤكد والظروف المحلية، لذا راجع قائمة المحطات الدقيقة قبل الحجز.",
+        faq_q2: "هل تذاكر الدخول والوجبات مشمولة تلقائيًا؟",
+        faq_a2: "تختلف المشمولات مثل تذاكر المواقع والتنقل بالقارب وخدمات الإرشاد والوجبات حسب البرنامج ويجب تأكيدها قبل الحجز.",
+        cta_title: "خطط لرحلتك إلى أسوان",
+        cta_desc: "تواصل معنا بالتواريخ المفضلة والمدة والمحطات لتأكيد التوافر.",
+        cta_btn: "احجز أو استفسر عن رحلة أسوان",
+        footer_follow: "تابعنا على منصات التواصل الاجتماعي", social_fb: "فيسبوك", social_ig: "إنستغرام"
+      }
+    };
+
+    (function(){
+      const STORAGE_KEY = "atlantis_lang";
+      const supported = Object.keys(TRANSLATIONS);
+      const btns = Array.from(document.querySelectorAll(".lang-btn"));
+
+      function applyLanguage(lang) {
+        const target = supported.includes(lang) ? lang : "en";
+        const dict = TRANSLATIONS[target] || TRANSLATIONS.en;
+
+        document.documentElement.lang = target;
+        document.documentElement.dir = target === "ar" ? "rtl" : "ltr";
+        if (dict.page_title) document.title = dict.page_title;
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (Object.prototype.hasOwnProperty.call(dict, key)) {
+            el.textContent = dict[key];
+          }
+        });
+
+        btns.forEach((b) => {
+          const active = b.getAttribute("data-lang") === target;
+          b.classList.toggle("active", active);
+          b.setAttribute("aria-pressed", active ? "true" : "false");
+        });
+
+        try { localStorage.setItem(STORAGE_KEY, target); } catch (e) {}
+      }
+
+      btns.forEach((btn) => {
+        btn.addEventListener("click", () => applyLanguage(btn.getAttribute("data-lang")));
+      });
+
+      let saved = "en";
+      try { saved = localStorage.getItem(STORAGE_KEY) || "en"; } catch (e) {}
+      applyLanguage(saved);
+    })();
+  </script>
 </body>
 </html>
