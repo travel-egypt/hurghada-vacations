@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Hula Hula Island | Atlantis Tours and Experiences</title>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--navy:#062c43;--deep:#031d30;--blue:#087f9e;--cyan:#16c5ce;--gold:#e8b967;--light:#f2f9fb;--dark:#183344;--muted:#607583;--white:#fff}
+    body{font-family:'DM Sans',Arial,sans-serif;color:#263f4d;background-color:#F1EBDD;line-height:1.78;margin:0}
+    h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;color:var(--navy)}
+    .container{width:90%;max-width:1180px;margin:0 auto}
+    .page-top-bar{background:rgba(3,29,48,.97);padding:16px 0;position:sticky;top:0;z-index:100}
+    .page-top-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .brand-link{color:#fff;text-decoration:none;font-weight:800;font-size:18px}
+    .top-nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+    .top-nav a{color:#e5f2f7;text-decoration:none;font-size:14px;font-weight:600}
+    .top-nav a.book-cta{background:var(--cyan);color:var(--deep);padding:8px 16px;border-radius:24px;font-weight:800}
+    .hula-story{padding:45px 0 75px}
+    .hula-hero{min-height:410px;border-radius:18px;overflow:hidden;display:flex;align-items:flex-end;background:linear-gradient(0deg,rgba(3,29,43,.86),rgba(3,29,43,.14)),url("../assets/images/Hula.jpeg") center/cover no-repeat;box-shadow:0 12px 35px rgba(9,45,70,.16)}
+    .hula-hero-content{padding:clamp(24px,5vw,48px);max-width:780px;color:#fff}
+    .hula-hero h1{color:#fff;font-size:clamp(36px,6vw,64px);line-height:1.08;margin:8px 0 12px}
+    .hula-kicker{display:inline-block;color:#f4c66f;text-transform:uppercase;letter-spacing:2.5px;font-size:12px;font-weight:700}
+    .tour-summary-box{background:#fff;border-radius:16px;padding:28px;margin-top:32px;box-shadow:0 8px 28px rgba(6,44,67,.08)}
+    .tour-meta{display:flex;gap:16px;flex-wrap:wrap;margin:14px 0 20px;font-size:14px;color:var(--navy)}
+    .tour-meta span{background:#f2f9fb;padding:8px 14px;border-radius:10px;border:1px solid #dcebf0}
+    .program-timeline{padding-left:20px;margin:14px 0 22px}
+    .program-timeline li{margin-bottom:10px}
+    .includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;list-style:none;padding:0;margin:12px 0 22px}
+    .includes-grid li{background:#f8fbfc;border:1px solid #e3edf1;padding:10px 14px;border-radius:10px;font-size:14px}
+    .hula-note{background:#fff9ec;border-left:4px solid var(--gold);padding:14px 18px;border-radius:8px;font-size:14px;color:var(--navy);margin-top:14px}
+    .hula-two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin:40px 0}
+    .hula-quote{padding:24px;border-left:4px solid var(--gold);border-radius:10px;background:#f8fbfc;color:var(--navy);font-size:18px;font-style:italic}
+    .hula-videos-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:32px 0}
+    .tour-feature-video{background:#fff;padding:18px;border-radius:16px;box-shadow:0 8px 24px rgba(6,44,67,.06)}
+    .tour-feature-video h4{margin:0 0 10px;font-size:16px}
+    .tour-feature-video video{width:100%;max-height:380px;border-radius:12px;background:#031d30}
+    .hula-gallery-head{text-align:center;margin:48px 0 20px}
+    .hula-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .hula-gallery button{display:block;border:0;padding:0;overflow:hidden;border-radius:12px;background:#e8f0f3;aspect-ratio:4/3;cursor:zoom-in}
+    .hula-gallery img{display:block;width:100%;height:100%;object-fit:cover}
+    .hula-faq{max-width:850px;margin:48px auto}
+    .hula-faq details{border-bottom:1px solid #d5e3e8;padding:15px 4px}
+    .hula-faq summary{color:var(--navy);font-weight:700;cursor:pointer}
+    .hula-final-quote{text-align:center;padding:38px 24px;margin-top:44px;border-radius:16px;background:linear-gradient(120deg,#092d46,#087eaa);color:#fff}
+    .hula-final-quote h2{color:#fff;margin:0 0 10px}
+    .hula-final-quote a{display:inline-block;margin-top:14px;background:var(--gold);color:var(--navy);font-weight:800;padding:12px 24px;border-radius:25px;text-decoration:none}
+    .hula-lightbox{display:none;position:fixed;inset:0;z-index:2000;background:rgba(1,16,27,.94);align-items:center;justify-content:center;padding:20px}
+    .hula-lightbox.open{display:flex}
+    .hula-lightbox-panel{position:relative;max-width:960px;width:100%;background:#062c43;color:#fff;padding:20px;border-radius:16px;text-align:center}
+    .hula-lightbox img{max-width:100%;max-height:72vh;object-fit:contain;border-radius:10px}
+    .lightbox-controls{margin-top:14px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .lightbox-controls button{background:#087f9e;color:#fff;border:0;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:700}
+    @media(max-width:900px){
+      .hula-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media(max-width:800px){
+      .hula-two-col,.hula-videos-grid,.hula-gallery{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header class="page-top-bar">
+    <div class="container page-top-inner">
+      <a class="brand-link" href="../index.html">Atlantis Tours & Experiences</a>
+      <nav class="top-nav">
+        <a href="../index.html">Home</a>
+        <a href="../all-tours.html">All Tours</a>
+        <a href="../hurghada.html">Hurghada Guide</a>
+        <a href="../contact.html">Contact</a>
+        <a class="book-cta" href="../booking.html?tour=Hula+Hula+Island">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hula-story">
+    <div class="container">
+      <section class="hula-hero">
+        <div class="hula-hero-content">
+          <span class="hula-kicker">Island Escape · Red Sea, Egypt</span>
+          <h1>Hula Hula Island</h1>
+          <p>Enjoy Hula Hula’s lively beach-club atmosphere, music and time beside the Red Sea. Any snorkeling stops and the order of activities follow the confirmed daily programme.</p>
+        </div>
+      </section>
+
+      <section class="tour-summary-box">
+        <h2>Trip Overview & Typical Island Day</h2>
+        <div class="tour-meta">
+          <span><strong>Pickup:</strong> Before 09:00 AM (Inside Your Hotel)</span>
+          <span><strong>Departure:</strong> 09:00 AM from Hurghada Marina</span>
+          <span><strong>Return:</strong> Around 04:00 PM to Marina</span>
+          <span><strong>Rate:</strong> Confirmed upon booking inquiry</span>
+        </div>
+
+        <p>We collect you from inside your hotel, take you directly to the marina and boat, then return you to the same hotel after the trip. Your exact pickup time is confirmed according to your hotel location.</p>
+
+        <h3>Your Day at a Glance</h3>
+        <ol class="program-timeline">
+          <li><strong>Before 09:00 AM – Hotel Pickup:</strong> Your day begins with pickup from inside your hotel and a comfortable transfer to the marina.</li>
+          <li><strong>09:00 AM – Boat Departure:</strong> Board the boat and cruise towards the Hula Hula beach destination.</li>
+          <li><strong>First Snorkeling Stop:</strong> Explore a selected Red Sea reef and enjoy the colourful underwater life.</li>
+          <li><strong>Hula Hula Island – Beach Club Atmosphere:</strong> Enjoy the beach, swim in clear water, relax, listen to the atmosphere and take photos. Any organised entertainment depends on the day’s programme.</li>
+          <li><strong>Lunch on Board:</strong> Return to the boat for lunch, with unlimited drinks available throughout the trip.</li>
+          <li><strong>Second Snorkeling Stop:</strong> Enjoy a second reef stop before the return journey, subject to sea conditions.</li>
+          <li><strong>Around 04:00 PM – Return to Marina:</strong> Cruise back to Hurghada Marina. The return time is approximate.</li>
+          <li><strong>Hotel Drop-off:</strong> Our transfer takes you back to the same hotel where the day started.</li>
+        </ol>
+
+        <h3>What is Included</h3>
+        <ul class="includes-grid">
+          <li>Pickup from inside your hotel and return to the same hotel</li>
+          <li>Air-conditioned transfer to and from Hurghada Marina</li>
+          <li>Full-day boat trip</li>
+          <li>Two snorkeling stops</li>
+          <li>Snorkeling equipment</li>
+          <li>Lunch served on board</li>
+          <li>Unlimited drinks throughout the trip</li>
+          <li>Crew assistance during the experience</li>
+        </ul>
+
+        <div class="hula-note">
+          <strong>Important Note:</strong> Hotel pickup, lunch on board, unlimited drinks and two snorkeling stops are included in this programme. Entertainment and beach facilities depend on the day’s operation, and exact timing may change with sea and weather conditions.
+        </div>
+      </section>
+
+      <section class="hula-two-col">
+        <div>
+          <h3>Experience Highlights</h3>
+          <ul class="program-timeline">
+            <li>Boat trip and views of the Red Sea coastline.</li>
+            <li>Time to enjoy the beach environment.</li>
+            <li>Swimming opportunities in suitable areas.</li>
+            <li>Relaxing, photography and enjoying the island atmosphere.</li>
+            <li>Optional water or snorkeling activities if offered in the selected package.</li>
+          </ul>
+        </div>
+        <div class="hula-quote">
+          “A lively Red Sea beach-club day with coastal views, two snorkeling stops, lunch on board, and hotel transfers.”
+        </div>
+      </section>
+
+      <section>
+        <h2>Hula Hula Island Videos</h2>
+        <div class="hula-videos-grid">
+          <div class="tour-feature-video">
+            <h4>Hula Hula Video 1</h4>
+            <video controls playsinline poster="../assets/images/Hula.jpeg" preload="metadata" webkit-playsinline="true">
+              <source src="../assets/videos/Hula.mp4" type="video/mp4"/>
+              Your browser does not support HTML video.
+            </video>
+          </div>
+          <div class="tour-feature-video">
+            <h4>Hula Hula Video 2</h4>
+            <video controls playsinline poster="../assets/images/Hula%20%282%29.jpeg" preload="metadata" webkit-playsinline="true">
+              <source src="../assets/videos/Hula%20%282%29.mp4" type="video/mp4"/>
+              Your browser does not support HTML video.
+            </video>
+          </div>
+          <div class="tour-feature-video">
+            <h4>Hula Hula Video 3</h4>
+            <video controls playsinline poster="../assets/images/Hula%20%283%29.jpeg" preload="metadata" webkit-playsinline="true">
+              <source src="../assets/videos/Hula%20%283%29.mp4" type="video/mp4"/>
+              Your browser does not support HTML video.
+            </video>
+          </div>
+          <div class="tour-feature-video">
+            <h4>Hula Hula Video 4</h4>
+            <video controls playsinline poster="../assets/images/Hula%20%284%29.jpeg" preload="metadata" webkit-playsinline="true">
+              <source src="../assets/videos/Hula%20%284%29.mp4" type="video/mp4"/>
+              Your browser does not support HTML video.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="hula-gallery-head">
+          <h2>Hula Hula Island Photo Gallery</h2>
+          <p>Click any photo to view it larger.</p>
+        </div>
+        <div class="hula-gallery" id="hulaGallery">
+          <button type="button"><img alt="Hula Hula Island photo 1" loading="lazy" src="../assets/images/Hula%20%2810%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 2" loading="lazy" src="../assets/images/Hula%20%2811%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 3" loading="lazy" src="../assets/images/Hula%20%2812%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 4" loading="lazy" src="../assets/images/Hula%20%2813%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 5" loading="lazy" src="../assets/images/Hula%20%2814%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 6" loading="lazy" src="../assets/images/Hula%20%2815%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 7" loading="lazy" src="../assets/images/Hula%20%2816%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 8" loading="lazy" src="../assets/images/Hula%20%2817%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 9" loading="lazy" src="../assets/images/Hula%20%2818%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 10" loading="lazy" src="../assets/images/Hula%20%2819%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 11" loading="lazy" src="../assets/images/Hula%20%282%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 12" loading="lazy" src="../assets/images/Hula%20%2820%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 13" loading="lazy" src="../assets/images/Hula%20%2821%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 14" loading="lazy" src="../assets/images/Hula%20%283%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 15" loading="lazy" src="../assets/images/Hula%20%284%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 16" loading="lazy" src="../assets/images/Hula%20%285%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 17" loading="lazy" src="../assets/images/Hula%20%286%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 18" loading="lazy" src="../assets/images/Hula%20%287%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 19" loading="lazy" src="../assets/images/Hula%20%288%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 20" loading="lazy" src="../assets/images/Hula%20%289%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 21" loading="lazy" src="../assets/images/Hula%282%29.jpeg"/></button>
+          <button type="button"><img alt="Hula Hula Island photo 22" loading="lazy" src="../assets/images/Hula.jpeg"/></button>
+        </div>
+      </section>
+
+      <section class="hula-faq">
+        <h2>Hula Hula Island – Frequently Asked Questions</h2>
+        <details><summary>Are hotel transfers, lunch, and snorkeling stops included?</summary><p>Yes, hotel pickup and return, air-conditioned marina transfers, two snorkeling stops, snorkeling equipment, lunch on board, and unlimited drinks throughout the trip are included in this programme.</p></details>
+        <details><summary>What are the approximate pickup, departure, and return times?</summary><p>Hotel pickup is before 09:00 AM, boat departure is at 09:00 AM from Hurghada Marina, and return to the marina is around 04:00 PM (approximate timing subject to sea and weather conditions).</p></details>
+        <details><summary>Does entertainment and the order of stops stay fixed?</summary><p>Any snorkeling stops, organised entertainment, and the order of activities follow the confirmed daily programme and sea conditions.</p></details>
+      </section>
+
+      <section class="hula-final-quote">
+        <h2>Plan Your Hula Hula Island Day</h2>
+        <p>Full-day Red Sea boat trip with beach time, two snorkeling stops, lunch on board, and hotel pickup.</p>
+        <a href="../booking.html?tour=Hula+Hula+Island">Book or Inquire About Hula Hula</a>
+      </section>
+    </div>
+  </main>
+
+  <div class="hula-lightbox" id="hulaLightbox" aria-hidden="true">
+    <div class="hula-lightbox-panel">
+      <img id="hulaLightboxImg" src="" alt="Enlarged Hula Hula Island photo"/>
+      <div class="lightbox-controls">
+        <button type="button" id="hulaPrevPhoto">Previous</button>
+        <button type="button" id="hulaNextPhoto">Next</button>
+        <button type="button" id="hulaCloseLightbox">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const imgs = Array.from(document.querySelectorAll('#hulaGallery img'));
+      const lightbox = document.getElementById('hulaLightbox');
+      const lightboxImg = document.getElementById('hulaLightboxImg');
+      let current = 0;
+
+      function openAt(idx){
+        current = (idx + imgs.length) % imgs.length;
+        lightboxImg.src = imgs[current].src;
+        lightboxImg.alt = imgs[current].alt;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+      }
+
+      imgs.forEach((img, i) => {
+        img.addEventListener('click', () => openAt(i));
+      });
+
+      document.getElementById('hulaPrevPhoto').addEventListener('click', () => openAt(current - 1));
+      document.getElementById('hulaNextPhoto').addEventListener('click', () => openAt(current + 1));
+      document.getElementById('hulaCloseLightbox').addEventListener('click', () => {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+      });
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.classList.remove('open');
+          lightbox.setAttribute('aria-hidden', 'true');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
