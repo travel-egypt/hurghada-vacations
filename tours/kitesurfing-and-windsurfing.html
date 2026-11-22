@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Kitesurfing & Windsurfing | Atlantis Tours and Experiences</title>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--navy:#062c43;--deep:#031d30;--blue:#087f9e;--cyan:#16c5ce;--gold:#e8b967;--light:#f2f9fb;--dark:#183344;--muted:#607583;--white:#fff}
+    body{font-family:'DM Sans',Arial,sans-serif;color:#263f4d;background-color:#F1EBDD;line-height:1.78;margin:0}
+    h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;color:var(--navy)}
+    .container{width:90%;max-width:1180px;margin:0 auto}
+    .page-top-bar{background:rgba(3,29,48,.97);padding:16px 0;position:sticky;top:0;z-index:100}
+    .page-top-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .brand-link{color:#fff;text-decoration:none;font-weight:800;font-size:18px}
+    .top-nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+    .top-nav a{color:#e5f2f7;text-decoration:none;font-size:14px;font-weight:600}
+    .top-nav a.book-cta{background:var(--cyan);color:var(--deep);padding:8px 16px;border-radius:24px;font-weight:800}
+    .wind-story{padding:45px 0 75px}
+    .wind-hero{min-height:410px;border-radius:18px;overflow:hidden;display:flex;align-items:flex-end;background:linear-gradient(0deg,rgba(3,29,43,.86),rgba(3,29,43,.14)),url("../assets/images/Kitesurfing3.jpeg") center/cover no-repeat;box-shadow:0 12px 35px rgba(9,45,70,.16)}
+    .wind-hero-content{padding:clamp(24px,5vw,48px);max-width:780px;color:#fff}
+    .wind-hero h1{color:#fff;font-size:clamp(34px,5.5vw,58px);line-height:1.1;margin:8px 0 12px}
+    .wind-kicker{display:inline-block;color:#f4c66f;text-transform:uppercase;letter-spacing:2.5px;font-size:12px;font-weight:700}
+    .tour-summary-box{background:#fff;border-radius:16px;padding:28px;margin-top:32px;box-shadow:0 8px 28px rgba(6,44,67,.08)}
+    .tour-meta{display:flex;gap:16px;flex-wrap:wrap;margin:14px 0 20px;font-size:14px;color:var(--navy)}
+    .tour-meta span{background:#f2f9fb;padding:8px 14px;border-radius:10px;border:1px solid #dcebf0}
+    .program-timeline{padding-left:20px;margin:14px 0 22px}
+    .program-timeline li{margin-bottom:10px}
+    .wind-note{background:#fff9ec;border-left:4px solid var(--gold);padding:14px 18px;border-radius:8px;font-size:14px;color:var(--navy);margin-top:14px}
+    .wind-two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch;margin:40px 0}
+    .wind-card{background:#fff;padding:24px;border-radius:14px;border:1px solid #e3edf1;box-shadow:0 6px 20px rgba(6,44,67,.05)}
+    .wind-quote{padding:24px;border-left:4px solid var(--gold);border-radius:10px;background:#f8fbfc;color:var(--navy);font-size:18px;font-style:italic;margin:32px 0}
+    .wind-videos-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:32px 0}
+    .tour-feature-video{background:#fff;padding:18px;border-radius:16px;box-shadow:0 8px 24px rgba(6,44,67,.06)}
+    .tour-feature-video h4{margin:0 0 10px;font-size:16px}
+    .tour-feature-video video{width:100%;max-height:380px;border-radius:12px;background:#031d30}
+    .wind-gallery-head{text-align:center;margin:48px 0 20px}
+    .wind-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .wind-gallery button{display:block;border:0;padding:0;overflow:hidden;border-radius:12px;background:#e8f0f3;aspect-ratio:4/3;cursor:zoom-in}
+    .wind-gallery img{display:block;width:100%;height:100%;object-fit:cover}
+    .wind-faq{max-width:850px;margin:48px auto}
+    .wind-faq details{border-bottom:1px solid #d5e3e8;padding:15px 4px}
+    .wind-faq summary{color:var(--navy);font-weight:700;cursor:pointer}
+    .wind-final-quote{text-align:center;padding:38px 24px;margin-top:44px;border-radius:16px;background:linear-gradient(120deg,#092d46,#087eaa);color:#fff}
+    .wind-final-quote h2{color:#fff;margin:0 0 10px}
+    .wind-final-quote a{display:inline-block;margin-top:14px;background:var(--gold);color:var(--navy);font-weight:800;padding:12px 24px;border-radius:25px;text-decoration:none}
+    .wind-lightbox{display:none;position:fixed;inset:0;z-index:2000;background:rgba(1,16,27,.94);align-items:center;justify-content:center;padding:20px}
+    .wind-lightbox.open{display:flex}
+    .wind-lightbox-panel{position:relative;max-width:960px;width:100%;background:#062c43;color:#fff;padding:20px;border-radius:16px;text-align:center}
+    .wind-lightbox img{max-width:100%;max-height:72vh;object-fit:contain;border-radius:10px}
+    .lightbox-controls{margin-top:14px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .lightbox-controls button{background:#087f9e;color:#fff;border:0;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:700}
+    @media(max-width:800px){
+      .wind-two-col,.wind-videos-grid,.wind-gallery{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header class="page-top-bar">
+    <div class="container page-top-inner">
+      <a class="brand-link" href="../index.html">Atlantis Tours & Experiences</a>
+      <nav class="top-nav">
+        <a href="../index.html">Home</a>
+        <a href="../all-tours.html">All Tours</a>
+        <a href="../hurghada.html">Hurghada Guide</a>
+        <a href="../contact.html">Contact</a>
+        <a class="book-cta" href="../booking.html?tour=Kitesurfing+%26+Windsurfing">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wind-story">
+    <div class="container">
+      <section class="wind-hero">
+        <div class="wind-hero-content">
+          <span class="wind-kicker">Wind & Water Sports · Red Sea, Egypt</span>
+          <h1>Kitesurfing & Windsurfing</h1>
+          <p>Learn or practice kitesurfing and windsurfing on the Red Sea with sessions adapted to your experience level. Instruction, equipment, launch arrangements, and schedules depend on the centre, wind, and safety conditions.</p>
+        </div>
+      </section>
+
+      <section class="tour-summary-box">
+        <h2>Session Overview & General Program</h2>
+        <div class="tour-meta">
+          <span><strong>Category:</strong> Water Sports</span>
+          <span><strong>Activities:</strong> Kitesurfing & Windsurfing</span>
+          <span><strong>Conditions:</strong> Wind, centre, instructor & safety dependent</span>
+          <span><strong>Rate:</strong> Confirmed upon booking inquiry</span>
+        </div>
+
+        <p>Whether you are stepping onto a board for the first time or building consistency on the water, sessions are tailored to your level and the day’s wind and sea conditions in approved water areas.</p>
+
+        <div class="wind-note">
+          <strong>Important Note:</strong> Both kitesurfing and windsurfing depend strongly on wind conditions, instructor availability, and participant ability. No specific learning outcome is guaranteed, and sessions may be adjusted or postponed for safety.
+        </div>
+      </section>
+
+      <section class="wind-two-col">
+        <div class="wind-card">
+          <h3>Kitesurfing Sessions</h3>
+          <ul class="program-timeline">
+            <li>Introduction to kite equipment and safety systems.</li>
+            <li>Beginner instruction or practice for experienced riders.</li>
+            <li>Understanding wind and water conditions.</li>
+            <li>Use of an approved training or riding area.</li>
+          </ul>
+        </div>
+        <div class="wind-card">
+          <h3>Windsurfing Sessions</h3>
+          <ul class="program-timeline">
+            <li>Introduction to the board, sail, and basic techniques.</li>
+            <li>Instruction according to the participant's level.</li>
+            <li>Practice in a suitable water area.</li>
+            <li>Enjoying the sea and wind conditions.</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="wind-quote">
+        “Real Red Sea wind sessions—whether harnessing a kite or a sail—guided by safety briefings, approved riding zones, and the conditions of the day.”
+      </div>
+
+      <section>
+        <h2>Session Video Clips</h2>
+        <div class="wind-videos-grid">
+          <div class="tour-feature-video">
+            <h4>Kitesurfing & Wind Session 1</h4>
+            <video controls playsinline poster="../assets/images/Kitesurfing3.jpeg" preload="metadata" webkit-playsinline="true">
+              <source src="../assets/videos/Kitesurfing1.mp4" type="video/mp4"/>
+              Your browser does not support HTML video.
+            </video>
+          </div>
+          <div class="tour-feature-video">
+            <h4>Kitesurfing & Wind Session 2</h4>
+            <video controls playsinline poster="../assets/images/Kitesurfing4.jpeg" preload="metadata" webkit-playsinline="true">
+              <source src="../assets/videos/Kitesurfing2.mp4" type="video/mp4"/>
+              Your browser does not support HTML video.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wind-gallery-head">
+          <h2>Water Session Photos</h2>
+          <p>Click any photo to view it larger.</p>
+        </div>
+        <div class="wind-gallery" id="windGallery">
+          <button type="button"><img alt="Kitesurfing and windsurfing photo 1" loading="lazy" src="../assets/images/Kitesurfing3.jpeg"/></button>
+          <button type="button"><img alt="Kitesurfing and windsurfing photo 2" loading="lazy" src="../assets/images/Kitesurfing4.jpeg"/></button>
+        </div>
+      </section>
+
+      <section class="wind-faq">
+        <h2>Kitesurfing & Windsurfing – Frequently Asked Questions</h2>
+        <details><summary>Can I book kitesurfing or windsurfing based on my current level?</summary><p>Yes, sessions are arranged for beginners starting with equipment basics as well as riders practicing on the water, subject to instructor availability, wind conditions, and participant suitability.</p></details>
+        <details><summary>Is a specific progress or learning outcome guaranteed?</summary><p>No, wind conditions, instructor availability, and individual ability vary, so no specific learning outcome is guaranteed.</p></details>
+        <details><summary>What happens if wind or sea conditions are not suitable?</summary><p>Instruction, equipment, and launch arrangements depend on the centre, wind, and safety conditions, and sessions may be adjusted or postponed for safety.</p></details>
+      </section>
+
+      <section class="wind-final-quote">
+        <h2>Book or Inquire About Kitesurfing & Windsurfing</h2>
+        <p>Let us know which activity you prefer, your experience level, and your dates to check availability.</p>
+        <a href="../booking.html?tour=Kitesurfing+%26+Windsurfing">Ask About Kitesurfing & Windsurfing</a>
+      </section>
+    </div>
+  </main>
+
+  <div class="wind-lightbox" id="windLightbox" aria-hidden="true">
+    <div class="wind-lightbox-panel">
+      <img id="windLightboxImg" src="" alt="Enlarged water session photo"/>
+      <div class="lightbox-controls">
+        <button type="button" id="windPrevPhoto">Previous</button>
+        <button type="button" id="windNextPhoto">Next</button>
+        <button type="button" id="windCloseLightbox">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const imgs = Array.from(document.querySelectorAll('#windGallery img'));
+      const lightbox = document.getElementById('windLightbox');
+      const lightboxImg = document.getElementById('windLightboxImg');
+      let current = 0;
+
+      function openAt(idx){
+        current = (idx + imgs.length) % imgs.length;
+        lightboxImg.src = imgs[current].src;
+        lightboxImg.alt = imgs[current].alt;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+      }
+
+      imgs.forEach((img, i) => {
+        img.addEventListener('click', () => openAt(i));
+      });
+
+      document.getElementById('windPrevPhoto').addEventListener('click', () => openAt(current - 1));
+      document.getElementById('windNextPhoto').addEventListener('click', () => openAt(current + 1));
+      document.getElementById('windCloseLightbox').addEventListener('click', () => {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+      });
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.classList.remove('open');
+          lightbox.setAttribute('aria-hidden', 'true');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
