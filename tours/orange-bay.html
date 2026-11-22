@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Orange Bay Island Boat Trip | Atlantis Tours and Experiences</title>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--navy:#062c43;--deep:#031d30;--blue:#087f9e;--cyan:#16c5ce;--gold:#e8b967;--light:#f2f9fb;--dark:#183344;--muted:#607583;--white:#fff}
+    body{font-family:'DM Sans',Arial,sans-serif;color:#263f4d;background-color:#F1EBDD;line-height:1.78;margin:0}
+    h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;color:var(--navy)}
+    .container{width:90%;max-width:1180px;margin:0 auto}
+    .page-top-bar{background:rgba(3,29,48,.97);padding:16px 0;position:sticky;top:0;z-index:100}
+    .page-top-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .brand-link{color:#fff;text-decoration:none;font-weight:800;font-size:18px}
+    .top-nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+    .top-nav a{color:#e5f2f7;text-decoration:none;font-size:14px;font-weight:600}
+    .top-nav a.book-cta{background:var(--cyan);color:var(--deep);padding:8px 16px;border-radius:24px;font-weight:800}
+    .orange-bay-story{padding:45px 0 75px}
+    .orange-bay-hero{min-height:410px;border-radius:18px;overflow:hidden;display:flex;align-items:flex-end;background:linear-gradient(0deg,rgba(3,29,43,.86),rgba(3,29,43,.12)),url("../assets/images/IMG-20261117-WA0011.jpg") center/cover no-repeat;box-shadow:0 12px 35px rgba(9,45,70,.16)}
+    .orange-bay-hero-content{padding:clamp(24px,5vw,48px);max-width:780px;color:#fff}
+    .orange-bay-hero h1{color:#fff;font-size:clamp(36px,6vw,64px);line-height:1.08;margin:8px 0 12px}
+    .orange-bay-kicker{display:inline-block;color:#f4c66f;text-transform:uppercase;letter-spacing:2.5px;font-size:12px;font-weight:700}
+    .tour-summary-box{background:#fff;border-radius:16px;padding:28px;margin-top:32px;box-shadow:0 8px 28px rgba(6,44,67,.08)}
+    .tour-meta{display:flex;gap:16px;flex-wrap:wrap;margin:14px 0 20px;font-size:14px;color:var(--navy)}
+    .tour-meta span{background:#f2f9fb;padding:8px 14px;border-radius:10px;border:1px solid #dcebf0}
+    .program-timeline{padding-left:20px;margin:14px 0 22px}
+    .program-timeline li{margin-bottom:10px}
+    .includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;list-style:none;padding:0;margin:12px 0 22px}
+    .includes-grid li{background:#f8fbfc;border:1px solid #e3edf1;padding:10px 14px;border-radius:10px;font-size:14px}
+    .orange-bay-two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin:40px 0}
+    .orange-bay-quote{padding:24px;border-left:4px solid var(--gold);border-radius:10px;background:#f8fbfc;color:var(--navy);font-size:18px;font-style:italic}
+    .orange-bay-features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:24px 0 48px}
+    .orange-bay-feature{padding:20px;border:1px solid #e3edf1;border-radius:13px;background:#fff}
+    .tour-feature-video{background:#fff;padding:22px;border-radius:16px;margin:32px 0;box-shadow:0 8px 24px rgba(6,44,67,.06)}
+    .tour-feature-video video{width:100%;max-height:480px;border-radius:12px;background:#031d30}
+    .orange-bay-gallery-head{text-align:center;margin:48px 0 20px}
+    .orange-bay-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .orange-bay-gallery button{display:block;border:0;padding:0;overflow:hidden;border-radius:12px;background:#e8f0f3;aspect-ratio:4/3;cursor:zoom-in}
+    .orange-bay-gallery img{display:block;width:100%;height:100%;object-fit:cover}
+    .orange-bay-faq{max-width:850px;margin:48px auto}
+    .orange-bay-faq details{border-bottom:1px solid #d5e3e8;padding:15px 4px}
+    .orange-bay-faq summary{color:var(--navy);font-weight:700;cursor:pointer}
+    .orange-bay-final-quote{text-align:center;padding:38px 24px;margin-top:44px;border-radius:16px;background:linear-gradient(120deg,#092d46,#087eaa);color:#fff}
+    .orange-bay-final-quote h2{color:#fff;margin:0 0 10px}
+    .orange-bay-final-quote a{display:inline-block;margin-top:14px;background:var(--gold);color:var(--navy);font-weight:800;padding:12px 24px;border-radius:25px;text-decoration:none}
+    .orange-bay-lightbox{display:none;position:fixed;inset:0;z-index:2000;background:rgba(1,16,27,.94);align-items:center;justify-content:center;padding:20px}
+    .orange-bay-lightbox.open{display:flex}
+    .orange-bay-lightbox-panel{position:relative;max-width:960px;width:100%;background:#062c43;color:#fff;padding:20px;border-radius:16px;text-align:center}
+    .orange-bay-lightbox img{max-width:100%;max-height:72vh;object-fit:contain;border-radius:10px}
+    .lightbox-controls{margin-top:14px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .lightbox-controls button{background:#087f9e;color:#fff;border:0;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:700}
+    @media(max-width:800px){
+      .orange-bay-two-col,.orange-bay-features,.orange-bay-gallery{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header class="page-top-bar">
+    <div class="container page-top-inner">
+      <a class="brand-link" href="../index.html">Atlantis Tours & Experiences</a>
+      <nav class="top-nav">
+        <a href="../index.html">Home</a>
+        <a href="../all-tours.html">All Tours</a>
+        <a href="../hurghada.html">Hurghada Guide</a>
+        <a href="../contact.html">Contact</a>
+        <a class="book-cta" href="../booking.html?tour=Orange+Bay+Island">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="orange-bay-story">
+    <div class="container">
+      <section class="orange-bay-hero">
+        <div class="orange-bay-hero-content">
+          <span class="orange-bay-kicker">A Giftun Island Escape · Hurghada, Egypt</span>
+          <h1>Orange Bay Island Boat Trip</h1>
+          <p>Sail out to the Giftun Islands and spend a full day swimming at Orange Bay’s white sandy beach and shallow turquoise lagoon on comfortable boats, with breakfast and lunch included.</p>
+        </div>
+      </section>
+
+      <section class="tour-summary-box">
+        <h2>Trip Overview & Typical Island Day</h2>
+        <div class="tour-meta">
+          <span><strong>Duration:</strong> 7–8 Hours (Full Day)</span>
+          <span><strong>Departure:</strong> Hurghada Marina</span>
+          <span><strong>Reference Rate:</strong> From €26.44 / $28 (confirm current Atlantis rate)</span>
+        </div>
+
+        <p>Sail out to Mahmya and Giftun / Orange Bay’s white sandy beaches and clear turquoise water on comfortable boats, with morning hotel pickup, breakfast and lunch included, and return before sunset.</p>
+
+        <h3>Your Day at a Glance</h3>
+        <ol class="program-timeline">
+          <li><strong>Morning – Hotel Pickup:</strong> Collect you from inside your hotel and transfer directly to Hurghada Marina.</li>
+          <li><strong>09:00 AM – Board & Sail:</strong> Board the boat at Hurghada Marina and cruise across the Red Sea toward Giftun & Orange Bay.</li>
+          <li><strong>First Snorkeling Stop:</strong> Snorkel and swim over Red Sea coral reefs.</li>
+          <li><strong>Orange Bay Island:</strong> Enjoy the white sandy beach, shallow turquoise lagoon, swimming, and relaxation.</li>
+          <li><strong>Breakfast & Lunch on Board:</strong> Breakfast and lunch served on board, with unlimited drinks throughout the trip.</li>
+          <li><strong>Second Snorkeling Stop:</strong> Additional snorkeling stop at a reef selected by the crew.</li>
+          <li><strong>Around 04:00 PM – Return to Marina:</strong> Cruise back to Hurghada Marina before sunset.</li>
+          <li><strong>Before Sunset – Hotel Drop-off:</strong> Return to your hotel.</li>
+        </ol>
+
+        <h3>What is Included</h3>
+        <ul class="includes-grid">
+          <li>Morning hotel pickup and return drop-off before sunset</li>
+          <li>Transfer to and from Hurghada Marina</li>
+          <li>Full-day boat trip (approx. 7–8 hours)</li>
+          <li>Breakfast and lunch on board</li>
+          <li>Unlimited drinks throughout the trip</li>
+          <li>Snorkeling stops and equipment (per programme)</li>
+        </ul>
+      </section>
+
+      <section class="orange-bay-two-col">
+        <div>
+          <h3>More Than a Beautiful Photograph</h3>
+          <p>Orange Bay is more than a beautiful photograph. It is a day made of little moments that become lasting memories. Walk along the pier, look into the clear water, feel the warm sand, and take in the open Red Sea around you.</p>
+          <p>Find a quiet spot to relax, enjoy the sunshine, or step into the water where swimming is permitted and sea conditions are suitable.</p>
+        </div>
+        <div class="orange-bay-quote">
+          “Sometimes the best journeys are not about going far away. They are about finding a place where you can slow down, breathe deeply and enjoy being there.”
+        </div>
+      </section>
+
+      <section class="orange-bay-two-col">
+        <div>
+          <h3>Beneath the Surface</h3>
+          <p>The waters around Giftun Island are part of the remarkable Red Sea marine environment. Snorkeling stops offer a chance to discover coral formations and colourful fish while following crew safety instructions and local reef-protection guidance.</p>
+        </div>
+        <div>
+          <h3>A Day for Everyone</h3>
+          <p>Ideal for families, friends, couples, or solo travellers looking to unwind by the water, capture memorable photos, and enjoy an easy island escape from Hurghada.</p>
+        </div>
+      </section>
+
+      <section class="tour-feature-video">
+        <h3>Orange Bay Video Experience</h3>
+        <video controls playsinline poster="../assets/images/IMG-20261117-WA0011.jpg" preload="metadata" webkit-playsinline="true">
+          <source src="../assets/videos/Orange.mp4" type="video/mp4"/>
+          Your browser does not support HTML video.
+        </video>
+      </section>
+
+      <section>
+        <div class="orange-bay-gallery-head">
+          <h2>Why Visit Orange Bay?</h2>
+          <p>Turquoise sea views, sandy beaches, snorkeling stops, and relaxed island time.</p>
+        </div>
+        <div class="orange-bay-features">
+          <div class="orange-bay-feature"><h4>Turquoise Sea Views</h4><p>Enjoy the changing shades of blue and clear water around Giftun and Orange Bay.</p></div>
+          <div class="orange-bay-feature"><h4>Sandy Beach Time</h4><p>Relax by the shoreline, feel the warm sand, and enjoy the island atmosphere.</p></div>
+          <div class="orange-bay-feature"><h4>Snorkeling & Meals</h4><p>Enjoy reef stops plus breakfast, lunch, and unlimited drinks on board.</p></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="orange-bay-gallery-head">
+          <h2>Moments from Orange Bay</h2>
+          <p>Click any photo to view it larger.</p>
+        </div>
+        <div class="orange-bay-gallery" id="orangeGallery">
+          <button type="button"><img alt="Orange Bay photo 1" loading="lazy" src="../assets/images/IMG-20261117-WA0011.jpg"/></button>
+          <button type="button"><img alt="Orange Bay photo 2" loading="lazy" src="../assets/images/IMG-20261117-WA0012.jpg"/></button>
+          <button type="button"><img alt="Orange Bay photo 3" loading="lazy" src="../assets/images/IMG-20261117-WA0013(1).jpg"/></button>
+          <button type="button"><img alt="Orange Bay photo 4" loading="lazy" src="../assets/images/IMG-20261117-WA0013.jpg"/></button>
+          <button type="button"><img alt="Orange Bay photo 5" loading="lazy" src="../assets/images/IMG-20261117-WA0014.jpg"/></button>
+          <button type="button"><img alt="Orange Bay photo 6" loading="lazy" src="../assets/images/IMG-20261117-WA0015(1).jpg"/></button>
+          <button type="button"><img alt="Orange Bay photo 7" loading="lazy" src="../assets/images/IMG-20261117-WA0015.jpg"/></button>
+          <button type="button"><img alt="Orange Bay photo 8" loading="lazy" src="../assets/images/IMG-20261117-WA0016.jpg"/></button>
+          <button type="button"><img alt="Orange Bay photo 9" loading="lazy" src="../assets/images/IMG-20261117-WA0017(1).jpg"/></button>
+          <button type="button"><img alt="Orange Bay photo 10" loading="lazy" src="../assets/images/IMG-20261117-WA0017.jpg"/></button>
+          <button type="button"><img alt="Orange Bay photo 11" loading="lazy" src="../assets/images/IMG-20261117-WA0018.jpg"/></button>
+        </div>
+      </section>
+
+      <section class="orange-bay-faq">
+        <h2>Orange Bay – Frequently Asked Questions</h2>
+        <details><summary>Where is Orange Bay located?</summary><p>Orange Bay is a beach destination on Giftun Island, off the coast of Hurghada in the Red Sea, Egypt.</p></details>
+        <details><summary>How do visitors get to Orange Bay?</summary><p>Guests are picked up from their hotel in the morning, transferred to Hurghada Marina, and sail by boat to the Giftun / Orange Bay area, returning before sunset.</p></details>
+        <details><summary>Are meals and drinks included?</summary><p>Yes, breakfast and lunch on board along with unlimited drinks throughout the trip are included in the programme.</p></details>
+        <details><summary>What should I bring?</summary><p>Bring swimwear, a towel, sunscreen, sunglasses, a hat, and a camera or phone for photos.</p></details>
+      </section>
+
+      <section class="orange-bay-final-quote">
+        <h2>Take the Feeling Home With You</h2>
+        <p>Orange Bay is not just a place you visit; it is a feeling you take home with you.</p>
+        <a href="../booking.html?tour=Orange+Bay+Island">Ask About the Orange Bay Trip</a>
+      </section>
+    </div>
+  </main>
+
+  <div class="orange-bay-lightbox" id="orangeLightbox" aria-hidden="true">
+    <div class="orange-bay-lightbox-panel">
+      <img id="lightboxImg" src="" alt="Enlarged Orange Bay photo"/>
+      <div class="lightbox-controls">
+        <button type="button" id="prevPhoto">Previous</button>
+        <button type="button" id="nextPhoto">Next</button>
+        <button type="button" id="closeLightbox">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const imgs = Array.from(document.querySelectorAll('#orangeGallery img'));
+      const lightbox = document.getElementById('orangeLightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      let current = 0;
+
+      function openAt(idx){
+        current = (idx + imgs.length) % imgs.length;
+        lightboxImg.src = imgs[current].src;
+        lightboxImg.alt = imgs[current].alt;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+      }
+
+      imgs.forEach((img, i) => {
+        img.addEventListener('click', () => openAt(i));
+      });
+
+      document.getElementById('prevPhoto').addEventListener('click', () => openAt(current - 1));
+      document.getElementById('nextPhoto').addEventListener('click', () => openAt(current + 1));
+      document.getElementById('closeLightbox').addEventListener('click', () => {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+      });
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.classList.remove('open');
+          lightbox.setAttribute('aria-hidden', 'true');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
