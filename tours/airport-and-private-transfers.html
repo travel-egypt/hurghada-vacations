@@ -7,33 +7,40 @@
   <link href="../css/style.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
   <style>
     :root{--navy:#062c43;--deep:#031d30;--blue:#087f9e;--cyan:#16c5ce;--gold:#e8b967;--light:#f2f9fb;--dark:#183344;--muted:#607583;--white:#fff}
     body{font-family:'DM Sans',Arial,sans-serif;color:#263f4d;background-color:#F1EBDD;line-height:1.78;margin:0}
+    html[dir="rtl"] body{font-family:'Cairo','DM Sans',Arial,sans-serif}
     h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;color:var(--navy)}
+    html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] h4{font-family:'Cairo','Playfair Display',Georgia,serif}
     .container{width:90%;max-width:1180px;margin:0 auto}
-    .page-top-bar{background:rgba(3,29,48,.97);padding:16px 0;position:sticky;top:0;z-index:100}
-    .page-top-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .page-top-bar{background:rgba(3,29,48,.97);padding:14px 0;position:sticky;top:0;z-index:100}
+    .page-top-inner{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
     .brand-link{color:#fff;text-decoration:none;font-weight:800;font-size:18px}
-    .top-nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+    .top-nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
     .top-nav a{color:#e5f2f7;text-decoration:none;font-size:14px;font-weight:600}
     .top-nav a.book-cta{background:var(--cyan);color:var(--deep);padding:8px 16px;border-radius:24px;font-weight:800}
+    .lang-switcher{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+    .lang-btn{background:rgba(255,255,255,.1);color:#e5f2f7;border:1px solid rgba(255,255,255,.22);padding:4px 9px;border-radius:6px;font-size:12px;font-weight:700;cursor:pointer;transition:.2s}
+    .lang-btn:hover{background:rgba(22,197,206,.25)}
+    .lang-btn.active{background:var(--gold);color:var(--navy);border-color:var(--gold)}
     .tr-story{padding:45px 0 75px}
     .tr-hero{min-height:410px;border-radius:18px;overflow:hidden;display:flex;align-items:flex-end;background:linear-gradient(0deg,rgba(3,29,43,.86),rgba(3,29,43,.14)),url("https://www.deluxetravelegypt.com/wp-content/uploads/2026/10/private-transfer-red-sea-road-700x500.jpg") center/cover no-repeat;box-shadow:0 12px 35px rgba(9,45,70,.16)}
     .tr-hero-content{padding:clamp(24px,5vw,48px);max-width:780px;color:#fff}
     .tr-hero h1{color:#fff;font-size:clamp(34px,5.5vw,58px);line-height:1.1;margin:8px 0 12px}
     .tr-kicker{display:inline-block;color:#f4c66f;text-transform:uppercase;letter-spacing:2.5px;font-size:12px;font-weight:700}
+    html[dir="rtl"] .tr-kicker{letter-spacing:0}
     .tour-summary-box{background:#fff;border-radius:16px;padding:28px;margin-top:32px;box-shadow:0 8px 28px rgba(6,44,67,.08)}
     .tour-meta{display:flex;gap:16px;flex-wrap:wrap;margin:14px 0 20px;font-size:14px;color:var(--navy)}
     .tour-meta span{background:#f2f9fb;padding:8px 14px;border-radius:10px;border:1px solid #dcebf0}
-    .program-timeline{padding-left:20px;margin:14px 0 22px}
+    .program-timeline{padding-inline-start:20px;margin:14px 0 22px}
     .program-timeline li{margin-bottom:10px}
     .includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;list-style:none;padding:0;margin:12px 0 22px}
     .includes-grid li{background:#f8fbfc;border:1px solid #e3edf1;padding:10px 14px;border-radius:10px;font-size:14px}
-    .tr-note{background:#fff9ec;border-left:4px solid var(--gold);padding:14px 18px;border-radius:8px;font-size:14px;color:var(--navy);margin-top:14px}
+    .tr-note{background:#fff9ec;border-inline-start:4px solid var(--gold);padding:14px 18px;border-radius:8px;font-size:14px;color:var(--navy);margin-top:14px}
     .tr-two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin:40px 0}
-    .tr-quote{padding:24px;border-left:4px solid var(--gold);border-radius:10px;background:#f8fbfc;color:var(--navy);font-size:18px;font-style:italic}
+    .tr-quote{padding:24px;border-inline-start:4px solid var(--gold);border-radius:10px;background:#f8fbfc;color:var(--navy);font-size:18px;font-style:italic}
     .tr-features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:24px 0 48px}
     .tr-feature{padding:20px;border:1px solid #e3edf1;border-radius:13px;background:#fff}
     .tr-faq{max-width:850px;margin:48px auto}
@@ -42,22 +49,39 @@
     .tr-final-quote{text-align:center;padding:38px 24px;margin-top:44px;border-radius:16px;background:linear-gradient(120deg,#092d46,#087eaa);color:#fff}
     .tr-final-quote h2{color:#fff;margin:0 0 10px}
     .tr-final-quote a{display:inline-block;margin-top:14px;background:var(--gold);color:var(--navy);font-weight:800;padding:12px 24px;border-radius:25px;text-decoration:none}
+    .site-footer{background:var(--deep);color:#d7e8ef;padding:34px 0;margin-top:52px;font-size:14px}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .social-links{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .social-link{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);color:#fff;text-decoration:none;font-weight:700;font-size:13px;border:1px solid rgba(255,255,255,.16);transition:.2s}
+    .social-link:hover{background:var(--cyan);color:var(--deep);border-color:var(--cyan)}
+    .social-link svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
     @media(max-width:800px){
       .tr-two-col,.tr-features{grid-template-columns:1fr}
+      .footer-inner{flex-direction:column;text-align:center}
     }
   </style>
 </head>
 <body>
   <header class="page-top-bar">
     <div class="container page-top-inner">
-      <a class="brand-link" href="../index.html">Atlantis Tours &amp; Experiences</a>
+      <a class="brand-link" href="../index.html" data-i18n="brand">Atlantis Tours &amp; Experiences</a>
       <nav class="top-nav">
-        <a href="../index.html">Home</a>
-        <a href="../all-tours.html">All Tours</a>
-        <a href="../hurghada.html">Hurghada Guide</a>
-        <a href="../contact.html">Contact</a>
-        <a class="book-cta" href="../booking.html?tour=Airport+%26+Private+Transfers">Book Now</a>
+        <a href="../index.html" data-i18n="nav_home">Home</a>
+        <a href="../all-tours.html" data-i18n="nav_tours">All Tours</a>
+        <a href="../hurghada.html" data-i18n="nav_guide">Hurghada Guide</a>
+        <a href="../contact.html" data-i18n="nav_contact">Contact</a>
+        <a class="book-cta" href="../booking.html?tour=Airport+%26+Private+Transfers" data-i18n="nav_book">Book Now</a>
       </nav>
+      <div class="lang-switcher" aria-label="Language switcher">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="de">DE</button>
+        <button type="button" class="lang-btn" data-lang="ru">RU</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="pl">PL</button>
+        <button type="button" class="lang-btn" data-lang="ar">AR</button>
+      </div>
     </div>
   </header>
 
@@ -65,74 +89,519 @@
     <div class="container">
       <section class="tr-hero">
         <div class="tr-hero-content">
-          <span class="tr-kicker">Airport, Hotel &amp; Intercity Transport · Red Sea</span>
-          <h1>Airport &amp; Private Transfers</h1>
-          <p>Arrange point-to-point vehicle transfers between Hurghada Airport, hotels, and Red Sea or regional destinations according to your flight, route, and vehicle choice.</p>
+          <span class="tr-kicker" data-i18n="kicker">Airport, Hotel &amp; Intercity Transport · Red Sea</span>
+          <h1 data-i18n="hero_title">Airport &amp; Private Transfers</h1>
+          <p data-i18n="hero_desc">Arrange point-to-point vehicle transfers between Hurghada Airport, hotels, and Red Sea or regional destinations according to your flight, route, and vehicle choice.</p>
         </div>
       </section>
 
       <section class="tour-summary-box">
-        <h2>Transfer Overview &amp; General Operating Program</h2>
+        <h2 data-i18n="overview_title">Transfer Overview &amp; General Operating Program</h2>
         <div class="tour-meta">
-          <span><strong>Category:</strong> Airport &amp; Point-to-Point Transfers</span>
-          <span><strong>Routes:</strong> Hurghada Airport, Hotels &amp; Red Sea / Regional Stops</span>
-          <span><strong>Options:</strong> Private Car, Van/Minibus or Confirmed Arrangement</span>
-          <span><strong>Rate:</strong> Confirmed upon booking inquiry</span>
+          <span><strong data-i18n="meta_cat_label">Category:</strong> <span data-i18n="meta_cat_val">Airport &amp; Point-to-Point Transfers</span></span>
+          <span><strong data-i18n="meta_routes_label">Routes:</strong> <span data-i18n="meta_routes_val">Hurghada Airport, Hotels &amp; Red Sea / Regional Stops</span></span>
+          <span><strong data-i18n="meta_opts_label">Options:</strong> <span data-i18n="meta_opts_val">Private Car, Van/Minibus or Confirmed Arrangement</span></span>
+          <span><strong data-i18n="meta_rate_label">Rate:</strong> <span data-i18n="meta_rate_val">Confirmed upon booking inquiry</span></span>
         </div>
 
-        <p>Transfer services in Hurghada and the Red Sea area cover airport arrivals and departures, hotel-to-hotel or resort transfers, and point-to-point road transport based on pickup address, drop-off location, passenger count, luggage volume, and confirmed timing.</p>
+        <p data-i18n="overview_p">Transfer services in Hurghada and the Red Sea area cover airport arrivals and departures, hotel-to-hotel or resort transfers, and point-to-point road transport based on pickup address, drop-off location, passenger count, luggage volume, and confirmed timing.</p>
 
         <ul class="program-timeline">
-          <li><strong>Route &amp; Schedule Confirmation:</strong> Share pickup point, drop-off destination, passenger count, luggage needs, and flight or departure details in advance.</li>
-          <li><strong>Pickup &amp; Meeting Point:</strong> Meet at the agreed airport meeting point or hotel entrance/pickup spot according to your confirmed schedule.</li>
-          <li><strong>Road Transfer:</strong> Travel along the route to your destination, allowing buffer time for traffic, airport procedures, or road conditions.</li>
-          <li><strong>Drop-Off:</strong> Arrive at your hotel, airport terminal, or agreed drop-off point.</li>
+          <li><strong data-i18n="prog_1_title">Route &amp; Schedule Confirmation:</strong> <span data-i18n="prog_1_desc">Share pickup point, drop-off destination, passenger count, luggage needs, and flight or departure details in advance.</span></li>
+          <li><strong data-i18n="prog_2_title">Pickup &amp; Meeting Point:</strong> <span data-i18n="prog_2_desc">Meet at the agreed airport meeting point or hotel entrance/pickup spot according to your confirmed schedule.</span></li>
+          <li><strong data-i18n="prog_3_title">Road Transfer:</strong> <span data-i18n="prog_3_desc">Travel along the route to your destination, allowing buffer time for traffic, airport procedures, or road conditions.</span></li>
+          <li><strong data-i18n="prog_4_title">Drop-Off:</strong> <span data-i18n="prog_4_desc">Arrive at your hotel, airport terminal, or agreed drop-off point.</span></li>
         </ul>
 
-        <h3>What to Confirm Before Booking</h3>
+        <h3 data-i18n="confirm_title">What to Confirm Before Booking</h3>
         <ul class="includes-grid">
-          <li>Exact pickup and drop-off locations (hotel/resort name or airport/route)</li>
-          <li>Flight number, arrival/departure time, or required pickup time</li>
-          <li>Number of passengers, luggage pieces, and vehicle size needed</li>
-          <li>One-way or round-trip option, waiting rules, and confirmed rate</li>
+          <li data-i18n="inc_1">Exact pickup and drop-off locations (hotel/resort name or airport/route)</li>
+          <li data-i18n="inc_2">Flight number, arrival/departure time, or required pickup time</li>
+          <li data-i18n="inc_3">Number of passengers, luggage pieces, and vehicle size needed</li>
+          <li data-i18n="inc_4">One-way or round-trip option, waiting rules, and confirmed rate</li>
         </ul>
 
         <div class="tr-note">
-          <strong>Important Note:</strong> Travel times, pickup schedules, and arrival windows depend on traffic, road conditions, airport/security checkpoints, flight delays or schedule changes, and confirmed booking details.
+          <strong data-i18n="note_label">Important Note:</strong> <span data-i18n="note_text">Travel times, pickup schedules, and arrival windows depend on traffic, road conditions, airport/security checkpoints, flight delays or schedule changes, and confirmed booking details.</span>
         </div>
       </section>
 
       <section class="tr-two-col">
         <div>
-          <h3>Clear Pickup Details &amp; Realistic Buffers</h3>
-          <p>Smooth airport and point-to-point transfers start with accurate hotel or flight details and sensible travel buffers before departure or flight check-in.</p>
-          <p>Confirm vehicle capacity and luggage space upfront if travelling with families or extra bags.</p>
+          <h3 data-i18n="why_title">Clear Pickup Details &amp; Realistic Buffers</h3>
+          <p data-i18n="why_p1">Smooth airport and point-to-point transfers start with accurate hotel or flight details and sensible travel buffers before departure or flight check-in.</p>
+          <p data-i18n="why_p2">Confirm vehicle capacity and luggage space upfront if travelling with families or extra bags.</p>
         </div>
-        <div class="tr-quote">
+        <div class="tr-quote" data-i18n="quote_text">
           “Reliable point-to-point transfers come down to clear pickup points, accurate timing, and realistic road buffers.”
         </div>
       </section>
 
       <section>
         <div class="tr-features">
-          <div class="tr-feature"><h4>Airport &amp; Hotel Routes</h4><p>Coordinate transfers between Hurghada Airport, hotels, and Red Sea stops.</p></div>
-          <div class="tr-feature"><h4>Vehicle &amp; Luggage Fit</h4><p>Match vehicle size and seating to your group and luggage count.</p></div>
-          <div class="tr-feature"><h4>Confirmed Rate &amp; Timing</h4><p>Verify route, pickup time, and one-way or round-trip terms in advance.</p></div>
+          <div class="tr-feature"><h4 data-i18n="feat_1_title">Airport &amp; Hotel Routes</h4><p data-i18n="feat_1_desc">Coordinate transfers between Hurghada Airport, hotels, and Red Sea stops.</p></div>
+          <div class="tr-feature"><h4 data-i18n="feat_2_title">Vehicle &amp; Luggage Fit</h4><p data-i18n="feat_2_desc">Match vehicle size and seating to your group and luggage count.</p></div>
+          <div class="tr-feature"><h4 data-i18n="feat_3_title">Confirmed Rate &amp; Timing</h4><p data-i18n="feat_3_desc">Verify route, pickup time, and one-way or round-trip terms in advance.</p></div>
         </div>
       </section>
 
       <section class="tr-faq">
-        <h2>Airport &amp; Private Transfers – Frequently Asked Questions</h2>
-        <details><summary>How is the transfer rate and vehicle type determined?</summary><p>Rates and vehicle options depend on pickup and drop-off locations, distance, one-way or round-trip selection, passenger count, and luggage needs, and are confirmed upon inquiry.</p></details>
-        <details><summary>What if my flight is delayed or road traffic is heavy?</summary><p>Flight changes, airport procedures, and road traffic can affect timing; share flight details in advance and allow extra buffer time for airport departures.</p></details>
+        <h2 data-i18n="faq_title">Airport &amp; Private Transfers – Frequently Asked Questions</h2>
+        <details><summary data-i18n="faq_q1">How is the transfer rate and vehicle type determined?</summary><p data-i18n="faq_a1">Rates and vehicle options depend on pickup and drop-off locations, distance, one-way or round-trip selection, passenger count, and luggage needs, and are confirmed upon inquiry.</p></details>
+        <details><summary data-i18n="faq_q2">What if my flight is delayed or road traffic is heavy?</summary><p data-i18n="faq_a2">Flight changes, airport procedures, and road traffic can affect timing; share flight details in advance and allow extra buffer time for airport departures.</p></details>
       </section>
 
       <section class="tr-final-quote">
-        <h2>Book or Inquire About a Transfer</h2>
-        <p>Send your pickup location, destination, date, time or flight details, and group size to confirm availability.</p>
-        <a href="../booking.html?tour=Airport+%26+Private+Transfers">Book or Inquire About Transfer</a>
+        <h2 data-i18n="cta_title">Book or Inquire About a Transfer</h2>
+        <p data-i18n="cta_desc">Send your pickup location, destination, date, time or flight details, and group size to confirm availability.</p>
+        <a href="../booking.html?tour=Airport+%26+Private+Transfers" data-i18n="cta_btn">Book or Inquire About Transfer</a>
       </section>
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong data-i18n="brand">Atlantis Tours &amp; Experiences</strong> · <span data-i18n="footer_follow">Follow us on social media</span>
+      </div>
+      <div class="social-links" aria-label="Social media links">
+        <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99h-2.3V12h2.3V9.8c0-2.27 1.35-3.52 3.42-3.52.99 0 2.03.18 2.03.18v2.23h-1.14c-1.13 0-1.48.7-1.48 1.42V12h2.52l-.4 2.89h-2.12v6.99A10 10 0 0 0 22 12z"/></svg>
+          <span data-i18n="social_fb">Facebook</span>
+        </a>
+        <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm8.75 2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/></svg>
+          <span data-i18n="social_ig">Instagram</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const TRANSLATIONS = {
+      en: {
+        page_title: "Airport & Private Transfers | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Home", nav_tours: "All Tours", nav_guide: "Hurghada Guide", nav_contact: "Contact", nav_book: "Book Now",
+        kicker: "Airport, Hotel & Intercity Transport · Red Sea",
+        hero_title: "Airport & Private Transfers",
+        hero_desc: "Arrange point-to-point vehicle transfers between Hurghada Airport, hotels, and Red Sea or regional destinations according to your flight, route, and vehicle choice.",
+        overview_title: "Transfer Overview & General Operating Program",
+        meta_cat_label: "Category:", meta_cat_val: "Airport & Point-to-Point Transfers",
+        meta_routes_label: "Routes:", meta_routes_val: "Hurghada Airport, Hotels & Red Sea / Regional Stops",
+        meta_opts_label: "Options:", meta_opts_val: "Private Car, Van/Minibus or Confirmed Arrangement",
+        meta_rate_label: "Rate:", meta_rate_val: "Confirmed upon booking inquiry",
+        overview_p: "Transfer services in Hurghada and the Red Sea area cover airport arrivals and departures, hotel-to-hotel or resort transfers, and point-to-point road transport based on pickup address, drop-off location, passenger count, luggage volume, and confirmed timing.",
+        prog_1_title: "Route & Schedule Confirmation:",
+        prog_1_desc: "Share pickup point, drop-off destination, passenger count, luggage needs, and flight or departure details in advance.",
+        prog_2_title: "Pickup & Meeting Point:",
+        prog_2_desc: "Meet at the agreed airport meeting point or hotel entrance/pickup spot according to your confirmed schedule.",
+        prog_3_title: "Road Transfer:",
+        prog_3_desc: "Travel along the route to your destination, allowing buffer time for traffic, airport procedures, or road conditions.",
+        prog_4_title: "Drop-Off:",
+        prog_4_desc: "Arrive at your hotel, airport terminal, or agreed drop-off point.",
+        confirm_title: "What to Confirm Before Booking",
+        inc_1: "Exact pickup and drop-off locations (hotel/resort name or airport/route)",
+        inc_2: "Flight number, arrival/departure time, or required pickup time",
+        inc_3: "Number of passengers, luggage pieces, and vehicle size needed",
+        inc_4: "One-way or round-trip option, waiting rules, and confirmed rate",
+        note_label: "Important Note:",
+        note_text: "Travel times, pickup schedules, and arrival windows depend on traffic, road conditions, airport/security checkpoints, flight delays or schedule changes, and confirmed booking details.",
+        why_title: "Clear Pickup Details & Realistic Buffers",
+        why_p1: "Smooth airport and point-to-point transfers start with accurate hotel or flight details and sensible travel buffers before departure or flight check-in.",
+        why_p2: "Confirm vehicle capacity and luggage space upfront if travelling with families or extra bags.",
+        quote_text: "“Reliable point-to-point transfers come down to clear pickup points, accurate timing, and realistic road buffers.”",
+        feat_1_title: "Airport & Hotel Routes",
+        feat_1_desc: "Coordinate transfers between Hurghada Airport, hotels, and Red Sea stops.",
+        feat_2_title: "Vehicle & Luggage Fit",
+        feat_2_desc: "Match vehicle size and seating to your group and luggage count.",
+        feat_3_title: "Confirmed Rate & Timing",
+        feat_3_desc: "Verify route, pickup time, and one-way or round-trip terms in advance.",
+        faq_title: "Airport & Private Transfers – Frequently Asked Questions",
+        faq_q1: "How is the transfer rate and vehicle type determined?",
+        faq_a1: "Rates and vehicle options depend on pickup and drop-off locations, distance, one-way or round-trip selection, passenger count, and luggage needs, and are confirmed upon inquiry.",
+        faq_q2: "What if my flight is delayed or road traffic is heavy?",
+        faq_a2: "Flight changes, airport procedures, and road traffic can affect timing; share flight details in advance and allow extra buffer time for airport departures.",
+        cta_title: "Book or Inquire About a Transfer",
+        cta_desc: "Send your pickup location, destination, date, time or flight details, and group size to confirm availability.",
+        cta_btn: "Book or Inquire About Transfer",
+        footer_follow: "Follow us on social media", social_fb: "Facebook", social_ig: "Instagram"
+      },
+      de: {
+        page_title: "Flughafen- & Privattransfers | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Startseite", nav_tours: "Alle Touren", nav_guide: "Hurghada Guide", nav_contact: "Kontakt", nav_book: "Jetzt buchen",
+        kicker: "Flughafen-, Hotel- & Überlandtransfer · Rotes Meer",
+        hero_title: "Flughafen- & Privattransfers",
+        hero_desc: "Organisieren Sie Direkttransfers zwischen dem Flughafen Hurghada, Hotels sowie Zielen am Roten Meer oder in der Region – passend zu Flug, Route und Fahrzeugwahl.",
+        overview_title: "Transferübersicht & Allgemeiner Ablauf",
+        meta_cat_label: "Kategorie:", meta_cat_val: "Flughafen- & Direkttransfers",
+        meta_routes_label: "Strecken:", meta_routes_val: "Flughafen Hurghada, Hotels & Rotes Meer / Regionale Ziele",
+        meta_opts_label: "Optionen:", meta_opts_val: "Privatwagen, Van/Minibus oder bestätigte Vereinbarung",
+        meta_rate_label: "Preis:", meta_rate_val: "Bestätigung bei Buchungsanfrage",
+        overview_p: "Transfers in Hurghada und am Roten Meer umfassen Flughafentransfers bei Ankunft und Abreise, Hotel-zu-Hotel- oder Resort-Transfers sowie Direktfahrten auf der Straße anhand von Abholadresse, Zielort, Personenzahl, Gepäckmenge und bestätigter Zeit.",
+        prog_1_title: "Strecken- & Zeitbestätigung:",
+        prog_1_desc: "Teilen Sie Abholort, Ziel, Personenzahl, Gepäckbedarf sowie Flug- oder Abfahrtsdaten im Voraus mit.",
+        prog_2_title: "Abholung & Treffpunkt:",
+        prog_2_desc: "Treffen am vereinbarten Treffpunkt am Flughafen oder am Hoteleingang / Abholpunkt gemäß bestätigtem Zeitplan.",
+        prog_3_title: "Fahrt auf der Straße:",
+        prog_3_desc: "Fahrt zum Ziel mit eingeplantem Zeitpuffer für Verkehr, Flughafenabläufe oder Straßenverhältnisse.",
+        prog_4_title: "Ankunft / Ausstieg:",
+        prog_4_desc: "Ankunft am Hotel, Flughafen-Terminal oder vereinbarten Zielpunkt.",
+        confirm_title: "Was vor der Buchung bestätigt werden sollte",
+        inc_1: "Genauer Abhol- und Zielort (Hotel-/Resortname oder Flughafen/Strecke)",
+        inc_2: "Flugnummer, Ankunfts-/Abflugzeit oder gewünschte Abholzeit",
+        inc_3: "Anzahl der Fahrgäste, Gepäckstücke und benötigte Fahrzeuggröße",
+        inc_4: "Einfache Fahrt oder Hin- und Rückfahrt, Wartezeiten und bestätigter Preis",
+        note_label: "Wichtiger Hinweis:",
+        note_text: "Fahrzeiten, Abholpläne und Ankunftsfenster hängen von Verkehr, Straßenverhältnissen, Flughafen-/Sicherheitskontrollen, Flugverspätungen oder Planänderungen sowie den bestätigten Buchungsdaten ab.",
+        why_title: "Klare Abholdetails & realistische Puffer",
+        why_p1: "Reibungslose Flughafen- und Direkttransfers beginnen mit genauen Hotel- oder Flugdaten und sinnvollen Zeitpuffern vor Abfahrt oder Check-in.",
+        why_p2: "Klären Sie Fahrzeuggröße und Gepäckraum vorab, wenn Sie mit Familie oder zusätzlichem Gepäck reisen.",
+        quote_text: "„Zuverlässige Direkttransfers hängen von klaren Treffpunkten, genauen Zeiten und realistischen Straßenpuffern ab.“",
+        feat_1_title: "Flughafen- & Hotelstrecken",
+        feat_1_desc: "Koordination von Transfers zwischen Flughafen Hurghada, Hotels und Zielen am Roten Meer.",
+        feat_2_title: "Passendes Fahrzeug & Gepäck",
+        feat_2_desc: "Fahrzeuggröße und Sitzplätze abgestimmt auf Gruppe und Gepäckmenge.",
+        feat_3_title: "Bestätigter Preis & Zeitplan",
+        feat_3_desc: "Strecke, Abholzeit sowie Einfach- oder Rückfahrtkonditionen vorab klären.",
+        faq_title: "Flughafen- & Privattransfers – Häufig gestellte Fragen",
+        faq_q1: "Wie werden Transferpreis und Fahrzeugtyp festgelegt?",
+        faq_a1: "Preise und Fahrzeugoptionen richten sich nach Abhol- und Zielort, Strecke, Einfach- oder Hin- und Rückfahrt, Personenzahl und Gepäckbedarf und werden auf Anfrage bestätigt.",
+        faq_q2: "Was gilt bei Flugverspätung oder starkem Verkehr?",
+        faq_a2: "Flugänderungen, Flughafenprozesse und Verkehr können Zeiten beeinflussen; geben Sie Flugdaten vorab an und planen Sie extra Puffer für Abflüge ein.",
+        cta_title: "Transfer buchen oder anfragen",
+        cta_desc: "Senden Sie Abholort, Ziel, Datum, Uhrzeit oder Flugdaten sowie Gruppengröße, um die Verfügbarkeit zu prüfen.",
+        cta_btn: "Transfer buchen oder anfragen",
+        footer_follow: "Folgen Sie uns in den sozialen Medien", social_fb: "Facebook", social_ig: "Instagram"
+      },
+      ru: {
+        page_title: "Трансферы в аэропорт и индивидуальные трансферы | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Главная", nav_tours: "Все туры", nav_guide: "Гид по Хургаде", nav_contact: "Контакты", nav_book: "Забронировать",
+        kicker: "Трансферы в аэропорт, отели и между городами · Красное море",
+        hero_title: "Трансферы в аэропорт и индивидуальные трансферы",
+        hero_desc: "Организуйте трансферы «от точки до точки» между аэропортом Хургады, отелями и направлениями Красного моря или региона с учётом рейса, маршрута и выбора автомобиля.",
+        overview_title: "Обзор трансферов и общий порядок работы",
+        meta_cat_label: "Категория:", meta_cat_val: "Трансферы в аэропорт и между пунктами",
+        meta_routes_label: "Маршруты:", meta_routes_val: "Аэропорт Хургады, отели и направления Красного моря / региона",
+        meta_opts_label: "Варианты:", meta_opts_val: "Легковое авто, минивэн/микроавтобус или согласованный формат",
+        meta_rate_label: "Стоимость:", meta_rate_val: "Уточняется при запросе бронирования",
+        overview_p: "Услуги трансфера в Хургаде и на Красном море включают встречи и проводы в аэропорту, поездки между отелями или резортами и междугородние/точечные поездки с учётом адреса подачи, точки высадки, числа пассажиров, объёма багажа и подтверждённого времени.",
+        prog_1_title: "Подтверждение маршрута и расписания:",
+        prog_1_desc: "Заранее сообщите место подачи, пункт назначения, число пассажиров, багаж и детали рейса или выезда.",
+        prog_2_title: "Подача и место встречи:",
+        prog_2_desc: "Встреча в согласованной точке аэропорта или у входа/зоны посадки отеля по подтверждённому времени.",
+        prog_3_title: "Поездка по маршруту:",
+        prog_3_desc: "Следование к месту назначения с заложенным запасом времени на трафик, процедуры в аэропорту или дорожные условия.",
+        prog_4_title: "Высадка:",
+        prog_4_desc: "Прибытие в отель, терминал аэропорта или согласованную точку.",
+        confirm_title: "Что важно согласовать до бронирования",
+        inc_1: "Точные адреса подачи и высадки (название отеля/резорта или аэропорт/маршрут)",
+        inc_2: "Номер рейса, время прилёта/вылета или требуемое время подачи",
+        inc_3: "Количество пассажиров, мест багажа и подходящий размер автомобиля",
+        inc_4: "В одну сторону или туда-обратно, правила ожидания и подтверждённая цена",
+        note_label: "Важное примечание:",
+        note_text: "Время в пути, графики подачи и интервалы прибытия зависят от трафика, дорожных условий, постов и процедур в аэропорту, задержек или переносов рейсов и подтверждённых деталей бронирования.",
+        why_title: "Чёткие детали подачи и реалистичный запас времени",
+        why_p1: "Спокойные трансферы в аэропорт и между точками начинаются с точных данных об отеле или рейсе и разумного запаса времени до выезда или регистрации.",
+        why_p2: "Заранее уточните вместимость авто и место под багаж при поездке семьёй или с дополнительными сумками.",
+        quote_text: "«Надёжные трансферы между точками — это понятные места встречи, точное время и реалистичный запас на дорогу.»",
+        feat_1_title: "Маршруты: аэропорт и отели",
+        feat_1_desc: "Согласование поездок между аэропортом Хургады, отелями и точками на Красном море.",
+        feat_2_title: "Подбор авто и багажа",
+        feat_2_desc: "Соответствие размера машины и числа мест составу группы и багажу.",
+        feat_3_title: "Согласованная цена и время",
+        feat_3_desc: "Предварительная проверка маршрута, времени подачи и условий поездки в одну/обе стороны.",
+        faq_title: "Трансферы в аэропорт и индивидуальные трансферы — частые вопросы",
+        faq_q1: "Как определяются стоимость трансфера и тип автомобиля?",
+        faq_a1: "Тариф и варианты транспорта зависят от точек подачи и высадки, расстояния, поездки в одну сторону или туда-обратно, числа пассажиров и багажа и подтверждаются при запросе.",
+        faq_q2: "Что делать при задержке рейса или плотном трафике?",
+        faq_a2: "Изменения рейсов, процедуры в аэропорту и дорожный трафик могут влиять на время; укажите данные рейса заранее и заложите дополнительный запас на вылет.",
+        cta_title: "Забронировать или уточнить трансфер",
+        cta_desc: "Отправьте место подачи, пункт назначения, дату, время или данные рейса и размер группы для проверки наличия.",
+        cta_btn: "Забронировать или уточнить трансфер",
+        footer_follow: "Мы в социальных сетях", social_fb: "Facebook", social_ig: "Instagram"
+      },
+      fr: {
+        page_title: "Transferts aéroport & privés | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Accueil", nav_tours: "Toutes les excursions", nav_guide: "Guide Hurghada", nav_contact: "Contact", nav_book: "Réserver",
+        kicker: "Transport aéroport, hôtel & interurbain · Mer Rouge",
+        hero_title: "Transferts aéroport & privés",
+        hero_desc: "Organisez des transferts de porte à porte entre l'aéroport d'Hurghada, les hôtels et des destinations de la mer Rouge ou régionales selon votre vol, itinéraire et véhicule.",
+        overview_title: "Aperçu des transferts & fonctionnement général",
+        meta_cat_label: "Catégorie :", meta_cat_val: "Transferts aéroport & point à point",
+        meta_routes_label: "Itinéraires :", meta_routes_val: "Aéroport d'Hurghada, hôtels & étapes mer Rouge / régionales",
+        meta_opts_label: "Options :", meta_opts_val: "Voiture privée, van/minibus ou formule confirmée",
+        meta_rate_label: "Tarif :", meta_rate_val: "Confirmé lors de la demande de réservation",
+        overview_p: "Les services de transfert à Hurghada et en mer Rouge couvrent les arrivées et départs à l'aéroport, les transferts d'hôtel à hôtel ou resort et le transport routier de point à point selon l'adresse de prise en charge, la destination, le nombre de passagers, les bagages et l'horaire confirmé.",
+        prog_1_title: "Confirmation de l'itinéraire & de l'horaire :",
+        prog_1_desc: "Communiquez à l'avance le lieu de prise en charge, la destination, le nombre de passagers, les bagages et les détails du vol ou du départ.",
+        prog_2_title: "Prise en charge & point de rendez-vous :",
+        prog_2_desc: "Rendez-vous au point convenu à l'aéroport ou à l'entrée / zone de prise en charge de l'hôtel selon l'horaire confirmé.",
+        prog_3_title: "Trajet routier :",
+        prog_3_desc: "Trajet jusqu'à la destination en prévoyant une marge pour la circulation, les formalités aéroportuaires ou l'état des routes.",
+        prog_4_title: "Dépose :",
+        prog_4_desc: "Arrivée à l'hôtel, au terminal de l'aéroport ou au point convenu.",
+        confirm_title: "Éléments à confirmer avant la réservation",
+        inc_1: "Lieux exacts de prise en charge et de dépose (nom d'hôtel/resort ou aéroport/trajet)",
+        inc_2: "Numéro de vol, heure d'arrivée/départ ou heure de prise en charge souhaitée",
+        inc_3: "Nombre de passagers, nombre de bagages et taille de véhicule requise",
+        inc_4: "Option aller simple ou aller-retour, règles d'attente et tarif confirmé",
+        note_label: "Remarque importante :",
+        note_text: "Les temps de trajet, horaires de prise en charge et créneaux d'arrivée dépendent de la circulation, de l'état des routes, des contrôles aéroportuaires/sécurité, des retards ou changements de vol et des détails confirmés.",
+        why_title: "Détails de prise en charge clairs & marges réalistes",
+        why_p1: "Des transferts fluides vers l'aéroport ou de point à point reposent sur des informations d'hôtel ou de vol précises et des marges raisonnables avant le départ ou l'enregistrement.",
+        why_p2: "Confirmez la capacité du véhicule et l'espace bagages à l'avance en voyageant en famille ou avec des bagages supplémentaires.",
+        quote_text: "« Des transferts fiables de point à point tiennent à des points de rendez-vous clairs, des horaires précis et des marges routières réalistes. »",
+        feat_1_title: "Trajets aéroport & hôtels",
+        feat_1_desc: "Coordination des transferts entre l'aéroport d'Hurghada, les hôtels et les étapes en mer Rouge.",
+        feat_2_title: "Véhicule & bagages adaptés",
+        feat_2_desc: "Taille du véhicule et places adaptées à votre groupe et au volume de bagages.",
+        feat_3_title: "Tarif & horaire confirmés",
+        feat_3_desc: "Vérification préalable de l'itinéraire, de l'heure de prise en charge et des conditions aller simple / aller-retour.",
+        faq_title: "Transferts aéroport & privés – Questions fréquentes",
+        faq_q1: "Comment sont déterminés le tarif du transfert et le type de véhicule ?",
+        faq_a1: "Les tarifs et options de véhicule dépendent des lieux de prise en charge et de dépose, de la distance, de l'option aller simple ou aller-retour, du nombre de passagers et des bagages, et sont confirmés sur demande.",
+        faq_q2: "Que se passe-t-il en cas de retard de vol ou de forte circulation ?",
+        faq_a2: "Les modifications de vol, procédures aéroportuaires et la circulation peuvent influencer l'horaire ; partagez les détails du vol à l'avance et prévoyez une marge supplémentaire pour les départs.",
+        cta_title: "Réserver ou demander un transfert",
+        cta_desc: "Envoyez votre lieu de prise en charge, destination, date, heure ou détails de vol et taille du groupe pour vérifier la disponibilité.",
+        cta_btn: "Réserver ou demander un transfert",
+        footer_follow: "Suivez-nous sur les réseaux sociaux", social_fb: "Facebook", social_ig: "Instagram"
+      },
+      it: {
+        page_title: "Transfer aeroportuali e privati | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Home", nav_tours: "Tutte le escursioni", nav_guide: "Guida Hurghada", nav_contact: "Contatti", nav_book: "Prenota ora",
+        kicker: "Trasporti aeroporto, hotel e intercity · Mar Rosso",
+        hero_title: "Transfer aeroportuali e privati",
+        hero_desc: "Organizza transfer punto a punto tra l'aeroporto di Hurghada, gli hotel e destinazioni del Mar Rosso o regionali in base a volo, percorso e scelta del veicolo.",
+        overview_title: "Panoramica transfer e programma operativo generale",
+        meta_cat_label: "Categoria:", meta_cat_val: "Transfer aeroportuali e punto a punto",
+        meta_routes_label: "Percorsi:", meta_routes_val: "Aeroporto di Hurghada, hotel e tappe Mar Rosso / regionali",
+        meta_opts_label: "Opzioni:", meta_opts_val: "Auto privata, van/minibus o soluzione confermata",
+        meta_rate_label: "Tariffa:", meta_rate_val: "Confermata alla richiesta di prenotazione",
+        overview_p: "I servizi di transfer a Hurghada e nell'area del Mar Rosso coprono arrivi e partenze in aeroporto, spostamenti tra hotel o resort e trasporto stradale punto a punto in base a indirizzo di pick-up, destinazione, numero passeggeri, bagagli e orario confermato.",
+        prog_1_title: "Conferma percorso e orario:",
+        prog_1_desc: "Comunica in anticipo punto di pick-up, destinazione, numero passeggeri, bagagli e dettagli di volo o partenza.",
+        prog_2_title: "Pick-up e punto d'incontro:",
+        prog_2_desc: "Incontro nel punto concordato in aeroporto o all'ingresso/zona pick-up dell'hotel secondo l'orario confermato.",
+        prog_3_title: "Transfer su strada:",
+        prog_3_desc: "Percorso verso la destinazione considerando un margine per traffico, procedure aeroportuali o condizioni stradali.",
+        prog_4_title: "Drop-off:",
+        prog_4_desc: "Arrivo in hotel, terminal aeroportuale o punto concordato.",
+        confirm_title: "Cosa confermare prima di prenotare",
+        inc_1: "Luoghi esatti di pick-up e drop-off (nome hotel/resort o aeroporto/tratta)",
+        inc_2: "Numero di volo, orario di arrivo/partenza o orario di pick-up richiesto",
+        inc_3: "Numero di passeggeri, colli bagaglio e dimensione veicolo necessaria",
+        inc_4: "Opzione solo andata o andata e ritorno, regole di attesa e tariffa confermata",
+        note_label: "Nota importante:",
+        note_text: "Tempi di percorrenza, programmi di pick-up e fasce di arrivo dipendono da traffico, condizioni stradali, controlli/procedure aeroportuali, ritardi o cambi di volo e dettagli confermati.",
+        why_title: "Dettagli di pick-up chiari e margini realistici",
+        why_p1: "Transfer aeroportuali e punto a punto fluidi iniziano con dati accurati di hotel o volo e margini di viaggio ragionevoli prima della partenza o del check-in.",
+        why_p2: "Conferma in anticipo capienza del veicolo e spazio bagagli se viaggi in famiglia o con valigie extra.",
+        quote_text: "«Transfer punto a punto affidabili dipendono da punti d'incontro chiari, orari precisi e margini stradali realistici.»",
+        feat_1_title: "Tratte aeroporto e hotel",
+        feat_1_desc: "Coordina transfer tra aeroporto di Hurghada, hotel e tappe sul Mar Rosso.",
+        feat_2_title: "Veicolo e bagagli adeguati",
+        feat_2_desc: "Adatta dimensione del mezzo e posti a sedere a gruppo e bagagli.",
+        feat_3_title: "Tariffa e orario confermati",
+        feat_3_desc: "Verifica in anticipo percorso, orario di pick-up e condizioni solo andata o A/R.",
+        faq_title: "Transfer aeroportuali e privati – Domande frequenti",
+        faq_q1: "Come vengono determinati tariffa del transfer e tipo di veicolo?",
+        faq_a1: "Tariffe e opzioni veicolo dipendono da luoghi di pick-up e drop-off, distanza, solo andata o andata e ritorno, numero passeggeri e bagagli, e vengono confermati su richiesta.",
+        faq_q2: "Cosa succede se il volo è in ritardo o il traffico è intenso?",
+        faq_a2: "Cambi di volo, procedure aeroportuali e traffico possono incidere sui tempi; comunica i dettagli del volo in anticipo e prevedi un margine extra per le partenze.",
+        cta_title: "Prenota o chiedi info su un transfer",
+        cta_desc: "Invia luogo di pick-up, destinazione, data, orario o dettagli del volo e numero persone per verificare la disponibilità.",
+        cta_btn: "Prenota o chiedi info su transfer",
+        footer_follow: "Seguici sui social media", social_fb: "Facebook", social_ig: "Instagram"
+      },
+      es: {
+        page_title: "Traslados al aeropuerto y privados | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Inicio", nav_tours: "Todos los tours", nav_guide: "Guía de Hurghada", nav_contact: "Contacto", nav_book: "Reservar ahora",
+        kicker: "Transporte aeropuerto, hotel e interurbano · Mar Rojo",
+        hero_title: "Traslados al aeropuerto y privados",
+        hero_desc: "Coordina traslados punto a punto entre el aeropuerto de Hurghada, hoteles y destinos del mar Rojo o regionales según tu vuelo, ruta y elección de vehículo.",
+        overview_title: "Resumen de traslados y programa operativo general",
+        meta_cat_label: "Categoría:", meta_cat_val: "Traslados al aeropuerto y punto a punto",
+        meta_routes_label: "Rutas:", meta_routes_val: "Aeropuerto de Hurghada, hoteles y paradas mar Rojo / regionales",
+        meta_opts_label: "Opciones:", meta_opts_val: "Auto privado, van/minibús o acuerdo confirmado",
+        meta_rate_label: "Tarifa:", meta_rate_val: "Confirmada al consultar la reserva",
+        overview_p: "Los servicios de traslado en Hurghada y la zona del mar Rojo cubren llegadas y salidas al aeropuerto, traslados entre hoteles o resorts y transporte por carretera punto a punto según dirección de recogida, destino, pasajeros, equipaje y horario confirmado.",
+        prog_1_title: "Confirmación de ruta y horario:",
+        prog_1_desc: "Comparte con antelación punto de recogida, destino, número de pasajeros, equipaje y detalles de vuelo o salida.",
+        prog_2_title: "Recogida y punto de encuentro:",
+        prog_2_desc: "Encuentro en el punto acordado en el aeropuerto o en la entrada/zona de recogida del hotel según el horario confirmado.",
+        prog_3_title: "Traslado por carretera:",
+        prog_3_desc: "Recorrido hasta el destino considerando margen de tiempo por tráfico, trámites aeroportuarios o condiciones de la vía.",
+        prog_4_title: "Llegada / Drop-off:",
+        prog_4_desc: "Llegada a tu hotel, terminal del aeropuerto o punto acordado.",
+        confirm_title: "Qué confirmar antes de reservar",
+        inc_1: "Ubicaciones exactas de recogida y destino (nombre de hotel/resort o aeropuerto/ruta)",
+        inc_2: "Número de vuelo, hora de llegada/salida o hora de recogida requerida",
+        inc_3: "Cantidad de pasajeros, piezas de equipaje y tamaño de vehículo necesario",
+        inc_4: "Opción de ida o ida y vuelta, reglas de espera y tarifa confirmada",
+        note_label: "Nota importante:",
+        note_text: "Los tiempos de viaje, horarios de recogida y ventanas de llegada dependen del tráfico, estado de las carreteras, controles/trámites aeroportuarios, retrasos o cambios de vuelo y detalles confirmados.",
+        why_title: "Detalles de recogida claros y márgenes realistas",
+        why_p1: "Los traslados fluidos al aeropuerto y punto a punto empiezan con datos precisos de hotel o vuelo y márgenes razonables antes de salir o hacer el check-in.",
+        why_p2: "Confirma la capacidad del vehículo y el espacio de equipaje por adelantado si viajas en familia o con maletas extra.",
+        quote_text: "«Los traslados confiables punto a punto dependen de puntos de encuentro claros, horarios precisos y márgenes de carretera realistas.»",
+        feat_1_title: "Rutas aeropuerto y hoteles",
+        feat_1_desc: "Coordina traslados entre el aeropuerto de Hurghada, hoteles y paradas del mar Rojo.",
+        feat_2_title: "Vehículo y equipaje acordes",
+        feat_2_desc: "Adapta el tamaño del vehículo y los asientos a tu grupo y equipaje.",
+        feat_3_title: "Tarifa y horario confirmados",
+        feat_3_desc: "Verifica de antemano ruta, hora de recogida y condiciones de ida o ida y vuelta.",
+        faq_title: "Traslados al aeropuerto y privados – Preguntas frecuentes",
+        faq_q1: "¿Cómo se determinan la tarifa del traslado y el tipo de vehículo?",
+        faq_a1: "Las tarifas y opciones de vehículo dependen de los puntos de recogida y destino, distancia, opción de ida o ida y vuelta, pasajeros y equipaje, y se confirman al consultar.",
+        faq_q2: "¿Qué pasa si mi vuelo se retrasa o hay mucho tráfico?",
+        faq_a2: "Los cambios de vuelo, trámites aeroportuarios y el tráfico pueden afectar los tiempos; envía los datos del vuelo por adelantado y deja margen extra para salidas.",
+        cta_title: "Reservar o consultar sobre un traslado",
+        cta_desc: "Envía punto de recogida, destino, fecha, hora o datos del vuelo y tamaño del grupo para confirmar disponibilidad.",
+        cta_btn: "Reservar o consultar traslado",
+        footer_follow: "Síguenos en redes sociales", social_fb: "Facebook", social_ig: "Instagram"
+      },
+      pl: {
+        page_title: "Transfery lotniskowe i prywatne | Atlantis Tours and Experiences",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "Strona główna", nav_tours: "Wszystkie wycieczki", nav_guide: "Przewodnik Hurghada", nav_contact: "Kontakt", nav_book: "Zarezerwuj",
+        kicker: "Transport lotniskowy, hotelowy i międzymiastowy · Morze Czerwone",
+        hero_title: "Transfery lotniskowe i prywatne",
+        hero_desc: "Zorganizuj przejazdy „od drzwi do drzwi” między lotniskiem w Hurghadzie, hotelami oraz kierunkami nad Morzem Czerwonym lub w regionie – zgodnie z lotem, trasą i wyborem pojazdu.",
+        overview_title: "Przegląd transferów i ogólny program działania",
+        meta_cat_label: "Kategoria:", meta_cat_val: "Transfery lotniskowe i punkt–punkt",
+        meta_routes_label: "Trasy:", meta_routes_val: "Lotnisko Hurghada, hotele i przystanki nad Morzem Czerwonym / w regionie",
+        meta_opts_label: "Opcje:", meta_opts_val: "Auto prywatne, van/minibus lub ustalony wariant",
+        meta_rate_label: "Cena:", meta_rate_val: "Potwierdzana przy zapytaniu o rezerwację",
+        overview_p: "Usługi transferowe w Hurghadzie i nad Morzem Czerwonym obejmują przyjazdy i odloty na lotnisko, przejazdy między hotelami lub resortami oraz transport drogowy punkt–punkt w oparciu o adres odbioru, cel, liczbę pasażerów, bagaż i potwierdzony czas.",
+        prog_1_title: "Potwierdzenie trasy i harmonogramu:",
+        prog_1_desc: "Przekaż z wyprzedzeniem miejsce odbioru, cel, liczbę pasażerów, bagaż oraz szczegóły lotu lub wyjazdu.",
+        prog_2_title: "Odbiór i miejsce spotkania:",
+        prog_2_desc: "Spotkanie w uzgodnionym miejscu na lotnisku lub przy wejściu / punkcie odbioru hotelu zgodnie z potwierdzonym planem.",
+        prog_3_title: "Przejazd drogowy:",
+        prog_3_desc: "Przejazd do celu z uwzględnieniem zapasu czasu na ruch drogowy, procedury lotniskowe lub warunki na drodze.",
+        prog_4_title: "Wysiadka:",
+        prog_4_desc: "Przyjazd do hotelu, terminalu lotniskowego lub uzgodnionego punktu.",
+        confirm_title: "Co potwierdzić przed rezerwacją",
+        inc_1: "Dokładne miejsca odbioru i docelowe (nazwa hotelu/resortu lub lotnisko/trasa)",
+        inc_2: "Numer lotu, godzinę przylotu/odlotu lub wymaganą godzinę odbioru",
+        inc_3: "Liczbę pasażerów, sztuk bagażu oraz potrzebną wielkość pojazdu",
+        inc_4: "Opcję w jedną stronę lub w obie strony, zasady oczekiwania i potwierdzoną cenę",
+        note_label: "Ważna uwaga:",
+        note_text: "Czasy przejazdu, harmonogramy odbioru i okna przyjazdu zależą od ruchu drogowego, warunków na drodze, kontroli/procedur lotniskowych, opóźnień lub zmian lotów oraz potwierdzonych danych rezerwacji.",
+        why_title: "Jasne szczegóły odbioru i realne bufory czasu",
+        why_p1: "Sprawne transfery lotniskowe i punkt–punkt zaczynają się od dokładnych danych hotelu lub lotu oraz rozsądnego zapasu czasu przed wyjazdem lub odprawą.",
+        why_p2: "Ustal z góry pojemność pojazdu i miejsce na bagaż, jeśli podróżujesz z rodziną lub z dodatkowym bagażem.",
+        quote_text: "„Niezawodne transfery punkt–punkt opierają się na jasnych miejscach spotkania, dokładnym czasie i realnych buforach na trasie.”",
+        feat_1_title: "Trasy: lotnisko i hotele",
+        feat_1_desc: "Koordynacja przejazdów między lotniskiem w Hurghadzie, hotelami i miejscami nad Morzem Czerwonym.",
+        feat_2_title: "Dopasowanie auta i bagażu",
+        feat_2_desc: "Dopasowanie wielkości pojazdu i liczby miejsc do grupy oraz bagażu.",
+        feat_3_title: "Potwierdzona cena i czas",
+        feat_3_desc: "Weryfikacja z wyprzedzeniem trasy, godziny odbioru oraz warunków przejazdu w jedną lub obie strony.",
+        faq_title: "Transfery lotniskowe i prywatne – Najczęstsze pytania",
+        faq_q1: "Jak ustalana jest cena transferu i typ pojazdu?",
+        faq_a1: "Ceny i opcje pojazdów zależą od miejsc odbioru i docelowego, odległości, opcji w jedną lub obie strony, liczby pasażerów oraz bagażu i są potwierdzane na zapytanie.",
+        faq_q2: "Co jeśli lot jest opóźniony lub na drodze jest duży ruch?",
+        faq_a2: "Zmiany lotów, procedury na lotnisku i natężenie ruchu mogą wpływać na czas; podaj dane lotu z wyprzedzeniem i uwzględnij dodatkowy zapas czasu przy wylotach.",
+        cta_title: "Zarezerwuj lub zapytaj o transfer",
+        cta_desc: "Wyślij miejsce odbioru, cel, datę, godzinę lub dane lotu oraz wielkość grupy, aby sprawdzić dostępność.",
+        cta_btn: "Zarezerwuj lub zapytaj o transfer",
+        footer_follow: "Śledź nas w mediach społecznościowych", social_fb: "Facebook", social_ig: "Instagram"
+      },
+      ar: {
+        page_title: "توصيلات المطار والتوصيلات الخاصة | أتلانتس للرحلات والتجارب",
+        brand: "Atlantis Tours & Experiences",
+        nav_home: "الرئيسية", nav_tours: "جميع الرحلات", nav_guide: "دليل الغردقة", nav_contact: "تواصل معنا", nav_book: "احجز الآن",
+        kicker: "توصيل المطار والفنادق وبين المدن · البحر الأحمر",
+        hero_title: "توصيلات المطار والتوصيلات الخاصة",
+        hero_desc: "رتّب توصيلات مباشرة من نقطة إلى أخرى بين مطار الغردقة والفنادق ووجهات البحر الأحمر أو المناطق المجاورة وفق رحلتك ومسارك واختيار السيارة.",
+        overview_title: "نظرة عامة على التوصيلات وبرنامج التشغيل العام",
+        meta_cat_label: "الفئة:", meta_cat_val: "توصيلات المطار ومن نقطة إلى أخرى",
+        meta_routes_label: "المسارات:", meta_routes_val: "مطار الغردقة والفنادق ومحطات البحر الأحمر / الإقليمية",
+        meta_opts_label: "الخيارات:", meta_opts_val: "سيارة خاصة أو فان/ميني باص أو ترتيب مؤكد",
+        meta_rate_label: "السعر:", meta_rate_val: "يُؤكَّد عند استفسار الحجز",
+        overview_p: "تشمل خدمات التوصيل في الغردقة ومنطقة البحر الأحمر الوصول والمغادرة من المطار، والتنقل بين الفنادق أو المنتجعات، والنقل البري من نقطة إلى أخرى بناءً على عنوان الاستقبال ونقطة الإنزال وعدد الركاب وحجم الأمتعة والموعد المؤكد.",
+        prog_1_title: "تأكيد المسار والموعد:",
+        prog_1_desc: "شارك نقطة الاستقبال والوجهة وعدد الركاب واحتياجات الأمتعة وتفاصيل الرحلة الجوية أو موعد التحرك مسبقًا.",
+        prog_2_title: "الاستقبال ونقطة الالتقاء:",
+        prog_2_desc: "الالتقاء في نقطة اللقاء المتفق عليها بالمطار أو عند مدخل الفندق/نقطة الاستقبال وفق الجدول المؤكد.",
+        prog_3_title: "الرحلة البرية:",
+        prog_3_desc: "التحرك على المسار نحو وجهتك مع مراعاة وقت احتياطي لحركة المرور أو إجراءات المطار أو حالة الطريق.",
+        prog_4_title: "الإنزال:",
+        prog_4_desc: "الوصول إلى الفندق أو صالة المطار أو النقطة المتفق عليها.",
+        confirm_title: "ما الذي يجب تأكيده قبل الحجز",
+        inc_1: "مواقع الاستقبال والإنزال بدقة (اسم الفندق/المنتجع أو المطار/المسار)",
+        inc_2: "رقم الرحلة الجوية وموعد الوصول/المغادرة أو موعد الاستقبال المطلوب",
+        inc_3: "عدد الركاب وقطع الأمتعة وحجم السيارة المناسب",
+        inc_4: "خيار ذهاب فقط أو ذهاب وعودة وقواعد الانتظار والسعر المؤكد",
+        note_label: "ملاحظة مهمة:",
+        note_text: "تعتمد أوقات السفر وجداول الاستقبال ومواعيد الوصول على حركة المرور وحالة الطرق ونقاط التفتيش/إجراءات المطار وتأخيرات أو تغييرات الرحلات الجوية وتفاصيل الحجز المؤكدة.",
+        why_title: "تفاصيل استقبال واضحة وهوامش وقت واقعية",
+        why_p1: "تبدأ توصيلات المطار والتنقلات المباشرة السلسة ببيانات دقيقة للفندق أو الرحلة الجوية وهوامش زمنية مناسبة قبل التحرك أو إنهاء إجراءات السفر.",
+        why_p2: "أكّد سعة السيارة ومساحة الأمتعة مسبقًا عند السفر مع العائلة أو بحقائب إضافية.",
+        quote_text: "«تعتمد التوصيلات الموثوقة من نقطة إلى أخرى على نقاط لقاء واضحة وتوقيت دقيق وهوامش طريق واقعية.»",
+        feat_1_title: "مسارات المطار والفنادق",
+        feat_1_desc: "تنسيق التوصيلات بين مطار الغردقة والفنادق ومحطات البحر الأحمر.",
+        feat_2_title: "ملاءمة السيارة والأمتعة",
+        feat_2_desc: "مطابقة حجم السيارة وعدد المقاعد مع مجموعتك وعدد الحقائب.",
+        feat_3_title: "سعر وموعد مؤكدان",
+        feat_3_desc: "التحقق مسبقًا من المسار وموعد الاستقبال وشروط الذهاب أو الذهاب والعودة.",
+        faq_title: "توصيلات المطار والتوصيلات الخاصة – الأسئلة الشائعة",
+        faq_q1: "كيف يتم تحديد سعر التوصيل ونوع السيارة؟",
+        faq_a1: "تعتمد الأسعار وخيارات السيارات على مواقع الاستقبال والإنزال والمسافة وخيار الذهاب فقط أو الذهاب والعودة وعدد الركاب والأمتعة، ويتم تأكيدها عند الاستفسار.",
+        faq_q2: "ماذا لو تأخرت رحلتي الجوية أو كان الازدحام المروري كبيرًا؟",
+        faq_a2: "قد تؤثر تغييرات الرحلات وإجراءات المطار وحركة المرور على المواعيد؛ شارك بيانات الرحلة مسبقًا واترك هامش وقت إضافيًا لرحلات المغادرة.",
+        cta_title: "احجز أو استفسر عن توصيلة",
+        cta_desc: "أرسل موقع الاستقبال والوجهة والتاريخ والوقت أو بيانات الرحلة وعدد الأفراد لتأكيد التوافر.",
+        cta_btn: "احجز أو استفسر عن التوصيلة",
+        footer_follow: "تابعنا على منصات التواصل الاجتماعي", social_fb: "فيسبوك", social_ig: "إنستغرام"
+      }
+    };
+
+    (function(){
+      const STORAGE_KEY = "atlantis_lang";
+      const supported = Object.keys(TRANSLATIONS);
+      const btns = Array.from(document.querySelectorAll(".lang-btn"));
+
+      function applyLanguage(lang) {
+        const target = supported.includes(lang) ? lang : "en";
+        const dict = TRANSLATIONS[target] || TRANSLATIONS.en;
+
+        document.documentElement.lang = target;
+        document.documentElement.dir = target === "ar" ? "rtl" : "ltr";
+        if (dict.page_title) document.title = dict.page_title;
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (Object.prototype.hasOwnProperty.call(dict, key)) {
+            el.textContent = dict[key];
+          }
+        });
+
+        btns.forEach((b) => {
+          const active = b.getAttribute("data-lang") === target;
+          b.classList.toggle("active", active);
+          b.setAttribute("aria-pressed", active ? "true" : "false");
+        });
+
+        try { localStorage.setItem(STORAGE_KEY, target); } catch (e) {}
+      }
+
+      btns.forEach((btn) => {
+        btn.addEventListener("click", () => applyLanguage(btn.getAttribute("data-lang")));
+      });
+
+      let saved = "en";
+      try { saved = localStorage.getItem(STORAGE_KEY) || "en"; } catch (e) {}
+      applyLanguage(saved);
+    })();
+  </script>
 </body>
 </html>
