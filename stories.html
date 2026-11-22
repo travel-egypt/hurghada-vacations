@@ -7,14 +7,42 @@
 <title>The Red Sea Chronicles | Stories, Secrets & Wonders</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 :root{--navy:#08283b;--deep:#041b2b;--teal:#087e83;--gold:#d8b16d;--ink:#183243;--muted:#647986;--paper:#f5f4ef;--white:#fff;--line:#e2e7e6;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7}a{color:inherit;text-decoration:none}.container{width:min(1160px,calc(100% - 44px));margin:auto}
-.site-header{height:82px;background:rgba(4,27,43,.97);color:white;display:flex;align-items:center;position:relative;z-index:5}.nav{display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{font-weight:700;letter-spacing:.08em;font-size:15px}.brand small{display:block;color:#b9cbd1;font-size:9px;letter-spacing:.2em;margin-top:2px}.nav-links{display:flex;align-items:center;gap:27px;font-size:13px}.nav-links a{color:#e5eef0;transition:.2s}.nav-links a:hover,.nav-links a.active{color:var(--gold)}.nav-links .book{border:1px solid rgba(216,177,109,.7);padding:10px 17px;border-radius:2px}.menu-toggle{display:none;background:none;color:white;border:0;font-size:25px}
+.site-header{min-height:82px;background:rgba(4,27,43,.97);color:white;display:flex;align-items:center;position:relative;z-index:5}.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.brand{font-weight:700;letter-spacing:.08em;font-size:15px}.brand small{display:block;color:#b9cbd1;font-size:9px;letter-spacing:.2em;margin-top:2px}.nav-links{display:flex;align-items:center;gap:18px;font-size:13px}.nav-links a{color:#e5eef0;transition:.2s;white-space:nowrap}.nav-links a:hover,.nav-links a.active{color:var(--gold)}.nav-links .book{border:1px solid rgba(216,177,109,.7);padding:10px 17px;border-radius:2px}.menu-toggle{display:none;background:none;color:white;border:0;font-size:25px;cursor:pointer}
+
+.header-lang-switch{display:flex;flex-wrap:wrap;gap:4px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:4px 6px;border-radius:20px;max-width:250px}
+.header-lang-switch button{border:0;background:transparent;color:#dcecf2;padding:4px 7px;border-radius:14px;font-size:10.5px;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:.04em}
+.header-lang-switch button:hover{color:var(--gold)}
+.header-lang-switch button.active{background:var(--gold);color:var(--deep)}
+
 .hero{min-height:570px;position:relative;display:flex;align-items:center;color:#fff;overflow:hidden;background:linear-gradient(110deg,#041b2b,#0c5969)}.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,21,34,.9),rgba(3,21,34,.38)),url(https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada-strand.jpg) center/cover}.hero-content{position:relative;max-width:820px;padding:90px 0 100px}.eyebrow,.section-kicker{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:700}.hero h1{font:600 clamp(44px,7vw,82px)/1.05 var(--serif);margin:18px 0 20px;max-width:850px}.hero h1 span{color:#e4c58e}.hero p{font-size:17px;max-width:650px;color:#e0e9e9;margin:0 0 27px}.hero-note{font-size:11px;letter-spacing:.13em;color:#d4e0e1;text-transform:uppercase}
 .intro{padding:82px 0 45px;text-align:center;max-width:800px}.intro h2{font:600 clamp(30px,4vw,46px)/1.2 var(--serif);color:var(--navy);margin:12px 0}.intro p{color:var(--muted);font-size:15px}.content-section{padding:24px 0 85px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:27px}.section-head h2{font:600 34px var(--serif);margin:8px 0 0;color:var(--navy)}.filters{display:flex;gap:9px;flex-wrap:wrap}.filter{background:transparent;border:1px solid #cbd5d5;padding:9px 16px;border-radius:30px;color:#506570;font:600 12px var(--sans);cursor:pointer}.filter.active,.filter:hover{background:var(--navy);border-color:var(--navy);color:white}.story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}.story-card{background-color: #F1EBDD;border:1px solid var(--line);box-shadow:0 8px 26px rgba(6,35,50,.045);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}.story-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(6,35,50,.11)}.story-card-image{height:280px;position:relative;overflow:hidden;background:#d9e2df}.story-card-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.story-card:hover img{transform:scale(1.04)}.story-type{display:inline-block;background:rgba(4,27,43,.88);color:#e8c98e;font-size:9px;letter-spacing:.17em;padding:8px 11px;text-transform:uppercase;font-weight:700}.story-card-image .story-type{position:absolute;left:18px;top:18px}.story-card-body{padding:24px 27px 26px;display:flex;flex-direction:column;flex:1}.story-place{font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:var(--teal);font-weight:700}.story-card h3{font:600 27px/1.2 var(--serif);color:var(--navy);margin:10px 0}.story-card p{color:var(--muted);font-size:13px;margin:0 0 23px}.read-link{font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:var(--navy);margin-top:auto}.read-link b{color:#b78c4e;margin-left:7px}
-.library-note{margin:45px 0 0;background:#eaf0ee;padding:23px 27px;border-left:3px solid var(--gold);color:#526a73;font-size:13px}.library-note strong{color:var(--navy)}.longform{padding:70px 0 95px;background:#fff}.longform-head{text-align:center;max-width:750px;margin:0 auto 50px}.longform-head h2{font:600 42px var(--serif);color:var(--navy);margin:9px 0}.longform-head p{color:var(--muted)}.story-article{max-width:980px;margin:0 auto 76px;scroll-margin-top:25px;background:#fff}.article-cover{height:390px;position:relative;overflow:hidden;background:#0a3145}.article-cover img{width:100%;height:100%;object-fit:cover}.cover-shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,22,35,.9),rgba(3,22,35,.03) 80%)}.cover-copy{position:absolute;left:clamp(24px,6vw,65px);right:25px;bottom:35px;color:white}.cover-copy .story-place{display:block;color:#e8c98e;margin:12px 0 6px}.cover-copy h2{font:600 clamp(32px,5vw,51px)/1.1 var(--serif);margin:0 0 9px}.cover-copy p{margin:0;color:#e3ebeb;max-width:660px}.article-inner{max-width:760px;margin:auto;padding:38px 24px 0}.story-language p{font:16px/1.95 var(--serif);color:#334c58;margin:0 0 21px}.story-language p:first-child:first-letter{font:600 56px/.8 var(--serif);float:left;color:#b78c4e;padding:8px 9px 0 0}.story-language .story-ending{font:600 21px/1.6 var(--serif);color:var(--navy);border-left:3px solid var(--gold);padding:9px 0 9px 20px;margin:28px 0}.fact-note{font:13px/1.7 var(--sans)!important;background:#eef3f1;padding:18px 20px;border-left:3px solid var(--teal);color:#526a73!important}.sources{font:12px/1.8 var(--sans)!important;color:#5d7078;border-top:1px solid var(--line);padding-top:18px;margin-top:20px}.sources a{color:#087e83;text-decoration:underline;text-underline-offset:3px}.article-footer{border-top:1px solid var(--line);margin-top:34px;padding:20px 0;display:flex;justify-content:space-between;gap:20px;align-items:center}.discover-link{background:var(--navy);color:white;padding:12px 18px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}.discover-link span{color:var(--gold);margin-left:8px}.back-top{font-size:11px;color:var(--muted)}.language-bar{position:sticky;top:0;z-index:4;background:rgba(245,244,239,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 0}.language-inner{display:flex;align-items:center;justify-content:space-between;gap:15px}.language-inner span{font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}.language-switch{display:flex;gap:6px}.language-switch button{border:1px solid #c8d3d2;background-color: #F1EBDD;color:var(--navy);padding:7px 13px;font-size:11px;font-weight:700;cursor:pointer}.language-switch button.active{background:var(--navy);color:white;border-color:var(--navy)}
-footer{background:var(--deep);color:#d4e0e3;padding:43px 0;text-align:center}footer strong{font:600 21px var(--serif);color:white}footer p{font-size:12px;color:#aebfc4;margin:8px auto 0;max-width:550px}.footer-links{display:flex;justify-content:center;gap:22px;margin-top:20px;font-size:11px;color:#e8c98e}
+.library-note{margin:45px 0 0;background:#eaf0ee;padding:23px 27px;border-left:3px solid var(--gold);color:#526a73;font-size:13px}.library-note strong{color:var(--navy)}.longform{padding:70px 0 95px;background:#fff}.longform-head{text-align:center;max-width:750px;margin:0 auto 50px}.longform-head h2{font:600 42px var(--serif);color:var(--navy);margin:9px 0}.longform-head p{color:var(--muted)}.story-article{max-width:980px;margin:0 auto 76px;scroll-margin-top:68px;background:#fff}.article-cover{height:390px;position:relative;overflow:hidden;background:#0a3145}.article-cover img{width:100%;height:100%;object-fit:cover}.cover-shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,22,35,.9),rgba(3,22,35,.03) 80%)}.cover-copy{position:absolute;left:clamp(24px,6vw,65px);right:25px;bottom:35px;color:white}.cover-copy .story-place{display:block;color:#e8c98e;margin:12px 0 6px}.cover-copy h2{font:600 clamp(32px,5vw,51px)/1.1 var(--serif);margin:0 0 9px}.cover-copy p{margin:0;color:#e3ebeb;max-width:660px}.article-inner{max-width:760px;margin:auto;padding:38px 24px 0}.story-language p{font:16px/1.95 var(--serif);color:#334c58;margin:0 0 21px}.story-language p:first-child:first-letter{font:600 56px/.8 var(--serif);float:left;color:#b78c4e;padding:8px 9px 0 0}.story-language .story-ending{font:600 21px/1.6 var(--serif);color:var(--navy);border-left:3px solid var(--gold);padding:9px 0 9px 20px;margin:28px 0}.fact-note{font:13px/1.7 var(--sans)!important;background:#eef3f1;padding:18px 20px;border-left:3px solid var(--teal);color:#526a73!important}.sources{font:12px/1.8 var(--sans)!important;color:#5d7078;border-top:1px solid var(--line);padding-top:18px;margin-top:20px}.sources a{color:#087e83;text-decoration:underline;text-underline-offset:3px}.article-footer{border-top:1px solid var(--line);margin-top:34px;padding:20px 0;display:flex;justify-content:space-between;gap:20px;align-items:center}.discover-link{background:var(--navy);color:white;padding:12px 18px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}.discover-link span{color:var(--gold);margin-left:8px}.back-top{font-size:11px;color:var(--muted)}.language-bar{position:sticky;top:0;z-index:4;background:rgba(245,244,239,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 0}.language-inner{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.language-inner span{font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}.language-switch{display:flex;gap:6px;flex-wrap:wrap}.language-switch button{border:1px solid #c8d3d2;background-color: #F1EBDD;color:var(--navy);padding:7px 12px;font-size:11px;font-weight:700;cursor:pointer;text-transform:uppercase}.language-switch button.active{background:var(--navy);color:white;border-color:var(--navy)}
+footer{background:var(--deep);color:#d4e0e3;padding:43px 0;text-align:center}footer strong{font:600 21px var(--serif);color:white}footer p{font-size:12px;color:#aebfc4;margin:8px auto 0;max-width:550px}.footer-links{display:flex;justify-content:center;gap:22px;margin-top:20px;font-size:11px;color:#e8c98e;flex-wrap:wrap}
+
+/* RTL Support */
+html[dir="rtl"] body{font-family:'Cairo','Manrope',Arial,sans-serif !important}
+html[dir="rtl"] body :is(h1,h2,h3,h4,h5,h6,p,li,label,input,select,textarea,button,a,span,div){
+  font-family:'Cairo','Manrope',Arial,sans-serif !important;
+  letter-spacing:0 !important;
+}
+html[dir="rtl"] .eyebrow,
+html[dir="rtl"] .section-kicker,
+html[dir="rtl"] .story-type,
+html[dir="rtl"] .story-place,
+html[dir="rtl"] .read-link,
+html[dir="rtl"] .hero-note,
+html[dir="rtl"] .language-inner span,
+html[dir="rtl"] .discover-link{letter-spacing:0 !important;text-transform:none}
+html[dir="rtl"] .story-language p:first-child:first-letter{float:none;font-size:inherit;line-height:inherit;padding:0;color:inherit}
+html[dir="rtl"] .story-language .story-ending{border-left:0;border-right:3px solid var(--gold);padding:9px 20px 9px 0}
+html[dir="rtl"] .library-note{border-left:0;border-right:3px solid var(--gold)}
+html[dir="rtl"] .fact-note{border-left:0;border-right:3px solid var(--teal)}
+html[dir="rtl"] .story-card-image .story-type{left:auto;right:18px}
+
 @media(max-width:760px){.site-header{height:auto;min-height:72px}.menu-toggle{display:block}.nav{flex-wrap:wrap;padding:15px 0}.nav-links{display:none;width:100%;flex-direction:column;gap:15px;padding:12px 0 8px}.nav-links.open{display:flex}.hero{min-height:500px}.hero-content{padding:70px 0}.hero p{font-size:15px}.section-head{display:block}.filters{margin-top:18px}.story-grid{grid-template-columns:1fr}.story-card-image{height:230px}.article-cover{height:310px}.article-inner{padding:27px 20px 0}.story-language p{font-size:15px}.language-inner{align-items:flex-start;flex-direction:column}.intro{padding-top:60px}.longform{padding-top:55px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 </style><link href="https://travel-egypt.github.io/hurghada-vacations/stories.html" rel="canonical"/><meta content="website" property="og:type"/><meta content="The Red Sea Chronicles | Stories, Secrets & Wonders" property="og:title"/><meta content="The Red Sea Chronicles by Atlantis Tours and Experiences: original fiction, documentary stories and natural history from Egypt's Red Sea." property="og:description"/><meta content="https://travel-egypt.github.io/hurghada-vacations/stories.html" property="og:url"/><meta content="Atlantis Tours and Experiences" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/><link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,14 +129,375 @@ button, .btn, a.button, .book-link, .main-button, .cta-button {
 
 </style>
 </head><body id="top">
-<header class="site-header"><nav class="nav container"><a class="brand" href="index.html">ATLANTIS TOURS & EXPERIENCES<small>DISCOVER THE RED SEA</small></a><button aria-label="Open menu" class="menu-toggle" id="menuToggle">☰</button><div class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="all-tours.html">Tours</a><a class="active" href="stories.html">Stories</a><a href="hurghada-price-guide.html">Price Guide</a><a href="booking.html">Booking</a><a href="contact.html">Contact</a><a class="book" href="booking.html">Plan Your Experience ↗</a></div></nav></header>
-<section class="hero"><div class="container hero-content"><span class="eyebrow">An editorial collection by Atlantis Tours and Experiences</span><h1>The Red Sea <span>Chronicles</span></h1><p>Stories, secrets and wonders from Egypt’s Red Sea. Enter a world of original fiction, true natural history and extraordinary places worth discovering.</p><div class="hero-note">Original stories · Documented discoveries · The spirit of Egypt</div></div></section>
-<section class="intro container"><span class="section-kicker">Beyond the journey</span><h2>Some places are meant to be explored.<br/>Others are meant to be remembered.</h2><p>Welcome to a collection where imagination meets the real world. Read a moving fictional tale inspired by an island, then discover the true wildlife, landscapes and natural history that make the Red Sea extraordinary.</p></section>
-<div class="language-bar"><div class="container language-inner"><span>Choose your reading language</span><div class="language-switch"><button class="active" data-lang="en">English</button><button data-lang="de">Deutsch</button></div></div></div>
-<section class="content-section container"><div class="section-head"><div><span class="section-kicker">The story collection</span><h2>Choose a story. Enter another world.</h2></div><div class="filters"><button class="filter active" data-filter="all">All stories</button><button class="filter" data-filter="fiction">Fiction</button><button class="filter" data-filter="documentary">Documentary</button></div></div><div class="story-grid"><a class="story-card" data-kind="fiction" href="#orange-bay"><div class="story-card-image"><img alt="Orange Bay · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada-strand.jpg"/><span class="story-type">A FICTIONAL STORY</span></div><div class="story-card-body"><span class="story-place">Orange Bay · Giftun Islands area</span><h3>The Tide That Kept a Promise</h3><p>A story of a daughter, an old compass, and the courage to begin again.</p><span class="read-link">Read the story <b>↗</b></span></div></a><a class="story-card" data-kind="fiction" href="#mahmya"><div class="story-card-image"><img alt="Mahmya · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg"/><span class="story-type">A FICTIONAL STORY</span></div><div class="story-card-body"><span class="story-place">Mahmya · Giftun Islands area</span><h3>The Quiet Between Two Waves</h3><p>A moving story about a brother and sister who learn to listen again.</p><span class="read-link">Read the story <b>↗</b></span></div></a><a class="story-card" data-kind="documentary" href="#abu-dabbab"><div class="story-card-image"><img alt="Abu Dabbab Bay · Southern Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1100&q=85"/><span class="story-type">DOCUMENTARY · BASED ON RESEARCH</span></div><div class="story-card-body"><span class="story-place">Abu Dabbab Bay · Southern Red Sea</span><h3>The Meadow Beneath the Blue</h3><p>The real story of Abu Dabbab’s seagrass, green turtles and the elusive dugong.</p><span class="read-link">Read the story <b>↗</b></span></div></a><a class="story-card" data-kind="documentary" href="#coral-kingdom"><div class="story-card-image"><img alt="The Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1400&q=85"/><span class="story-type">DOCUMENTARY · NATURAL HISTORY</span></div><div class="story-card-body"><span class="story-place">The Red Sea</span><h3>A City Built of Living Stone</h3><p>The extraordinary, fragile world of Red Sea coral reefs—and why every visitor matters.</p><span class="read-link">Read the story <b>↗</b></span></div></a></div><div class="library-note"><strong>Our editorial promise:</strong> Fiction is clearly labelled as original storytelling. Documentary features are based on research and conservation sources, with reading links included. We never present invented characters or events as real testimony.</div></section>
-<section class="longform"><div class="container"><div class="longform-head"><span class="section-kicker">Read slowly. Discover deeply.</span><h2>Stories from the Red Sea</h2><p>Take your time. Each story is written to be experienced, not skimmed.</p></div>
+<header class="site-header"><nav class="nav container"><a class="brand" href="index.html"><span data-i18n="brandName">ATLANTIS TOURS & EXPERIENCES</span><small data-i18n="brandSub">DISCOVER THE RED SEA</small></a><div aria-label="Header language switcher" class="header-lang-switch" role="group"><button class="active" data-lang="en" type="button">EN</button><button data-lang="de" type="button">DE</button><button data-lang="ru" type="button">RU</button><button data-lang="fr" type="button">FR</button><button data-lang="it" type="button">IT</button><button data-lang="es" type="button">ES</button><button data-lang="pl" type="button">PL</button><button data-lang="ar" type="button">AR</button></div><button aria-label="Open menu" class="menu-toggle" id="menuToggle">☰</button><div class="nav-links" id="navLinks"><a data-i18n="navHome" href="index.html">Home</a><a data-i18n="navTours" href="all-tours.html">Tours</a><a class="active" data-i18n="navStories" href="stories.html">Stories</a><a data-i18n="navPrices" href="hurghada-price-guide.html">Price Guide</a><a data-i18n="navBooking" href="booking.html">Booking</a><a data-i18n="navContact" href="contact.html">Contact</a><a class="book" data-i18n-html="navBookBtn" href="booking.html">Plan Your Experience ↗</a></div></nav></header>
+<section class="hero"><div class="container hero-content"><span class="eyebrow" data-i18n="heroEyebrow">An editorial collection by Atlantis Tours and Experiences</span><h1 data-i18n-html="heroTitle">The Red Sea <span>Chronicles</span></h1><p data-i18n="heroDesc">Stories, secrets and wonders from Egypt’s Red Sea. Enter a world of original fiction, true natural history and extraordinary places worth discovering.</p><div class="hero-note" data-i18n="heroNote">Original stories · Documented discoveries · The spirit of Egypt</div></div></section>
+<section class="intro container"><span class="section-kicker" data-i18n="introKicker">Beyond the journey</span><h2 data-i18n-html="introTitle">Some places are meant to be explored.<br/>Others are meant to be remembered.</h2><p data-i18n="introDesc">Welcome to a collection where imagination meets the real world. Read a moving fictional tale inspired by an island, then discover the true wildlife, landscapes and natural history that make the Red Sea extraordinary.</p></section>
+<div class="language-bar"><div class="container language-inner"><span data-i18n="langBarLabel">Choose your reading language</span><div class="language-switch"><button class="active" data-lang="en" type="button">English</button><button data-lang="de" type="button">Deutsch</button><button data-lang="ru" type="button">Русский</button><button data-lang="fr" type="button">Français</button><button data-lang="it" type="button">Italiano</button><button data-lang="es" type="button">Español</button><button data-lang="pl" type="button">Polski</button><button data-lang="ar" type="button">العربية</button></div></div></div>
+<section class="content-section container"><div class="section-head"><div><span class="section-kicker" data-i18n="colKicker">The story collection</span><h2 data-i18n="colTitle">Choose a story. Enter another world.</h2></div><div class="filters"><button class="filter active" data-filter="all" data-i18n="filterAll">All stories</button><button class="filter" data-filter="fiction" data-i18n="filterFiction">Fiction</button><button class="filter" data-filter="documentary" data-i18n="filterDoc">Documentary</button></div></div><div class="story-grid"><a class="story-card" data-kind="fiction" href="#orange-bay"><div class="story-card-image"><img alt="Orange Bay · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada-strand.jpg"/><span class="story-type" data-i18n="badgeFiction">A FICTIONAL STORY</span></div><div class="story-card-body"><span class="story-place" data-i18n="s1Place">Orange Bay · Giftun Islands area</span><h3 data-i18n="s1Title">The Tide That Kept a Promise</h3><p data-i18n="s1Desc">A story of a daughter, an old compass, and the courage to begin again.</p><span class="read-link"><span data-i18n="readStory">Read the story</span> <b>↗</b></span></div></a><a class="story-card" data-kind="fiction" href="#mahmya"><div class="story-card-image"><img alt="Mahmya · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg"/><span class="story-type" data-i18n="badgeFiction">A FICTIONAL STORY</span></div><div class="story-card-body"><span class="story-place" data-i18n="s2Place">Mahmya · Giftun Islands area</span><h3 data-i18n="s2Title">The Quiet Between Two Waves</h3><p data-i18n="s2Desc">A moving story about a brother and sister who learn to listen again.</p><span class="read-link"><span data-i18n="readStory">Read the story</span> <b>↗</b></span></div></a><a class="story-card" data-kind="documentary" href="#abu-dabbab"><div class="story-card-image"><img alt="Abu Dabbab Bay · Southern Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1100&q=85"/><span class="story-type" data-i18n="badgeDocResearch">DOCUMENTARY · BASED ON RESEARCH</span></div><div class="story-card-body"><span class="story-place" data-i18n="s3Place">Abu Dabbab Bay · Southern Red Sea</span><h3 data-i18n="s3Title">The Meadow Beneath the Blue</h3><p data-i18n="s3Desc">The real story of Abu Dabbab’s seagrass, green turtles and the elusive dugong.</p><span class="read-link"><span data-i18n="readStory">Read the story</span> <b>↗</b></span></div></a><a class="story-card" data-kind="documentary" href="#coral-kingdom"><div class="story-card-image"><img alt="The Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1400&q=85"/><span class="story-type" data-i18n="badgeDocNatural">DOCUMENTARY · NATURAL HISTORY</span></div><div class="story-card-body"><span class="story-place" data-i18n="s4Place">The Red Sea</span><h3 data-i18n="s4Title">A City Built of Living Stone</h3><p data-i18n="s4Desc">The extraordinary, fragile world of Red Sea coral reefs—and why every visitor matters.</p><span class="read-link"><span data-i18n="readStory">Read the story</span> <b>↗</b></span></div></a></div><div class="library-note"><strong data-i18n="promiseStrong">Our editorial promise:</strong> <span data-i18n="promiseText">Fiction is clearly labelled as original storytelling. Documentary features are based on research and conservation sources, with reading links included. We never present invented characters or events as real testimony.</span></div></section>
+<section class="longform"><div class="container"><div class="longform-head"><span class="section-kicker" data-i18n="longKicker">Read slowly. Discover deeply.</span><h2 data-i18n="longTitle">Stories from the Red Sea</h2><p data-i18n="longDesc">Take your time. Each story is written to be experienced, not skimmed.</p></div>
 
-<article class="story-article" data-kind="fiction" id="orange-bay"><div class="article-cover"><img alt="Orange Bay · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada-strand.jpg"/><div class="cover-shade"></div><div class="cover-copy"><span class="story-type">A FICTIONAL STORY</span><span class="story-place">Orange Bay · Giftun Islands area</span><h2>The Tide That Kept a Promise</h2><p>A story of a daughter, an old compass, and the courage to begin again.</p></div></div><div class="article-inner"><div class="story-language en-story"><p>The compass had not moved in twenty-three years. Its brass rim was scratched, its glass clouded at one corner, and the needle trembled whenever the boat crossed a wake. Yet Lina carried it as carefully as if it were made of light.</p>
+<article class="story-article" data-kind="fiction" id="orange-bay"><div class="article-cover"><img alt="Orange Bay · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada-strand.jpg"/><div class="cover-shade"></div><div class="cover-copy"><span class="story-type" data-i18n="badgeFiction">A FICTIONAL STORY</span><span class="story-place" data-i18n="s1Place">Orange Bay · Giftun Islands area</span><h2 data-i18n="s1Title">The Tide That Kept a Promise</h2><p data-i18n="s1Desc">A story of a daughter, an old compass, and the courage to begin again.</p></div></div><div class="article-inner"><div class="story-language" id="articleBody-orange-bay"></div><div class="article-footer"><a class="discover-link" href="all-tours.html#tour-orange-bay-island"><span data-i18n="discoverExp">Discover the experience</span> <span>→</span></a><a class="back-top" data-i18n="backTop" href="#top">Back to stories ↑</a></div></div></article>
+
+<article class="story-article" data-kind="fiction" id="mahmya"><div class="article-cover"><img alt="Mahmya · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg"/><div class="cover-shade"></div><div class="cover-copy"><span class="story-type" data-i18n="badgeFiction">A FICTIONAL STORY</span><span class="story-place" data-i18n="s2Place">Mahmya · Giftun Islands area</span><h2 data-i18n="s2Title">The Quiet Between Two Waves</h2><p data-i18n="s2Desc">A moving story about a brother and sister who learn to listen again.</p></div></div><div class="article-inner"><div class="story-language" id="articleBody-mahmya"></div><div class="article-footer"><a class="discover-link" href="all-tours.html#tour-mahmya-island"><span data-i18n="discoverExp">Discover the experience</span> <span>→</span></a><a class="back-top" data-i18n="backTop" href="#top">Back to stories ↑</a></div></div></article>
+
+<article class="story-article" data-kind="documentary" id="abu-dabbab"><div class="article-cover"><img alt="Abu Dabbab Bay · Southern Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1100&q=85"/><div class="cover-shade"></div><div class="cover-copy"><span class="story-type" data-i18n="badgeDocResearch">DOCUMENTARY · BASED ON RESEARCH</span><span class="story-place" data-i18n="s3Place">Abu Dabbab Bay · Southern Red Sea</span><h2 data-i18n="s3Title">The Meadow Beneath the Blue</h2><p data-i18n="s3Desc">The real story of Abu Dabbab’s seagrass, green turtles and the elusive dugong.</p></div></div><div class="article-inner"><div class="story-language" id="articleBody-abu-dabbab"></div><div class="article-footer"><a class="discover-link" href="all-tours.html#tour-abu-dabbab-turtle-bay"><span data-i18n="discoverExp">Discover the experience</span> <span>→</span></a><a class="back-top" data-i18n="backTop" href="#top">Back to stories ↑</a></div></div></article>
+
+<article class="story-article" data-kind="documentary" id="coral-kingdom"><div class="article-cover"><img alt="The Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1400&q=85"/><div class="cover-shade"></div><div class="cover-copy"><span class="story-type" data-i18n="badgeDocNatural">DOCUMENTARY · NATURAL HISTORY</span><span class="story-place" data-i18n="s4Place">The Red Sea</span><h2 data-i18n="s4Title">A City Built of Living Stone</h2><p data-i18n="s4Desc">The extraordinary, fragile world of Red Sea coral reefs—and why every visitor matters.</p></div></div><div class="article-inner"><div class="story-language" id="articleBody-coral-kingdom"></div><div class="article-footer"><a class="discover-link" href="all-tours.html#tour-red-sea-snorkeling-trip"><span data-i18n="discoverExp">Discover the experience</span> <span>→</span></a><a class="back-top" data-i18n="backTop" href="#top">Back to stories ↑</a></div></div></article>
+
+</div></section>
+<footer><div class="container"><strong data-i18n="footerBrand">Atlantis Tours and Experiences</strong><p data-i18n="footerDesc">Stories, natural history and island memories across Egypt’s Red Sea.</p><div class="footer-links"><a data-i18n="navHome" href="index.html">Home</a><a data-i18n="navTours" href="all-tours.html">All Tours</a><a data-i18n="navPrices" href="hurghada-price-guide.html">Price Guide</a><a data-i18n="navBooking" href="booking.html">Booking</a><a data-i18n="navContact" href="contact.html">Contact</a></div></div></footer>
+
+<script>
+const STORIES_UI = {
+  en: {
+    pageTitle: "The Red Sea Chronicles | Stories, Secrets & Wonders",
+    brandName: "ATLANTIS TOURS & EXPERIENCES",
+    brandSub: "DISCOVER THE RED SEA",
+    navHome: "Home", navTours: "Tours", navStories: "Stories", navPrices: "Price Guide", navBooking: "Booking", navContact: "Contact",
+    navBookBtn: "Plan Your Experience ↗",
+    heroEyebrow: "An editorial collection by Atlantis Tours and Experiences",
+    heroTitle: "The Red Sea <span>Chronicles</span>",
+    heroDesc: "Stories, secrets and wonders from Egypt’s Red Sea. Enter a world of original fiction, true natural history and extraordinary places worth discovering.",
+    heroNote: "Original stories · Documented discoveries · The spirit of Egypt",
+    introKicker: "Beyond the journey",
+    introTitle: "Some places are meant to be explored.<br/>Others are meant to be remembered.",
+    introDesc: "Welcome to a collection where imagination meets the real world. Read a moving fictional tale inspired by an island, then discover the true wildlife, landscapes and natural history that make the Red Sea extraordinary.",
+    langBarLabel: "Choose your reading language",
+    colKicker: "The story collection",
+    colTitle: "Choose a story. Enter another world.",
+    filterAll: "All stories", filterFiction: "Fiction", filterDoc: "Documentary",
+    badgeFiction: "A FICTIONAL STORY",
+    badgeDocResearch: "DOCUMENTARY · BASED ON RESEARCH",
+    badgeDocNatural: "DOCUMENTARY · NATURAL HISTORY",
+    s1Place: "Orange Bay · Giftun Islands area",
+    s1Title: "The Tide That Kept a Promise",
+    s1Desc: "A story of a daughter, an old compass, and the courage to begin again.",
+    s2Place: "Mahmya · Giftun Islands area",
+    s2Title: "The Quiet Between Two Waves",
+    s2Desc: "A moving story about a brother and sister who learn to listen again.",
+    s3Place: "Abu Dabbab Bay · Southern Red Sea",
+    s3Title: "The Meadow Beneath the Blue",
+    s3Desc: "The real story of Abu Dabbab’s seagrass, green turtles and the elusive dugong.",
+    s4Place: "The Red Sea",
+    s4Title: "A City Built of Living Stone",
+    s4Desc: "The extraordinary, fragile world of Red Sea coral reefs—and why every visitor matters.",
+    readStory: "Read the story",
+    promiseStrong: "Our editorial promise:",
+    promiseText: "Fiction is clearly labelled as original storytelling. Documentary features are based on research and conservation sources, with reading links included. We never present invented characters or events as real testimony.",
+    longKicker: "Read slowly. Discover deeply.",
+    longTitle: "Stories from the Red Sea",
+    longDesc: "Take your time. Each story is written to be experienced, not skimmed.",
+    discoverExp: "Discover the experience",
+    backTop: "Back to stories ↑",
+    footerBrand: "Atlantis Tours and Experiences",
+    footerDesc: "Stories, natural history and island memories across Egypt’s Red Sea."
+  },
+  de: {
+    pageTitle: "Die Chroniken des Roten Meeres | Geschichten, Geheimnisse & Wunder",
+    brandName: "ATLANTIS TOURS & EXPERIENCES",
+    brandSub: "DAS ROTE MEER ENTDECKEN",
+    navHome: "Start", navTours: "Touren", navStories: "Geschichten", navPrices: "Preisübersicht", navBooking: "Buchung", navContact: "Kontakt",
+    navBookBtn: "Erlebnis Planen ↗",
+    heroEyebrow: "Eine redaktionelle Reihe von Atlantis Tours and Experiences",
+    heroTitle: "Die Chroniken des <span>Roten Meeres</span>",
+    heroDesc: "Geschichten, Geheimnisse und Wunder vom Roten Meer in Ägypten. Tauchen Sie ein in eigene Erzählungen, echte Naturgeschichte und besondere Orte.",
+    heroNote: "Eigene Geschichten · Dokumentierte Entdeckungen · Der Geist Ägyptens",
+    introKicker: "Jenseits der Reise",
+    introTitle: "Manche Orte sind zum Entdecken da.<br/>Andere bleiben für immer.",
+    introDesc: "Willkommen in einer Sammlung, in der Fantasie und Wirklichkeit aufeinander treffen. Lesen Sie eine bewegende Inselgeschichte und entdecken Sie die echte Tierwelt und Naturgeschichte des Roten Meeres.",
+    langBarLabel: "Lesesprache wählen",
+    colKicker: "Die Geschichtensammlung",
+    colTitle: "Wählen Sie eine Geschichte. Tauchen Sie ein.",
+    filterAll: "Alle Geschichten", filterFiction: "Erzählung", filterDoc: "Dokumentation",
+    badgeFiction: "EINE ERZÄHLUNG",
+    badgeDocResearch: "DOKUMENTATION · FORSCHUNGSBASIERT",
+    badgeDocNatural: "DOKUMENTATION · NATURGESCHICHTE",
+    s1Place: "Orange Bay · Giftun-Inseln",
+    s1Title: "Die Gezeiten eines Versprechens",
+    s1Desc: "Die Geschichte einer Tochter, eines alten Kompasses und des Mutes zum Neuanfang.",
+    s2Place: "Mahmya · Giftun-Inseln",
+    s2Title: "Die Stille zwischen zwei Wellen",
+    s2Desc: "Eine bewegende Geschichte über Geschwister, die wieder aufeinander hören lernen.",
+    s3Place: "Abu-Dabbab-Bucht · Südliches Rotes Meer",
+    s3Title: "Die Wiese unter dem Blau",
+    s3Desc: "Die wahre Geschichte über das Seegras von Abu Dabbab, grüne Meeresschildkröten und die scheue Seekuh.",
+    s4Place: "Das Rote Meer",
+    s4Title: "Eine Stadt aus lebendigem Stein",
+    s4Desc: "Die faszinierende, empfindliche Welt der Korallenriffe im Roten Meer – und warum jeder Gast zählt.",
+    readStory: "Geschichte lesen",
+    promiseStrong: "Unser redaktionelles Versprechen:",
+    promiseText: "Fiktion ist klar als eigene Erzählung gekennzeichnet. Dokumentarische Beiträge stützen sich auf Forschung und Naturschutzquellen mit weiterführenden Links. Erfundene Figuren oder Ereignisse werden niemals als reales Zeugnis ausgegeben.",
+    longKicker: "Langsam lesen. Tief entdecken.",
+    longTitle: "Geschichten vom Roten Meer",
+    longDesc: "Nehmen Sie sich Zeit. Jede Geschichte ist zum Erleben geschrieben, nicht zum Überfliegen.",
+    discoverExp: "Das Erlebnis entdecken",
+    backTop: "Zurück zu den Geschichten ↑",
+    footerBrand: "Atlantis Tours and Experiences",
+    footerDesc: "Geschichten, Naturgeschichte und Inselmomente am Roten Meer in Ägypten."
+  },
+  ru: {
+    pageTitle: "Хроники Красного моря | Истории, тайны и чудеса",
+    brandName: "ATLANTIS TOURS & EXPERIENCES",
+    brandSub: "ОТКРОЙТЕ КРАСНОЕ МОРЕ",
+    navHome: "Главная", navTours: "Туры", navStories: "Истории", navPrices: "Гид по ценам", navBooking: "Бронирование", navContact: "Контакты",
+    navBookBtn: "Спланировать поездку ↗",
+    heroEyebrow: "Авторский сборник Atlantis Tours and Experiences",
+    heroTitle: "Хроники <span>Красного моря</span>",
+    heroDesc: "Истории, тайны и чудеса Красного моря в Египте. Откройте художественную прозу, подлинную естественную историю и удивительные места.",
+    heroNote: "Авторские рассказы · Документальные открытия · Дух Египта",
+    introKicker: "Больше чем путешествие",
+    introTitle: "Одни места созданы для открытий.<br/>Другие остаются в памяти.",
+    introDesc: "Добро пожаловать в сборник, где воображение встречается с реальностью. Прочитайте трогательный рассказ об острове и узнайте о дикой природе и естественной истории Красного моря.",
+    langBarLabel: "Выберите язык чтения",
+    colKicker: "Коллекция историй",
+    colTitle: "Выберите историю и откройте новый мир.",
+    filterAll: "Все истории", filterFiction: "Художественные", filterDoc: "Документальные",
+    badgeFiction: "ХУДОЖЕСТВЕННЫЙ РАССКАЗ",
+    badgeDocResearch: "ДОКУМЕНТАЛЬНО · НА ОСНОВЕ ИССЛЕДОВАНИЙ",
+    badgeDocNatural: "ДОКУМЕНТАЛЬНО · ЕСТЕСТВЕННАЯ ИСТОРИЯ",
+    s1Place: "Orange Bay · Район островов Гифтун",
+    s1Title: "Прилив, сдержавший обещание",
+    s1Desc: "История дочери, старого компаса и смелости начать всё сначала.",
+    s2Place: "Mahmya · Район островов Гифтун",
+    s2Title: "Тишина между двумя волнами",
+    s2Desc: "Трогательная история брата и сестры, которые заново учатся слышать друг друга.",
+    s3Place: "Бухта Абу-Даббаб · Южное Красное море",
+    s3Title: "Луг под синевой воды",
+    s3Desc: "Реальная история морских трав Абу-Даббаба, зелёных черепах и неуловимого дюгоня.",
+    s4Place: "Красное море",
+    s4Title: "Город из живого камня",
+    s4Desc: "Удивительный и хрупкий мир коралловых рифов Красного моря — и почему важен каждый гость.",
+    readStory: "Читать историю",
+    promiseStrong: "Наш редакционный принцип:",
+    promiseText: "Художественные тексты прямо обозначены как авторская проза. Документальные материалы опираются на научные и природоохранные источники со ссылками. Мы никогда не выдаём вымышленных героев или события за реальные свидетельства.",
+    longKicker: "Читайте не спеша. Открывайте глубже.",
+    longTitle: "Истории Красного моря",
+    longDesc: "Не торопитесь. Каждая история написана для вдумчивого чтения.",
+    discoverExp: "Посмотреть программу",
+    backTop: "К списку историй ↑",
+    footerBrand: "Atlantis Tours and Experiences",
+    footerDesc: "Истории, естественная история и воспоминания об островах Красного моря в Египте."
+  },
+  fr: {
+    pageTitle: "Chroniques de la Mer Rouge | Récits, Secrets & Merveilles",
+    brandName: "ATLANTIS TOURS & EXPERIENCES",
+    brandSub: "DÉCOUVRIR LA MER ROUGE",
+    navHome: "Accueil", navTours: "Excursions", navStories: "Récits", navPrices: "Guide des Prix", navBooking: "Réservation", navContact: "Contact",
+    navBookBtn: "Planifier Votre Séjour ↗",
+    heroEyebrow: "Une collection éditoriale par Atlantis Tours and Experiences",
+    heroTitle: "Les Chroniques de la <span>Mer Rouge</span>",
+    heroDesc: "Récits, secrets et merveilles de la mer Rouge en Égypte. Entrez dans un univers de fiction originale, d'histoire naturelle et de lieux d'exception.",
+    heroNote: "Récits originaux · Découvertes documentées · L'esprit de l'Égypte",
+    introKicker: "Au-delà du voyage",
+    introTitle: "Certains lieux sont faits pour être explorés.<br/>D'autres pour rester gravés.",
+    introDesc: "Bienvenue dans une collection où l'imaginaire rencontre le réel. Lisez un récit inspiré par une île, puis découvrez la faune, les paysages et l'histoire naturelle de la mer Rouge.",
+    langBarLabel: "Choisissez votre langue de lecture",
+    colKicker: "La collection de récits",
+    colTitle: "Choisissez un récit. Entrez dans un autre monde.",
+    filterAll: "Tous les récits", filterFiction: "Fiction", filterDoc: "Documentaire",
+    badgeFiction: "RÉCIT DE FICTION",
+    badgeDocResearch: "DOCUMENTAIRE · BASÉ SUR LA RECHERCHE",
+    badgeDocNatural: "DOCUMENTAIRE · HISTOIRE NATURELLE",
+    s1Place: "Orange Bay · Archipel de Giftun",
+    s1Title: "La Marée qui Tint Promesse",
+    s1Desc: "L'histoire d'une fille, d'une vieille boussole et du courage de recommencer.",
+    s2Place: "Mahmya · Archipel de Giftun",
+    s2Title: "Le Silence Entre Deux Vagues",
+    s2Desc: "Une histoire touchante sur un frère et une sœur qui apprennent à s'écouter à nouveau.",
+    s3Place: "Baie d'Abu Dabbab · Mer Rouge Sud",
+    s3Title: "La Prairie Sous le Bleu",
+    s3Desc: "La véritable histoire des herbiers d'Abu Dabbab, des tortues vertes et du discret dugong.",
+    s4Place: "La Mer Rouge",
+    s4Title: "Une Cité de Pierre Vivante",
+    s4Desc: "Le monde fascinant et fragile des récifs coralliens de la mer Rouge — et l'impact de chaque visiteur.",
+    readStory: "Lire le récit",
+    promiseStrong: "Notre engagement éditorial :",
+    promiseText: "La fiction est clairement signalée comme création littéraire. Les documentaires s'appuient sur la recherche et la conservation avec liens de lecture. Nous ne présentons jamais des personnages ou faits inventés comme des témoignages réels.",
+    longKicker: "Lire lentement. Découvrir en profondeur.",
+    longTitle: "Récits de la Mer Rouge",
+    longDesc: "Prenez votre temps. Chaque texte est écrit pour être vécu, pas survolé.",
+    discoverExp: "Découvrir l'expérience",
+    backTop: "Haut des récits ↑",
+    footerBrand: "Atlantis Tours and Experiences",
+    footerDesc: "Récits, histoire naturelle et souvenirs d'îles sur la mer Rouge en Égypte."
+  },
+  it: {
+    pageTitle: "Le Cronache del Mar Rosso | Storie, Segreti & Meraviglie",
+    brandName: "ATLANTIS TOURS & EXPERIENCES",
+    brandSub: "SCOPRI IL MAR ROSSO",
+    navHome: "Home", navTours: "Escursioni", navStories: "Storie", navPrices: "Guida Prezzi", navBooking: "Prenotazione", navContact: "Contatti",
+    navBookBtn: "Pianifica Esperienza ↗",
+    heroEyebrow: "Una raccolta editoriale di Atlantis Tours and Experiences",
+    heroTitle: "Le Cronache del <span>Mar Rosso</span>",
+    heroDesc: "Storie, segreti e meraviglie del Mar Rosso in Egitto. Entra in un mondo di narrativa originale, storia naturale e luoghi straordinari da scoprire.",
+    heroNote: "Storie originali · Scoperte documentate · Lo spirito dell'Egitto",
+    introKicker: "Oltre il viaggio",
+    introTitle: "Alcuni luoghi sono fatti per essere esplorati.<br/>Altri per restare nella memoria.",
+    introDesc: "Benvenuti in una raccolta dove l'immaginazione incontra il mondo reale. Leggi un racconto ispirato a un'isola e scopri fauna, paesaggi e storia naturale del Mar Rosso.",
+    langBarLabel: "Scegli la lingua di lettura",
+    colKicker: "La raccolta di storie",
+    colTitle: "Scegli una storia. Entra in un altro mondo.",
+    filterAll: "Tutte le storie", filterFiction: "Narrativa", filterDoc: "Documentario",
+    badgeFiction: "RACCONTO DI NARRATIVA",
+    badgeDocResearch: "DOCUMENTARIO · BASATO SU RICERCHE",
+    badgeDocNatural: "DOCUMENTARIO · STORIA NATURALE",
+    s1Place: "Orange Bay · Area Isole Giftun",
+    s1Title: "La Marea che Mantenne una Promessa",
+    s1Desc: "La storia di una figlia, una vecchia bussola e il coraggio di ricominciare.",
+    s2Place: "Mahmya · Area Isole Giftun",
+    s2Title: "La Quiete tra Due Onde",
+    s2Desc: "Una storia toccante su un fratello e una sorella che imparano ad ascoltarsi di nuovo.",
+    s3Place: "Baia di Abu Dabbab · Mar Rosso Meridionale",
+    s3Title: "Il Prato Sotto il Blu",
+    s3Desc: "La vera storia delle praterie marine di Abu Dabbab, delle tartarughe verdi e del sfuggente dugongo.",
+    s4Place: "Il Mar Rosso",
+    s4Title: "Una Città di Pietra Viva",
+    s4Desc: "Il mondo straordinario e fragile delle barriere coralline del Mar Rosso — e perché ogni ospite conta.",
+    readStory: "Leggi la storia",
+    promiseStrong: "La nostra promessa editoriale:",
+    promiseText: "La narrativa è chiaramente indicata come creazione originale. I documentari si basano su fonti di ricerca e conservazione con link di approfondimento. Non presentiamo mai personaggi o eventi inventati come testimonianze reali.",
+    longKicker: "Leggi con calma. Scopri in profondità.",
+    longTitle: "Storie dal Mar Rosso",
+    longDesc: "Prenditi il tuo tempo. Ogni storia è scritta per essere vissuta, non scorsa in fretta.",
+    discoverExp: "Scopri l'esperienza",
+    backTop: "Torna alle storie ↑",
+    footerBrand: "Atlantis Tours and Experiences",
+    footerDesc: "Storie, storia naturale e ricordi d'isola sul Mar Rosso in Egitto."
+  },
+  es: {
+    pageTitle: "Crónicas del Mar Rojo | Historias, Secretos y Maravillas",
+    brandName: "ATLANTIS TOURS & EXPERIENCES",
+    brandSub: "DESCUBRE EL MAR ROJO",
+    navHome: "Inicio", navTours: "Excursiones", navStories: "Relatos", navPrices: "Guía de Precios", navBooking: "Reservas", navContact: "Contacto",
+    navBookBtn: "Planifica Tu Experiencia ↗",
+    heroEyebrow: "Una colección editorial de Atlantis Tours and Experiences",
+    heroTitle: "Las Crónicas del <span>Mar Rojo</span>",
+    heroDesc: "Historias, secretos y maravillas del Mar Rojo en Egipto. Entra en un mundo de ficción original, historia natural real y lugares extraordinarios por descubrir.",
+    heroNote: "Relatos originales · Descubrimientos documentados · El espíritu de Egipto",
+    introKicker: "Más allá del viaje",
+    introTitle: "Algunos lugares están hechos para explorarse.<br/>Otros para recordarse.",
+    introDesc: "Bienvenido a una colección donde la imaginación se encuentra con el mundo real. Lee un relato inspirado en una isla y descubre la fauna, los paisajes y la historia natural del Mar Rojo.",
+    langBarLabel: "Elige tu idioma de lectura",
+    colKicker: "La colección de relatos",
+    colTitle: "Elige una historia. Entra en otro mundo.",
+    filterAll: "Todas las historias", filterFiction: "Ficción", filterDoc: "Documental",
+    badgeFiction: "RELATO DE FICCIÓN",
+    badgeDocResearch: "DOCUMENTAL · BASADO EN INVESTIGACIÓN",
+    badgeDocNatural: "DOCUMENTAL · HISTORIA NATURAL",
+    s1Place: "Orange Bay · Zona Islas Giftun",
+    s1Title: "La Marea que Cumplió una Promesa",
+    s1Desc: "La historia de una hija, una vieja brújula y el valor de empezar de nuevo.",
+    s2Place: "Mahmya · Zona Islas Giftun",
+    s2Title: "La Calma Entre Dos Olas",
+    s2Desc: "Una historia conmovedora sobre un hermano y una hermana que aprenden a escucharse de nuevo.",
+    s3Place: "Bahía de Abu Dabbab · Mar Rojo Sur",
+    s3Title: "La Pradera Bajo el Azul",
+    s3Desc: "La historia real de los pastos marinos de Abu Dabbab, las tortugas verdes y el esquivo dugongo.",
+    s4Place: "El Mar Rojo",
+    s4Title: "Una Ciudad de Piedra Viva",
+    s4Desc: "El mundo extraordinario y frágil de los arrecifes de coral del Mar Rojo — y por qué importa cada visitante.",
+    readStory: "Leer la historia",
+    promiseStrong: "Nuestra promesa editorial:",
+    promiseText: "La ficción se identifica claramente como creación original. Los documentales se basan en fuentes de investigación y conservación con enlaces de lectura. Nunca presentamos personajes o hechos inventados como testimonio real.",
+    longKicker: "Lee despacio. Descubre a fondo.",
+    longTitle: "Historias del Mar Rojo",
+    longDesc: "Tómate tu tiempo. Cada historia está escrita para vivirse, no para hojearse.",
+    discoverExp: "Descubre la experiencia",
+    backTop: "Volver a las historias ↑",
+    footerBrand: "Atlantis Tours and Experiences",
+    footerDesc: "Historias, historia natural y recuerdos isleños en el Mar Rojo de Egipto."
+  },
+  pl: {
+    pageTitle: "Kroniki Morza Czerwonego | Historie, Tajemnice i Cuda",
+    brandName: "ATLANTIS TOURS & EXPERIENCES",
+    brandSub: "ODKRYJ MORZE CZERWONE",
+    navHome: "Start", navTours: "Wycieczki", navStories: "Relacje", navPrices: "Cennik", navBooking: "Rezerwacja", navContact: "Kontakt",
+    navBookBtn: "Zaplanuj Wyjazd ↗",
+    heroEyebrow: "Cykl redakcyjny Atlantis Tours and Experiences",
+    heroTitle: "Kroniki <span>Morza Czerwonego</span>",
+    heroDesc: "Historie, tajemnice i cuda egipskiego Morza Czerwonego. Wejdź w świat autorskiej fikcji, prawdziwej historii naturalnej i niezwykłych miejsc.",
+    heroNote: "Autorskie opowieści · Udokumentowane odkrycia · Duch Egiptu",
+    introKicker: "Poza samą podróżą",
+    introTitle: "Niektóre miejsca są po to, by je odkrywać.<br/>Inne, by zostać w pamięci.",
+    introDesc: "Witaj w kolekcji, w której wyobraźnia spotyka prawdziwy świat. Przeczytaj poruszającą opowieść o wyspie, a potem poznaj przyrodę, krajobrazy i historię naturalną Morza Czerwonego.",
+    langBarLabel: "Wybierz język czytania",
+    colKicker: "Kolekcja opowieści",
+    colTitle: "Wybierz historię. Wejdź w inny świat.",
+    filterAll: "Wszystkie historie", filterFiction: "Fikcja", filterDoc: "Dokument",
+    badgeFiction: "OPOWIEŚĆ FIKCYJNA",
+    badgeDocResearch: "DOKUMENT · NA PODSTAWIE BADAŃ",
+    badgeDocNatural: "DOKUMENT · HISTORIA NATURALNA",
+    s1Place: "Orange Bay · Okolice wysp Giftun",
+    s1Title: "Przypływ, Który Dotrzymał Obietnicy",
+    s1Desc: "Historia córki, starego kompasu i odwagi, by zacząć od nowa.",
+    s2Place: "Mahmya · Okolice wysp Giftun",
+    s2Title: "Cisza Między Dwiema Falami",
+    s2Desc: "Poruszająca historia brata i siostry, którzy na nowo uczą się siebie słuchać.",
+    s3Place: "Zatoka Abu Dabbab · Południowe Morze Czerwone",
+    s3Title: "Łąka Pod Błękitem",
+    s3Desc: "Prawdziwa historia łąk trawy morskiej w Abu Dabbab, zielonych żółwi i nieuchwytnego diugonia.",
+    s4Place: "Morze Czerwone",
+    s4Title: "Miasto Zbudowane Z Żywego Kamienia",
+    s4Desc: "Niezwykły, kruchy świat raf koralowych Morza Czerwonego — i dlaczego liczy się każdy odwiedzający.",
+    readStory: "Przeczytaj historię",
+    promiseStrong: "Nasza obietnica redakcyjna:",
+    promiseText: "Fikcja jest wyraźnie oznaczona jako autorskie opowiadanie. Materiały dokumentalne opierają się na źródłach naukowych i ochronie przyrody z linkami do lektury. Nigdy nie przedstawiamy wymyślonych postaci ani wydarzeń jako prawdziwego świadectwa.",
+    longKicker: "Czytaj powoli. Odkrywaj głębiej.",
+    longTitle: "Historie z Morza Czerwonego",
+    longDesc: "Nie spiesz się. Każda historia została napisana, by ją przeżyć, a nie przekartkować.",
+    discoverExp: "Odkryj to doświadczenie",
+    backTop: "Wróć do historii ↑",
+    footerBrand: "Atlantis Tours and Experiences",
+    footerDesc: "Historie, historia naturalna i wyspiarskie wspomnienia nad Morzem Czerwonym w Egipcie."
+  },
+  ar: {
+    pageTitle: "سجلات البحر الأحمر | قصص وأسرار وعجائب",
+    brandName: "أتلانتس للرحلات والتجارب",
+    brandSub: "اكتشف البحر الأحمر",
+    navHome: "الرئيسية", navTours: "الرحلات", navStories: "قصص وتجارب", navPrices: "دليل الأسعار", navBooking: "الحجز", navContact: "تواصل معنا",
+    navBookBtn: "خطط لتجربتك ↗",
+    heroEyebrow: "مجموعة تحريرية من أتلانتس للرحلات والتجارب",
+    heroTitle: "سجلات <span>البحر الأحمر</span>",
+    heroDesc: "قصص وأسرار وعجائب من البحر الأحمر في مصر. ادخل عالماً يجمع بين الخيال الأدبي الأصيل، والتاريخ الطبيعي الحقيقي، والأماكن الاستثنائية.",
+    heroNote: "قصص أصلية · اكتشافات موثقة · روح مصر",
+    introKicker: "ما وراء الرحلة",
+    introTitle: "بعض الأماكن خُلقت لنستكشفها.<br/>وأخرى خُلقت لتبقى في الذاكرة.",
+    introDesc: "مرحباً بك في مجموعة يلتقي فيها الخيال بالعالم الحقيقي. اقرأ قصة مؤثرة مستوحاة من جزيرة، ثم اكتشف الحياة البرية والطبيعة والتاريخ الطبيعي الذي يجعل البحر الأحمر فريداً.",
+    langBarLabel: "اختر لغة القراءة",
+    colKicker: "مجموعة القصص",
+    colTitle: "اختر قصة، وادخل عالماً آخر.",
+    filterAll: "كل القصص", filterFiction: "قصص خيالية", filterDoc: "وثائقي",
+    badgeFiction: "قصة خيالية أصلية",
+    badgeDocResearch: "وثائقي · مبني على أبحاث",
+    badgeDocNatural: "وثائقي · تاريخ طبيعي",
+    s1Place: "أورانج باي · منطقة جزر الجفتون",
+    s1Title: "المدّ الذي حفظ الوعد",
+    s1Desc: "قصة ابنة، وبوصلة قديمة، وشجاعة البداية من جديد.",
+    s2Place: "محمية · منطقة جزر الجفتون",
+    s2Title: "الهدوء بين موجتين",
+    s2Desc: "قصة مؤثرة عن شقيق وشقيقة يتعلمان كيف يصغيان لبعضهما من جديد.",
+    s3Place: "خليج أبو دباب · جنوب البحر الأحمر",
+    s3Title: "المرج تحت الزُرقة",
+    s3Desc: "القصة الحقيقية لحشائش أبو دباب البحرية، والسلاحف الخضراء، وعروس البحر الخجولة.",
+    s4Place: "البحر الأحمر",
+    s4Title: "مدينة بُنيت من حجر حيّ",
+    s4Desc: "العالم المدهش والهشّ للشعاب المرجانية في البحر الأحمر — ولماذا يهم دور كل زائر.",
+    readStory: "اقرأ القصة",
+    promiseStrong: "وعدنا التحريري:",
+    promiseText: "القصص الخيالية موسومة بوضوح كسرد أدبي أصيل. أما المواد الوثائقية فتستند إلى مصادر بحثية وبيئية مع روابط للقراءة. ولا نقدّم أبداً شخصيات أو أحداثاً متخيلة باعتبارها شهادة واقعية.",
+    longKicker: "اقرأ بتمهّل. واكتشف بعمق.",
+    longTitle: "قصص من البحر الأحمر",
+    longDesc: "خذ وقتك. كُتبت كل قصة لتُعاش وتُقرأ بهدوء لا لتُمرّ مرور الكرام.",
+    discoverExp: "اكتشف التجربة",
+    backTop: "العودة إلى القصص ↑",
+    footerBrand: "أتلانتس للرحلات والتجارب",
+    footerDesc: "قصص وتاريخ طبيعي وذكريات جزر البحر الأحمر في مصر."
+  }
+};
+
+const ARTICLES_HTML = {
+  "orange-bay": {
+    en: `<p>The compass had not moved in twenty-three years. Its brass rim was scratched, its glass clouded at one corner, and the needle trembled whenever the boat crossed a wake. Yet Lina carried it as carefully as if it were made of light.</p>
 <p>Her father had given it to her when she was nine. Back then, he used to tell her that a compass did not tell you where to go; it reminded you that you could choose a direction. She had laughed at the sentence, because childhood makes every journey seem simple. You leave the shore, find something beautiful, and come home before dinner.</p>
 <p>Now she was thirty-two, and home had become a word with too many rooms inside it. Her father was gone. The small workshop where he repaired fishing boats had closed. Her younger brother had moved abroad. And Lina, who had spent years saying she would take a proper holiday one day, had finally found herself on a morning boat leaving Hurghada.</p>
 <p>She had chosen Orange Bay because her father had once circled the island on an old paper map. Beside the circle he had written only two words: “One day.” He never explained what he meant. Perhaps he had wanted to take her there. Perhaps he had simply liked the shape of the bay. The uncertainty had followed her longer than she expected.</p>
@@ -122,7 +511,8 @@ button, .btn, a.button, .book-link, .main-button, .cta-button {
 <p>Before boarding the boat home, Lina took a photograph of the compass resting on the map. She sent it to her brother with a short message: “I think I understand what he meant. We should come together next time.”</p>
 <p>The reply arrived before the boat left the shore: “Choose the date. I’ll be there.”</p>
 <p>On the return journey, Lina finally put the compass away. She watched the island become smaller, but it no longer felt as though she were leaving something behind. Some places do not ask you to stay. They give you enough quiet to remember what you want to carry home.</p>
-<p class="story-ending">And for the first time in a long while, the direction ahead did not frighten her.</p></div><div class="story-language de-story" hidden=""><p>Der Kompass hatte sich seit dreiundzwanzig Jahren kaum verändert. Sein Messingrand war zerkratzt, das Glas an einer Ecke trüb, und die Nadel zitterte, sobald das Boot eine Welle kreuzte. Trotzdem trug Lina ihn, als bestünde er aus Licht.</p>
+<p class="story-ending">And for the first time in a long while, the direction ahead did not frighten her.</p>`,
+    de: `<p>Der Kompass hatte sich seit dreiundzwanzig Jahren kaum verändert. Sein Messingrand war zerkratzt, das Glas an einer Ecke trüb, und die Nadel zitterte, sobald das Boot eine Welle kreuzte. Trotzdem trug Lina ihn, als bestünde er aus Licht.</p>
 <p>Ihr Vater hatte ihn ihr geschenkt, als sie neun war. Damals sagte er oft: Ein Kompass sagt dir nicht, wohin du gehen musst. Er erinnert dich nur daran, dass du eine Richtung wählen kannst. Lina hatte darüber gelacht. Als Kind schien jede Reise einfach: vom Ufer aufbrechen, etwas Schönes entdecken und vor dem Abendessen zurück sein.</p>
 <p>Nun war sie zweiunddreißig, und das Wort Zuhause war voller Räume geworden. Ihr Vater war gestorben. Die kleine Werkstatt, in der er Fischerboote repariert hatte, war geschlossen. Ihr jüngerer Bruder lebte im Ausland. Und Lina, die jahrelang gesagt hatte, irgendwann werde sie sich eine richtige Auszeit nehmen, saß endlich auf einem Boot, das am Morgen Hurghada verließ.</p>
 <p>Sie hatte Orange Bay gewählt, weil ihr Vater die Insel einmal auf einer alten Papierkarte eingekreist hatte. Neben dem Kreis standen nur zwei Worte: „Eines Tages.“ Er hatte nie erklärt, was er damit meinte. Vielleicht wollte er sie dorthin mitnehmen. Vielleicht gefiel ihm einfach die Form der Bucht. Diese Ungewissheit war länger geblieben, als Lina erwartet hatte.</p>
@@ -136,9 +526,100 @@ button, .btn, a.button, .book-link, .main-button, .cta-button {
 <p>Vor der Rückfahrt fotografierte Lina den Kompass auf der Karte. Sie schickte das Bild ihrem Bruder: „Ich glaube, ich verstehe jetzt, was er meinte. Beim nächsten Mal sollten wir zusammenkommen.“</p>
 <p>Die Antwort kam, noch bevor das Boot ablegte: „Such ein Datum aus. Ich bin dabei.“</p>
 <p>Auf der Rückfahrt steckte Lina den Kompass endlich ein. Die Insel wurde kleiner, doch es fühlte sich nicht mehr an, als ließe sie etwas zurück. Manche Orte verlangen nicht, dass man bleibt. Sie schenken einem genug Ruhe, um sich daran zu erinnern, was man mit nach Hause nehmen möchte.</p>
-<p class="story-ending">Und zum ersten Mal seit langer Zeit machte ihr die Richtung vor ihr keine Angst mehr.</p></div><div class="article-footer"><a class="discover-link" href="all-tours.html#tour-orange-bay-island">Discover the experience <span>→</span></a><a class="back-top" href="#top">Back to stories ↑</a></div></div></article>
-
-<article class="story-article" data-kind="fiction" id="mahmya"><div class="article-cover"><img alt="Mahmya · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg"/><div class="cover-shade"></div><div class="cover-copy"><span class="story-type">A FICTIONAL STORY</span><span class="story-place">Mahmya · Giftun Islands area</span><h2>The Quiet Between Two Waves</h2><p>A moving story about a brother and sister who learn to listen again.</p></div></div><div class="article-inner"><div class="story-language en-story"><p>For seven years, Mariam and Youssef had spoken mostly through short messages. A birthday greeting. A photograph of their mother’s garden. A practical question about a document. They had not argued about one great thing; they had accumulated many small silences, each one easy to explain and harder to cross.</p>
+<p class="story-ending">Und zum ersten Mal seit langer Zeit machte ihr die Richtung vor ihr keine Angst mehr.</p>`,
+    ru: `<p>Компас не сдвигался с места двадцать три года. Его латунный ободок поцарапался, стекло в углу слегка помутнело, а стрелка дрожала каждый раз, когда лодка пересекала кильватерный след. И всё же Лина несла его так бережно, словно он был сделан из света.</p>
+<p>Отец подарил его ей, когда ей было девять. Тогда он часто говорил, что компас не указывает, куда идти, — он лишь напоминает, что направление можно выбрать самому. Она смеялась над этими словами, ведь в детстве любое путешествие кажется простым: уходишь от берега, находишь что-то красивое и возвращаешься к ужину.</p>
+<p>Теперь ей было тридцать два, и слово «дом» вмещало слишком много пустых комнат. Отца не стало. Маленькая мастерская, где он чинил рыбацкие лодки, закрылась. Младший брат уехал за границу. А Лина, годами откладывавшая настоящий отдых на потом, наконец оказалась на утренней лодке, уходящей из Хургады.</p>
+<p>Она выбрала Orange Bay потому, что однажды отец обвёл этот остров на старой бумажной карте. Рядом с кругом он написал всего два слова: «Однажды». Он так и не объяснил, что имел в виду. Может быть, хотел привезти её сюда. А может, ему просто нравился изгиб бухты. Эта недосказанность сопровождала её дольше, чем она думала.</p>
+<p>Город медленно отпускал горизонт. Мотор вошёл в ровный, спокойный ритм. Вокруг Лины незнакомцы уже создавали свои воспоминания: мальчик считал белые следы за кормой; двое друзей спорили, кто первым прыгнет в воду; женщина держала шляпу обеими руками и смеялась навстречу ветру. Лина молчала, перекатывая компас на ладони.</p>
+<p>Когда показался остров, он не возник внезапным откровением. Он проявился постепенно: сначала бледная полоса, потом изгиб песка, а затем вода начала менять цвет по мере приближения лодки. Синева сменилась бирюзой, а бирюза — прозрачным, светящимся зелёным оттенком над отмелями. Берег казался удивительно безмятежным, но море жило мелкими движениями: бегал свет, перекрещивалась рябь, над водой ненадолго промелькнула птица.</p>
+<p>Лина ступила на песок и почувствовала, как ступням передаётся тепло. Она ждала, что её встретит грусть. Но на несколько минут остался лишь звук воды, мягко набегающей на берег. Она присела в тени, развернула старую карту и положила компас рядом с выцветшим кругом.</p>
+<p>«Ты добрался», — прошептала она, не зная, обращается ли к отцу, к себе прежней или к обещанию, скрытому в этих двух словах.</p>
+<p>Неподалёку маленькая девочка пыталась сложить башню из мокрого песка. Каждая волна подходила ближе и уносила часть постройки. Девочка хмурилась, строила заново и пробовала снова. Мать предложила помочь, но ребёнок покачал головой: «Она должна стоять сама».</p>
+<p>Лина смотрела, как следующая волна сглаживает песок. Она вспомнила всё, что пыталась удержать силой: дело, семейный уклад, привычку делать вид, что всё в порядке. Она путала стойкость с неизменностью. Море давало более тихий урок: береговая линия меняется каждый день и всё равно остаётся берегом. Волна что-то уносит и что-то оставляет после себя.</p>
+<p>Позже она шла вдоль кромки воды с компасом в руке. Ни тайного послания, ни скрытого пункта назначения она не нашла. Под водой не ждало чудесного ответа. Были просто остров, люди рядом, яркая вода и простое умение быть здесь и сейчас.</p>
+<p>Перед возвращением Лина сфотографировала компас на карте и отправила снимок брату: «Кажется, я поняла, что он имел в виду. В следующий раз давай приедем вместе».</p>
+<p>Ответ пришёл ещё до того, как лодка отошла от берега: «Выбирай дату. Я буду».</p>
+<p>На обратном пути Лина наконец убрала компас. Остров становился меньше, но больше не было чувства утраты. Некоторые места не просят остаться — они дают достаточно тишины, чтобы вспомнить, что хочется унести с собой домой.</p>
+<p class="story-ending">И впервые за долгое время дорога впереди не пугала её.</p>`,
+    fr: `<p>La boussole n'avait pas bougé depuis vingt-trois ans. Son bord en laiton était rayé, son verre trouble dans un coin et l'aiguille tremblait dès que le bateau croisait un sillage. Pourtant, Lina la portait avec le soin qu'on réserve à la lumière.</p>
+<p>Son père la lui avait offerte à neuf ans. À l'époque, il disait souvent qu'une boussole n'indique pas où aller, mais rappelle qu'on peut choisir une direction. Elle riait de cette phrase : l'enfance rend chaque voyage simple. On quitte le rivage, on trouve quelque chose de beau et on rentre avant le dîner.</p>
+<p>Elle avait maintenant trente-deux ans, et le mot maison contenait trop de pièces vides. Son père n'était plus là. Le petit atelier où il réparait les barques de pêche avait fermé. Son jeune frère vivait à l'étranger. Et Lina, qui répétait depuis des années qu'elle prendrait un vrai congé un jour, se trouvait enfin sur un bateau matinal quittant Hurghada.</p>
+<p>Elle avait choisi Orange Bay parce que son père avait autrefois entouré l'île sur une vieille carte papier. À côté du cercle, il n'avait écrit que deux mots : « Un jour. » Il n'avait jamais expliqué ce qu'il voulait dire. Peut-être avait-il voulu l'emmener là-bas. Peut-être aimait-il simplement la forme de la baie. Cette incertitude l'avait suivie plus longtemps qu'elle ne l'imaginait.</p>
+<p>La ville relâchait peu à peu son emprise sur l'horizon. Le moteur trouvait un rythme régulier. Autour de Lina, des inconnus créaient déjà des souvenirs : un petit garçon comptait les sillages blancs derrière le bateau ; deux amis discutaient de qui entrerait le premier dans l'eau ; une femme tenait son chapeau à deux mains et riait face au vent. Lina restait silencieuse, tournant la boussole dans sa paume.</p>
+<p>Lorsque l'île apparut, ce ne fut pas une révélation soudaine. Elle se dessina progressivement : d'abord une ligne pâle, puis une courbe de sable, puis une eau qui changeait de couleur à mesure que le bateau approchait. Le bleu devint turquoise, puis un vert clair et lumineux au-dessus des hauts-fonds. Le rivage semblait presque irréellement calme, mais la mer vivait de mille petits mouvements : lumière mouvante, rides croisées, un oiseau traversant brièvement le ciel.</p>
+<p>Lina posa le pied sur le sable et sentit la chaleur monter sous ses pas. Elle s'attendait à y retrouver sa tristesse. Pendant quelques instants, il n'y eut pourtant que le bruit de l'eau venant mourir sur la plage. Elle s'assit à l'ombre, déplia la vieille carte et posa la boussole près du cercle effacé.</p>
+<p>« Tu y es arrivé », murmura-t-elle, sans savoir si elle parlait à son père, à celle qu'elle avait été ou à la promesse cachée dans ces deux mots.</p>
+<p>Une fillette tout près tentait de bâtir une tour de sable humide. Chaque vague avançait et en emportait un peu. L'enfant fronçait les sourcils, reconstruisait et recommençait. Sa mère proposa de l'aider, mais la petite secoua la tête : « Il faut qu'elle tienne toute seule. »</p>
+<p>Lina regarda la vague suivante adoucir la tour. Elle pensa à tout ce qu'elle avait voulu maintenir debout par la force : une activité, une routine familiale, l'apparence que tout allait bien. Elle avait confondu endurance et immobilité. La mer offrait une leçon plus discrète : un littoral change chaque jour et reste un littoral. Une vague emporte quelque chose et laisse autre chose derrière elle.</p>
+<p>Plus tard, elle marcha au bord de l'eau, boussole en main. Elle ne trouva ni message secret ni destination cachée. Aucune réponse miraculeuse n'attendait sous la mer. Il y avait simplement l'île, ceux qui la partageaient, l'eau claire et le don ordinaire d'être présente.</p>
+<p>Avant de rembarquer, Lina prit en photo la boussole posée sur la carte. Elle envoya l'image à son frère avec ces mots : « Je crois comprendre ce qu'il voulait dire. La prochaine fois, venons ensemble. »</p>
+<p>La réponse arriva avant que le bateau ne quitte le rivage : « Choisis la date. J'en serai. »</p>
+<p>Sur le chemin du retour, Lina rangea enfin la boussole. L'île rapetissait, mais elle n'avait plus l'impression d'abandonner quelque chose. Certains lieux n'exigent pas qu'on reste. Ils offrent assez de calme pour se souvenir de ce qu'on veut rapporter chez soi.</p>
+<p class="story-ending">Et pour la première fois depuis longtemps, la route devant elle ne l'effrayait plus.</p>`,
+    it: `<p>La bussola non si muoveva da ventitré anni. Il bordo in ottone era graffiato, il vetro opaco in un angolo e l'ago tremava ogni volta che la barca attraversava una scia. Eppure Lina la portava con la cura che si riserva alla luce.</p>
+<p>Gliela aveva regalata suo padre quando aveva nove anni. Allora le diceva spesso che una bussola non ti dice dove andare, ma ti ricorda che puoi scegliere una direzione. Lei rideva di quella frase: nell'infanzia ogni viaggio sembra semplice. Lasci la riva, trovi qualcosa di bello e torni a casa prima di cena.</p>
+<p>Ora aveva trentadue anni e la parola casa conteneva troppe stanze. Suo padre non c'era più. La piccola officina dove riparava le barche da pesca aveva chiuso. Il fratello minore si era trasferito all'estero. E Lina, che per anni aveva detto che un giorno si sarebbe presa una vera pausa, era finalmente su una barca del mattino in partenza da Hurghada.</p>
+<p>Aveva scelto Orange Bay perché suo padre aveva cerchiato l'isola su una vecchia carta geografica. Accanto al cerchio aveva scritto solo due parole: “Un giorno.” Non aveva mai spiegato cosa intendesse. Forse voleva portarla lì. Forse gli piaceva semplicemente la forma della baia. Quell'incertezza l'aveva accompagnata più a lungo del previsto.</p>
+<p>La città allentava lentamente la presa sull'orizzonte. Il motore trovò un ritmo regolare. Intorno a Lina, degli sconosciuti stavano già creando ricordi: un bambino contava le scie bianche dietro la barca; due amici discutevano su chi sarebbe entrato per primo in acqua; una donna teneva il cappello con entrambe le mani e rideva nel vento. Lina restava in silenzio, rigirandosi la bussola nel palmo.</p>
+<p>Quando l'isola apparve, non fu una rivelazione improvvisa. Arrivò a poco a poco: prima una linea chiara, poi una distesa di sabbia, infine l'acqua che cambiava colore man mano che la barca si avvicinava. Il blu diventò turchese; il turchese un verde chiaro e luminoso sui bassi fondali. La riva sembrava quasi irreale nella sua calma, ma il mare era vivo di piccoli movimenti: luce che si spostava, increspature che si incrociavano, un uccello che attraversava brevemente il cielo.</p>
+<p>Lina scese sulla sabbia e sentì il calore salire dai piedi. Si aspettava di incontrare lì la sua tristezza. Invece, per qualche minuto, ci fu solo il suono dell'acqua che si adagiava sulla spiaggia. Si sedette all'ombra, aprì la vecchia mappa e appoggiò la bussola accanto al cerchio sbiadito.</p>
+<p>«Ce l'hai fatta», sussurrò, incerta se stesse parlando a suo padre, a se stessa da bambina o alla promessa nascosta in quelle due parole.</p>
+<p>Una bambina lì vicino cercava di costruire una torre con la sabbia bagnata. Ogni onda avanzava e ne portava via un pezzetto. La bambina aggrottava la fronte, ricostruiva e riprovava. La madre offrì aiuto, ma lei scosse la testa: «Deve stare in piedi da sola.»</p>
+<p>Lina osservò l'onda successiva ammorbidire la torre. Pensò a tutto ciò che aveva cercato di tenere in piedi con la forza: un'attività, una routine familiare, l'apparenza che andasse tutto bene. Aveva scambiato la resistenza con l'immutabilità. Il mare offriva una lezione più discreta: una costa cambia ogni giorno e resta pur sempre una costa. Un'onda porta via qualcosa e lascia qualcos'altro dietro di sé.</p>
+<p>Più tardi camminò lungo l'acqua con la bussola in mano. Non trovò nessun messaggio segreto né una meta nascosta. Nessuna risposta miracolosa aspettava sotto il mare. C'erano solo l'isola, chi la condivideva, l'acqua luminosa e il dono semplice di esserci.</p>
+<p>Prima di risalire a bordo per il rientro, Lina fotografò la bussola appoggiata sulla mappa. Mandò la foto al fratello con un breve messaggio: «Credo di capire cosa intendesse. La prossima volta veniamo insieme.»</p>
+<p>La risposta arrivò prima che la barca lasciasse la riva: «Scegli la data. Ci sarò.»</p>
+<p>Durante il viaggio di ritorno, Lina mise finalmente via la bussola. Guardò l'isola rimpicciolirsi, ma non sentiva più di lasciare indietro qualcosa. Alcuni luoghi non ti chiedono di restare. Ti regalano abbastanza quiete per ricordare cosa vuoi portare a casa.</p>
+<p class="story-ending">E per la prima volta dopo tanto tempo, la direzione davanti a lei non la spaventava più.</p>`,
+    es: `<p>La brújula no se había movido en veintitrés años. Su aro de latón estaba rayado, el cristal algo empañado en una esquina y la aguja temblaba cada vez que el barco cruzaba una estela. Aun así, Lina la llevaba con el cuidado que se reserva a la luz.</p>
+<p>Se la había regalado su padre cuando tenía nueve años. Entonces solía decirle que una brújula no te indica adónde ir, sino que te recuerda que puedes elegir una dirección. Ella se reía de aquella frase: en la infancia todo viaje parece sencillo. Sales de la orilla, encuentras algo bonito y vuelves a casa antes de cenar.</p>
+<p>Ahora tenía treinta y dos años, y la palabra hogar guardaba demasiadas habitaciones vacías. Su padre ya no estaba. El pequeño taller donde reparaba barcas de pesca había cerrado. Su hermano menor se había marchado al extranjero. Y Lina, que llevaba años diciendo que algún día se tomaría un descanso de verdad, por fin iba en una embarcación matutina que salía de Hurghada.</p>
+<p>Había elegido Orange Bay porque una vez su padre rodeó la isla en un viejo mapa de papel. Junto al círculo había escrito solo dos palabras: “Algún día.” Nunca explicó qué quería decir. Tal vez quiso llevarla allí. Tal vez simplemente le gustó la forma de la bahía. Aquella incertidumbre la había acompañado más tiempo del que esperaba.</p>
+<p>La ciudad iba soltando despacio su agarre en el horizonte. El motor encontró un compás constante. Alrededor de Lina, desconocidos ya creaban recuerdos: un niño contaba las estelas blancas tras el barco; dos amigos discutían sobre quién entraría primero al agua; una mujer sujetaba el sombrero con ambas manos y reía contra el viento. Lina permanecía callada, girando la brújula en la palma.</p>
+<p>Cuando apareció la isla, no llegó como una revelación brusca. Se fue formando poco a poco: primero una línea clara, luego una franja de arena y después un agua que cambiaba de color al acercarse el barco. El azul se volvió turquesa; el turquesa, un verde claro y luminoso sobre los bajíos. La orilla parecía casi irrealmente serena, pero el mar latía con pequeños movimientos: luz desplazándose, ondas cruzándose, un ave cruzando un instante el cielo.</p>
+<p>Lina pisó la arena y sintió el calor subir por sus pies. Esperaba que la tristeza saliera a su encuentro. En cambio, durante unos minutos solo hubo el sonido del agua plegándose en la playa. Se sentó a la sombra, desplegó el viejo mapa y colocó la brújula junto al círculo desvaído.</p>
+<p>«Lo lograste», susurró, sin saber si hablaba a su padre, a la niña que había sido o a la promesa escondida en aquellas dos palabras.</p>
+<p>Una niña cercana intentaba levantar una torre con arena húmeda. Cada ola avanzaba y se llevaba un poco. La niña fruncía el ceño, reconstruía y volvía a intentarlo. Su madre se ofreció a ayudar, pero ella negó con la cabeza: «Tiene que aguantar sola.»</p>
+<p>Lina observó cómo la siguiente ola suavizaba la torre. Pensó en todo lo que había intentado sostener a la fuerza: un oficio, una rutina familiar, la apariencia de que todo marchaba bien. Había confundido aguantar con no cambiar. El mar ofrecía una lección más callada: una costa cambia cada día y sigue siendo costa. Una ola se lleva algo y deja otra cosa atrás.</p>
+<p>Más tarde caminó junto al agua con la brújula en la mano. No halló ningún mensaje oculto ni un destino secreto. No esperaba ninguna respuesta milagrosa bajo el mar. Estaban simplemente la isla, quienes la compartían, el agua luminosa y el regalo sencillo de estar presente.</p>
+<p>Antes de embarcar de regreso, Lina fotografió la brújula sobre el mapa. Le envió la foto a su hermano con un mensaje breve: «Creo que entiendo lo que quería decir. La próxima vez vayamos juntos.»</p>
+<p>La respuesta llegó antes de que el barco dejara la orilla: «Elige la fecha. Allí estaré.»</p>
+<p>En el trayecto de vuelta, Lina guardó por fin la brújula. Vio cómo la isla se hacía pequeña, pero ya no sentía que dejara algo atrás. Algunos lugares no te piden que te quedes. Te dan la calma suficiente para recordar qué quieres llevar contigo a casa.</p>
+<p class="story-ending">Y por primera vez en mucho tiempo, el rumbo por delante no la asustaba.</p>`,
+    pl: `<p>Kompas nie drgnął od dwudziestu trzech lat. Jego mosiężna obręcz była porysowana, szkło w jednym rogu lekko zamglone, a wskazówka drżała za każdym razem, gdy łódź przecinała kilwater. Mimo to Lina niosła go tak ostrożnie, jakby był utkany ze światła.</p>
+<p>Podarował jej go ojciec, gdy miała dziewięć lat. Mawiał wtedy, że kompas nie mówi, dokąd iść — przypomina tylko, że można wybrać kierunek. Śmiała się z tych słów, bo w dzieciństwie każda podróż wydaje się prosta: odpływasz od brzegu, znajdujesz coś pięknego i wracasz przed kolacją.</p>
+<p>Teraz miała trzydzieści dwa lata, a słowo dom mieściło zbyt wiele pustych pokoi. Ojca już nie było. Mały warsztat, w którym naprawiał łodzie rybackie, zamknięto. Młodszy brat wyjechał za granicę. A Lina, która latami powtarzała, że kiedyś zrobi sobie prawdziwy urlop, wreszcie płynęła poranną łodzią z Hurghady.</p>
+<p>Wybrała Orange Bay, ponieważ kiedyś ojciec zakreślił tę wyspę na starej papierowej mapie. Obok okręgu napisał tylko dwa słowa: „Pewnego dnia.” Nigdy nie wyjaśnił, co miał na myśli. Może chciał ją tam zabrać. Może po prostu podobał mu się kształt zatoki. Ta niepewność towarzyszyła jej dłużej, niż przypuszczała.</p>
+<p>Miasto powoli traciło ostrość na horyzoncie. Silnik złapał równy rytm. Wokół Liny nieznajomi już tworzyli wspomnienia: chłopiec liczył białe ślady za rufą; dwoje przyjaciół spierało się, kto pierwszy wskoczy do wody; kobieta trzymała kapelusz obiema rękami i śmiała się do wiatru. Lina siedziała cicho, obracając kompas w dłoni.</p>
+<p>Gdy pojawiła się wyspa, nie przyszła jak nagłe objawienie. Wyłaniała się stopniowo: najpierw jasna linia, potem łuk piasku, a wreszcie woda zmieniająca barwę, gdy łódź płynęła bliżej. Błękit przechodził w turkus, a turkus w jasną, świetlistą zieleń nad płyciznami. Brzeg wydawał się niemal nierzeczywiście spokojny, ale morze żyło drobnymi ruchami: przesuwającym się światłem, krzyżującymi się falkami, ptakiem przelatującym na chwilę nad wodą.</p>
+<p>Lina stanęła na piasku i poczuła ciepło przenikające stopy. Spodziewała się, że przywita ją smutek. Zamiast tego przez kilka minut słychać było tylko wodę łagodnie opadającą na brzeg. Usiadła w cieniu, rozłożyła starą mapę i położyła kompas obok wyblakłego okręgu.</p>
+<p>„Udało się”, szepnęła, niepewna, czy mówi do ojca, do samej siebie sprzed lat, czy do obietnicy ukrytej w tych dwóch słowach.</p>
+<p>Dziewczynka obok próbowała zbudować wieżę z mokrego piasku. Każda fala podchodziła bliżej i zabierała jej kawałek. Mała marszczyła brwi, stawiała od nowa i próbowała dalej. Matka chciała pomóc, ale dziecko pokręciło głową: „Musi stać sama.”</p>
+<p>Lina patrzyła, jak kolejna fala wygładza wieżę. Pomyślała o tym wszystkim, co próbowała utrzymać na siłę: o pracy, rodzinnym rytmie, pozorze, że wszystko jest w porządku. Mylono jej się trwanie z niezmiennością. Morze dawało cichszą lekcję: linia brzegowa zmienia się każdego dnia i wciąż jest brzegiem. Fala coś zabiera i coś zostawia po sobie.</p>
+<p>Później szła wzdłuż wody z kompasem w dłoni. Nie znalazła ukrytej wiadomości ani tajemnego celu. Pod wodą nie czekała cudowna odpowiedź. Była po prostu wyspa, ludzie, którzy ją dzielili, jasna woda i zwykły dar bycia obecnym.</p>
+<p>Przed wejściem na łódź powrotną Lina zrobiła zdjęcie kompasu na mapie. Wysłała je bratu z krótką wiadomością: „Chyba rozumiem, co miał na myśli. Następnym razem przyjedźmy razem.”</p>
+<p>Odpowiedź przyszła, zanim łódź odbiła od brzegu: „Wybierz datę. Będę.”</p>
+<p>W drodze powrotnej Lina wreszcie schowała kompas. Patrzyła, jak wyspa maleje, ale nie czuła już, że coś porzuca. Niektóre miejsca nie każą zostać. Dają dość ciszy, by przypomnieć sobie, co chcesz zabrać do domu.</p>
+<p class="story-ending">I po raz pierwszy od dawna kierunek przed nią już jej nie przerażał.</p>`,
+    ar: `<p>لم تتحرك البوصلة منذ ثلاثة وعشرين عاماً. كان إطارها النحاسي مخدوشاً، وزجاجها معتماً في أحد أركانه، والإبرة ترتجف كلما عبر القاربُ أثرَ موجة سابقة. ومع ذلك، كانت لينا تحملها بعناية كأنها مصنوعة من الضوء.</p>
+<p>أهداها إياها والدها عندما كانت في التاسعة. حينها كان يقول لها إن البوصلة لا تخبرك إلى أين تذهب؛ بل تذكّرك أنك تستطيع اختيار اتجاه. كانت تضحك من جملته، لأن الطفولة تجعل كل رحلة تبدو بسيطة: تغادر الشاطئ، وتجد شيئاً جميلاً، وتعود إلى البيت قبل العشاء.</p>
+<p>الآن أصبحت في الثانية والثلاثين، وصارت كلمة «البيت» تضم غرفاً كثيرة أوسع من أن تتسع لأيامها. رحل والدها، وأُغلقت الورشة الصغيرة التي كان يصلّح فيها قوارب الصيد، وسافر شقيقها الأصغر إلى الخارج. أما لينا، التي أمضت سنوات تقول إنها ستأخذ إجازة حقيقية «يوماً ما»، فقد وجدت نفسها أخيراً على متن قارب صباحي يغادر الغردقة.</p>
+<p>اختارت «أورانج باي» لأن والدها كان قد رسم دائرة حول الجزيرة على خريطة ورقية قديمة. وبجانب الدائرة كتب كلمتين فقط: «يوماً ما». لم يشرح قط ماذا قصد؛ ربما أراد أن يأخذها إلى هناك، وربما أعجبه شكل الخليج فحسب. بقيت هذه الحيرة تلازمها أطول مما توقعت.</p>
+<p>أرخى المدينةُ قبضتها ببطء عن الأفق، واستقرّ المحرك على إيقاع ثابت. من حول لينا كان الغرباء يصنعون ذكرياتهم: طفل صغير يعدّ الخطوط البيضاء خلف القارب، وصديقان يتجادلان من يقفز أولاً إلى الماء، وامرأة تمسك قبعتها بكلتي يديها وتضحك في مواجهة الريح. بقيت لينا صامتة، تقلّب البوصلة في راحة يدها.</p>
+<p>عندما ظهرت الجزيرة لم تأتِ كإشراقة مفاجئة، بل تكشّفت تدريجياً: خطّ باهت أولاً، ثم امتداد من الرمال، ثم ماء يتبدّل لونه كلما اقترب القارب؛ تتحول الزرقة إلى فيروزي، والفيروزي إلى أخضر صافٍ متلألئ فوق المياه الضحلة. بدا الشاطئ هادئاً يكاد لا يُصدّق، لكن البحر كان ينبض بحركات صغيرة: ضوء يتنقل، وتموجات تتقاطع، وطائر يقطع السماء للحظة.</p>
+<p>خطت لينا على الرمال وشعرت بالدفء يتسلل إلى قدميها. توقعت أن يلاقيها الحزن هناك، لكن لعدة دقائق لم يكن ثمة سوى صوت الماء وهو ينطوي على الشاطئ. جلست في الظل، وفتحت الخريطة القديمة، ووضعت البوصلة بجانب الدائرة الباهتة.</p>
+<p>همست: «لقد وصلت»، دون أن تدري أهي تخاطب والدها، أم نسختها الأصغر سناً، أم الوعد المختبئ في هاتين الكلمتين.</p>
+<p>قريباً منها كانت طفلة صغيرة تحاول بناء برج من الرمال المبللة. تتقدم كل موجة فتأخذ جزءاً منه؛ تعقد الطفلة حاجبيها، وتعيد البناء، وتحاول مجدداً. عرضت أمها المساعدة، فهزّت الصغيرة رأسها: «يجب أن يقف لوحده».</p>
+<p>راقبت لينا الموجة التالية وهي تنعّم البرج، وفكّرت في كل ما حاولت إبقاءه قائماً بالقوة: عملاً، وروتيناً عائلياً، ومظهر أن كل شيء على ما يرام. لقد خلطت بين الصمود وعدم التغير. أما البحر فقدّم درساً أهدأ: الخط الساحلي يتغير كل يوم ويبقى شاطئاً، والموجة تأخذ شيئاً وتترك شيئاً آخر وراءها.</p>
+<p>في وقت لاحق مشت بمحاذاة الماء والبوصلة في يدها. لم تجد رسالة مخفية ولا وجهة سرية، ولم تكن هناك إجابة معجزية تنتظر تحت البحر؛ بل كانت هناك الجزيرة فحسب، والناس الذين يشاركونها، والماء المضيء، وهبة الحضور البسيطة في اللحظة.</p>
+<p>قبل أن تصعد إلى قارب العودة، التقطت لينا صورة للبوصلة مستقرة على الخريطة، وأرسلتها إلى شقيقها برسالة قصيرة: «أظن أنني فهمت ما قصده. علينا أن نأتي معاً في المرة القادمة».</p>
+<p>وصل الرد قبل أن يغادر القاربُ الشاطئ: «اختاري التاريخ، وسأكون هناك».</p>
+<p>في رحلة العودة، وضعت لينا البوصلة أخيراً في حقيبتها. نظرت إلى الجزيرة وهي تصغر، لكنها لم تعد تشعر أنها تترك شيئاً خلفها؛ فبعض الأماكن لا تطلب منك البقاء، بل تمنحك هدوءاً يكفي لتتذكر ما تريد أن تحمله معك إلى البيت.</p>
+<p class="story-ending">ولأول مرة منذ زمن طويل، لم يعد الاتجاه أمامها يخيفها.</p>`
+  },
+  "mahmya": {
+    en: `<p>For seven years, Mariam and Youssef had spoken mostly through short messages. A birthday greeting. A photograph of their mother’s garden. A practical question about a document. They had not argued about one great thing; they had accumulated many small silences, each one easy to explain and harder to cross.</p>
 <p>When their mother suggested a day at Mahmya, neither wanted to disappoint her. They agreed to join the boat trip, but they did not agree on much else. Youssef arrived late. Mariam chose a seat at the far side of the deck. Their mother watched them both and said nothing.</p>
 <p>The sea made conversation difficult at first. Wind carried words away. The boat rose and fell gently, and the coastline slowly slipped behind them. Their mother closed her eyes. Mariam looked at the water. Youssef checked his phone until the signal weakened and the screen became useless.</p>
 <p>“You can put it away,” Mariam said.</p>
@@ -162,69 +643,285 @@ button, .btn, a.button, .book-link, .main-button, .cta-button {
 <p>“I thought we might take a picture,” she said.</p>
 <p>The three of them stood near the water. The photograph was not perfect. The wind moved their hair; the sun made them squint; the bucket looked ridiculous. But when Mariam saw it later, she noticed that nobody was looking at the camera. They were looking at one another.</p>
 <p>On the boat back, Youssef asked his sister when she was free next week. Mariam gave him a day. Their mother fell asleep between them.</p>
-<p class="story-ending">The island did not repair a family in one afternoon. It gave them something more believable: a quiet stretch of shore, a remembered joke, and enough room to try again.</p></div><div class="story-language de-story" hidden=""><p>Seit sieben Jahren hatten Mariam und Youssef meist nur kurze Nachrichten ausgetauscht: Geburtstagsgrüße, ein Foto vom Garten ihrer Mutter, eine praktische Frage zu einem Dokument. Sie hatten sich nicht wegen eines einzigen großen Ereignisses entzweit. Es waren viele kleine Schweigen gewesen, jedes leicht zu erklären und schwer zu überwinden.</p>
+<p class="story-ending">The island did not repair a family in one afternoon. It gave them something more believable: a quiet stretch of shore, a remembered joke, and enough room to try again.</p>`,
+    de: `<p>Seit sieben Jahren hatten Mariam und Youssef meist nur kurze Nachrichten ausgetauscht: Geburtstagsgrüße, ein Foto vom Garten ihrer Mutter, eine praktische Frage zu einem Dokument. Sie hatten sich nicht wegen eines einzigen großen Ereignisses entzweit. Es waren viele kleine Schweigen gewesen, jedes leicht zu erklären und schwer zu überwinden.</p>
 <p>Als ihre Mutter einen Tag auf Mahmya vorschlug, wollte keiner sie enttäuschen. Beide sagten der Bootsfahrt zu, doch bei allem anderen waren sie sich selten einig. Youssef kam zu spät. Mariam setzte sich ans andere Ende des Decks. Ihre Mutter sah beide an und sagte nichts.</p>
 <p>Das Meer machte Gespräche zunächst schwierig. Der Wind trug die Worte fort. Das Boot hob und senkte sich sanft, während die Küste langsam zurückblieb. Ihre Mutter schloss die Augen. Mariam sah aufs Wasser. Youssef prüfte sein Telefon, bis der Empfang schwächer wurde und der Bildschirm nutzlos blieb.</p>
 <p>„Du kannst es weglegen“, sagte Mariam.</p>
 <p>„Ich wollte nur auf die Uhr sehen.“</p>
 <p>„Das Meer hat seine eigene Zeit.“</p>
-<p>Es war der erste Satz zwischen ihnen, der nichts mit den Terminen ihrer Mutter oder einer Familienbesorgung zu tun hatte. Youssef lächelte beinahe.</p>
-<p>Auf der Insel öffnete sich der Tag in Sonnenlicht, Sand und das schimmernde Grün des flachen Wassers. Ihre Mutter ging langsam zu einem schattigen Platz. Mariam half ihr mit der Tasche. Youssef trug das Wasser. Eine Weile bewegten sich die drei zusammen, ohne etwas erklären zu müssen.</p>
-<p>Später ruhte sich ihre Mutter aus. Geschwister gingen am Ufer entlang. Eine kleine Welle erreichte ihre Füße und zog sich zurück und hinterließ eine dünne, glänzende Linie im Sand.</p>
-<p>„Erinnerst du dich an den blauen Eimer?“, fragte Youssef.</p>
-<p>Mariam lachte, bevor sie es aufhalten konnte. Als Kinder hatten sie einen blauen Eimer an den Strand mitgenommen und stundenlang versucht, ihn zu füllen, nur um zu sehen, wie das Wasser durch einen Riss entkam. Youssef hatte darauf bestanden, ihn mit einem Stück Seegras reparieren zu können. Mariam hatte ihm geglaubt.</p>
+<p>Es war der erste Satz zwischen ihnen, der nichts mit den Terminen ihrer Mutter oder einer Familienbesorgung zu tun hatte. Youssef lächelte fast.</p>
+<p>Auf der Insel öffnete sich der Tag in Sonne, Sand und das helle Türkis des flachen Wassers. Ihre Mutter ging langsam zu einem schattigen Platz. Mariam trug die Tasche mit ihr, Youssef das Wasser. Eine Weile bewegten sich die drei gemeinsam, ohne etwas erklären zu müssen.</p>
+<p>Später ruhte sich ihre Mutter aus. Geschwister gingen am Ufer entlang. Eine kleine Welle erreichte ihre Füße und zog sich zurück und hinterließ eine schmale, glänzende Linie im Sand.</p>
+<p>„Weißt du noch, der blaue Eimer?“, fragte Youssef.</p>
+<p>Mariam lachte, bevor sie es aufhalten konnte. Als Kinder hatten sie einen blauen Eimer an den Strand gebracht und stundenlang gefüllt, nur um zu sehen, wie das Wasser durch einen Riss entwich. Youssef hatte behauptet, er könne ihn mit einem Stück Seegras abdichten. Mariam hatte ihm geglaubt.</p>
 <p>„Du hast gesagt, es sei ein besonderer Eimer“, sagte sie.</p>
 <p>„War er auch. Er hat uns gezeigt, dass das Meer immer gewinnt.“</p>
-<p>„Nein. Er hat uns gezeigt, dass wir einen besseren Eimer mitnehmen sollten.“</p>
-<p>Sie lachten. Es war keine Lösung für sieben Jahre, aber es war ein Anfang.</p>
-<p>Youssef blieb stehen. „Ich dachte, du warst wütend, weil ich gegangen bin.“</p>
-<p>„Ich war wütend, weil du gegangen bist, ohne mir zu sagen, wie einsam es sich anfühlen würde. Und dann war ich wütend, weil ich dich vermisst habe.“</p>
-<p>Er sah hinunter aufs Wasser. „Ich dachte, wenn ich anrufe, würdest du hören, wie unsicher ich war. Ich wollte klingen, als hätte ich alles im Griff.“</p>
-<p>„Bei mir musstest du nie sicher klingen.“</p>
-<p>Die Worte waren klein. Sie machten die Jahre nicht ungeschehen. Aber sie schufen Raum, in dem etwas Ehrliches stehen konnte.</p>
-<p>Sie kehrten zu ihrer Mutter zurück und fanden sie wach vor, wie sie sie mit einem ruhigen Lächeln ansah. Sie fragte nicht, worüber sie gesprochen hatten. Sie reichte ihnen nur den alten blauen Eimer, den sie als Scherz aus einem Schrank zu Hause mitgenommen hatte. Der Griff war verblasst; ein Riss zog sich noch immer an einer Seite entlang.</p>
-<p>„Ich dachte, wir machen vielleicht ein Foto“, sagte sie.</p>
-<p>Die drei standen am Wasser. Das Foto war nicht perfekt. Der Wind bewegte ihre Haare, die Sonne ließ sie blinzeln, und der Eimer sah lächerlich aus. Doch als Mariam es später sah, fiel ihr auf, dass niemand in die Kamera schaute. Sie sahen einander an.</p>
-<p>Auf der Rückfahrt fragte Youssef seine Schwester, wann sie nächste Woche Zeit habe. Mariam nannte ihm einen Tag. Ihre Mutter schlief zwischen ihnen ein.</p>
-<p class="story-ending">Die Insel hat eine Familie nicht an einem Nachmittag geheilt. Sie gab ihnen etwas Glaubwürdigeres: einen ruhigen Küstenstreifen, einen alten Scherz und genug Raum, es noch einmal zu versuchen.</p></div><div class="article-footer"><a class="discover-link" href="all-tours.html#tour-mahmya-island">Discover the experience <span>→</span></a><a class="back-top" href="#top">Back to stories ↑</a></div></div></article>
+<p>„Nein. Er hat uns gezeigt, dass wir einen besseren Eimer mitbringen sollten.“</p>
+<p>Sie lachten. Das löste keine sieben Jahre auf, aber es war ein Anfang.</p>
+<p>Youssef blieb stehen. „Ich dachte, du wärst wütend, weil ich gegangen bin.“</p>
+<p>„Ich war wütend, weil du gegangen bist, ohne mir zu sagen, wie einsam es sich anfühlen würde. Und dann war ich wütend, weil ich dich vermisste.“</p>
+<p>Er blickte aufs Wasser. „Ich dachte, wenn ich anrufe, hörst du, wie unsicher ich bin. Ich wollte wirken, als hätte ich alles im Griff.“</p>
+<p>„Bei mir musstest du nie sicher wirken.“</p>
+<p>Es waren kleine Worte. Sie machten die Jahre nicht ungeschehen. Doch sie schufen Raum, in dem Ehrlichkeit endlich stehen konnte.</p>
+<p>Als sie zu ihrer Mutter zurückkehrten, war sie wach und sah beide mit einem ruhigen Lächeln an. Sie fragte nicht, worüber sie gesprochen hatten. Sie reichte ihnen nur den alten blauen Eimer, den sie aus einem Schrank zu Hause mitgenommen hatte – halb im Scherz. Der Griff war verblasst, an einer Seite verlief noch immer ein Riss.</p>
+<p>„Ich dachte, wir machen ein Foto“, sagte sie.</p>
+<p>Die drei standen nah am Wasser. Das Bild war nicht perfekt. Der Wind bewegte ihr Haar, die Sonne ließ sie blinzeln, der Eimer sah komisch aus. Doch als Mariam das Foto später ansah, fiel ihr auf, dass niemand in die Kamera blickte. Sie sahen einander an.</p>
+<p>Auf der Rückfahrt fragte Youssef seine Schwester, wann sie nächste Woche Zeit habe. Mariam nannte ihm einen Tag. Zwischen ihnen schlief ihre Mutter ein.</p>
+<p class="story-ending">Die Insel hat eine Familie nicht an einem Nachmittag geheilt. Sie gab ihnen etwas Glaubwürdigeres: ein ruhiges Stück Küste, einen gemeinsamen Scherz und genug Raum, es noch einmal zu versuchen.</p>`,
+    ru: `<p>Семь лет Марьям и Юсеф общались в основном короткими сообщениями. Поздравление с днём рождения. Фотография маминого сада. Деловой вопрос по документам. Они не ссорились из-за чего-то одного большого — просто накопили множество мелких пауз, каждую из которых легко объяснить и трудно перешагнуть.</p>
+<p>Когда мама предложила провести день на Махмии, никто не хотел её огорчать. Оба согласились на прогулку на лодке, но во всём остальном редко сходились. Юсеф опоздал. Марьям села на противоположном краю палубы. Мать смотрела на обоих и молчала.</p>
+<p>Сначала море мешало разговору: ветер уносил слова. Лодка плавно поднималась и опускалась, берег медленно отступал. Мать закрыла глаза. Марьям смотрела на воду. Юсеф проверял телефон, пока связь не ослабла и экран не перестал помогать.</p>
+<p>«Можешь убрать его», — сказала Марьям.</p>
+<p>«Я просто хотел посмотреть время».</p>
+<p>«У моря свои часы».</p>
+<p>Это была их первая фраза не о маминых делах и не о семейных поручениях. Юсеф почти улыбнулся.</p>
+<p>На острове день раскрылся солнцем, песком и цветом мелководья. Мать неспешно пошла к тени. Марьям помогла ей с сумкой. Юсеф понёс воду. Какое-то время они шли втроём, не нуждаясь в объяснениях.</p>
+<p>Позже мать прилегла отдохнуть. Брат и сестра пошли вдоль берега. Небольшая волна коснулась их ног и отступила, оставив на песке тонкую блестящую линию.</p>
+<p>«Помнишь синее ведёрко?» — спросил Юсеф.</p>
+<p>Марьям засмеялась, не сдержавшись. В детстве они принесли на пляж синее ведёрко и часами наполняли его, а вода выливалась через трещину. Юсеф уверял, что починит его водорослями, и Марьям верила.</p>
+<p>«Ты говорил, что оно особенное», — сказала она.</p>
+<p>«Так и было. Оно научило нас, что море всегда побеждает».</p>
+<p>«Нет. Оно научило нас брать ведёрко получше».</p>
+<p>Они засмеялись. Это не решало семи лет, но это было началом.</p>
+<p>Юсеф остановился: «Я думал, ты злишься, что я уехал».</p>
+<p>«Я злилась, что ты уехал, не сказав, как одиноко станет. А потом злилась, что скучаю».</p>
+<p>Он опустил взгляд на воду: «Думал, если позвоню, ты услышишь, как я сомневаюсь. Хотелось казаться человеком, у которого всё под контролем».</p>
+<p>«Со мной тебе никогда не нужно было казаться уверенным».</p>
+<p>Слова были простыми. Они не стирали прошедшие годы, но создавали пространство, где наконец могла встать честность.</p>
+<p>Вернувшись к матери, они застали её бодрствующей; она смотрела на них с тихой улыбкой. Она не спросила, о чём они говорили, а лишь протянула старое синее ведёрко, которое прихватила из домашнего шкафа как бы в шутку. Ручка выцвела, трещина сбоку никуда не делась.</p>
+<p>«Подумала, может, сфотографируемся», — сказала она.</p>
+<p>Они встали втроём у воды. Кадр получился неидеальным: ветер трепал волосы, солнце заставляло жмуриться, ведёрко выглядело смешно. Но позже, глядя на снимок, Марьям заметила, что никто не смотрит в объектив — они смотрели друг на друга.</p>
+<p>На обратном пути Юсеф спросил сестру, когда она свободна на следующей неделе. Марьям назвала день. Между ними уснула мать.</p>
+<p class="story-ending">Остров не исцелил семью за один полдень. Он дал нечто более правдоподобное: тихий берег, старую шутку и пространство, чтобы попробовать снова.</p>`,
+    fr: `<p>Pendant sept ans, Mariam et Youssef avaient surtout communiqué par courts messages. Un souhait d'anniversaire. Une photo du jardin de leur mère. Une question pratique sur un papier. Ils ne s'étaient pas disputés pour un drame unique ; ils avaient accumulé de petits silences, chacun facile à justifier et plus difficile à franchir.</p>
+<p>Lorsque leur mère proposa une journée à Mahmya, aucun des deux ne voulut la décevoir. Ils acceptèrent la sortie en bateau, sans tomber d'accord sur grand-chose d'autre. Youssef arriva en retard. Mariam s'installa à l'autre bout du pont. Leur mère les observa tous les deux sans rien dire.</p>
+<p>La mer rendait la conversation difficile au début. Le vent emportait les mots. Le bateau montait et descendait doucement tandis que la côte s'éloignait. Leur mère ferma les yeux. Mariam regardait l'eau. Youssef vérifiait son téléphone jusqu'à ce que le réseau s'affaiblisse et que l'écran devienne inutile.</p>
+<p>« Tu peux le ranger », dit Mariam.</p>
+<p>« Je regardais juste l'heure. »</p>
+<p>« La mer a sa propre horloge. »</p>
+<p>C'était la première phrase échangée qui ne concernait ni les rendez-vous de leur mère ni une course familiale. Youssef esquissa presque un sourire.</p>
+<p>Sur l'île, la journée s'ouvrit sur le soleil, le sable et la couleur claire des petits fonds. Leur mère marcha lentement vers un coin d'ombre. Mariam l'aida pour le sac. Youssef porta l'eau. Un moment, tous trois avancèrent ensemble sans avoir rien à justifier.</p>
+<p>Plus tard, leur mère se reposa. Le frère et la sœur marchèrent le long du rivage. Une petite vague effleura leurs pieds puis se retira, laissant une fine ligne brillante sur le sable.</p>
+<p>« Tu te souviens du seau bleu ? » demanda Youssef.</p>
+<p>Mariam rit avant de pouvoir se retenir. Enfants, ils avaient apporté un seau bleu à la plage et passé des heures à le remplir pour voir l'eau s'échapper par une fissure. Youssef jurait pouvoir le réparer avec une algue. Mariam le croyait.</p>
+<p>« Tu disais que c'était un seau spécial », fit-elle.</p>
+<p>« Il l'était. Il nous a appris que la mer gagne toujours. »</p>
+<p>« Non. Il nous a appris à prendre un meilleur seau. »</p>
+<p>Ils rirent. Cela ne réglait pas sept années, mais c'était un début.</p>
+<p>Youssef s'arrêta : « Je croyais que tu m'en voulais d'être parti. »</p>
+<p>« Je t'en voulais d'être parti sans me dire à quel point je me sentirais seule. Et puis je t'en voulais de me manquer. »</p>
+<p>Il baissa les yeux vers l'eau : « Je pensais que si j'appelais, tu entendrais mes doutes. Je voulais avoir l'air de tout maîtriser. »</p>
+<p>« Tu n'as jamais eu à paraître sûr de tout avec moi. »</p>
+<p>Les mots étaient simples. Ils n'effaçaient pas les années, mais ouvraient un espace où quelque chose de vrai pouvait enfin tenir.</p>
+<p>En revenant vers leur mère, ils la trouvèrent réveillée, les observant avec un sourire paisible. Elle ne demanda pas ce qu'ils s'étaient dit. Elle leur tendit simplement le vieux seau bleu rapporté d'un placard à la maison comme une plaisanterie. L'anse était passée ; une fissure courait encore sur le côté.</p>
+<p>« Je me disais qu'on pourrait prendre une photo », dit-elle.</p>
+<p>Tous trois se tinrent près de l'eau. Le cliché n'avait rien de parfait. Le vent décoiffait leurs cheveux, le soleil faisait plisser les yeux, le seau avait l'air ridicule. Mais lorsque Mariam revit la photo plus tard, elle remarqua que personne ne regardait l'objectif. Ils se regardaient les uns les autres.</p>
+<p>Au retour sur le bateau, Youssef demanda à sa sœur quand elle serait libre la semaine suivante. Mariam lui donna un jour. Entre eux, leur mère s'endormit.</p>
+<p class="story-ending">L'île n'a pas réparé une famille en un après-midi. Elle leur a offert quelque chose de plus crédible : un bout de rivage tranquille, une plaisanterie retrouvée et assez d'espace pour essayer à nouveau.</p>`,
+    it: `<p>Per sette anni Mariam e Youssef si erano parlati soprattutto con brevi messaggi. Un augurio di compleanno. Una foto del giardino della madre. Una domanda pratica su un documento. Non avevano litigato per un solo grande motivo; avevano accumulato molti piccoli silenzi, ciascuno facile da spiegare e più difficile da superare.</p>
+<p>Quando la madre propose una giornata a Mahmya, nessuno dei due volle deluderla. Accettarono la gita in barca, ma su quasi tutto il resto la pensavano diversamente. Youssef arrivò in ritardo. Mariam scelse un posto all'estremità opposta del ponte. La madre li guardò entrambi e non disse nulla.</p>
+<p>All'inizio il mare rendeva difficile parlare. Il vento portava via le parole. La barca saliva e scendeva dolcemente mentre la costa scivolava via alle loro spalle. La madre chiuse gli occhi. Mariam guardava l'acqua. Youssef controllava il telefono finché il segnale non calò e lo schermo diventò inutile.</p>
+<p>«Puoi metterlo via», disse Mariam.</p>
+<p>«Stavo solo guardando l'ora.»</p>
+<p>«Il mare ha il suo orologio.»</p>
+<p>Era la prima frase che si scambiavano non legata agli appuntamenti della madre o a una commissione di famiglia. Youssef accennò quasi a un sorriso.</p>
+<p>Sull'isola la giornata si aprì su luce, sabbia e il colore dell'acqua bassa. La madre camminò piano verso un punto d'ombra. Mariam l'aiutò con la borsa. Youssef portò l'acqua. Per un po' tutti e tre si mossero insieme senza bisogno di spiegare nulla.</p>
+<p>Più tardi la madre riposò. Fratello e sorella camminarono lungo la riva. Una piccola onda raggiunse i loro piedi e si ritirò, lasciando una sottile linea luminosa sulla sabbia.</p>
+<p>«Ti ricordi il secchiello blu?», chiese Youssef.</p>
+<p>Mariam rise prima di potersi trattenere. Da bambini avevano portato un secchiello blu in spiaggia e passavano ore a riempirlo, solo per vedere l'acqua uscire da una crepa. Youssef insisteva che avrebbe potuto ripararlo con un pezzo d'alga. Mariam gli credeva.</p>
+<p>«Dicevi che era un secchiello speciale», disse lei.</p>
+<p>«Lo era. Ci ha insegnato che il mare vince sempre.»</p>
+<p>«No. Ci ha insegnato a portare un secchiello migliore.»</p>
+<p>Risero. Non era la soluzione a sette anni, ma era un inizio.</p>
+<p>Youssef si fermò: «Credevo fossi arrabbiata perché me ne ero andato.»</p>
+<p>«Ero arrabbiata perché te n'eri andato senza dirmi quanto mi sarei sentita sola. E poi ero arrabbiata perché mi mancavi.»</p>
+<p>Guardò l'acqua: «Pensavo che se avessi chiamato, avresti sentito quanto ero insicuro. Volevo sembrare uno che aveva tutto sotto controllo.»</p>
+<p>«Con me non hai mai dovuto sembrare sicuro.»</p>
+<p>Erano parole semplici. Non cancellavano gli anni, ma aprivano uno spazio in cui qualcosa di sincero poteva finalmente stare in piedi.</p>
+<p>Tornati dalla madre, la trovarono sveglia che li guardava con un sorriso quieto. Non chiese di cosa avessero parlato. Porse loro solo il vecchio secchiello blu portato per scherzo da un armadio di casa. Il manico era sbiadito; una crepa correva ancora lungo un lato.</p>
+<p>«Pensavo potessimo fare una foto», disse.</p>
+<p>Tutti e tre si misero vicino all'acqua. La foto non era perfetta. Il vento scompigliava i capelli, il sole faceva socchiudere gli occhi, il secchiello sembrava buffo. Ma quando Mariam la rivide più tardi, notò che nessuno guardava l'obiettivo. Si guardavano l'un l'altro.</p>
+<p>Sulla barca del ritorno Youssef chiese alla sorella quando fosse libera la settimana seguente. Mariam gli indicò un giorno. Tra loro la madre si addormentò.</p>
+<p class="story-ending">L'isola non ha ricucito una famiglia in un pomeriggio. Ha dato loro qualcosa di più credibile: un tratto di riva tranquillo, uno scherzo ritrovato e abbastanza spazio per riprovare.</p>`,
+    es: `<p>Durante siete años, Mariam y Youssef habían hablado sobre todo mediante mensajes breves. Una felicitación de cumpleaños. Una foto del jardín de su madre. Una consulta práctica sobre un trámite. No habían discutido por un gran motivo único; habían acumulado muchos silencios pequeños, fáciles de explicar por separado y difíciles de cruzar.</p>
+<p>Cuando su madre propuso pasar el día en Mahmya, ninguno quiso defraudarla. Aceptaron la excursión en barco, aunque en casi todo lo demás costaba que coincidieran. Youssef llegó tarde. Mariam eligió un asiento en el extremo opuesto de la cubierta. Su madre los miró a ambos y no dijo nada.</p>
+<p>Al principio el mar dificultaba la conversación. El viento se llevaba las palabras. El barco subía y bajaba con suavidad mientras la costa quedaba atrás. Su madre cerró los ojos. Mariam miraba el agua. Youssef revisaba el móvil hasta que la señal se debilitó y la pantalla dejó de servir.</p>
+<p>«Puedes guardarlo», dijo Mariam.</p>
+<p>«Solo miraba la hora.»</p>
+<p>«El mar tiene su propio reloj.»</p>
+<p>Fue la primera frase que intercambiaban sin hablar de las citas de su madre ni de un recado familiar. Youssef casi sonrió.</p>
+<p>En la isla, el día se abrió al sol, la arena y el color del agua somera. Su madre caminó despacio hacia una sombra. Mariam la ayudó con la bolsa. Youssef llevó el agua. Por un rato, los tres avanzaron juntos sin tener que explicar nada.</p>
+<p>Más tarde su madre descansó. El hermano y la hermana caminaron por la orilla. Una ola pequeña llegó a sus pies y retrocedió, dejando una franja fina y brillante en la arena.</p>
+<p>«¿Te acuerdas del cubo azul?», preguntó Youssef.</p>
+<p>Mariam se rió antes de poder evitarlo. De niños habían llevado un cubo azul a la playa y pasaban horas llenándolo, solo para ver escapar el agua por una grieta. Youssef insistía en que podía arreglarlo con un trozo de alga. Mariam le creía.</p>
+<p>«Decías que era un cubo especial», dijo ella.</p>
+<p>«Lo era. Nos enseñó que el mar siempre gana.»</p>
+<p>«No. Nos enseñó a traer un cubo mejor.»</p>
+<p>Se rieron. No resolvía siete años, pero era un comienzo.</p>
+<p>Youssef se detuvo: «Pensé que estabas enfadada porque me fui.»</p>
+<p>«Estaba enfadada porque te fuiste sin decirme lo sola que me iba a sentir. Y luego estaba enfadada porque te echaba de menos.»</p>
+<p>Miró hacia el agua: «Pensé que si llamaba, notarías mis dudas. Quería sonar como alguien que lo tenía todo bajo control.»</p>
+<p>«Conmigo nunca tuviste que sonar seguro.»</p>
+<p>Eran palabras sencillas. No deshacían los años, pero abrían un espacio donde por fin podía sostenerse algo honesto.</p>
+<p>Al volver con su madre, la encontraron despierta, mirándolos con una sonrisa serena. No preguntó de qué habían hablado. Solo les tendió el viejo cubo azul que había sacado de un armario en casa a modo de broma. El asa estaba descolorida; una grieta seguía recorriendo un lado.</p>
+<p>«Pensé que podíamos hacernos una foto», dijo.</p>
+<p>Los tres se situaron junto al agua. La fotografía no era perfecta. El viento movía el pelo, el sol hacía entrecerrar los ojos, el cubo parecía ridículo. Pero cuando Mariam la vio después, notó que nadie miraba a la cámara. Se miraban entre sí.</p>
+<p>En el barco de regreso, Youssef le preguntó a su hermana cuándo estaba libre la semana siguiente. Mariam le dio un día. Entre ellos, su madre se quedó dormida.</p>
+<p class="story-ending">La isla no reparó a una familia en una tarde. Les dio algo más creíble: una orilla tranquila, una broma recordada y margen suficiente para volver a intentarlo.</p>`,
+    pl: `<p>Przez siedem lat Mariam i Youssef rozmawiali głównie krótkimi wiadomościami. Życzenia urodzinowe. Zdjęcie ogrodu mamy. Praktyczne pytanie o jakiś dokument. Nie pokłócili się o jedną wielką rzecz — nagromadziło się wiele małych milczeń, z których każde łatwo było wytłumaczyć i trudniej pokonać.</p>
+<p>Gdy mama zaproponowała dzień na Mahmyi, żadne z nich nie chciało jej zawieść. Oboje zgodzili się na rejs, choć w wielu innych sprawach rzadko znajdowali wspólny język. Youssef przyszedł spóźniony. Mariam usiadła na drugim końcu pokładu. Mama patrzyła na oboje i nic nie mówiła.</p>
+<p>Na początku morze utrudniało rozmowę. Wiatr unosił słowa. Łódź łagodnie unosiła się i opadała, a brzeg powoli znikał za rufą. Mama zamknęła oczy. Mariam patrzyła w wodę. Youssef sprawdzał telefon, aż zasięg osłabł, a ekran przestał się przydawać.</p>
+<p>„Możesz go schować” — powiedziała Mariam.</p>
+<p>„Chciałem tylko sprawdzić godzinę.”</p>
+<p>„Morze ma własny zegar.”</p>
+<p>To było pierwsze zdanie, które wymienili bez nawiązywania do wizyt mamy czy rodzinnych spraw. Youssef niemal się uśmiechnął.</p>
+<p>Na wyspie dzień otworzył się słońcem, piaskiem i barwą płytkiej wody. Mama szła powoli w stronę cienia. Mariam pomogła jej z torbą. Youssef niósł wodę. Przez chwilę szli we troje, nie musząc niczego tłumaczyć.</p>
+<p>Później mama odpoczywała. Brat i siostra szli wzdłuż brzegu. Mała fala sięgnęła ich stóp i cofnęła się, zostawiając na piasku cienką, lśniącą linię.</p>
+<p>„Pamiętasz niebieskie wiaderko?” — zapytał Youssef.</p>
+<p>Mariam zaśmiała się, zanim zdążyła się powstrzymać. Jako dzieci przynieśli na plażę niebieskie wiaderko i godzinami je napełniali, patrząc, jak woda ucieka przez pęknięcie. Youssef upierał się, że naprawi je kawałkiem wodorostu. Mariam mu wierzyła.</p>
+<p>„Mówiłeś, że to wyjątkowe wiaderko” — powiedziała.</p>
+<p>„Bo było. Nauczyło nas, że morze zawsze wygrywa.”</p>
+<p>„Nie. Nauczyło nas brać lepsze wiaderko.”</p>
+<p>Zaśmiali się. Nie rozwiązywało to siedmiu lat, ale było początkiem.</p>
+<p>Youssef przystanął: „Myślałem, że jesteś zła, bo wyjechałem.”</p>
+<p>„Byłam zła, bo wyjechałeś, nie mówiąc mi, jak bardzo będzie mi samotnie. A potem byłam zła, że tęsknię.”</p>
+<p>Spojrzał w wodę: „Myślałem, że jak zadzwonię, usłyszysz, jaki jestem niepewny. Chciałem brzmieć, jakbym miał wszystko pod kontrolą.”</p>
+<p>„Przy mnie nigdy nie musiałeś udawać pewności.”</p>
+<p>To były drobne słowa. Nie cofały lat, ale tworzyły przestrzeń, w której mogło wreszcie stanąć coś szczerego.</p>
+<p>Gdy wrócili do mamy, nie spała — patrzyła na nich ze spokojnym uśmiechem. Nie pytała, o czym rozmawiali. Podała im tylko stare niebieskie wiaderko, które żartem wyjęła z szafki w domu. Rączka była wyblakła; pęknięcie z boku wciąż tam było.</p>
+<p>„Pomyślałam, że zrobimy zdjęcie” — powiedziała.</p>
+<p>Stanęli we troje blisko wody. Zdjęcie nie było idealne. Wiatr rozwiewał włosy, słońce kazało mrużyć oczy, wiaderko wyglądało komicznie. Ale gdy Mariam spojrzała na nie później, zauważyła, że nikt nie patrzy w obiektyw. Patrzyli na siebie nawzajem.</p>
+<p>W drodze powrotnej łodzią Youssef zapytał siostrę, kiedy ma wolny dzień w przyszłym tygodniu. Mariam podała mu datę. Między nimi zasnęła mama.</p>
+<p class="story-ending">Wyspa nie naprawiła rodziny w jedno popołudnie. Dała im coś bardziej wiarygodnego: spokojny kawałek brzegu, przypomniany żart i dość miejsca, by spróbować jeszcze raz.</p>`,
+    ar: `<p>طوال سبع سنوات، كان تواصل مريم ويوسف يقتصر في الغالب على رسائل قصيرة: تهنئة بعيد ميلاد، صورة لحديقة والدتهما، أو سؤال عملي حول ورقة رسمية. لم يتخاصما بسبب خلاف كبير واحد؛ بل راكما صمتاً صغيراً متكرراً، يسهل تبرير كل جزء منه، ويصعب عبوره.</p>
+<p>عندما اقترحت والدتهما قضاء يوم في «محمية»، لم يشأ أيٌّ منهما أن يخذلها. وافقا على رحلة القارب، لكنهما لم يتفقا على كثير من التفاصيل الأخرى؛ وصل يوسف متأخراً، واختارت مريم مقعداً في أقصى جانب سطح القارب، بينما راقبتهما أمهما دون أن تقول شيئاً.</p>
+<p>جعل البحرُ الحديثَ صعباً في البداية، إذ كانت الريح تبعثر الكلمات. يعلو القارب ويهبط برفق بينما ينزلق الساحل خلفهما. أغلقت أمهما عينيها، ونظرت مريم إلى الماء، وظل يوسف يتفقد هاتفه حتى ضعفت الشبكة وصارت الشاشة بلا جدوى.</p>
+<p>قالت مريم: «يمكنك أن تضعه جانباً».</p>
+<p>«كنت أتحقق من الوقت فحسب».</p>
+<p>«للبحر ساعته الخاصة».</p>
+<p>كانت هذه أول جملة يتبادلانها لا تتعلق بمواعيد والدتهما أو بمشاوير العائلة، وكاد يوسف يبتسم.</p>
+<p>على الجزيرة، انفتح اليوم على الشمس والرمال ولون المياه الضحلة. مشت أمهما ببطء نحو مكان ظليل، وساعدتها مريم في حمل الحقيبة، وحمل يوسف الماء. ولوقتٍ قصير، تحرك الثلاثة معاً دون حاجة إلى تبرير أي شيء.</p>
+<p>في وقت لاحق استراحت والدتهما، وسار الشقيق وشقيقته على الشاطئ. بلغت موجة صغيرة قدميهما ثم انحسرت، تاركة خطاً لامعاً رفيعاً على الرمال.</p>
+<p>سأل يوسف: «هل تذكرين الدلو الأزرق؟».</p>
+<p>ضحكت مريم قبل أن تمنع نفسها. حين كانا طفلين أحضرا دلواً أزرق إلى الشاطئ وأمضيا ساعات في ملئه، ليريا الماء يتسرب عبر شقّ فيه؛ أصر يوسف حينها أنه يستطيع إصلاحه بقطعة من الأعشاب البحرية، وصدّقته مريم.</p>
+<p>قالت: «قلت لي إنه دلو مميز».</p>
+<p>«كان كذلك، فقد علّمنا أن البحر ينتصر دائماً».</p>
+<p>«لا، بل علّمنا أن نحضر دلواً أفضل».</p>
+<p>ضحكا؛ لم يكن ذلك حلاً لسبع سنوات، لكنه كان بداية.</p>
+<p>توقف يوسف عن المشي: «ظننت أنك غاضبة لأني غادرت».</p>
+<p>«كنت غاضبة لأنك رحلت دون أن تخبرني كم ستكون الوحدة ثقيلة، ثم غاضبة لأني اشتقت إليك».</p>
+<p>نظر إلى الماء: «ظننت أنك إذا سمعتِ صوتي فستدركين ترددي، وأردت أن أبدو وكأن كل شيء تحت سيطرتي».</p>
+<p>«لم يكن عليك أبداً أن تبدو واثقاً تماماً أمامي».</p>
+<p>كانت الكلمات بسيطة؛ لم تمحُ السنين، لكنها فتحت مساحة يمكن لشيء صادق أن يقف فيها أخيراً.</p>
+<p>عادا إلى والدتهما فوجدَاها مستيقظة تراقبهما بابتسامة هادئة. لم تسأل عما دار بينهما، بل ناولتهما الدلو الأزرق القديم الذي أحضرته من خزانة البيت على سبيل المزاح؛ كان مقبضه باهتاً والشق ما زال يمتد على أحد جانبيه.</p>
+<p>قالت: «فكرت أن نلتقط صورة».</p>
+<p>وقف الثلاثة قرب الماء. لم تكن الصورة مثالية؛ حركت الريحُ شعرهم، وجعلتهم الشمس يضيقون أعينهم، وبدا الدلو طريفاً. لكن حين رأتها مريم لاحقاً، لاحظت أن أحداً لم يكن ينظر إلى الكاميرا؛ كانوا ينظرون إلى بعضهم البعض.</p>
+<p>في قارب العودة، سأل يوسف شقيقته متى تكون متفرغة الأسبوع المقبل، فأعطته مريم يوماً، وغفت أمهما بينهما.</p>
+<p class="story-ending">لم تُصلح الجزيرة عائلة في عصرٍ واحد، لكنها منحتهم شيئاً أكثر صدقاً: امتداداً هادئاً من الشاطئ، ومزحة قديمة مستعادة، ومتسعاً كافياً ليحاولوا من جديد.</p>`
+  },
+  "abu-dabbab": {
+    en: `<p>To someone looking down from a boat, Abu Dabbab Bay on Egypt’s southern Red Sea coast can look like a calm patch of turquoise water bordered by sand and reef. Yet beneath the surface lies a quieter engine of coastal life: meadows of seagrass swaying gently with the tide.</p>
+<p>Seagrass beds are not simple underwater lawns. They are flowering marine plants that anchor sediment, improve water clarity, absorb carbon and shelter young fish, crustaceans and invertebrates. In sheltered bays like Abu Dabbab, those green meadows act as feeding grounds and nurseries.</p>
+<p>Green sea turtles (<em>Chelonia mydas</em>) are frequent visitors drawn to seagrass and algae. Watching a green turtle graze calmly or rise for a breath is one of the Red Sea’s most memorable wildlife encounters—provided visitors keep a respectful distance, never chase or block the animal, and avoid standing on coral or seagrass.</p>
+<p>Abu Dabbab is also famous among marine enthusiasts for occasional sightings of the dugong, a gentle herbivorous marine mammal closely related to manatees. Dugongs are rare, shy and wide-ranging; no ethical operator can ever promise a sighting on any given day, because wild animals move on their own terms rather than a tour schedule.</p>
+<p class="fact-note"><strong>Field & conservation note:</strong> Healthy seagrass and reef bays depend on low-impact habits—floating rather than standing on seabed or coral, giving turtles and dugongs wide space, never touching or feeding wildlife, and keeping all waste on board.</p>
+<p class="sources"><strong>Sources & further reading:</strong> <a href="https://www.iucnredlist.org/" rel="noopener" target="_blank">IUCN Red List of Threatened Species</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Marine & Coastal Ecosystems)</a> · <a href="https://www.hepcacheda.com/" rel="noopener" target="_blank">HEPCA (Hurghada Environmental Protection and Conservation Association)</a></p>`,
+    de: `<p>Wer von einem Boot aus auf die Abu-Dabbab-Bucht an der südlichen Küste des Roten Meeres blickt, sieht oft nur ruhiges Türkis, Sand und Riff. Unter der Oberfläche arbeitet jedoch ein leiser Motor des Küstenlebens: Seegraswiesen, die sanft mit den Strömungen wiegen.</p>
+<p>Seegraswiesen sind keine bloßen Unterwasser-Rasenflächen. Es handelt sich um blühende Meerespflanzen, die Sedimente binden, die Klarheit des Wassers fördern, Kohlenstoff speichern und Jungfischen, Krebstieren sowie wirbellosen Tieren Schutz bieten. In geschützten Buchten wie Abu Dabbab dienen diese grünen Wiesen als Nahrungsgründe und Kinderstube.</p>
+<p>Grüne Meeresschildkröten (<em>Chelonia mydas</em>) kommen regelmäßig hierher, angezogen von Seegras und Algen. Eine grüne Meeresschildkröte beim ruhigen Grasen oder beim Luftholen zu beobachten gehört zu den eindrucksvollsten Begegnungen am Roten Meer – vorausgesetzt, Gäste halten respektvollen Abstand, verfolgen oder bedrängen das Tier niemals und stehen nicht auf Korallen oder Seegras.</p>
+<p>Bekannt ist Abu Dabbab zudem für gelegentliche Sichtungen der Seekuh (Dugong), eines sanften, pflanzenfressenden Meeressäugers, der mit den Rundschwanzseekühen (Manatis) verwandt ist. Dugongs sind selten, scheu und weiträumig unterwegs; kein seriöser Anbieter kann eine Sichtung an einem bestimmten Tag garantieren, denn Wildtiere folgen ihren eigenen Wegen und keinem Fahrplan.</p>
+<p class="fact-note"><strong>Hinweis für Praxis & Schutz:</strong> Gesunde Seegras- und Riffbuchten brauchen schonendes Verhalten: im Wasser treiben statt auf Grund oder Korallen zu stehen, Schildkröten und Dugongs viel Raum lassen, Tiere weder berühren noch füttern und sämtlichen Müll an Bord behalten.</p>
+<p class="sources"><strong>Quellen & weiterführende Informationen:</strong> <a href="https://www.iucnredlist.org/" rel="noopener" target="_blank">IUCN Red List of Threatened Species</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Marine & Coastal Ecosystems)</a> · <a href="https://www.hepcacheda.com/" rel="noopener" target="_blank">HEPCA (Hurghada Environmental Protection and Conservation Association)</a></p>`,
+    ru: `<p>Для того, кто смотрит с лодки на бухту Абу-Даббаб на южном побережье Красного моря, она может показаться просто спокойным бирюзовым заливом у песчаного берега и рифа. Но под водой скрывается тихий двигатель прибрежной жизни: луга морской травы, мягко покачивающиеся в такт течениям.</p>
+<p>Заросли морских трав — не просто подводная зелень. Это цветковые морские растения, которые удерживают донный осадок, повышают прозрачность воды, связывают углерод и служат укрытием для мальков, ракообразных и беспозвоночных. В защищённых бухтах вроде Абу-Даббаба такие подводные луга работают как кормовые угодья и природные «ясли».</p>
+<p>Зелёные морские черепахи (<em>Chelonia mydas</em>) регулярно заходят сюда в поисках морской травы и водорослей. Увидеть, как зелёная черепаха спокойно пасётся или поднимается вдохнуть воздух, — одна из самых запоминающихся встреч на Красном море, если соблюдать дистанцию: нельзя преследовать или загораживать животное, а также вставать на кораллы или морскую траву.</p>
+<p>Бухта Абу-Даббаб известна и редкими встречами с дюгонем — спокойным растительноядным морским млекопитающим, близким родственником ламантинов. Дюгони немногочисленны, осторожны и перемещаются на большие расстояния; ни один добросовестный организатор не может гарантировать встречу в конкретный день, ведь дикие животные живут по своим законам, а не по расписанию экскурсий.</p>
+<p class="fact-note"><strong>Заметка об охране природы:</strong> Здоровье морских лугов и рифов зависит от бережных привычек: лучше держаться на плаву, не опираясь на дно или кораллы, оставлять черепахам и дюгоням широкое пространство, не прикасаться к животным, не кормить их и забирать весь мусор на борт.</p>
+<p class="sources"><strong>Источники и дополнительное чтение:</strong> <a href="https://www.iucnredlist.org/" rel="noopener" target="_blank">IUCN Red List of Threatened Species</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Marine & Coastal Ecosystems)</a> · <a href="https://www.hepcacheda.com/" rel="noopener" target="_blank">HEPCA (Hurghada Environmental Protection and Conservation Association)</a></p>`,
+    fr: `<p>Vue d'un bateau, la baie d'Abu Dabbab, sur la côte sud de la mer Rouge en Égypte, ressemble à une étendue calme d'eau turquoise bordée de sable et de récif. Pourtant, sous la surface, un moteur discret anime la vie côtière : des herbiers marins qui ondoient doucement au rythme des courants.</p>
+<p>Les herbiers marins ne sont pas de simples tapis d'algues. Ce sont des plantes marines à fleurs qui fixent les sédiments, favorisent la clarté de l'eau, piègent du carbone et abritent jeunes poissons, crustacés et invertébrés. Dans des baies abritées comme Abu Dabbab, ces prairies vertes servent à la fois de garde-manger et de nourricerie.</p>
+<p>Les tortues vertes (<em>Chelonia mydas</em>) fréquentent volontiers ces herbiers et algues. Observer une tortue verte brouter paisiblement ou remonter respirer compte parmi les plus belles rencontres de la mer Rouge — à condition de garder une distance respectueuse, de ne jamais poursuivre ni bloquer l'animal et d'éviter de poser le pied sur le corail ou l'herbier.</p>
+<p>Abu Dabbab est aussi connue des passionnés de nature pour d'occasionnelles observations du dugong, mammifère marin herbivore discret proche des lamantins. Les dugongs sont rares, craintifs et mobiles : aucun opérateur sérieux ne peut garantir une observation un jour précis, car la faune sauvage suit son propre rythme, non un programme d'excursion.</p>
+<p class="fact-note"><strong>Repère de préservation :</strong> La santé des herbiers et des baies coralliennes repose sur des gestes sobres : flotter plutôt que prendre appui sur le fond ou le corail, laisser un large espace aux tortues et aux dugongs, ne jamais toucher ni nourrir la faune et garder tous les déchets à bord.</p>
+<p class="sources"><strong>Sources et lectures complémentaires :</strong> <a href="https://www.iucnredlist.org/" rel="noopener" target="_blank">IUCN Red List of Threatened Species</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Marine & Coastal Ecosystems)</a> · <a href="https://www.hepcacheda.com/" rel="noopener" target="_blank">HEPCA (Hurghada Environmental Protection and Conservation Association)</a></p>`,
+    it: `<p>Vista da una barca, la baia di Abu Dabbab, lungo la costa meridionale del Mar Rosso in Egitto, può sembrare solo un tratto calmo di acqua turchese tra sabbia e barriera. Sotto la superficie, però, opera un motore silenzioso della vita costiera: praterie di fanerogame marine che oscillano lievi con le correnti.</p>
+<p>Le praterie marine non sono semplici distese d'erba subacquea. Sono piante marine superiori che trattengono i sedimenti, favoriscono la trasparenza dell'acqua, immagazzinano carbonio e offrono rifugio a pesci giovani, crostacei e invertebrati. In baie riparata come Abu Dabbab, questi prati verdi funzionano come aree di pascolo e vivaio.</p>
+<p>Le tartarughe verdi (<em>Chelonia mydas</em>) visitano spesso questi fondali ricchi di fanerogame e alghe. Osservare una tartaruga verde brucare con calma o salire a respirare è uno degli incontri più memorabili del Mar Rosso — purché si mantenga una distanza rispettosa, senza mai inseguire o sbarrare la strada all'animale e senza calpestare coralli o praterie.</p>
+<p>Abu Dabbab è nota anche per occasionali avvistamenti del dugongo, un mammifero marino erbivoro schivo imparentato con i lamantini. I dugonghi sono rari, riservati e si spostano su ampi tratti: nessun operatore serio può promettere un avvistamento in un giorno preciso, perché la fauna selvatica segue i propri tempi e non un programma di escursioni.</p>
+<p class="fact-note"><strong>Nota di tutela ambientale:</strong> La salute di praterie marine e baie coralline dipende da abitudini attente: restare a galla invece di appoggiarsi su fondale o coralli, lasciare ampio spazio a tartarughe e dugonghi, non toccare né nutrire gli animali e trattenere a bordo ogni rifiuto.</p>
+<p class="sources"><strong>Fonti e approfondimenti:</strong> <a href="https://www.iucnredlist.org/" rel="noopener" target="_blank">IUCN Red List of Threatened Species</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Marine & Coastal Ecosystems)</a> · <a href="https://www.hepcacheda.com/" rel="noopener" target="_blank">HEPCA (Hurghada Environmental Protection and Conservation Association)</a></p>`,
+    es: `<p>Vista desde una embarcación, la bahía de Abu Dabbab, en la costa sur del Mar Rojo en Egipto, puede parecer solo un tramo sereno de agua turquesa entre arena y arrecife. Bajo la superficie, sin embargo, actúa un motor discreto de la vida costera: praderas de pastos marinos que se mecen suavemente con las corrientes.</p>
+<p>Las praderas de pastos marinos no son simples alfombras submarinas. Son plantas marinas con flor que fijan sedimentos, favorecen la transparencia del agua, retienen carbono y dan refugio a peces juveniles, crustáceos e invertebrados. En bahías resguardadas como Abu Dabbab, estas praderas verdes funcionan como zona de alimentación y criadero.</p>
+<p>Las tortugas verdes (<em>Chelonia mydas</em>) acuden con frecuencia atraídas por los pastos marinos y las algas. Observar a una tortuga verde pastar con calma o subir a respirar es uno de los encuentros más memorables del Mar Rojo, siempre que se guarde distancia respetuosa, no se persiga ni corte el paso al animal y no se pise el coral ni la pradera.</p>
+<p>Abu Dabbab también es conocida por avistamientos ocasionales del dugongo, un mamífero marino herbívoro y esquivo emparentado con los manatíes. Los dugongos son escasos, cautelosos y recorren amplias zonas: ningún operador responsable puede prometer ver uno en una fecha concreta, porque la fauna silvestre se guía por sus propios tiempos y no por un itinerario.</p>
+<p class="fact-note"><strong>Nota de conservación:</strong> Mantener sanas las praderas y bahías coralinas exige hábitos cuidadosos: flotar en lugar de apoyarse en el fondo o el coral, dar amplio espacio a tortugas y dugongos, no tocar ni alimentar a la fauna y llevar todos los residuos de vuelta a bordo.</p>
+<p class="sources"><strong>Fuentes y lecturas adicionales:</strong> <a href="https://www.iucnredlist.org/" rel="noopener" target="_blank">IUCN Red List of Threatened Species</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Marine & Coastal Ecosystems)</a> · <a href="https://www.hepcacheda.com/" rel="noopener" target="_blank">HEPCA (Hurghada Environmental Protection and Conservation Association)</a></p>`,
+    pl: `<p>Z pokładu łodzi zatoka Abu Dabbab na południowym wybrzeżu egipskiego Morza Czerwonego może wyglądać jak spokojny akwen turkusowej wody otoczony piaskiem i rafą. Pod powierzchnią działa jednak cichy motor życia przybrzeżnego: łąki trawy morskiej kołyszące się łagodnie w rytm prądów.</p>
+<p>Łąki trawy morskiej to nie zwykła podwodna zieleń. To kwitnące rośliny morskie, które wiążą osady, poprawiają przejrzystość wody, magazynują węgiel i dają schronienie młodym rybom, skorupiakom oraz bezkręgowcom. W osłoniętych zatokach takich jak Abu Dabbab te zielone łąki pełnią rolę żerowisk i naturalnego żłobka.</p>
+<p>Żółwie zielone (<em>Chelonia mydas</em>) często zaglądają tu za trawą morską i glonami. Obserwowanie żółwia zielonego, gdy spokojnie skubie roślinność albo wynurza się po oddech, należy do najbardziej poruszających spotkań nad Morzem Czerwonym — pod warunkiem zachowania szacunku i dystansu: nie wolno płoszyć ani zagradzać drogi zwierzęciu, ani stawać na koralowcach czy trawie morskiej.</p>
+<p>Abu Dabbab słynie także z okazjonalnych obserwacji diugonia — łagodnego, roślinożernego ssaka morskiego spokrewnionego z manatami. Diugonie są rzadkie, płochliwe i przemierzają rozległe obszary; żaden rzetelny organizator nie może obiecać spotkania konkretnego dnia, bo dzikie zwierzęta kierują się własnymi wyborami, a nie rozkładem wycieczek.</p>
+<p class="fact-note"><strong>Uwaga przyrodnicza:</strong> Kondycja łąk morskich i zatok rafowych zależy od uważnych nawyków: warto unosić się na wodzie zamiast stawać na dnie lub koralach, zostawiać żółwiom i diugoniom dużo miejsca, nie dotykać ani nie karmić zwierząt i zabierać wszystkie odpady na pokład.</p>
+<p class="sources"><strong>Źródła i dalsza lektura:</strong> <a href="https://www.iucnredlist.org/" rel="noopener" target="_blank">IUCN Red List of Threatened Species</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Marine & Coastal Ecosystems)</a> · <a href="https://www.hepcacheda.com/" rel="noopener" target="_blank">HEPCA (Hurghada Environmental Protection and Conservation Association)</a></p>`,
+    ar: `<p>لمَن ينظر من قارب نحو خليج «أبو دباب» على الساحل الجنوبي للبحر الأحمر في مصر، قد يبدو المشهد مجرد مساحة هادئة من المياه الفيروزية يحدّها الرمل والشعاب. غير أن تحت السطح يعمل محركٌ هادئ للحياة الساحلية: مروج من حشائش البحر تتمايل برفق مع حركة التيارات.</p>
+<p>ليست مروج حشائش البحر مجرد بساط أخضر تحت الماء؛ بل هي نباتات بحرية مزهرة تثبّت الرواسب، وتحسّن صفاء المياه، وتختزن الكربون، وتوفّر مأوى لصغار الأسماك والقشريات واللافقاريات. وفي الخلجان المحمية مثل أبو دباب تؤدي هذه المروج الخضراء دور مناطق تغذية وحاضنات طبيعية للأحياء البحرية.</p>
+<p>تزور السلاحف الخضراء (<em>Chelonia mydas</em>) هذه المواقع باستمرار بحثاً عن حشائش البحر والطحالب. وتُعد مشاهدة سلحفاة خضراء وهي ترعى بهدوء أو تصعد لتتنفس من أجمل لقاءات الحياة البرية في البحر الأحمر — شريطة أن يحافظ الزوار على مسافة محترمة، وألا يطاردوا الحيوان أو يعترضوا طريقه، وألا يقفوا على الشعاب أو حشائش البحر.</p>
+<p>يُعرف أبو دباب أيضاً بين محبي الحياة البحرية برصدٍ عابر لـ«عروس البحر» (الديجونج)، ذلك الثديي البحري العاشب الوادع القريب من خروف البحر. فالدجونج نادر وخجول ويتحرك في مساحات واسعة؛ ولا يمكن لأي منظم رحلات مسؤول أن يضمن مشاهدته في يوم محدد، لأن الحيوانات البرية تتحرك وفق إيقاعها الخاص لا وفق جدول الرحلات.</p>
+<p class="fact-note"><strong>ملاحظة ميدانية وبيئية:</strong> يعتمد بقاء مروج حشائش البحر وخلجان الشعاب الصحية على سلوكيات قليلة الأثر؛ كالطفو على سطح الماء بدلاً من الوقوف على القاع أو الشعاب، ومنح السلاحف والدجونج مساحة واسعة، وعدم لمس الكائنات أو إطعامها، وإبقاء جميع المخلفات على متن القارب.</p>
+<p class="sources"><strong>المصادر ومطالعات إضافية:</strong> <a href="https://www.iucnredlist.org/" rel="noopener" target="_blank">IUCN Red List of Threatened Species</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Marine & Coastal Ecosystems)</a> · <a href="https://www.hepcacheda.com/" rel="noopener" target="_blank">HEPCA (Hurghada Environmental Protection and Conservation Association)</a></p>`
+  },
+  "coral-kingdom": {
+    en: `<p>A coral reef looks like solid stone and vivid colour, yet it is built by microscopic animals called coral polyps working alongside photosynthetic algae (zooxanthellae) within their tissues. Over centuries, generations of polyps leave behind calcium carbonate skeletons that form vast underwater structures supporting extraordinary biodiversity.</p>
+<p>Although coral reefs cover a small fraction of the ocean floor worldwide, they shelter a remarkably high proportion of marine species—from reef fish and moray eels to rays, anemones and sea turtles. Because the Red Sea is semi-enclosed with warm, salty, clear waters, many of its reefs display rich colour and distinct regional species.</p>
+<p>Those same reefs are also sensitive. Rising sea temperatures, anchor or fin damage, pollution and careless contact can stress corals and cause bleaching or tissue loss. A single thoughtless kick with a fin or a hand resting on a fragile colony can harm growth that took years to build.</p>
+<p>Responsible snorkeling and diving do not require complicated rules—only steady awareness. Keep a comfortable buoyancy or float level, avoid kicking up sand near living coral, never stand on reef crests, and choose reef-conscious habits both in the water and on shore.</p>
+<p class="fact-note"><strong>Reef etiquette:</strong> Never touch, stand on, break or collect coral or shells; maintain distance from marine life; and wear protective rash guards or reef-safe sun protection where appropriate.</p>
+<p class="sources"><strong>Sources & further reading:</strong> <a href="https://coralreefwatch.noaa.gov/" rel="noopener" target="_blank">NOAA Coral Reef Watch</a> · <a href="https://www.icriforum.org/" rel="noopener" target="_blank">International Coral Reef Initiative (ICRI)</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Coral Reefs)</a></p>`,
+    de: `<p>Ein Korallenriff wirkt wie fester Stein und leuchtende Farbe – und entsteht doch durch winzige Tiere, die Korallenpolypen, im Zusammenspiel mit mikroskopischen Algen (Zooxanthellen) in ihrem Gewebe. Über Jahrhunderte hinterlassen Generationen von Polypen Kalkskelette, aus denen gewaltige Unterwasserstrukturen mit hoher Artenvielfalt wachsen.</p>
+<p>Obwohl Korallenriffe weltweit nur einen kleinen Teil des Meeresbodens einnehmen, bieten sie einem außergewöhnlich großen Anteil mariner Arten Lebensraum – von Riff- und Doktorfischen über Muränen und Rochen bis zu Anemonen und Meeresschildkröten. Da das Rote Meer ein Nebenmeer mit warmem, salzhaltigem und klarem Wasser ist, zeigen viele Riffe hier eine beeindruckende Vielfalt und eigene Arten.</p>
+<p>Zugleich sind Riffe empfindlich. Steigende Wassertemperaturen, Schäden durch Anker oder Flossen, Verschmutzung und unachtsame Berührungen können Korallen unter Stress setzen und zu Bleiche oder Gewebeverlust führen. Ein einziger unbedachter Flossenschlag oder das Abstützen auf einer empfindlichen Kolonie kann Wachstum zerstören, für das das Riff Jahre brauchte.</p>
+<p>Verantwortungsvolles Schnorcheln und Tauchen braucht keine komplizierten Vorschriften, sondern gleichbleibende Aufmerksamkeit: gute Tarierung oder ruhiges Treiben, keinen Sand über lebenden Korallen aufwirbeln, nicht auf Riffkanten stehen und im Wasser sowie an Land rücksichtsvoll handeln.</p>
+<p class="fact-note"><strong>Riff-Knigge:</strong> Korallen oder Muscheln niemals berühren, betreten, abbrechen oder mitnehmen; Abstand zu Meereslebewesen halten und auf der Haut – wo sinnvoll – UV-Shirts oder riffschonenden Sonnenschutz bevorzugen.</p>
+<p class="sources"><strong>Quellen & weiterführende Informationen:</strong> <a href="https://coralreefwatch.noaa.gov/" rel="noopener" target="_blank">NOAA Coral Reef Watch</a> · <a href="https://www.icriforum.org/" rel="noopener" target="_blank">International Coral Reef Initiative (ICRI)</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Coral Reefs)</a></p>`,
+    ru: `<p>Коралловый риф кажется прочным камнем и россыпью ярких красок, но создают его крошечные животные — коралловые полипы — в союзе с микроскопическими водорослями (зооксантеллами), живущими в их тканях. На протяжении столетий поколения полипов оставляют известковые скелеты, формируя сложные подводные сооружения с богатейшим биоразнообразием.</p>
+<p>Хотя коралловые рифы занимают лишь малую долю дна Мирового океана, они служат домом для огромного числа морских видов — от рифовых рыб и мурен до скатов, актиний и морских черепах. Благодаря тёплой, солёной и прозрачной воде полузамкнутого Красного моря многие здешние рифы отличаются яркими красками и редкими местными видами.</p>
+<p>Вместе с тем рифы уязвимы. Повышение температуры воды, травмы от якорей или ласт, загрязнение и неосторожные прикосновения вызывают стресс у кораллов, обесцвечивание или гибель тканей. Один неловкий удар ластой или опора рукой о хрупкую колонию способны свести на нет рост, на который ушли годы.</p>
+<p>Бережный снорклинг и дайвинг не требуют сложных правил — лишь постоянного внимания: держите нейтральную плавучесть или спокойно плывите на поверхности, не поднимайте песок над живыми кораллами, не вставайте на гребень рифа и придерживайтесь бережных привычек и в воде, и на суше.</p>
+<p class="fact-note"><strong>Правила у рифа:</strong> Не прикасайтесь к кораллам и раковинам, не вставайте на них, не обламывайте и не уносите их с собой; соблюдайте дистанцию от морских обитателей и выбирайте солнцезащитную одежду или составы, безопасные для рифов.</p>
+<p class="sources"><strong>Источники и дополнительное чтение:</strong> <a href="https://coralreefwatch.noaa.gov/" rel="noopener" target="_blank">NOAA Coral Reef Watch</a> · <a href="https://www.icriforum.org/" rel="noopener" target="_blank">International Coral Reef Initiative (ICRI)</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Coral Reefs)</a></p>`,
+    fr: `<p>Un récif corallien semble fait de pierre solide et de couleurs vives, mais il est bâti par de minuscules animaux, les polypes coralliens, associés à des algues microscopiques (les zooxanthelles) présentes dans leurs tissus. Au fil des siècles, générations après générations, leurs squelettes calcaires composent de vastes structures abritant une grande biodiversité.</p>
+<p>Bien que les récifs coralliens n'occupent qu'une faible part du fond marin mondial, ils accueillent une proportion remarquable d'espèces marines — des poissons de récif et murènes jusqu'aux raies, anémones et tortues marines. Parce que la mer Rouge est une mer semi-fermée aux eaux chaudes, salées et limpides, beaucoup de ses récifs présentent une grande richesse et des espèces propres à la région.</p>
+<p>Ces mêmes récifs restent fragiles. Le réchauffement des eaux, les dommages liés aux ancres ou aux palmes, la pollution et un contact négligent peuvent fragiliser les coraux et provoquer leur blanchissement. Un coup de palme inattentif ou une main appuyée sur une colonie délicate peut briser des années de croissance.</p>
+<p>La pratique responsable du snorkeling et de la plongée repose avant tout sur l'attention : maîtriser sa flottabilité ou rester en surface sans poser le pied, éviter de soulever le sable près des coraux vivants, ne jamais marcher sur le platier et adopter des réflexes respectueux sur l'eau comme à terre.</p>
+<p class="fact-note"><strong>Bonnes pratiques récifales :</strong> Ne jamais toucher, piétiner, casser ou prélever coraux et coquillages ; garder ses distances avec la vie marine ; privilégier un vêtement anti-UV ou une protection solaire adaptée aux récifs lorsque c'est indiqué.</p>
+<p class="sources"><strong>Sources et lectures complémentaires :</strong> <a href="https://coralreefwatch.noaa.gov/" rel="noopener" target="_blank">NOAA Coral Reef Watch</a> · <a href="https://www.icriforum.org/" rel="noopener" target="_blank">International Coral Reef Initiative (ICRI)</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Coral Reefs)</a></p>`,
+    it: `<p>Una barriera corallina sembra fatta di roccia solida e colori vivaci, ma è costruita da minuscoli animali chiamati polipi corallini insieme ad alghe microscopiche (le zooxantelle) ospitate nei loro tessuti. Nel corso dei secoli, generazioni di polipi lasciano scheletri calcarei che formano ampie strutture ricche di biodiversità.</p>
+<p>Sebbene le barriere coralline occupino una piccola parte dei fondali mondiali, ospitano una quota altissima di specie marine — dai pesci di barriera e murene fino a razze, anemoni e tartarughe marine. Essendo il Mar Rosso un bacino semi-chiuso con acque calde, salate e limpide, molte sue barriere mostrano colori intensi e specie tipiche della regione.</p>
+<p>Proprio perché vive, queste barriere sono sensibili. L'aumento della temperatura dell'acqua, i danni da ancore o pinne, l'inquinamento e il contatto distratto possono stressare i coralli e causare sbiancamento o perdita di tessuto. Una pinneggiata involontaria o una mano appoggiata su una colonia delicata possono compromettere anni di crescita.</p>
+<p>Fare snorkeling e immersioni in modo responsabile non richiede regole complicate, solo attenzione costante: mantenere un buon assetto o restare a galla senza poggiarsi, non sollevare sabbia sui coralli vivi, non camminare sulle creste coralline e seguire buone pratiche in mare e a terra.</p>
+<p class="fact-note"><strong>Buone norme sulla barriera:</strong> Non toccare, calpestare, spezzare o raccogliere coralli e conchiglie; mantenere distanza dalla fauna marina; preferire maglie anti-UV o protezioni solari rispettose dell'ambiente marino quando opportuno.</p>
+<p class="sources"><strong>Fonti e approfondimenti:</strong> <a href="https://coralreefwatch.noaa.gov/" rel="noopener" target="_blank">NOAA Coral Reef Watch</a> · <a href="https://www.icriforum.org/" rel="noopener" target="_blank">International Coral Reef Initiative (ICRI)</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Coral Reefs)</a></p>`,
+    es: `<p>Un arrecife de coral parece piedra firme y color intenso, pero lo construyen diminutos animales llamados pólipos coralinos junto con algas microscópicas (zooxantelas) alojadas en sus tejidos. A lo largo de los siglos, generaciones de pólipos dejan esqueletos calizos que forman grandes estructuras con una notable biodiversidad.</p>
+<p>Aunque los arrecifes de coral ocupan una pequeña parte del fondo oceánico mundial, albergan una proporción muy elevada de especies marinas: desde peces de arrecife y morenas hasta rayas, anémonas y tortugas marinas. Como el Mar Rojo es un mar semicerrado de aguas cálidas, salinas y claras, muchos de sus arrecifes muestran gran vitalidad y especies propias de la zona.</p>
+<p>A la vez, son ecosistemas sensibles. El calentamiento del agua, los daños por anclas o aletas, la contaminación y el contacto descuidado pueden estresar a los corales y provocar blanqueamiento o pérdida de tejido. Un aletazo distraído o apoyar la mano sobre una colonia frágil puede dañar un crecimiento que llevó años.</p>
+<p>Practicar esnórquel o buceo de forma responsable exige sobre todo atención constante: mantener buena flotabilidad o flotar sin apoyarse, evitar levantar arena sobre el coral vivo, no pisar las crestas arrecifales y actuar con cuidado tanto en el agua como en tierra.</p>
+<p class="fact-note"><strong>Normas en el arrecife:</strong> Nunca toques, pises, rompas ni recojas corales o conchas; mantén distancia respecto a la fauna marina; y emplea prendas de protección solar o fórmulas respetuosas con el arrecife cuando corresponda.</p>
+<p class="sources"><strong>Fuentes y lecturas recomendadas:</strong> <a href="https://coralreefwatch.noaa.gov/" rel="noopener" target="_blank">NOAA Coral Reef Watch</a> · <a href="https://www.icriforum.org/" rel="noopener" target="_blank">International Coral Reef Initiative (ICRI)</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Coral Reefs)</a></p>`,
+    pl: `<p>Rafa koralowa wygląda jak twarda skała i feeria barw, ale tworzą ją maleńkie zwierzęta — polipy koralowe — we współpracy z mikroskopijnymi glonami (zooksantelami) żyjącymi w ich tkankach. Przez stulecia kolejne pokolenia polipów pozostawiają wapienne szkielety, budując rozległe struktury tętniące życiem.</p>
+<p>Choć rafy koralowe zajmują niewielki ułamek dna oceanicznego na świecie, dają schronienie wyjątkowo dużej części gatunków morskich — od ryb rafowych i muren po płaszczki, ukwiały i żółwie morskie. Ponieważ Morze Czerwone jest akwenem półzamkniętym o ciepłej, zasolonej i przejrzystej wodzie, tutejsze rafy zachwycają bogactwem form i gatunków charakterystycznych dla regionu.</p>
+<p>Jednocześnie rafy są wrażliwe. Rosnąca temperatura wody, uszkodzenia od kotwic czy płetw, zanieczyszczenia oraz nieostrożny kontakt mogą wywoływać stres u koralowców, blaknięcie lub obumieranie tkanek. Jeden nieuważny ruch płetwą albo oparcie dłoni na kruchej kolonii potrafi zniweczyć wzrost trwający latami.</p>
+<p>Odpowiedzialny snorkeling i nurkowanie nie wymagają skomplikowanych zasad — wystarczy stała uważność: kontroluj pływalność lub płyń spokojnie na powierzchni bez podpierania się, nie wzbijaj piasku nad żywymi koralowcami, nie stawaj na krawędziach rafy i stosuj dobre nawyki na wodzie oraz na lądzie.</p>
+<p class="fact-note"><strong>Zasady przy rafie:</strong> Nie dotykaj, nie depcz, nie łam ani nie zabieraj koralowców i muszli; zachowuj dystans od organizmów morskich; wybieraj odzież chroniącą przed słońcem lub preparaty przyjazne rafom, gdy jest to wskazane.</p>
+<p class="sources"><strong>Źródła i dalsza lektura:</strong> <a href="https://coralreefwatch.noaa.gov/" rel="noopener" target="_blank">NOAA Coral Reef Watch</a> · <a href="https://www.icriforum.org/" rel="noopener" target="_blank">International Coral Reef Initiative (ICRI)</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Coral Reefs)</a></p>`,
+    ar: `<p>تبدو الشعاب المرجانية للوهلة الأولى كصخور صلبة وألوان زاهية، لكنها في الحقيقة صنيعة كائنات دقيقة تُسمى «بوليبات المرجان» تتعايش مع طحالب مجهرية (الزوكسانتيلّي) داخل أنسجتها. وعبر قرون متلاحقة تترك أجيال البوليبات هياكل من كربونات الكالسيوم تكوّن بنى بحرية واسعة تحتضن تنوعاً حيوياً لافتاً.</p>
+<p>ورغم أن الشعاب المرجانية تشغل نسبة صغيرة من قاع المحيطات في العالم، فإنها تؤوي قدراً كبيراً جداً من الأنواع البحرية؛ من أسماك الشعاب وسمك الشقّة إلى اللخمة وشقائق النعمان والسلاحف البحرية. وبفضل طبيعة البحر الأحمر شبه المغلقة ومياهه الدافئة المالحة الصافية، تزخر كثير من شعابه بألوان غنية وأنواع مميزة للمنطقة.</p>
+<p>غير أن هذه الشعاب نفسها حساسة؛ فارتفاع حرارة المياه، أو أضرار المراسي والزعانف، أو التلوث، أو اللمس غير المقصود يمكن أن يجهد المرجان ويسبب ابيضاضه أو تضرر أنسجته. فركلة زعنفة عابرة أو اتكاء يد على مستعمرة هشة قد يضر بنموٍ استغرق سنوات ليكتمل.</p>
+<p>لا يتطلب السنوركل أو الغوص المسؤول قواعد معقدة، بل وعياً ثابتاً: حافظ على طفو متزن أو اطفُ بهدوء على السطح دون ارتكاز، وتجنب إثارة الرمال فوق المرجان الحي، ولا تقف على حواف الشعاب، والتزم بعادات مراعية للبيئة داخل الماء وعلى الشاطئ.</p>
+<p class="fact-note"><strong>آداب التعامل مع الشعاب:</strong> لا تلمس المرجان أو الأصداف أو تقف عليها أو تكسرها أو تجمعها؛ وحافظ على مسافة مناسبة من الكائنات البحرية؛ واختر ملابس واقية من الشمس أو مستحضرات آمنة للشعاب حيثما كان ذلك مناسباً.</p>
+<p class="sources"><strong>المصادر ومطالعات إضافية:</strong> <a href="https://coralreefwatch.noaa.gov/" rel="noopener" target="_blank">NOAA Coral Reef Watch</a> · <a href="https://www.icriforum.org/" rel="noopener" target="_blank">International Coral Reef Initiative (ICRI)</a> · <a href="https://www.unep.org/" rel="noopener" target="_blank">UN Environment Programme (Coral Reefs)</a></p>`
+  }
+};
 
-<article class="story-article" data-kind="documentary" id="abu-dabbab"><div class="article-cover"><img alt="Abu Dabbab Bay · Southern Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1100&q=85"/><div class="cover-shade"></div><div class="cover-copy"><span class="story-type">DOCUMENTARY · BASED ON RESEARCH</span><span class="story-place">Abu Dabbab Bay · Southern Red Sea</span><h2>The Meadow Beneath the Blue</h2><p>The real story of Abu Dabbab’s seagrass, green turtles and the elusive dugong.</p></div></div><div class="article-inner"><div class="story-language en-story"><p>Beneath the calm turquoise surface of Abu Dabbab Bay lies something many visitors do not expect from a coral sea: wide, swaying meadows of seagrass. To an untrained eye, underwater grass can look quieter than a bright coral wall. Yet these meadows are among the most vital habitats along the southern Red Sea coast.</p>
-<p>Seagrass beds stabilize sandy sediments, filter coastal water, shelter juvenile fish and invertebrates, and feed marine herbivores. For green sea turtles, Abu Dabbab’s sheltered bay offers both foraging grounds and calm water to rest.</p>
-<p>Observers and marine researchers have long associated Abu Dabbab with green turtles and, more rarely, sightings of the dugong—a slow-moving marine mammal that relies on seagrass meadows. Because dugongs are shy and wide-ranging, encounters are never guaranteed, and responsible snorkeling keeps a respectful distance without chasing, touching, or blocking animals.</p>
-<p class="fact-note"><strong>Field & Conservation Note:</strong> Always enter the water from designated sandy channels when available, avoid standing on seagrass or coral, keep a calm distance from turtles and marine life, and follow local boat and bay guidelines.</p>
-<p class="sources"><strong>Further reading & sources:</strong> <a href="https://www.iucnredlist.org/" target="_blank" rel="noopener noreferrer">IUCN Red List of Threatened Species</a> · <a href="https://www.unep.org/" target="_blank" rel="noopener noreferrer">UN Environment Programme (UNEP)</a></p></div><div class="story-language de-story" hidden=""><p>Unter der ruhigen, türkisfarbenen Oberfläche der Bucht von Abu Dabbab liegt etwas, das viele Gäste an einem Korallenmeer zunächst nicht erwarten: weite, sich wiegende Seegraswiesen. Auf den ersten Blick wirken Seegrasfelder stiller als bunte Korallenriffe, doch sie gehören zu den wichtigsten Lebensräumen an der südlichen Küste des Roten Meeres.</p>
-<p>Seegraswiesen festigen den sandigen Meeresboden, filtern das Wasser, bieten Jungfischen und wirbellosen Tieren Schutz und dienen pflanzenfressenden Meeresbewohnern als Nahrung. Für Grüne Meeresschildkröten bietet die geschützte Bucht sowohl Weideflächen als auch ruhiges Wasser zum Ausruhen.</p>
-<p>Abu Dabbab ist bekannt für Begegnungen mit Grünen Meeresschildkröten und – seltener – mit der Dugong (Seekuh), einem ruhigen Meeressäuger, der auf Seegras angewiesen ist. Da Dugongs scheu sind und weite Strecken zurücklegen, ist eine Sichtung nie garantiert. Rücksichtsvolles Schnorcheln bedeutet Abstand halten, ohne Tiere zu verfolgen, zu berühren oder ihnen den Weg abzuschneiden.</p>
-<p class="fact-note"><strong>Hinweis für Ausflüge & Schutz:</strong> Nutze nach Möglichkeit gekennzeichnete sandige Zugänge ins Wasser, stehe niemals auf Seegras oder Korallen, halte respektvollen Abstand zu Schildkröten und Meeresbewohnern und beachte lokale Hinweise vor Ort.</p>
-<p class="sources"><strong>Weiterführende Quellen:</strong> <a href="https://www.iucnredlist.org/" target="_blank" rel="noopener noreferrer">IUCN Rote Liste gefährdeter Arten</a> · <a href="https://www.unep.org/" target="_blank" rel="noopener noreferrer">UN-Umweltprogramm (UNEP)</a></p></div><div class="article-footer"><a class="discover-link" href="all-tours.html">Discover the experience <span>→</span></a><a class="back-top" href="#top">Back to stories ↑</a></div></div></article>
-
-<article class="story-article" data-kind="documentary" id="coral-kingdom"><div class="article-cover"><img alt="The Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=1400&q=85"/><div class="cover-shade"></div><div class="cover-copy"><span class="story-type">DOCUMENTARY · NATURAL HISTORY</span><span class="story-place">The Red Sea</span><h2>A City Built of Living Stone</h2><p>The extraordinary, fragile world of Red Sea coral reefs—and why every visitor matters.</p></div></div><div class="article-inner"><div class="story-language en-story"><p>Every coral reef is a bustling underwater metropolis built over generations by tiny polyps secreting calcium carbonate. Within the tissues of reef-building corals live microscopic algae called zooxanthellae, which share energy produced through sunlight in exchange for shelter and nutrients.</p>
-<p>The Red Sea is celebrated worldwide for its biodiversity and clear waters, hosting rich reef fish communities, colorful hard and soft corals, and dramatic drop-offs. Yet even resilient reefs face pressures from warming waters, anchoring, pollution, and physical contact.</p>
-<p>A single careless fin kick or hand resting on a coral colony can damage living tissue that took years to grow. Buoyancy control, leaving shells and marine life untouched, and choosing responsible boat operators help keep these living structures thriving.</p>
-<p class="fact-note"><strong>Reef Care Reminder:</strong> Never touch, stand on, or break coral; maintain neutral buoyancy or wear a flotation vest if needed; and never feed or chase marine animals.</p>
-<p class="sources"><strong>Further reading & sources:</strong> <a href="https://coralreefwatch.noaa.gov/" target="_blank" rel="noopener noreferrer">NOAA Coral Reef Watch</a> · <a href="https://www.icriforum.org/" target="_blank" rel="noopener noreferrer">International Coral Reef Initiative (ICRI)</a></p></div><div class="story-language de-story" hidden=""><p>Jedes Korallenriff ist eine lebendige Unterwasserwelt, die über Generationen von winzigen Polypen aus Kalk aufgebaut wird. In ihrem Gewebe leben mikroskopisch kleine Algen (Zooxanthellen), die durch Sonnenlicht Energie gewinnen und diese im Austausch gegen Schutz und Nährstoffe mit den Korallen teilen.</p>
-<p>Das Rote Meer ist für seine Artenvielfalt und Klarheit bekannt und beherbergt vielfältige Fischschwärme, Hart- und Weichkorallen sowie faszinierende Riffkanten. Dennoch reagieren auch widerstandsfähige Riffe empfindlich auf Erwärmung, Anker, Verschmutzung und direkten Kontakt.</p>
-<p>Ein unachtsamer Flossenschlag oder das Abstützen an einer Koralle kann lebendes Gewebe verletzen, dessen Wachstum Jahre gedauert hat. Gute Tarierung, das Berührungsverbot und verantwortungsvolles Verhalten schützen diese empfindlichen Ökosysteme.</p>
-<p class="fact-note"><strong>Hinweis zum Riffschutz:</strong> Korallen niemals berühren, betreten oder abbrechen; auf ruhige Bewegung achten, bei Bedarf eine Auftriebshilfe nutzen und Meerestiere weder füttern noch verfolgen.</p>
-<p class="sources"><strong>Weiterführende Quellen:</strong> <a href="https://coralreefwatch.noaa.gov/" target="_blank" rel="noopener noreferrer">NOAA Coral Reef Watch</a> · <a href="https://www.icriforum.org/" target="_blank" rel="noopener noreferrer">International Coral Reef Initiative (ICRI)</a></p></div><div class="article-footer"><a class="discover-link" href="all-tours.html#tour-red-sea-snorkeling-trip">Discover the experience <span>→</span></a><a class="back-top" href="#top">Back to stories ↑</a></div></div></article>
-
-</div></section>
-
-<footer>
-  <div class="container">
-    <strong>ATLANTIS TOURS AND EXPERIENCES</strong>
-    <p>Original stories, natural history notes, and Red Sea excursions from Hurghada.</p>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="all-tours.html">All Tours</a>
-      <a href="hurghada-price-guide.html">Price Guide</a>
-      <a href="booking.html">Booking</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
-</footer>
-
-<script>
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
@@ -243,34 +940,66 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  const langButtons = document.querySelectorAll(".language-switch button");
-  langButtons.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      const lang = btn.dataset.lang;
-      langButtons.forEach(function (b) { b.classList.toggle("active", b === btn); });
-      document.documentElement.lang = lang;
-      document.querySelectorAll(".en-story").forEach(function (el) { el.hidden = (lang !== "en"); });
-      document.querySelectorAll(".de-story").forEach(function (el) { el.hidden = (lang !== "de"); });
-    });
-  });
-
-  const filterButtons = document.querySelectorAll(".filters .filter");
-  const cards = document.querySelectorAll(".story-card");
-  const articles = document.querySelectorAll(".story-article");
-
+  const filterButtons = document.querySelectorAll(".filter");
+  const filterTargets = document.querySelectorAll(".story-card, .story-article");
   filterButtons.forEach(function (btn) {
     btn.addEventListener("click", function () {
-      const kind = btn.dataset.filter;
+      const kind = btn.getAttribute("data-filter");
       filterButtons.forEach(function (b) { b.classList.toggle("active", b === btn); });
-      cards.forEach(function (card) {
-        card.style.display = (kind === "all" || card.dataset.kind === kind) ? "" : "none";
-      });
-      articles.forEach(function (art) {
-        art.style.display = (kind === "all" || art.dataset.kind === kind) ? "" : "none";
+      filterTargets.forEach(function (el) {
+        const match = kind === "all" || el.getAttribute("data-kind") === kind;
+        el.style.display = match ? "" : "none";
       });
     });
   });
+
+  function setReadingLanguage(lang) {
+    const validLang = STORIES_UI[lang] ? lang : "en";
+    const dict = STORIES_UI[validLang];
+
+    document.documentElement.lang = validLang;
+    document.documentElement.dir = validLang === "ar" ? "rtl" : "ltr";
+    document.title = dict.pageTitle;
+
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      const key = el.getAttribute("data-i18n");
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      const key = el.getAttribute("data-i18n-html");
+      if (dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+
+    Object.keys(ARTICLES_HTML).forEach(function (storyId) {
+      const container = document.getElementById("articleBody-" + storyId);
+      if (container) {
+        container.innerHTML = ARTICLES_HTML[storyId][validLang] || ARTICLES_HTML[storyId].en;
+      }
+    });
+
+    document.querySelectorAll(".header-lang-switch button, .language-switch button").forEach(function (b) {
+      const active = b.getAttribute("data-lang") === validLang;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-pressed", String(active));
+    });
+
+    try {
+      localStorage.setItem("atlantis_lang", validLang);
+    } catch (e) {}
+  }
+
+  document.querySelectorAll(".header-lang-switch button, .language-switch button").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      setReadingLanguage(btn.getAttribute("data-lang"));
+    });
+  });
+
+  let initialLang = "en";
+  try {
+    initialLang = localStorage.getItem("atlantis_lang") || "en";
+  } catch (e) {}
+  setReadingLanguage(initialLang);
 });
 </script>
-</body>
-</html>
+</body></html>
