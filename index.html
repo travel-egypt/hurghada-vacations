@@ -435,6 +435,45 @@ header .menu-toggle{display:none}
  .hero-content{padding:58px 0}
 }
 </style>
+<style id="atlantis-hero-nav-unified-v5">
+/* One full-bleed photograph behind the headline, never a separate dark text panel. */
+.hero{position:relative;isolation:isolate;min-height:540px;background:#06364a!important;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background-image:url("assets/images/atlantis-hero.webp");background-size:cover;background-position:center 49%;background-repeat:no-repeat}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(2,22,33,.70) 0%,rgba(2,22,33,.45) 30%,rgba(2,22,33,.08) 64%,transparent 90%)}
+.hero .container{position:relative;z-index:1}
+.hero-content{padding:106px 0 100px;max-width:530px}
+.hero h1{font-size:clamp(2.65rem,4.5vw,4.15rem)!important;font-weight:400!important;line-height:1.12!important;color:#f8f5ee;text-shadow:0 2px 12px rgba(0,20,30,.46)}
+.hero p{font-size:15px!important;color:#f0f4f2;text-shadow:0 1px 8px rgba(0,15,25,.6)}
+.hero .eyebrow{font-size:11px!important;text-shadow:0 1px 6px #0018}
+/* Restore readable navigation without squashing the Atlantis wordmark. */
+@media(min-width:1131px){
+ header .navbar{display:grid!important;grid-template-columns:minmax(0,1fr) auto;gap:0 16px;align-items:center;padding:12px 0 8px;min-height:0}
+ header .brand{grid-column:1;grid-row:1;gap:10px}
+ header .brand img{width:47px;height:47px;flex-basis:47px}
+ header .brand-name{font-size:13px!important;letter-spacing:0!important}
+ header .lang-switcher{grid-column:2;grid-row:1;justify-self:end;order:initial}
+ header .lang-btn{font-size:11px;padding:6px 8px}
+ header .nav-links{grid-column:1/-1;grid-row:2;order:initial;display:flex;justify-content:center;gap:clamp(12px,1.55vw,24px);width:100%;padding:12px 0 4px;margin-top:9px;border-top:1px solid rgba(255,255,255,.11);flex-wrap:wrap}
+ header .nav-links a{font-size:13.5px!important;font-weight:500!important;line-height:1.5}
+ header .nav-links .nav-book{font-size:13px!important;padding:9px 17px}
+}
+html[dir=rtl] .hero::after{background:linear-gradient(270deg,rgba(2,22,33,.70),rgba(2,22,33,.43) 35%,rgba(2,22,33,.08) 70%,transparent)}
+@media(max-width:1130px){
+ header .nav-links.active a{font-size:15px!important}
+ .hero::before{background-size:cover;background-position:58% center}
+ .hero::after{background:linear-gradient(90deg,rgba(2,22,33,.78),rgba(2,22,33,.32) 70%,rgba(2,22,33,.12))}
+ .hero-content{padding:85px 0}
+}
+@media(max-width:620px){
+ .hero{min-height:475px}
+ .hero::before{background-position:61% center}
+ .hero::after{background:linear-gradient(90deg,rgba(2,22,33,.80),rgba(2,22,33,.43) 75%,rgba(2,22,33,.16))}
+ .hero-content{padding:76px 0;max-width:88%}
+ .hero h1{font-size:clamp(2.35rem,9vw,3.2rem)!important}
+ .hero p{font-size:13px!important}
+ html[dir=rtl] .hero::after{background:linear-gradient(270deg,rgba(2,22,33,.80),rgba(2,22,33,.43) 75%,rgba(2,22,33,.16))}
+}
+</style>
 </head>
 <body>
 <header><section aria-label="Quick travel tools" class="quick-access"><div class="container quick-inner"><span class="quick-label" data-i18n="quickLabel">YOUR TRAVEL ESSENTIALS</span><div class="quick-links"><a href="features/hurghada-live.html"><span aria-hidden="true">◉</span> Hurghada Live <small data-i18n="liveTag">LIVE</small></a><a href="hurghada-price-guide.html"><span aria-hidden="true">▤</span> <span data-i18n="quickPrices">Price Guide</span></a><a href="features/pocket-guide.html"><span aria-hidden="true">◎</span> Pocket Guide</a><a href="features/pocket-guide.html">Offline Guide</a></div></div></section>
