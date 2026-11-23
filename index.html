@@ -364,6 +364,77 @@ html[dir=rtl] .hero::after{background:linear-gradient(270deg,rgba(2,24,36,.97) 0
  html[dir=rtl] .hero::after{background:linear-gradient(270deg,rgba(2,24,36,.94),rgba(2,24,36,.67))}
 }
 </style>
+<style id="atlantis-compact-final-v4">
+/* ATLANTIS COMPACT HEADER — unified brand, smaller type, calm spacing */
+header .container{width:min(94%,1440px);max-width:1440px}
+header .quick-inner{padding:5px 0;gap:12px}
+header .quick-label{flex:0 0 155px;max-width:155px;font-size:9px;letter-spacing:.08em;white-space:nowrap}
+header .quick-links{gap:7px}
+header .quick-links a{min-height:34px;padding:6px 9px;font-size:10.5px;gap:6px;border-radius:9px;white-space:nowrap}
+header .quick-links a span:first-child{font-size:13px}
+header .quick-links small{font-size:8px}
+header .navbar{display:flex;flex-wrap:nowrap;min-height:64px;padding:7px 0;gap:14px;justify-content:space-between}
+header .brand{display:inline-flex;flex:0 0 auto;align-items:center;gap:7px;min-width:0;max-width:none;white-space:nowrap}
+header .brand img{width:38px;height:38px;flex:0 0 38px;border-radius:5px}
+header .brand-name{display:flex;align-items:center;max-width:none;min-width:0;font-family:'Manrope',Arial,sans-serif!important;font-size:11px!important;line-height:1.3!important;font-weight:500!important;letter-spacing:-.02em!important;white-space:nowrap}
+header .brand-name .brand-title-main{display:inline!important;font-family:inherit!important;font-size:inherit!important;font-weight:inherit!important;line-height:inherit!important;letter-spacing:inherit!important;color:#edf3f0!important;text-transform:none!important;margin:0!important;white-space:nowrap}
+header .brand-name .brand-tagline{display:none!important}
+header .lang-switcher{order:3;display:flex;flex:0 0 auto;flex-wrap:nowrap;max-width:none;padding:3px 4px;gap:0;border-radius:10px;justify-self:auto}
+header .lang-btn{font-size:9px;padding:4px 5px;font-weight:500;line-height:1.1}
+header .nav-links{order:2;display:flex;position:static;flex:1 1 auto;justify-content:flex-end;align-items:center;flex-wrap:nowrap;min-width:0;gap:clamp(6px,1vw,15px);width:auto;padding:0;margin:0;border:0;background:none;box-shadow:none}
+header .nav-links li{flex:0 0 auto}
+header .nav-links a{font-size:10.5px;font-weight:400;letter-spacing:0!important;white-space:nowrap;line-height:1.4}
+header .nav-links .nav-book{padding:8px 13px;font-size:10.5px;font-weight:600!important}
+header .menu-toggle{display:none}
+.hero h1{font-size:clamp(2.15rem,3.65vw,3.4rem)!important;font-weight:400!important;line-height:1.15!important}
+.hero p{font-size:13px;line-height:1.65}
+.hero .eyebrow{font-size:9.5px;letter-spacing:.16em}
+.hero-actions .main-button,.hero-actions .ghost-button{font-size:11px;padding:10px 17px}
+.benefits-inner span{font-size:11px}
+.cinematic-categories .cat-body h3{font-size:13px!important;font-weight:500!important}
+.section-title{font-size:clamp(1.55rem,2.6vw,2.4rem)!important}
+.section-header p,.cat-body p,.tool-card p,.why-box p{font-size:12.5px}
+@media(max-width:1380px){
+ header .navbar{gap:9px}
+ header .brand-name{font-size:10px!important}
+ header .brand img{width:33px;height:33px;flex-basis:33px}
+ header .nav-links{gap:7px}
+ header .nav-links a{font-size:9.5px}
+ header .lang-btn{font-size:8px;padding:4px}
+}
+@media(max-width:1130px){
+ header .navbar{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:9px;min-height:58px;padding:7px 0}
+ header .brand{grid-column:1;grid-row:1;justify-self:start}
+ header .brand-name{font-size:11px!important}
+ header .lang-switcher{grid-column:2;grid-row:1;order:initial}
+ header .menu-toggle{display:block;grid-column:3;grid-row:1;padding:4px 9px;font-size:18px}
+ header .nav-links{display:none;grid-column:1/-1;grid-row:2;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;width:100%;padding:12px 5%;margin:0;background:#041925;max-height:calc(100vh - 130px);overflow:auto;border-top:1px solid #34505b;box-shadow:0 15px 25px #0005}
+ header .nav-links.active{display:flex}
+ header .nav-links li{width:100%}
+ header .nav-links a{display:block;padding:10px 8px;font-size:12px}
+ header .nav-links .nav-book{display:block;text-align:center;margin-top:7px}
+ header .quick-inner{display:flex;gap:8px}
+ header .quick-label{flex:0 0 110px;max-width:110px;white-space:normal}
+ header .quick-links{display:flex;overflow-x:auto;gap:6px;scrollbar-width:thin}
+ header .quick-links a{flex:0 0 auto;min-width:115px}
+}
+@media(max-width:620px){
+ header .quick-inner{display:block;padding:5px 0}
+ header .quick-label{display:none}
+ header .quick-links a{min-width:110px;font-size:10px;min-height:32px}
+ header .navbar{grid-template-columns:minmax(0,1fr) auto;gap:6px}
+ header .brand{grid-column:1;grid-row:1;gap:5px}
+ header .brand img{width:31px;height:31px;flex-basis:31px}
+ header .brand-name{font-size:clamp(8px,2.35vw,10.5px)!important}
+ header .menu-toggle{grid-column:2;grid-row:1}
+ header .lang-switcher{grid-column:1/-1;grid-row:2;justify-self:center;gap:2px;padding:3px 5px}
+ header .lang-btn{font-size:9px;padding:4px 7px}
+ header .nav-links{grid-row:auto}
+ .hero h1{font-size:clamp(2rem,8vw,2.85rem)!important}
+ .hero p{font-size:12px}
+ .hero-content{padding:58px 0}
+}
+</style>
 </head>
 <body>
 <header><section aria-label="Quick travel tools" class="quick-access"><div class="container quick-inner"><span class="quick-label" data-i18n="quickLabel">YOUR TRAVEL ESSENTIALS</span><div class="quick-links"><a href="features/hurghada-live.html"><span aria-hidden="true">◉</span> Hurghada Live <small data-i18n="liveTag">LIVE</small></a><a href="hurghada-price-guide.html"><span aria-hidden="true">▤</span> <span data-i18n="quickPrices">Price Guide</span></a><a href="features/pocket-guide.html"><span aria-hidden="true">◎</span> Pocket Guide</a><a href="features/pocket-guide.html">Offline Guide</a></div></div></section>
