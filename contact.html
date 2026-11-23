@@ -1,212 +1,27 @@
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#031d30" name="theme-color"/>
-<meta content="Contact Atlantis Tours and Experiences in Hurghada, Egypt. Ask about Red Sea boat trips, island excursions, snorkeling, diving, desert safaris and private experiences." name="description"/>
-<title>Contact Atlantis Tours and Experiences | Hurghada, Egypt</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!doctype html>
+<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#091b27"><meta name="description" content="Contact Atlantis Tours and Experiences in Hurghada for Red Sea excursions, hotel pickup, private trips and booking enquiries."><meta name="robots" content="index,follow"><link rel="canonical" href="https://travel-egypt.github.io/hurghada-vacations/contact.html"><title>Contact | Atlantis Tours and Experiences</title><link rel="icon" href="logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-    :root{--navy:#062c43;--deep:#031d30;--blue:#087f9e;--turquoise:#16c5ce;--gold:#e8b967;--light:#f2f9fb;--text:#526775;--line:#e1ecf0;--shadow:0 15px 40px rgba(0,40,65,.10)}
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:'DM Sans',Arial,sans-serif;color:var(--navy);line-height:1.7;background:#fff}
-    a{text-decoration:none;color:inherit}
-    .container{width:min(90%,1160px);margin:auto}
-    header{position:sticky;top:0;z-index:10;background:rgba(3,29,48,.97);backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,.12)}
-    .navbar{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800;line-height:1.25}
-    .brand img{width:56px;height:56px;object-fit:contain}
-    .brand small{display:block;color:var(--turquoise);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-top:4px}
-    .nav-links{display:flex;align-items:center;gap:17px;list-style:none;font-size:13px;font-weight:700}
-    .nav-links a{color:#fff}.nav-links a:hover,.nav-links a.active{color:var(--turquoise)}
-    .nav-book{background:var(--turquoise);color:var(--deep)!important;padding:10px 17px;border-radius:30px}
-    .hero{background:linear-gradient(110deg,rgba(3,29,48,.96),rgba(3,29,48,.75)),url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1800&q=85') center/cover; color:#fff;padding:78px 0 84px}
-    .eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase}
-    h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2}
-    h1{font-size:clamp(38px,6vw,62px);max-width:760px;margin:14px 0}
-    .hero p{max-width:700px;color:#e6f2f6;font-size:17px}
-    main{padding:66px 0 78px;background:var(--light)}
-    .intro{text-align:center;max-width:760px;margin:0 auto 34px}
-    .intro h2{font-size:clamp(28px,4vw,40px);margin:8px 0 12px}
-    .intro p{color:var(--text)}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:980px;margin:auto}
-    .panel{background-color: #F1EBDD;border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:var(--shadow)}
-    .panel h3{font-size:25px;margin-bottom:10px}
-    .panel>p{color:var(--text);font-size:14px;margin-bottom:20px}
-    .contact-method{display:flex;gap:14px;align-items:flex-start;padding:17px 0;border-top:1px solid var(--line)}
-    .contact-method .symbol{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:12px;background:#e8f9fa;color:var(--blue);font-size:20px}
-    .contact-method strong{display:block;margin-bottom:3px}
-    .contact-method span,.contact-method a{color:var(--text);font-size:14px;overflow-wrap:anywhere}
-    .wa-button{display:inline-flex;justify-content:center;align-items:center;gap:9px;width:100%;margin-top:12px;padding:15px 20px;border-radius:30px;background:#16a765;color:#fff;font-weight:800;transition:.2s}
-    .wa-button:hover{background:#128c55;transform:translateY(-2px)}
-    .form-row{margin:0 0 15px}
-    label{display:block;font-weight:700;font-size:13px;margin-bottom:6px}
-    input,select,textarea{width:100%;border:1px solid #d5e3e9;border-radius:10px;padding:12px 13px;font:inherit;font-size:14px;color:var(--navy);background:#fff}
-    textarea{min-height:120px;resize:vertical}
-    input:focus,select:focus,textarea:focus{outline:2px solid rgba(22,197,206,.25);border-color:var(--blue)}
-    .submit{border:0;width:100%;border-radius:30px;background:var(--turquoise);color:var(--deep);padding:14px 20px;font:800 15px 'DM Sans',sans-serif;cursor:pointer}
-    .submit:hover{background:#0fb4bf}
-    .note{font-size:12px!important;color:#728692!important;margin:12px 0 0!important}
-    footer{background:var(--deep);color:#fff;padding:28px 0;text-align:center;font-size:13px}
-    footer a{color:var(--turquoise)}
-    @media(max-width:900px){.nav-links{gap:10px;font-size:11px}.brand{font-size:13px}.brand img{width:46px;height:46px}}
-    @media(max-width:700px){.navbar{padding:12px 0;align-items:flex-start;flex-direction:column}.nav-links{flex-wrap:wrap;gap:12px 16px}.hero{padding:62px 0}.contact-grid{grid-template-columns:1fr}.panel{padding:23px}}
-  </style>
-<link href="https://travel-egypt.github.io/hurghada-vacations/contact.html" rel="canonical"/><meta content="website" property="og:type"/><meta content="Contact Atlantis Tours and Experiences | Hurghada, Egypt" property="og:title"/><meta content="Contact Atlantis Tours and Experiences in Hurghada, Egypt. Ask about Red Sea boat trips, island excursions, snorkeling, diving, desert safaris and private experiences." property="og:description"/><meta content="https://travel-egypt.github.io/hurghada-vacations/contact.html" property="og:url"/><meta content="Atlantis Tours and Experiences" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style id="atlantis-refined-typography">
-
-/* ATLANTIS — refined typography and warm coastal reading system */
-:root {
-  --atl-sand: #E9E1D3;
-  --atl-sand-soft: #F1EBDD;
-  --atl-sand-deep: #DCD2C1;
-  --atl-ink: #293B40;
-  --atl-muted: #66716F;
-  --atl-ocean: #29454B;
-  --atl-gold: #B99B70;
-}
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Manrope', Arial, sans-serif !important;
-  color: var(--atl-ink) !important;
-  background-color: var(--atl-sand) !important;
-  font-size: 15.5px;
-  line-height: 1.72;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-body :is(button, input, select, textarea) { font-family: 'Manrope', Arial, sans-serif !important; }
-h1, h2 {
-  font-family: 'DM Serif Display', Georgia, serif !important;
-  font-weight: 400 !important;
-  letter-spacing: -0.025em !important;
-  line-height: 1.13 !important;
-  text-wrap: balance;
-}
-h1 { font-size: clamp(2.65rem, 5.2vw, 4.65rem) !important; }
-h2 { font-size: clamp(2rem, 3.35vw, 3rem) !important; }
-h3 {
-  font-family: 'Manrope', Arial, sans-serif !important;
-  font-weight: 650 !important;
-  letter-spacing: -0.018em;
-  line-height: 1.28 !important;
-  font-size: clamp(1.12rem, 1.55vw, 1.42rem) !important;
-}
-h4, h5, h6 {
-  font-family: 'Manrope', Arial, sans-serif !important;
-  font-weight: 650 !important;
-  letter-spacing: -0.01em;
-}
-p, li, label, input, select, textarea {
-  font-family: 'Manrope', Arial, sans-serif !important;
-  letter-spacing: 0;
-}
-p { line-height: 1.72; }
-small, .eyebrow, .kicker, .section-label, .card-category {
-  letter-spacing: .075em;
-}
-button, .btn, a.button, .book-link, .main-button, .cta-button {
-  font-weight: 650 !important;
-  letter-spacing: .035em !important;
-}
-/* Soft, warm surfaces instead of bright white cards */
-.tour-card, .info-card, .info-box, .feature-card, .story-card,
-.tool-card, .price-card, .faq-item, .content-card, .booking-panel,
-.form-panel, .contact-card, .guide-card, .card, .tour-includes {
-  background-color: var(--atl-sand-soft) !important;
-  color: var(--atl-ink) !important;
-}
-.tour-card p, .info-card p, .info-box p, .feature-card p,
-.story-card p, .tool-card p, .price-card p, .content-card p {
-  color: var(--atl-muted);
-}
-.tour-card .tour-lead {
-  font-size: .94rem !important;
-  line-height: 1.68 !important;
-  font-weight: 450 !important;
-}
-@media (max-width: 640px) {
-  body { font-size: 15px; line-height: 1.68; }
-  h1 { font-size: clamp(2.25rem, 10vw, 3.2rem) !important; }
-  h2 { font-size: clamp(1.8rem, 8vw, 2.35rem) !important; }
-  h3 { font-size: 1.12rem !important; }
-}
-
-</style>
-</head>
-<body>
-<header>
-<nav aria-label="Main navigation" class="navbar container">
-<a class="brand" href="index.html"><img alt="Atlantis Tours and Experiences logo" onerror="this.style.display='none'" src="logo.png"/><span>Atlantis Tours and Experiences<small>Discover The Red Sea</small></span></a>
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li><li><a href="all-tours.html">Tours</a></li><li><a href="stories.html">Stories</a></li><li><a href="hurghada.html">Hurghada Guide</a></li><li><a href="booking.html">Booking</a></li><li><a aria-current="page" class="active" href="contact.html">Contact</a></li><li><a class="nav-book" href="booking.html">Book Now</a></li>
-</ul>
-</nav>
-</header>
-<section class="hero">
-<div class="container">
-<div class="eyebrow">We're here to help</div>
-<h1>Let's plan your Red Sea experience.</h1>
-<p>Questions about an island escape, snorkeling trip, diving experience, desert adventure or private excursion? Contact our team and tell us what you have in mind.</p>
-</div>
-</section>
-<main>
-<div class="container">
-<div class="intro">
-<div class="eyebrow">Contact Atlantis</div>
-<h2>Talk to our team</h2>
-<p>For trip questions and booking enquiries, WhatsApp is the quickest way to reach us. You can also send your message using the form.</p>
-</div>
-<div class="contact-grid">
-<section aria-labelledby="direct-contact-title" class="panel">
-<h3 id="direct-contact-title">Direct contact</h3>
-<p>Speak with us about availability, pickup arrangements, trip details and the experience that suits your plans.</p>
-<div class="contact-method"><div aria-hidden="true" class="symbol">◉</div><div><strong>WhatsApp</strong><a href="https://wa.me/201557745501" rel="noopener noreferrer" target="_blank">+20 155 774 5501</a></div></div>
-<div class="contact-method"><div aria-hidden="true" class="symbol">⌖</div><div><strong>Destination</strong><span>Hurghada, Red Sea, Egypt</span></div></div>
-<a class="wa-button" href="https://wa.me/201557745501?text=Hello%20Atlantis%2C%20I%20have%20a%20question%20about%20your%20experiences." rel="noopener noreferrer" target="_blank">Chat with us on WhatsApp</a>
-</section>
-<section aria-labelledby="message-title" class="panel">
-<h3 id="message-title">Send an enquiry</h3>
-<p>Complete the details below. Your message will open in WhatsApp so you can review and send it.</p>
-<form id="contactForm">
-<div class="form-row"><label for="name">Your name</label><input autocomplete="name" id="name" maxlength="100" name="name" placeholder="Enter your name" required=""/></div>
-<div class="form-row"><label for="email">Email (optional)</label><input autocomplete="email" id="email" maxlength="150" name="email" placeholder="you@example.com" type="email"/></div>
-<div class="form-row"><label for="topic">What is your enquiry about?</label><select id="topic" name="topic"><option>Tour or experience</option><option>Booking and availability</option><option>Hotel pickup and transfers</option><option>Private trip</option><option>Other question</option></select></div>
-<div class="form-row"><label for="message">Your message</label><textarea id="message" maxlength="1500" name="message" placeholder="Tell us what you would like to know..." required=""></textarea></div>
-<button class="submit" type="submit">Continue to WhatsApp</button>
-<p class="note">Nothing is sent automatically. WhatsApp will open with your message ready for you to review and send.</p>
-</form>
-</section>
-</div>
-</div>
-</main>
-<footer><div class="container">© 2026 Atlantis Tours and Experiences. All Rights Reserved. · <a href="index.html">Home</a> · <a href="all-tours.html">All Tours</a> · <a href="booking.html">Booking</a></div></footer>
+:root{color-scheme:dark;--bg:#091b27;--surface:#102631;--surface2:#142e3a;--edge:#2b4751;--text:#e2e8e7;--muted:#aebdc1;--gold:#c6a675;--aqua:#75c9c5;--focus:#e5bf81}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.75 Lato,Arial,sans-serif}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}.container{width:min(1150px,calc(100% - 40px));margin:auto}:focus-visible{outline:2px solid var(--focus);outline-offset:3px}.header{position:sticky;top:0;z-index:20;background:rgba(9,27,39,.96);border-bottom:1px solid var(--edge);backdrop-filter:blur(14px)}.nav{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand img{width:52px;height:52px;object-fit:contain}.brand-name{font:500 19px/1.2 'Playfair Display',Georgia,serif;letter-spacing:.015em}.brand-name small{display:block;font:400 10px/1.7 Lato,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}.links{display:flex;align-items:center;gap:17px}.links a{font-size:13px;color:var(--muted);white-space:nowrap}.links a:hover,.links a[aria-current]{color:var(--gold)}.nav-cta{padding:9px 16px;border:1px solid var(--gold);border-radius:50px;color:var(--gold)!important}.lang{background:var(--surface2);border:1px solid var(--edge);border-radius:8px;color:var(--text);padding:8px;max-width:118px}.menu{display:none;background:none;border:1px solid var(--edge);color:var(--text);border-radius:8px;padding:7px 12px;font-size:20px}.hero{position:relative;overflow:hidden;padding:105px 0 95px;background:radial-gradient(ellipse at 80% 20%,rgba(40,104,109,.32),transparent 55%),linear-gradient(145deg,#0a1d2b,#102d38 65%,#091b27);border-bottom:1px solid var(--edge)}.hero:after{content:'';position:absolute;width:480px;height:480px;right:-180px;top:-210px;border:1px solid rgba(198,166,117,.18);border-radius:50%;pointer-events:none}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:700;color:var(--gold)}h1,h2{font-family:'Playfair Display',Georgia,serif;font-weight:500;letter-spacing:-.02em;line-height:1.2}h1{font-size:clamp(37px,5.4vw,66px);max-width:760px;margin:18px 0 22px}h2{font-size:clamp(28px,3vw,41px);margin:12px 0 14px}h3{font-size:20px;font-weight:600;margin:0 0 10px}p{color:var(--muted);margin:0}.hero p{max-width:670px;font-size:17px}.section{padding:74px 0 90px}.section-head{max-width:700px;margin-bottom:30px}.contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:22px}.panel{background:linear-gradient(160deg,var(--surface2),var(--surface));border:1px solid var(--edge);border-radius:20px;padding:34px}.panel p{margin-bottom:25px}.detail{display:flex;align-items:flex-start;gap:14px;padding:19px 0;border-top:1px solid var(--edge)}.detail-icon{display:grid;place-items:center;flex:none;width:43px;height:43px;border:1px solid #3b6267;border-radius:12px;color:var(--aqua);font-size:20px}.detail strong{display:block;font-size:13px;color:var(--text)}.detail a{color:var(--aqua);font-size:17px}.detail span{font-size:14px;color:var(--muted)}.button{display:inline-flex;align-items:center;justify-content:center;text-align:center;width:100%;padding:13px 20px;border-radius:9px;border:1px solid var(--gold);background:var(--gold);color:#11242a;font-weight:700;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px);background:#dbba87}.whatsapp{background:#1a6954;color:#f2fff9;border-color:#36866e}.whatsapp:hover{background:#207e65}.field{margin-bottom:17px}label{display:block;font-size:13px;font-weight:700;margin-bottom:7px;color:var(--text)}input,select,textarea{width:100%;background:#0b202b;border:1px solid #3b535c;color:var(--text);border-radius:9px;padding:12px 13px;outline:none}input::placeholder,textarea::placeholder{color:#92a8ad}input:focus,select:focus,textarea:focus{border-color:var(--aqua);box-shadow:0 0 0 2px rgba(117,201,197,.16)}textarea{min-height:136px;resize:vertical}select option{background:#102631}.note{font-size:12px;margin:12px 0 0!important}.social-wrap{padding:0 0 80px}.social{padding:32px;border:1px solid var(--edge);border-radius:20px;background:#102631;display:flex;justify-content:space-between;gap:24px;align-items:center}.social p{font-size:13px}.social-icons{display:flex;gap:10px;flex-wrap:wrap}.social-icons a,.social-icons span{width:48px;height:48px;display:grid;place-items:center;border:1px solid #3c5861;border-radius:12px;color:var(--gold);background:#17313c}.social-icons svg{width:21px;height:21px;fill:currentColor}.social-icons span{opacity:.55;cursor:not-allowed}.footer{padding:34px 0;border-top:1px solid var(--edge);background:#071722}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer p{font-size:12px}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links a{color:var(--muted);font-size:13px}.footer-links a:hover{color:var(--gold)}.loader{position:fixed;inset:0;z-index:100;background:#091b27;display:grid;place-items:center;opacity:0;visibility:hidden;transition:opacity .22s,visibility .22s;pointer-events:none}.loader.show{opacity:1;visibility:visible;pointer-events:auto}.loader img{width:88px;height:88px;object-fit:contain;animation:pulse 1.1s infinite alternate}@keyframes pulse{to{opacity:.45;transform:scale(.95)}}@media(max-width:1000px){.menu{display:block}.links{display:none;position:absolute;top:86px;left:0;right:0;background:#0b202b;padding:20px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--edge)}.links.open{display:flex}.links a{font-size:15px;padding:4px 0}.nav{min-height:76px}.links{top:76px}}@media(max-width:740px){.container{width:min(100% - 30px,1150px)}.brand-name{font-size:15px}.brand img{width:43px;height:43px}.hero{padding:74px 0}.hero p{font-size:15px}.section{padding:54px 0}.contact-grid{grid-template-columns:1fr}.panel{padding:24px}.social{flex-direction:column;align-items:flex-start}.social-wrap{padding-bottom:55px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}[dir=rtl] .brand-name small{letter-spacing:0}[dir=rtl] .eyebrow{letter-spacing:0}
+</style></head><body>
+<div class="loader" id="loader" aria-hidden="true"><img src="logo.png" alt=""></div>
+<header class="header"><nav class="container nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="logo.png" alt="Atlantis logo" onerror="this.style.display='none'"><span class="brand-name">Atlantis Tours and Experiences<small data-t="34">Discover the Red Sea</small></span></a><button class="menu" id="menu" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button><div class="links" id="navLinks"><a href="index.html" data-t="0">Home</a><a href="all-tours.html" data-t="1">Tours</a><a href="stories.html" data-t="2">Stories</a><a href="hurghada.html" data-t="3">Hurghada Guide</a><a href="booking.html" data-t="4">Booking</a><a href="contact.html" data-t="5" aria-current="page">Contact</a><a href="booking.html" class="nav-cta" data-t="6">Book now</a><select id="lang" class="lang" aria-label="Choose language"><option value="en">English</option><option value="de">Deutsch</option><option value="fr">Français</option><option value="it">Italiano</option><option value="es">Español</option><option value="ru">Русский</option><option value="pl">Polski</option><option value="ar">العربية</option></select></div></nav></header>
+<section class="hero"><div class="container"><div class="eyebrow" data-t="7">Here to help</div><h1 data-t="8">Your Red Sea journey starts with a conversation.</h1><p data-t="9">Have a question about a trip, private experience or hotel pickup? Tell us what you have in mind.</p></div></section>
+<main><section class="section"><div class="container"><div class="section-head"><span class="eyebrow" data-t="10">Contact our team</span><h2 data-t="11">Speak directly with Atlantis</h2><p data-t="12">We can help with trip details, availability and arrangements before you book.</p></div><div class="contact-grid"><section class="panel"><h3 data-t="13">WhatsApp us</h3><p data-t="12">We can help with trip details, availability and arrangements before you book.</p><div class="detail"><div class="detail-icon" aria-hidden="true">✆</div><div><strong>WhatsApp</strong><a href="https://wa.me/201557745501" target="_blank" rel="noopener noreferrer">+20 155 774 5501</a></div></div><div class="detail"><div class="detail-icon" aria-hidden="true">⌖</div><div><strong data-t="14">Our destination</strong><span data-t="15">Hurghada, Red Sea, Egypt</span></div></div><a id="quickWa" class="button whatsapp" href="https://wa.me/201557745501" target="_blank" rel="noopener noreferrer" data-t="13">WhatsApp us</a></section><section class="panel"><h3 data-t="16">Send an enquiry</h3><p data-t="17">Fill in the form and review your message in WhatsApp before sending.</p><form id="contactForm"><div class="field"><label for="name" data-t="18">Your name</label><input id="name" name="name" maxlength="100" autocomplete="name" required></div><div class="field"><label for="email" data-t="19">Email (optional)</label><input id="email" name="email" type="email" maxlength="150" autocomplete="email"></div><div class="field"><label for="topic" data-t="20">Enquiry type</label><select id="topic" name="topic"><option value="tour" data-t="24">Tour or experience</option><option value="booking" data-t="25">Booking and availability</option><option value="pickup" data-t="26">Hotel pickup and transfers</option><option value="private" data-t="27">Private trip</option><option value="other" data-t="28">Other question</option></select></div><div class="field"><label for="message" data-t="21">Your message</label><textarea id="message" name="message" maxlength="1500" required></textarea></div><button class="button" type="submit" data-t="22">Continue to WhatsApp</button><p class="note" data-t="23">Nothing is sent automatically. You decide when to send your message.</p></form></section></div></div></section><section class="social-wrap"><div class="container"><div class="social"><div><span class="eyebrow" data-t="29">Follow our journey</span><h3 data-t="30">Find Atlantis on social media</h3><p data-t="31">Social account links will be available soon.</p></div><div class="social-icons" id="socialIcons" aria-label="Social media"></div></div></div></section></main><footer class="footer"><div class="container footer-inner"><p>© <span id="year">2026</span> Atlantis Tours and Experiences.</p><div class="footer-links"><a href="index.html" data-t="0">Home</a><a href="all-tours.html" data-t="33">All tours</a><a href="booking.html" data-t="4">Booking</a><a href="contact.html" data-t="5">Contact</a></div></div></footer>
 <script>
-document.getElementById('contactForm').addEventListener('submit',function(event){
-  event.preventDefault();
-  const data=new FormData(this);
-  const lines=[
-    'Hello Atlantis Tours and Experiences,',
-    '',
-    'Name: '+(data.get('name')||''),
-    'Email: '+(data.get('email')||'Not provided'),
-    'Enquiry: '+(data.get('topic')||''),
-    '',
-    'Message:',
-    data.get('message')||''
-  ];
-  const url='https://wa.me/201557745501?text='+encodeURIComponent(lines.join('\n'));
-  window.open(url,'_blank','noopener,noreferrer');
-});
-</script>
-<!-- ATLANTIS PAGE TRANSITION -->
-<script src="js/main.js" defer></script>
-</body>
-</html>
+'use strict';
+const translations={"en":["Home","Tours","Stories","Hurghada Guide","Booking","Contact","Book now","Here to help","Your Red Sea journey starts with a conversation.","Have a question about a trip, private experience or hotel pickup? Tell us what you have in mind.","Contact our team","Speak directly with Atlantis","We can help with trip details, availability and arrangements before you book.","WhatsApp us","Our destination","Hurghada, Red Sea, Egypt","Send an enquiry","Fill in the form and review your message in WhatsApp before sending.","Your name","Email (optional)","Enquiry type","Your message","Continue to WhatsApp","Nothing is sent automatically. You decide when to send your message.","Tour or experience","Booking and availability","Hotel pickup and transfers","Private trip","Other question","Follow our journey","Find Atlantis on social media","Social account links will be available soon.","Explore","All tours","Discover the Red Sea","Enter your name","you@example.com","Tell us how we can help...","Choose language","Open menu","Close menu"],"de":["Startseite","Touren","Geschichten","Hurghada-Reiseführer","Buchung","Kontakt","Jetzt buchen","Wir sind für Sie da","Ihre Reise ans Rote Meer beginnt mit einem Gespräch.","Fragen zu Ausflügen, Privattouren oder Hoteltransfers? Schreiben Sie uns.","Kontaktieren Sie unser Team","Sprechen Sie direkt mit Atlantis","Wir helfen bei Details, Verfügbarkeit und Planung vor der Buchung.","Per WhatsApp schreiben","Unser Reiseziel","Hurghada, Rotes Meer, Ägypten","Anfrage senden","Füllen Sie das Formular aus und prüfen Sie Ihre Nachricht vor dem Senden in WhatsApp.","Ihr Name","E-Mail (optional)","Thema","Ihre Nachricht","Weiter zu WhatsApp","Es wird nichts automatisch gesendet. Sie entscheiden selbst.","Tour oder Erlebnis","Buchung und Verfügbarkeit","Hotelabholung und Transfer","Privattour","Andere Frage","Begleiten Sie uns","Atlantis in sozialen Medien","Links zu unseren Profilen folgen in Kürze.","Entdecken","Alle Touren","Das Rote Meer entdecken","Geben Sie Ihren Namen ein","name@beispiel.de","Wie können wir helfen?","Sprache wählen","Menü öffnen","Menü schließen"],"fr":["Accueil","Excursions","Histoires","Guide Hurghada","Réservation","Contact","Réserver","À votre écoute","Votre voyage en mer Rouge commence par une conversation.","Une question sur une excursion, une expérience privée ou un transfert ? Écrivez-nous.","Contactez notre équipe","Parlez directement à Atlantis","Nous vous aidons pour les détails, disponibilités et préparatifs.","Écrivez-nous sur WhatsApp","Notre destination","Hurghada, mer Rouge, Égypte","Envoyer une demande","Remplissez le formulaire puis vérifiez votre message dans WhatsApp.","Votre nom","E-mail (facultatif)","Sujet","Votre message","Continuer sur WhatsApp","Aucun message n’est envoyé automatiquement.","Excursion ou activité","Réservation et disponibilité","Prise en charge à l’hôtel","Excursion privée","Autre question","Suivez notre aventure","Retrouvez Atlantis sur les réseaux","Les liens vers nos comptes arrivent bientôt.","Explorer","Toutes les excursions","Découvrez la mer Rouge","Saisissez votre nom","vous@exemple.fr","Comment pouvons-nous vous aider ?","Choisir la langue","Ouvrir le menu","Fermer le menu"],"it":["Home","Escursioni","Storie","Guida Hurghada","Prenotazioni","Contatti","Prenota ora","Siamo qui per te","Il tuo viaggio sul Mar Rosso inizia con una conversazione.","Domande su escursioni, esperienze private o trasferimenti? Scrivici.","Contatta il team","Parla direttamente con Atlantis","Ti aiutiamo con dettagli, disponibilità e organizzazione.","Scrivici su WhatsApp","La nostra destinazione","Hurghada, Mar Rosso, Egitto","Invia una richiesta","Compila il modulo e controlla il messaggio su WhatsApp prima di inviarlo.","Il tuo nome","Email (facoltativa)","Argomento","Il tuo messaggio","Continua su WhatsApp","Nessun messaggio viene inviato automaticamente.","Tour o esperienza","Prenotazione e disponibilità","Prelievo in hotel e trasferimenti","Tour privato","Altra domanda","Seguici","Trova Atlantis sui social","I link ai nostri profili saranno disponibili presto.","Esplora","Tutte le escursioni","Scopri il Mar Rosso","Inserisci il tuo nome","nome@esempio.it","Come possiamo aiutarti?","Seleziona lingua","Apri menu","Chiudi menu"],"es":["Inicio","Excursiones","Historias","Guía de Hurghada","Reservas","Contacto","Reserva ahora","Estamos para ayudarte","Tu viaje al mar Rojo comienza con una conversación.","¿Preguntas sobre excursiones, viajes privados o traslados? Escríbenos.","Contacta con nuestro equipo","Habla directamente con Atlantis","Te ayudamos con detalles, disponibilidad y preparativos.","Escríbenos por WhatsApp","Nuestro destino","Hurghada, mar Rojo, Egipto","Enviar consulta","Completa el formulario y revisa tu mensaje en WhatsApp antes de enviarlo.","Tu nombre","Correo (opcional)","Asunto","Tu mensaje","Continuar a WhatsApp","No se envía nada automáticamente. Tú decides cuándo enviarlo.","Excursión o experiencia","Reserva y disponibilidad","Recogida en hotel y traslados","Excursión privada","Otra pregunta","Síguenos","Atlantis en redes sociales","Pronto estarán disponibles los enlaces a nuestros perfiles.","Explorar","Todas las excursiones","Descubre el mar Rojo","Escribe tu nombre","tu@ejemplo.es","¿En qué podemos ayudarte?","Elegir idioma","Abrir menú","Cerrar menú"],"ru":["Главная","Экскурсии","Истории","Гид по Хургаде","Бронирование","Контакты","Забронировать","Мы на связи","Ваше путешествие к Красному морю начинается с разговора.","Вопросы об экскурсиях, индивидуальных поездках или трансфере? Напишите нам.","Свяжитесь с командой","Напишите напрямую Atlantis","Поможем уточнить детали, доступность и организацию поездки.","Написать в WhatsApp","Наше направление","Хургада, Красное море, Египет","Отправить запрос","Заполните форму и проверьте сообщение в WhatsApp перед отправкой.","Ваше имя","Эл. почта (необязательно)","Тема","Ваше сообщение","Перейти в WhatsApp","Ничего не отправляется автоматически.","Экскурсия или впечатление","Бронирование и наличие мест","Трансфер из отеля","Индивидуальная поездка","Другой вопрос","Следите за нами","Atlantis в соцсетях","Ссылки на наши аккаунты скоро появятся.","Исследовать","Все экскурсии","Откройте Красное море","Введите ваше имя","name@example.com","Чем мы можем помочь?","Выбрать язык","Открыть меню","Закрыть меню"],"pl":["Strona główna","Wycieczki","Historie","Przewodnik Hurghada","Rezerwacja","Kontakt","Zarezerwuj","Jesteśmy do dyspozycji","Twoja podróż nad Morze Czerwone zaczyna się od rozmowy.","Masz pytania o wycieczki, prywatne wyprawy lub transfer? Napisz do nas.","Skontaktuj się z zespołem","Porozmawiaj bezpośrednio z Atlantis","Pomożemy w szczegółach, dostępności i organizacji.","Napisz na WhatsApp","Nasz kierunek","Hurghada, Morze Czerwone, Egipt","Wyślij zapytanie","Wypełnij formularz i sprawdź wiadomość w WhatsApp przed wysłaniem.","Twoje imię","E-mail (opcjonalnie)","Temat","Twoja wiadomość","Przejdź do WhatsApp","Wiadomość nie jest wysyłana automatycznie.","Wycieczka lub atrakcja","Rezerwacja i dostępność","Odbiór z hotelu i transfer","Prywatna wycieczka","Inne pytanie","Obserwuj nas","Atlantis w mediach społecznościowych","Linki do naszych profili pojawią się wkrótce.","Odkrywaj","Wszystkie wycieczki","Odkryj Morze Czerwone","Wpisz swoje imię","imie@przyklad.pl","Jak możemy pomóc?","Wybierz język","Otwórz menu","Zamknij menu"],"ar":["الرئيسية","الرحلات","الحكايات","دليل الغردقة","الحجز","تواصل معنا","احجز الآن","نحن هنا لمساعدتك","رحلتك إلى البحر الأحمر تبدأ بمحادثة.","عندك سؤال عن رحلة أو تجربة خاصة أو الانتقال من الفندق؟ ابعتلنا تفاصيل طلبك.","تواصل مع فريقنا","تحدث مباشرة مع أتلانتس","نساعدك في تفاصيل الرحلات والتوافر والترتيبات قبل الحجز.","راسلنا على واتساب","وجهتنا","الغردقة، البحر الأحمر، مصر","أرسل استفسارك","املأ النموذج وراجع رسالتك على واتساب قبل إرسالها.","اسمك","البريد الإلكتروني (اختياري)","نوع الاستفسار","رسالتك","المتابعة إلى واتساب","لن يتم إرسال أي رسالة تلقائيًا؛ أنت من يقرر الإرسال.","رحلة أو تجربة","الحجز والتوافر","الاستلام من الفندق والانتقالات","رحلة خاصة","سؤال آخر","تابع رحلتنا","تابع أتلانتس على السوشيال ميديا","روابط حساباتنا ستتوفر قريبًا.","استكشف","كل الرحلات","اكتشف البحر الأحمر","اكتب اسمك","name@example.com","إزاي نقدر نساعدك؟","اختر اللغة","افتح القائمة","أغلق القائمة"]};
+const languageSelect=document.getElementById('lang');
+function getLanguage(){try{return localStorage.getItem('atlantis-language')||localStorage.getItem('atlantisLang')||'en'}catch{return 'en'}}
+function saveLanguage(code){try{localStorage.setItem('atlantis-language',code);localStorage.setItem('atlantisLang',code)}catch{}}
+function translate(code){if(!translations[code])code='en';const words=translations[code];document.documentElement.lang=code;document.documentElement.dir=code==='ar'?'rtl':'ltr';languageSelect.value=code;document.querySelectorAll('[data-t]').forEach(el=>{const idx=Number(el.dataset.t);if(words[idx])el.textContent=words[idx]});document.getElementById('name').placeholder=words[35];document.getElementById('email').placeholder=words[36];document.getElementById('message').placeholder=words[37];languageSelect.setAttribute('aria-label',words[38]);document.getElementById('menu').setAttribute('aria-label',words[39]||'Open menu');document.title=words[5]+' | Atlantis Tours and Experiences';document.getElementById('quickWa').href='https://wa.me/201557745501?text='+encodeURIComponent(code==='ar'?'مرحبًا أتلانتس، عندي استفسار عن الرحلات.':'Hello Atlantis, I have a question about your tours.');saveLanguage(code)}
+languageSelect.addEventListener('change',e=>translate(e.target.value));translate(getLanguage());
+const menu=document.getElementById('menu'),links=document.getElementById('navLinks');menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});
+document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();if(!this.reportValidity())return;const name=document.getElementById('name').value.trim(),email=document.getElementById('email').value.trim(),topic=document.getElementById('topic'),message=document.getElementById('message').value.trim();if(!name||!message)return;const body=['Hello Atlantis Tours and Experiences','Name: '+name,email?'Email: '+email:'','Enquiry: '+topic.options[topic.selectedIndex].text,'Message: '+message].filter(Boolean).join('
+');window.open('https://wa.me/201557745501?text='+encodeURIComponent(body),'_blank','noopener,noreferrer')});
+// Add ONLY verified official profile URLs below. Empty values are shown as inactive icons.
+const SOCIAL_URLS={facebook:'',instagram:'',youtube:'',tiktok:''};
+const icons={facebook:'<path d="M13.8 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5H17V3.6c-.3 0-1.2-.1-2.3-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H8v3.1h2.5v8z"/>',instagram:'<rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1"/>',youtube:'<rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 6 3-6 3z" fill="#102631"/>',tiktok:'<path d="M16 2c.4 2.8 2 4.3 5 4.6v3.2c-2-.1-3.7-.7-5-1.8v6.8c0 4.1-2.9 6.7-6.6 6.7A6.4 6.4 0 0 1 3 15.1a6.4 6.4 0 0 1 7.3-6.3v3.5a3 3 0 0 0-3.8 2.8 3 3 0 0 0 3 3.1c1.9 0 3-1.2 3-3.3V2z"/>'};
+const social=document.getElementById('socialIcons');for(const [name,url] of Object.entries(SOCIAL_URLS)){const el=document.createElement(url?'a':'span');el.setAttribute('aria-label',name+(url?'':' (coming soon)'));el.title=name+(url?'':' — coming soon');el.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+icons[name]+'</svg>';if(url&&/^https:\/\//.test(url)){el.href=url;el.target='_blank';el.rel='noopener noreferrer'}social.appendChild(el)}
+document.getElementById('year').textContent=new Date().getFullYear();
+const loader=document.getElementById('loader');document.querySelectorAll('a[href$=".html"],a[href*=".html#"]').forEach(a=>a.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey||e.button!==0)return;loader.classList.add('show')}));window.addEventListener('pageshow',()=>loader.classList.remove('show'));
+</script></body></html>
