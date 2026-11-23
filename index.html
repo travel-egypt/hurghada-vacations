@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -299,7 +298,73 @@ html[dir=rtl] .hero::after{background:linear-gradient(270deg,rgba(2,24,36,.96) 0
 @media(max-width:1060px){.quick-links{display:flex;overflow-x:auto}.quick-links a{flex:0 0 auto;min-width:150px}.navbar{min-height:75px}.nav-links{top:75px;max-height:calc(100vh - 150px);overflow:auto}}
 @media(max-width:700px){.hero{min-height:475px}.hero::before{background-position:60% center}.hero::after{background:linear-gradient(90deg,rgba(2,24,36,.91),rgba(2,24,36,.68))}.hero-content{padding:75px 0}.hero h1{font-size:clamp(2.5rem,11vw,3.5rem)!important}.benefits-inner{display:flex;overflow-x:auto}.benefits-inner span{flex:0 0 170px}.cinematic-categories{grid-template-columns:repeat(2,minmax(0,1fr))}.cinematic-categories .cat-card,.cinematic-categories .cat-card img{height:225px;min-height:225px}.cinematic-categories .cat-body h3{font-size:13px!important}}
 @media(max-width:420px){.cinematic-categories{gap:9px}.cinematic-categories .cat-body{padding:35px 10px 10px}.brand-name{font-size:13px}}
-</style></head>
+</style>
+<style id="atlantis-layout-polish-v3">
+/* Header layout: give branding, languages and navigation their own breathing room. */
+header .container{width:min(94%,1420px);max-width:1420px}
+header .quick-inner{display:flex;flex-direction:row;align-items:center;gap:20px;padding:9px 0}
+header .quick-label{flex:0 0 125px;max-width:125px;line-height:1.5}
+header .quick-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;min-width:0;flex:1}
+header .quick-links a{min-height:46px;padding:10px 8px;gap:8px;font-size:12px;font-weight:500;line-height:1.35}
+header .quick-links a span:first-child{font-size:16px}
+header .navbar{display:grid;grid-template-columns:minmax(250px,1fr) auto;gap:0 20px;align-items:center;min-height:0;padding-top:11px;padding-bottom:8px}
+header .brand{grid-column:1;grid-row:1;gap:12px;min-width:0;justify-self:start}
+header .brand img{width:62px;height:62px;object-fit:contain}
+header .brand-name{font-size:15px;line-height:1.3;max-width:245px}
+header .brand-name span{font-size:10px;line-height:1.45;letter-spacing:.06em}
+header .lang-switcher{grid-column:2;grid-row:1;max-width:none;flex-wrap:nowrap;padding:5px 8px;gap:2px;justify-self:end}
+header .lang-btn{font-size:11px;padding:6px 9px;font-weight:600}
+header .nav-links{grid-column:1/-1;grid-row:2;display:flex;position:static;justify-content:center;align-items:center;flex-wrap:wrap;gap:4px 20px;width:100%;padding:10px 0 1px;margin-top:8px;border-top:1px solid rgba(255,255,255,.12);background:transparent}
+header .nav-links a{font-size:12px;line-height:1.5;letter-spacing:.005em;white-space:nowrap}
+header .nav-links .nav-book{padding:9px 18px;border-radius:999px}
+header .menu-toggle{display:none}
+/* Wider, less zoomed hero: image fits its own height, preserving boat proportions. */
+.hero{min-height:470px}
+.hero::before{background-size:auto 100%;background-position:right center;background-repeat:no-repeat;background-color:#06354a}
+.hero::after{background:linear-gradient(90deg,rgba(2,24,36,.97) 0%,rgba(3,28,42,.92) 30%,rgba(3,28,42,.62) 50%,rgba(3,28,42,.04) 82%)}
+.hero-content{padding:70px 0;max-width:530px}
+.hero h1{font-size:clamp(2.8rem,4.5vw,4.15rem)!important;line-height:1.13!important;font-weight:400!important}
+.hero p{font-size:14px}
+html[dir=rtl] .hero::before{background-position:left center}
+html[dir=rtl] .hero::after{background:linear-gradient(270deg,rgba(2,24,36,.97) 0%,rgba(3,28,42,.92) 30%,rgba(3,28,42,.62) 50%,rgba(3,28,42,.04) 82%)}
+/* Mobile: compact logo and tools, accessible menu, no header overflow. */
+@media(max-width:1080px){
+ header .navbar{grid-template-columns:minmax(0,1fr) auto auto;gap:10px;padding:10px 0}
+ header .brand{grid-column:1;grid-row:1}
+ header .brand img{width:48px;height:48px}
+ header .lang-switcher{grid-column:2;grid-row:1;max-width:225px;flex-wrap:wrap;justify-content:flex-end}
+ header .lang-btn{font-size:10px;padding:4px 6px}
+ header .menu-toggle{display:block;grid-column:3;grid-row:1;justify-self:end}
+ header .nav-links{display:none;position:absolute;top:100%;left:0;right:0;width:100%;margin:0;padding:18px 5%;background:#041925;max-height:calc(100vh - 130px);overflow-y:auto;flex-direction:column;align-items:stretch;gap:0;border-top:1px solid #34505b;text-align:start;box-shadow:0 15px 25px #0005}
+ header .nav-links.active{display:flex}
+ header .nav-links li{width:100%}
+ header .nav-links a{display:block;padding:11px 8px;font-size:14px}
+ header .nav-links .nav-book{display:block;text-align:center;margin-top:8px}
+ header .quick-inner{gap:10px}
+ header .quick-label{flex:0 0 100px}
+ header .quick-links{display:flex;overflow-x:auto;scrollbar-width:thin;min-width:0}
+ header .quick-links a{flex:0 0 165px;min-width:165px}
+}
+@media(max-width:650px){
+ header .quick-inner{display:block;padding:8px 0}
+ header .quick-label{display:block;max-width:none;margin-bottom:6px;font-size:9px}
+ header .quick-links a{flex-basis:145px;min-width:145px;font-size:11px;min-height:40px}
+ header .navbar{grid-template-columns:minmax(0,1fr) auto;gap:6px}
+ header .brand-name{font-size:12px;max-width:145px}
+ header .brand-name span{font-size:8px}
+ header .brand img{width:42px;height:42px}
+ header .lang-switcher{grid-column:1/-1;grid-row:2;justify-self:center;max-width:100%;justify-content:center}
+ header .menu-toggle{grid-column:2;grid-row:1}
+ .hero{min-height:445px}
+ .hero::before{background-size:auto 100%;background-position:65% center}
+ .hero::after{background:linear-gradient(90deg,rgba(2,24,36,.94),rgba(2,24,36,.67))}
+ .hero-content{padding:70px 0}
+ .hero h1{font-size:clamp(2.45rem,9vw,3.35rem)!important}
+ html[dir=rtl] .hero::before{background-position:35% center}
+ html[dir=rtl] .hero::after{background:linear-gradient(270deg,rgba(2,24,36,.94),rgba(2,24,36,.67))}
+}
+</style>
+</head>
 <body>
 <header><section aria-label="Quick travel tools" class="quick-access"><div class="container quick-inner"><span class="quick-label" data-i18n="quickLabel">YOUR TRAVEL ESSENTIALS</span><div class="quick-links"><a href="features/hurghada-live.html"><span aria-hidden="true">◉</span> Hurghada Live <small data-i18n="liveTag">LIVE</small></a><a href="hurghada-price-guide.html"><span aria-hidden="true">▤</span> <span data-i18n="quickPrices">Price Guide</span></a><a href="features/pocket-guide.html"><span aria-hidden="true">◎</span> Pocket Guide</a><a href="features/pocket-guide.html">Offline Guide</a></div></div></section>
 <nav class="navbar container">
