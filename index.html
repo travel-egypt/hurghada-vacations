@@ -474,6 +474,41 @@ html[dir=rtl] .hero::after{background:linear-gradient(270deg,rgba(2,22,33,.70),r
  html[dir=rtl] .hero::after{background:linear-gradient(270deg,rgba(2,22,33,.80),rgba(2,22,33,.43) 75%,rgba(2,22,33,.16))}
 }
 </style>
+<style id="atlantis-single-line-header-v6">
+/* Surgical header-only refinement: keep the existing hero, cards and content. */
+@media (min-width: 1201px) {
+  header .navbar.container{width:96%;max-width:1640px;display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center;justify-content:space-between;gap:clamp(8px,1vw,16px);min-height:70px;padding:8px 0}
+  header .brand{order:0;grid-column:auto;grid-row:auto;flex:0 0 auto;gap:7px;white-space:nowrap}
+  header .brand img{width:40px;height:40px;flex-basis:40px}
+  header .brand-name{font-size:11.5px!important;max-width:none;white-space:nowrap}
+  header .brand-name .brand-title-main{white-space:nowrap}
+  header .nav-links{order:1;grid-column:auto;grid-row:auto;display:flex!important;position:static;flex:1 1 auto;flex-direction:row;flex-wrap:nowrap!important;align-items:center;justify-content:flex-end;min-width:0;width:auto;gap:clamp(7px,.8vw,13px);padding:0;margin:0;border:0;background:transparent;box-shadow:none}
+  header .nav-links li{flex:0 0 auto;width:auto}
+  header .nav-links a{font-size:clamp(11px,.87vw,13px)!important;font-weight:500!important;white-space:nowrap;padding:0}
+  header .nav-links .nav-book{font-size:12px!important;padding:9px 12px}
+  header .lang-switcher{order:2;grid-column:auto;grid-row:auto;flex:0 0 auto;justify-self:auto;max-width:none;margin:0;padding:0;border:0;background:transparent}
+  header .menu-toggle{display:none!important}
+}
+/* Compact selector keeps all eight languages available without a second row. */
+header .lang-switcher .lang-btn{display:none!important}
+header .lang-select{display:block;min-width:67px;max-width:82px;background:#102d3b;color:#e9f1f0;border:1px solid rgba(255,255,255,.24);border-radius:7px;padding:8px 5px;font:500 12px 'Manrope',Arial,sans-serif;cursor:pointer}
+header .lang-select option{background:#102d3b;color:#fff}
+/* On narrower screens, use the existing accessible mobile menu rather than overflow. */
+@media (min-width:1131px) and (max-width:1200px){
+  header .navbar{display:grid!important;grid-template-columns:minmax(0,1fr) auto auto!important;gap:10px;min-height:65px;padding:8px 0}
+  header .brand{grid-column:1;grid-row:1}
+  header .lang-switcher{grid-column:2;grid-row:1;margin:0}
+  header .menu-toggle{grid-column:3;grid-row:1;display:block!important}
+  header .nav-links{display:none!important;position:absolute;top:100%;left:0;right:0;grid-column:1/-1;grid-row:2;flex-direction:column;align-items:stretch;width:100%;margin:0;padding:12px 5%;background:#041925;max-height:calc(100vh - 100px);overflow-y:auto;border-top:1px solid #34505b}
+  header .nav-links.active{display:flex!important}
+  header .nav-links li{width:100%}
+  header .nav-links a{display:block;padding:10px 8px;font-size:14px!important}
+}
+@media (max-width:620px){header .lang-switcher{grid-column:2!important;grid-row:1!important;justify-self:end!important}header .menu-toggle{grid-column:2;grid-row:2;justify-self:end}header .navbar{grid-template-columns:minmax(0,1fr) auto!important}}
+/* Small editorial labels; hero photo and headline composition are unchanged. */
+.hero .eyebrow{font-size:9px!important;letter-spacing:.11em!important;font-weight:400!important}
+header .brand-name .brand-tagline{display:none!important}
+</style>
 </head>
 <body>
 <header><section aria-label="Quick travel tools" class="quick-access"><div class="container quick-inner"><span class="quick-label" data-i18n="quickLabel">YOUR TRAVEL ESSENTIALS</span><div class="quick-links"><a href="features/hurghada-live.html"><span aria-hidden="true">◉</span> Hurghada Live <small data-i18n="liveTag">LIVE</small></a><a href="hurghada-price-guide.html"><span aria-hidden="true">▤</span> <span data-i18n="quickPrices">Price Guide</span></a><a href="features/pocket-guide.html"><span aria-hidden="true">◎</span> Pocket Guide</a><a href="features/pocket-guide.html">Offline Guide</a></div></div></section>
@@ -485,7 +520,7 @@ html[dir=rtl] .hero::after{background:linear-gradient(270deg,rgba(2,22,33,.70),r
 <span class="brand-tagline" data-i18n="brandTagline">Discover The Red Sea</span>
 </div>
 </a>
-<div aria-label="Language switcher" class="lang-switcher" role="group">
+<div aria-label="Language switcher" class="lang-switcher" role="group"><select class="lang-select" id="atlantisLanguageSelect" aria-label="Choose language"><option value="en">EN</option><option value="de">DE</option><option value="ru">RU</option><option value="fr">FR</option><option value="it">IT</option><option value="es">ES</option><option value="pl">PL</option><option value="ar">AR</option></select>
 <button class="lang-btn active" data-lang="en" title="English" type="button">EN</button>
 <button class="lang-btn" data-lang="de" title="Deutsch" type="button">DE</button>
 <button class="lang-btn" data-lang="ru" title="Русский" type="button">RU</button>
@@ -1516,5 +1551,18 @@ Object.assign(ATLANTIS_TRANSLATIONS["ar"], {"heroTitle": "تجارب البحر 
 });
 </script>
 <script defer="" src="js/main.js"></script>
+<script>
+(function(){
+ const selector=document.getElementById('atlantisLanguageSelect');
+ if(!selector)return;
+ selector.addEventListener('change',function(){
+  const button=document.querySelector('.lang-btn[data-lang="'+selector.value+'"]');
+  if(button)button.click();
+ });
+ const sync=function(){const active=document.querySelector('.lang-btn.active');if(active)selector.value=active.dataset.lang;};
+ document.querySelectorAll('.lang-btn').forEach(function(button){button.addEventListener('click',sync);});
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',sync,{once:true});else sync();
+})();
+</script>
 </body>
 </html>
