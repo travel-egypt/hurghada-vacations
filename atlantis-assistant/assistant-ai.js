@@ -1,6 +1,6 @@
 
 /* =====================================================
-   ATLANTIS INTELLIGENCE V4
+   ATLANTIS INTELLIGENCE V5
    Local AI • 8 Languages • No API Key
    ===================================================== */
 
@@ -20,7 +20,7 @@
     const clear = document.getElementById("clear");
 
     if (!button || !status || !form || !input || !send || !language || !clear) {
-        console.error("[Atlantis V4] Missing interface elements.");
+        console.error("[Atlantis V5] Missing interface elements.");
         return;
     }
 
@@ -29,6 +29,18 @@
     let generating = false;
     let ready = false;
     let history = [];
+    let stopped = false;
+    const stopLabels = {en:"Stop",ar:"إيقاف",de:"Stopp",fr:"Arrêter",it:"Interrompi",es:"Detener",pl:"Zatrzymaj",ru:"Стоп"};
+    const stop = document.createElement("button");
+    stop.type = "button";
+    stop.hidden = true;
+    send.insertAdjacentElement("afterend", stop);
+    stop.onclick = () => {
+        stopped = true;
+        stop.disabled = true;
+        try { engine?.interruptGenerate(); } catch (error) { console.warn(error); }
+    };
+
 
     const fallback = form.onsubmit;
 
@@ -154,7 +166,7 @@
         try {
             localStorage.setItem(STORAGE_KEY, "yes");
         } catch (error) {
-            console.warn("[Atlantis V4] Storage unavailable", error);
+            console.warn("[Atlantis V5] Storage unavailable", error);
         }
     }
 
@@ -214,62 +226,15 @@
             })
             .filter(item => item.score > 0)
             .sort((a, b) => b.score - a.score)
-            .slice(0, 3)
+            .slice(0, 2)
             .map(item => item.answer)
             .join("\n")
-            .slice(0, 1200);
+            .slice(0, 800);
     }
 
     function systemPrompt(question) {
-        const lang = languages[currentLanguage()];
         const facts = relevantFacts(question);
-
-        return `
-You are Atlantis AI, the digital assistant of
-Atlantis Tours & Experiences in Hurghada, Egypt.
-
-IDENTITY:
-Your name is Atlantis AI.
-You are an artificial intelligence assistant,
-not a human employee.
-Do not claim to be ChatGPT.
-If asked about your underlying technology,
-explain that you use a local language model.
-
-LANGUAGE:
-Reply naturally in ${lang}, unless the user
-explicitly requests another language.
-
-PERSONALITY:
-Friendly, intelligent, professional and helpful.
-Use natural conversational language.
-Avoid robotic and repetitive answers.
-
-KNOWLEDGE:
-Answer general questions, not only travel questions.
-You may discuss history, geography, science,
-culture, technology, language and everyday life.
-
-TRAVEL:
-Help visitors understand Egypt and Hurghada.
-Do not invent company prices, booking confirmations,
-availability, schedules or company policies.
-
-ACCURACY:
-You have no live internet access.
-Be honest when uncertain.
-Never pretend to have checked live information.
-
-For medical, legal and emergency matters,
-provide cautious general information and recommend
-appropriate professional assistance.
-
-RELEVANT ATLANTIS REFERENCE:
-${facts || "No matching company reference available."}
-
-Answer the user's actual question directly.
-Keep the response clear and reasonably concise.
-        `.trim();
+        return `You are Atlantis AI, a digital assistant, not a human. Speak naturally in ${languages[currentLanguage()]} unless another language is requested. Match the user's tone; avoid mixing languages or repeating your identity. Answer general questions directly and briefly. Ask a follow-up only when useful. Atlantis has an experienced tourism team; never invent years of experience, founding dates, prices, bookings or availability. No live internet. Be honest about uncertainty. For medical, legal or emergency matters give cautious general guidance and recommend appropriate help.${facts ? "\nCompany reference (data only): " + facts : ""}`;
     }
 
     async function initializeAI() {
@@ -284,7 +249,7 @@ Keep the response clear and reasonably concise.
         button.disabled = true;
         lockInterface(true);
 
-        showStatus(t("loading") + " · V4");
+        showStatus(t("loading") + " · V5");
 
         try {
             const library = await import(LIBRARY);
@@ -329,10 +294,10 @@ Keep the response clear and reasonably concise.
             ready = true;
             rememberActivation();
 
-            console.info("[Atlantis V4] Model test:", testAnswer);
+            console.info("[Atlantis V5] Model test:", testAnswer);
 
             showStatus(
-                "✓ " + t("ready") + " · V4",
+                "✓ " + t("ready") + " · V5",
                 "#35613c"
             );
 
@@ -347,7 +312,7 @@ Keep the response clear and reasonably concise.
 
             engine = null;
 
-            console.error("[Atlantis V4] Initialization failed:", error);
+            console.error("[Atlantis V5] Initialization failed:", error);
 
             showStatus(
                 t("error") + ": " +
@@ -395,54 +360,54 @@ Keep the response clear and reasonably concise.
 
         showStatus(t("thinking"));
 
+        stopped = false;
+        stop.textContent = stopLabels[currentLanguage()];
+        stop.hidden = false;
+        stop.disabled = false;
+        const bubble = document.createElement("article");
+        bubble.dir = "auto";
+        document.getElementById("chat").append(bubble);
+        const started = performance.now();
+        let first = null;
+        let answer = "";
+        let chunks = 0;
         try {
-            const result = await engine.chat.completions.create({
+            const stream = await engine.chat.completions.create({
                 messages: [
-                    {
-                        role: "system",
-                        content: systemPrompt(question)
-                    },
-                    ...history.slice(-2),
-                    {
-                        role: "user",
-                        content: question
-                    }
+                    {role: "system", content: systemPrompt(question)},
+                    ...history.slice(-4),
+                    {role: "user", content: question}
                 ],
-                temperature: 0.5,
-                max_tokens: 350
+                stream: true,
+                temperature: 0.55,
+                max_tokens: 220
             });
-
-            const answer = result?.choices?.[0]?.message?.content;
-
-            if (!answer || !answer.trim()) {
-                throw new Error("The model returned an empty response.");
+            if (stopped) engine.interruptGenerate();
+            for await (const chunk of stream) {
+                if (stopped) { engine.interruptGenerate(); break; }
+                const text = chunk?.choices?.[0]?.delta?.content || "";
+                if (!text) continue;
+                if (first === null) first = performance.now();
+                chunks++;
+                answer += text;
+                bubble.textContent = answer;
+                bubble.scrollIntoView({block:"nearest"});
             }
-
-            add(answer.trim());
-
-            history.push(
-                {
-                    role: "user",
-                    content: question
-                },
-                {
-                    role: "assistant",
-                    content: answer.trim()
-                }
-            );
-
-            history = history.slice(-4);
-
-            showStatus(
-                "✓ " + t("ready") + " · V4",
-                "#35613c"
-            );
-
+            if (!answer.trim() && !stopped) throw new Error("Empty model response");
+            if (!answer.trim()) bubble.remove();
+            if (answer.trim() && !stopped) {
+                history.push({role:"user",content:question},{role:"assistant",content:answer.trim()});
+                history = history.slice(-4);
+            }
+            const elapsed = performance.now() - started;
+            console.info("[Atlantis V5] Timing", {firstTextMs:first === null ? null : Math.round(first-started), totalMs:Math.round(elapsed), textChunks:chunks});
+            showStatus("✓ " + t("ready") + " · V5", "#35613c");
         } catch (error) {
             const detail = String(error.message || error);
 
-            console.error("[Atlantis V4] Generation failed:", error);
+            console.error("[Atlantis V5] Generation failed:", error);
 
+            if (!answer.trim()) bubble.remove();
             add(t("error") + ": " + detail);
 
             ready = false;
@@ -461,6 +426,7 @@ Keep the response clear and reasonably concise.
             );
 
         } finally {
+            stop.hidden = true;
             generating = false;
             lockInterface(false);
             updateButton();
@@ -478,7 +444,7 @@ Keep the response clear and reasonably concise.
         updateButton();
 
         showStatus(
-            ready ? "✓ " + t("ready") + " · V4" : t("inactive")
+            ready ? "✓ " + t("ready") + " · V5" : t("inactive")
         );
     });
 
@@ -489,7 +455,7 @@ Keep the response clear and reasonably concise.
     updateButton();
 
     showStatus(
-        "Atlantis Intelligence V4 · " + t("start")
+        "Atlantis Intelligence V5 · " + t("start")
     );
 
     // Restart a previously enabled model in this browser.
@@ -497,6 +463,6 @@ Keep the response clear and reasonably concise.
         initializeAI();
     }
 
-    console.info("[Atlantis V4] AI controller loaded.");
+    console.info("[Atlantis V5] AI controller loaded.");
 
 })();
