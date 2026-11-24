@@ -1,1 +1,0 @@
-{"id": "./assistant.html", "name": "Atlantis Travel Concierge", "short_name": "Atlantis", "start_url": "./assistant.html", "scope": "./", "display": "standalone", "background_color": "#d9c8a8", "theme_color": "#b18b4c", "icons": [{"src": "assistant-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "assistant-512.png", "sizes": "512x512", "type": "image/png"}]}
