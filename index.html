@@ -1665,5 +1665,40 @@ function load(){if(window.turnstile)return Promise.resolve();if(!loader)loader=n
 async function token(){await load();return new Promise((resolve,reject)=>{let done=false;const finish=(err,val)=>{if(done)return;done=true;clearTimeout(timer);err?reject(err):resolve(val);};const timer=setTimeout(()=>finish(Error('timeout')),90000);try{if(widget!==null){window.turnstile.remove(widget);widget=null;}widget=window.turnstile.render($('verification'),{sitekey,action:'atlantis_chat',theme:'dark',size:'flexible',execution:'execute',callback:v=>finish(null,v),'error-callback':()=>finish(Error('verify')),'expired-callback':()=>finish(Error('expired')),'timeout-callback':()=>finish(Error('timeout'))});window.turnstile.execute(widget);}catch(e){finish(e);}});}
 $('form').addEventListener('submit',async e=>{e.preventDefault();const message=input.value.trim();if(busy||!message||message.length>2000)return;busy=true;send.disabled=true;$('clear').disabled=true;input.disabled=true;status.textContent=t('busy');try{const turnstileToken=await token();const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message,history:history.slice(-6).map(x=>({role:x.role,content:x.content.slice(0,1000)})),turnstileToken}),signal:AbortSignal.timeout(45000)});const data=await response.json();if(response.status===429){status.textContent=t('limit');return;}if(!response.ok||typeof data.answer!=='string')throw Error('response');add(message,true);add(data.answer,false,true);history.push({role:'user',content:message},{role:'assistant',content:data.answer});history=history.slice(-6);input.value='';status.textContent='';}catch{status.textContent=t('error');}finally{if(widget!==null){try{window.turnstile.remove(widget);}catch{}widget=null;}busy=false;send.disabled=false;$('clear').disabled=false;input.disabled=false;}});
 })();</script>
+
+<!-- ATLANTIS STUDIO PRO CONNECTION -->
+<script>
+(function () {
+  function connectAtlantisStudio() {
+    const links = document.querySelectorAll(
+      '.atlantis-studio-access a, a[href="studio.html"]'
+    );
+
+    links.forEach(function (link) {
+      link.href =
+        "https://atlantis-admin.m47199563.workers.dev/";
+
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.title = "Atlantis Management Studio Pro";
+      link.setAttribute(
+        "aria-label",
+        "Atlantis Management Studio Pro"
+      );
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener(
+      "DOMContentLoaded",
+      connectAtlantisStudio
+    );
+  } else {
+    connectAtlantisStudio();
+  }
+})();
+</script>
+<!-- END ATLANTIS STUDIO PRO CONNECTION -->
+
 </body>
 </html>
