@@ -574,7 +574,7 @@ header .brand-name .brand-tagline{display:none!important}
 <style id="atl-ai-side-panel">
 #atl-ai[hidden]{display:none!important}#atl-ai{position:fixed;right:14px;bottom:72px;width:min(420px,calc(100vw - 28px));max-height:calc(100dvh - 90px);overflow:auto;overscroll-behavior:contain;z-index:1200;padding:0;background:#092a3a;border:1px solid #426572;border-radius:16px;box-shadow:0 8px 32px #0018}#atl-ai .ai-shell{display:flex;flex-direction:column;width:100%;gap:10px;padding:14px;border:0;background:transparent}#atl-ai .ai-shell>div{width:100%}#atl-ai h2{font-size:20px!important;margin:4px 0}#atl-ai .ai-shell>div:first-child>p:not(.ai-privacy){display:none}#atl-ai .ai-chips{margin:8px 0;gap:5px}#atl-ai .ai-chips button{font-size:11px;padding:5px 8px}#atl-ai-log{height:clamp(120px,30dvh,260px)}#atl-ai .ai-privacy{font-size:10px}#atl-ai-float{right:14px;left:auto;bottom:14px;z-index:1201;min-height:44px}#atl-ai-close{float:right;min-width:36px}#atl-ai .ai-chat{padding:10px} @media(max-width:480px){#atl-ai{right:8px;width:calc(100vw - 16px);bottom:68px}#atl-ai .ai-shell{padding:10px}#atl-ai-log{height:clamp(100px,26dvh,200px)}}
 </style>
-</head>
+<style>.atl-direct{display:flex;justify-content:center;gap:12px;padding:7px 12px;background:#092a3a;border-top:1px solid #244554}.atl-direct a{color:#dfb35e;border:1px solid #8b754d;border-radius:7px;padding:6px 22px;font-size:13px;font-weight:600}.atl-direct a:first-child{background:#dfb35e;color:#041925}header .nav-links .atl-price-nav{color:#dfb35e}@media(min-width:1201px) and (max-width:1550px){header .navbar.container{flex-wrap:wrap!important}header .nav-links{flex-wrap:wrap!important;justify-content:center!important}}@media(max-width:700px){.atl-direct a{flex:1;text-align:center;font-size:12px;padding:6px 8px}}</style></head>
 <body>
 <header><section aria-label="Quick travel tools" class="quick-access"><div class="container quick-inner"><span class="quick-label" data-i18n="quickLabel">YOUR TRAVEL ESSENTIALS</span><div class="quick-links"><a href="features/hurghada-live.html"><span aria-hidden="true">◉</span> Hurghada Live <small data-i18n="liveTag">LIVE</small></a><a href="hurghada-price-guide.html"><span aria-hidden="true">▤</span> <span data-i18n="quickPrices">Price Guide</span></a><a href="features/pocket-guide.html"><span aria-hidden="true">◎</span> Pocket Guide</a><a href="features/pocket-guide.html">Offline Guide</a></div></div></section>
 <nav class="navbar container">
@@ -598,7 +598,7 @@ header .brand-name .brand-tagline{display:none!important}
 <button aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" id="menuToggle">☰</button>
 <ul class="nav-links" id="navLinks">
 <li><a aria-current="page" class="active" data-i18n="navHome" href="index.html">Home</a></li>
-<li><a data-i18n="navTours" href="all-tours.html">Tours</a></li>
+<li><a data-i18n="navTours" href="all-tours.html">Tours</a></li><li><a class="atl-price-nav" data-i18n="navPriceList" href="price-list.html">Price List</a></li><li><a data-i18n="navOffers" href="offers.html">Special Offers</a></li>
 <li><a data-i18n="navStories" href="stories.html">Stories</a></li>
 <li><a data-i18n="navGuide" href="hurghada.html">Hurghada Guide</a></li>
 <li><a data-i18n="navPrices" href="hurghada-price-guide.html">Price Guide</a></li>
@@ -610,7 +610,7 @@ header .brand-name .brand-tagline{display:none!important}
 <li><a class="nav-book" data-i18n="navBookNow" href="booking.html">Book Now</a></li>
 </ul>
 </nav>
-</header>
+<div class="atl-direct"><a href="price-list.html" data-i18n="navPriceList">Price List</a><a href="offers.html" data-i18n="navOffers">Special Offers</a></div></header>
 <section class="hero">
 <div class="container">
 <div class="hero-content">
@@ -800,6 +800,7 @@ const ATLANTIS_TRANSLATIONS = {
     menuCloseLabel: "Close navigation menu",
     navHome: "Home",
     navTours: "Tours",
+    navPriceList: "Price List", navOffers: "Special Offers",
     navStories: "Stories",
     navGuide: "Hurghada Guide",
     navPrices: "Price Guide",
@@ -889,6 +890,7 @@ const ATLANTIS_TRANSLATIONS = {
     menuCloseLabel: "Navigationsmenü schließen",
     navHome: "Start",
     navTours: "Touren",
+    navPriceList: "Preisliste", navOffers: "Sonderangebote",
     navStories: "Berichte",
     navGuide: "Hurghada-Guide",
     navPrices: "Preisübersicht",
@@ -978,6 +980,7 @@ const ATLANTIS_TRANSLATIONS = {
     menuCloseLabel: "Закрыть меню навигации",
     navHome: "Главная",
     navTours: "Туры",
+    navPriceList: "Прайс-лист", navOffers: "Спецпредложения",
     navStories: "Истории",
     navGuide: "Гид по Хургаде",
     navPrices: "Гид по ценам",
@@ -1067,6 +1070,7 @@ const ATLANTIS_TRANSLATIONS = {
     menuCloseLabel: "Fermer le menu de navigation",
     navHome: "Accueil",
     navTours: "Excursions",
+    navPriceList: "Tarifs", navOffers: "Offres spéciales",
     navStories: "Récits",
     navGuide: "Guide Hurghada",
     navPrices: "Guide des Prix",
@@ -1156,6 +1160,7 @@ const ATLANTIS_TRANSLATIONS = {
     menuCloseLabel: "Chiudi menu di navigazione",
     navHome: "Home",
     navTours: "Escursioni",
+    navPriceList: "Listino prezzi", navOffers: "Offerte speciali",
     navStories: "Storie",
     navGuide: "Guida Hurghada",
     navPrices: "Guida Prezzi",
@@ -1245,6 +1250,7 @@ const ATLANTIS_TRANSLATIONS = {
     menuCloseLabel: "Cerrar menú de navegación",
     navHome: "Inicio",
     navTours: "Excursiones",
+    navPriceList: "Lista de precios", navOffers: "Ofertas especiales",
     navStories: "Relatos",
     navGuide: "Guía Hurghada",
     navPrices: "Guía de Precios",
@@ -1334,6 +1340,7 @@ const ATLANTIS_TRANSLATIONS = {
     menuCloseLabel: "Zamknij menu nawigacji",
     navHome: "Start",
     navTours: "Wycieczki",
+    navPriceList: "Cennik", navOffers: "Oferty specjalne",
     navStories: "Relacje",
     navGuide: "Przewodnik Hurghada",
     navPrices: "Cennik",
@@ -1423,6 +1430,7 @@ const ATLANTIS_TRANSLATIONS = {
     menuCloseLabel: "إغلاق قائمة التنقل",
     navHome: "الرئيسية",
     navTours: "الرحلات",
+    navPriceList: "قائمة الأسعار", navOffers: "العروض الخاصة",
     navStories: "قصص وتجارب",
     navGuide: "دليل الغردقة",
     navPrices: "دليل الأسعار",
