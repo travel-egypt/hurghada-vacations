@@ -1,323 +1,483 @@
-(() => {
-"use strict";
-
-const details = [
-  "Pickup from your hotel to the boat; two snorkeling stops; shuttle boat to the island; lunch on board and unlimited drinks; return to your hotel around 16:00. Order and timing depend on sea conditions.",
-  "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking.",
-  "Explore El Mina Mosque, the fish garden or aquarium, local bazaars, markets and the port area. Confirm opening hours, admission fees and the final route before booking.",
-  "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities."
-];
-
-const islandDescription = "A full-day Red Sea escape combining island beach time, coral reef exploration and a relaxing boat journey.";
-
-const rows = [
-
-["orange-bay",
-"Orange Bay Island Boat Trip",
-islandDescription,
-"assets/images/IMG-20261117-WA0011.jpg",
-"islands",null,null,0],
-
-["mahmya-island",
-"Giftun Island National Park – Mahmya Beach",
-islandDescription,
-"https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg",
-"islands",null,null,0],
-
-["abu-dabbab-bay",
-"Abu Dabbab Bay",
-"Visit Abu Dabbab Bay near Marsa Alam, known for its sandy shore and seagrass habitat. Sea turtles and dugongs may be present, but wildlife sightings are never guaranteed.",
-"assets/images/AbuDabab.jpeg",
-"snorkeling",null,null,1],
-
-["hula-hula-island",
-"Hula Hula Island",
-islandDescription,
-"assets/images/Hula.jpeg",
-"islands",40,null,0],
-
-["eden-island",
-"Eden Island",
-islandDescription,
-"assets/images/IMG-20261117-WA0014.jpg",
-"islands",40,null,0],
-
-["paradise-island",
-"Paradise Island",
-"Cruise across the Red Sea to Paradise Island for beach time and open-water views. Swimming and snorkeling stops depend on the confirmed programme and sea conditions.",
-"https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005709%20Paradise%20Island%20Makadi.jpg",
-"islands",null,null,1],
-
-["quad-bike-safari",
-"Quad Bike Safari",
-"Follow a guided quad-bike route through the desert around Hurghada. The experience starts with equipment preparation and a safety briefing; the route and pace are set by the operator.",
-"https://egyptra.pro/img.php?src=uploads%2Fproducts%2Fimg_0c36e7a70534b2cb.webp&w=740&h=555&crop=1&q=72",
-"desert",null,null,1],
-
-["cairo-day-trip",
-"Cairo Day Trip",
-"Travel from Hurghada to Cairo for a full-day excursion visiting the Giza Pyramids and historic landmarks according to your confirmed itinerary and transport arrangement.",
-"https://www.falconadventure.com/uploads/tourGallery/gallery/201821135035516.jpg",
-"culture",null,null,1],
-
-["airport-and-private-transfers",
-"Airport & Private Transfers",
-"Arrange point-to-point vehicle transfers between Hurghada Airport, hotels, and Red Sea or regional destinations according to your flight, route, and vehicle choice.",
-"https://www.deluxetravelegypt.com/wp-content/uploads/2026/10/private-transfer-red-sea-road-700x500.jpg",
-"transfers",null,null,1],
-
-["aswan-trip",
-"Aswan Trip",
-"Explore Aswan’s Nile setting, historic temples, and landmarks according to a confirmed schedule and transport plan. Exact stops, duration, and inclusions depend on your selected programme.",
-"https://d3rr2gvhjw0wwy.cloudfront.net/uploads/activity_headers/40630/2000x2000-0-70-8f19758248f845e5e1c70429c1fd1fa1.jpg",
-"culture",null,null,1],
-
-["bedouin-village-experience",
-"Bedouin Village Experience",
-"Spend time in a desert setting learning about Bedouin traditions, hospitality and desert life. Included activities, refreshments and meals depend on the selected programme.",
-"https://egyptra.pro/uploads/products/product_m29803--urghada-edouin-inner-how-with-639_68528fa35cfbd.webp",
-"desert",null,null,1],
-
-["dolphin-watching-boat-trip",
-"Dolphin Watching Boat Trip",
-"Head out onto the Red Sea by boat to watch for wild dolphins in their natural habitat. Sightings are never guaranteed, and all marine wildlife guidelines apply.",
-"https://egyptra.pro/img.php?src=uploads%2Fproducts%2Fimg_3a7ce13d32b47962.webp&w=800&q=72",
-"sea",50,null,1],
-
-["hurghada-city-tour",
-"Hurghada City Tour",
-"Discover local neighbourhoods, waterfront areas and everyday city life in Hurghada on a guided sightseeing route. Exact stops, durations and visits depend on the selected itinerary.",
-"https://fantasia-tours.com/wp-content/uploads/2025/04/IMG-20250406-WA0094.jpg",
-"city",null,null,2],
-
-["jeep-desert-safari",
-"Jeep Desert Safari",
-"Explore the Eastern Desert from Hurghada by 4x4 jeep, travelling through desert trails, rocky hills, and open mountain landscapes with stops confirmed in your selected package.",
-"assets/images/%D9%85%D9%88%D9%83%D8%A8%20%D8%A3%D8%AA%D9%84%D8%A7%D9%86%D8%AA%D8%B3%20%D9%81%D9%8A%20%D8%AC%D8%A8%D8%A7%D9%84%20%D8%A7%D9%84%D8%B5%D8%AD%D8%B1%D8%A7%D8%A1.png",
-"desert",null,null,1],
-
-["kitesurfing",
-"Kitesurfing",
-"Learn or improve kitesurfing with a session suited to your experience. Instruction, equipment and launch arrangements depend on the centre, wind and safety conditions.",
-"assets/images/Kitesurfing3.jpeg",
-"water",null,null,1],
-
-["kitesurfing-and-windsurfing",
-"Kitesurfing & Windsurfing",
-"Learn or practice kitesurfing and windsurfing on the Red Sea with sessions adapted to your experience level. Instruction, equipment, launch arrangements, and schedules depend on the centre, wind, and safety conditions.",
-"assets/images/Kitesurfing4.jpeg",
-"water",null,null,1],
-
-["luxor-day-trip",
-"Luxor Day Trip",
-"Travel from Hurghada to Luxor for a full-day historical excursion exploring ancient Egyptian temples and landmarks along the Nile. Exact stops, timing, and inclusions follow the confirmed itinerary.",
-"assets/images/%D9%85%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%A3%D9%82%D8%B5%D8%B1%20%D8%B9%D9%86%D8%AF%20%D8%A7%D9%84%D8%BA%D8%B1%D9%88%D8%A8.png",
-"culture",null,null,1],
-
-["magawish-island",
-"Magawish Island",
-"Explore the island scenery around Magawish and enjoy a slower day by the Red Sea. Boat stops, swimming opportunities and included services depend on the selected arrangement.",
-"https://commons.wikimedia.org/wiki/Special:FilePath/Il%20mare%20d%27Egitto%20-%20panoramio.jpg",
-"islands",null,null,1],
-
-["parasailing",
-"Parasailing",
-"Lift off above Red Sea waters towed by a dedicated parasailing boat after a safety briefing and harness fitting. Flight duration, setup, and timing depend on wind, sea conditions, and your confirmed booking.",
-"https://www.redsea-world.pl/wp-content/uploads/2023/05/Parasailing-Hurghada-741x1024.jpg",
-"water",null,null,1],
-
-["private-boat---yacht-trips",
-"Private Boat & Yacht Trips",
-"Enjoy a private boat or yacht reserved for your group. Discuss your preferred route, duration and activities—such as cruising, swimming or snorkeling—before departure.",
-"https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada_Marina_for_yachts.jpg",
-"private",null,null,1],
-
-["semi-submarine-and-glass-bottom-boat",
-"Semi-Submarine & Glass Bottom Boat",
-"View Red Sea coral and marine life through underwater viewing windows or glass panels on a coastal excursion suited to families and non-swimmers, subject to sea conditions.",
-"https://sharmhurghadaexcursions.com/images/gallery/18486b8a240fb3ec1506576f1cb035f2.jpg",
-"sea",null,null,1],
-
-["spider-buggy-safari",
-"Spider Buggy Safari",
-"Drive desert tracks in an open-style spider buggy after a vehicle and safety briefing. The vehicle, route, passenger setup and stops depend on the selected package.",
-"https://www.moment-tour.com/photos/excursions/spider-car-hurghada_lg.jpg",
-"desert",null,null,1],
-
-["bubble-maker",
-"Bubble Maker",
-"Introductory supervised diving for children aged 8–9. Confirm depth and eligibility before booking. A gentle introduction to breathing underwater and becoming comfortable with basic scuba equipment.",
-"assets/images/bubble-maker.webp",
-"courses",95,false,3],
-
-["discover-scuba",
-"Discover Scuba Diving",
-"Initial confined-water skills followed by a supervised reef dive; minimum age 10. Learn basic equipment use, underwater communication and breathing before exploring a reef with an instructor.",
-"assets/images/discover-scuba.webp",
-"courses",120,false,3],
-
-["scuba-diver",
-"Scuba Diver",
-"Entry-level training: up to two days, three dives; supervised diving qualification. Build foundational knowledge and practical skills for supervised recreational diving.",
-"assets/images/scuba-diver.webp",
-"courses",235,false,3],
-
-["open-water-referral",
-"Referral Open Water Diver",
-"Complete the practical part of previously started training; up to two days and four dives. Bring your training records so the instructor can review completed work and plan remaining open-water sessions.",
-"assets/images/open-water-referral.webp",
-"courses",235,false,3],
-
-["open-water",
-"Open Water Diver",
-"Theory, confined-water practice and open-water training; typically three to four days. Develop independent recreational diving skills through knowledge development, equipment practice and supervised open-water assessments.",
-"assets/images/open-water.webp",
-"courses",375,false,3],
-
-["open-water-upgrade",
-"Open Water Upgrade",
-"Progress from Scuba Diver toward Open Water certification; up to two days, three dives. Review previous certification and complete the remaining knowledge and practical requirements.",
-"assets/images/open-water-upgrade.webp",
-"courses",235,false,3],
-
-["adventure-diver",
-"Adventure Diver",
-"Three adventure dives over one day. Explore different diving activities and develop confidence through instructor-led experience.",
-"assets/images/adventure-diver.webp",
-"courses",175,false,3],
-
-["advanced-open-water",
-"Advanced Open Water Diver",
-"Five adventure dives over up to two days, including navigation and deep diving. Develop underwater navigation and depth awareness while exploring additional adventure diving skills.",
-"assets/images/advanced-open-water.webp",
-"courses",215,false,3],
-
-["emergency-first-response",
-"Emergency First Response",
-"First aid and CPR training; up to one day. Practise responding to emergencies, assessing a situation and providing first aid and CPR.",
-"assets/images/emergency-first-response.webp",
-"courses",120,false,3],
-
-["rescue-diver",
-"Rescue Diver",
-"Rescue skills and theory; up to three days with four dives. Develop awareness of diver stress, prevention and supervised rescue scenarios.",
-"assets/images/rescue-diver.webp",
-"courses",370,false,3],
-
-["divemaster",
-"Divemaster",
-"Professional-level training; listed minimum duration ten days. Entry requirements and materials must be confirmed. Develop leadership, dive planning and professional-level supervision skills under instructor guidance.",
-"assets/images/divemaster.webp",
-"courses",650,false,3],
-
-["nitrox",
-"Nitrox Specialty",
-"Enriched-air theory training over one day. Learn enriched-air concepts, oxygen exposure awareness and gas analysis procedures.",
-"assets/images/nitrox.webp",
-"courses",120,false,3],
-
-["drift-diver",
-"Drift Diver Specialty",
-"Two training dives focused on diving in currents. Develop awareness of currents, group communication and safe drift-dive planning.",
-"assets/images/drift-diver.webp",
-"courses",175,false,3],
-
-["buoyancy",
-"Peak Performance Buoyancy",
-"Two dives practising buoyancy control. Refine trim, weighting and controlled movement to reduce contact with the reef.",
-"assets/images/buoyancy.webp",
-"courses",175,false,3],
-
-["deep-diver",
-"Deep Diver Specialty",
-"Four training dives over two days. Explore depth-related planning, gas management and awareness under instructor supervision.",
-"assets/images/deep-diver.webp",
-"courses",230,false,3],
-
-["night-diver",
-"Night Diver Specialty",
-"Three training dives over two days. Develop light communication, orientation and planning for diving after dark.",
-"assets/images/night-diver.webp",
-"courses",230,false,3],
-
-["wreck-diver",
-"Wreck Diver Specialty",
-"Four training dives over two days. Learn wreck orientation, hazard awareness and responsible exploration within training limits.",
-"assets/images/wreck-diver.webp",
-"courses",230,false,3],
-
-["daily-diving",
-"Certified Diver Packages",
-"Equipment rental excluded. Choose a package suited to your certification and recent experience; dive sites depend on conditions.",
-"assets/images/daily-diving.webp",
-"diving",70,true,3],
-
-["intro-diving",
-"Introduction Dive by Boat",
-"Minimum age 10. Experience breathing underwater on an instructor-supervised introductory boat outing.",
-"assets/images/intro-diving.webp",
-"diving",60,true,3],
-
-["wreck-trips",
-"Wreck Diving Trips",
-"Each listed trip includes two dives. Explore suitable wreck sites according to certification, experience and sea conditions.",
-"assets/images/wreck-trips.webp",
-"diving",120,true,3],
-
-["special-dives",
-"Special Diving Trips",
-"For eligible divers; confirm requirements. Discuss specialist dive options and site suitability with the dive centre.",
-"assets/images/special-dives.webp",
-"diving",50,true,3],
-
-["reef-snorkeling",
-"Red Sea Snorkeling",
-"Age-based pricing. Explore shallow reef habitats from the surface, with site selection subject to sea conditions.",
-"assets/images/reef-snorkeling.webp",
-"snorkeling",35,true,3]
-
-];
-
-window.ATLANTIS_TOURS = rows.map(row => {
-
-  const [
-    id,
-    title,
-    desc,
-    image,
-    category,
-    price,
-    fromPrice,
-    detailIndex
-  ] = row;
-
-  const tour = {
-    id,
-    title,
-    desc,
-    image,
-    category,
-    href: "tours/" + id + ".html",
-    detail: details[detailIndex]
-  };
-
-  if (typeof price === "number") {
-    tour.price = price;
+window.ATLANTIS_TOURS = [
+  {
+    "id": "orange-bay",
+    "title": "Orange Bay Island Boat Trip",
+    "desc": "A full-day Red Sea escape combining island beach time, coral reef exploration and a relaxing boat journey.",
+    "image": "assets/images/IMG-20261117-WA0011.jpg",
+    "category": "islands",
+    "href": "tours/orange-bay.html",
+    "detail": "Pickup from your hotel to the boat; two snorkeling stops; shuttle boat to the island; lunch on board and unlimited drinks; return to your hotel around 16:00. Order and timing depend on sea conditions.",
+    "gallery": [
+      "assets/images/IMG-20261117-WA0012.jpg",
+      "assets/images/IMG-20261117-WA0013(1).jpg",
+      "assets/images/IMG-20261117-WA0013.jpg",
+      "assets/images/IMG-20261117-WA0014.jpg",
+      "assets/images/IMG-20261117-WA0015(1).jpg",
+      "assets/images/IMG-20261117-WA0015.jpg",
+      "assets/images/IMG-20261117-WA0016.jpg",
+      "assets/images/IMG-20261117-WA0017(1).jpg",
+      "assets/images/IMG-20261117-WA0017.jpg",
+      "assets/images/IMG-20261117-WA0018.jpg"
+    ],
+    "videos": [
+      "assets/videos/Orange.mp4"
+    ],
+    "coverVideo": "assets/videos/Orange.mp4"
+  },
+  {
+    "id": "mahmya-island",
+    "title": "Giftun Island National Park – Mahmya Beach",
+    "desc": "A full-day Red Sea escape combining island beach time, coral reef exploration and a relaxing boat journey.",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg",
+    "category": "islands",
+    "href": "tours/mahmya-island.html",
+    "detail": "Pickup from your hotel to the boat; two snorkeling stops; shuttle boat to the island; lunch on board and unlimited drinks; return to your hotel around 16:00. Order and timing depend on sea conditions."
+  },
+  {
+    "id": "abu-dabbab-bay",
+    "title": "Abu Dabbab Bay",
+    "desc": "Visit Abu Dabbab Bay near Marsa Alam, known for its sandy shore and seagrass habitat. Sea turtles and dugongs may be present, but wildlife sightings are never guaranteed.",
+    "image": "assets/images/AbuDabab.jpeg",
+    "category": "snorkeling",
+    "href": "tours/abu-dabbab-bay.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "hula-hula-island",
+    "title": "Hula Hula Island",
+    "desc": "A full-day Red Sea escape combining island beach time, coral reef exploration and a relaxing boat journey.",
+    "image": "assets/images/Hula.jpeg",
+    "category": "islands",
+    "href": "tours/hula-hula-island.html",
+    "detail": "Pickup from your hotel to the boat; two snorkeling stops; shuttle boat to the island; lunch on board and unlimited drinks; return to your hotel around 16:00. Order and timing depend on sea conditions.",
+    "price": 40
+  },
+  {
+    "id": "eden-island",
+    "title": "Eden Island",
+    "desc": "A full-day Red Sea escape combining island beach time, coral reef exploration and a relaxing boat journey.",
+    "image": "assets/images/IMG-20261117-WA0014.jpg",
+    "category": "islands",
+    "href": "tours/eden-island.html",
+    "detail": "Pickup from your hotel to the boat; two snorkeling stops; shuttle boat to the island; lunch on board and unlimited drinks; return to your hotel around 16:00. Order and timing depend on sea conditions.",
+    "price": 40
+  },
+  {
+    "id": "paradise-island",
+    "title": "Paradise Island",
+    "desc": "Cruise across the Red Sea to Paradise Island for beach time and open-water views. Swimming and snorkeling stops depend on the confirmed programme and sea conditions.",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005709%20Paradise%20Island%20Makadi.jpg",
+    "category": "islands",
+    "href": "tours/paradise-island.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "quad-bike-safari",
+    "title": "Quad Bike Safari",
+    "desc": "Follow a guided quad-bike route through the desert around Hurghada. The experience starts with equipment preparation and a safety briefing; the route and pace are set by the operator.",
+    "image": "https://egyptra.pro/img.php?src=uploads%2Fproducts%2Fimg_0c36e7a70534b2cb.webp&w=740&h=555&crop=1&q=72",
+    "category": "desert",
+    "href": "tours/quad-bike-safari.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "cairo-day-trip",
+    "title": "Cairo Day Trip",
+    "desc": "Travel from Hurghada to Cairo for a full-day excursion visiting the Giza Pyramids and historic landmarks according to your confirmed itinerary and transport arrangement.",
+    "image": "https://www.falconadventure.com/uploads/tourGallery/gallery/201821135035516.jpg",
+    "category": "culture",
+    "href": "tours/cairo-day-trip.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "airport-and-private-transfers",
+    "title": "Airport & Private Transfers",
+    "desc": "Arrange point-to-point vehicle transfers between Hurghada Airport, hotels, and Red Sea or regional destinations according to your flight, route, and vehicle choice.",
+    "image": "https://www.deluxetravelegypt.com/wp-content/uploads/2026/10/private-transfer-red-sea-road-700x500.jpg",
+    "category": "transfers",
+    "href": "tours/airport-and-private-transfers.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "aswan-trip",
+    "title": "Aswan Trip",
+    "desc": "Explore Aswan’s Nile setting, historic temples, and landmarks according to a confirmed schedule and transport plan. Exact stops, duration, and inclusions depend on your selected programme.",
+    "image": "https://d3rr2gvhjw0wwy.cloudfront.net/uploads/activity_headers/40630/2000x2000-0-70-8f19758248f845e5e1c70429c1fd1fa1.jpg",
+    "category": "culture",
+    "href": "tours/aswan-trip.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "bedouin-village-experience",
+    "title": "Bedouin Village Experience",
+    "desc": "Spend time in a desert setting learning about Bedouin traditions, hospitality and desert life. Included activities, refreshments and meals depend on the selected programme.",
+    "image": "https://egyptra.pro/uploads/products/product_m29803--urghada-edouin-inner-how-with-639_68528fa35cfbd.webp",
+    "category": "desert",
+    "href": "tours/bedouin-village-experience.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "dolphin-watching-boat-trip",
+    "title": "Dolphin Watching Boat Trip",
+    "desc": "Head out onto the Red Sea by boat to watch for wild dolphins in their natural habitat. Sightings are never guaranteed, and all marine wildlife guidelines apply.",
+    "image": "https://egyptra.pro/img.php?src=uploads%2Fproducts%2Fimg_3a7ce13d32b47962.webp&w=800&q=72",
+    "category": "sea",
+    "href": "tours/dolphin-watching-boat-trip.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking.",
+    "price": 50
+  },
+  {
+    "id": "hurghada-city-tour",
+    "title": "Hurghada City Tour",
+    "desc": "Discover local neighbourhoods, waterfront areas and everyday city life in Hurghada on a guided sightseeing route. Exact stops, durations and visits depend on the selected itinerary.",
+    "image": "https://fantasia-tours.com/wp-content/uploads/2025/04/IMG-20250406-WA0094.jpg",
+    "category": "city",
+    "href": "tours/hurghada-city-tour.html",
+    "detail": "Explore El Mina Mosque, the fish garden or aquarium, local bazaars, markets and the port area. Confirm opening hours, admission fees and the final route before booking."
+  },
+  {
+    "id": "jeep-desert-safari",
+    "title": "Jeep Desert Safari",
+    "desc": "Explore the Eastern Desert from Hurghada by 4x4 jeep, travelling through desert trails, rocky hills, and open mountain landscapes with stops confirmed in your selected package.",
+    "image": "assets/images/%D9%85%D9%88%D9%83%D8%A8%20%D8%A3%D8%AA%D9%84%D8%A7%D9%86%D8%AA%D8%B3%20%D9%81%D9%8A%20%D8%AC%D8%A8%D8%A7%D9%84%20%D8%A7%D9%84%D8%B5%D8%AD%D8%B1%D8%A7%D8%A1.png",
+    "category": "desert",
+    "href": "tours/jeep-desert-safari.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "kitesurfing",
+    "title": "Kitesurfing",
+    "desc": "Learn or improve kitesurfing with a session suited to your experience. Instruction, equipment and launch arrangements depend on the centre, wind and safety conditions.",
+    "image": "assets/images/Kitesurfing3.jpeg",
+    "category": "water",
+    "href": "tours/kitesurfing.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "kitesurfing-and-windsurfing",
+    "title": "Kitesurfing & Windsurfing",
+    "desc": "Learn or practice kitesurfing and windsurfing on the Red Sea with sessions adapted to your experience level. Instruction, equipment, launch arrangements, and schedules depend on the centre, wind, and safety conditions.",
+    "image": "assets/images/Kitesurfing4.jpeg",
+    "category": "water",
+    "href": "tours/kitesurfing-and-windsurfing.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "luxor-day-trip",
+    "title": "Luxor Day Trip",
+    "desc": "Travel from Hurghada to Luxor for a full-day historical excursion exploring ancient Egyptian temples and landmarks along the Nile. Exact stops, timing, and inclusions follow the confirmed itinerary.",
+    "image": "assets/images/%D9%85%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%A3%D9%82%D8%B5%D8%B1%20%D8%B9%D9%86%D8%AF%20%D8%A7%D9%84%D8%BA%D8%B1%D9%88%D8%A8.png",
+    "category": "culture",
+    "href": "tours/luxor-day-trip.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "magawish-island",
+    "title": "Magawish Island",
+    "desc": "Explore the island scenery around Magawish and enjoy a slower day by the Red Sea. Boat stops, swimming opportunities and included services depend on the selected arrangement.",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Il%20mare%20d%27Egitto%20-%20panoramio.jpg",
+    "category": "islands",
+    "href": "tours/magawish-island.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "parasailing",
+    "title": "Parasailing",
+    "desc": "Lift off above Red Sea waters towed by a dedicated parasailing boat after a safety briefing and harness fitting. Flight duration, setup, and timing depend on wind, sea conditions, and your confirmed booking.",
+    "image": "https://www.redsea-world.pl/wp-content/uploads/2023/05/Parasailing-Hurghada-741x1024.jpg",
+    "category": "water",
+    "href": "tours/parasailing.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "private-boat---yacht-trips",
+    "title": "Private Boat & Yacht Trips",
+    "desc": "Enjoy a private boat or yacht reserved for your group. Discuss your preferred route, duration and activities—such as cruising, swimming or snorkeling—before departure.",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada_Marina_for_yachts.jpg",
+    "category": "private",
+    "href": "tours/private-boat---yacht-trips.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "semi-submarine-and-glass-bottom-boat",
+    "title": "Semi-Submarine & Glass Bottom Boat",
+    "desc": "View Red Sea coral and marine life through underwater viewing windows or glass panels on a coastal excursion suited to families and non-swimmers, subject to sea conditions.",
+    "image": "https://sharmhurghadaexcursions.com/images/gallery/18486b8a240fb3ec1506576f1cb035f2.jpg",
+    "category": "sea",
+    "href": "tours/semi-submarine-and-glass-bottom-boat.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "spider-buggy-safari",
+    "title": "Spider Buggy Safari",
+    "desc": "Drive desert tracks in an open-style spider buggy after a vehicle and safety briefing. The vehicle, route, passenger setup and stops depend on the selected package.",
+    "image": "https://www.moment-tour.com/photos/excursions/spider-car-hurghada_lg.jpg",
+    "category": "desert",
+    "href": "tours/spider-buggy-safari.html",
+    "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
+  },
+  {
+    "id": "bubble-maker",
+    "title": "Bubble Maker",
+    "desc": "Introductory supervised diving for children aged 8–9. Confirm depth and eligibility before booking. A gentle introduction to breathing underwater and becoming comfortable with basic scuba equipment.",
+    "image": "assets/images/bubble-maker.webp",
+    "category": "courses",
+    "href": "tours/bubble-maker.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 95,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "discover-scuba",
+    "title": "Discover Scuba Diving",
+    "desc": "Initial confined-water skills followed by a supervised reef dive; minimum age 10. Learn basic equipment use, underwater communication and breathing before exploring a reef with an instructor.",
+    "image": "assets/images/discover-scuba.webp",
+    "category": "courses",
+    "href": "tours/discover-scuba.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 120,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "scuba-diver",
+    "title": "Scuba Diver",
+    "desc": "Entry-level training: up to two days, three dives; supervised diving qualification. Build foundational knowledge and practical skills for supervised recreational diving.",
+    "image": "assets/images/scuba-diver.webp",
+    "category": "courses",
+    "href": "tours/scuba-diver.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 235,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "open-water-referral",
+    "title": "Referral Open Water Diver",
+    "desc": "Complete the practical part of previously started training; up to two days and four dives. Bring your training records so the instructor can review completed work and plan remaining open-water sessions.",
+    "image": "assets/images/open-water-referral.webp",
+    "category": "courses",
+    "href": "tours/open-water-referral.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 235,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "open-water",
+    "title": "Open Water Diver",
+    "desc": "Theory, confined-water practice and open-water training; typically three to four days. Develop independent recreational diving skills through knowledge development, equipment practice and supervised open-water assessments.",
+    "image": "assets/images/open-water.webp",
+    "category": "courses",
+    "href": "tours/open-water.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 375,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "open-water-upgrade",
+    "title": "Open Water Upgrade",
+    "desc": "Progress from Scuba Diver toward Open Water certification; up to two days, three dives. Review previous certification and complete the remaining knowledge and practical requirements.",
+    "image": "assets/images/open-water-upgrade.webp",
+    "category": "courses",
+    "href": "tours/open-water-upgrade.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 235,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "adventure-diver",
+    "title": "Adventure Diver",
+    "desc": "Three adventure dives over one day. Explore different diving activities and develop confidence through instructor-led experience.",
+    "image": "assets/images/adventure-diver.webp",
+    "category": "courses",
+    "href": "tours/adventure-diver.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 175,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "advanced-open-water",
+    "title": "Advanced Open Water Diver",
+    "desc": "Five adventure dives over up to two days, including navigation and deep diving. Develop underwater navigation and depth awareness while exploring additional adventure diving skills.",
+    "image": "assets/images/advanced-open-water.webp",
+    "category": "courses",
+    "href": "tours/advanced-open-water.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 215,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "emergency-first-response",
+    "title": "Emergency First Response",
+    "desc": "First aid and CPR training; up to one day. Practise responding to emergencies, assessing a situation and providing first aid and CPR.",
+    "image": "assets/images/emergency-first-response.webp",
+    "category": "courses",
+    "href": "tours/emergency-first-response.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 120,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "rescue-diver",
+    "title": "Rescue Diver",
+    "desc": "Rescue skills and theory; up to three days with four dives. Develop awareness of diver stress, prevention and supervised rescue scenarios.",
+    "image": "assets/images/rescue-diver.webp",
+    "category": "courses",
+    "href": "tours/rescue-diver.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 370,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "divemaster",
+    "title": "Divemaster",
+    "desc": "Professional-level training; listed minimum duration ten days. Entry requirements and materials must be confirmed. Develop leadership, dive planning and professional-level supervision skills under instructor guidance.",
+    "image": "assets/images/divemaster.webp",
+    "category": "courses",
+    "href": "tours/divemaster.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 650,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "nitrox",
+    "title": "Nitrox Specialty",
+    "desc": "Enriched-air theory training over one day. Learn enriched-air concepts, oxygen exposure awareness and gas analysis procedures.",
+    "image": "assets/images/nitrox.webp",
+    "category": "courses",
+    "href": "tours/nitrox.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 120,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "drift-diver",
+    "title": "Drift Diver Specialty",
+    "desc": "Two training dives focused on diving in currents. Develop awareness of currents, group communication and safe drift-dive planning.",
+    "image": "assets/images/drift-diver.webp",
+    "category": "courses",
+    "href": "tours/drift-diver.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 175,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "buoyancy",
+    "title": "Peak Performance Buoyancy",
+    "desc": "Two dives practising buoyancy control. Refine trim, weighting and controlled movement to reduce contact with the reef.",
+    "image": "assets/images/buoyancy.webp",
+    "category": "courses",
+    "href": "tours/buoyancy.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 175,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "deep-diver",
+    "title": "Deep Diver Specialty",
+    "desc": "Four training dives over two days. Explore depth-related planning, gas management and awareness under instructor supervision.",
+    "image": "assets/images/deep-diver.webp",
+    "category": "courses",
+    "href": "tours/deep-diver.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 230,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "night-diver",
+    "title": "Night Diver Specialty",
+    "desc": "Three training dives over two days. Develop light communication, orientation and planning for diving after dark.",
+    "image": "assets/images/night-diver.webp",
+    "category": "courses",
+    "href": "tours/night-diver.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 230,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "wreck-diver",
+    "title": "Wreck Diver Specialty",
+    "desc": "Four training dives over two days. Learn wreck orientation, hazard awareness and responsible exploration within training limits.",
+    "image": "assets/images/wreck-diver.webp",
+    "category": "courses",
+    "href": "tours/wreck-diver.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 230,
+    "fromPrice": false,
+    "from": false
+  },
+  {
+    "id": "daily-diving",
+    "title": "Certified Diver Packages",
+    "desc": "Equipment rental excluded. Choose a package suited to your certification and recent experience; dive sites depend on conditions.",
+    "image": "assets/images/daily-diving.webp",
+    "category": "diving",
+    "href": "tours/daily-diving.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 70,
+    "fromPrice": true,
+    "from": true
+  },
+  {
+    "id": "intro-diving",
+    "title": "Introduction Dive by Boat",
+    "desc": "Minimum age 10. Experience breathing underwater on an instructor-supervised introductory boat outing.",
+    "image": "assets/images/intro-diving.webp",
+    "category": "diving",
+    "href": "tours/intro-diving.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 60,
+    "fromPrice": true,
+    "from": true
+  },
+  {
+    "id": "wreck-trips",
+    "title": "Wreck Diving Trips",
+    "desc": "Each listed trip includes two dives. Explore suitable wreck sites according to certification, experience and sea conditions.",
+    "image": "assets/images/wreck-trips.webp",
+    "category": "diving",
+    "href": "tours/wreck-trips.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 120,
+    "fromPrice": true,
+    "from": true
+  },
+  {
+    "id": "special-dives",
+    "title": "Special Diving Trips",
+    "desc": "For eligible divers; confirm requirements. Discuss specialist dive options and site suitability with the dive centre.",
+    "image": "assets/images/special-dives.webp",
+    "category": "diving",
+    "href": "tours/special-dives.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 50,
+    "fromPrice": true,
+    "from": true
+  },
+  {
+    "id": "reef-snorkeling",
+    "title": "Red Sea Snorkeling",
+    "desc": "Age-based pricing. Explore shallow reef habitats from the surface, with site selection subject to sea conditions.",
+    "image": "assets/images/reef-snorkeling.webp",
+    "category": "snorkeling",
+    "href": "tours/reef-snorkeling.html",
+    "detail": "Before booking, confirm the schedule, eligibility, instructor or guide, equipment, transfers and any certification or marine fees with Atlantis. Medical screening may be required for scuba activities.",
+    "price": 35,
+    "fromPrice": true,
+    "from": true
   }
-
-  if (typeof fromPrice === "boolean") {
-    tour.fromPrice = fromPrice;
-    tour.from = fromPrice;
-  }
-
-  return tour;
-
-});
-
-console.info(
-  "Atlantis Tours Database:",
-  window.ATLANTIS_TOURS.length,
-  "experiences loaded successfully."
-);
-
-})();
+];
