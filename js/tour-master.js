@@ -2,6 +2,11 @@
 (() => {
   "use strict";
 
+  const translations = {"de": {"← All experiences": "← Alle Erlebnisse", "Experience overview": "Überblick", "Experience Gallery": "Fotogalerie", "Experience Videos": "Videos", "Your booking": "Ihre Buchung", "Travel date": "Reisedatum", "Adults": "Erwachsene", "Children": "Kinder", "Hotel / pickup location": "Hotel / Abholort", "Request booking via WhatsApp": "Buchung per WhatsApp anfragen", "You may also like": "Das könnte Ihnen auch gefallen", "Request a quote": "Preis auf Anfrage", "From ": "Ab ", "Total guests: ": "Gäste insgesamt: ", "Close": "Schließen", "← Previous": "← Zurück", "Next →": "Weiter →", "Zoom": "Zoom", "Photo unavailable": "Foto nicht verfügbar", "Video unavailable": "Video nicht verfügbar", "Plan your experience": "Erlebnis planen", "The Atlantis experience": "Das Atlantis-Erlebnis", "Price and availability confirmed before booking.": "Preis und Verfügbarkeit werden vor der Buchung bestätigt.", "experience photos": "Fotos", "Open photo ": "Foto öffnen "}, "ar": {"← All experiences": "← كل الرحلات", "Experience overview": "نظرة عامة", "Experience Gallery": "معرض الصور", "Experience Videos": "الفيديوهات", "Your booking": "حجزك", "Travel date": "تاريخ الرحلة", "Adults": "البالغون", "Children": "الأطفال", "Hotel / pickup location": "الفندق / مكان الاستلام", "Request booking via WhatsApp": "اطلب الحجز عبر واتساب", "You may also like": "رحلات قد تعجبك", "Request a quote": "اطلب السعر", "From ": "من ", "Total guests: ": "إجمالي الضيوف: ", "Close": "إغلاق", "← Previous": "← السابق", "Next →": "التالي →", "Zoom": "تكبير", "Photo unavailable": "الصورة غير متاحة", "Video unavailable": "الفيديو غير متاح", "Plan your experience": "خطط لرحلتك", "The Atlantis experience": "تجربة أتلانتس", "Price and availability confirmed before booking.": "يتم تأكيد السعر والتوافر قبل الحجز.", "experience photos": "صور الرحلة", "Open photo ": "افتح الصورة "}, "fr": {"← All experiences": "← Toutes les expériences", "Experience overview": "Aperçu", "Experience Gallery": "Galerie photos", "Experience Videos": "Vidéos", "Your booking": "Votre réservation", "Travel date": "Date du voyage", "Adults": "Adultes", "Children": "Enfants", "Hotel / pickup location": "Hôtel / lieu de prise en charge", "Request booking via WhatsApp": "Demander via WhatsApp", "You may also like": "À découvrir aussi", "Request a quote": "Prix sur demande", "From ": "À partir de ", "Total guests: ": "Total voyageurs : ", "Close": "Fermer", "← Previous": "← Précédent", "Next →": "Suivant →", "Zoom": "Zoom", "Photo unavailable": "Photo indisponible", "Video unavailable": "Vidéo indisponible", "Plan your experience": "Planifiez votre expérience", "The Atlantis experience": "L’expérience Atlantis", "Price and availability confirmed before booking.": "Prix et disponibilité confirmés avant réservation.", "experience photos": "photos", "Open photo ": "Ouvrir la photo "}, "it": {"← All experiences": "← Tutte le esperienze", "Experience overview": "Panoramica", "Experience Gallery": "Galleria foto", "Experience Videos": "Video", "Your booking": "La tua prenotazione", "Travel date": "Data del viaggio", "Adults": "Adulti", "Children": "Bambini", "Hotel / pickup location": "Hotel / punto di prelievo", "Request booking via WhatsApp": "Richiedi su WhatsApp", "You may also like": "Potrebbe piacerti anche", "Request a quote": "Prezzo su richiesta", "From ": "Da ", "Total guests: ": "Ospiti totali: ", "Close": "Chiudi", "← Previous": "← Precedente", "Next →": "Successivo →", "Zoom": "Zoom", "Photo unavailable": "Foto non disponibile", "Video unavailable": "Video non disponibile", "Plan your experience": "Pianifica la tua esperienza", "The Atlantis experience": "L’esperienza Atlantis", "Price and availability confirmed before booking.": "Prezzo e disponibilità confermati prima della prenotazione.", "experience photos": "foto", "Open photo ": "Apri foto "}, "es": {"← All experiences": "← Todas las experiencias", "Experience overview": "Resumen", "Experience Gallery": "Galería de fotos", "Experience Videos": "Vídeos", "Your booking": "Tu reserva", "Travel date": "Fecha del viaje", "Adults": "Adultos", "Children": "Niños", "Hotel / pickup location": "Hotel / lugar de recogida", "Request booking via WhatsApp": "Solicitar por WhatsApp", "You may also like": "También te puede gustar", "Request a quote": "Precio a consultar", "From ": "Desde ", "Total guests: ": "Total de viajeros: ", "Close": "Cerrar", "← Previous": "← Anterior", "Next →": "Siguiente →", "Zoom": "Zoom", "Photo unavailable": "Foto no disponible", "Video unavailable": "Vídeo no disponible", "Plan your experience": "Planifica tu experiencia", "The Atlantis experience": "La experiencia Atlantis", "Price and availability confirmed before booking.": "Precio y disponibilidad confirmados antes de reservar.", "experience photos": "fotos", "Open photo ": "Abrir foto "}, "pl": {"← All experiences": "← Wszystkie atrakcje", "Experience overview": "Informacje", "Experience Gallery": "Galeria zdjęć", "Experience Videos": "Filmy", "Your booking": "Twoja rezerwacja", "Travel date": "Data wycieczki", "Adults": "Dorośli", "Children": "Dzieci", "Hotel / pickup location": "Hotel / miejsce odbioru", "Request booking via WhatsApp": "Zapytaj przez WhatsApp", "You may also like": "Może Ci się spodobać", "Request a quote": "Cena na zapytanie", "From ": "Od ", "Total guests: ": "Liczba gości: ", "Close": "Zamknij", "← Previous": "← Poprzednie", "Next →": "Następne →", "Zoom": "Powiększ", "Photo unavailable": "Zdjęcie niedostępne", "Video unavailable": "Film niedostępny", "Plan your experience": "Zaplanuj wycieczkę", "The Atlantis experience": "Atrakcje Atlantis", "Price and availability confirmed before booking.": "Cena i dostępność potwierdzane przed rezerwacją.", "experience photos": "zdjęć", "Open photo ": "Otwórz zdjęcie "}, "ru": {"← All experiences": "← Все экскурсии", "Experience overview": "Обзор", "Experience Gallery": "Фотогалерея", "Experience Videos": "Видео", "Your booking": "Ваше бронирование", "Travel date": "Дата поездки", "Adults": "Взрослые", "Children": "Дети", "Hotel / pickup location": "Отель / место встречи", "Request booking via WhatsApp": "Запрос через WhatsApp", "You may also like": "Вам также может понравиться", "Request a quote": "Цена по запросу", "From ": "От ", "Total guests: ": "Всего гостей: ", "Close": "Закрыть", "← Previous": "← Назад", "Next →": "Далее →", "Zoom": "Увеличить", "Photo unavailable": "Фото недоступно", "Video unavailable": "Видео недоступно", "Plan your experience": "Планируйте поездку", "The Atlantis experience": "Экскурсии Atlantis", "Price and availability confirmed before booking.": "Цена и наличие подтверждаются до бронирования.", "experience photos": "фото", "Open photo ": "Открыть фото "}};
+  let lang = "en";
+  try { lang = localStorage.getItem("atlantis_lang") || "en"; } catch {}
+  if (!translations[lang]) lang = "en";
+  const tr = key => translations[lang]?.[key] || key;
   const data = window.ATLANTIS_TOURS;
 
   if (!Array.isArray(data)) return;
@@ -113,7 +118,7 @@
     ...gallery
   ]);
 
-  const videos = uniqueMedia(videoGallery);
+  const videos = uniqueMedia([t.coverVideo, ...videoGallery]);
 
   // =====================================
   // PAGE DESIGN
@@ -250,7 +255,9 @@
 
   document.head.append(style);
 
-  const master = e("section", "at-master");
+  const master = e("main", "at-master");
+  master.lang = lang;
+  master.dir = lang === "ar" ? "rtl" : "ltr";
 
   old.before(master);
 
@@ -264,7 +271,7 @@
     master,
     "a",
     null,
-    "← All experiences"
+    tr("← All experiences")
   );
 
   crumb.href = new URL(
@@ -314,21 +321,28 @@
 
     idx = (i + pics.length) % pics.length;
 
+    big.classList.remove("at-zoomed");
+    big.hidden = false;
     big.src = pics[idx];
 
     counter.textContent =
       (idx + 1) + " / " + pics.length;
 
     if (!dialog.open) {
-      dialog.showModal();
+      if (typeof dialog.showModal === "function") dialog.showModal();
+      else dialog.setAttribute("open", "");
     }
   }
 
+  big.addEventListener("error", () => { big.hidden = true; counter.textContent = tr("Photo unavailable"); });
+  const zoom = add(controls, "button", null, tr("Zoom"));
+  zoom.type = "button";
+  zoom.onclick = () => big.classList.toggle("at-zoomed");
   const previous = add(
     controls,
     "button",
     null,
-    "← Previous"
+    tr("← Previous")
   );
 
   previous.type = "button";
@@ -339,7 +353,7 @@
     controls,
     "button",
     null,
-    "Next →"
+    tr("Next →")
   );
 
   next.type = "button";
@@ -350,12 +364,12 @@
     controls,
     "button",
     null,
-    "Close"
+    tr("Close")
   );
 
   close.type = "button";
 
-  close.onclick = () => dialog.close();
+  close.onclick = () => typeof dialog.close === "function" ? dialog.close() : dialog.removeAttribute("open");
 
   dialog.addEventListener("keydown", ev => {
     if (ev.key === "ArrowLeft") {
@@ -369,7 +383,7 @@
 
   dialog.addEventListener("click", ev => {
     if (ev.target === dialog) {
-      dialog.close();
+      typeof dialog.close === "function" ? dialog.close() : dialog.removeAttribute("open");
     }
   });
 
@@ -407,7 +421,7 @@
 
     button.setAttribute(
       "aria-label",
-      "Open photo " + (i + 1)
+      tr("Open photo ") + (i + 1)
     );
 
     const image = add(button, "img");
@@ -418,11 +432,12 @@
       (t.title || "Atlantis") +
       " — Photo " + (i + 1);
 
-    image.loading = i === 0
+    image.loading = parent.classList.contains("at-cover") && i === 0
       ? "eager"
       : "lazy";
 
     image.decoding = "async";
+    image.addEventListener("error", () => { image.hidden = true; button.textContent = tr("Photo unavailable"); button.disabled = true; }, {once:true});
 
     button.onclick = () => show(i);
 
@@ -455,7 +470,7 @@
       master,
       "p",
       "at-gallery-count",
-      pics.length + " experience photos"
+      pics.length + " " + tr("experience photos")
     );
   }
 
@@ -481,14 +496,14 @@
     left,
     "div",
     "at-kicker",
-    "The Atlantis experience"
+    tr("The Atlantis experience")
   );
 
   add(
     left,
     "h2",
     null,
-    "Experience overview"
+    tr("Experience overview")
   );
 
   add(left, "p", null, t.detail);
@@ -508,7 +523,7 @@
       section,
       "h2",
       null,
-      "Experience Gallery"
+      tr("Experience Gallery")
     );
 
     const grid = add(
@@ -537,7 +552,7 @@
       section,
       "h2",
       null,
-      "Experience Videos"
+      tr("Experience Videos")
     );
 
     const grid = add(
@@ -556,6 +571,9 @@
       video.playsInline = true;
 
       video.src = src;
+      if (pics[0]) video.poster = pics[0];
+      video.addEventListener("play", () => master.querySelectorAll("video").forEach(v => { if(v !== video) v.pause(); }));
+      video.addEventListener("error", () => { video.hidden = true; add(grid,"p",null,tr("Video unavailable")); }, {once:true});
 
       video.setAttribute(
         "aria-label",
@@ -577,7 +595,7 @@
   // Central media replaces old inline media.
   // Other original text and sections remain.
 
-  if (managedGallery) {
+  if (pics.length || managedGallery) {
     old.querySelectorAll("img").forEach(img => {
       img.hidden = true;
       img.style.setProperty(
@@ -588,7 +606,7 @@
     });
   }
 
-  if (managedVideos) {
+  if (videos.length || managedVideos) {
     old.querySelectorAll("video").forEach(video => {
       video.pause();
       video.hidden = true;
@@ -601,7 +619,10 @@
     });
   }
 
-  original.append(old);
+  const legacy = e("div", "at-legacy");
+  while (old.firstChild) legacy.append(old.firstChild);
+  original.append(legacy);
+  old.remove();
 
   // =====================================
   // PRICE AND BOOKING
@@ -611,20 +632,20 @@
     book,
     "div",
     "at-kicker",
-    "Plan your experience"
+    tr("Plan your experience")
   );
 
   add(
     book,
     "h2",
     null,
-    "Your booking"
+    tr("Your booking")
   );
 
   const price = Number.isFinite(t.price)
-    ? (t.from || t.fromPrice ? "From " : "") +
+    ? (t.from || t.fromPrice ? tr("From ") : "") +
       "€" + t.price
-    : "Request a quote";
+    : tr("Request a quote");
 
   add(book, "div", "at-price", price);
 
@@ -632,7 +653,7 @@
     book,
     "small",
     null,
-    "Price and availability confirmed before booking."
+    tr("Price and availability confirmed before booking.")
   );
 
   const form = add(book, "form");
@@ -680,7 +701,7 @@
 
   const date = field(
     form,
-    "Travel date",
+    tr("Travel date"),
     "date",
     "date",
     params.get("date")
@@ -696,7 +717,7 @@
 
   const adults = field(
     pair,
-    "Adults",
+    tr("Adults"),
     "number",
     "adults",
     params.get("guests") || "2",
@@ -705,7 +726,7 @@
 
   const children = field(
     pair,
-    "Children",
+    tr("Children"),
     "number",
     "children",
     "0",
@@ -717,19 +738,22 @@
 
   const hotel = field(
     form,
-    "Hotel / pickup location",
+    tr("Hotel / pickup location"),
     "text",
     "hotel",
     ""
   );
 
   hotel.required = false;
+  hotel.maxLength = 200;
+  adults.max = "99";
+  children.max = "99";
 
   const total = add(form, "p");
 
   function update() {
     total.textContent =
-      "Total guests: " +
+      tr("Total guests: ") +
       (
         Number(adults.value) +
         Number(children.value)
@@ -744,7 +768,7 @@
     form,
     "button",
     null,
-    "Request booking via WhatsApp"
+    tr("Request booking via WhatsApp")
   );
 
   submit.type = "submit";
@@ -766,12 +790,7 @@
       "Please confirm availability and final price."
     ].join("\n");
 
-    window.open(
-      "https://wa.me/201557745501?text=" +
-      encodeURIComponent(message),
-      "_blank",
-      "noopener,noreferrer"
-    );
+    location.href = "https://wa.me/201557745501?text=" + encodeURIComponent(message);
   };
 
   // =====================================
@@ -789,7 +808,7 @@
       master,
       "h2",
       null,
-      "You may also like"
+      tr("You may also like")
     );
 
     const related = add(
@@ -806,10 +825,12 @@
         x.title
       );
 
-      a.href = new URL(
-        x.href,
-        root
-      ).href;
+      const target = new URL(x.href, root);
+      if (target.origin !== root.origin || !target.pathname.startsWith(root.pathname + "tours/")) { a.remove(); return; }
+      a.href = target.href;
+      const src = url(x.image);
+      if(src){ const im = e("img"); im.src=src; im.alt=""; im.loading="lazy"; im.addEventListener("error",()=>im.remove(),{once:true}); a.prepend(im); }
+      add(a,"small",null,Number.isFinite(x.price)? ((x.from || x.fromPrice ? tr("From "):"")+"€"+x.price):tr("Request a quote"));
     });
   }
 
