@@ -1,4 +1,4 @@
-const CACHE = 'atlantis-site-phase6-desert-water-v1';
+const CACHE = 'atlantis-site-phase7-private-city-v1';
 const scope = new URL(self.registration.scope);
 const offline = ['index.html','hurghada-price-guide.html','features/pocket-guide.html','atlantis-price-guide.webmanifest','features/atlantis-guide-icon.svg'];
 self.addEventListener('install', event => event.waitUntil((async()=>{
