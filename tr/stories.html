@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Mısır’ın Kızıldeniz kıyılarından hikâyeler, sırlar ve harikalar. Özgün kurgu, gerçek doğa tarihi ve keşfedilmeye değer yerler." name="description"/>
+<title>Kızıldeniz Günlükleri – Hikâyeler, Sırlar ve Harikalar</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Cairo:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+   :root{--navy:#08283b;--deep:#041b2b;--teal:#087e83;--gold:#d8b16d;--ink:#183243;--muted:#647986;--paper:#f5f4ef;--white:#fff;--line:#e2e7e6;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7}a{color:inherit;text-decoration:none}.container{width:min(1160px,calc(100% - 44px));margin:auto}
+.site-header{min-height:82px;background:rgba(4,27,43,.97);color:white;display:flex;align-items:center;position:relative;z-index:5}.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.brand{font-weight:700;letter-spacing:.08em;font-size:15px}.brand small{display:block;color:#b9cbd1;font-size:9px;letter-spacing:.2em;margin-top:2px}.nav-links{display:flex;align-items:center;gap:18px;font-size:13px}.nav-links a{color:#e5eef0;transition:.2s;white-space:nowrap}.nav-links a:hover,.nav-links a.active{color:var(--gold)}.nav-links .book{border:1px solid rgba(216,177,109,.7);padding:10px 17px;border-radius:2px}.menu-toggle{display:none;background:none;color:white;border:0;font-size:25px;cursor:pointer}
+
+.header-lang-switch{display:flex;flex-wrap:wrap;gap:4px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:4px 6px;border-radius:20px;max-width:250px}
+.header-lang-switch button{border:0;background:transparent;color:#dcecf2;padding:4px 7px;border-radius:14px;font-size:10.5px;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:.04em}
+.header-lang-switch button:hover{color:var(--gold)}
+.header-lang-switch button.active{background:var(--gold);color:var(--deep)}
+
+.hero{min-height:570px;position:relative;display:flex;align-items:center;color:#fff;overflow:hidden;background:linear-gradient(110deg,#041b2b,#0c5969)}.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,21,34,.9),rgba(3,21,34,.38)),url(https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada-strand.jpg) center/cover}.hero-content{position:relative;max-width:820px;padding:90px 0 100px}.eyebrow,.section-kicker{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:700}.hero h1{font:600 clamp(44px,7vw,82px)/1.05 var(--serif);margin:18px 0 20px;max-width:850px}.hero h1 span{color:#e4c58e}.hero p{font-size:17px;max-width:650px;color:#e0e9e9;margin:0 0 27px}.hero-note{font-size:11px;letter-spacing:.13em;color:#d4e0e1;text-transform:uppercase}
+.intro{padding:82px 0 45px;text-align:center;max-width:800px}.intro h2{font:600 clamp(30px,4vw,46px)/1.2 var(--serif);color:var(--navy);margin:12px 0}.intro p{color:var(--muted);font-size:15px}.content-section{padding:24px 0 85px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:27px}.section-head h2{font:600 34px var(--serif);margin:8px 0 0;color:var(--navy)}.filters{display:flex;gap:9px;flex-wrap:wrap}.filter{background:transparent;border:1px solid #cbd5d5;padding:9px 16px;border-radius:30px;color:#506570;font:600 12px var(--sans);cursor:pointer}.filter.active,.filter:hover{background:var(--navy);border-color:var(--navy);color:white}.story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}.story-card{background-color: #F1EBDD;border:1px solid var(--line);box-shadow:0 8px 26px rgba(6,35,50,.045);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}.story-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(6,35,50,.11)}.story-card-image{height:280px;position:relative;overflow:hidden;background:#d9e2df}.story-card-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.story-card:hover img{transform:scale(1.04)}.story-type{display:inline-block;background:rgba(4,27,43,.88);color:#e8c98e;font-size:9px;letter-spacing:.17em;padding:8px 11px;text-transform:uppercase;font-weight:700}.story-card-image .story-type{position:absolute;left:18px;top:18px}.story-card-body{padding:24px 27px 26px;display:flex;flex-direction:column;flex:1}.story-place{font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:var(--teal);font-weight:700}.story-card h3{font:600 27px/1.2 var(--serif);color:var(--navy);margin:10px 0}.story-card p{color:var(--muted);font-size:13px;margin:0 0 23px}.read-link{font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:var(--navy);margin-top:auto}.read-link b{color:#b78c4e;margin-left:7px}
+.library-note{margin:45px 0 0;background:#eaf0ee;padding:23px 27px;border-left:3px solid var(--gold);color:#526a73;font-size:13px}.library-note strong{color:var(--navy)}.longform{padding:70px 0 95px;background:#fff}.longform-head{text-align:center;max-width:750px;margin:0 auto 50px}.longform-head h2{font:600 42px var(--serif);color:var(--navy);margin:9px 0}.longform-head p{color:var(--muted)}.story-article{max-width:980px;margin:0 auto 76px;scroll-margin-top:68px;background:#fff}.article-cover{height:390px;position:relative;overflow:hidden;background:#0a3145}.article-cover img{width:100%;height:100%;object-fit:cover}.cover-shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,22,35,.9),rgba(3,22,35,.03) 80%)}.cover-copy{position:absolute;left:clamp(24px,6vw,65px);right:25px;bottom:35px;color:white}.cover-copy .story-place{display:block;color:#e8c98e;margin:12px 0 6px}.cover-copy h2{font:600 clamp(32px,5vw,51px)/1.1 var(--serif);margin:0 0 9px}.cover-copy p{margin:0;color:#e3ebeb;max-width:660px}.article-inner{max-width:760px;margin:auto;padding:38px 24px 0}.story-language p{font:16px/1.95 var(--serif);color:#334c58;margin:0 0 21px}.story-language p:first-child:first-letter{font:600 56px/.8 var(--serif);float:left;color:#b78c4e;padding:8px 9px 0 0}.story-language .story-ending{font:600 21px/1.6 var(--serif);color:var(--navy);border-left:3px solid var(--gold);padding:9px 0 9px 20px;margin:28px 0}.fact-note{font:13px/1.7 var(--sans)!important;background:#eef3f1;padding:18px 20px;border-left:3px solid var(--teal);color:#526a73!important}.sources{font:12px/1.8 var(--sans)!important;color:#5d7078;border-top:1px solid var(--line);padding-top:18px;margin-top:20px}.sources a{color:#087e83;text-decoration:underline;text-underline-offset:3px}.article-footer{border-top:1px solid var(--line);margin-top:34px;padding:20px 0;display:flex;justify-content:space-between;gap:20px;align-items:center}.discover-link{background:var(--navy);color:white;padding:12px 18px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}.discover-link span{color:var(--gold);margin-left:8px}.back-top{font-size:11px;color:var(--muted)}.language-bar{position:sticky;top:0;z-index:4;background:rgba(245,244,239,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 0}.language-inner{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.language-inner span{font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}.language-switch{display:flex;gap:6px;flex-wrap:wrap}.language-switch button{border:1px solid #c8d3d2;background-color: #F1EBDD;color:var(--navy);padding:7px 12px;font-size:11px;font-weight:700;cursor:pointer;text-transform:uppercase}.language-switch button.active{background:var(--navy);color:white;border-color:var(--navy)}
+footer{background:var(--deep);color:#d4e0e3;padding:43px 0;text-align:center}footer strong{font:600 21px var(--serif);color:white}footer p{font-size:12px;color:#aebfc4;margin:8px auto 0;max-width:550px}.footer-links{display:flex;justify-content:center;gap:22px;margin-top:20px;font-size:11px;color:#e8c98e;flex-wrap:wrap}
+
+/* RTL Support */
+html[dir="rtl"] body{font-family:'Cairo','Manrope',Arial,sans-serif !important}
+html[dir="rtl"] body :is(h1,h2,h3,h4,h5,h6,p,li,label,input,select,textarea,button,a,span,div){
+  font-family:'Cairo','Manrope',Arial,sans-serif !important;
+  letter-spacing:0 !important;
+}
+html[dir="rtl"] .eyebrow,
+html[dir="rtl"] .section-kicker,
+html[dir="rtl"] .story-type,
+html[dir="rtl"] .story-place,
+html[dir="rtl"] .read-link,
+html[dir="rtl"] .hero-note,
+html[dir="rtl"] .language-inner span,
+html[dir="rtl"] .discover-link{letter-spacing:0 !important;text-transform:none}
+html[dir="rtl"] .story-language p:first-child:first-letter{float:none;font-size:inherit;line-height:inherit;padding:0;color:inherit}
+html[dir="rtl"] .story-language .story-ending{border-left:0;border-right:3px solid var(--gold);padding:9px 20px 9px 0}
+html[dir="rtl"] .library-note{border-left:0;border-right:3px solid var(--gold)}
+html[dir="rtl"] .fact-note{border-left:0;border-right:3px solid var(--teal)}
+html[dir="rtl"] .story-card-image .story-type{left:auto;right:18px}
+
+@media(max-width:760px){.site-header{height:auto;min-height:72px}.menu-toggle{display:block}.nav{flex-wrap:wrap;padding:15px 0}.nav-links{display:none;width:100%;flex-direction:column;gap:15px;padding:12px 0 8px}.nav-links.open{display:flex}.hero{min-height:500px}.hero-content{padding:70px 0}.hero p{font-size:15px}.section-head{display:block}.filters{margin-top:18px}.story-grid{grid-template-columns:1fr}.story-card-image{height:230px}.article-cover{height:310px}.article-inner{padding:27px 20px 0}.story-language p{font-size:15px}.language-inner{align-items:flex-start;flex-direction:column}.intro{padding-top:60px}.longform{padding-top:55px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+
+<meta content="website" property="og:type"/>
+<meta content="Kızıldeniz Günlükleri – Hikâyeler, Sırlar ve Harikalar" property="og:title"/>
+<meta content="Mısır’ın Kızıldeniz kıyılarından hikâyeler, sırlar ve harikalar. Özgün kurgu, gerçek doğa tarihi ve keşfedilmeye değer yerler." property="og:description"/>
+<meta content="https://travel-egypt.github.io/hurghada-vacations/tr/stories.html" property="og:url"/>
+<meta content="Atlantis Tours and Experiences" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style id="atlantis-refined-typography">
+   /* ATLANTIS — refined typography and warm coastal reading system */
+:root {
+  --atl-sand: #E9E1D3;
+  --atl-sand-soft: #F1EBDD;
+  --atl-sand-deep: #DCD2C1;
+  --atl-ink: #293B40;
+  --atl-muted: #66716F;
+  --atl-ocean: #29454B;
+  --atl-gold: #B99B70;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  color: var(--atl-ink) !important;
+  background-color: var(--atl-sand) !important;
+  font-size: 15.5px;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body :is(button, input, select, textarea) { font-family: 'Manrope', Arial, sans-serif !important; }
+h1, h2 {
+  font-family: 'DM Serif Display', Georgia, serif !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.13 !important;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2.65rem, 5.2vw, 4.65rem) !important; }
+h2 { font-size: clamp(2rem, 3.35vw, 3rem) !important; }
+h3 {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.018em;
+  line-height: 1.28 !important;
+  font-size: clamp(1.12rem, 1.55vw, 1.42rem) !important;
+}
+h4, h5, h6 {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.01em;
+}
+p, li, label, input, select, textarea {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  letter-spacing: 0;
+}
+p { line-height: 1.72; }
+small, .eyebrow, .kicker, .section-label, .card-category {
+  letter-spacing: .075em;
+}
+button, .btn, a.button, .book-link, .main-button, .cta-button {
+  font-weight: 650 !important;
+  letter-spacing: .035em !important;
+}
+/* Soft, warm surfaces instead of bright white cards */
+.tour-card, .info-card, .info-box, .feature-card, .story-card,
+.tool-card, .price-card, .faq-item, .content-card, .booking-panel,
+.form-panel, .contact-card, .guide-card, .card, .tour-includes {
+  background-color: var(--atl-sand-soft) !important;
+  color: var(--atl-ink) !important;
+}
+.tour-card p, .info-card p, .info-box p, .feature-card p,
+.story-card p, .tool-card p, .price-card p, .content-card p {
+  color: var(--atl-muted);
+}
+.tour-card .tour-lead {
+  font-size: .94rem !important;
+  line-height: 1.68 !important;
+  font-weight: 450 !important;
+}
+@media (max-width: 640px) {
+  body { font-size: 15px; line-height: 1.68; }
+  h1 { font-size: clamp(2.25rem, 10vw, 3.2rem) !important; }
+  h2 { font-size: clamp(1.8rem, 8vw, 2.35rem) !important; }
+  h3 { font-size: 1.12rem !important; }
+}
+  </style>
+
+
+
+
+
+
+
+
+
+
+<link href="https://travel-egypt.github.io/hurghada-vacations/stories.html" hreflang="en" rel="alternate"/><link href="https://travel-egypt.github.io/hurghada-vacations/de/stories.html" hreflang="de" rel="alternate"/><link href="https://travel-egypt.github.io/hurghada-vacations/ru/stories.html" hreflang="ru" rel="alternate"/><link href="https://travel-egypt.github.io/hurghada-vacations/fr/stories.html" hreflang="fr" rel="alternate"/><link href="https://travel-egypt.github.io/hurghada-vacations/it/stories.html" hreflang="it" rel="alternate"/><link href="https://travel-egypt.github.io/hurghada-vacations/es/stories.html" hreflang="es" rel="alternate"/><link href="https://travel-egypt.github.io/hurghada-vacations/pl/stories.html" hreflang="pl" rel="alternate"/><link href="https://travel-egypt.github.io/hurghada-vacations/ar/stories.html" hreflang="ar" rel="alternate"/><link href="https://travel-egypt.github.io/hurghada-vacations/cs/stories.html" hreflang="cs" rel="alternate"/><link href="https://travel-egypt.github.io/hurghada-vacations/tr/stories.html" hreflang="tr" rel="alternate"/><link href="https://travel-egypt.github.io/hurghada-vacations/stories.html" hreflang="x-default" rel="alternate"/><link href="https://travel-egypt.github.io/hurghada-vacations/tr/stories.html" rel="canonical"/></head>
+<body id="top">
+<header class="site-header">
+<nav class="nav container">
+<a class="brand" href="https://travel-egypt.github.io/hurghada-vacations/tr/index.html">
+<span data-i18n="brandName">ATLANTIS TOURS &amp; EXPERIENCES</span>
+<small data-i18n="brandSub">KIZILDENİZ’İ KEŞFEDİN</small>
+</a>
+<div aria-label="Header language switcher" class="header-lang-switch" role="group">
+<button aria-pressed="false" class="" data-lang="en" type="button">
+      EN
+     </button>
+<button aria-pressed="false" class="" data-lang="de" type="button">
+      DE
+     </button>
+<button aria-pressed="false" class="" data-lang="ru" type="button">
+      RU
+     </button>
+<button aria-pressed="false" class="" data-lang="fr" type="button">
+      FR
+     </button>
+<button aria-pressed="false" class="" data-lang="it" type="button">
+      IT
+     </button>
+<button aria-pressed="false" class="" data-lang="es" type="button">
+      ES
+     </button>
+<button aria-pressed="false" class="" data-lang="pl" type="button">
+      PL
+     </button>
+<button aria-pressed="false" class="" data-lang="ar" type="button">
+      AR
+     </button><button aria-pressed="true" class="active" data-lang="tr" type="button">TR</button><button aria-pressed="false" class="" data-lang="cs" type="button">CS</button>
+</div>
+<button aria-label="Open menu" class="menu-toggle" id="menuToggle">
+     ☰
+    </button>
+<div class="nav-links" id="navLinks">
+<a data-i18n="navHome" href="https://travel-egypt.github.io/hurghada-vacations/tr/index.html">Ana sayfa</a>
+<a data-i18n="navTours" href="https://travel-egypt.github.io/hurghada-vacations/tr/all-tours.html">Turlar</a>
+<a class="active" data-i18n="navStories" href="https://travel-egypt.github.io/hurghada-vacations/tr/stories.html">Hikâyeler</a>
+<a data-i18n="navPrices" href="https://travel-egypt.github.io/hurghada-vacations/hurghada-price-guide.html">Fiyat rehberi</a>
+<a data-i18n="navBooking" href="https://travel-egypt.github.io/hurghada-vacations/tr/booking.html">Rezervasyon</a>
+<a data-i18n="navContact" href="https://travel-egypt.github.io/hurghada-vacations/tr/contact.html">İletişim</a>
+<a class="book" data-i18n-html="navBookBtn" href="https://travel-egypt.github.io/hurghada-vacations/tr/booking.html">Deneyiminizi planlayın ↗</a>
+</div>
+</nav>
+</header>
+<section class="hero">
+<div class="container hero-content">
+<span class="eyebrow" data-i18n="heroEyebrow">Atlantis Tours and Experiences editoryal koleksiyonu</span>
+<h1 data-i18n-html="heroTitle">Kızıldeniz <span>Günlükleri</span></h1>
+<p data-i18n="heroDesc">Mısır’ın Kızıldeniz kıyılarından hikâyeler, sırlar ve harikalar. Özgün kurgu, gerçek doğa tarihi ve keşfedilmeye değer yerler.</p>
+<div class="hero-note" data-i18n="heroNote">Özgün hikâyeler · Belgelenmiş keşifler · Mısır’ın ruhu</div>
+</div>
+</section>
+<section class="intro container">
+<span class="section-kicker" data-i18n="introKicker">Yolculuğun ötesinde</span>
+<h2 data-i18n-html="introTitle">Bazı yerler keşfedilmek içindir.<br/>Bazıları ise hatırlanmak için.</h2>
+<p data-i18n="introDesc">Hayal gücünün gerçek dünyayla buluştuğu koleksiyona hoş geldiniz. Adalardan ilham alan hikâyeleri ve Kızıldeniz’in olağanüstü doğasını keşfedin.</p>
+</section>
+<div class="language-bar">
+<div class="container language-inner">
+<span data-i18n="langBarLabel">Okuma dilinizi seçin</span>
+<div class="language-switch">
+<button aria-pressed="false" class="" data-lang="en" type="button">
+      English
+     </button>
+<button aria-pressed="false" class="" data-lang="de" type="button">
+      Deutsch
+     </button>
+<button aria-pressed="false" class="" data-lang="ru" type="button">
+      Русский
+     </button>
+<button aria-pressed="false" class="" data-lang="fr" type="button">
+      Français
+     </button>
+<button aria-pressed="false" class="" data-lang="it" type="button">
+      Italiano
+     </button>
+<button aria-pressed="false" class="" data-lang="es" type="button">
+      Español
+     </button>
+<button aria-pressed="false" class="" data-lang="pl" type="button">
+      Polski
+     </button>
+<button aria-pressed="false" class="" data-lang="ar" type="button">
+      العربية
+     </button><button aria-pressed="true" class="active" data-lang="tr" type="button">TR</button><button aria-pressed="false" class="" data-lang="cs" type="button">CS</button>
+</div>
+</div>
+</div>
+<section class="content-section container">
+<div class="section-head">
+<div>
+<span class="section-kicker" data-i18n="colKicker">Hikâye koleksiyonu</span>
+<h2 data-i18n="colTitle">Bir hikâye seçin. Başka bir dünyaya girin.</h2>
+</div>
+<div class="filters">
+<button class="filter active" data-filter="all" data-i18n="filterAll">Tüm hikâyeler</button>
+<button class="filter" data-filter="fiction" data-i18n="filterFiction">Kurgu</button>
+<button class="filter" data-filter="documentary" data-i18n="filterDoc">Belgesel</button>
+</div>
+</div>
+<div class="story-grid">
+<a class="story-card" data-kind="fiction" href="#orange-bay">
+<div class="story-card-image">
+<img alt="Orange Bay · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada-strand.jpg"/>
+<span class="story-type" data-i18n="badgeFiction">KURGUSAL HİKÂYE</span>
+</div>
+<div class="story-card-body">
+<span class="story-place" data-i18n="s1Place">Orange Bay · Giftun Adaları bölgesi</span>
+<h3 data-i18n="s1Title">Sözünü Tutan Gelgit</h3>
+<p data-i18n="s1Desc">Bir kızın, eski bir pusulanın ve yeniden başlama cesaretinin hikâyesi.</p>
+<span class="read-link">
+<span data-i18n="readStory">Hikâyeyi okuyun</span>
+<b>
+        ↗
+       </b>
+</span>
+</div>
+</a>
+<a class="story-card" data-kind="fiction" href="#mahmya">
+<div class="story-card-image">
+<img alt="Mahmya · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg"/>
+<span class="story-type" data-i18n="badgeFiction">KURGUSAL HİKÂYE</span>
+</div>
+<div class="story-card-body">
+<span class="story-place" data-i18n="s2Place">Mahmya · Giftun Adaları bölgesi</span>
+<h3 data-i18n="s2Title">İki Dalga Arasındaki Sessizlik</h3>
+<p data-i18n="s2Desc">Yeniden dinlemeyi öğrenen iki kardeşin dokunaklı hikâyesi.</p>
+<span class="read-link">
+<span data-i18n="readStory">Hikâyeyi okuyun</span>
+<b>
+        ↗
+       </b>
+</span>
+</div>
+</a>
+<a class="story-card" data-kind="documentary" href="#abu-dabbab">
+<div class="story-card-image">
+<img alt="Abu Dabbab Bay · Southern Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<span class="story-type" data-i18n="badgeDocResearch">BELGESEL · ARAŞTIRMAYA DAYALI</span>
+</div>
+<div class="story-card-body">
+<span class="story-place" data-i18n="s3Place">Abu Dabbab Körfezi · Güney Kızıldeniz</span>
+<h3 data-i18n="s3Title">Mavinin Altındaki Çayır</h3>
+<p data-i18n="s3Desc">Deniz çayırlarının, yeşil deniz kaplumbağalarının ve nadir dugongun gerçek hikâyesi.</p>
+<span class="read-link">
+<span data-i18n="readStory">Hikâyeyi okuyun</span>
+<b>
+        ↗
+       </b>
+</span>
+</div>
+</a>
+<a class="story-card" data-kind="documentary" href="#coral-kingdom">
+<div class="story-card-image">
+<img alt="The Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"/>
+<span class="story-type" data-i18n="badgeDocNatural">BELGESEL · DOĞA TARİHİ</span>
+</div>
+<div class="story-card-body">
+<span class="story-place" data-i18n="s4Place">Kızıldeniz</span>
+<h3 data-i18n="s4Title">Canlı Taştan Kurulan Şehir</h3>
+<p data-i18n="s4Desc">Mercan resiflerinin kırılgan dünyası ve her ziyaretçinin önemi.</p>
+<span class="read-link">
+<span data-i18n="readStory">Hikâyeyi okuyun</span>
+<b>
+        ↗
+       </b>
+</span>
+</div>
+</a>
+</div>
+<div class="library-note">
+<strong data-i18n="promiseStrong">Editoryal sözümüz:</strong>
+<span data-i18n="promiseText">Kurgu açıkça belirtilir. Belgeseller araştırma ve doğa koruma kaynaklarına dayanır; okuma bağlantıları içerir. Hayalî karakterleri veya olayları gerçek tanıklık olarak sunmayız.</span>
+</div>
+</section>
+<section class="longform">
+<div class="container">
+<div class="longform-head">
+<span class="section-kicker" data-i18n="longKicker">Yavaş okuyun. Derinlemesine keşfedin.</span>
+<h2 data-i18n="longTitle">Kızıldeniz’den hikâyeler</h2>
+<p data-i18n="longDesc">Acele etmeyin. Her hikâye yaşanmak için yazıldı.</p>
+</div>
+<article class="story-article" data-kind="fiction" id="orange-bay">
+<div class="article-cover">
+<img alt="Orange Bay · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada-strand.jpg"/>
+<div class="cover-shade">
+</div>
+<div class="cover-copy">
+<span class="story-type" data-i18n="badgeFiction">KURGUSAL HİKÂYE</span>
+<span class="story-place" data-i18n="s1Place">Orange Bay · Giftun Adaları bölgesi</span>
+<h2 data-i18n="s1Title">Sözünü Tutan Gelgit</h2>
+<p data-i18n="s1Desc">Bir kızın, eski bir pusulanın ve yeniden başlama cesaretinin hikâyesi.</p>
+</div>
+</div>
+<div class="article-inner">
+<div class="story-language" id="articleBody-orange-bay"><p>Pusula yirmi üç yıldır yerinden oynamamıştı. Pirinç kenarı çizilmiş, camı bulanıklaşmıştı; tekne dalgaları aşarken ibresi titriyordu. Lina onu büyük bir özenle taşıyordu.</p><p>Babası dokuz yaşındayken vermişti. Pusulanın nereye gidileceğini söylemediğini, yön seçebileceğimizi hatırlattığını anlatırdı. Çocukken her yolculuk basit görünürdü.</p><p>Şimdi otuz iki yaşındaydı. Babası ölmüş, tekne tamir atölyesi kapanmış, kardeşi yurt dışına taşınmıştı. Yıllarca ertelediği tatil için Hurghada’dan tekneyle ayrıldı.</p><p>Orange Bay’i seçmişti çünkü babası eski bir haritada adayı daire içine alıp “Bir gün” yazmıştı. Bunun anlamını hiç açıklamamıştı.</p><p>Şehir ufukta uzaklaşırken çocuklar teknenin izini sayıyor, arkadaşlar suya girmeyi bekliyor, Lina pusulayı avucunda çeviriyordu.</p><p>Ada yavaşça belirdi: açık renkli kum, turkuaz su ve sığlıkların parlak yeşili. Işık dalgaların üzerinde hareket ediyordu.</p><p>Kumsalda hüznün kendisini karşılamasını bekledi. Oysa yalnızca suyun sesini duydu. Gölgede haritayı açıp pusulayı solmuş dairenin yanına koydu.</p><p>“Başardın,” diye fısıldadı; kime söylediğinden emin değildi.</p><p>Yakında küçük bir kız ıslak kumdan kule yapıyordu. Her dalga birazını götürüyordu. Annesinin yardımını reddetti: “Kendi başına durmalı.”</p><p>Lina zorla ayakta tutmaya çalıştığı şeyleri düşündü. Oysa kıyı her gün değişiyor ve yine kıyı olarak kalıyordu.</p><p>Daha sonra su boyunca yürüdü. Gizli bir mesaj bulmadı; yalnızca ada, insanlar ve o anda bulunmanın armağanı vardı.</p><p>Dönüşten önce haritanın üzerindeki pusulanın fotoğrafını kardeşine gönderdi: “Sanırım ne demek istediğini anladım. Bir dahaki sefere birlikte gelelim.”</p><p>Tekne ayrılmadan cevap geldi: “Tarihi seç. Orada olacağım.”</p><p>Dönüşte pusulayı kaldırdı. Ada küçülürken artık geride bir şey bırakıyormuş gibi hissetmiyordu.</p><p>Uzun zaman sonra ilk kez önündeki yön onu korkutmuyordu.</p></div>
+<div class="article-footer">
+<a class="discover-link" href="https://travel-egypt.github.io/hurghada-vacations/tr/all-tours.html">
+<span data-i18n="discoverExp">Deneyimi keşfedin</span>
+<span>
+         →
+        </span>
+</a>
+<a class="back-top" data-i18n="backTop" href="#top">Hikâyelere dön ↑</a>
+</div>
+</div>
+</article>
+<article class="story-article" data-kind="fiction" id="mahmya">
+<div class="article-cover">
+<img alt="Mahmya · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg"/>
+<div class="cover-shade">
+</div>
+<div class="cover-copy">
+<span class="story-type" data-i18n="badgeFiction">KURGUSAL HİKÂYE</span>
+<span class="story-place" data-i18n="s2Place">Mahmya · Giftun Adaları bölgesi</span>
+<h2 data-i18n="s2Title">İki Dalga Arasındaki Sessizlik</h2>
+<p data-i18n="s2Desc">Yeniden dinlemeyi öğrenen iki kardeşin dokunaklı hikâyesi.</p>
+</div>
+</div>
+<div class="article-inner">
+<div class="story-language" id="articleBody-mahmya"><p>Mariam ve Youssef yedi yıldır çoğunlukla kısa mesajlarla konuşuyordu. Onları tek bir büyük tartışma değil, biriken küçük sessizlikler ayırmıştı.</p><p>Anneleri Mahmya’ya gitmeyi önerince ikisi de kabul etti. Youssef geç geldi, Mariam güvertenin öbür ucuna oturdu.</p><p>Rüzgâr kelimeleri taşıyordu. Anneleri gözlerini kapadı. Youssef sinyal kaybolana kadar telefonuna baktı.</p><p>“Telefonu kaldırabilirsin,” dedi Mariam.</p><p>“Sadece saate bakıyordum.”</p><p>“Denizin kendi saati var.”</p><p>Bu, aile işleri dışında konuştukları ilk cümleydi. Youssef neredeyse gülümsedi.</p><p>Adada güneş ve kum onları karşıladı. Annelerine gölgeli bir yer bulup su taşıdılar.</p><p>Anneleri dinlenirken kardeşler kıyıda yürüdü.</p><p>“Mavi kovayı hatırlıyor musun?” diye sordu Youssef.</p><p>Mariam güldü. Çocukken çatlak kovayı suyla doldururlardı. Youssef çatlağı deniz yosunuyla kapatabileceğini söylemişti.</p><p>“Özel bir kova olduğunu söylemiştin.”</p><p>“Öyleydi. Deniz her zaman kazanır, bunu öğretti.”</p><p>“Hayır. Daha iyi bir kova getirmeyi öğretti.”</p><p>Güldüler. Yedi yılın çözümü değildi ama bir başlangıçtı.</p><p>“Gittiğim için kızgın olduğunu düşünüyordum.”</p><p>“Ne kadar yalnız hissedeceğimi söylemeden gittiğin için kızgındım. Sonra seni özlediğim için kızdım.”</p><p>“Ararsam ne kadar kararsız olduğumu anlayacağından korktum.”</p><p>“Benim yanımda kesin konuşmak zorunda değildin.”</p><p>Bu sözler geçmişi silmedi ama dürüstlüğe yer açtı.</p><p>Anneleri gülümseyerek evden getirdiği eski mavi kovayı uzattı. Çatlak hâlâ oradaydı.</p><p>“Bir fotoğraf çekilelim diye düşündüm.”</p><p>Fotoğrafta rüzgâr saçlarını dağıtıyor, güneş gözlerini kısıyordu. Ama kimse kameraya değil, birbirine bakıyordu.</p><p>Dönüş teknesinde Youssef kardeşine gelecek hafta ne zaman müsait olduğunu sordu. Anneleri aralarında uyuyakaldı.</p><p>Ada bir aileyi tek öğleden sonra onarmadı. Onlara sessiz bir kıyı, eski bir şaka ve yeniden deneme fırsatı verdi.</p></div>
+<div class="article-footer">
+<a class="discover-link" href="https://travel-egypt.github.io/hurghada-vacations/tr/all-tours.html">
+<span data-i18n="discoverExp">Deneyimi keşfedin</span>
+<span>
+         →
+        </span>
+</a>
+<a class="back-top" data-i18n="backTop" href="#top">Hikâyelere dön ↑</a>
+</div>
+</div>
+</article>
+<article class="story-article" data-kind="documentary" id="abu-dabbab">
+<div class="article-cover">
+<img alt="Abu Dabbab Bay · Southern Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+<div class="cover-shade">
+</div>
+<div class="cover-copy">
+<span class="story-type" data-i18n="badgeDocResearch">BELGESEL · ARAŞTIRMAYA DAYALI</span>
+<span class="story-place" data-i18n="s3Place">Abu Dabbab Körfezi · Güney Kızıldeniz</span>
+<h2 data-i18n="s3Title">Mavinin Altındaki Çayır</h2>
+<p data-i18n="s3Desc">Deniz çayırlarının, yeşil deniz kaplumbağalarının ve nadir dugongun gerçek hikâyesi.</p>
+</div>
+</div>
+<div class="article-inner">
+<div class="story-language" id="articleBody-abu-dabbab"><p>Mısır’ın güney Kızıldeniz kıyısındaki Abu Dabbab Körfezi tekneden sakin turkuaz sular gibi görünür. Yüzeyin altında ise deniz çayırları gelgitle salınır.</p><p>Deniz çayırları tortuyu sabitleyen, su berraklığını artıran, karbon emen ve genç balıklarla omurgasızlara barınak sağlayan çiçekli deniz bitkileridir.</p><p>Yeşil deniz kaplumbağaları (Chelonia mydas) çayır ve alglerle beslenir. Onları uzaktan izleyin, kovalamayın ve mercanlara veya çayırlara basmayın.</p><p>Körfezde zaman zaman deniz ineklerinin akrabası olan utangaç, otçul deniz memelisi dugong görülebilir. Sorumlu hiçbir işletme görülmesini garanti edemez.</p><p>Koruma notu: dipte durmak yerine yüzün, hayvanlara dokunmayın veya yem vermeyin, atıklarınızı teknede tutun.</p><p class="sources">
+<strong>Kaynaklar ve ek okumalar:</strong>
+<a href="https://www.iucnredlist.org/" rel="noopener" target="_blank">
+         IUCN Red List of Threatened Species
+        </a>
+        ·
+        <a href="https://www.unep.org/" rel="noopener" target="_blank">
+         UN Environment Programme (Marine &amp; Coastal Ecosystems)
+        </a>
+        ·
+        <a href="https://www.hepcacheda.com/" rel="noopener" target="_blank">
+         HEPCA (Hurghada Environmental Protection and Conservation Association)
+        </a>
+</p></div>
+<div class="article-footer">
+<a class="discover-link" href="https://travel-egypt.github.io/hurghada-vacations/tr/all-tours.html">
+<span data-i18n="discoverExp">Deneyimi keşfedin</span>
+<span>
+         →
+        </span>
+</a>
+<a class="back-top" data-i18n="backTop" href="#top">Hikâyelere dön ↑</a>
+</div>
+</div>
+</article>
+<article class="story-article" data-kind="documentary" id="coral-kingdom">
+<div class="article-cover">
+<img alt="The Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"/>
+<div class="cover-shade">
+</div>
+<div class="cover-copy">
+<span class="story-type" data-i18n="badgeDocNatural">BELGESEL · DOĞA TARİHİ</span>
+<span class="story-place" data-i18n="s4Place">Kızıldeniz</span>
+<h2 data-i18n="s4Title">Canlı Taştan Kurulan Şehir</h2>
+<p data-i18n="s4Desc">Mercan resiflerinin kırılgan dünyası ve her ziyaretçinin önemi.</p>
+</div>
+</div>
+<div class="article-inner">
+<div class="story-language" id="articleBody-coral-kingdom"><p>Mercan resifleri, dokularındaki fotosentetik alglerle birlikte yaşayan mercan polipleri adlı küçük hayvanlar tarafından oluşturulur. Nesiller boyunca kalsiyum karbonat iskeletleri büyük sualtı yapıları meydana getirir.</p><p>Resifler okyanus tabanının küçük bir bölümünü kaplasa da pek çok türe barınak sağlar. Kızıldeniz’in sıcak, tuzlu ve berrak suları zengin renkler ve bölgesel türler barındırır.</p><p>Artan sıcaklıklar, çapalar, paletler ve kirlilik mercanlarda beyazlamaya veya doku kaybına yol açabilir. Dikkatsiz bir temas yılların büyümesini zedeleyebilir.</p><p>Şnorkel ve dalış sırasında yüzdürme dengenizi koruyun, kumu kaldırmayın ve resiflere basmayın.</p><p>Resif kuralları: mercanlara dokunmayın, kırmayın, kabuk toplamayın; canlılardan uzak durun ve uygun güneş koruması kullanın.</p><p class="sources">
+<strong>Kaynaklar ve ek okumalar:</strong>
+<a href="https://coralreefwatch.noaa.gov/" rel="noopener" target="_blank">
+         NOAA Coral Reef Watch
+        </a>
+        ·
+        <a href="https://www.icriforum.org/" rel="noopener" target="_blank">
+         International Coral Reef Initiative (ICRI)
+        </a>
+        ·
+        <a href="https://www.unep.org/" rel="noopener" target="_blank">
+         UN Environment Programme (Coral Reefs)
+        </a>
+</p></div>
+<div class="article-footer">
+<a class="discover-link" href="https://travel-egypt.github.io/hurghada-vacations/tr/all-tours.html">
+<span data-i18n="discoverExp">Deneyimi keşfedin</span>
+<span>
+         →
+        </span>
+</a>
+<a class="back-top" data-i18n="backTop" href="#top">Hikâyelere dön ↑</a>
+</div>
+</div>
+</article>
+</div>
+</section>
+<footer>
+<div class="container">
+<strong data-i18n="footerBrand">Atlantis Tours and Experiences</strong>
+<p data-i18n="footerDesc">Mısır’ın Kızıldeniz kıyılarından hikâyeler, doğa tarihi ve ada anıları.</p>
+<div class="footer-links">
+<a data-i18n="navHome" href="https://travel-egypt.github.io/hurghada-vacations/tr/index.html">Ana sayfa</a>
+<a data-i18n="navTours" href="https://travel-egypt.github.io/hurghada-vacations/tr/all-tours.html">Turlar</a>
+<a data-i18n="navPrices" href="https://travel-egypt.github.io/hurghada-vacations/hurghada-price-guide.html">Fiyat rehberi</a>
+<a data-i18n="navBooking" href="https://travel-egypt.github.io/hurghada-vacations/tr/booking.html">Rezervasyon</a>
+<a data-i18n="navContact" href="https://travel-egypt.github.io/hurghada-vacations/tr/contact.html">İletişim</a>
+</div>
+</div>
+</footer>
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", function () {
+      const open = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(open));
+      menuToggle.textContent = open ? "✕" : "☰";
+    });
+    navLinks.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+  }
+
+  const filterButtons = document.querySelectorAll(".filter");
+  const filterTargets = document.querySelectorAll(".story-card, .story-article");
+  filterButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const kind = btn.getAttribute("data-filter");
+      filterButtons.forEach(function (b) { b.classList.toggle("active", b === btn); });
+      filterTargets.forEach(function (el) {
+        const match = kind === "all" || el.getAttribute("data-kind") === kind;
+        el.style.display = match ? "" : "none";
+      });
+    });
+  });
+
+  document.querySelectorAll('button[data-lang]').forEach(btn => btn.addEventListener('click', () => { const lang=btn.dataset.lang; try {localStorage.setItem('atlantis_lang',lang)} catch(e) {} location.href = "https://travel-egypt.github.io/hurghada-vacations/" + (lang==='en'?'':lang+'/') + 'stories.html'; }));
+});
+  </script>
+</body>
+</html>
