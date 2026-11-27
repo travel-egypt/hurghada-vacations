@@ -9,7 +9,7 @@
   "theme_color": "#071b2c",
   "icons": [
     {
-      "src": "./assets/atlantis-guide-icon.svg",
+      "src": "./features/atlantis-guide-icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
