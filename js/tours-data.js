@@ -23,7 +23,7 @@ window.ATLANTIS_TOURS = [
       "assets/videos/Orange.mp4",
       "assets/videos/orange-bay/13f4d064-d446-44e7-8ee4-6e960a34d10d.mp4"
     ],
-    "coverVideo": ""
+    "coverVideo": "assets/videos/Orange.mp4"
   },
   {
     "id": "mahmya-island",
