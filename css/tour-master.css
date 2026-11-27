@@ -41,3 +41,5 @@ body.at-enhanced{background:#061c29!important;color:#c6d5d9!important}.at-master
 @media(max-width:600px){.at-master{width:calc(100% - 24px);padding:16px 0}.at-master .at-cover>button,.at-master .at-media-grid img,.at-master .at-video-grid video,.at-master .at-related img{aspect-ratio:16/10}.at-master .at-book{padding:16px}}
 
 .at-master .at-legacy :where([class*="summary"],[class*="feature"],[class*="quote"],details,blockquote){background-image:none!important}
+
+.at-master .at-date-group{border:0;padding:0;margin:0 0 14px;min-width:0}.at-master .at-date-row{display:grid;grid-template-columns:1fr 1.6fr 1fr;gap:8px}.at-master .at-book select{width:100%;min-width:0;background:#102d3b;color:#f0ece2;border:1px solid #526a72;border-radius:5px;padding:10px 6px;font:inherit;min-height:44px}.at-master .at-date-row label{min-width:0;font-size:13px}.at-master .at-date-group legend{margin-bottom:8px}.at-master .at-book select option{background:#102d3b;color:#f0ece2}
