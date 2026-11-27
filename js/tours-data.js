@@ -20,7 +20,8 @@ window.ATLANTIS_TOURS = [
       "assets/images/IMG-20261117-WA0018.jpg"
     ],
     "videos": [
-      "assets/videos/Orange.mp4"
+      "assets/videos/Orange.mp4",
+      "assets/videos/orange-bay/13f4d064-d446-44e7-8ee4-6e960a34d10d.mp4"
     ],
     "coverVideo": ""
   },
