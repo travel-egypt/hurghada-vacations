@@ -140,7 +140,7 @@ window.ATLANTIS_TOURS = [
     "id": "jeep-desert-safari",
     "title": "Jeep Desert Safari",
     "desc": "Explore the Eastern Desert from Hurghada by 4x4 jeep, travelling through desert trails, rocky hills, and open mountain landscapes with stops confirmed in your selected package.",
-    "image": "assets/images/%D9%85%D9%88%D9%83%D8%A8%20%D8%A3%D8%AA%D9%84%D8%A7%D9%86%D8%AA%D8%B3%20%D9%81%D9%8A%20%D8%AC%D8%A8%D8%A7%D9%84%20%D8%A7%D9%84%D8%B5%D8%AD%D8%B1%D8%A7%D8%A1.png",
+    "image": "logo.png",
     "category": "desert",
     "href": "tours/jeep-desert-safari.html",
     "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."
@@ -167,7 +167,7 @@ window.ATLANTIS_TOURS = [
     "id": "luxor-day-trip",
     "title": "Luxor Day Trip",
     "desc": "Travel from Hurghada to Luxor for a full-day historical excursion exploring ancient Egyptian temples and landmarks along the Nile. Exact stops, timing, and inclusions follow the confirmed itinerary.",
-    "image": "assets/images/%D9%85%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%A3%D9%82%D8%B5%D8%B1%20%D8%B9%D9%86%D8%AF%20%D8%A7%D9%84%D8%BA%D8%B1%D9%88%D8%A8.png",
+    "image": "logo.png",
     "category": "culture",
     "href": "tours/luxor-day-trip.html",
     "detail": "Ask Atlantis to confirm the itinerary, duration, pickup arrangements, inclusions and any additional charges before booking."

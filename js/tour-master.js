@@ -52,10 +52,10 @@
 
     try {
       const result = new URL(
-        value.startsWith("assets/")
+        (value.startsWith("assets/") || value === "logo.png")
           ? value
           : value,
-        value.startsWith("assets/")
+        (value.startsWith("assets/") || value === "logo.png")
           ? root
           : location.href
       );
