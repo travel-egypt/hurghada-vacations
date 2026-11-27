@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="it">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Storie, segreti e meraviglie del Mar Rosso in Egitto. Entra in un mondo di narrativa originale, storia naturale e luoghi straordinari da scoprire." name="description"/>
+  <title>
+   Le Cronache del Mar Rosso | Storie, Segreti &amp; Meraviglie
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Cairo:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <style>
+   :root{--navy:#08283b;--deep:#041b2b;--teal:#087e83;--gold:#d8b16d;--ink:#183243;--muted:#647986;--paper:#f5f4ef;--white:#fff;--line:#e2e7e6;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7}a{color:inherit;text-decoration:none}.container{width:min(1160px,calc(100% - 44px));margin:auto}
+.site-header{min-height:82px;background:rgba(4,27,43,.97);color:white;display:flex;align-items:center;position:relative;z-index:5}.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.brand{font-weight:700;letter-spacing:.08em;font-size:15px}.brand small{display:block;color:#b9cbd1;font-size:9px;letter-spacing:.2em;margin-top:2px}.nav-links{display:flex;align-items:center;gap:18px;font-size:13px}.nav-links a{color:#e5eef0;transition:.2s;white-space:nowrap}.nav-links a:hover,.nav-links a.active{color:var(--gold)}.nav-links .book{border:1px solid rgba(216,177,109,.7);padding:10px 17px;border-radius:2px}.menu-toggle{display:none;background:none;color:white;border:0;font-size:25px;cursor:pointer}
+
+.header-lang-switch{display:flex;flex-wrap:wrap;gap:4px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:4px 6px;border-radius:20px;max-width:250px}
+.header-lang-switch button{border:0;background:transparent;color:#dcecf2;padding:4px 7px;border-radius:14px;font-size:10.5px;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:.04em}
+.header-lang-switch button:hover{color:var(--gold)}
+.header-lang-switch button.active{background:var(--gold);color:var(--deep)}
+
+.hero{min-height:570px;position:relative;display:flex;align-items:center;color:#fff;overflow:hidden;background:linear-gradient(110deg,#041b2b,#0c5969)}.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,21,34,.9),rgba(3,21,34,.38)),url(https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada-strand.jpg) center/cover}.hero-content{position:relative;max-width:820px;padding:90px 0 100px}.eyebrow,.section-kicker{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:700}.hero h1{font:600 clamp(44px,7vw,82px)/1.05 var(--serif);margin:18px 0 20px;max-width:850px}.hero h1 span{color:#e4c58e}.hero p{font-size:17px;max-width:650px;color:#e0e9e9;margin:0 0 27px}.hero-note{font-size:11px;letter-spacing:.13em;color:#d4e0e1;text-transform:uppercase}
+.intro{padding:82px 0 45px;text-align:center;max-width:800px}.intro h2{font:600 clamp(30px,4vw,46px)/1.2 var(--serif);color:var(--navy);margin:12px 0}.intro p{color:var(--muted);font-size:15px}.content-section{padding:24px 0 85px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:27px}.section-head h2{font:600 34px var(--serif);margin:8px 0 0;color:var(--navy)}.filters{display:flex;gap:9px;flex-wrap:wrap}.filter{background:transparent;border:1px solid #cbd5d5;padding:9px 16px;border-radius:30px;color:#506570;font:600 12px var(--sans);cursor:pointer}.filter.active,.filter:hover{background:var(--navy);border-color:var(--navy);color:white}.story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}.story-card{background-color: #F1EBDD;border:1px solid var(--line);box-shadow:0 8px 26px rgba(6,35,50,.045);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}.story-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(6,35,50,.11)}.story-card-image{height:280px;position:relative;overflow:hidden;background:#d9e2df}.story-card-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.story-card:hover img{transform:scale(1.04)}.story-type{display:inline-block;background:rgba(4,27,43,.88);color:#e8c98e;font-size:9px;letter-spacing:.17em;padding:8px 11px;text-transform:uppercase;font-weight:700}.story-card-image .story-type{position:absolute;left:18px;top:18px}.story-card-body{padding:24px 27px 26px;display:flex;flex-direction:column;flex:1}.story-place{font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:var(--teal);font-weight:700}.story-card h3{font:600 27px/1.2 var(--serif);color:var(--navy);margin:10px 0}.story-card p{color:var(--muted);font-size:13px;margin:0 0 23px}.read-link{font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:var(--navy);margin-top:auto}.read-link b{color:#b78c4e;margin-left:7px}
+.library-note{margin:45px 0 0;background:#eaf0ee;padding:23px 27px;border-left:3px solid var(--gold);color:#526a73;font-size:13px}.library-note strong{color:var(--navy)}.longform{padding:70px 0 95px;background:#fff}.longform-head{text-align:center;max-width:750px;margin:0 auto 50px}.longform-head h2{font:600 42px var(--serif);color:var(--navy);margin:9px 0}.longform-head p{color:var(--muted)}.story-article{max-width:980px;margin:0 auto 76px;scroll-margin-top:68px;background:#fff}.article-cover{height:390px;position:relative;overflow:hidden;background:#0a3145}.article-cover img{width:100%;height:100%;object-fit:cover}.cover-shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,22,35,.9),rgba(3,22,35,.03) 80%)}.cover-copy{position:absolute;left:clamp(24px,6vw,65px);right:25px;bottom:35px;color:white}.cover-copy .story-place{display:block;color:#e8c98e;margin:12px 0 6px}.cover-copy h2{font:600 clamp(32px,5vw,51px)/1.1 var(--serif);margin:0 0 9px}.cover-copy p{margin:0;color:#e3ebeb;max-width:660px}.article-inner{max-width:760px;margin:auto;padding:38px 24px 0}.story-language p{font:16px/1.95 var(--serif);color:#334c58;margin:0 0 21px}.story-language p:first-child:first-letter{font:600 56px/.8 var(--serif);float:left;color:#b78c4e;padding:8px 9px 0 0}.story-language .story-ending{font:600 21px/1.6 var(--serif);color:var(--navy);border-left:3px solid var(--gold);padding:9px 0 9px 20px;margin:28px 0}.fact-note{font:13px/1.7 var(--sans)!important;background:#eef3f1;padding:18px 20px;border-left:3px solid var(--teal);color:#526a73!important}.sources{font:12px/1.8 var(--sans)!important;color:#5d7078;border-top:1px solid var(--line);padding-top:18px;margin-top:20px}.sources a{color:#087e83;text-decoration:underline;text-underline-offset:3px}.article-footer{border-top:1px solid var(--line);margin-top:34px;padding:20px 0;display:flex;justify-content:space-between;gap:20px;align-items:center}.discover-link{background:var(--navy);color:white;padding:12px 18px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}.discover-link span{color:var(--gold);margin-left:8px}.back-top{font-size:11px;color:var(--muted)}.language-bar{position:sticky;top:0;z-index:4;background:rgba(245,244,239,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 0}.language-inner{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.language-inner span{font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}.language-switch{display:flex;gap:6px;flex-wrap:wrap}.language-switch button{border:1px solid #c8d3d2;background-color: #F1EBDD;color:var(--navy);padding:7px 12px;font-size:11px;font-weight:700;cursor:pointer;text-transform:uppercase}.language-switch button.active{background:var(--navy);color:white;border-color:var(--navy)}
+footer{background:var(--deep);color:#d4e0e3;padding:43px 0;text-align:center}footer strong{font:600 21px var(--serif);color:white}footer p{font-size:12px;color:#aebfc4;margin:8px auto 0;max-width:550px}.footer-links{display:flex;justify-content:center;gap:22px;margin-top:20px;font-size:11px;color:#e8c98e;flex-wrap:wrap}
+
+/* RTL Support */
+html[dir="rtl"] body{font-family:'Cairo','Manrope',Arial,sans-serif !important}
+html[dir="rtl"] body :is(h1,h2,h3,h4,h5,h6,p,li,label,input,select,textarea,button,a,span,div){
+  font-family:'Cairo','Manrope',Arial,sans-serif !important;
+  letter-spacing:0 !important;
+}
+html[dir="rtl"] .eyebrow,
+html[dir="rtl"] .section-kicker,
+html[dir="rtl"] .story-type,
+html[dir="rtl"] .story-place,
+html[dir="rtl"] .read-link,
+html[dir="rtl"] .hero-note,
+html[dir="rtl"] .language-inner span,
+html[dir="rtl"] .discover-link{letter-spacing:0 !important;text-transform:none}
+html[dir="rtl"] .story-language p:first-child:first-letter{float:none;font-size:inherit;line-height:inherit;padding:0;color:inherit}
+html[dir="rtl"] .story-language .story-ending{border-left:0;border-right:3px solid var(--gold);padding:9px 20px 9px 0}
+html[dir="rtl"] .library-note{border-left:0;border-right:3px solid var(--gold)}
+html[dir="rtl"] .fact-note{border-left:0;border-right:3px solid var(--teal)}
+html[dir="rtl"] .story-card-image .story-type{left:auto;right:18px}
+
+@media(max-width:760px){.site-header{height:auto;min-height:72px}.menu-toggle{display:block}.nav{flex-wrap:wrap;padding:15px 0}.nav-links{display:none;width:100%;flex-direction:column;gap:15px;padding:12px 0 8px}.nav-links.open{display:flex}.hero{min-height:500px}.hero-content{padding:70px 0}.hero p{font-size:15px}.section-head{display:block}.filters{margin-top:18px}.story-grid{grid-template-columns:1fr}.story-card-image{height:230px}.article-cover{height:310px}.article-inner{padding:27px 20px 0}.story-language p{font-size:15px}.language-inner{align-items:flex-start;flex-direction:column}.intro{padding-top:60px}.longform{padding-top:55px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+  <link href="https://travel-egypt.github.io/hurghada-vacations/stories.html" rel="canonical"/>
+  <meta content="website" property="og:type"/>
+  <meta content="The Red Sea Chronicles | Stories, Secrets &amp; Wonders" property="og:title"/>
+  <meta content="The Red Sea Chronicles by Atlantis Tours and Experiences: original fiction, documentary stories and natural history from Egypt's Red Sea." property="og:description"/>
+  <meta content="https://travel-egypt.github.io/hurghada-vacations/stories.html" property="og:url"/>
+  <meta content="Atlantis Tours and Experiences" property="og:site_name"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <style id="atlantis-refined-typography">
+   /* ATLANTIS — refined typography and warm coastal reading system */
+:root {
+  --atl-sand: #E9E1D3;
+  --atl-sand-soft: #F1EBDD;
+  --atl-sand-deep: #DCD2C1;
+  --atl-ink: #293B40;
+  --atl-muted: #66716F;
+  --atl-ocean: #29454B;
+  --atl-gold: #B99B70;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  color: var(--atl-ink) !important;
+  background-color: var(--atl-sand) !important;
+  font-size: 15.5px;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body :is(button, input, select, textarea) { font-family: 'Manrope', Arial, sans-serif !important; }
+h1, h2 {
+  font-family: 'DM Serif Display', Georgia, serif !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.13 !important;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2.65rem, 5.2vw, 4.65rem) !important; }
+h2 { font-size: clamp(2rem, 3.35vw, 3rem) !important; }
+h3 {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.018em;
+  line-height: 1.28 !important;
+  font-size: clamp(1.12rem, 1.55vw, 1.42rem) !important;
+}
+h4, h5, h6 {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.01em;
+}
+p, li, label, input, select, textarea {
+  font-family: 'Manrope', Arial, sans-serif !important;
+  letter-spacing: 0;
+}
+p { line-height: 1.72; }
+small, .eyebrow, .kicker, .section-label, .card-category {
+  letter-spacing: .075em;
+}
+button, .btn, a.button, .book-link, .main-button, .cta-button {
+  font-weight: 650 !important;
+  letter-spacing: .035em !important;
+}
+/* Soft, warm surfaces instead of bright white cards */
+.tour-card, .info-card, .info-box, .feature-card, .story-card,
+.tool-card, .price-card, .faq-item, .content-card, .booking-panel,
+.form-panel, .contact-card, .guide-card, .card, .tour-includes {
+  background-color: var(--atl-sand-soft) !important;
+  color: var(--atl-ink) !important;
+}
+.tour-card p, .info-card p, .info-box p, .feature-card p,
+.story-card p, .tool-card p, .price-card p, .content-card p {
+  color: var(--atl-muted);
+}
+.tour-card .tour-lead {
+  font-size: .94rem !important;
+  line-height: 1.68 !important;
+  font-weight: 450 !important;
+}
+@media (max-width: 640px) {
+  body { font-size: 15px; line-height: 1.68; }
+  h1 { font-size: clamp(2.25rem, 10vw, 3.2rem) !important; }
+  h2 { font-size: clamp(1.8rem, 8vw, 2.35rem) !important; }
+  h3 { font-size: 1.12rem !important; }
+}
+  </style>
+  <link href="https://travel-egypt.github.io/hurghada-vacations/it/stories.html" rel="canonical"/>
+  <link href="https://travel-egypt.github.io/hurghada-vacations/stories.html" hreflang="en" rel="alternate"/>
+  <link href="https://travel-egypt.github.io/hurghada-vacations/de/stories.html" hreflang="de" rel="alternate"/>
+  <link href="https://travel-egypt.github.io/hurghada-vacations/ru/stories.html" hreflang="ru" rel="alternate"/>
+  <link href="https://travel-egypt.github.io/hurghada-vacations/fr/stories.html" hreflang="fr" rel="alternate"/>
+  <link href="https://travel-egypt.github.io/hurghada-vacations/it/stories.html" hreflang="it" rel="alternate"/>
+  <link href="https://travel-egypt.github.io/hurghada-vacations/es/stories.html" hreflang="es" rel="alternate"/>
+  <link href="https://travel-egypt.github.io/hurghada-vacations/pl/stories.html" hreflang="pl" rel="alternate"/>
+  <link href="https://travel-egypt.github.io/hurghada-vacations/ar/stories.html" hreflang="ar" rel="alternate"/>
+  <link href="https://travel-egypt.github.io/hurghada-vacations/stories.html" hreflang="x-default" rel="alternate"/>
+ </head>
+ <body id="top">
+  <header class="site-header">
+   <nav class="nav container">
+    <a class="brand" href="https://travel-egypt.github.io/hurghada-vacations/it/index.html">
+     <span data-i18n="brandName">
+      ATLANTIS TOURS &amp; EXPERIENCES
+     </span>
+     <small data-i18n="brandSub">
+      SCOPRI IL MAR ROSSO
+     </small>
+    </a>
+    <div aria-label="Header language switcher" class="header-lang-switch" role="group">
+     <button aria-pressed="false" class="" data-lang="en" type="button">
+      EN
+     </button>
+     <button aria-pressed="false" class="" data-lang="de" type="button">
+      DE
+     </button>
+     <button aria-pressed="false" class="" data-lang="ru" type="button">
+      RU
+     </button>
+     <button aria-pressed="false" class="" data-lang="fr" type="button">
+      FR
+     </button>
+     <button aria-pressed="true" class="active" data-lang="it" type="button">
+      IT
+     </button>
+     <button aria-pressed="false" class="" data-lang="es" type="button">
+      ES
+     </button>
+     <button aria-pressed="false" class="" data-lang="pl" type="button">
+      PL
+     </button>
+     <button aria-pressed="false" class="" data-lang="ar" type="button">
+      AR
+     </button>
+    </div>
+    <button aria-label="Open menu" class="menu-toggle" id="menuToggle">
+     ☰
+    </button>
+    <div class="nav-links" id="navLinks">
+     <a data-i18n="navHome" href="https://travel-egypt.github.io/hurghada-vacations/it/index.html">
+      Home
+     </a>
+     <a data-i18n="navTours" href="https://travel-egypt.github.io/hurghada-vacations/it/all-tours.html">
+      Escursioni
+     </a>
+     <a class="active" data-i18n="navStories" href="https://travel-egypt.github.io/hurghada-vacations/it/stories.html">
+      Storie
+     </a>
+     <a data-i18n="navPrices" href="https://travel-egypt.github.io/hurghada-vacations/hurghada-price-guide.html">
+      Guida Prezzi
+     </a>
+     <a data-i18n="navBooking" href="https://travel-egypt.github.io/hurghada-vacations/it/booking.html">
+      Prenotazione
+     </a>
+     <a data-i18n="navContact" href="https://travel-egypt.github.io/hurghada-vacations/it/contact.html">
+      Contatti
+     </a>
+     <a class="book" data-i18n-html="navBookBtn" href="https://travel-egypt.github.io/hurghada-vacations/it/booking.html">
+      Pianifica Esperienza ↗
+     </a>
+    </div>
+   </nav>
+  </header>
+  <section class="hero">
+   <div class="container hero-content">
+    <span class="eyebrow" data-i18n="heroEyebrow">
+     Una raccolta editoriale di Atlantis Tours and Experiences
+    </span>
+    <h1 data-i18n-html="heroTitle">
+     Le Cronache del
+     <span>
+      Mar Rosso
+     </span>
+    </h1>
+    <p data-i18n="heroDesc">
+     Storie, segreti e meraviglie del Mar Rosso in Egitto. Entra in un mondo di narrativa originale, storia naturale e luoghi straordinari da scoprire.
+    </p>
+    <div class="hero-note" data-i18n="heroNote">
+     Storie originali · Scoperte documentate · Lo spirito dell'Egitto
+    </div>
+   </div>
+  </section>
+  <section class="intro container">
+   <span class="section-kicker" data-i18n="introKicker">
+    Oltre il viaggio
+   </span>
+   <h2 data-i18n-html="introTitle">
+    Alcuni luoghi sono fatti per essere esplorati.
+    <br/>
+    Altri per restare nella memoria.
+   </h2>
+   <p data-i18n="introDesc">
+    Benvenuti in una raccolta dove l'immaginazione incontra il mondo reale. Leggi un racconto ispirato a un'isola e scopri fauna, paesaggi e storia naturale del Mar Rosso.
+   </p>
+  </section>
+  <div class="language-bar">
+   <div class="container language-inner">
+    <span data-i18n="langBarLabel">
+     Scegli la lingua di lettura
+    </span>
+    <div class="language-switch">
+     <button aria-pressed="false" class="" data-lang="en" type="button">
+      English
+     </button>
+     <button aria-pressed="false" class="" data-lang="de" type="button">
+      Deutsch
+     </button>
+     <button aria-pressed="false" class="" data-lang="ru" type="button">
+      Русский
+     </button>
+     <button aria-pressed="false" class="" data-lang="fr" type="button">
+      Français
+     </button>
+     <button aria-pressed="true" class="active" data-lang="it" type="button">
+      Italiano
+     </button>
+     <button aria-pressed="false" class="" data-lang="es" type="button">
+      Español
+     </button>
+     <button aria-pressed="false" class="" data-lang="pl" type="button">
+      Polski
+     </button>
+     <button aria-pressed="false" class="" data-lang="ar" type="button">
+      العربية
+     </button>
+    </div>
+   </div>
+  </div>
+  <section class="content-section container">
+   <div class="section-head">
+    <div>
+     <span class="section-kicker" data-i18n="colKicker">
+      La raccolta di storie
+     </span>
+     <h2 data-i18n="colTitle">
+      Scegli una storia. Entra in un altro mondo.
+     </h2>
+    </div>
+    <div class="filters">
+     <button class="filter active" data-filter="all" data-i18n="filterAll">
+      Tutte le storie
+     </button>
+     <button class="filter" data-filter="fiction" data-i18n="filterFiction">
+      Narrativa
+     </button>
+     <button class="filter" data-filter="documentary" data-i18n="filterDoc">
+      Documentario
+     </button>
+    </div>
+   </div>
+   <div class="story-grid">
+    <a class="story-card" data-kind="fiction" href="#orange-bay">
+     <div class="story-card-image">
+      <img alt="Orange Bay · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada-strand.jpg"/>
+      <span class="story-type" data-i18n="badgeFiction">
+       RACCONTO DI NARRATIVA
+      </span>
+     </div>
+     <div class="story-card-body">
+      <span class="story-place" data-i18n="s1Place">
+       Orange Bay · Area Isole Giftun
+      </span>
+      <h3 data-i18n="s1Title">
+       La Marea che Mantenne una Promessa
+      </h3>
+      <p data-i18n="s1Desc">
+       La storia di una figlia, una vecchia bussola e il coraggio di ricominciare.
+      </p>
+      <span class="read-link">
+       <span data-i18n="readStory">
+        Leggi la storia
+       </span>
+       <b>
+        ↗
+       </b>
+      </span>
+     </div>
+    </a>
+    <a class="story-card" data-kind="fiction" href="#mahmya">
+     <div class="story-card-image">
+      <img alt="Mahmya · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg"/>
+      <span class="story-type" data-i18n="badgeFiction">
+       RACCONTO DI NARRATIVA
+      </span>
+     </div>
+     <div class="story-card-body">
+      <span class="story-place" data-i18n="s2Place">
+       Mahmya · Area Isole Giftun
+      </span>
+      <h3 data-i18n="s2Title">
+       La Quiete tra Due Onde
+      </h3>
+      <p data-i18n="s2Desc">
+       Una storia toccante su un fratello e una sorella che imparano ad ascoltarsi di nuovo.
+      </p>
+      <span class="read-link">
+       <span data-i18n="readStory">
+        Leggi la storia
+       </span>
+       <b>
+        ↗
+       </b>
+      </span>
+     </div>
+    </a>
+    <a class="story-card" data-kind="documentary" href="#abu-dabbab">
+     <div class="story-card-image">
+      <img alt="Abu Dabbab Bay · Southern Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+      <span class="story-type" data-i18n="badgeDocResearch">
+       DOCUMENTARIO · BASATO SU RICERCHE
+      </span>
+     </div>
+     <div class="story-card-body">
+      <span class="story-place" data-i18n="s3Place">
+       Baia di Abu Dabbab · Mar Rosso Meridionale
+      </span>
+      <h3 data-i18n="s3Title">
+       Il Prato Sotto il Blu
+      </h3>
+      <p data-i18n="s3Desc">
+       La vera storia delle praterie marine di Abu Dabbab, delle tartarughe verdi e del sfuggente dugongo.
+      </p>
+      <span class="read-link">
+       <span data-i18n="readStory">
+        Leggi la storia
+       </span>
+       <b>
+        ↗
+       </b>
+      </span>
+     </div>
+    </a>
+    <a class="story-card" data-kind="documentary" href="#coral-kingdom">
+     <div class="story-card-image">
+      <img alt="The Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"/>
+      <span class="story-type" data-i18n="badgeDocNatural">
+       DOCUMENTARIO · STORIA NATURALE
+      </span>
+     </div>
+     <div class="story-card-body">
+      <span class="story-place" data-i18n="s4Place">
+       Il Mar Rosso
+      </span>
+      <h3 data-i18n="s4Title">
+       Una Città di Pietra Viva
+      </h3>
+      <p data-i18n="s4Desc">
+       Il mondo straordinario e fragile delle barriere coralline del Mar Rosso — e perché ogni ospite conta.
+      </p>
+      <span class="read-link">
+       <span data-i18n="readStory">
+        Leggi la storia
+       </span>
+       <b>
+        ↗
+       </b>
+      </span>
+     </div>
+    </a>
+   </div>
+   <div class="library-note">
+    <strong data-i18n="promiseStrong">
+     La nostra promessa editoriale:
+    </strong>
+    <span data-i18n="promiseText">
+     La narrativa è chiaramente indicata come creazione originale. I documentari si basano su fonti di ricerca e conservazione con link di approfondimento. Non presentiamo mai personaggi o eventi inventati come testimonianze reali.
+    </span>
+   </div>
+  </section>
+  <section class="longform">
+   <div class="container">
+    <div class="longform-head">
+     <span class="section-kicker" data-i18n="longKicker">
+      Leggi con calma. Scopri in profondità.
+     </span>
+     <h2 data-i18n="longTitle">
+      Storie dal Mar Rosso
+     </h2>
+     <p data-i18n="longDesc">
+      Prenditi il tuo tempo. Ogni storia è scritta per essere vissuta, non scorsa in fretta.
+     </p>
+    </div>
+    <article class="story-article" data-kind="fiction" id="orange-bay">
+     <div class="article-cover">
+      <img alt="Orange Bay · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hurghada-strand.jpg"/>
+      <div class="cover-shade">
+      </div>
+      <div class="cover-copy">
+       <span class="story-type" data-i18n="badgeFiction">
+        RACCONTO DI NARRATIVA
+       </span>
+       <span class="story-place" data-i18n="s1Place">
+        Orange Bay · Area Isole Giftun
+       </span>
+       <h2 data-i18n="s1Title">
+        La Marea che Mantenne una Promessa
+       </h2>
+       <p data-i18n="s1Desc">
+        La storia di una figlia, una vecchia bussola e il coraggio di ricominciare.
+       </p>
+      </div>
+     </div>
+     <div class="article-inner">
+      <div class="story-language" id="articleBody-orange-bay">
+       <p>
+        La bussola non si muoveva da ventitré anni. Il bordo in ottone era graffiato, il vetro opaco in un angolo e l'ago tremava ogni volta che la barca attraversava una scia. Eppure Lina la portava con la cura che si riserva alla luce.
+       </p>
+       <p>
+        Gliela aveva regalata suo padre quando aveva nove anni. Allora le diceva spesso che una bussola non ti dice dove andare, ma ti ricorda che puoi scegliere una direzione. Lei rideva di quella frase: nell'infanzia ogni viaggio sembra semplice. Lasci la riva, trovi qualcosa di bello e torni a casa prima di cena.
+       </p>
+       <p>
+        Ora aveva trentadue anni e la parola casa conteneva troppe stanze. Suo padre non c'era più. La piccola officina dove riparava le barche da pesca aveva chiuso. Il fratello minore si era trasferito all'estero. E Lina, che per anni aveva detto che un giorno si sarebbe presa una vera pausa, era finalmente su una barca del mattino in partenza da Hurghada.
+       </p>
+       <p>
+        Aveva scelto Orange Bay perché suo padre aveva cerchiato l'isola su una vecchia carta geografica. Accanto al cerchio aveva scritto solo due parole: “Un giorno.” Non aveva mai spiegato cosa intendesse. Forse voleva portarla lì. Forse gli piaceva semplicemente la forma della baia. Quell'incertezza l'aveva accompagnata più a lungo del previsto.
+       </p>
+       <p>
+        La città allentava lentamente la presa sull'orizzonte. Il motore trovò un ritmo regolare. Intorno a Lina, degli sconosciuti stavano già creando ricordi: un bambino contava le scie bianche dietro la barca; due amici discutevano su chi sarebbe entrato per primo in acqua; una donna teneva il cappello con entrambe le mani e rideva nel vento. Lina restava in silenzio, rigirandosi la bussola nel palmo.
+       </p>
+       <p>
+        Quando l'isola apparve, non fu una rivelazione improvvisa. Arrivò a poco a poco: prima una linea chiara, poi una distesa di sabbia, infine l'acqua che cambiava colore man mano che la barca si avvicinava. Il blu diventò turchese; il turchese un verde chiaro e luminoso sui bassi fondali. La riva sembrava quasi irreale nella sua calma, ma il mare era vivo di piccoli movimenti: luce che si spostava, increspature che si incrociavano, un uccello che attraversava brevemente il cielo.
+       </p>
+       <p>
+        Lina scese sulla sabbia e sentì il calore salire dai piedi. Si aspettava di incontrare lì la sua tristezza. Invece, per qualche minuto, ci fu solo il suono dell'acqua che si adagiava sulla spiaggia. Si sedette all'ombra, aprì la vecchia mappa e appoggiò la bussola accanto al cerchio sbiadito.
+       </p>
+       <p>
+        «Ce l'hai fatta», sussurrò, incerta se stesse parlando a suo padre, a se stessa da bambina o alla promessa nascosta in quelle due parole.
+       </p>
+       <p>
+        Una bambina lì vicino cercava di costruire una torre con la sabbia bagnata. Ogni onda avanzava e ne portava via un pezzetto. La bambina aggrottava la fronte, ricostruiva e riprovava. La madre offrì aiuto, ma lei scosse la testa: «Deve stare in piedi da sola.»
+       </p>
+       <p>
+        Lina osservò l'onda successiva ammorbidire la torre. Pensò a tutto ciò che aveva cercato di tenere in piedi con la forza: un'attività, una routine familiare, l'apparenza che andasse tutto bene. Aveva scambiato la resistenza con l'immutabilità. Il mare offriva una lezione più discreta: una costa cambia ogni giorno e resta pur sempre una costa. Un'onda porta via qualcosa e lascia qualcos'altro dietro di sé.
+       </p>
+       <p>
+        Più tardi camminò lungo l'acqua con la bussola in mano. Non trovò nessun messaggio segreto né una meta nascosta. Nessuna risposta miracolosa aspettava sotto il mare. C'erano solo l'isola, chi la condivideva, l'acqua luminosa e il dono semplice di esserci.
+       </p>
+       <p>
+        Prima di risalire a bordo per il rientro, Lina fotografò la bussola appoggiata sulla mappa. Mandò la foto al fratello con un breve messaggio: «Credo di capire cosa intendesse. La prossima volta veniamo insieme.»
+       </p>
+       <p>
+        La risposta arrivò prima che la barca lasciasse la riva: «Scegli la data. Ci sarò.»
+       </p>
+       <p>
+        Durante il viaggio di ritorno, Lina mise finalmente via la bussola. Guardò l'isola rimpicciolirsi, ma non sentiva più di lasciare indietro qualcosa. Alcuni luoghi non ti chiedono di restare. Ti regalano abbastanza quiete per ricordare cosa vuoi portare a casa.
+       </p>
+       <p class="story-ending">
+        E per la prima volta dopo tanto tempo, la direzione davanti a lei non la spaventava più.
+       </p>
+      </div>
+      <div class="article-footer">
+       <a class="discover-link" href="https://travel-egypt.github.io/hurghada-vacations/it/all-tours.html">
+        <span data-i18n="discoverExp">
+         Scopri l'esperienza
+        </span>
+        <span>
+         →
+        </span>
+       </a>
+       <a class="back-top" data-i18n="backTop" href="#top">
+        Torna alle storie ↑
+       </a>
+      </div>
+     </div>
+    </article>
+    <article class="story-article" data-kind="fiction" id="mahmya">
+     <div class="article-cover">
+      <img alt="Mahmya · Giftun Islands area" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/02010%2005712%20Mahmya%20Island.jpg"/>
+      <div class="cover-shade">
+      </div>
+      <div class="cover-copy">
+       <span class="story-type" data-i18n="badgeFiction">
+        RACCONTO DI NARRATIVA
+       </span>
+       <span class="story-place" data-i18n="s2Place">
+        Mahmya · Area Isole Giftun
+       </span>
+       <h2 data-i18n="s2Title">
+        La Quiete tra Due Onde
+       </h2>
+       <p data-i18n="s2Desc">
+        Una storia toccante su un fratello e una sorella che imparano ad ascoltarsi di nuovo.
+       </p>
+      </div>
+     </div>
+     <div class="article-inner">
+      <div class="story-language" id="articleBody-mahmya">
+       <p>
+        Per sette anni Mariam e Youssef si erano parlati soprattutto con brevi messaggi. Un augurio di compleanno. Una foto del giardino della madre. Una domanda pratica su un documento. Non avevano litigato per un solo grande motivo; avevano accumulato molti piccoli silenzi, ciascuno facile da spiegare e più difficile da superare.
+       </p>
+       <p>
+        Quando la madre propose una giornata a Mahmya, nessuno dei due volle deluderla. Accettarono la gita in barca, ma su quasi tutto il resto la pensavano diversamente. Youssef arrivò in ritardo. Mariam scelse un posto all'estremità opposta del ponte. La madre li guardò entrambi e non disse nulla.
+       </p>
+       <p>
+        All'inizio il mare rendeva difficile parlare. Il vento portava via le parole. La barca saliva e scendeva dolcemente mentre la costa scivolava via alle loro spalle. La madre chiuse gli occhi. Mariam guardava l'acqua. Youssef controllava il telefono finché il segnale non calò e lo schermo diventò inutile.
+       </p>
+       <p>
+        «Puoi metterlo via», disse Mariam.
+       </p>
+       <p>
+        «Stavo solo guardando l'ora.»
+       </p>
+       <p>
+        «Il mare ha il suo orologio.»
+       </p>
+       <p>
+        Era la prima frase che si scambiavano non legata agli appuntamenti della madre o a una commissione di famiglia. Youssef accennò quasi a un sorriso.
+       </p>
+       <p>
+        Sull'isola la giornata si aprì su luce, sabbia e il colore dell'acqua bassa. La madre camminò piano verso un punto d'ombra. Mariam l'aiutò con la borsa. Youssef portò l'acqua. Per un po' tutti e tre si mossero insieme senza bisogno di spiegare nulla.
+       </p>
+       <p>
+        Più tardi la madre riposò. Fratello e sorella camminarono lungo la riva. Una piccola onda raggiunse i loro piedi e si ritirò, lasciando una sottile linea luminosa sulla sabbia.
+       </p>
+       <p>
+        «Ti ricordi il secchiello blu?», chiese Youssef.
+       </p>
+       <p>
+        Mariam rise prima di potersi trattenere. Da bambini avevano portato un secchiello blu in spiaggia e passavano ore a riempirlo, solo per vedere l'acqua uscire da una crepa. Youssef insisteva che avrebbe potuto ripararlo con un pezzo d'alga. Mariam gli credeva.
+       </p>
+       <p>
+        «Dicevi che era un secchiello speciale», disse lei.
+       </p>
+       <p>
+        «Lo era. Ci ha insegnato che il mare vince sempre.»
+       </p>
+       <p>
+        «No. Ci ha insegnato a portare un secchiello migliore.»
+       </p>
+       <p>
+        Risero. Non era la soluzione a sette anni, ma era un inizio.
+       </p>
+       <p>
+        Youssef si fermò: «Credevo fossi arrabbiata perché me ne ero andato.»
+       </p>
+       <p>
+        «Ero arrabbiata perché te n'eri andato senza dirmi quanto mi sarei sentita sola. E poi ero arrabbiata perché mi mancavi.»
+       </p>
+       <p>
+        Guardò l'acqua: «Pensavo che se avessi chiamato, avresti sentito quanto ero insicuro. Volevo sembrare uno che aveva tutto sotto controllo.»
+       </p>
+       <p>
+        «Con me non hai mai dovuto sembrare sicuro.»
+       </p>
+       <p>
+        Erano parole semplici. Non cancellavano gli anni, ma aprivano uno spazio in cui qualcosa di sincero poteva finalmente stare in piedi.
+       </p>
+       <p>
+        Tornati dalla madre, la trovarono sveglia che li guardava con un sorriso quieto. Non chiese di cosa avessero parlato. Porse loro solo il vecchio secchiello blu portato per scherzo da un armadio di casa. Il manico era sbiadito; una crepa correva ancora lungo un lato.
+       </p>
+       <p>
+        «Pensavo potessimo fare una foto», disse.
+       </p>
+       <p>
+        Tutti e tre si misero vicino all'acqua. La foto non era perfetta. Il vento scompigliava i capelli, il sole faceva socchiudere gli occhi, il secchiello sembrava buffo. Ma quando Mariam la rivide più tardi, notò che nessuno guardava l'obiettivo. Si guardavano l'un l'altro.
+       </p>
+       <p>
+        Sulla barca del ritorno Youssef chiese alla sorella quando fosse libera la settimana seguente. Mariam gli indicò un giorno. Tra loro la madre si addormentò.
+       </p>
+       <p class="story-ending">
+        L'isola non ha ricucito una famiglia in un pomeriggio. Ha dato loro qualcosa di più credibile: un tratto di riva tranquillo, uno scherzo ritrovato e abbastanza spazio per riprovare.
+       </p>
+      </div>
+      <div class="article-footer">
+       <a class="discover-link" href="https://travel-egypt.github.io/hurghada-vacations/it/all-tours.html">
+        <span data-i18n="discoverExp">
+         Scopri l'esperienza
+        </span>
+        <span>
+         →
+        </span>
+       </a>
+       <a class="back-top" data-i18n="backTop" href="#top">
+        Torna alle storie ↑
+       </a>
+      </div>
+     </div>
+    </article>
+    <article class="story-article" data-kind="documentary" id="abu-dabbab">
+     <div class="article-cover">
+      <img alt="Abu Dabbab Bay · Southern Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"/>
+      <div class="cover-shade">
+      </div>
+      <div class="cover-copy">
+       <span class="story-type" data-i18n="badgeDocResearch">
+        DOCUMENTARIO · BASATO SU RICERCHE
+       </span>
+       <span class="story-place" data-i18n="s3Place">
+        Baia di Abu Dabbab · Mar Rosso Meridionale
+       </span>
+       <h2 data-i18n="s3Title">
+        Il Prato Sotto il Blu
+       </h2>
+       <p data-i18n="s3Desc">
+        La vera storia delle praterie marine di Abu Dabbab, delle tartarughe verdi e del sfuggente dugongo.
+       </p>
+      </div>
+     </div>
+     <div class="article-inner">
+      <div class="story-language" id="articleBody-abu-dabbab">
+       <p>
+        Vista da una barca, la baia di Abu Dabbab, lungo la costa meridionale del Mar Rosso in Egitto, può sembrare solo un tratto calmo di acqua turchese tra sabbia e barriera. Sotto la superficie, però, opera un motore silenzioso della vita costiera: praterie di fanerogame marine che oscillano lievi con le correnti.
+       </p>
+       <p>
+        Le praterie marine non sono semplici distese d'erba subacquea. Sono piante marine superiori che trattengono i sedimenti, favoriscono la trasparenza dell'acqua, immagazzinano carbonio e offrono rifugio a pesci giovani, crostacei e invertebrati. In baie riparata come Abu Dabbab, questi prati verdi funzionano come aree di pascolo e vivaio.
+       </p>
+       <p>
+        Le tartarughe verdi (
+        <em>
+         Chelonia mydas
+        </em>
+        ) visitano spesso questi fondali ricchi di fanerogame e alghe. Osservare una tartaruga verde brucare con calma o salire a respirare è uno degli incontri più memorabili del Mar Rosso — purché si mantenga una distanza rispettosa, senza mai inseguire o sbarrare la strada all'animale e senza calpestare coralli o praterie.
+       </p>
+       <p>
+        Abu Dabbab è nota anche per occasionali avvistamenti del dugongo, un mammifero marino erbivoro schivo imparentato con i lamantini. I dugonghi sono rari, riservati e si spostano su ampi tratti: nessun operatore serio può promettere un avvistamento in un giorno preciso, perché la fauna selvatica segue i propri tempi e non un programma di escursioni.
+       </p>
+       <p class="fact-note">
+        <strong>
+         Nota di tutela ambientale:
+        </strong>
+        La salute di praterie marine e baie coralline dipende da abitudini attente: restare a galla invece di appoggiarsi su fondale o coralli, lasciare ampio spazio a tartarughe e dugonghi, non toccare né nutrire gli animali e trattenere a bordo ogni rifiuto.
+       </p>
+       <p class="sources">
+        <strong>
+         Fonti e approfondimenti:
+        </strong>
+        <a href="https://www.iucnredlist.org/" rel="noopener" target="_blank">
+         IUCN Red List of Threatened Species
+        </a>
+        ·
+        <a href="https://www.unep.org/" rel="noopener" target="_blank">
+         UN Environment Programme (Marine &amp; Coastal Ecosystems)
+        </a>
+        ·
+        <a href="https://www.hepcacheda.com/" rel="noopener" target="_blank">
+         HEPCA (Hurghada Environmental Protection and Conservation Association)
+        </a>
+       </p>
+      </div>
+      <div class="article-footer">
+       <a class="discover-link" href="https://travel-egypt.github.io/hurghada-vacations/it/all-tours.html">
+        <span data-i18n="discoverExp">
+         Scopri l'esperienza
+        </span>
+        <span>
+         →
+        </span>
+       </a>
+       <a class="back-top" data-i18n="backTop" href="#top">
+        Torna alle storie ↑
+       </a>
+      </div>
+     </div>
+    </article>
+    <article class="story-article" data-kind="documentary" id="coral-kingdom">
+     <div class="article-cover">
+      <img alt="The Red Sea" loading="lazy" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"/>
+      <div class="cover-shade">
+      </div>
+      <div class="cover-copy">
+       <span class="story-type" data-i18n="badgeDocNatural">
+        DOCUMENTARIO · STORIA NATURALE
+       </span>
+       <span class="story-place" data-i18n="s4Place">
+        Il Mar Rosso
+       </span>
+       <h2 data-i18n="s4Title">
+        Una Città di Pietra Viva
+       </h2>
+       <p data-i18n="s4Desc">
+        Il mondo straordinario e fragile delle barriere coralline del Mar Rosso — e perché ogni ospite conta.
+       </p>
+      </div>
+     </div>
+     <div class="article-inner">
+      <div class="story-language" id="articleBody-coral-kingdom">
+       <p>
+        Una barriera corallina sembra fatta di roccia solida e colori vivaci, ma è costruita da minuscoli animali chiamati polipi corallini insieme ad alghe microscopiche (le zooxantelle) ospitate nei loro tessuti. Nel corso dei secoli, generazioni di polipi lasciano scheletri calcarei che formano ampie strutture ricche di biodiversità.
+       </p>
+       <p>
+        Sebbene le barriere coralline occupino una piccola parte dei fondali mondiali, ospitano una quota altissima di specie marine — dai pesci di barriera e murene fino a razze, anemoni e tartarughe marine. Essendo il Mar Rosso un bacino semi-chiuso con acque calde, salate e limpide, molte sue barriere mostrano colori intensi e specie tipiche della regione.
+       </p>
+       <p>
+        Proprio perché vive, queste barriere sono sensibili. L'aumento della temperatura dell'acqua, i danni da ancore o pinne, l'inquinamento e il contatto distratto possono stressare i coralli e causare sbiancamento o perdita di tessuto. Una pinneggiata involontaria o una mano appoggiata su una colonia delicata possono compromettere anni di crescita.
+       </p>
+       <p>
+        Fare snorkeling e immersioni in modo responsabile non richiede regole complicate, solo attenzione costante: mantenere un buon assetto o restare a galla senza poggiarsi, non sollevare sabbia sui coralli vivi, non camminare sulle creste coralline e seguire buone pratiche in mare e a terra.
+       </p>
+       <p class="fact-note">
+        <strong>
+         Buone norme sulla barriera:
+        </strong>
+        Non toccare, calpestare, spezzare o raccogliere coralli e conchiglie; mantenere distanza dalla fauna marina; preferire maglie anti-UV o protezioni solari rispettose dell'ambiente marino quando opportuno.
+       </p>
+       <p class="sources">
+        <strong>
+         Fonti e approfondimenti:
+        </strong>
+        <a href="https://coralreefwatch.noaa.gov/" rel="noopener" target="_blank">
+         NOAA Coral Reef Watch
+        </a>
+        ·
+        <a href="https://www.icriforum.org/" rel="noopener" target="_blank">
+         International Coral Reef Initiative (ICRI)
+        </a>
+        ·
+        <a href="https://www.unep.org/" rel="noopener" target="_blank">
+         UN Environment Programme (Coral Reefs)
+        </a>
+       </p>
+      </div>
+      <div class="article-footer">
+       <a class="discover-link" href="https://travel-egypt.github.io/hurghada-vacations/it/all-tours.html">
+        <span data-i18n="discoverExp">
+         Scopri l'esperienza
+        </span>
+        <span>
+         →
+        </span>
+       </a>
+       <a class="back-top" data-i18n="backTop" href="#top">
+        Torna alle storie ↑
+       </a>
+      </div>
+     </div>
+    </article>
+   </div>
+  </section>
+  <footer>
+   <div class="container">
+    <strong data-i18n="footerBrand">
+     Atlantis Tours and Experiences
+    </strong>
+    <p data-i18n="footerDesc">
+     Storie, storia naturale e ricordi d'isola sul Mar Rosso in Egitto.
+    </p>
+    <div class="footer-links">
+     <a data-i18n="navHome" href="https://travel-egypt.github.io/hurghada-vacations/it/index.html">
+      Home
+     </a>
+     <a data-i18n="navTours" href="https://travel-egypt.github.io/hurghada-vacations/it/all-tours.html">
+      Escursioni
+     </a>
+     <a data-i18n="navPrices" href="https://travel-egypt.github.io/hurghada-vacations/hurghada-price-guide.html">
+      Guida Prezzi
+     </a>
+     <a data-i18n="navBooking" href="https://travel-egypt.github.io/hurghada-vacations/it/booking.html">
+      Prenotazione
+     </a>
+     <a data-i18n="navContact" href="https://travel-egypt.github.io/hurghada-vacations/it/contact.html">
+      Contatti
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", function () {
+      const open = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(open));
+      menuToggle.textContent = open ? "✕" : "☰";
+    });
+    navLinks.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+  }
+
+  const filterButtons = document.querySelectorAll(".filter");
+  const filterTargets = document.querySelectorAll(".story-card, .story-article");
+  filterButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const kind = btn.getAttribute("data-filter");
+      filterButtons.forEach(function (b) { b.classList.toggle("active", b === btn); });
+      filterTargets.forEach(function (el) {
+        const match = kind === "all" || el.getAttribute("data-kind") === kind;
+        el.style.display = match ? "" : "none";
+      });
+    });
+  });
+
+  document.querySelectorAll('button[data-lang]').forEach(btn => btn.addEventListener('click', () => { const lang=btn.dataset.lang; try {localStorage.setItem('atlantis_lang',lang)} catch(e) {} location.href = "https://travel-egypt.github.io/hurghada-vacations/" + (lang==='en'?'':lang+'/') + 'stories.html'; }));
+});
+  </script>
+ </body>
+</html>
